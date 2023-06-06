@@ -9,4 +9,7 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/appbase.css',
   },
+  css: [
+    '~/assets/css/orugaflow.css',
+  ],
 })
