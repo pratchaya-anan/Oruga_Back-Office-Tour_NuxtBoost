@@ -24,41 +24,35 @@
       </div>
       <hr class="my-5 border-1.5" />
       <div class="grid grid-cols-3 gap-6">
-        <div>
-          <div>
-            <label class="text-2xl font-medium">ข้อมูลโรงแรม</label>
-            <div class="grid grid-cols-2 gap-2">
-              <div>โรงแรมริเวอร์แคว กาญจนบุรี</div>
-              <div>จำนวนห้องพัก: 45</div>
-              <div>วันที่เช็คอินน์: 30/03/2566</div>
-              <div>วันที่เช็คเอ้าท์: 31/03/2566</div>
-            </div>
+        <div class="border-l-1">
+          <label class="text-2xl font-medium">ข้อมูลโรงแรม</label>
+          <div class="grid grid-cols-2 gap-2">
+            <div>โรงแรมริเวอร์แคว กาญจนบุรี</div>
+            <div>จำนวนห้องพัก: 45</div>
+            <div>วันที่เช็คอินน์: 30/03/2566</div>
+            <div>วันที่เช็คเอ้าท์: 31/03/2566</div>
           </div>
         </div>
         <div>
-          <div>
-            <label class="text-2xl font-medium">ข้อมูลไกด์</label>
-            <div class="grid grid-cols-2 gap-2">
-              <div>นายขวัญชัย บูรณฤกษ์</div>
-              <div>0833076329</div>
-              <div>นายพิษณุ บุญลือ</div>
-              <div>0632452369</div>
-            </div>
+          <label class="text-2xl font-medium">ข้อมูลไกด์</label>
+          <div class="grid grid-cols-2 gap-2">
+            <div>นายขวัญชัย บูรณฤกษ์</div>
+            <div>0833076329</div>
+            <div>นายพิษณุ บุญลือ</div>
+            <div>0632452369</div>
           </div>
         </div>
         <div>
-          <div>
-            <label class="text-2xl font-medium">ข้อมูลพาหนะ</label>
-            <div>พาหนะขาไป :</div>
-            <div class="grid grid-cols-2 gap-2">
-              <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
-              <div>จำนวนคน: 20</div>
-            </div>
-            <div>พาหนะขากลับ :</div>
-            <div class="grid grid-cols-2 gap-2">
-              <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
-              <div>จำนวนคน: 20</div>
-            </div>
+          <label class="text-2xl font-medium">ข้อมูลพาหนะ</label>
+          <div>พาหนะขาไป :</div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
+            <div>จำนวนคน: 20</div>
+          </div>
+          <div>พาหนะขากลับ :</div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
+            <div>จำนวนคน: 20</div>
           </div>
         </div>
       </div>
@@ -67,7 +61,15 @@
         <label class="text-2xl font-medium">ข้อมูลลูกทัวร์</label>
       </div>
       <div class="my-2 grid grid-cols-2 gap-4">
-        <div><o-input placeholder="ค้นหาลูกทัวร์"></o-input></div>
+        <div class="flex">
+          <NuxtLink>
+            <o-button variant="info">จัดการ</o-button>
+          </NuxtLink>
+          <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
+          <div class="px-2">
+            <o-button>ค้นหา</o-button>
+          </div>
+        </div>
         <div class="flex justify-end">
           <NuxtLink href="/adduser">
             <o-button>+ เพิ่มลูกทัวร์</o-button>
