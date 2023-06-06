@@ -59,7 +59,7 @@
   }
 
 
-  /* .o-input--primary, */
+  .o-input--primary,
   .o-input--primary.o-input {
     @apply bg-blue-50 border-blue-500 text-blue-900 dark:text-blue-400 placeholder-blue-700 dark:placeholder-blue-500 focus:ring-blue-500 focus:border-blue-500 dark:bg-blue-700 dark:border-blue-500
   }
