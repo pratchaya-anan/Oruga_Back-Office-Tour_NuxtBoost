@@ -5,7 +5,7 @@
         <label class="text-4xl font-medium">สร้างทัวร์</label>
       </div>
       <hr class="my-5 border-1.5" />
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid grid-cols-2 gap-4">
         <div>
           <o-field label="ชื่อทริป">
             <o-input></o-input>
@@ -47,7 +47,8 @@
           </o-field>
         </div>
       </div>
-      <div class="flex justify-end py-5">
+      <hr class="my-5 border-1.5" />
+      <div class="flex justify-end py-4">
         <o-button>ถัดไป ></o-button>
       </div>
     </div>
