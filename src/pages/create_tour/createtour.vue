@@ -42,8 +42,15 @@
           </o-field>
         </div>
         <div>
-          <o-field label="ภาษี (0%, 7%, 9%)">
-            <o-input></o-input>
+          <o-field label="ภาษี">
+            <o-select placeholder="กำหนดภาษี">
+              <option value="free">ยกเว้นภาษี</option>
+              <option value="1%">1%</option>
+              <option value="3%">3%</option>
+              <option value="5%">5%</option>
+              <option value="7%">7%</option>
+              <option value="9%">9%</option>
+            </o-select>
           </o-field>
         </div>
       </div>
