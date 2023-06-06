@@ -60,7 +60,7 @@
           </o-field>
         </div>
       </div>
-      <div>
+      <div class="pt-2">
         <o-field label="ที่อยู่ตามบัตรประชาชน">
           <o-input type="textarea"></o-input>
         </o-field>
@@ -91,7 +91,7 @@
           </o-field>
         </div>
       </div>
-      <div>
+      <div class="pt-2">
         <o-field label="หมายเหตุ">
           <o-input type="textarea"></o-input>
         </o-field>
