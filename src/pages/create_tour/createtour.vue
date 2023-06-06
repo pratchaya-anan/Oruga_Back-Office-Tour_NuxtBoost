@@ -56,7 +56,9 @@
       </div>
       <hr class="my-5 border-1.5" />
       <div class="flex justify-end py-4">
-        <o-button>ถัดไป ></o-button>
+        <NuxtLink to="/create_tour/addguide">
+          <o-button>ถัดไป ></o-button>
+        </NuxtLink>
       </div>
     </div>
   </section>
