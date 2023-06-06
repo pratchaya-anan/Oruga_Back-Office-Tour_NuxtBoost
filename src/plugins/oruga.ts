@@ -27,5 +27,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         contentClass: 'overflow-auto relative bg-white',
         overlayClass: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 inset-0 fixed',
       },
+      input: {
+        rootClass: 'block mb-2 text-sm font-medium',
+        inputClass: 'border block w-full p-2.5 text-sm rounded-lg',
+      },
     });
 })
