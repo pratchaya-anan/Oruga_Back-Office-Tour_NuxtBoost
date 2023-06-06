@@ -1,0 +1,55 @@
+<template>
+  <section>
+    <div class="p-5">
+      <div>
+        <label class="text-4xl font-medium">สร้างทัวร์</label>
+      </div>
+      <hr class="my-5 border-1.5" />
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <o-field label="ชื่อทริป">
+            <o-input></o-input>
+          </o-field>
+        </div>
+        <div>
+          <o-field label="ชื่อโปรแกรม">
+            <o-input></o-input>
+          </o-field>
+        </div>
+        <div>
+          <o-field label="จำนวนวัน">
+            <o-input></o-input>
+          </o-field>
+        </div>
+        <div>
+          <o-field label="จำนวนคืน">
+            <o-input></o-input>
+          </o-field>
+        </div>
+        <div>
+          <o-field label="วันเริ่มต้น">
+            <o-input></o-input>
+          </o-field>
+        </div>
+        <div>
+          <o-field label="วันจบทริป">
+            <o-input></o-input>
+          </o-field>
+        </div>
+        <div>
+          <o-field label="ราคาต่อหน่วย">
+            <o-input></o-input>
+          </o-field>
+        </div>
+        <div>
+          <o-field label="ภาษี (0%, 7%, 9%)">
+            <o-input></o-input>
+          </o-field>
+        </div>
+      </div>
+      <div class="flex justify-end py-5">
+        <o-button>ถัดไป ></o-button>
+      </div>
+    </div>
+  </section>
+</template>
