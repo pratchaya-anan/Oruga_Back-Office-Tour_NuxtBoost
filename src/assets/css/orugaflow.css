@@ -189,12 +189,6 @@
   top: 0;
   height: 100%;
 }
-.o-input__icon-right {
-  right: 0;
-}
-.o-input__icon-left {
-  left: 0;
-}
 .o-ctrl-input {
   display: block;
   position: relative;
