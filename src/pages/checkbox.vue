@@ -14,9 +14,7 @@
         labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Red </o-checkbox>
     </div>
 
-    <!-- <checkbox>
-
-    </checkbox> -->
+    <o-checkbox variant="danger">???</o-checkbox>
     <!-- <div class="odocs-spaced">
       <o-button variant="primary">Primary</o-button>
       <o-button variant="success">Success</o-button>
@@ -43,7 +41,8 @@
     </o-field> -->
   </section>
 </template>
-<script>
+
+<!-- <script>
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
@@ -57,7 +56,8 @@ export default defineComponent({
     };
   },
 });
-</script>
+</script> -->
+
 <style>
 .o-chk--disabled {
   @apply  text-blue-600 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600

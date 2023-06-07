@@ -53,6 +53,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         stepContentClass:"hidden",
       },
       checkbox: {
+        checkClass:"w-4 h-4",
         labelClass:"ml-2 text-sm font-medium"
       }
     });
