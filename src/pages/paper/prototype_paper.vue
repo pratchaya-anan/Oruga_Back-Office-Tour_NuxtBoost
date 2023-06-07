@@ -131,95 +131,40 @@
         </div>
       </div>
     </div>
+  
+    <div class="w-full mt-5 flex justify-center">
+      <o-button @click="print">สั่งพิมพ์ หรือ บันทึกเป็น PDF</o-button>
+    </div>
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
+<script setup lang="ts">
 
-export default defineComponent({
-  setup() {
-    const radio = ref("default");
-    const data = ref([
-      {
-        id: 1,
-        first_name: "Jesse",
-        last_name: "Simmons",
-        date: "2016-10-15 13:43:27",
-        gender: "Male",
-      },
-      {
-        id: 2,
-        first_name: "John",
-        last_name: "Jacobs",
-        date: "2016-12-15 06:00:53",
-        gender: "Male",
-      },
-      {
-        id: 3,
-        first_name: "Tina",
-        last_name: "Gilbert",
-        date: "2016-04-26 06:26:28",
-        gender: "Female",
-      },
-      {
-        id: 4,
-        first_name: "Clarence",
-        last_name: "Flores",
-        date: "2016-04-10 10:28:46",
-        gender: "Male",
-      },
-      {
-        id: 5,
-        first_name: "Anne",
-        last_name: "Lee",
-        date: "2016-12-06 14:38:38",
-        gender: "Female",
-      },
-    ]);
-
-    const columns = ref([
-      {
-        field: "id",
-        label: "ลำดับ",
-        numeric: true,
-      },
-      {
-        field: "first_name",
-        label: "รหัสสินค้า",
-      },
-      {
-        field: "last_name",
-        label: "รายการสินค้า",
-      },
-      {
-        field: "date",
-        label: "จำนวน",
-        position: "centered",
-      },
-      {
-        field: "gender",
-        label: "ราคาต่อหน่วย",
-      },
-      {
-        field: "w",
-        label: "ส่วนลด",
-      },
-      {
-        field: "q",
-        label: "ภาษี",
-      },
-      {
-        field: "r",
-        label: "จำนวนเงิน",
-      },
-    ]);
-
-    return {
-      radio,
-      data,
-      columns,
-    };
-  },
-});
+function print() {
+  window.print();
+}
 </script>
+
+<style>
+@media print {
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  #page {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+    print-color-adjust: exact;
+  }
+
+  /* #page {padding: none; margin: none; border: none; box-shadow: none;} */
+}
+</style>
