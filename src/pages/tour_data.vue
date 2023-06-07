@@ -5,9 +5,9 @@
         <div>
           <label class="text-4xl font-medium">จัดข้อมูลทัวร์</label>
         </div>
-        <div>
+        <NuxtLink href="/paper/quotation_paper">
           <o-button>ใบเสนอราคา</o-button>
-        </div>
+        </NuxtLink>
       </div>
       <hr class="my-5 border-1.5" />
       <div>
@@ -79,7 +79,7 @@
           <NuxtLink href="/adduser">
             <o-button>+ เพิ่มลูกทัวร์</o-button>
           </NuxtLink>
-          <NuxtLink>
+          <NuxtLink href="/paper/tag_paper">
             <o-button variant="info"> พิมพ์ Tag รายชื่อ</o-button>
           </NuxtLink>
         </div>
@@ -101,6 +101,11 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import { initFlowbite } from "flowbite";
+
+onMounted(() => {
+  initFlowbite();
+});
 
 const tableData = [
   {
