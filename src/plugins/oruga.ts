@@ -28,8 +28,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         overlayClass: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 inset-0 fixed',
       },
       input: {
-        rootClass: 'block mb-2 text-sm font-medium',
-        inputClass: 'border block w-full p-2.5 text-sm rounded-lg',
+        rootClass: 'w-full flex text-sm font-medium inline-flex items-center text-center',
+        inputClass: 'p-2.5 w-full border text-sm rounded-lg',
+        
       },
       table: {
         rootClass: 'relative overflow-x-auto',
@@ -45,6 +46,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         inputClass:'sr-only peer',
         rootClass:'relative inline-flex items-center mb-4 cursor-pointer',
         labelClass:'ml-3 text-sm font-medium text-gray-900 dark:text-gray-300',
+      },
+      autocomplete:{
+        inputClasses: 'w-full border rounded-lg',
       },
     });
 })

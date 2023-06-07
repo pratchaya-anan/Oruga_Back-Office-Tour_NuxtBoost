@@ -57,9 +57,10 @@
   .o-modal--mobile .o-modal__content {
     width: 100%;
   }
-
-
-  .o-input--success.o-input {
+  .o-input{
+    @apply bg-gray-50 text-gray-900 
+  }
+  .o-input--success {
     @apply bg-green-50 border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-green-500
   }
   .o-input--danger {
