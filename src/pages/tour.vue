@@ -14,16 +14,13 @@
 
     <UiSectionTabs></UiSectionTabs>
 
-    <section class="flex gap-4">
+    <section class="flex flex-wrap gap-4">
       <UiCard>
         <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-            acquisitions
-            2021</h5>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Section 1</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-          acquisitions
-          of 2021 so far, in reverse chronological order.</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the order.</p>
         <a href="#"
           class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Read more
@@ -31,23 +28,9 @@
             name="mdi:chevron-right"></Icon>
         </a>
       </UiCard>
-      <UiCard>
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-            acquisitions
-            2021</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-          acquisitions
-          of 2021 so far, in reverse chronological order.</p>
-        <a href="#"
-          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          Read more
-          <Icon class="w-4 h-4 ml-2 -mr-1"
-            name="mdi:chevron-right"></Icon>
-        </a>
-      </UiCard>
-      <UiCard>
+      <UiCard v-for="(it, idx) in sec23"
+        :key="idx"
+        class="flex-1">
         <a href="#">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
             acquisitions
@@ -67,3 +50,7 @@
 
   </section>
 </template>
+
+<script setup lang="ts">
+const sec23 = Array.from(Array(23).keys()).map(x => x + 1);
+</script>
