@@ -115,3 +115,115 @@
   flex-grow: 1;
   flex-shrink: 1;
 }
+
+.o-acp {
+  position: relative;
+}
+.o-acp__menu {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  overflow: auto;
+  z-index: 20;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+  padding: 0.5rem 0 0.5rem 0;
+  margin: 0;
+  max-height: 200px;
+}
+.o-acp__menu--top {
+  top: auto;
+  bottom: 100%;
+}
+.o-acp__item {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  /* color: #000000; */
+  /* font-size: 1rem; */
+  /* line-height: 1.5; */
+  padding: 0.375rem 1rem;
+}
+.o-acp__item-group-title, .o-acp__item--empty {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.o-acp__item--hover, .o-acp__item:hover {
+  background: #f5f5f5;
+  color: #000000;
+}
+.o-acp--expanded {
+  width: 100%;
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.o-icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  transition: transform 150ms ease-out, opacity 300ms ease-out;
+}
+.o-icon--spin {
+  animation-name: icon-spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+.o-input__icon-left, .o-input__icon-right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+.o-ctrl-input {
+  display: block;
+  position: relative;
+}
+.o-ctrl-input--expanded {
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.o-input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+}
+.o-input__textarea {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+  resize: vertical;
+}
+.o-input__counter {
+  display: block;
+  float: right;
+}
+.o-input-iconspace-left {
+  padding-left: 2.25em;
+}
+.o-input-iconspace-right {
+  padding-right: 2.25em;
+}
+.o-input--rounded {
+  border-radius: 9999px;
+}
