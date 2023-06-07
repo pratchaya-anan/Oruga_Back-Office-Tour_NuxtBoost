@@ -55,5 +55,16 @@
   .o-input__icon-right {
     @apply right-1.5;
   }
-  
+
+
+  .o-input--primary,
+  .o-input--primary.o-input {
+    @apply bg-blue-50 border-blue-500 text-blue-900 dark:text-blue-400 placeholder-blue-700 dark:placeholder-blue-500 focus:ring-blue-500 focus:border-blue-500 dark:bg-blue-700 dark:border-blue-500
+  }
+  .o-input--success.o-input {
+    @apply bg-green-50 border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-green-500
+  }
+  .o-input--danger.o-input {
+    @apply bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500
+  }
 }
