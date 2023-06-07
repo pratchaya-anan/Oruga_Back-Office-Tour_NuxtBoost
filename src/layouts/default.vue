@@ -60,6 +60,6 @@
 
     </main>
 
-    <span class="hidden o-btn o-btn--primary o-modal__close">Just for maintain CSS in components.</span>
+    <span class="hidden o-btn o-btn--primary o-input__icon-left o-input__icon-right">Just for maintain CSS in components.</span>
   </div>
 </template>

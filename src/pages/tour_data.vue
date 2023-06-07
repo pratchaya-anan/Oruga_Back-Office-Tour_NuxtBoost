@@ -1,8 +1,13 @@
 <template>
   <section>
     <div class="p-5">
-      <div>
-        <label class="text-4xl font-medium">จัดข้อมูลทัวร์</label>
+      <div class="grid grid-cols-2">
+        <div>
+          <label class="text-4xl font-medium">จัดข้อมูลทัวร์</label>
+        </div>
+        <div>
+          <o-button>ใบเสนอราคา</o-button>
+        </div>
       </div>
       <hr class="my-5 border-1.5" />
       <div>
