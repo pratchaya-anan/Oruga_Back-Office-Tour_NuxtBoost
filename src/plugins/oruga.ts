@@ -30,5 +30,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       inputitems: {
         itemClass: 'bg-blue-300 text-gray-700 mx-1.5 mt-1 mb-1.5 px-3',
       },
+      autocomplete: {
+        rootClass: 'text-gray-900 text-base',
+      },
     });
 })
