@@ -5,9 +5,11 @@
         <div>
           <label class="text-4xl font-medium">จัดข้อมูลทัวร์</label>
         </div>
-        <NuxtLink href="/paper/quotation_paper">
-          <o-button>ใบเสนอราคา</o-button>
-        </NuxtLink>
+        <div class="flex justify-end">
+          <NuxtLink href="/paper/quotation_paper">
+            <o-button>ใบเสนอราคา</o-button>
+          </NuxtLink>
+        </div>
       </div>
       <hr class="my-5 border-1.5" />
       <div>
@@ -99,8 +101,7 @@
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
+<script setup lang="ts">
 import { initFlowbite } from "flowbite";
 
 onMounted(() => {
@@ -145,42 +146,32 @@ const tableData = [
   },
 ];
 
-export default defineComponent({
-  setup() {
-    const data = ref(tableData);
-    const checkboxPosition = ref("left");
+const data = ref(tableData);
+const checkboxPosition = ref("left");
 
-    const columns = ref([
-      {
-        field: "id",
-        label: "ID",
-        width: "40",
-        numeric: true,
-      },
-      {
-        field: "first_name",
-        label: "First Name",
-      },
-      {
-        field: "last_name",
-        label: "Last Name",
-      },
-      {
-        field: "date",
-        label: "Date",
-        position: "centered",
-      },
-      {
-        field: "gender",
-        label: "Gender",
-      },
-    ]);
-
-    return {
-      data,
-      checkboxPosition,
-      columns,
-    };
+const columns = ref([
+  {
+    field: "id",
+    label: "ID",
+    width: "40",
+    numeric: true,
   },
-});
+  {
+    field: "first_name",
+    label: "First Name",
+  },
+  {
+    field: "last_name",
+    label: "Last Name",
+  },
+  {
+    field: "date",
+    label: "Date",
+    position: "centered",
+  },
+  {
+    field: "gender",
+    label: "Gender",
+  },
+]);
 </script>
