@@ -53,18 +53,25 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootClass: 'relative inline-flex items-center mb-4 cursor-pointer',
         labelClass: 'ml-3 text-sm font-medium text-gray-900 dark:text-gray-300',
       },
-      step: {
-        rootClass: "flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
-        animatedClass: "flex items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
-        stepContentClass:"hidden",
+      steps: {
+        rootClass: "w-full text-sm ",
+        stepsClass: "flex w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
+        animatedClass: " items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
+        stepContentClass: "hidden",
+        // stepDividerClass: "w-full h-1 border-b border-blue-100 border-4 inline-block dark:border-blue-800",
+        // stepNavigationClass: " items-center justify-around",
+        itemHeaderClass: "flex w-full items-center dark:text-blue-500",
+        itemHeaderActiveClass: " w-full items-center text-blue-600 dark:text-blue-500 ",
+        itemHeaderPreviousClass: " w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 ",
+
       },
       radio: {
         rootClass: 'flex text-sm font-medium text-center items-center mb-1',
-        checkClass:'w-4 h-4 mr-2',
+        checkClass: 'w-4 h-4 mr-2',
       },
       checkbox: {
         rootClass: 'flex text-sm font-medium text-center items-center mb-1',
-        checkClass:'w-4 h-4 mr-2',
+        checkClass: 'w-4 h-4 mr-2',
       },
     });
 })
