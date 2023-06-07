@@ -31,7 +31,10 @@
         </div>
         <div>
           <o-field label="เพศ">
-            <o-input></o-input>
+            <o-select placeholder="เลือกเพศ">
+              <option value="male">ชาย</option>
+              <option value="female">หญิง</option>
+            </o-select>
           </o-field>
         </div>
         <div>
@@ -56,7 +59,10 @@
         </div>
         <div>
           <o-field label="ประเภทเตียง">
-            <o-input></o-input>
+            <o-select placeholder="กำหนดประเภทเตียง">
+              <option value="double">เตียงคู่</option>
+              <option value="single">เตียงเดี่ยว</option>
+            </o-select>
           </o-field>
         </div>
       </div>
@@ -97,9 +103,9 @@
         </o-field>
       </div>
       <hr class="my-4 border-1.5" />
-      <div class="flex justify-end py-5">
-        <o-button>เพิ่มลูกทัวร์ ></o-button>
-      </div>
+      <NuxtLink href="/tour_data" class="flex justify-end py-5">
+        <o-button>+ เพิ่มลูกทัวร์</o-button>
+      </NuxtLink>
     </div>
   </section>
 

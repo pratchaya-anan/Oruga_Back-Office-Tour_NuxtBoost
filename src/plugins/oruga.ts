@@ -1,4 +1,5 @@
 import Oruga from '@oruga-ui/oruga-next'
+import ItemVue from '~/components/menu/Item.vue';
 import IconAdaptor from '~/oruga/IconAdaptor.vue';
 // import '@oruga-ui/oruga-next/dist/oruga.css'
 // import '@oruga-ui/oruga-next/dist/oruga-full.css'
@@ -47,8 +48,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootClass:'relative inline-flex items-center mb-4 cursor-pointer',
         labelClass:'ml-3 text-sm font-medium text-gray-900 dark:text-gray-300',
       },
-      autocomplete:{
-        inputClasses: 'w-full border rounded-lg',
+      step: {
+        rootClass:"flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
+        animatedClass:"flex items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
       },
     });
 })
