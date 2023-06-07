@@ -66,4 +66,8 @@
   .o-input--danger.o-input {
     @apply bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500
   }
+
+  .o-chk--danger.o-chk {
+    @apply text-gray-900 dark:text-gray-300
+  }
 }

@@ -47,9 +47,13 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootClass:'relative inline-flex items-center mb-4 cursor-pointer',
         labelClass:'ml-3 text-sm font-medium text-gray-900 dark:text-gray-300',
       },
-      step: {
+      steps: {
         rootClass:"flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
         animatedClass:"flex items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
+        stepContentClass:"hidden",
       },
+      checkbox: {
+        labelClass:"ml-2 text-sm font-medium"
+      }
     });
 })
