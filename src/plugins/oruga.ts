@@ -28,10 +28,15 @@ export default defineNuxtPlugin((nuxtApp) => {
         contentClass: 'overflow-auto relative bg-white',
         overlayClass: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 inset-0 fixed',
       },
+      inputitems: {
+        itemClass: 'bg-blue-300 text-gray-700 mx-1.5 mt-1 mb-1.5 px-3',
+      },
+      autocomplete: {
+        rootClass: 'text-gray-900 text-base',
+      },
       input: {
-        rootClass: 'w-full flex text-sm font-medium inline-flex items-center text-center',
-        inputClass: 'p-2.5 w-full border text-sm rounded-lg',
-        
+        rootClass: 'block mb-2 text-sm font-medium',
+        inputClass: 'border block w-full p-2.5 text-sm rounded-lg',
       },
       table: {
         rootClass: 'relative overflow-x-auto',
