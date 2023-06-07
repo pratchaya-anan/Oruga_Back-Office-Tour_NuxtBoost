@@ -13,7 +13,7 @@
       <o-checkbox :value="true" variant="danger" checkClass="w-4 h-4"
         labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> Red </o-checkbox>
     </div>
-
+          
     <o-checkbox variant="danger">???</o-checkbox>
     <!-- <div class="odocs-spaced">
       <o-button variant="primary">Primary</o-button>
