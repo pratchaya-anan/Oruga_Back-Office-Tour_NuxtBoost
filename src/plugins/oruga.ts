@@ -57,8 +57,13 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootClass: "flex items-center w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
         animatedClass: "flex items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
       },
-      redio: {
-        rootClass: 'w-4 h-4 text-blue-600 bg-gray-100 border-gray-300',
+      radio: {
+        rootClass: 'flex text-sm font-medium text-center items-center mb-1',
+        checkClass:'w-4 h-4 mr-2',
+      },
+      checkbox: {
+        rootClass: 'flex text-sm font-medium text-center items-center mb-1',
+        checkClass:'w-4 h-4 mr-2',
       },
     });
 })
