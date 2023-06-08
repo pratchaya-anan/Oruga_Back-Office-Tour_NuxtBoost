@@ -13,111 +13,87 @@
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         placeholder="Select date">
     </div>
-    <ul
-      class="mb-3 flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
-      <li class="mr-2">
-        <a href="#" aria-current="page"
-          class="inline-block p-4 text-blue-600 bg-gray-100 rounded-t-lg active dark:bg-gray-800 dark:text-blue-500">วัน</a>
-      </li>
-      <li class="mr-2">
-        <a href="#"
-          class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">เดือน</a>
-      </li>
-      <li class="mr-2">
-        <a href="#"
-          class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">ปี</a>
-      </li>
-      <li class="mr-2">
-        <a href="#"
-          class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">รายเดือน(แบบละเอียด)</a>
-      </li>
-    </ul>
-    <div class="grid grid-cols-4 gap-2">
-      <div class="col-span-3">
-        <o-table :data="data" checkable :checkbox-position="checkboxPosition">
-          <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
-            {{ row[column.field] }}
-          </o-table-column>
-        </o-table>
-      </div>
 
-      <div>
-        <a href="#"
-          class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <Icon class="w-6 h-6" name="ph:plus-fill"></Icon>
-            490,093
-          </h5>
-          <h1 class="text-3 font-bold tracking-tight text-green-600 dark:text-white">
-            +10% <Icon class="w-6 h-6" name="ph:arrow-up-bold"></Icon>
-          </h1>
-        </a>
+    <o-tabs v-model="activeTab" :multiline="multiline">
+      <o-tab-item :value="1" label="วัน">
+        <div class="grid grid-cols-4 gap-2">
+          <div class="col-span-3">
+            <o-table :data="dataday" checkable>
+              <o-table-column field="id" label="ID" width="40" numeric v-slot:default="props">
+                {{ props.row.id }}
+              </o-table-column>
+              <o-table-column field="first_name" label="รายการ" v-slot:default="props">
+                {{ props.row.first_name }}
+              </o-table-column>
+              <o-table-column field="last_name" label="รายรับ(บาท)" position="centered" v-slot:default="props">
+                {{ props.row.last_name }}
+              </o-table-column>
+              <o-table-column field="date" label="รายจ่าย(บาท)" position="centered" v-slot:default="props">
+                {{ props.row.date }}
+              </o-table-column>
+              <o-table-column field="gender" label="หมายเหตุ" v-slot:default="props">
+                {{ props.row.gender }}
+              </o-table-column>
+            </o-table>
+          </div>
+          <div>
+            <a href="#"
+              class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <Icon class="w-6 h-6" name="ph:plus-fill"></Icon>
+                490,093
+              </h5>
+              <h1 class="text-3 font-bold tracking-tight text-green-600 dark:text-white">
+                +10% <Icon class="w-6 h-6" name="ph:arrow-up-bold"></Icon>
+              </h1>
+            </a>
 
-        <a href="#"
-          class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <Icon class="w-6 h-6" name="ph:minus-fill"></Icon>
-            385,872
-          </h5>
-          <h5 class=" mb-2 text-3 font-bold tracking-tight text-red-600 dark:text-red">
-            -5% <Icon class="w-6 h-6" name="ph:arrow-down-bold"></Icon>
-          </h5>
-        </a>
+            <a href="#"
+              class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <Icon class="w-6 h-6" name="ph:minus-fill"></Icon>
+                385,872
+              </h5>
+              <h5 class=" mb-2 text-3 font-bold tracking-tight text-red-600 dark:text-red">
+                -5% <Icon class="w-6 h-6" name="ph:arrow-down-bold"></Icon>
+              </h5>
+            </a>
 
-        <a href="#"
-          class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <Icon class="w-6 h-6" name="icon-park-solid:add-subtract"></Icon>
-            104,221
-          </h5>
-          <h5 class="text-3 font-bold tracking-tight text-green-600 dark:text-red">
-            +23% <Icon class="w-6 h-6" name="ph:arrow-up-bold"></Icon>
-          </h5>
-          
-        </a>
+            <a href="#"
+              class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <Icon class="w-6 h-6" name="icon-park-solid:add-subtract"></Icon>
+                104,221
+              </h5>
+              <h5 class="text-3 font-bold tracking-tight text-green-600 dark:text-red">
+                +23% <Icon class="w-6 h-6" name="ph:arrow-up-bold"></Icon>
+              </h5>
+            </a>
+          </div>
+        </div>
+      </o-tab-item>
 
-      <div class="col-span-3">
-        <o-table :data="dataday" checkable>
-          <o-table-column field="id" label="ID" width="40" numeric v-slot:default="props">
-            {{ props.row.id }}
-          </o-table-column>
-          <o-table-column field="first_name" label="รายการ" v-slot:default="props">
-            {{ props.row.first_name }}
-          </o-table-column>
-          <o-table-column field="last_name" label="รายรับ(บาท)" position="centered" v-slot:default="props">
-            {{ props.row.last_name }}
-          </o-table-column>
-          <o-table-column field="date" label="รายจ่าย(บาท)" position="centered" v-slot:default="props">
-            {{ props.row.date }}
-          </o-table-column>
-          <o-table-column field="gender" label="หมายเหตุ" v-slot:default="props">
-            {{ props.row.gender }}
-          </o-table-column>
-        </o-table>
-      </div>
-      <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a>
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">รายรับ <span
-            class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">490093</span>
-        </p>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">รายจ่าย <span
-            class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">385872</span>
-        </p>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">กำไร/ขาดทุน <span
-            class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">104221</span>
-        </p>
-      </div>
-    </div>
+      <o-tab-item :value="2" label="เดือน">
+        Lorem <br />
+        ipsum <br />
+        dolor <br />
+        sit <br />
+        amet.
+      </o-tab-item>
 
-
-
+      <o-tab-item :value="3" label="ปี">
+        Nunc nec velit nec libero vestibulum eleifend. Curabitur pulvinar congue
+        luctus. Nullam hendrerit iaculis augue vitae ornare. Maecenas vehicula
+        pulvinar tellus, id sodales felis lobortis eget.
+      </o-tab-item>
+    </o-tabs>
 
   </section>
 </template>
 
 <script setup lang="ts">
+
+const activeTab = ref(1);
 
 const dataday = ref([
   {
