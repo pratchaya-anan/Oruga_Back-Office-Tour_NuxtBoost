@@ -23,7 +23,7 @@
     <o-table
       :data="dataday"
       checkable
-      :checkbox-position="checkboxPosition"
+      :checkbox-position="left"
     >
       <o-table-column
         v-for="column in columnsday"
@@ -35,7 +35,7 @@
   </section>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 
 const dataday = ref([
   {
