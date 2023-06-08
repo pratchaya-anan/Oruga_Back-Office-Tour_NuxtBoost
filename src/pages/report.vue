@@ -23,13 +23,21 @@
     <o-table
       :data="dataday"
       checkable
-      :checkbox-position="left"
     >
-      <o-table-column
-        v-for="column in columnsday"
-        v-bind="column"
-        #default="{ row }">
-        {{ row[column.field]}}
+      <o-table-column field="id" label="ID" width="40" numeric v-slot:default="props">
+        {{ props.row.id }}
+      </o-table-column>
+      <o-table-column field="first_name" label="รายการ" v-slot:default="props">
+        {{ props.row.first_name }}
+      </o-table-column>
+      <o-table-column field="last_name" label="รายรับ(บาท)" position="centered" v-slot:default="props">
+        {{ props.row.last_name }}
+      </o-table-column>
+      <o-table-column field="date" label="รายจ่าย(บาท)" position="centered" v-slot:default="props">
+        {{ props.row.date }}
+      </o-table-column>
+      <o-table-column field="gender" label="หมายเหตุ" v-slot:default="props">
+        {{ props.row.gender }}
       </o-table-column>
     </o-table>
   </section>
@@ -72,33 +80,6 @@ const dataday = ref([
     last_name: '59920',
     date: '-',
     gender: ''
-  }
-])
-
-const columnsday = ref([
-  {
-    field: 'id',
-    label: 'ลำดับ',
-    width: '40',
-    numeric: true
   },
-  {
-    field: 'first_name',
-    label: 'รายการ'
-  },
-  {
-    field: 'last_name',
-    label: 'รายรับ(บาท)',
-    position: 'centered'
-  },
-  {
-    field: 'date',
-    label: 'รายจ่าย(บาท)',
-    position: 'centered'
-  },
-  {
-    field: 'gender',
-    label: 'หมายเหตุ'
-  }
 ])
 </script>
