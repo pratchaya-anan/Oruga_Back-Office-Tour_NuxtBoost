@@ -47,7 +47,7 @@
         <a href="#"
           class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <Icon class="w-6 h-6" name="ph:plus-fill"></Icon>
+            <Icon class="w-6 h-6" name="mdi:plus-box-outline"></Icon>
             490,093
           </h5>
           <h1 class="text-3 font-bold tracking-tight text-green-600 dark:text-white">
@@ -58,7 +58,7 @@
         <a href="#"
           class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <Icon class="w-6 h-6" name="ph:minus-fill"></Icon>
+            <Icon class="w-6 h-6" name="mdi:minus-box-outline"></Icon>
             385,872
           </h5>
           <h5 class=" mb-2 text-3 font-bold tracking-tight text-red-600 dark:text-red">
@@ -69,16 +69,16 @@
         <a href="#"
           class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <Icon class="w-6 h-6" name="icon-park-solid:add-subtract"></Icon>
-            104,221
+            <Icon class="w-6 h-6" name="icon-park-outline:add-subtract"></Icon>
+            1,422
           </h5>
           <h5 class="text-3 font-bold tracking-tight text-green-600 dark:text-red">
             +23% <Icon class="w-6 h-6" name="ph:arrow-up-bold"></Icon>
           </h5>
-          
         </a>
-
       </div>
+
+
     </div>
 
 
