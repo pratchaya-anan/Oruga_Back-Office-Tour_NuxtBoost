@@ -17,10 +17,11 @@
       <div class="mt-4 grid grid-cols-3 gap-4">
         <UiCard
           ><div class="grid grid-cols-2">
-            <div>
+            <div class="flex items-center">
               <div
                 class="inline-block w-3 h-3 mr-2 bg-gray-500 rounded-full"
               ></div>
+              เตรียม
             </div>
             <div class="flex justify-end">
               <Icon
@@ -61,10 +62,11 @@
         </UiCard>
         <UiCard
           ><div class="grid grid-cols-2">
-            <div>
+            <div class="flex items-center">
               <div
                 class="inline-block w-3 h-3 mr-2 bg-blue-500 rounded-full"
               ></div>
+              ออกทริป
             </div>
             <div class="flex justify-end">
               <Icon
@@ -105,10 +107,11 @@
         </UiCard>
         <UiCard
           ><div class="grid grid-cols-2">
-            <div>
+            <div class="flex items-center">
               <div
                 class="inline-block w-3 h-3 mr-2 bg-green-500 rounded-full"
               ></div>
+              เสร็จสิ้น
             </div>
             <div class="flex justify-end">
               <Icon
