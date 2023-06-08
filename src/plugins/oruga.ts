@@ -66,5 +66,9 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootClass: 'flex text-sm font-medium text-center items-center mb-1',
         checkClass:'w-4 h-4 mr-2',
       },
+      dropdown: {
+        menuClass:"bg-white divide-y divide-gray-100  rounded-lg shadow dark:bg-gray-700 py-2 text-sm text-gray-700 dark:text-gray-200",
+        menuActiveClass:"block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+      },
     });
 })
