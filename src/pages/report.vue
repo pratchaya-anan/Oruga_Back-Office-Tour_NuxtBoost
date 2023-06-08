@@ -1,8 +1,8 @@
 <template>
     <section>
-        <o-table :data="data">
+        <o-table :data="dataday">
     <o-table-column
-        v-for="column in columns"
+        v-for="column in columnsday"
         v-bind="column"
         #default="{ row }">
         {{ row[column.field]}}
@@ -11,79 +11,70 @@
     </section>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script setup lang="ts">
 
-export default defineComponent({
-  setup() {
-    const data = ref([
+    const dataday = ref([
       {
         id: 1,
-        first_name: 'Jesse',
-        last_name: 'Simmons',
-        date: '2016-10-15 13:43:27',
-        gender: 'Male'
+        first_name: 'องค์การบริหารส่วนตำบลโพนงาม',
+        last_name: '52000',
+        date: '-',
+        gender: ''
       },
       {
         id: 2,
-        first_name: 'John',
-        last_name: 'Jacobs',
-        date: '2016-12-15 06:00:53',
-        gender: 'Male'
+        first_name: 'เที่ยวเกาะ เลาะรัก',
+        last_name: '59920',
+        date: '-',
+        gender: ''
       },
       {
         id: 3,
-        first_name: 'Tina',
-        last_name: 'Gilbert',
-        date: '2016-04-26 06:26:28',
-        gender: 'Female'
+        first_name: 'เที่ยวเกาะ เลาะรัก',
+        last_name: '59920',
+        date: '-',
+        gender: ''
       },
       {
         id: 4,
-        first_name: 'Clarence',
-        last_name: 'Flores',
-        date: '2016-04-10 10:28:46',
-        gender: 'Male'
+        first_name: 'ชื้อข้าวเที่ยง',
+        last_name: '-',
+        date: '750',
+        gender: ''
       },
       {
         id: 5,
-        first_name: 'Anne',
-        last_name: 'Lee',
-        date: '2016-12-06 14:38:38',
-        gender: 'Female'
+        first_name: 'เที่ยวเกาะ เลาะรัก',
+        last_name: '59920',
+        date: '-',
+        gender: ''
       }
     ])
 
-    const columns = ref([
+    const columnsday = ref([
       {
         field: 'id',
-        label: 'ID',
+        label: 'ลำดับ',
         width: '40',
         numeric: true
       },
       {
         field: 'first_name',
-        label: 'First Name'
+        label: 'รายการ'
       },
       {
         field: 'last_name',
-        label: 'Last Name'
+        label: 'รายรับ(บาท)',
+        position: 'centered'
       },
       {
         field: 'date',
-        label: 'Date',
+        label: 'รายจ่าย(บาท)',
         position: 'centered'
       },
       {
         field: 'gender',
-        label: 'Gender'
+        label: 'หมายเหตุ'
       }
     ])
-
-    return {
-      data,
-      columns
-    }
-  }
-})
 </script>
