@@ -33,6 +33,14 @@
       </li>
     </ul>
     <div class="grid grid-cols-4 gap-2">
+      <div class="col-span-3">
+        <o-table :data="data" checkable :checkbox-position="checkboxPosition">
+          <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
+            {{ row[column.field] }}
+          </o-table-column>
+        </o-table>
+      </div>
+
       <div>
         <a href="#"
           class="flex justify-between block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
@@ -65,8 +73,8 @@
           <h5 class="text-3 font-bold tracking-tight text-green-600 dark:text-red">
             +23% <Icon class="w-6 h-6" name="ph:arrow-up-bold"></Icon>
           </h5>
+          
         </a>
-      </div>
 
       <div class="col-span-3">
         <o-table :data="dataday" checkable>
