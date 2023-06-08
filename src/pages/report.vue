@@ -21,12 +21,12 @@
   </li>
 </ul>
     <o-table
-      :data="data"
+      :data="dataday"
       checkable
       :checkbox-position="checkboxPosition"
     >
       <o-table-column
-        v-for="column in columns"
+        v-for="column in columnsday"
         v-bind="column"
         #default="{ row }">
         {{ row[column.field]}}
@@ -36,7 +36,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
 
 const dataday = ref([
   {
