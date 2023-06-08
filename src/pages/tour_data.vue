@@ -2,15 +2,15 @@
   <section>
     <diV class="grid grid-cols-12 gap-2">
       <div class="col-span-7">
-        <UiCard class=" h-full">
+        <UiCard class="h-full">
           <div>
             <label class="text-5xl font-medium">ข้อมูลทัวร์</label>
           </div>
           <div class="grid grid-cols-6 mt-6">
             <div class="col-span-2">
-              <div class="text-xl mt-3 ">
-                <p>ชื่อทริปทัวร์: </p>
-                <p>จำนวน: </p>
+              <div class="text-xl mt-3">
+                <p>ชื่อทริปทัวร์:</p>
+                <p>จำนวน:</p>
               </div>
             </div>
             <div class="col-span-4">
@@ -24,7 +24,7 @@
           <div class="grid grid-cols-6 gap-3">
             <div class="col-span-2">
               <div class="text-xl mt-3">
-                <p>โปรแกรมทัวร์: </p>
+                <p>โปรแกรมทัวร์:</p>
                 <p>จำนวนลูกทัวร์:</p>
               </div>
             </div>
@@ -39,7 +39,7 @@
           <div class="grid grid-cols-6 gap-3">
             <div class="col-span-2">
               <div class="text-xl">
-                <p>วันที่เดินทาง: </p>
+                <p>วันที่เดินทาง:</p>
               </div>
             </div>
             <div class="col-span-4">
@@ -52,7 +52,7 @@
           <div class="grid grid-cols-6 gap-3">
             <div class="col-span-2">
               <div class="text-xl">
-                <p>หมายเหตุ: </p>
+                <p>หมายเหตุ:</p>
               </div>
             </div>
             <div class="col-span-4">
@@ -64,7 +64,7 @@
         </UiCard>
       </div>
       <div class="col-span-5">
-        <UiCard class="max-w-3xl ">
+        <UiCard class="max-w-3xl">
           <div>
             <div class="border-l-1">
               <label class="text-3xl font-medium">ข้อมูลโรงแรม</label>
@@ -86,7 +86,7 @@
           </div>
         </UiCard>
 
-        <UiCard class="max-w-3xl mt-3 ">
+        <UiCard class="max-w-3xl mt-3">
           <div class="cursor-pointer" @click="isCardModalActive = true">
             <label class="text-3xl font-medium">ข้อมูลไกด์</label>
             <div class="grid grid-cols-6 gap-2 mt-3">
@@ -121,7 +121,7 @@
         <UiCard class="max-w-3xl mt-3">
           <div>
             <label class="text-3xl font-medium">ข้อมูลพาหนะ</label>
-            <div class="grid grid-cols-6 ">
+            <div class="grid grid-cols-6">
               <div class="col-span-2">
                 <div>พาหนะขาไป :</div>
               </div>
@@ -132,7 +132,7 @@
                 <div>จำนวนคน: 20</div>
               </div>
             </div>
-            <div class="grid grid-cols-6 ">
+            <div class="grid grid-cols-6">
               <div class="col-span-2">
                 <div>พาหนะขากลับ :</div>
               </div>
@@ -152,8 +152,10 @@
         <div>
           <label class="text-4xl font-medium">จัดข้อมูลทัวร์</label>
         </div>
-        <div>
-          <o-button>ใบเสนอราคา</o-button>
+        <div class="flex justify-end">
+          <NuxtLink href="/paper/quotation_paper">
+            <o-button>ใบเสนอราคา</o-button>
+          </NuxtLink>
         </div>
       </div>
       <hr class="my-5 border-1.5" />
@@ -236,7 +238,11 @@
         </div>
         <div>
           <o-table :data="data" checkable :checkbox-position="checkboxPosition">
-            <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
+            <o-table-column
+              v-for="column in columns"
+              v-bind="column"
+              #default="{ row }"
+            >
               {{ row[column.field] }}
             </o-table-column>
           </o-table>
@@ -246,8 +252,12 @@
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from "vue";
+<script setup lang="ts">
+import { initFlowbite } from "flowbite";
+
+onMounted(() => {
+  initFlowbite();
+});
 
 const tableData = [
   {
@@ -287,44 +297,33 @@ const tableData = [
   },
 ];
 
-export default defineComponent({
-  setup() {
-    const isCardModalActive = ref(false);
-    const data = ref(tableData);
-    const checkboxPosition = ref("left");
+const isCardModalActive = ref(false);
+const data = ref(tableData);
+const checkboxPosition = ref("left");
 
-    const columns = ref([
-      {
-        field: "id",
-        label: "ID",
-        width: "40",
-        numeric: true,
-      },
-      {
-        field: "first_name",
-        label: "First Name",
-      },
-      {
-        field: "last_name",
-        label: "Last Name",
-      },
-      {
-        field: "date",
-        label: "Date",
-        position: "centered",
-      },
-      {
-        field: "gender",
-        label: "Gender",
-      },
-    ]);
-
-    return {
-      data,
-      checkboxPosition,
-      columns,
-      isCardModalActive,
-    };
+const columns = ref([
+  {
+    field: "id",
+    label: "ID",
+    width: "40",
+    numeric: true,
   },
-});
+  {
+    field: "first_name",
+    label: "First Name",
+  },
+  {
+    field: "last_name",
+    label: "Last Name",
+  },
+  {
+    field: "date",
+    label: "Date",
+    position: "centered",
+  },
+  {
+    field: "gender",
+    label: "Gender",
+  },
+]);
 </script>
