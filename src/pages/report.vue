@@ -75,6 +75,7 @@
           </h5>
           
         </a>
+      </div>
 
       <div class="col-span-3">
         <o-table :data="dataday" checkable>
