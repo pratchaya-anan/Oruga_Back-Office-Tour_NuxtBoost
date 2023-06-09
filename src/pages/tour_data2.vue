@@ -267,10 +267,10 @@
               >
               </Icon>
               <!-- <Icon
-              class="text-xl font-medium text-pink-600 dark:text-white"
-              name="ph:gender-female-bold"
-            >
-            </Icon> -->
+                class="text-xl font-medium text-pink-600 dark:text-white"
+                name="ph:gender-female-bold"
+              >
+              </Icon> -->
             </div>
             <div class="flex flex-col items-center">
               <h5 class="text-md font-medium text-gray-900 dark:text-white">
@@ -308,7 +308,6 @@
 import { initFlowbite } from "flowbite";
 
 const showItemsPanel = ref(false);
-const showItemsComment = ref(false);
 const showItemsListComment = ref(false);
 
 onMounted(() => {
