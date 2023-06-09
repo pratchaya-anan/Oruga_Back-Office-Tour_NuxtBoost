@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="h-min-screen">
     <diV class="grid grid-cols-12 gap-2">
       <div class="col-span-7">
         <UiCard class="h-full">
@@ -92,11 +92,11 @@
             <div class="grid grid-cols-6 gap-2 mt-3">
               <div class="col-span-3">
                 <div>นายขวัญชัย บูรณฤกษ์</div>
-                <!-- <div>นายพิษณุ บุญลือ</div> -->
+                <div>นายพิษณุ บุญลือ</div>
               </div>
               <div class="col-span-3">
                 <div>0833076329</div>
-                <!-- <div>0632452369</div> -->
+                <div>0632452369</div>
               </div>
             </div>
           </div>
