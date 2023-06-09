@@ -59,7 +59,7 @@
             ออกทริป
           </div> -->
           <div class="flex justify-end">
-            <NuxtLink href="/tour_data">
+            <NuxtLink href="/tour_data2">
               <o-button class="inline-flex"
                 ><Icon
                   class="mr-1 -ml-1 w-5 h-5"
