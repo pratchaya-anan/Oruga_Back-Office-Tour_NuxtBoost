@@ -39,7 +39,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         inputClass: 'border block w-full p-2.5 text-sm rounded-lg',
       },
       table: {
-        rootClass: 'relative overflow-x-auto shadow-xl',
+        rootClass: 'relative overflow-x-auto shadow-md',
         // tableClass: 'w-full text-sm text-left text-gray-500 dark:text-gray-400',
         // thClass: 'px-6 py-4 bg-white border-b dark:bg-gray-800 dark:border-gray-700 uppercase ',
         // tdClass: 'px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border-b',
