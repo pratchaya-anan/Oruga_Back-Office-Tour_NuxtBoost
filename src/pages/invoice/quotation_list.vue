@@ -1,7 +1,7 @@
 <template>
     <section>
 
-        <LayoutPageTitle>ใบเสนอราคา</LayoutPageTitle>
+        <LayoutPageTitle>Quotation/ใบเสนอราคา</LayoutPageTitle>
 
         <UiManageBar>
             <NuxtLink to="invoice_create" type="button"
@@ -50,13 +50,6 @@
                     <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
                     </p>
                 </div>
-                <!-- <div class="flex justify-end">
-                    <NuxtLink href="#">
-                        <o-button class="inline-flex mt-2" variant="info">
-                            <Icon class="mr-3 -ml-1 w-5 h-5" name="carbon:view"></Icon>พรีวิว
-                        </o-button>
-                    </NuxtLink>                    
-                </div> -->
             </UiCard>
         </section>
         <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
