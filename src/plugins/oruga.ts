@@ -39,7 +39,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         inputClass: 'border block w-full p-2.5 text-sm rounded-lg',
       },
       table: {
-        rootClass: 'relative overflow-x-auto shadow-xl',
+        rootClass: 'relative overflow-x-auto shadow-md',
         // tableClass: 'w-full text-sm text-left text-gray-500 dark:text-gray-400',
         // thClass: 'px-6 py-4 bg-white border-b dark:bg-gray-800 dark:border-gray-700 uppercase ',
         // tdClass: 'px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border-b',
@@ -60,9 +60,8 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootClass: "w-full text-sm ",
         stepsClass: "flex w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
         animatedClass: " items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
-        stepContentClass: "hidden",
-        // stepDividerClass: "w-full h-1 border-b border-blue-100 border-4 inline-block dark:border-blue-800",
-        // stepNavigationClass: " items-center justify-around",
+        // stepContentClass: "hidden",
+
         itemHeaderClass: "flex w-full items-center dark:text-blue-500",
         itemHeaderActiveClass: " w-full items-center text-blue-600 dark:text-blue-500 ",
         itemHeaderPreviousClass: "w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 ",
@@ -91,5 +90,6 @@ export default defineNuxtPlugin((nuxtApp) => {
         menuClass:"bg-white divide-y divide-gray-100  rounded-lg shadow dark:bg-gray-700 py-2 text-sm text-gray-700 dark:text-gray-200",
         menuActiveClass:"block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
       },
+      
     });
 })
