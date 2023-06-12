@@ -1,10 +1,28 @@
 <template>
   <ul class="space-y-2">
     <li>
-      <MenuItem icon-name="mdi:home">Home</MenuItem>
+      <NuxtLink href="/">
+        <MenuItem icon-name="mdi:home">Home</MenuItem>
+      </NuxtLink>
     </li>
     <li>
-      <MenuItem icon-name="mdi:chart-line">Report</MenuItem>
+      <MenuDropDown label="Report" icon-name="mdi:file-document">
+        <MenuDropItem>
+          <NuxtLink to="/reportday">
+            รายวัน
+          </NuxtLink>
+        </MenuDropItem>
+        <MenuDropItem>
+          <NuxtLink to="/reportmouth">
+            รายเดือน
+          </NuxtLink>
+        </MenuDropItem>
+        <MenuDropItem>
+          <NuxtLink to="/reportyear">
+            รายปี
+          </NuxtLink>
+        </MenuDropItem>
+      </MenuDropDown>
     </li>
     <li>
       <MenuDropDown label="Pages" icon-name="mdi:file-document">

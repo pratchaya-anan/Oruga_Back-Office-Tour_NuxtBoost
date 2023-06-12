@@ -1,6 +1,30 @@
 <template>
-  <section class="h-screen">
-    <div class="flex justify-start">
+  <section class="h-screen">  
+<nav class="flex" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+    <li class="inline-flex items-center">
+      <a href="" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+        <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="/report" class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">รายงาน</a>
+      </div>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        <a href="/reportyear" class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">ปี 2566</a>
+      </div>
+    </li>
+  </ol>
+</nav>
+
+
+    <div class="mt-2 flex justify-start">
       <div class="relative max-w-sm mb-3">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
@@ -83,7 +107,7 @@
           class="grid grid-cols-2  m-3  block max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
           <h5 class="flex justify-between text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             <Icon class="w-6 h-6" name="icon-park-outline:add-subtract"></Icon>
-            <p>40,422</p>
+            <p>684,221</p>
           </h5>
           <h5 class="flex flex-row-reverse text-3 font-bold tracking-tight text-green-600 dark:text-red">
             <Icon class="w-6 h-6" name="ph:arrow-up-bold"></Icon> +23%
@@ -102,19 +126,25 @@ const name = ref("Export")
 
 const datayear = ref([
   {
-    เดือนที่: "03/2566",
+    เดือนที่: "มกราคม",
     รายรับ: '85920',
     รายจ่าย: '82872',
     หมายเหตุ: '',
   },
   {
-    เดือนที่: "04/2566",
+    เดือนที่: "กุมภาพันธ์",
     รายรับ: '114421',
     รายจ่าย: '159000',
     หมายเหตุ: '',
   },
   {
-    เดือนที่: "05/2566",
+    เดือนที่: "มีนาคม",
+    รายรับ: '163920',
+    รายจ่าย: '52000',
+    หมายเหตุ: '',
+  },
+  {
+    เดือนที่: "เมษายน",
     รายรับ: '163920',
     รายจ่าย: '52000',
     หมายเหตุ: '',

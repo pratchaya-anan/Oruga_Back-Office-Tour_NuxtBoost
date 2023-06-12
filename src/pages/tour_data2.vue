@@ -144,27 +144,14 @@
               Other Stuff
             </h3>
             <div class="flex space-x-3">
-              <svg
-                class="w-6 h-6"
-                viewBox="0 0 17 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.1558 0.559692H1.51087C0.676432 0.559692 0 1.23742 0 2.07346V15.7446C0 16.5806 0.676432 17.2583 1.51087 17.2583H15.1558C15.9902 17.2583 16.6667 16.5806 16.6667 15.7446V2.07346C16.6667 1.23742 15.9902 0.559692 15.1558 0.559692Z"
-                  fill="#DC395F"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M6.58437 4.80783C6.58437 5.37806 6.12024 5.81314 5.56621 5.81314C5.01217 5.81314 4.54817 5.378 4.54817 4.80783C4.54817 4.23799 5.01217 3.80298 5.56621 3.80298C6.12024 3.80298 6.58437 4.23799 6.58437 4.80783ZM3.36574 11.9506C3.36574 11.726 3.39575 11.4506 3.45558 11.1956H3.45565L4.21913 8.07017H3.03638L3.39575 6.74185H6.24055L5.1175 11.2051C5.04263 11.4903 5.01268 11.7269 5.01268 11.8916C5.01268 12.1771 5.15292 12.2605 5.37219 12.3101C5.50572 12.34 6.56971 12.3191 7.14895 11.029L7.88658 8.07017H6.68872L7.0481 6.74185H9.60826L9.27896 8.24995C9.72805 7.40973 10.6265 6.61139 11.5098 6.61139C12.4531 6.61139 13.2317 7.28469 13.2317 8.57479C13.2317 8.90471 13.1867 9.2638 13.067 9.66874L12.5878 11.3933C12.543 11.5737 12.5129 11.7235 12.5129 11.8585C12.5129 12.1584 12.6327 12.3083 12.8573 12.3083C13.0819 12.3083 13.3664 12.1429 13.6958 11.2284L14.3546 11.4832C13.9652 12.8483 13.2616 13.4181 12.3782 13.4181C11.345 13.4181 10.8511 12.8035 10.8511 11.9631C10.8511 11.7233 10.8809 11.4681 10.9558 11.213L11.4499 9.44292C11.5098 9.24782 11.5248 9.06798 11.5248 8.90289C11.5248 8.33305 11.1805 7.98786 10.6265 7.98786C9.92271 7.98786 9.45858 8.49397 9.219 9.46901L8.26067 13.3201H6.58391L6.88488 12.1099C6.39198 12.9211 5.70741 13.4235 4.86301 13.4235C3.84484 13.4235 3.36574 12.8359 3.36574 11.9506Z"
-                  fill="white"
-                />
-              </svg>
               <Icon
                 class="w-6 h-6"
-                v-if="!showItemsPanel"
-                @click="showItemsPanel = true"
+                @click="
+                  showItemsPanel != true
+                    ? (showItemsPanel = true)
+                    : (showItemsPanel = false);
+                  showItemsListComment = false;
+                "
                 name="mdi:bed"
               ></Icon>
               <Icon class="w-6 h-6" name="mdi:face-woman-shimmer"></Icon>
@@ -174,6 +161,98 @@
               <Icon class="w-6 h-6" name="mdi:store-marker"></Icon>
               <Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon>
               <Icon class="w-6 h-6" name="mdi:calendar-time"></Icon>
+            </div>
+          </div>
+        </UiCard>
+        <!-- comment โรงแรม -->
+        <UiCard v-if="showItemsPanel">
+          <div class="flex justify-end">
+            <o-button>
+              <Icon class="w-6 h-6" name="bi:plus"></Icon>เพิ่มโรงแรม</o-button
+            >
+          </div>
+          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table
+              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+            >
+              <thead
+                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+              >
+                <tr>
+                  <th scope="col" class="px-6 py-3">โรงแรม</th>
+                  <th scope="col" class="px-6 py-3">วันเข้าพัก</th>
+                  <th scope="col" class="px-6 py-3">วันออก</th>
+                  <th scope="col" class="px-6 py-3">คอมเมนต์</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    จกตาเพลส
+                  </th>
+                  <td class="px-6 py-4">20/06/2566</td>
+                  <td class="px-6 py-4">25/06/2566</td>
+                  <td class="px-6 py-4 text-center">
+                    <Icon
+                      class="w-6 h-6"
+                      name="majesticons:comment-text"
+                      @click="showItemsListComment = true"
+                    ></Icon>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div v-if="showItemsListComment">
+            <h2
+              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+            >
+              คอมเมนต์
+            </h2>
+            <ul
+              class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+            >
+              <li class="flex justify-between">
+                <div>เป็นโรงแรมที่ดีมาก</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+              <li class="flex justify-between">
+                <div>ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+              <li class="flex justify-between">
+                <div>ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+            </ul>
+
+            <o-field label="เขียนคอมเมนต์">
+              <o-input type="textarea"></o-input>
+            </o-field>
+            <div class="flex">
+              <o-field
+                class="flex-1"
+                label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)"
+              >
+                <o-input></o-input>
+              </o-field>
+              <section class="flex-1 shrink flex items-center justify-end">
+                <o-button
+                  @click="showItemsListComment = false"
+                  class="ml-4 mt-5"
+                  >ปิด
+                </o-button>
+                <o-button class="mt-5">เพิ่ม</o-button>
+              </section>
             </div>
           </div>
         </UiCard>
@@ -188,10 +267,10 @@
               >
               </Icon>
               <!-- <Icon
-              class="text-xl font-medium text-pink-600 dark:text-white"
-              name="ph:gender-female-bold"
-            >
-            </Icon> -->
+                class="text-xl font-medium text-pink-600 dark:text-white"
+                name="ph:gender-female-bold"
+              >
+              </Icon> -->
             </div>
             <div class="flex flex-col items-center">
               <h5 class="text-md font-medium text-gray-900 dark:text-white">
@@ -221,43 +300,6 @@
           </UiCard>
         </div>
       </div>
-
-      <section v-if="!showItemsPanel">
-        <UiButton @click="showItemsPanel = true">Add Items</UiButton>
-      </section>
-
-      <UiCard v-if="showItemsPanel">
-        <o-field label="Product">
-          <o-input></o-input>
-        </o-field>
-        <div class="flex">
-          <o-field class="flex-1" label="Quantity">
-            <o-input></o-input>
-          </o-field>
-          <div class="mx-4 shrink flex items-center justify-center">
-            <span class="align-middle">x</span>
-          </div>
-          <o-field class="flex-1" label="Price">
-            <o-input></o-input>
-          </o-field>
-        </div>
-        <o-field label="VAT">
-          <o-input></o-input>
-        </o-field>
-        <o-field label="Discount">
-          <o-input></o-input>
-        </o-field>
-        <o-field label="Remark">
-          <o-input></o-input>
-        </o-field>
-
-        <section>
-          <UiButton class="mt-4">Add Item</UiButton>
-          <UiButton @click="showItemsPanel = false" class="ml-4"
-            >Close</UiButton
-          >
-        </section>
-      </UiCard>
     </div>
   </section>
 </template>
@@ -266,6 +308,7 @@
 import { initFlowbite } from "flowbite";
 
 const showItemsPanel = ref(false);
+const showItemsListComment = ref(false);
 
 onMounted(() => {
   initFlowbite();
