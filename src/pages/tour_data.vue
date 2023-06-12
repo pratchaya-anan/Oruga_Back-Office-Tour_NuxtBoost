@@ -1,329 +1,328 @@
 <template>
-  <section class="h-min-screen">
-    <diV class="grid grid-cols-12 gap-2">
-      <div class="col-span-7">
-        <UiCard class="h-full">
+  <section class="min-h-screen">
+    <LayoutPageTitle> Tour / จัดทัวร์ </LayoutPageTitle>
+    <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
+      <div class="col-span-full xl:col-auto mb-4">
+        <UiCard
+          ><div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+            <div class="w-full relative">
+              <button
+                id="dropdownMenuIconButton"
+                data-dropdown-toggle="dropdownDots"
+                class="absolute top-0 right-0 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 rounded-full hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+                type="button"
+              >
+                <Icon
+                  aria-hidden="true"
+                  class="w-8 h-8"
+                  name="mdi:dots-vertical"
+                ></Icon>
+              </button>
+
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownDots"
+                class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="dropdownMenuIconButton"
+                >
+                  <MenuDropItem>พิมพ์ใบ Order</MenuDropItem>
+                  <MenuDropItem>พิมพ์ใบ Tag</MenuDropItem>
+                  <MenuDropItem>พิมพ์ใบ Sticker</MenuDropItem>
+                  <MenuDropItem>ใบเสนอราคา</MenuDropItem>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Dashboard</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Earnings</a
+                    >
+                  </li>
+                </ul>
+                <div class="py-2">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Separated link</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold dark:text-white">
+                ทัวร์เกาะเสม็ด เสร็จทุกราย
+              </h2>
+              <ul class="mt-2 space-y-1">
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
+                  กาญจนบุรี-เพชรบุรี
+                </li>
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <Icon
+                    class="w-6 h-6"
+                    name="line-md:moon-filled-to-sunny-filled-transition"
+                  ></Icon>
+                  5 วัน 4 คืน
+                </li>
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
+                  16/04/2566 &#32;
+                  <Icon class="w-5 h-5" name="line-md:arrow-right"></Icon>
+                  &#32; 16/04/2566
+                </li>
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <Icon
+                    class="w-6 h-6"
+                    name="fluent:people-audience-24-filled"
+                  ></Icon>
+                  35 คน
+                </li>
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <Icon
+                    class="w-6 h-6"
+                    name="fluent:comment-error-16-filled"
+                  ></Icon>
+                  สนุกดี
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sm:flex xl:block xl:space-y-4">
+            <div class="sm:flex-1">
+              <address
+                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+              >
+                <div class="mt-4">Email address</div>
+                <a
+                  class="text-sm font-medium text-gray-900 dark:text-white"
+                  href="mailto:webmaster@flowbite.com"
+                  >yourname@flowbite.com</a
+                >
+                <div class="mt-4">Home address</div>
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  92 Miles Drive, Newark, NJ 07103, California, <br />United
+                  States of America
+                </div>
+                <div class="mt-4">Phone number</div>
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  +00 123 456 789 / +12 345 678
+                </div>
+              </address>
+            </div>
+          </div>
           <div>
-            <label class="text-5xl font-medium">ข้อมูลทัวร์</label>
-          </div>
-          <div class="grid grid-cols-6 mt-6">
-            <div class="col-span-2">
-              <div class="text-xl mt-3">
-                <p>ชื่อทริปทัวร์:</p>
-                <p>จำนวน:</p>
-              </div>
-            </div>
-            <div class="col-span-4">
-              <div class="text-xl mt-3">
-                <p>เกาะเสม็ด เสร็จบางราย</p>
-                <p>5 วัน 4 คืน</p>
-              </div>
-            </div>
-          </div>
-          <hr class="my-5 border-1.5" />
-          <div class="grid grid-cols-6 gap-3">
-            <div class="col-span-2">
-              <div class="text-xl mt-3">
-                <p>โปรแกรมทัวร์:</p>
-                <p>จำนวนลูกทัวร์:</p>
-              </div>
-            </div>
-            <div class="col-span-4">
-              <div class="text-xl mt-3">
-                <p>เกาะเสม็ด เสร็จบางราย</p>
-                <p>30 คน</p>
-              </div>
+            <h3 class="mb-2 text-base font-bold text-gray-900 dark:text-white">
+              Other Stuff
+            </h3>
+            <div class="flex space-x-3">
+              <Icon
+                class="w-6 h-6"
+                @click="
+                  showItemsPanel != true
+                    ? (showItemsPanel = true)
+                    : (showItemsPanel = false);
+                  showItemsListComment = false;
+                "
+                name="mdi:bed"
+              ></Icon>
+              <Icon class="w-6 h-6" name="mdi:face-woman-shimmer"></Icon>
+              <Icon class="w-6 h-6" name="mdi:van-utility"></Icon>
+              <Icon class="w-6 h-6" name="mdi:airplane"></Icon>
+              <Icon class="w-6 h-6" name="mdi:image-filter-hdr"></Icon>
+              <Icon class="w-6 h-6" name="mdi:store-marker"></Icon>
+              <Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon>
+              <Icon class="w-6 h-6" name="mdi:calendar-time"></Icon>
             </div>
           </div>
-          <hr class="my-5 border-1.5" />
-          <div class="grid grid-cols-6 gap-3">
-            <div class="col-span-2">
-              <div class="text-xl">
-                <p>วันที่เดินทาง:</p>
-              </div>
-            </div>
-            <div class="col-span-4">
-              <div class="text-xl mt-3">
-                <p>16/04/2566 ถึง 20/04/2566</p>
-              </div>
-            </div>
+        </UiCard>
+        <!-- comment โรงแรม -->
+        <UiCard v-if="showItemsPanel">
+          <div class="flex justify-end">
+            <o-button>
+              <Icon class="w-6 h-6" name="bi:plus"></Icon>เพิ่มโรงแรม</o-button
+            >
           </div>
-          <hr class="my-5 border-1.5" />
-          <div class="grid grid-cols-6 gap-3">
-            <div class="col-span-2">
-              <div class="text-xl">
-                <p>หมายเหตุ:</p>
-              </div>
-            </div>
-            <div class="col-span-4">
-              <div class="text-xl mt-3">
-                <p>สบายตัวมากๆเลยนะ ถ้าไปอีกรอบ จะหาตัวท็อป</p>
-              </div>
+          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table
+              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+            >
+              <thead
+                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+              >
+                <tr>
+                  <th scope="col" class="px-6 py-3">โรงแรม</th>
+                  <th scope="col" class="px-6 py-3">วันเข้าพัก</th>
+                  <th scope="col" class="px-6 py-3">วันออก</th>
+                  <th scope="col" class="px-6 py-3">คอมเมนต์</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    จกตาเพลส
+                  </th>
+                  <td class="px-6 py-4">20/06/2566</td>
+                  <td class="px-6 py-4">25/06/2566</td>
+                  <td class="px-6 py-4 text-center">
+                    <Icon
+                      class="w-6 h-6"
+                      name="majesticons:comment-text"
+                      @click="showItemsListComment = true"
+                    ></Icon>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div v-if="showItemsListComment">
+            <h2
+              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+            >
+              คอมเมนต์
+            </h2>
+            <ul
+              class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+            >
+              <li class="flex justify-between">
+                <div>เป็นโรงแรมที่ดีมาก</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+              <li class="flex justify-between">
+                <div>ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+              <li class="flex justify-between">
+                <div>ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+            </ul>
+
+            <o-field label="เขียนคอมเมนต์">
+              <o-input type="textarea"></o-input>
+            </o-field>
+            <div class="flex">
+              <o-field
+                class="flex-1"
+                label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)"
+              >
+                <o-input></o-input>
+              </o-field>
+              <section class="flex-1 shrink flex items-center justify-end">
+                <o-button
+                  @click="showItemsListComment = false"
+                  class="ml-4 mt-5"
+                  >ปิด
+                </o-button>
+                <o-button class="mt-5">เพิ่ม</o-button>
+              </section>
             </div>
           </div>
         </UiCard>
       </div>
-      <div class="col-span-5">
-        <UiCard class="max-w-3xl">
-          <div>
-            <div class="border-l-1">
-              <label class="text-3xl font-medium">ข้อมูลโรงแรม</label>
-              <div class="grid grid-cols-6 gap-2 mt-3">
-                <div class="col-span-3">
-                  <div class="text-xl">โรงแรมริเวอร์แคว</div>
-                  <div>จำนวนห้องพัก:</div>
-                  <div>วันที่เช็คอินน์:</div>
-                  <div>วันที่เช็คเอ้าท์:</div>
-                </div>
-                <div class="col-span-3">
-                  <div>กาญจนบุรี</div>
-                  <div>45</div>
-                  <div>30/03/2566</div>
-                  <div>31/03/2566</div>
-                </div>
-              </div>
+      <div class="grid grid-cols-1 col-span-2 gap-4">
+        <div class="flex flex-wrap gap-4">
+          <UiCard v-for="item in 20" key="item" class="flex-1">
+            <div class="flex justify-end">
+              <Icon
+                class="text-xl font-medium text-green-600 dark:text-white"
+                name="mdi:gender-male"
+              >
+              </Icon>
+              <!-- <Icon
+                class="text-xl font-medium text-pink-600 dark:text-white"
+                name="ph:gender-female-bold"
+              >
+              </Icon> -->
             </div>
-          </div>
-        </UiCard>
-
-        <UiCard class="max-w-3xl mt-3">
-          <div class="cursor-pointer" @click="isCardModalActive = true">
-            <label class="text-3xl font-medium">ข้อมูลไกด์</label>
-            <div class="grid grid-cols-6 gap-2 mt-3">
-              <div class="col-span-3">
-                <div>นายขวัญชัย บูรณฤกษ์</div>
-                <div>นายพิษณุ บุญลือ</div>
+            <div class="flex flex-col items-center">
+              <h5 class="text-md font-medium text-gray-900 dark:text-white">
+                สมหมาย ใจดี
+              </h5>
+              <h5
+                class="mb-1 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                sommai jaidee
+              </h5>
+              <span class="text-sm text-gray-500 dark:text-gray-400">Thai</span>
+              <div class="flex justify-center">
+                <Icon
+                  class="text-xl font-medium text-gray-500 dark:text-white"
+                  name="mingcute:cake-fill"
+                >
+                </Icon>
+                <Icon
+                  class="text-xl font-medium text-gray-500 dark:text-white"
+                  name="mdi:credit-card-remove-outline"
+                >
+                </Icon>
               </div>
-              <div class="col-span-3">
-                <div>0833076329</div>
-                <div>0632452369</div>
-              </div>
-            </div>
-          </div>
-        </UiCard>
-        <o-modal v-model:active="isCardModalActive">
-          <UiCard class="border-l-1">
-            <div>
-              <label class="text-3xl font-medium">ข้อมูลไกด์</label>
-              <div class="grid grid-cols-6 gap-2 mt-3">
-                <div class="col-span-3">
-                  <div>นายขวัญชัย บูรณฤกษ์</div>
-                  <div>นายพิษณุ บุญลือ</div>
-                </div>
-                <div class="col-span-3">
-                  <div>0833076329</div>
-                  <div>0632452369</div>
-                </div>
+              <div class="flex mt-4 space-x-3 md:mt-6">
+                <a
+                  href="#"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Confirm</a
+                >
+                <a
+                  href="#"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+                >
+                  Manage</a
+                >
               </div>
             </div>
           </UiCard>
-        </o-modal>
-        <UiCard class="max-w-3xl mt-3">
-          <div>
-            <label class="text-3xl font-medium">ข้อมูลพาหนะ</label>
-            <div class="grid grid-cols-6">
-              <div class="col-span-2">
-                <div>พาหนะขาไป :</div>
-              </div>
-              <div class="col-span-2">
-                <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
-              </div>
-              <div class="col-span-2">
-                <div>จำนวนคน: 20</div>
-              </div>
-            </div>
-            <div class="grid grid-cols-6">
-              <div class="col-span-2">
-                <div>พาหนะขากลับ :</div>
-              </div>
-              <div class="col-span-2">
-                <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
-              </div>
-              <div class="col-span-2">
-                <div>จำนวนคน: 20</div>
-              </div>
-            </div>
-          </div>
-        </UiCard>
-      </div>
-    </diV>
-    <!-- <UiCard class="max-w-full">
-      <div class="grid grid-cols-2">
-        <div>
-          <label class="text-4xl font-medium">จัดข้อมูลทัวร์</label>
-        </div>
-        <div class="flex justify-end">
-          <NuxtLink href="/paper/quotation_paper">
-            <o-button>ใบเสนอราคา</o-button>
-          </NuxtLink>
         </div>
       </div>
-      <hr class="my-5 border-1.5" />
-      <div>
-        <label class="text-2xl font-medium">ข้อมูลทัวร์</label>
-      </div>
-      <div class="grid grid-cols-3 gap-6">
-        <div>
-          <p>ชื่อทริปทัวร์: เกาะเสม็ด เสร็จบางราย</p>
-          <p>จำนวน: 5 วัน 4 คืน</p>
-        </div>
-        <div>
-          <p>โปรแกรมทัวร์: เกาะเสม็ด เสร็จบางราย</p>
-          <p>จำนวนลูกทัวร์: 30 คน</p>
-        </div>
-        <div>
-          <p>วันที่เดินทาง: 16/04/2566 ถึง 20/04/2566</p>
-          <p>หมายเหตุ: สบายตัวมากๆเลยนะ ถ้าไปอีกรอบ จะหาตัวท็อป</p>
-        </div>
-      </div>
-      <hr class="my-5 border-1.5" />
-      <div class="grid grid-cols-3 gap-6">
-        <div class="border-l-1">
-          <label class="text-2xl font-medium">ข้อมูลโรงแรม</label>
-          <div class="grid grid-cols-2 gap-2">
-            <div>โรงแรมริเวอร์แคว กาญจนบุรี</div>
-            <div>จำนวนห้องพัก: 45</div>
-            <div>วันที่เช็คอินน์: 30/03/2566</div>
-            <div>วันที่เช็คเอ้าท์: 31/03/2566</div>
-          </div>
-        </div>
-        <div>
-          <label class="text-2xl font-medium">ข้อมูลไกด์</label>
-          <div class="grid grid-cols-2 gap-2">
-            <div>นายขวัญชัย บูรณฤกษ์</div>
-            <div>0833076329</div>
-            <div>นายพิษณุ บุญลือ</div>
-            <div>0632452369</div>
-          </div>
-        </div>
-        <div>
-          <label class="text-2xl font-medium">ข้อมูลพาหนะ</label>
-          <div>พาหนะขาไป :</div>
-          <div class="grid grid-cols-2 gap-2">
-            <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
-            <div>จำนวนคน: 20</div>
-          </div>
-          <div>พาหนะขากลับ :</div>
-          <div class="grid grid-cols-2 gap-2">
-            <div>รถทัวร์นิลผกา 1-พิกุล 2</div>
-            <div>จำนวนคน: 20</div>
-          </div>
-        </div>
-      </div>
-    </UiCard> -->
-    <UiCard class="mt-5">
-      <div class="p-5">
-        <div class="mb-5">
-          <label class="text-5xl font-medium">ข้อมูลลูกทัวร์</label>
-        </div>
-        <hr class="my-2 border-1.5" />
-        <div class="my-2 grid grid-cols-2 gap-4 mt-5">
-          <div class="flex">
-            <NuxtLink>
-              <o-button variant="info">จัดการ</o-button>
-            </NuxtLink>
-            <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
-            <div class="px-2">
-              <o-button>ค้นหา</o-button>
-            </div>
-          </div>
-          <div class="flex justify-end">
-            <NuxtLink href="/adduser">
-              <o-button>+ เพิ่มลูกทัวร์</o-button>
-            </NuxtLink>
-            <NuxtLink>
-              <o-button variant="info"> พิมพ์ Tag รายชื่อ</o-button>
-            </NuxtLink>
-          </div>
-        </div>
-        <div>
-          <o-table :data="data" checkable :checkbox-position="checkboxPosition">
-            <o-table-column
-              v-for="column in columns"
-              v-bind="column"
-              #default="{ row }"
-            >
-              {{ row[column.field] }}
-            </o-table-column>
-          </o-table>
-        </div>
-      </div>
-    </UiCard>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
 
+const showItemsPanel = ref(false);
+const showItemsListComment = ref(false);
+
 onMounted(() => {
   initFlowbite();
 });
-
-const tableData = [
-  {
-    id: 1,
-    first_name: "Jesse",
-    last_name: "Simmons",
-    date: "2016-10-15 13:43:27",
-    gender: "Male",
-  },
-  {
-    id: 2,
-    first_name: "John",
-    last_name: "Jacobs",
-    date: "2016-12-15 06:00:53",
-    gender: "Male",
-  },
-  {
-    id: 3,
-    first_name: "Tina",
-    last_name: "Gilbert",
-    date: "2016-04-26 06:26:28",
-    gender: "Female",
-  },
-  {
-    id: 4,
-    first_name: "Clarence",
-    last_name: "Flores",
-    date: "2016-04-10 10:28:46",
-    gender: "Male",
-  },
-  {
-    id: 5,
-    first_name: "Anne",
-    last_name: "Lee",
-    date: "2016-12-06 14:38:38",
-    gender: "Female",
-  },
-];
-
-const isCardModalActive = ref(false);
-const data = ref(tableData);
-const checkboxPosition = ref("left");
-
-const columns = ref([
-  {
-    field: "id",
-    label: "ID",
-    width: "40",
-    numeric: true,
-  },
-  {
-    field: "first_name",
-    label: "First Name",
-  },
-  {
-    field: "last_name",
-    label: "Last Name",
-  },
-  {
-    field: "date",
-    label: "Date",
-    position: "centered",
-  },
-  {
-    field: "gender",
-    label: "Gender",
-  },
-]);
 </script>
