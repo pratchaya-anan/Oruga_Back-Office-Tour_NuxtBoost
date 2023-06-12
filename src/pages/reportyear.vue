@@ -122,7 +122,7 @@
 import * as XLSX from 'xlsx';
 import { initFlowbite } from 'flowbite';
 
-const name = ref("Export")
+const name = ref("Export report year")
 
 const datayear = ref([
   {
