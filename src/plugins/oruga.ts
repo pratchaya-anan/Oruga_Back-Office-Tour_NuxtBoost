@@ -40,9 +40,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
       table: {
         rootClass: 'relative overflow-x-auto border shadow-md',
-        // tableClass: 'w-full text-sm text-left text-gray-500 dark:text-gray-400',
-        // thClass: 'px-6 py-4 bg-white border-b dark:bg-gray-800 dark:border-gray-700 uppercase ',
-        // tdClass: 'px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border-b',
         tableClass: 'w-full text-sm text-left text-gray-500 dark:text-gray-400',
         thClass: 'px-6 py-4 text-xs text-gray-700 border-b uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400',
         tdClass: 'px-6 py-4 font-medium text-gray-900 dark:text-white border-b bg-white dark:bg-gray-800 dark:border-gray-700 whitespace-nowrap'
