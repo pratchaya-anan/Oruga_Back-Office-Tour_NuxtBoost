@@ -57,13 +57,10 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootClass: "w-full text-sm ",
         stepsClass: "flex w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
         animatedClass: " items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
-        // stepContentClass: "hidden",
-        // stepContentClass: "hidden",
-
         itemHeaderClass: "flex w-full items-center dark:text-blue-500",
         itemHeaderActiveClass: " w-full items-center text-blue-600 dark:text-blue-500 ",
         itemHeaderPreviousClass: "w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 ",
-
+        stepContentClass: "mt-5 mb-5",
       },
       radio: {
         rootClass: 'flex text-sm font-medium text-center items-center mb-1',
