@@ -36,7 +36,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
       input: {
         rootClass: 'block mb-2 text-sm font-medium',
-        inputClass: 'border block w-full p-2.5 text-sm rounded-lg',
+        inputClass: 'border border-gray-300 block w-full p-2.5 text-sm rounded-lg',
       },
       table: {
         rootClass: 'relative overflow-x-auto border shadow-md',
