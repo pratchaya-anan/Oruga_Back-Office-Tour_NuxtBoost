@@ -34,21 +34,8 @@
                 เงินเดือนประจำตำแหน่ง
             </h2>
             <div class="w-3/12"><o-input></o-input></div>
-            <h2 class="text-xl font-bold dark:text-white mt-3 mb-3">
-                แนบสลิปเงินเดือน
-            </h2>
-            <div class="w-3/12">
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload
-                    file</label>
-                <input
-                    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                    aria-describedby="file_input_help" id="file_input" type="file">
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF (MAX.
-                    800x400px).</p>
-            </div>
-
-
-            <div class="justify-end mt-2"><o-button>ตรวจสอบ</o-button></div>
+            
+            <div class="flex justify-end mt-2"><o-button>></o-button></div>
 
         </div>
     </section>
