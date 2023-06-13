@@ -6,25 +6,34 @@
                 <Icon class="w-60 h-60" name="healthicons:ui-user-profile"></Icon>
             </svg>
             <a href="#">
-                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">นาย นพรุจ ชูธรรมสิทธิกุล
+                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">นาย นพรุจ
+                    ชูธรรมสิทธิกุล
                 </h5>
             </a>
             <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on how to
                 certify for your weekly benefits:</p>
-    </div>
-
-    <div class="max-w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-           
-           <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เลือกประเภทการกู้</label>
-           <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-             <option selected>ประเภทการกู้</option>
-             <option value="US">กู้เงินฉุกเฉิน</option>
-             <option value="CA">กู้สามัญ</option>
-             <option value="FR">กู้พิเศษ</option>
-             <option value="DE">กู้หุ้น</option>
-           </select>
-           <o-button>ตรวจสอบ</o-button>
-               </div>
-               
-</section></template>
+        </div>
+        <div class="flex max-w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="w-3/12"><o-input></o-input></div>
+                <div><p class="px-3 text-red-500">*เงินเดือนประจำตำแหน่ง</p></div>
+        </div>
+        <div class="max-w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <label for="countries"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">เลือกประเภทการกู้</label>
+            <div class="flex w-full">
+                <div>
+                    <select id="countries"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>ประเภทการกู้</option>
+                        <option value="US">กู้เงินฉุกเฉิน</option>
+                        <option value="CA">กู้สามัญ</option>
+                        <option value="FR">กู้พิเศษ</option>
+                        <option value="DE">กู้หุ้น</option>
+                    </select>
+                </div>
+                <div class="justify-end mx-2"><o-button>ตรวจสอบ</o-button></div>
+            </div>
+        </div>
+    </section>
+</template>
   
