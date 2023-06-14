@@ -7,25 +7,39 @@
                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <Icon class="w-60 h-60" name="healthicons:ui-user-profile"></Icon>
                     </svg>
-
                     <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">นาย นพรุจ
                         ชูธรรมสิทธิกุล
                     </h5>
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-2 gap-8">
                         <div class="w-full">
-                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline
-                                process on how to
-                                certify for your weekly benefits:
-                            </p>
+                            <ul class="mt-2 space-y-1">
+                                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                                    <Icon class="w-6 h-6 mr-2" name="ri:treasure-map-fill"></Icon>
+                                    เลขบัตรประชาชน: 1-339955-874-58-7
+                                </li>
+                                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                                    <Icon class="w-6 h-6 mr-2" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
+                                    เลขข้าราชการ: 1548362568
+                                </li>
+                                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                                    <Icon class="w-6 h-6 mr-2" name="line-md:calendar"></Icon>
+                                    วันเกิด: 16/04/2566
+                                </li>
+                            </ul>
                         </div>
                         <div class="w-full">
-                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline
-                                process on how to
-                                certify for your weekly benefits:
-                            </p>
+                            <ul class="mt-2 space-y-1">
+                                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                                    <Icon class="w-6 h-6 mr-2" name="fluent:people-audience-24-filled"></Icon>
+                                    เป็นสมาชิกตั้งแต่: 16/04/2551
+                                </li>
+                                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                                    <Icon class="w-6 h-6 mr-2" name="fluent:comment-error-16-filled"></Icon>
+                                    เป็นสมาชิกมา: 5 ปี  4 เดือน  15 วัน
+                                </li>
+                            </ul>
                         </div>
                     </div>
-
                 </UiCard>
                 <UiCard>
                     <div class="grid grid-cols-2 gap-8">
