@@ -147,7 +147,6 @@
                                             <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit"
                                                 @click="showOrderPanel = true">
                                             </Icon>
-                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="fluent:document-print-32-filled"></Icon>
                                         </div>
                                     </div>
                                     <ul class="mt-2 space-y-1">
@@ -306,21 +305,28 @@
                     </UiCard>
                 </div>
                 <div class="col-span-2">
-                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-4">
+                    <div class=" overflow-x-auto shadow-md sm:rounded-lg mb-4">
+
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
-                                        Product name
+                                        รหัสสินค้า
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Color
+                                        จำนวน
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Category
+                                        ราคาต่อหน่วย
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Price
+                                        ส่วนลด
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        ภาษี (0% 7% 9%)
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        รายการสินค้า
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         <span class="sr-only">Edit</span>
@@ -332,83 +338,100 @@
                                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <th scope="row"
                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Apple MacBook Pro 17"
+                                        Qu-285455
                                     </th>
                                     <td class="px-6 py-4">
-                                        Silver
+                                        1
                                     </td>
                                     <td class="px-6 py-4">
-                                        Laptop
+                                        10,000
                                     </td>
                                     <td class="px-6 py-4">
-                                        $2999
+                                        10 %
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        0%
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        ห้องพักโรงแรม
                                     </td>
                                     <td class="px-6 py-4 text-right">
-                                        <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button"> 
-  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
-</button>
+                                        <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                                            class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                            type="button">
+                                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                                                </path>
+                                            </svg>
+                                        </button>
 
-<!-- Dropdown menu -->
-<div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-      </li>
-    </ul>
-    <div class="py-2">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated link</a>
-    </div>
-</div>                                    </td>
-                                </tr>                                                                
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
-                    </div>
 
+                        <!-- Dropdown menu -->
+                        <div id="dropdownDots"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                            <div class="py-2">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                    ลบ</a>
+                            </div>
+                            <div class="py-2">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                    แก้ไข</a>
+                            </div>
+                        </div>
+
+                    </div>
                     <section v-if="!showItemsPanel">
-                        <o-button @click="showItemsPanel = true">Add Items</o-button>
-                    </section>                  
+                        <o-button @click="showItemsPanel = true">เพิ่มข้อมูล</o-button>
+                    </section>
 
                     <UiCard v-if="showItemsPanel">
-                        <o-field label="Product">
-                            <o-input></o-input>
-                        </o-field>
-                        <div class="flex">
-                            <o-field class="flex-1" label="Quantity">
-                                <o-input></o-input>
-                            </o-field>
-                            <div class="mx-4 shrink flex items-center justify-center">
-                                <span class="align-middle">x</span>
-                            </div>
-                            <o-field class="flex-1" label="Price">
+                        <div class="flex gap-4">
+                            <o-field class="flex-1" label="รหัสสินค้า">
                                 <o-input></o-input>
                             </o-field>
                         </div>
-                        <o-field label="VAT">
+                        <o-field class="flex-1" label="รายการสินค้า">
                             <o-input></o-input>
                         </o-field>
-                        <o-field label="Discount">
-                            <o-input></o-input>
-                        </o-field>
-                        <o-field label="Remark">
-                            <o-input></o-input>
-                        </o-field>
+                        <div class="flex gap-4">
+                            <o-field class="flex-1" label="จำนวน">
+                                <o-input></o-input>
+                            </o-field>
+                            <o-field class="flex-1" label="ราคาต่อหน่วย">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="flex gap-4">
+                            <o-field class="flex-1" label="ส่วนลด">
+                                <o-input></o-input>
+                            </o-field>
+                            <o-field class="flex-1" label="ภาษี (0% 7% 9%)">
+                                <o-select placeholder="0 %">
+                                    <option value="flint">0 %</option>
+                                    <option value="silver">7 %</option>
+                                    <option value="silver">9 %</option>
+                                </o-select>
+                            </o-field>
+                        </div>
 
                         <section>
-                            <o-button class="mt-4">Add Item</o-button>
-                            <o-button @click="showItemsPanel = false" class="ml-4">Close</o-button>
+                            <o-button class="mt-4">เพิ่มรายการ</o-button>
+                            <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
                         </section>
                     </UiCard>
                 </div>
             </div>
         </o-step-item>
         <o-step-item step="4" label="ยืนยัน" :clickable="true" icon="user-lock">
-        
+
         </o-step-item>
     </o-steps>
 </template>
