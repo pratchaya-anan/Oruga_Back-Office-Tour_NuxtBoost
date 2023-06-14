@@ -77,9 +77,35 @@
               </o-table-column>
               <o-table-column field="จัดการ" label="จัดการ" position="centered" v-slot:default="props">
                 <!-- {{ props.row.หมายเหตุ }} -->
-                <NuxtLink to="/coop/loanrequest_attendmeetings">
-                  <o-button>ตรวจสอบ</o-button>
-                </NuxtLink>
+                <!-- <NuxtLink to="/coop/loanrequest_attendmeetings"> -->
+                <o-button @click="isCardModalActive = true">ตรวจสอบ</o-button>
+                <o-modal v-model:active="isCardModalActive">
+                  <UiCard>
+                    <div class="w-1000">
+                      <o-field label="อนุมัติที่ประชุม">
+                        <div class="flex justify-start space-x-4">
+                          <o-radio v-model="check" name="check" native-value="pass">
+                            ผ่าน
+                          </o-radio>
+                          <o-radio v-model="check" name="check" native-value="notpass">
+                            ไม่ผ่าน
+                          </o-radio>
+                        </div>
+                      </o-field>
+                      <o-field v-if="check == 'notpass'" label="เหตุผล">
+                        <o-input>
+
+                        </o-input>
+                      </o-field>
+                      <div class="w-full flex justify-end">
+                        <o-button>
+                          บันทึก
+                        </o-button>
+                      </div>
+                    </div>
+                  </UiCard>
+                </o-modal>
+                <!-- </NuxtLink> -->
               </o-table-column>
             </o-table>
           </o-tab-item>
@@ -461,6 +487,8 @@
 // const state = 1;
 const state = ref(1);
 const step = ref(1);
+const isCardModalActive = ref(false);
+const check = ref('');
 
 const data = ref([
   {
