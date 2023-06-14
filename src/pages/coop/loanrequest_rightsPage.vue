@@ -11,7 +11,10 @@
                   src="https://www.freeiconspng.com/thumbs/profile-icon-png/account-profile-user-icon--icon-search-engine-10.png"
                   alt="Jese Leos" />
               </a>
-              <h2 class="text-xl font-bold dark:text-white mb-3">ข้อมูลผู้ขอกู้</h2>
+              <div class="flex justify-btween">
+                <h2 class="text-xl font-bold ">ข้อมูลผู้ขอกู้</h2>
+                <h2 class="text-xl font-bold ">กู้สามัญ</h2>
+              </div>
               <h2 class="text-sm font-bold dark:text-white">สมหมาย ใจดี</h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
@@ -125,9 +128,52 @@
         </UiCard>
 
       </div>
-      <div class="grid grid-cols-1 col-span-2 gap-4">
+      <div class="col-span-2 gap-4">
         <div class="flex flex-wrap gap-4">
           <UiCard class="flex-1">
+            
+        <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
+          หลักค้ำประกัน
+        </h5>
+        <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Connect with one of our available wallet providers or create a new one.</p>
+        <ul class="my-4 space-y-3">
+          <p class="text-sm font-normal text-gray-900 dark:text-gray-400">
+            ผู้ค้ำ
+          </p>
+            <li>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <span class="flex-1 ml-3 whitespace-nowrap">นายกล้วยหอม หวี</span>
+                    <span class="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">Popular</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <span class="flex-1 ml-3 whitespace-nowrap">นายวัน  สอง</span>
+                </a>
+            </li>
+            <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
+              สินทรัพย์</p>
+            <li>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <span class="flex-1 ml-3 whitespace-nowrap"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <span class="flex-1 ml-3 whitespace-nowrap">WalletConnect</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <span class="flex-1 ml-3 whitespace-nowrap">Fortmatic</span>
+                </a>
+            </li>
+        </ul>
+        <div>
+        </div>
+
+          </UiCard>
+          <!-- <UiCard class="flex-1">
             <div class="flex flex-col items-center">
               <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <caption class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
@@ -211,262 +257,8 @@
                 </o-field>
               </div>
             </div>
-          </UiCard>
-          <UiCard class="flex-1">
-            <div class="flex flex-col items-center">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <caption class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                  ข้อมูลผู้ค้ำ
-                </caption>
-                <div>
-                  <ul class="mt-2 space-y-1">
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      ชื่อ-สกุล นายวัน สอง
-                    </li>
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      เงินเดือน
-                      50,000
-                    </li>
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      ตำแหน่ง ผู้ช่วยบริการ
-                    </li>
-                    <li class="text-lg font-semibold text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                      หลักฐานผู้ค้ำ
-                    </li>
-                  </ul>
-                </div>
-                <tbody>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สำเนาบัตรประชาชน</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div>
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สำเนาบัตรทะเบียนบ้าน</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สลิปเงินเดือน</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สินทรัพย์</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="w-full mt-4">
-                <o-field label="คอมเมนต์">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-            </div>
-          </UiCard>
-          <UiCard class="flex-1">
-            <div class="flex flex-col items-center">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <caption class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                  ข้อมูลผู้ค้ำ
-                </caption>
-                <div>
-                  <ul class="mt-2 space-y-1">
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      ชื่อ-สกุล นายวัน สอง
-                    </li>
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      เงินเดือน
-                      50,000
-                    </li>
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      ตำแหน่ง ผู้ช่วยบริการ
-                    </li>
-                    <li class="text-lg font-semibold text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                      หลักฐานผู้ค้ำ
-                    </li>
-                  </ul>
-                </div>
-                <tbody>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สำเนาบัตรประชาชน</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div>
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สำเนาบัตรทะเบียนบ้าน</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สลิปเงินเดือน</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สินทรัพย์</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="w-full mt-4">
-              <o-field label="คอมเมนต์">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            </div>
-          </UiCard>
-          <UiCard class="flex-1">
-            <div class="flex flex-col items-center">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <caption class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                  ข้อมูลผู้ค้ำ
-                </caption>
-                <div>
-                  <ul class="mt-2 space-y-1">
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      ชื่อ-สกุล นายวัน สอง
-                    </li>
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      เงินเดือน
-                      50,000
-                    </li>
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      ตำแหน่ง ผู้ช่วยบริการ
-                    </li>
-                    <li class="text-lg font-semibold text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                      หลักฐานผู้ค้ำ
-                    </li>
-                  </ul>
-                </div>
-                <tbody>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สำเนาบัตรประชาชน</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div>
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สำเนาบัตรทะเบียนบ้าน</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สลิปเงินเดือน</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สินทรัพย์</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="w-full mt-4">
-              <o-field label="คอมเมนต์">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            </div>
-          </UiCard>
+          </UiCard>           -->
+          
         </div>
         <div class="flex justify-end">
           <o-button href="#"
