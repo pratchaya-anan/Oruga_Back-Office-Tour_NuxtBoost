@@ -573,6 +573,12 @@
                     </div>
                 </div>
             </section>
+            <div  class="flex justify-center mt-3">
+                <o-button>
+                    <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>                                           
+                    พิมพ์
+                </o-button>
+            </div>
         </o-step-item>
     </o-steps>
 </template>
