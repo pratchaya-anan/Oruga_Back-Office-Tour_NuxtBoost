@@ -234,234 +234,79 @@
         <div class="flex flex-wrap gap-4">
           <UiCard class="flex-1">
             <div class="flex flex-col items-center">
-              <table
-                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-              >
-                <caption
-                  class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
+              <div class="inline-flex rounded-md shadow-sm" role="group">
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-l-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
                 >
-                  บัญชีเงินฝาก
-                </caption>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                    v-for="item in 5"
-                    key="item"
-                  >
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      บัญชีที่ 1
-                    </th>
-                    <td class="px-6 py-4">
-                      <div>
-                        xx:xx<Icon
-                          class="w-4 h-4 m-2 text-gray-500"
-                          name="zondicons:view-show"
-                        ></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <a
-                        href="#"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        >จัดการ</a
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="flex mt-4 space-x-3 md:mt-6">
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  <Icon
+                    class="w-6 h-6 m-1"
+                    name="ic:round-account-balance"
+                  ></Icon>
+                  บัญชี
+                </button>
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-r border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
                 >
-                  Confirm</a
+                  <Icon class="w-6 h-6 m-1" name="uil:money-insert"></Icon>
+                  ฝากเงิน
+                </button>
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
                 >
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+                  <Icon class="w-6 h-6 m-1" name="uil:money-insert"></Icon>
+                  ถอนเงิน
+                </button>
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
                 >
-                  Manage</a
-                >
+                  <Icon
+                    class="w-6 h-6 m-1"
+                    name="fa6-solid:money-bill-transfer"
+                  ></Icon>
+                  โอนเงิน
+                </button>
               </div>
             </div>
-          </UiCard>
-          <UiCard class="flex-1">
-            <div class="flex flex-col items-center">
-              <table
-                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-              >
-                <caption
-                  class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
+            <div class="flex flex-col items-center m-5">
+              <div class="inline-flex rounded-md shadow-sm" role="group">
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-l-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700"
                 >
-                  บัญชีหุ้น
-                </caption>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                    v-for="item in 5"
-                    key="item"
-                  >
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      <div>บัญชีที่ 1</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <p>2.65</p>
-                        <p>
-                          <Icon
-                            class="w-3 h-3 text-gray-500"
-                            name="ic:round-percentage"
-                          ></Icon>
-                        </p>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <a
-                        href="#"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        >จัดการ</a
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="flex mt-4 space-x-3 md:mt-6">
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  <Icon
+                    class="w-6 h-6 m-1"
+                    name="streamline:money-graph-analytics-business-product-graph-data-chart-analysis"
+                  ></Icon>
+                  หุ้น
+                </button>
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-r border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
                 >
-                  Confirm</a
+                  <Icon class="w-6 h-6 m-1" name="uil:money-insert"></Icon>
+                  ฝากเงิน
+                </button>
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
                 >
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+                  <Icon class="w-6 h-6 m-1" name="uil:money-insert"></Icon>
+                  ถอนเงิน
+                </button>
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white"
                 >
-                  Manage</a
-                >
-              </div>
-            </div>
-          </UiCard>
-          <UiCard class="flex-1">
-            <div class="flex flex-col items-center">
-              <table
-                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-              >
-                <caption
-                  class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
-                >
-                  บัญชีเงินกู้
-                </caption>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                    v-for="item in 5"
-                    key="item"
-                  >
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      <div>บัญชีที่ 1</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <p>2.65</p>
-                        <p>
-                          <Icon
-                            class="w-3 h-3 text-gray-500"
-                            name="ic:round-percentage"
-                          ></Icon>
-                        </p>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <a
-                        href="#"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        >จัดการ</a
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="flex mt-4 space-x-3 md:mt-6">
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Confirm</a
-                >
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
-                >
-                  Manage</a
-                >
-              </div>
-            </div>
-          </UiCard>
-          <UiCard class="flex-1">
-            <div class="flex flex-col items-center">
-              <table
-                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-              >
-                <caption
-                  class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
-                >
-                  บัญชีหุ้น
-                </caption>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                    v-for="item in 5"
-                    key="item"
-                  >
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      <div>บัญชีที่ 1</div>
-                    </th>
-                    <td class="px-6 py-4">
-                      <div class="flex justify-btween">
-                        <p>2.65</p>
-                        <p>
-                          <Icon
-                            class="w-3 h-3 text-gray-500"
-                            name="ic:round-percentage"
-                          ></Icon>
-                        </p>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <a
-                        href="#"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        >จัดการ</a
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="flex mt-4 space-x-3 md:mt-6">
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Confirm</a
-                >
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
-                >
-                  Manage</a
-                >
+                  <Icon
+                    class="w-6 h-6 m-1"
+                    name="fa6-solid:money-bill-transfer"
+                  ></Icon>
+                  โอนเงิน
+                </button>
               </div>
             </div>
           </UiCard>

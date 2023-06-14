@@ -1,5 +1,94 @@
 <template>
-  <section class="bg-gray-50 dark:bg-gray-900 py-3 sm:py-5">
+  <section>
+    <UiCard>
+      <o-field label="คำขอสินเชื่อ">
+        <form class="w-full md:max-w-sm flex-1 md:mr-4 mt-4">
+          <label for="default-search" class="text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg aria-hidden="true" class="w-4 h-4 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor"
+                viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <input type="search" id="default-search"
+              class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="ชื่อผู้กู้, รหัสสมาชิก..." required="">
+            <button type="submit"
+              class="text-white absolute right-0 bottom-0 top-0 bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-r-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">ค้นหา</button>
+          </div>
+        </form>
+
+        <o-tabs class="mt-5" v-model="activeTab" :multiline="multiline">
+          <o-tab-item :value="0" label="ตรวจเอกสาร">
+            <o-table :data="data">
+              <o-table-column field="ID" label="รหัสสมาชิก" width="120" numeric v-slot:default="props">
+                {{ props.row.ID }}
+              </o-table-column>
+              <o-table-column field="name" label="ชื่อ" v-slot:default="props">
+                {{ props.row.name }}
+              </o-table-column>
+              <o-table-column field="type" label="ประเภทคำขอ" v-slot:default="props">
+                {{ props.row.type }}
+              </o-table-column>
+              <o-table-column field="amount" label="จำนวนเงิน" v-slot:default="props">
+                {{ props.row.amount }}
+              </o-table-column>
+              <o-table-column field="objective" label="วัตถุประสงค์" v-slot:default="props">
+                {{ props.row.objective }}
+              </o-table-column>
+              <o-table-column field="จัดการ" label="จัดการ" position="centered" v-slot:default="props">
+                <!-- {{ props.row.หมายเหตุ }} -->
+                <NuxtLink to="/coop/loanrequest_rightsPage">
+                  <o-button>ตรวจสอบ</o-button>
+                </NuxtLink>
+              </o-table-column>
+            </o-table>
+          </o-tab-item>
+
+          <o-tab-item :value="1" label="ตรวจข้อมูล">
+          </o-tab-item>
+          
+          <o-tab-item :value="2" label="ประเมินสินทรัพย์">
+          </o-tab-item>
+
+          <o-tab-item :value="3" label="รอเข้าที่ประชุม">
+          </o-tab-item>
+
+          <o-tab-item :value="4" label="รอทำสัญญา">
+          </o-tab-item>
+
+          <o-tab-item :value="5" label="สัญญากู้">
+            <o-table :data="data">
+              <o-table-column field="ID" label="รหัสสมาชิก" width="120" numeric v-slot:default="props">
+                {{ props.row.ID }}
+              </o-table-column>
+              <o-table-column field="name" label="ชื่อ" v-slot:default="props">
+                {{ props.row.name }}
+              </o-table-column>
+              <o-table-column field="type" label="ประเภทคำขอ" v-slot:default="props">
+                {{ props.row.type }}
+              </o-table-column>
+              <o-table-column field="amount" label="จำนวนเงิน" v-slot:default="props">
+                {{ props.row.amount }}
+              </o-table-column>
+              <o-table-column field="objective" label="วัตถุประสงค์" v-slot:default="props">
+                {{ props.row.objective }}
+              </o-table-column>
+              <o-table-column field="จัดการ" label="จัดการ" position="centered" v-slot:default="props">
+                <!-- {{ props.row.หมายเหตุ }} -->
+                <o-button variant="info">ข้อมูล</o-button>
+              </o-table-column>
+            </o-table>
+          </o-tab-item>
+        </o-tabs>
+      </o-field>
+    </UiCard>
+  </section>
+
+
+  <!-- <section class="bg-gray-50 dark:bg-gray-900 py-3 sm:py-5">
     <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
       <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
         <div class="border-b dark:border-gray-700 mx-4">
@@ -337,12 +426,50 @@
         </nav>
       </div>
     </div>
-  </section>
+  </section> -->
 </template>
 
 <script setup lang="ts">
 // const state = 1;
 const state = ref(1);
+
+const data = ref([
+  {
+    ID: 111111,
+    name: 'นายหนึ่ง สอง',
+    type: 'สามัญ',
+    amount: '100,000',
+    objective: 'ชำระหนี้'
+  },
+  {
+    ID: 22222,
+    name: 'นายสาม สี่',
+    type: 'ฉุกเฉิน',
+    amount: '800,000',
+    objective: 'การอันจำเป็น'
+  },
+  {
+    ID: 333333,
+    name: 'นายห้า หก',
+    type: 'พิเศษ',
+    amount: '50,000',
+    objective: 'เพื่อการศึกษาบุตร'
+  },
+  {
+    ID: 444444,
+    name: 'นายเจ็ด แปด',
+    type: 'สามัญ',
+    amount: '450,000',
+    objective: 'การอันจำเป็น'
+  },
+  {
+    ID: 555555,
+    name: 'นายเก้า สิบ',
+    type: 'สามัญ',
+    amount: '2,000,000',
+    objective: 'ชำระหนี้'
+  },
+])
 
 function setstate(i: number) {
   state.value = i;

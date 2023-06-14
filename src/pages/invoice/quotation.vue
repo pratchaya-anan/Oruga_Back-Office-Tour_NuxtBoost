@@ -6,100 +6,190 @@
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
         <div class="col-span-full xl:col-auto mb-4">
             <UiCard class="mb-4">
-                <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-                    <div>
-                        <h2 class="text-xl font-bold dark:text-white">ใบเสนอราคา/ยืนยันการสั่งซื้อ</h2>
-                        <ul class="mt-2 space-y-1">
-                            <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                                Quatation
-                            </li>
-                            <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                                เลขที่:	0841142174178
-                            </li>
-                            <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                                วันที่:	24/03/2566
-                            </li>
-                            <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                                <Icon class="mr-3 -ml-1 w-5 h-5" name="eva:people-fill"></Icon>
-                                ศศิศ วิรัตน์จินดา
-                            </li>
-                            <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                                <Icon class="mr-3 -ml-1 w-5 h5" name="ri:phone-fill"></Icon>
-                                095-382825
-                            </li>
-                            <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                                <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:baseline-date-range"></Icon>
-                                24-03-2566
-                            </li>
-                            <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                                <Icon class="mr-3 -ml-1 w-5 h-5" name="majesticons:money-line"></Icon>
-                                59,920.00
-                            </li>
-                        </ul>                        
-                    </div>
-                </div>
-
                 <section>
-                    <o-button class="mt-4">Print</o-button>
+                    <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                        <div>
+                            <div class="grid grid-cols-6">
+                                <div class="col-span-5">
+                                    <h2 class="text-xl font-bold dark:text-white">ใบเสนอราคา/ยืนยันการสั่งซื้อ</h2>
+                                </div>
+                                <div class="flex justify-end">
+                                    <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit" @click="showOrderPanel = true">
+                                    </Icon>
+                                    <Icon class="mr-3 -ml-1 w-5 h-5" name="fluent:document-print-32-filled"></Icon>
+                                </div>
+                            </div>
+                            <ul class="mt-2 space-y-1">
+                                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                                    Quatation
+                                </li>
+                                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                                    เลขที่: 0841142174178
+                                </li>                                
+                            </ul>
+                        </div>
+                    </div>
                 </section>
                 <section v-if="showOrderPanel" class="my-4 border-t border-gray-200 dark:border-gray-700">
-                    <o-field label="Phone Number">
-                        <o-input modelValue="+00 123 456 789 / +12 345 678"></o-input>
+                    <o-field label="ชื่อลูกค้า">
+                        <o-input modelValue="ศศิศ วิรัตน์จินดา"></o-input>
                     </o-field>
-                    <o-field label="Home Address">
-                        <o-input
-                            modelValue="92 Miles Drive, Newark, NJ 07103, California, <br>United States of America"></o-input>
+                    <o-field label="ชื่อผู้ติดต่อ">
+                        <o-input modelValue="มะนาว หวานจังเลย"></o-input>
                     </o-field>
-
+                    <o-field label="ที่อยู่">
+                        <o-input modelValue="111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100"></o-input>
+                    </o-field>
+                    <o-field label="ID TAX">
+                        <o-input modelValue="4585695214526"></o-input>
+                    </o-field>
+                    <o-field label="โทร">
+                        <o-input modelValue="0254875858"></o-input>
+                    </o-field>
+                    <o-field label="Email">
+                        <o-input modelValue="somchai@gmail.com"></o-input>
+                    </o-field>
+                    <o-field label="รหัสลูกค้า">
+                        <o-input modelValue="C-58015259"></o-input>
+                    </o-field>
+                    <o-field label="ผู้เสนอขาย">
+                        <o-input modelValue="สมชัย ใจเกินร้อย"></o-input>
+                    </o-field>
+                    <o-field label="ฝ่าย">
+                        <o-input modelValue="การตลาด"></o-input>
+                    </o-field>
+                    <o-field label="ยืนยันราคาภายใน">
+                        <o-input modelValue="31-03-2566"></o-input>
+                    </o-field>
+                    <o-field label="วันส่งของ">
+                        <o-input modelValue="02-04-2566"></o-input>
+                    </o-field>
+                    <o-field label="ค่ามัดจำ">
+                        <o-input modelValue="20%"></o-input>
+                    </o-field>
                     <section>
                         <o-button @click="showOrderPanel = false" class="mt-4">Save</o-button>
                     </section>
                 </section>
                 <section v-if="!showOrderPanel" class="my-4 border-t border-gray-200 dark:border-gray-700">
-                    <span>More Order Information
-                        <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit" @click="showOrderPanel = true"></Icon>
-                    </span>
+                    <span>รายละเอียดลูกค้า</span>
                     <div class="sm:flex xl:block xl:space-y-4">
                         <div class="sm:flex-1">
-                            <address class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                                 <div class="mt-4">
-                                    Phone number
+                                    ชื่อลูกค้า
                                 </div>
                                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                    +00 123 456 789 / +12 345 678
+                                    ศศิศ วิรัตน์จินดา
                                 </div>
-                            </address>
+                            </div>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    ชื่อผู้ติดต่อ
+                                </div>
+                                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    มะนาว หวานจังเลย
+                                </div>
+                            </div>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    ที่อยู่
+                                </div>
+                                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+                                </div>
+                            </div>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    ID TAX
+                                </div>
+                                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    4585695214526
+                                </div>
+                            </div>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    โทร
+                                </div>
+                                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    0254875858
+                                </div>
+                            </div>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    Email
+                                </div>
+                                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    somchai@gmail.com
+                                </div>
+                            </div>
                         </div>
                         <div class="sm:flex-1">
-                            <address class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                                <div class="mt-4">
-                                    Home address
+                            <div class="my-4 border-t border-gray-200 dark:border-gray-700"></div>
+                            <span>รายละเอียดฝ่ายขาย</span>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    รหัสลูกค้า
                                 </div>
                                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                    92 Miles Drive, Newark, NJ 07103, California, <br>United States of America
+                                    C-58015259
                                 </div>
-                            </address>
+                            </div>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    ผู้เสนอขาย
+                                </div>
+                                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    สมชัย ใจเกินร้อย
+                                </div>
+                            </div>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    ฝ่าย:
+                                </div>
+                                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    การตลาด
+                                </div>
+                            </div>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    ยืนยันราคาภายใน
+                                </div>
+                                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    31-03-2566
+                                </div>
+                            </div>
+                            <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                                <div class="mt-2">
+                                    วันส่งของ:
+                                </div>
+                                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    02-04-2566
+                                </div>
+                            </div>
                         </div>
-                        <div class="hidden sm:flex-1">
-                            <h3 class="mb-2 text-base font-bold text-gray-900 dark:text-white">About</h3>
-                            <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
-                                Dedicated, passionate, and accomplished Full Stack Developer with 9+ years of progressive
-                                experience
-                                working as an Independent Contractor for Google and developing and growing my educational
-                                social
-                                network
-                                that helps others learn programming, web design, game development, networking.
-                            </p>
-                        </div>
+
                     </div>
                 </section>
 
             </UiCard>
         </div>
         <div class="col-span-2">
-
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-4">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-4">                
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <div
+                        class="flex flex-col bg-white px-4 py-3 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4">
+                        <div class="flex items-center flex-1 space-x-4">
+                            <h5>
+                                <span class="dark:text-white">ราคาทั้งรวมทั้งสิ้น: </span>
+                                <span class="dark:text-white font-bold">59,920.00</span>
+                            </h5>
+                            <h5>
+                                <span class="dark:text-white">ค่ามัดจำ: </span>                                
+                                <span class="text-gray-900 font-bold">30,000.00</span>                                
+                            </h5>
+                        </div>
+                    </div>
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
