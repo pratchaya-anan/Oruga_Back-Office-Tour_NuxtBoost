@@ -73,14 +73,42 @@
                         </button>
                     </div>
                     <!-- Modal body -->
-                    <div class="p-6 space-y-6">
+                    <div>
                         <div>
                             <div>
                                 <div class="p-6 font-normal text-gray-700 dark:text-gray-400 mb-3 ">
                                     <diV>
-                                        <div>
-                                            <Icon class="mr-3 -ml-1 w-5 h5" name="eva:people-fill"></Icon>
-                                            ศศิศ วิรัตน์จินดา
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <Icon class="mr-3 -ml-1 w-5 h5" name="eva:people-fill"></Icon>
+                                                ศศิศ วิรัตน์จินดา
+                                            </div>
+                                            <div>
+                                                <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                                                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                                    type="button">
+                                                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+                                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Dropdown menu -->
+                                        <div id="dropdownDots"
+                                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                            <div class="py-2">
+                                                <a href="#"
+                                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                                    แก้ไข</a>
+                                            </div>
+                                            <div class="py-2">
+                                                <a href="#"
+                                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                                    ลบ</a>
+                                            </div>
                                         </div>
                                         <div>
                                             <Icon class="mr-3 -ml-1 w-5 h5" name="ri:phone-fill"></Icon>
@@ -88,7 +116,7 @@
                                         </div>
                                         <div>
                                             <Icon class="mr-3 -ml-1 w-5 h5" name="majesticons:money-line"></Icon>
-                                            ราคา 59,920.00
+                                            59,920.00
                                         </div>
                                         <div>
                                             <Icon class="mr-3 -ml-1 w-5 h5" name="teenyicons:id-solid"></Icon>
@@ -106,45 +134,45 @@
                                     </diV>
                                     <hr class="my-5 border-1.5" />
                                     <diV>
-                                        <div> 
-                                            รหัสลูกค้า:                                          
+                                        <div>
+                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="tabler:user-code"></Icon>
                                             C-58015259
                                         </div>
                                         <div>
-                                            ผู้เสนอขาย:
+                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:user"></Icon>
                                             สมชัย ใจเกินร้อย
                                         </div>
                                         <div>
-                                            ฝ่าย:
-                                            การตลาด                                            
+                                            <Icon class="mr-3 -ml-1 w-5 h-5"
+                                                name="fluent-emoji-high-contrast:department-store"></Icon>
+                                            การตลาด
                                         </div>
                                         <div>
-                                            ยืนยันราคาภายใน:
+                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:date-range"></Icon>
                                             31/03/2566
                                         </div>
                                         <div>
-                                            วันส่งของ:
-                                            
-                                            02/04/2566
+                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:date-range"></Icon>
+                                            02-04-2566
                                         </div>
 
-                                    </diV>                                    
+                                    </diV>
+                                    <div class="flex justify-end">
+                                        <button data-modal-hide="staticModal" type="button"
+                                            class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="icon-park-solid:bill"></Icon>
+                                            ใบแจ้งหนี้
+                                        </button>
+                                        <button data-modal-hide="staticModal" type="button"
+                                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="fa6-solid:file-invoice-dollar"></Icon>
+                                            ใบกำกับภาษี
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <div>
                             </div>
-                        </div>
-                        <div class="flex justify-end">
-                            <button data-modal-hide="staticModal" type="button"
-                                class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                <Icon class="mr-3 -ml-1 w-5 h-5" name="icon-park-solid:bill"></Icon>
-                                ใบแจ้งหนี้
-                            </button>
-                            <button data-modal-hide="staticModal" type="button"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                <Icon class="mr-3 -ml-1 w-5 h-5" name="fa6-solid:file-invoice-dollar"></Icon>
-                                ใบกำกับภาษี
-                            </button>
                         </div>
                     </div>
                 </div>
