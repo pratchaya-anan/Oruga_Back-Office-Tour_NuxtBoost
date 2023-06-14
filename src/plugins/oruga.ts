@@ -21,7 +21,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         }
       },
       button: {
-        rootClass: 'disabled:cursor-not-allowed focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 mr-2',
+        rootClass: 'disabled:cursor-not-allowed focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5',
       },
       modal: {
         rootClass: 'flex flex-col justify-center items-center overflow-hidden fixed inset-0 top-0 right-0 bottom-0 left-0 z-50',
@@ -56,11 +56,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       steps: {
         rootClass: "w-full text-sm ",
         stepsClass: "flex w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
-        animatedClass: " items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
+        animatedClass: "items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
         itemHeaderClass: "flex w-full items-center dark:text-blue-500",
-        itemHeaderActiveClass: " w-full items-center text-blue-600 dark:text-blue-500 ",
-        itemHeaderPreviousClass: "w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 ",
-        stepContentClass: "mt-5 mb-5",
+        itemHeaderActiveClass: " fw-full items-center text-blue-600 dark:text-blue-500 ",
+        itemHeaderPreviousClass: " w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 ",
+        stepContentClass: "mt-5 mb-5 ",
+        stepNavigationClass: "flex justify-between",
       },
       radio: {
         rootClass: 'flex text-sm font-medium text-center items-center mb-1',
