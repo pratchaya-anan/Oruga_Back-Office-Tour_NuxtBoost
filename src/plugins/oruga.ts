@@ -61,6 +61,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         stepsClass: "flex w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
         animatedClass: " items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
         // stepContentClass: "hidden",
+        // stepContentClass: "hidden",
 
         itemHeaderClass: "flex w-full items-center dark:text-blue-500",
         itemHeaderActiveClass: " w-full items-center text-blue-600 dark:text-blue-500 ",
