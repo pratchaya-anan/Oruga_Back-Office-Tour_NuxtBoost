@@ -39,13 +39,10 @@ export default defineNuxtPlugin((nuxtApp) => {
         inputClass: 'border block w-full p-2.5 text-sm rounded-lg',
       },
       table: {
-        rootClass: 'relative overflow-x-auto shadow-md',
-        // tableClass: 'w-full text-sm text-left text-gray-500 dark:text-gray-400',
-        // thClass: 'px-6 py-4 bg-white border-b dark:bg-gray-800 dark:border-gray-700 uppercase ',
-        // tdClass: 'px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border-b',
+        rootClass: 'relative overflow-x-auto border shadow-md',
         tableClass: 'w-full text-sm text-left text-gray-500 dark:text-gray-400',
-        thClass: 'px-6 py-4 text-xs text-gray-700 border-b uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400',
-        tdClass: 'px-6 py-4 font-medium text-gray-900 dark:text-white border-b bg-white border-b dark:bg-gray-800 dark:border-gray-700 whitespace-nowrap'
+        thClass: 'px-6 py-4 text-xs text-gray-700 border-b uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400',
+        tdClass: 'px-6 py-4 font-medium text-gray-900 dark:text-white border-b bg-white dark:bg-gray-800 dark:border-gray-700 whitespace-nowrap'
       },
       select: {
         selectClass: 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500',
@@ -60,6 +57,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootClass: "w-full text-sm ",
         stepsClass: "flex w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
         animatedClass: " items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
+        // stepContentClass: "hidden",
         // stepContentClass: "hidden",
 
         itemHeaderClass: "flex w-full items-center dark:text-blue-500",

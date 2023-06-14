@@ -1,5 +1,5 @@
 <template>
-  <section class="h-min-screen">
+  <section class="min-h-screen">
     <LayoutPageTitle>Tour Management / บริหารจัดการทัวร์</LayoutPageTitle>
 
     <UiManageBar>
@@ -59,7 +59,7 @@
             ออกทริป
           </div> -->
           <div class="flex justify-end">
-            <NuxtLink href="/tour_data2">
+            <NuxtLink href="/tour_data">
               <o-button class="inline-flex"
                 ><Icon
                   class="mr-1 -ml-1 w-5 h-5"
