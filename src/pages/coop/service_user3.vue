@@ -1,120 +1,125 @@
 <template>
   <section class="min-h-screen">
     <LayoutPageTitle> บริการสมาชิก </LayoutPageTitle>
-    <div class="grid grid-cols-3 gap-4">
-      <div class="grid gap-4">
-        <UiCard>
-          <div class="grid grid-cols-2">
-            <div class="grid justify-items-center border-r">
-              <div href="#">
-                <img
-                  class="w-10 h-10 rounded-full"
-                  src="https://www.freeiconspng.com/thumbs/profile-icon-png/account-profile-user-icon--icon-search-engine-10.png"
-                  alt="Jese Leos"
-                />
-              </div>
-              <div class="text-xl font-bold dark:text-white">สมหมาย ใจดี</div>
-              <div>
-                <section class="bg-white dark:bg-gray-900">
-                  <div
-                    class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6"
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <UiCard class="grid grid-cols-2 gap-4">
+          <div class="border-r">
+            <div class="text-center text-gray-500 dark:text-gray-400">
+              <div class="flex justify-end"></div>
+              <img
+                class="mx-auto mb-4 w-36 h-36 rounded-full"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                alt="Bonnie Avatar"
+              />
+              <h3
+                class="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                <a href="#">สมชาย ใจหาญ</a>
+              </h3>
+              <p>somshay@gmail.com</p>
+              <div class="grid grid-cols-3 gap-1 text-black cursor-pointer">
+                <div
+                  @click="
+                    showItemsPanel != true
+                      ? (showItemsPanel = true)
+                      : (showItemsPanel = false)
+                  "
+                  class="border-r"
+                >
+                  <dt class="mb-2 text-xl md:text-2xl font-extrabold">5M</dt>
+                  <dd
+                    class="text-sm md:text-md font-light text-gray-500 dark:text-gray-400"
                   >
-                    <dl
-                      class="grid max-w-screen-md gap-8 mx-auto text-gray-900 sm:grid-cols-3 dark:text-white"
-                    >
-                      <div class="flex flex-col items-center justify-center">
-                        <dt class="mb-2 text-3xl md:text-4xl font-extrabold">
-                          5M
-                        </dt>
-                        <dd class="font-light text-gray-500 dark:text-gray-400">
-                          ออมทรัพย์ (5 บัญชี)
-                        </dd>
-                      </div>
-                      <div class="flex flex-col items-center justify-center">
-                        <dt class="mb-2 text-3xl md:text-4xl font-extrabold">
-                          8M
-                        </dt>
-                        <dd class="font-light text-gray-500 dark:text-gray-400">
-                          หุ้น (2 บัญชี)
-                        </dd>
-                      </div>
-                      <div class="flex flex-col items-center justify-center">
-                        <dt class="mb-2 text-3xl md:text-4xl font-extrabold">
-                          6K
-                        </dt>
-                        <dd class="font-light text-gray-500 dark:text-gray-400">
-                          สินเชื่อ (6 รายการ)
-                        </dd>
-                      </div>
-                    </dl>
-                  </div>
-                </section>
+                    ออมทรัพย์ (5 บัญชี)
+                  </dd>
+                </div>
+                <div class="border-r">
+                  <dt class="mb-2 text-xl md:text-2xl font-extrabold">8M</dt>
+                  <dd
+                    class="text-sm md:text-md font-light text-gray-500 dark:text-gray-400"
+                  >
+                    หุ้น (2 บัญชี)
+                  </dd>
+                </div>
+                <div>
+                  <dt class="mb-2 text-xl md:text-2xl font-extrabold">6K</dt>
+                  <dd
+                    class="text-sm md:text-md font-light text-gray-500 dark:text-gray-400"
+                  >
+                    สินเชื่อ (6 รายการ)
+                  </dd>
+                </div>
               </div>
             </div>
-            <div>
-              <ul class="mt-2 space-y-1">
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon class="w-6 h-6" name="mingcute:idcard-fill"></Icon>
-                  เลขบัตรประชาชน: 1-339955-874-58-7
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon class="w-6 h-6" name="fa6-solid:id-card-clip"></Icon>
-                  เลขข้าราชการ: 1548362568
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon class="w-6 h-6" name="heroicons-solid:cake"></Icon>
-                  วันเกิด: 16/04/2566
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon class="w-6 h-6" name="ic:round-calendar-month"></Icon>
-                  เป็นสมาชิกตั้งแต่: 16/04/2510
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon
-                    class="w-6 h-6"
-                    name="material-symbols:card-membership-rounded"
-                  ></Icon>
-                  เป็นสมาชิกมา: 5ปี 4เดือน 15วัน
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon
-                    class="w-6 h-6 m-1"
-                    name="ic:round-account-balance"
-                  ></Icon>
-                  บัญชีการเงิน: 5 บัญชี<Icon
-                    class="w-6 h-6 m-1 mr-2"
-                    name="zondicons:view-show"
-                  ></Icon>
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon class="w-6 h-6 m-1" name="fa6-solid:coins"></Icon>
-                  บัญชีหุ้น: 5 บัญชี
-                  <Icon
-                    @click="
-                      showItemsPanel != true
-                        ? (showItemsPanel = true)
-                        : (showItemsPanel = false)
-                    "
-                    class="w-6 h-6 m-1 mr-2"
-                    name="zondicons:view-show"
-                  ></Icon>
-                  <!-- <Icon class="w-6 h-6 m-1 mr-2" name="zondicons:view-hide"></Icon> -->
-                </li>
-              </ul>
+          </div>
+          <div class="grid grid-cols-2 gap-5">
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="mingcute:idcard-fill"></Icon
+                >บัตรประชาชน
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">
+                1-339955-874-58-7
+              </dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="fa6-solid:id-card-clip"></Icon
+                >เลขข้าราชการ
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">1548362568</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="heroicons-solid:cake"></Icon>วันเกิด
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">05/06/1995</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="iwwa:year"></Icon>อายุ
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">35</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="tabler:flag-filled"></Icon>สัญชาติ
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">ไทย</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="tabler:gender-bigender"></Icon>เพศ
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">ชาย</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="ic:round-calendar-month"></Icon
+                >เป็นสมาชิกตั้งแต่
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">16/04/2510</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon
+                  class="w-6 h-6"
+                  name="material-symbols:today-rounded"
+                ></Icon
+                >เป็นสมาชิกมา
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">
+                5ปี 4เดือน 15วัน
+              </dt>
+            </div>
+            <div class="border-b col-span-2">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="tabler:home-ribbon"></Icon>ที่อยู่
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">
+                20-22 ม.2 ต.บ้านเป็ด อ.เมือง จ.ขอนแก่น 40000
+              </dt>
             </div>
           </div>
         </UiCard>
@@ -179,8 +184,8 @@
         </UiCard>
       </div>
       <div>
-        <div class="col-span-2">
-          <div class="flex space-x-3">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="grid grid-cols-8 gap-2 col-span-2">
             <button
               @click="
                 showItemsPanel2 != true
