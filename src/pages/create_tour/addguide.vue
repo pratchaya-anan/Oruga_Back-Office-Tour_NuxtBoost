@@ -33,9 +33,11 @@
                             <o-button size="medium" variant="primary" @click="isImageModalActive = false">
                                 เลือกไกด์
                             </o-button>
-                            <o-button size="medium" variant="primary">
-                                เพิ่มไกด์
-                            </o-button>
+                            <NuxtLink to="/addguide">
+                                <o-button size="medium" variant="primary" >
+                                    เพิ่มไกด์
+                                </o-button>
+                            </NuxtLink>
                         </div>
                     </div>
                     <div>

@@ -147,7 +147,6 @@
                                             <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit"
                                                 @click="showOrderPanel = true">
                                             </Icon>
-                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="fluent:document-print-32-filled"></Icon>
                                         </div>
                                     </div>
                                     <ul class="mt-2 space-y-1">
@@ -306,21 +305,28 @@
                     </UiCard>
                 </div>
                 <div class="col-span-2">
-                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg mb-4">
+                    <div class=" overflow-x-auto shadow-md sm:rounded-lg mb-4">
+
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
-                                        Product name
+                                        รหัสสินค้า
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Color
+                                        จำนวน
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Category
+                                        ราคาต่อหน่วย
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Price
+                                        ส่วนลด
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        ภาษี (0% 7% 9%)
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        รายการสินค้า
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         <span class="sr-only">Edit</span>
@@ -332,83 +338,247 @@
                                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <th scope="row"
                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Apple MacBook Pro 17"
+                                        Qu-285455
                                     </th>
                                     <td class="px-6 py-4">
-                                        Silver
+                                        1
                                     </td>
                                     <td class="px-6 py-4">
-                                        Laptop
+                                        10,000
                                     </td>
                                     <td class="px-6 py-4">
-                                        $2999
+                                        10 %
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        0%
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        ห้องพักโรงแรม
                                     </td>
                                     <td class="px-6 py-4 text-right">
-                                        <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button"> 
-  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
-</button>
+                                        <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                                            class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                            type="button">
+                                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                                                </path>
+                                            </svg>
+                                        </button>
 
-<!-- Dropdown menu -->
-<div id="dropdownDots" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-      </li>
-    </ul>
-    <div class="py-2">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated link</a>
-    </div>
-</div>                                    </td>
-                                </tr>                                                                
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
-                    </div>
 
+                        <!-- Dropdown menu -->
+                        <div id="dropdownDots"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                            <div class="py-2">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                    ลบ</a>
+                            </div>
+                            <div class="py-2">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                    แก้ไข</a>
+                            </div>
+                        </div>
+
+                    </div>
                     <section v-if="!showItemsPanel">
-                        <o-button @click="showItemsPanel = true">Add Items</o-button>
-                    </section>                  
+                        <o-button @click="showItemsPanel = true">เพิ่มข้อมูล</o-button>
+                    </section>
 
                     <UiCard v-if="showItemsPanel">
-                        <o-field label="Product">
-                            <o-input></o-input>
-                        </o-field>
-                        <div class="flex">
-                            <o-field class="flex-1" label="Quantity">
-                                <o-input></o-input>
-                            </o-field>
-                            <div class="mx-4 shrink flex items-center justify-center">
-                                <span class="align-middle">x</span>
-                            </div>
-                            <o-field class="flex-1" label="Price">
+                        <div class="flex gap-4">
+                            <o-field class="flex-1" label="รหัสสินค้า">
                                 <o-input></o-input>
                             </o-field>
                         </div>
-                        <o-field label="VAT">
+                        <o-field class="flex-1" label="รายการสินค้า">
                             <o-input></o-input>
                         </o-field>
-                        <o-field label="Discount">
-                            <o-input></o-input>
-                        </o-field>
-                        <o-field label="Remark">
-                            <o-input></o-input>
-                        </o-field>
+                        <div class="flex gap-4">
+                            <o-field class="flex-1" label="จำนวน">
+                                <o-input></o-input>
+                            </o-field>
+                            <o-field class="flex-1" label="ราคาต่อหน่วย">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="flex gap-4">
+                            <o-field class="flex-1" label="ส่วนลด">
+                                <o-input></o-input>
+                            </o-field>
+                            <o-field class="flex-1" label="ภาษี (0% 7% 9%)">
+                                <o-select placeholder="0 %">
+                                    <option value="flint">0 %</option>
+                                    <option value="silver">7 %</option>
+                                    <option value="silver">9 %</option>
+                                </o-select>
+                            </o-field>
+                        </div>
 
                         <section>
-                            <o-button class="mt-4">Add Item</o-button>
-                            <o-button @click="showItemsPanel = false" class="ml-4">Close</o-button>
+                            <o-button class="mt-4">เพิ่มรายการ</o-button>
+                            <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
                         </section>
                     </UiCard>
                 </div>
             </div>
         </o-step-item>
         <o-step-item step="4" label="ยืนยัน" :clickable="true" icon="user-lock">
-        
+            <section>
+                <div class="w-[210mm] h-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow">
+                    <div class="grid grid-rows-2 m-5">
+                        <img class="w-[12vmin]" src="../../assets/images/ll-01.png" alt="Logo" />
+                        <div class="grid grid-cols-3 text-sm">
+                            <div class="col-span-2">
+                                <div>ห้างหุ้นส่วนจำกัด นิลผกา</div>
+                                <div>49/175 ม.5 ต.หนองบัว อ.เมืองอุดรธานี จ.อุดรธานี 41000</div>
+                                <div>เลขประจำตัวผู้เสียภาษี: 413558001156 | โทร.098-1047644</div>
+                                <div class="text-blue-400">www.facebook.com/Jampahomtour</div>
+                            </div>
+                            <div class="grid grid-cols-3">
+                                <div class="col-span-3 font-bold text-center text-base">
+                                    ใบเสนอราคา/ยืนยันการสั่งซื้อ
+                                </div>
+                                <div class="col-span-3 text-center">Quatation</div>
+                                <div class="font-bold">เลขที่:</div>
+                                <div class="col-span-2 text-right">0841142174178</div>
+                                <div class="font-bold">วันที่:</div>
+                                <div class="col-span-2 text-right">24/03/2566</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="col-span-3 mx-5" />
+                    <div class="col-span-2 grid grid-cols-3 m-5 text-xs">
+                        <div class="col-span-2">
+                            <div class="grid grid-cols-3">
+                                <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
+                                <div class="col-span-2">S</div>
+                                <div class="col-span-1 font-bold">ชื่อผู้ติดต่อ:</div>
+                                <div class="col-span-2">N</div>
+                                <div class="col-span-1 font-bold">ที่อยู่:</div>
+                                <div class="col-span-2">20-22 ม.2 ขอนแก่น</div>
+                                <div class="col-span-1 font-bold">ID TAX:</div>
+                                <div class="col-span-2">12345</div>
+                                <div class="col-span-1 font-bold">โทร:</div>
+                                <div class="col-span-2">0625584785</div>
+                                <div class="col-span-1 font-bold">Email:</div>
+                                <div class="col-span-2">e@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="border-l px-5">
+                            <div class="grid grid-cols-3">
+                                <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
+                                <div class="col-span-2 text-right">12345</div>
+                                <div class="col-span-1 font-bold">ผู้เสนอขาย:</div>
+                                <div class="col-span-2 text-right">B</div>
+                                <div class="col-span-1 font-bold">ฝ่าย:</div>
+                                <div class="col-span-2 text-right">การเงิน</div>
+                                <div class="col-span-2 font-bold">ยืนยันราคาภายใน:</div>
+                                <div class="col-span-1 text-right">20/05/66</div>
+                                <div class="col-span-1 font-bold">วันส่งของ:</div>
+                                <div class="col-span-2 text-right">30/05/66</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="min-h-100 border-b border-black">
+                        <table class="w-full text-center">
+                            <tr class="h-8 border-y border-black text-center text-sm">
+                                <th class="text-center">ลำดับ</th>
+                                <th>รหัสสินค้า</th>
+                                <th>รายการสินค้า</th>
+                                <th>จำนวน</th>
+                                <th>ราคาต่อหน่วย</th>
+                                <th>ส่วนลด</th>
+                                <th>ภาษี</th>
+                                <th>จำนวนเงิน</th>
+                            </tr>
+                            <!-- v-for="(data, index) in idfiltered.product"
+            :key="index" -->
+                            <tr class="h-10 text-xs" v-for="item in 8">
+                                <td>1</td>
+                                <td>14778854</td>
+                                <td>ห้องพักและรถเดินทาง</td>
+                                <td>12</td>
+                                <td>20000</td>
+                                <td>100</td>
+                                <td>100</td>
+                                <td>5%</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="grid grid-cols-3 text-xs p-2 border-b border-black">
+                        <div class="col-span-2">
+                            <div class="font-bold">หมายเหตุ:</div>
+                            <div>
+                                กำหนดยืนราคา 15 วัน <br />
+                                จึงเรียนมาเพื่อโปรดพิจารณาและหวังเป็นอย่างยิ่งว่าจะได้รับการพิจารณาสั่งซื้อจากท่าน
+                                ขอขอบพระคุณมา ณ ที่นี้
+                            </div>
+                            <div class="font-bold">ดังรายละเอียดธนาคารดังต่อไปนี้ :</div>
+                            <div>
+                                1.กรุณาชำระเงิน ค่ามัดจำเบื้องต้นไม่ต่ำกว่า 40% ของราคาที่เสนอ
+                                โดยชำระเงินก่อนการติดตั้งอย่างน้อย 7 วัน <br />
+                                2.หลังติดตั้งและใช้งานได้เรียบร้อยแล้วให้ชำระเงินส่วนที่เหลือ
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 p-2">
+                            <div>มัดจำ</div>
+                            <div class="text-right">5000 บาท</div>
+                            <div>รวมเงิน</div>
+                            <div class="text-right">59920 บาท</div>
+                            <div>ส่วนลดสินค้า</div>
+                            <div class="text-right">0 บาท</div>
+                            <div>มูลค่าสินค้า</div>
+                            <div class="text-right">56000 บาท</div>
+                            <div>ภาษีมูลค่าเพิ่ม 7 %</div>
+                            <div class="text-right">3920 บาท</div>
+                            <div class="font-bold">จำนวนเงินทั้งสิ้น</div>
+                            <div class="text-right font-bold">59920 บาท</div>
+                        </div>
+                    </div>
+
+                    <div class="px-5 flex justify-end">
+                        <div class="px-5 text-center text-xs">
+                            ข้าพเจ้าเห็นชอบตามรายการที่เสนอและ <br />
+                            ขอสั่งซื้อตามรายละเอียดนี้ทุกประการ
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-4 mt-25 text-xs">
+                        <div class="text-center border-b border-black mx-5">
+                            <div>ผู้เสนอราคา</div>
+                            <div class="mb-5">วันที่</div>
+                        </div>
+                        <div class="text-center border-b border-black mx-5">
+                            <div>ผู้รับเงิน</div>
+                            <div class="mb-5">วันที่</div>
+                        </div>
+                        <div class="text-center border-b border-black mx-5">
+                            <div>ผู้ตรวจสอบ</div>
+                            <div class="mb-5">วันที่</div>
+                        </div>
+                        <div class="text-center border-b border-black mx-5">
+                            <div>ผู้อนุมัติสั่งซื้อ</div>
+                            <div class="mb-5">วันที่</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div  class="flex justify-center mt-3">
+                <o-button>
+                    <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>                                           
+                    พิมพ์
+                </o-button>
+            </div>
         </o-step-item>
     </o-steps>
 </template>

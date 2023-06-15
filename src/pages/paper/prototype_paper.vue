@@ -147,12 +147,16 @@ function print() {
 
 <style>
 @media print {
-  header {
+  /* header {
     display: none;
   }
 
   footer {
     display: none;
+  } */
+
+  .navbar {
+    display: none !important;
   }
 
   #page {
@@ -164,7 +168,5 @@ function print() {
     page-break-after: always;
     print-color-adjust: exact;
   }
-
-  /* #page {padding: none; margin: none; border: none; box-shadow: none;} */
 }
 </style>
