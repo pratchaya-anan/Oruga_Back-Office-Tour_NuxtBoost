@@ -140,142 +140,93 @@
               </UiCard>
             </div>
           </div>
-        </section>
-      </o-step-item>
-      <o-step-item
-        step="2"
-        label="ข้อมูลไกด์"
-        :clickable="true"
-        icon="user"
-      ></o-step-item>
-      <o-step-item
-        step="3"
-        label="ข้อมูลโรงแรม"
-        :clickable="true"
-        icon="user-plus"
-      >
-        <!-- 3 โรงแรม -->
-        <section class="h-m-screen">
-          <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
-            <div class="col-span-full xl:col-auto mb-4">
-              <UiCard>
-                <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-                  <div>
-                    <h2 class="text-xl font-bold dark:text-white">
-                      ทัวร์เกาะเสม็ด เสร็จทุกราย
-                    </h2>
-                    <ul class="mt-2 space-y-1">
-                      <li
-                        class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                      >
-                        <Icon
-                          class="w-6 h-6"
-                          name="ri:treasure-map-fill"
-                        ></Icon>
-                        กาญจนบุรี-เพชรบุรี
-                      </li>
-                      <li
-                        class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                      >
-                        <Icon
-                          class="w-6 h-6"
-                          name="line-md:moon-filled-to-sunny-filled-transition"
-                        ></Icon>
-                        5 วัน 4 คืน
-                      </li>
-                      <li
-                        class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                      >
-                        <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
-                        16/04/2566 &#32;
-                        <Icon class="w-5 h-5" name="line-md:arrow-right"></Icon>
-                        &#32; 16/04/2566
-                      </li>
-                      <li
-                        class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                      >
-                        <Icon
-                          class="w-6 h-6"
-                          name="fluent:people-audience-24-filled"
-                        ></Icon>
-                        35 คน
-                      </li>
-                      <li
-                        class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                      >
-                        <Icon
-                          class="w-6 h-6"
-                          name="fluent:comment-error-16-filled"
-                        ></Icon>
-                        สนุกดี
-                      </li>
-                    </ul>
-                    <h2 class="text-xl font-bold dark:text-white mt-3">
-                      โรงแรม
-                    </h2>
-                    <ul class="mt-2 space-y-1">
-                      <li
-                        class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                      >
-                        <Icon class="w-6 h-6" name="ri:hotel-fill"></Icon>
-                        โรงแรมมาดี เวลา : 2016-10-15 - 2016-10-16
-                      </li>
+        </UiCard>
+      </section>
+    </o-step-item>
+    <o-step-item step="2" label="ข้อมูลไกด์" :clickable="true" icon="user"></o-step-item>
+    <o-step-item step="3" label="ข้อมูลโรงแรม" :clickable="true" icon="user-plus">
+      <!-- 3 โรงแรม -->
+      <section class="h-m-screen">
+        <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
+          <div class="col-span-full xl:col-auto mb-4">
+            <UiCard>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
 
-                      <li
-                        class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                      >
-                        <Icon class="w-6 h-6" name="ri:hotel-fill"></Icon>
-                        โรงแรมมาดี เวลา : 2016-10-15 - 2016-10-16
-                      </li>
-                      <li
-                        class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                      >
-                        <Icon class="w-6 h-6" name="ri:hotel-fill"></Icon>
-                        โรงแรมมาดี เวลา : 2016-10-15 - 2016-10-16
-                      </li>
-                    </ul>
-                    <div class="mt-2 flex justify-end">
-                      <o-button>เสรร็จสื้น</o-button>
-                    </div>
+                <div>
+                  <h2 class="text-xl font-bold dark:text-white">
+                    ทัวร์เกาะเสม็ด เสร็จทุกราย
+                  </h2>
+                  <ul class="mt-2 space-y-1">
+                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                      <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
+                      กาญจนบุรี-เพชรบุรี
+                    </li>
+                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                      <Icon class="w-6 h-6" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
+                      5 วัน 4 คืน
+                    </li>
+                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                      <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
+                      16/04/2566 &#32;
+                      <Icon class="w-5 h-5" name="line-md:arrow-right"></Icon>
+                      &#32; 16/04/2566
+                    </li>
+                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                      <Icon class="w-6 h-6" name="fluent:people-audience-24-filled"></Icon>
+                      35 คน
+                    </li>
+                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                      <Icon class="w-6 h-6" name="fluent:comment-error-16-filled"></Icon>
+                      สนุกดี
+                    </li>
+                  </ul>
+                  <h2 class="text-xl font-bold dark:text-white mt-3">
+                    โรงแรม
+                  </h2>
+                  <ul class="mt-2 space-y-1">
+                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                      <Icon class="w-6 h-6" name="ri:hotel-fill"></Icon>
+                      โรงแรมมาดี เวลา : 2016-10-15 - 2016-10-16
+                    </li>
+
+                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                      <Icon class="w-6 h-6" name="ri:hotel-fill"></Icon>
+                      โรงแรมมาดี เวลา : 2016-10-15 - 2016-10-16
+                    </li>
+                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                      <Icon class="w-6 h-6" name="ri:hotel-fill"></Icon>
+                      โรงแรมมาดี เวลา : 2016-10-15 - 2016-10-16
+                    </li>
+                  </ul>
+                  <div class="mt-2 flex justify-end">
+                    <o-button>เสรร็จสื้น</o-button>
                   </div>
                 </div>
+              </div>
 
-                <o-modal v-model:active="newaddhotel">
-                  <div class="grid grid-cols-2 gap-4 p-6">
-                    <div class="col-span-2">
-                      <label>เพิ่มโรงแรมใหม่</label>
-                    </div>
-                    <div>
-                      <o-field label="ชื่อโรงแรม">
-                        <o-input></o-input>
-                      </o-field>
-                    </div>
-                    <div>
-                      <o-field label="เบอร์ติดต่อ">
-                        <o-input></o-input>
-                      </o-field>
-                    </div>
-                    <div class="col-span-2">
-                      <o-field label="ที่อยู่">
-                        <o-input></o-input>
-                      </o-field>
-                    </div>
-                    <div>
-                      <o-button
-                        size="medium"
-                        variant="primary"
-                        @click="newaddhotel = false"
-                      >
-                        บันทึก
-                      </o-button>
-                      <o-button
-                        size="medium"
-                        variant="primary"
-                        @click="newaddhotel = false"
-                      >
-                        ยกเลิก
-                      </o-button>
-                    </div>
+              <o-modal v-model:active="newaddhotel">
+                <div class=" grid grid-cols-2 gap-4 p-6">
+                  <div class="col-span-2">
+                    <label>เพิ่มโรงแรมใหม่</label>
+                  </div>
+                  <div>
+                    <o-field label="ชื่อโรงแรม">
+                      <o-input></o-input>
+                    </o-field>
+                  </div>
+                  <div>
+                    <o-field label="เบอร์ติดต่อ">
+                      <o-input></o-input>
+                    </o-field>
+                  </div>
+                  <div class="col-span-2">
+                    <o-field label="ที่อยู่">
+                      <o-input></o-input>
+                    </o-field>
+                  </div>
+                  <div>
+                    <o-button size="medium" variant="primary" @click="newaddhotel = false"> บันทึก </o-button>
+                    <o-button size="medium" variant="primary" @click="newaddhotel = false"> ยกเลิก </o-button>
                   </div>
                 </o-modal>
                 <o-modal v-model:active="addhotel">
@@ -315,47 +266,37 @@
                       </o-button>
                     </div>
                   </div>
-                </o-modal>
-              </UiCard>
-            </div>
-            <div class="col-span-2">
-              <UiCard>
-                <div class="my-2 grid grid-cols-2 gap-2 mt-5">
-                  <div class="flex">
-                    <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
-                    <div class="px-2">
-                      <o-button>ค้นหา</o-button>
-                    </div>
-                  </div>
-                  <div class="flex justify-end">
-                    <o-button @click="newaddhotel = true"
-                      >+ เพิ่มโรงแรม</o-button
-                    >
+                </div>
+              </o-modal>
+            </UiCard>
+          </div>
+          <div class="col-span-2">
+            <UiCard>
+              <div class="my-2 grid grid-cols-2 gap-2 mt-5">
+                <div class="flex">
+                  <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
+                  <div class="px-2">
+                    <o-button>ค้นหา</o-button>
                   </div>
                 </div>
+                <div class="flex justify-end">
 
-                <o-table :data="data" @click="addhotel = true">
-                  <o-table-column
-                    v-for="column in columns"
-                    v-bind="column"
-                    #default="{ row }"
-                  >
-                    {{ row[column.field] }}
-                  </o-table-column>
-                </o-table>
-              </UiCard>
-            </div>
+                  <o-button @click="newaddhotel = true">+ เพิ่มโรงแรม</o-button>
+
+                </div>
+
+              <o-table :data="data" @click="addhotel = true">
+                <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
+                  {{ row[column.field] }}
+                </o-table-column>
+              </o-table>
+            </UiCard>
           </div>
-        </section>
-      </o-step-item>
-      <o-step-item
-        step="4"
-        label="ข้อมูลพหนะ"
-        :clickable="true"
-        icon="user-plus"
-      ></o-step-item>
-    </o-steps>
-  </section>
+        </div>
+      </section>
+    </o-step-item>
+    <o-step-item step="4" label="ข้อมูลพหนะ" :clickable="true" icon="user-plus"></o-step-item>
+  </o-steps>
 </template>
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
@@ -366,6 +307,7 @@ onMounted(() => {
 
 const addhotel = ref(false);
 const newaddhotel = ref(false);
+const newvehicle = ref(false);
 
 const columns = ref([
   {
