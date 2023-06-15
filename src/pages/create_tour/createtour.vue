@@ -551,9 +551,12 @@
                     <o-button>ค้นหา</o-button>
                   </div>
                 </div>
-                <div class="flex justify-end">
+                <!-- <div class="flex justify-end">
                   <o-button @click="newaddhotel = true">+ เพิ่มโรงแรม</o-button>
-                </div>
+                </div> -->
+                <NuxtLink to="/addhotelbase" class="flex justify-end">
+                  <o-button>+ เพิ่มโรงแรม</o-button>
+                </NuxtLink>
               </div>
 
               <o-table :data="data" @click="addhotel = true">
@@ -767,11 +770,12 @@
                     <o-button>ค้นหา</o-button>
                   </div>
                 </div>
-                <div class="flex justify-end">
+                <NuxtLink to="/addcarbase" class="flex justify-end">
+                  <o-button>+ เพิ่มพาหนะ</o-button>
+                </NuxtLink>
+                <!-- <div class="flex justify-end">
                   <o-button @click="newvehicle = true">+ เพิ่มพาหนะ</o-button>
-
-
-                </div>
+                </div> -->
               </div>
 
               <div>
