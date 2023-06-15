@@ -52,13 +52,13 @@
             </o-table>
           </o-tab-item>
 
-          <o-tab-item :value="1" label="ตรวจข้อมูล">
+          <o-tab-item :value="1" label="ตรวจสอบข้อมูล">
           </o-tab-item>
 
-          <o-tab-item :value="2" label="ประเมินสินทรัพย์">
+          <o-tab-item :value="2" label="ประเมินหลักทรัพย์">
           </o-tab-item>
 
-          <o-tab-item :value="3" label="รอเข้าที่ประชุม">
+          <o-tab-item :value="3" label="อนุมัติ">
             <o-table :data="data" v-model:checked-rows="checkedRows" checkable :checkbox-position="left">
               <o-table-column field="ID" label="รหัสสมาชิก" width="120" numeric v-slot:default="props">
                 {{ props.row.ID }}
@@ -110,7 +110,7 @@
             </o-table>
           </o-tab-item>
 
-          <o-tab-item :value="4" label="รอทำสัญญา">
+          <o-tab-item :value="4" label="เซ็นต์สัญญา">
           </o-tab-item>
 
           <o-tab-item :value="5" label="สัญญากู้">
