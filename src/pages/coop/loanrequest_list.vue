@@ -52,13 +52,13 @@
             </o-table>
           </o-tab-item>
 
-          <o-tab-item :value="1" label="ตรวจข้อมูล">
+          <o-tab-item :value="1" label="ตรวจสอบข้อมูล">
           </o-tab-item>
 
-          <o-tab-item :value="2" label="ประเมินสินทรัพย์">
+          <o-tab-item :value="2" label="ประเมินหลักทรัพย์">
           </o-tab-item>
 
-          <o-tab-item :value="3" label="รอเข้าที่ประชุม">
+          <o-tab-item :value="3" label="อนุมัติ">
             <o-table :data="data" v-model:checked-rows="checkedRows" checkable :checkbox-position="left">
               <o-table-column field="ID" label="รหัสสมาชิก" width="120" numeric v-slot:default="props">
                 {{ props.row.ID }}
@@ -77,14 +77,40 @@
               </o-table-column>
               <o-table-column field="จัดการ" label="จัดการ" position="centered" v-slot:default="props">
                 <!-- {{ props.row.หมายเหตุ }} -->
-                <NuxtLink to="/coop/loanrequest_attendmeetings">
-                  <o-button>ตรวจสอบ</o-button>
-                </NuxtLink>
+                <!-- <NuxtLink to="/coop/loanrequest_attendmeetings"> -->
+                <o-button @click="isCardModalActive = true">ตรวจสอบ</o-button>
+                <o-modal v-model:active="isCardModalActive">
+                  <UiCard>
+                    <div class="w-1000">
+                      <o-field label="อนุมัติที่ประชุม">
+                        <div class="flex justify-start space-x-4">
+                          <o-radio v-model="check" name="check" native-value="pass">
+                            ผ่าน
+                          </o-radio>
+                          <o-radio v-model="check" name="check" native-value="notpass">
+                            ไม่ผ่าน
+                          </o-radio>
+                        </div>
+                      </o-field>
+                      <o-field v-if="check == 'notpass'" label="เหตุผล">
+                        <o-input>
+
+                        </o-input>
+                      </o-field>
+                      <div class="w-full flex justify-end">
+                        <o-button>
+                          บันทึก
+                        </o-button>
+                      </div>
+                    </div>
+                  </UiCard>
+                </o-modal>
+                <!-- </NuxtLink> -->
               </o-table-column>
             </o-table>
           </o-tab-item>
 
-          <o-tab-item :value="4" label="รอทำสัญญา">
+          <o-tab-item :value="4" label="เซ็นต์สัญญา">
           </o-tab-item>
 
           <o-tab-item :value="5" label="สัญญากู้">
@@ -461,6 +487,8 @@
 // const state = 1;
 const state = ref(1);
 const step = ref(1);
+const isCardModalActive = ref(false);
+const check = ref('');
 
 const data = ref([
   {
