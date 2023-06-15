@@ -769,6 +769,8 @@
                 </div>
                 <div class="flex justify-end">
                   <o-button @click="newvehicle = true">+ เพิ่มพาหนะ</o-button>
+
+
                 </div>
               </div>
 
