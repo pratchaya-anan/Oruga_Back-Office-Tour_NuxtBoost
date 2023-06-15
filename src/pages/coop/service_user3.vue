@@ -1,207 +1,390 @@
 <template>
   <section class="min-h-screen">
     <LayoutPageTitle> บริการสมาชิก </LayoutPageTitle>
-    <div>
-      <UiCard
-        ><div>
-          <a href="#">
-            <img
-              class="w-10 h-10 rounded-full"
-              src="https://www.freeiconspng.com/thumbs/profile-icon-png/account-profile-user-icon--icon-search-engine-10.png"
-              alt="Jese Leos"
-            />
-          </a>
-          <h2 class="text-xl font-bold dark:text-white">สมหมาย ใจดี</h2>
-          <ul class="mt-2 space-y-1">
-            <li
-              class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-            >
-              <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
-              เลขบัตรประชาชน: 1-339955-874-58-7
-            </li>
-            <li
-              class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-            >
-              <Icon
-                class="w-6 h-6"
-                name="line-md:moon-filled-to-sunny-filled-transition"
-              ></Icon>
-              เลขข้าราชการ: 1548362568
-            </li>
-            <li
-              class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-            >
-              <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
-              วันเกิด: 16/04/2566
-            </li>
-            <li
-              class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-            >
-              <Icon
-                class="w-6 h-6"
-                name="fluent:people-audience-24-filled"
-              ></Icon>
-              เป็นสมาชิกตั้งแต่: 16/04/2510
-            </li>
-            <li
-              class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-            >
-              <Icon
-                class="w-6 h-6"
-                name="fluent:comment-error-16-filled"
-              ></Icon>
-              เป็นสมาชิกมา: 5ปี 4เดือน 15วัน
-            </li>
-          </ul>
-        </div>
-      </UiCard>
+    <div class="grid grid-cols-2 gap-4">
       <div>
-        <h3 class="mb-2 text-base font-bold text-gray-900 dark:text-white">
-          Other Stuff
-        </h3>
-        <div class="flex space-x-3">
-          <button
-            id="dropdownMenuIconButton"
-            data-dropdown-toggle="dropdownDots"
-            type="button"
-            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            <Icon class="w-6 h-6 m-1" name="ic:round-account-balance"></Icon>
-            บัญชีการเงิน
-            <div
-              class="inline-block w-3 h-3 ml-4 bg-red-500 rounded-full"
-            ></div>
-          </button>
-          <div
-            id="dropdownDots"
-            class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-          >
-            <ul>
-              <MenuDropItem>
-                <Icon
-                  class="w-6 h-6 m-1"
-                  name="ic:round-account-balance"
-                ></Icon>
-                บัญชีการเงิน
-              </MenuDropItem>
-            </ul>
-            <ul
-              class="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownMenuIconButton"
-            >
-              <MenuDropItem
-                @click="
-                  showItemsPanel != true
-                    ? (showItemsPanel = true)
-                    : (showItemsPanel = false);
-                  showItemsListComment = false;
-                "
-                ><Icon class="w-6 h-6 m-1" name="uil:money-withdraw"></Icon
-                >ฝากเงิน
+        <UiCard class="grid grid-cols-2 gap-4">
+          <div class="border-r">
+            <div class="text-center text-gray-500 dark:text-gray-400">
+              <div class="flex justify-end"></div>
+              <img
+                class="mx-auto mb-4 w-36 h-36 rounded-full"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                alt="Bonnie Avatar"
+              />
+              <h3
+                class="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                <a href="#">สมชาย ใจหาญ</a>
+              </h3>
+              <p>somshay@gmail.com</p>
+              <div class="grid grid-cols-3 gap-1 text-black cursor-pointer">
                 <div
-                  class="inline-block w-3 h-3 ml-4 bg-red-500 rounded-full"
-                ></div>
-              </MenuDropItem>
-              <MenuDropItem
-                ><Icon class="w-6 h-6 m-1" name="uil:money-insert"></Icon>
-                ถอนเงิน
-              </MenuDropItem>
-              <MenuDropItem
-                ><Icon
-                  class="w-6 h-6 m-1"
-                  name="fa6-solid:money-bill-transfer"
-                ></Icon
-                >โอนเงิน
-              </MenuDropItem>
-            </ul>
+                  @click="
+                    showItemsPanel != true
+                      ? (showItemsPanel = true)
+                      : (showItemsPanel = false)
+                  "
+                  class="border-r"
+                >
+                  <dt class="mb-2 text-xl md:text-2xl font-extrabold">5M</dt>
+                  <dd
+                    class="text-sm md:text-md font-light text-gray-500 dark:text-gray-400"
+                  >
+                    ออมทรัพย์ (5 บัญชี)
+                  </dd>
+                </div>
+                <div class="border-r">
+                  <dt class="mb-2 text-xl md:text-2xl font-extrabold">8M</dt>
+                  <dd
+                    class="text-sm md:text-md font-light text-gray-500 dark:text-gray-400"
+                  >
+                    หุ้น (2 บัญชี)
+                  </dd>
+                </div>
+                <div>
+                  <dt class="mb-2 text-xl md:text-2xl font-extrabold">6K</dt>
+                  <dd
+                    class="text-sm md:text-md font-light text-gray-500 dark:text-gray-400"
+                  >
+                    สินเชื่อ (6 รายการ)
+                  </dd>
+                </div>
+              </div>
+            </div>
           </div>
-          <button
-            type="button"
-            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            <Icon
-              class="w-6 h-6 m-1"
-              name="streamline:money-graph-analytics-business-product-graph-data-chart-analysis"
-            ></Icon>
-            บัญชีหุ้น
-          </button>
-          <button
-            type="button"
-            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            <Icon
-              class="w-6 h-6 m-1"
-              name="streamline:money-currency-bitcoin-circle-1-crypto-circle-payment-blockchain-finance-bitcoin-currency-money"
-            ></Icon>
-            สินเชื่อ
-          </button>
-          <button
-            type="button"
-            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            <Icon
-              class="w-6 h-6 m-1"
-              name="icon-park-solid:people-safe-one"
-            ></Icon>
-            สวัสดิการ
-          </button>
+          <div class="grid grid-cols-2 gap-5">
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="mingcute:idcard-fill"></Icon
+                >บัตรประชาชน
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">
+                1-339955-874-58-7
+              </dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="fa6-solid:id-card-clip"></Icon
+                >เลขข้าราชการ
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">1548362568</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="heroicons-solid:cake"></Icon>วันเกิด
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">05/06/1995</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="iwwa:year"></Icon>อายุ
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">35</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="tabler:flag-filled"></Icon>สัญชาติ
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">ไทย</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-5 h-5" name="tabler:gender-bigender"></Icon>เพศ
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">ชาย</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="ic:round-calendar-month"></Icon
+                >เป็นสมาชิกตั้งแต่
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">16/04/2510</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon
+                  class="w-6 h-6"
+                  name="material-symbols:today-rounded"
+                ></Icon
+                >เป็นสมาชิกมา
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">
+                5ปี 4เดือน 15วัน
+              </dt>
+            </div>
+            <div class="border-b col-span-2">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="tabler:home-ribbon"></Icon>ที่อยู่
+              </dd>
+              <dt class="mb-2 text-sm md:text-md font-medium">
+                20-22 ม.2 ต.บ้านเป็ด อ.เมือง จ.ขอนแก่น 40000
+              </dt>
+            </div>
+          </div>
+        </UiCard>
+        <UiCard v-if="showItemsPanel">
+          <div class="flex flex-col items-center">
+            <table
+              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+            >
+              <caption
+                class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
+              >
+                บัญชีเงินกู้
+              </caption>
+              <tbody>
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                  v-for="item in 5"
+                  key="item"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
+                    <div>บัญชีที่ 1</div>
+                  </th>
+                  <td class="px-6 py-4">
+                    <div class="flex justify-btween">
+                      <p>2.65</p>
+                      <p>
+                        <Icon
+                          class="w-3 h-3 text-gray-500"
+                          name="ic:round-percentage"
+                        ></Icon>
+                      </p>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-right">
+                    <a
+                      href="#"
+                      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                      >จัดการ</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="flex mt-4 space-x-3 md:mt-6">
+              <a
+                href="#"
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Confirm</a
+              >
+              <a
+                href="#"
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+              >
+                Manage</a
+              >
+            </div>
+          </div>
+        </UiCard>
+      </div>
+      <div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="grid grid-cols-8 gap-2 col-span-2">
+            <button
+              @click="
+                showItemsPanel2 != true
+                  ? (showItemsPanel2 = true)
+                  : (showItemsPanel2 = false);
+                showItemsPanelSelectDeposit = false;
+              "
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon class="w-6 h-6 m-1" name="ic:round-account-balance"></Icon>
+              <div>บัญชีการเงิน</div>
+            </button>
+            <button
+              @click="
+                showItemsPanelSelectDeposit != true
+                  ? (showItemsPanelSelectDeposit = true)
+                  : (showItemsPanelSelectDeposit = false);
+                showItemsPanel2 = false;
+              "
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon class="w-6 h-6 m-1" name="uil:money-withdraw"></Icon>ฝากเงิน
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon class="w-6 h-6 m-1" name="uil:money-insert"></Icon>
+              ถอนเงิน
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon
+                class="w-6 h-6 m-1"
+                name="fa6-solid:money-bill-transfer"
+              ></Icon
+              >โอนเงิน
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon class="w-6 h-6 m-1" name="fa6-solid:coins"></Icon>
+              บัญชีหุ้น
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon class="w-6 h-6 m-1" name="mdi:coins-plus"></Icon>ฝากหุ้น
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon class="w-6 h-6 m-1" name="mdi:coins-minus"></Icon>
+              ถอนหุ้น
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon class="w-6 h-6 m-1" name="iconoir:coins-swap"></Icon>โอนหุ้น
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon class="w-6 h-6 m-1" name="dashicons:list-view"></Icon>
+              รายการสินเชื่อ
+            </button>
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <Icon
+                class="w-6 h-6 m-1"
+                name="ph:currency-circle-dollar-fill"
+              ></Icon>
+              ขอสินเชื่อ
+            </button>
+          </div>
+          <div>
+            <UiCard v-if="showItemsPanelSelectDeposit">
+              <table
+                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+              >
+                <caption
+                  class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
+                >
+                  เลือกบัญชี
+                </caption>
+                <tbody>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                    v-for="item in 5"
+                    key="item"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      บัญชีที่ 1
+                    </th>
+                    <td class="px-6 py-4">
+                      <div>
+                        xx:xx<Icon
+                          class="w-4 h-4 m-2 text-gray-500"
+                          name="zondicons:view-show"
+                        ></Icon>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                      <a
+                        @click="
+                          showItemsPanelDeposit != true
+                            ? (showItemsPanelDeposit = true)
+                            : (showItemsPanelDeposit = false);
+                          showItemsPanel2 = false;
+                        "
+                        href="#"
+                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                        >เลือก</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </UiCard>
+            <UiCard v-if="showItemsPanelDeposit">
+              <div>ฝากเงินบัญชี 1</div>
+              <o-field label="จำนวนเงิน">
+                <o-input></o-input>
+              </o-field>
+              <div class="flex mt-4 space-x-3 md:mt-6">
+                <a
+                  @click="showItemsPanelDeposit = false"
+                  href="#"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Confirm</a
+                >
+                <a
+                  href="#"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+                >
+                  Manage</a
+                >
+              </div>
+            </UiCard>
+            <UiCard v-if="showItemsPanel2">
+              <div class="flex flex-col items-center">
+                <table
+                  class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+                >
+                  <caption
+                    class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
+                  >
+                    บัญชีเงิน
+                  </caption>
+                  <tbody>
+                    <tr
+                      class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                      v-for="item in 5"
+                      key="item"
+                    >
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      >
+                        <div>บัญชีที่ 1</div>
+                      </th>
+                      <td class="px-6 py-4">
+                        <div>
+                          xx:xx<Icon
+                            class="w-4 h-4 m-2 text-gray-500"
+                            name="zondicons:view-show"
+                          ></Icon>
+                        </div>
+                      </td>
+                      <td class="px-6 py-4 text-right">
+                        <a
+                          href="#"
+                          class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                          >จัดการ</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </UiCard>
+          </div>
         </div>
       </div>
-      <UiCard v-if="showItemsPanel">
-        <Icon
-          class="w-6 h-6"
-          name="majesticons:comment-text"
-          @click="showItemsListComment = true"
-        ></Icon>
-        <o-field class="flex-1" label="เลขบัญชี">
-          <o-input></o-input>
-        </o-field>
-        <div class="flex justify-end">
-          <o-button>
-            <Icon class="w-6 h-6" name="bi:plus"></Icon>เพิ่มโรงแรม</o-button
-          >
-        </div>
-
-        <div v-if="showItemsListComment">
-          <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-            คอมเมนต์
-          </h2>
-          <ul
-            class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-          >
-            <li class="flex justify-between">
-              <div>เป็นโรงแรมที่ดีมาก</div>
-              <div>20/06/66</div>
-              <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-            </li>
-            <li class="flex justify-between">
-              <div>ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</div>
-              <div>20/06/66</div>
-              <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-            </li>
-            <li class="flex justify-between">
-              <div>ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</div>
-              <div>20/06/66</div>
-              <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-            </li>
-          </ul>
-
-          <o-field label="เขียนคอมเมนต์">
-            <o-input type="textarea"></o-input>
-          </o-field>
-          <div class="flex">
-            <o-field class="flex-1" label="เลขบัญชี">
-              <o-input></o-input>
-            </o-field>
-            <section class="flex-1 shrink flex items-center justify-end">
-              <o-button @click="showItemsListComment = false" class="ml-4 mt-5"
-                >ปิด
-              </o-button>
-              <o-button class="mt-5">เพิ่ม</o-button>
-            </section>
-          </div>
-        </div>
-      </UiCard>
     </div>
   </section>
 </template>
@@ -210,7 +393,9 @@
 import { initFlowbite } from "flowbite";
 
 const showItemsPanel = ref(false);
-const showItemsListComment = ref(false);
+const showItemsPanel2 = ref(false);
+const showItemsPanelDeposit = ref(false);
+const showItemsPanelSelectDeposit = ref(false);
 
 onMounted(() => {
   initFlowbite();
