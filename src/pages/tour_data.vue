@@ -6,40 +6,67 @@
         <UiCard>
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div class="w-full relative">
-              <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+              <button
+                id="dropdownMenuIconButton"
+                data-dropdown-toggle="dropdownDots"
                 class="absolute top-0 right-0 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 rounded-full hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
-                type="button">
-                <Icon aria-hidden="true" class="w-8 h-8" name="mdi:dots-vertical"></Icon>
+                type="button"
+              >
+                <Icon
+                  aria-hidden="true"
+                  class="w-8 h-8"
+                  name="ic:round-print"
+                ></Icon>
               </button>
 
               <!-- Dropdown menu -->
-              <div id="dropdownDots"
-                class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconButton">
-                  <MenuDropItem @click="Export">
-                    พิมพ์ใบ Order
-                  </MenuDropItem>
-                  <MenuDropItem>พิมพ์ใบ Tag</MenuDropItem>
-                  <MenuDropItem>พิมพ์ใบ Sticker</MenuDropItem>
-                  <MenuDropItem>ใบเสนอราคา</MenuDropItem>
+              <div
+                id="dropdownDots"
+                class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="dropdownMenuIconButton"
+                >
                   <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    <NuxtLink @click="Export">
+                      <MenuDropItem
+                        ><Icon
+                          class="w-4 h-4 m-1"
+                          name="icon-park-twotone:order"
+                        ></Icon
+                        >พิมพ์ใบ Order</MenuDropItem
+                      >
+                    </NuxtLink>
                   </li>
                   <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    <NuxtLink>
+                      <MenuDropItem
+                        ><Icon
+                          class="w-4 h-4 m-1"
+                          name="mingcute:sticker-fill"
+                        ></Icon
+                        >พิมพ์ใบ Sticker</MenuDropItem
+                      >
+                    </NuxtLink>
                   </li>
                   <li>
-                    <a href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    <NuxtLink>
+                      <MenuDropItem>
+                        <Icon class="w-4 h-4 m-1" name="mdi:paper-check"> </Icon
+                        >ใบเสนอราคา
+                      </MenuDropItem>
+                    </NuxtLink>
+                  </li>
+                  <li>
+                    <NuxtLink>
+                      <MenuDropItem>
+                        <Icon class="w-4 h-4 m-1" name="mdi:tag"></Icon>
+                        พิมพ์ใบ Tag
+                      </MenuDropItem>
+                    </NuxtLink>
                   </li>
                 </ul>
-                <div class="py-2">
-                  <a href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated
-                    link</a>
-                </div>
               </div>
             </div>
             <div>
@@ -47,26 +74,45 @@
                 ทัวร์เกาะเสม็ด เสร็จทุกราย
               </h2>
               <ul class="mt-2 space-y-1">
-                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
                   <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
                   กาญจนบุรี-เพชรบุรี
                 </li>
-                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <Icon
+                    class="w-6 h-6"
+                    name="line-md:moon-filled-to-sunny-filled-transition"
+                  ></Icon>
                   5 วัน 4 คืน
                 </li>
-                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
                   <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
                   16/04/2566 &#32;
                   <Icon class="w-5 h-5" name="line-md:arrow-right"></Icon>
                   &#32; 16/04/2566
                 </li>
-                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:people-audience-24-filled"></Icon>
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <Icon
+                    class="w-6 h-6"
+                    name="fluent:people-audience-24-filled"
+                  ></Icon>
                   35 คน
                 </li>
-                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:comment-error-16-filled"></Icon>
+                <li
+                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <Icon
+                    class="w-6 h-6"
+                    name="fluent:comment-error-16-filled"
+                  ></Icon>
                   สนุกดี
                 </li>
               </ul>
@@ -74,17 +120,26 @@
           </div>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
-              <address class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+              <address
+                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+              >
                 <div class="mt-4">Email address</div>
-                <a class="text-sm font-medium text-gray-900 dark:text-white"
-                  href="mailto:webmaster@flowbite.com">yourname@flowbite.com</a>
+                <a
+                  class="text-sm font-medium text-gray-900 dark:text-white"
+                  href="mailto:webmaster@flowbite.com"
+                  >yourname@flowbite.com</a
+                >
                 <div class="mt-4">Home address</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
                   92 Miles Drive, Newark, NJ 07103, California, <br />United
                   States of America
                 </div>
                 <div class="mt-4">Phone number</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
                   +00 123 456 789 / +12 345 678
                 </div>
               </address>
@@ -95,12 +150,16 @@
               Other Stuff
             </h3>
             <div class="flex space-x-3">
-              <Icon class="w-6 h-6" @click="
-                showItemsPanel != true
-                  ? (showItemsPanel = true)
-                  : (showItemsPanel = false);
-              showItemsListComment = false;
-              " name="mdi:bed"></Icon>
+              <Icon
+                class="w-6 h-6"
+                @click="
+                  showItemsPanelHotel != true
+                    ? (showItemsPanelHotel = true)
+                    : (showItemsPanelHotel = false);
+                  showItemsListComment = false;
+                "
+                name="mdi:bed"
+              ></Icon>
               <Icon class="w-6 h-6" name="mdi:face-woman-shimmer"></Icon>
               <Icon class="w-6 h-6" name="mdi:van-utility"></Icon>
               <Icon class="w-6 h-6" name="mdi:airplane"></Icon>
@@ -112,15 +171,19 @@
           </div>
         </UiCard>
         <!-- comment โรงแรม -->
-        <UiCard v-if="showItemsPanel">
+        <UiCard v-if="showItemsPanelHotel">
           <div class="flex justify-end">
             <o-button>
               <Icon class="w-6 h-6" name="bi:plus"></Icon>เพิ่มโรงแรม
             </o-button>
           </div>
           <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <table
+              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+            >
+              <thead
+                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+              >
                 <tr>
                   <th scope="col" class="px-6 py-3">โรงแรม</th>
                   <th scope="col" class="px-6 py-3">วันเข้าพัก</th>
@@ -130,14 +193,22 @@
               </thead>
               <tbody>
                 <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                >
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  >
                     จกตาเพลส
                   </th>
                   <td class="px-6 py-4">20/06/2566</td>
                   <td class="px-6 py-4">25/06/2566</td>
                   <td class="px-6 py-4 text-center">
-                    <Icon class="w-6 h-6" name="majesticons:comment-text" @click="showItemsListComment = true"></Icon>
+                    <Icon
+                      class="w-6 h-6"
+                      name="majesticons:comment-text"
+                      @click="showItemsListComment = true"
+                    ></Icon>
                   </td>
                 </tr>
               </tbody>
@@ -145,10 +216,14 @@
           </div>
 
           <div v-if="showItemsListComment">
-            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+            <h2
+              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+            >
               คอมเมนต์
             </h2>
-            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+            <ul
+              class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+            >
               <li class="flex justify-between">
                 <div>เป็นโรงแรมที่ดีมาก</div>
                 <div>20/06/66</div>
@@ -170,11 +245,17 @@
               <o-input type="textarea"></o-input>
             </o-field>
             <div class="flex">
-              <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+              <o-field
+                class="flex-1"
+                label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)"
+              >
                 <o-input></o-input>
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
-                <o-button @click="showItemsListComment = false" class="ml-4 mt-5">ปิด
+                <o-button
+                  @click="showItemsListComment = false"
+                  class="ml-4 mt-5"
+                  >ปิด
                 </o-button>
                 <o-button class="mt-5">เพิ่ม</o-button>
               </section>
@@ -184,9 +265,19 @@
       </div>
       <div class="grid grid-cols-1 col-span-2 gap-4">
         <div class="flex flex-wrap gap-4">
+          <a
+            ><UiCard class="flex-1 text-white bg-blue-700 hover:bg-blue-800"
+              ><Icon
+                class="w-10 h-10"
+                name="majesticons:plus-line"
+              ></Icon></UiCard
+          ></a>
           <UiCard v-for="item in 20" key="item" class="flex-1">
             <div class="flex justify-end">
-              <Icon class="text-xl font-medium text-green-600 dark:text-white" name="mdi:gender-male">
+              <Icon
+                class="text-xl font-medium text-green-600 dark:text-white"
+                name="mdi:gender-male"
+              >
               </Icon>
               <!-- <Icon
                 class="text-xl font-medium text-pink-600 dark:text-white"
@@ -198,23 +289,37 @@
               <h5 class="text-md font-medium text-gray-900 dark:text-white">
                 สมหมาย ใจดี
               </h5>
-              <h5 class="mb-1 text-sm font-medium text-gray-900 dark:text-white">
+              <h5
+                class="mb-1 text-sm font-medium text-gray-900 dark:text-white"
+              >
                 sommai jaidee
               </h5>
               <span class="text-sm text-gray-500 dark:text-gray-400">Thai</span>
               <div class="flex justify-center">
-                <Icon class="text-xl font-medium text-gray-500 dark:text-white" name="mingcute:cake-fill">
+                <Icon
+                  class="text-xl font-medium text-gray-500 dark:text-white"
+                  name="mingcute:cake-fill"
+                >
                 </Icon>
-                <Icon class="text-xl font-medium text-gray-500 dark:text-white" name="mdi:credit-card-remove-outline">
+                <Icon
+                  class="text-xl font-medium text-gray-500 dark:text-white"
+                  name="mdi:credit-card-remove-outline"
+                >
                 </Icon>
               </div>
               <div class="flex mt-4 space-x-3 md:mt-6">
-                <a href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  Confirm</a>
-                <a href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">
-                  Manage</a>
+                <a
+                  href="#"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Confirm</a
+                >
+                <a
+                  href="#"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+                >
+                  Manage</a
+                >
               </div>
             </div>
           </UiCard>
@@ -226,92 +331,92 @@
 
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
-import * as XLSX from 'xlsx';
+import * as XLSX from "xlsx";
 
-const showItemsPanel = ref(false);
+const showItemsPanelHotel = ref(false);
 const showItemsListComment = ref(false);
-const name = ref("Tour member")
+const name = ref("Tour member");
 
 const dataday = ref([
   {
     ลำดับ: 1,
-    ชื่อภาษาไทย: 'นายเอ บี',
-    Name: 'Mr.A B',
-    NoPassport: 'AC1234567',
-    วันที่ออก: '22/9/23',
-    วันที่หมด: '21/9/33',
-    วันเดือนปีดกิด: '15/7/2549',
-    สถานที่เกิด: 'UBON',
-    ห้อง: '-',
-    หมายเหตุ: '-',
+    ชื่อภาษาไทย: "นายเอ บี",
+    Name: "Mr.A B",
+    NoPassport: "AC1234567",
+    วันที่ออก: "22/9/23",
+    วันที่หมด: "21/9/33",
+    วันเดือนปีดกิด: "15/7/2549",
+    สถานที่เกิด: "UBON",
+    ห้อง: "-",
+    หมายเหตุ: "-",
   },
   {
     ลำดับ: 1,
-    ชื่อภาษาไทย: 'นายเอ บี',
-    Name: 'Mr.A B',
-    NoPassport: 'AC1234567',
-    วันที่ออก: '22/9/23',
-    วันที่หมด: '21/9/33',
-    วันเดือนปีดกิด: '15/7/2549',
-    สถานที่เกิด: 'UBON',
-    ห้อง: '-',
-    หมายเหตุ: '-',
+    ชื่อภาษาไทย: "นายเอ บี",
+    Name: "Mr.A B",
+    NoPassport: "AC1234567",
+    วันที่ออก: "22/9/23",
+    วันที่หมด: "21/9/33",
+    วันเดือนปีดกิด: "15/7/2549",
+    สถานที่เกิด: "UBON",
+    ห้อง: "-",
+    หมายเหตุ: "-",
   },
   {
     ลำดับ: 1,
-    ชื่อภาษาไทย: 'นายเอ บี',
-    Name: 'Mr.A B',
-    NoPassport: 'AC1234567',
-    วันที่ออก: '22/9/23',
-    วันที่หมด: '21/9/33',
-    วันเดือนปีดกิด: '15/7/2549',
-    สถานที่เกิด: 'UBON',
-    ห้อง: '-',
-    หมายเหตุ: '-',
+    ชื่อภาษาไทย: "นายเอ บี",
+    Name: "Mr.A B",
+    NoPassport: "AC1234567",
+    วันที่ออก: "22/9/23",
+    วันที่หมด: "21/9/33",
+    วันเดือนปีดกิด: "15/7/2549",
+    สถานที่เกิด: "UBON",
+    ห้อง: "-",
+    หมายเหตุ: "-",
   },
   {
     ลำดับ: 1,
-    ชื่อภาษาไทย: 'นายเอ บี',
-    Name: 'Mr.A B',
-    NoPassport: 'AC1234567',
-    วันที่ออก: '22/9/23',
-    วันที่หมด: '21/9/33',
-    วันเดือนปีดกิด: '15/7/2549',
-    สถานที่เกิด: 'UBON',
-    ห้อง: '-',
-    หมายเหตุ: '-',
+    ชื่อภาษาไทย: "นายเอ บี",
+    Name: "Mr.A B",
+    NoPassport: "AC1234567",
+    วันที่ออก: "22/9/23",
+    วันที่หมด: "21/9/33",
+    วันเดือนปีดกิด: "15/7/2549",
+    สถานที่เกิด: "UBON",
+    ห้อง: "-",
+    หมายเหตุ: "-",
   },
   {
     ลำดับ: 1,
-    ชื่อภาษาไทย: 'นายเอ บี',
-    Name: 'Mr.A B',
-    NoPassport: 'AC1234567',
-    วันที่ออก: '22/9/23',
-    วันที่หมด: '21/9/33',
-    วันเดือนปีดกิด: '15/7/2549',
-    สถานที่เกิด: 'UBON',
-    ห้อง: '-',
-    หมายเหตุ: '-',
+    ชื่อภาษาไทย: "นายเอ บี",
+    Name: "Mr.A B",
+    NoPassport: "AC1234567",
+    วันที่ออก: "22/9/23",
+    วันที่หมด: "21/9/33",
+    วันเดือนปีดกิด: "15/7/2549",
+    สถานที่เกิด: "UBON",
+    ห้อง: "-",
+    หมายเหตุ: "-",
   },
   {
     ลำดับ: 1,
-    ชื่อภาษาไทย: 'นายเอ บี',
-    Name: 'Mr.A B',
-    NoPassport: 'AC1234567',
-    วันที่ออก: '22/9/23',
-    วันที่หมด: '21/9/33',
-    วันเดือนปีดกิด: '15/7/2549',
-    สถานที่เกิด: 'UBON',
-    ห้อง: '-',
-    หมายเหตุ: '-',
+    ชื่อภาษาไทย: "นายเอ บี",
+    Name: "Mr.A B",
+    NoPassport: "AC1234567",
+    วันที่ออก: "22/9/23",
+    วันที่หมด: "21/9/33",
+    วันเดือนปีดกิด: "15/7/2549",
+    สถานที่เกิด: "UBON",
+    ห้อง: "-",
+    หมายเหตุ: "-",
   },
-])
+]);
 
 function Export() {
-  const dataWS = XLSX.utils.json_to_sheet(dataday.value)
-  const wb = XLSX.utils.book_new()
-  XLSX.utils.book_append_sheet(wb, dataWS)
-  XLSX.writeFile(wb, name.value+'.xlsx')
+  const dataWS = XLSX.utils.json_to_sheet(dataday.value);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, dataWS);
+  XLSX.writeFile(wb, name.value + ".xlsx");
 }
 onMounted(() => {
   initFlowbite();
