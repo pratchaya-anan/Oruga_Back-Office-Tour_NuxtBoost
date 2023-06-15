@@ -469,7 +469,7 @@
                   </div>
                 </div>
                 <div class="flex justify-end">
-                    <o-button @click="newvehicle =true">+ เพิ่มพาหนะ</o-button>
+                  <o-button @click="newvehicle = true">+ เพิ่มพาหนะ</o-button>
 
 
                 </div>
