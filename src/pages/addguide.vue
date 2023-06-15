@@ -181,7 +181,7 @@
             </div>
 
             <hr class="my-4 border-1.5" />
-            <NuxtLink href="/tour_data" class="flex justify-end py-5">
+            <NuxtLink href="/create_tour/createtour" class="flex justify-end py-5">
                 <o-button>+ เพิ่มไกด์</o-button>
             </NuxtLink>
         </div>

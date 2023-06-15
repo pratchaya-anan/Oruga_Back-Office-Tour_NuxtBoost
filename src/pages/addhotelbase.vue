@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <NuxtLink href="/tour_data" class="flex justify-end py-5">
+            <NuxtLink href="/create_tour/createtour" class="flex justify-end py-5">
                 <o-button>+ เพิ่มโรมแรม</o-button>
             </NuxtLink>
         </div>
