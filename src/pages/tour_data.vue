@@ -28,7 +28,9 @@
                   class="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownMenuIconButton"
                 >
+                <NuxtLink to="/guide_order">
                   <MenuDropItem>พิมพ์ใบ Order</MenuDropItem>
+                </NuxtLink>
                   <MenuDropItem>พิมพ์ใบ Tag</MenuDropItem>
                   <MenuDropItem>พิมพ์ใบ Sticker</MenuDropItem>
                   <MenuDropItem>ใบเสนอราคา</MenuDropItem>

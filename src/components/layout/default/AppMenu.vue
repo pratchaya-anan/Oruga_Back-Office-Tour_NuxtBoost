@@ -1,7 +1,7 @@
 <template>
   <ul class="space-y-2">
     <li>
-      <NuxtLink href="/">
+      <NuxtLink href="/tour_list">
         <MenuItem icon-name="mdi:home">Home</MenuItem>
       </NuxtLink>
     </li>
