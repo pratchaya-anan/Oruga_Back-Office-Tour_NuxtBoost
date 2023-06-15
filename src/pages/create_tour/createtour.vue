@@ -10,7 +10,60 @@
       >
         <!-- 1 ทัวร์ -->
         <section>
-          <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
+          <div class="col-span-2">
+            <UiCard>
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <o-field label="ชื่อทริป">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="ชื่อโปรแกรม">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="จำนวนวัน">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="จำนวนคืน">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="วันเริ่มต้น">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="วันจบทริป">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="ราคาต่อหน่วย">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="ภาษี">
+                    <o-select placeholder="กำหนดภาษี">
+                      <option value="free">ยกเว้นภาษี</option>
+                      <option value="1%">1%</option>
+                      <option value="3%">3%</option>
+                      <option value="5%">5%</option>
+                      <option value="7%">7%</option>
+                      <option value="9%">9%</option>
+                    </o-select>
+                  </o-field>
+                </div>
+              </div>
+            </UiCard>
+          </div>
+          <!-- <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
             <div class="col-span-full xl:col-auto mb-4">
               <UiCard>
                 <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
@@ -86,60 +139,8 @@
                 </div>
               </UiCard>
             </div>
-            <div class="col-span-2">
-              <UiCard>
-                <div class="grid grid-cols-2 gap-4">
-                  <div>
-                    <o-field label="ชื่อทริป">
-                      <o-input></o-input>
-                    </o-field>
-                  </div>
-                  <div>
-                    <o-field label="ชื่อโปรแกรม">
-                      <o-input></o-input>
-                    </o-field>
-                  </div>
-                  <div>
-                    <o-field label="จำนวนวัน">
-                      <o-input></o-input>
-                    </o-field>
-                  </div>
-                  <div>
-                    <o-field label="จำนวนคืน">
-                      <o-input></o-input>
-                    </o-field>
-                  </div>
-                  <div>
-                    <o-field label="วันเริ่มต้น">
-                      <o-input></o-input>
-                    </o-field>
-                  </div>
-                  <div>
-                    <o-field label="วันจบทริป">
-                      <o-input></o-input>
-                    </o-field>
-                  </div>
-                  <div>
-                    <o-field label="ราคาต่อหน่วย">
-                      <o-input></o-input>
-                    </o-field>
-                  </div>
-                  <div>
-                    <o-field label="ภาษี">
-                      <o-select placeholder="กำหนดภาษี">
-                        <option value="free">ยกเว้นภาษี</option>
-                        <option value="1%">1%</option>
-                        <option value="3%">3%</option>
-                        <option value="5%">5%</option>
-                        <option value="7%">7%</option>
-                        <option value="9%">9%</option>
-                      </o-select>
-                    </o-field>
-                  </div>
-                </div>
-              </UiCard>
-            </div>
-          </div>
+            
+          </div> -->
         </section>
       </o-step-item>
       <o-step-item

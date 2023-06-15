@@ -15,7 +15,7 @@
                 <Icon
                   aria-hidden="true"
                   class="w-8 h-8"
-                  name="mdi:dots-vertical"
+                  name="ic:round-print"
                 ></Icon>
               </button>
 
@@ -28,41 +28,45 @@
                   class="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownMenuIconButton"
                 >
-                <NuxtLink to="/guide_order">
-                  <MenuDropItem>พิมพ์ใบ Order</MenuDropItem>
-                </NuxtLink>
-                  <MenuDropItem>พิมพ์ใบ Tag</MenuDropItem>
-                  <MenuDropItem>พิมพ์ใบ Sticker</MenuDropItem>
-                  <MenuDropItem>ใบเสนอราคา</MenuDropItem>
                   <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >Dashboard</a
-                    >
+                    <NuxtLink href="/guide_order">
+                      <MenuDropItem
+                        ><Icon
+                          class="w-4 h-4 m-1"
+                          name="icon-park-twotone:order"
+                        ></Icon
+                        >พิมพ์ใบ Order</MenuDropItem
+                      >
+                    </NuxtLink>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >Settings</a
-                    >
+                    <NuxtLink>
+                      <MenuDropItem
+                        ><Icon
+                          class="w-4 h-4 m-1"
+                          name="mingcute:sticker-fill"
+                        ></Icon
+                        >พิมพ์ใบ Sticker</MenuDropItem
+                      >
+                    </NuxtLink>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >Earnings</a
-                    >
+                    <NuxtLink>
+                      <MenuDropItem>
+                        <Icon class="w-4 h-4 m-1" name="mdi:paper-check"> </Icon
+                        >ใบเสนอราคา
+                      </MenuDropItem>
+                    </NuxtLink>
+                  </li>
+                  <li>
+                    <NuxtLink>
+                      <MenuDropItem>
+                        <Icon class="w-4 h-4 m-1" name="mdi:tag"></Icon>
+                        พิมพ์ใบ Tag
+                      </MenuDropItem>
+                    </NuxtLink>
                   </li>
                 </ul>
-                <div class="py-2">
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                    >Separated link</a
-                  >
-                </div>
               </div>
             </div>
             <div>
@@ -149,9 +153,9 @@
               <Icon
                 class="w-6 h-6"
                 @click="
-                  showItemsPanel != true
-                    ? (showItemsPanel = true)
-                    : (showItemsPanel = false);
+                  showItemsPanelHotel != true
+                    ? (showItemsPanelHotel = true)
+                    : (showItemsPanelHotel = false);
                   showItemsListComment = false;
                 "
                 name="mdi:bed"
@@ -167,7 +171,7 @@
           </div>
         </UiCard>
         <!-- comment โรงแรม -->
-        <UiCard v-if="showItemsPanel">
+        <UiCard v-if="showItemsPanelHotel">
           <div class="flex justify-end">
             <o-button>
               <Icon class="w-6 h-6" name="bi:plus"></Icon>เพิ่มโรงแรม</o-button
@@ -261,6 +265,13 @@
       </div>
       <div class="grid grid-cols-1 col-span-2 gap-4">
         <div class="flex flex-wrap gap-4">
+          <a
+            ><UiCard class="flex-1 text-white bg-blue-700 hover:bg-blue-800"
+              ><Icon
+                class="w-10 h-10"
+                name="majesticons:plus-line"
+              ></Icon></UiCard
+          ></a>
           <UiCard v-for="item in 20" key="item" class="flex-1">
             <div class="flex justify-end">
               <Icon
@@ -321,7 +332,7 @@
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
 
-const showItemsPanel = ref(false);
+const showItemsPanelHotel = ref(false);
 const showItemsListComment = ref(false);
 
 onMounted(() => {
