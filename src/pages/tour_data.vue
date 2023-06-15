@@ -51,7 +51,7 @@
                     </NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink>
+                    <NuxtLink href="/invoice/quotation">
                       <MenuDropItem>
                         <Icon class="w-4 h-4 m-1" name="mdi:paper-check"> </Icon
                         >ใบเสนอราคา
@@ -156,26 +156,56 @@
                   showItemsPanelHotel != true
                     ? (showItemsPanelHotel = true)
                     : (showItemsPanelHotel = false);
-                  showItemsListComment = false;
+                  showItemsListCommentHotel = false;
                 "
                 name="mdi:bed"
               ></Icon>
-              <Icon class="w-6 h-6" name="mdi:face-woman-shimmer"></Icon>
-              <Icon class="w-6 h-6" name="mdi:van-utility"></Icon>
+              <Icon
+                class="w-6 h-6"
+                @click="
+                  showItemsPanelGuide != true
+                    ? (showItemsPanelGuide = true)
+                    : (showItemsPanelGuide = false);
+                  showItemsListCommentGuide = false;
+                "
+                name="mdi:face-woman-shimmer"
+              ></Icon>
+              <Icon
+                class="w-6 h-6"
+                @click="
+                  showItemsPanelVehicle != true
+                    ? (showItemsPanelVehicle = true)
+                    : (showItemsPanelVehicle = false);
+                  showItemsListCommentVehicle = false;
+                "
+                name="mdi:van-utility"
+              ></Icon>
               <Icon class="w-6 h-6" name="mdi:airplane"></Icon>
               <Icon class="w-6 h-6" name="mdi:image-filter-hdr"></Icon>
               <Icon class="w-6 h-6" name="mdi:store-marker"></Icon>
-              <Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon>
+              <Icon
+                class="w-6 h-6"
+                @click="
+                  showItemsPanelRestaurant != true
+                    ? (showItemsPanelRestaurant = true)
+                    : (showItemsPanelRestaurant = false);
+                  showItemsListCommentRestaurant = false;
+                "
+                name="mdi:food-fork-drink"
+              ></Icon>
               <Icon class="w-6 h-6" name="mdi:calendar-time"></Icon>
             </div>
           </div>
         </UiCard>
-        <!-- comment โรงแรม -->
+        <!-- โรงแรม -->
         <UiCard v-if="showItemsPanelHotel">
           <div class="flex justify-end">
-            <o-button>
-              <Icon class="w-6 h-6" name="bi:plus"></Icon>เพิ่มโรงแรม
-            </o-button>
+            <NuxtLink href="/tour_data_hotel">
+              <o-button>
+                <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
+                >จัดการ/เพิ่มโรงแรม
+              </o-button>
+            </NuxtLink>
           </div>
           <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table
@@ -207,7 +237,11 @@
                     <Icon
                       class="w-6 h-6"
                       name="majesticons:comment-text"
-                      @click="showItemsListComment = true"
+                      @click="
+                        showItemsListCommentHotel != true
+                          ? (showItemsListCommentHotel = true)
+                          : (showItemsListCommentHotel = false)
+                      "
                     ></Icon>
                   </td>
                 </tr>
@@ -215,7 +249,7 @@
             </table>
           </div>
 
-          <div v-if="showItemsListComment">
+          <div v-if="showItemsListCommentHotel">
             <h2
               class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
             >
@@ -253,7 +287,7 @@
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
                 <o-button
-                  @click="showItemsListComment = false"
+                  @click="showItemsListCommentHotel = false"
                   class="ml-4 mt-5"
                   >ปิด
                 </o-button>
@@ -262,28 +296,370 @@
             </div>
           </div>
         </UiCard>
+        <!-- ไกด์ -->
+        <UiCard v-if="showItemsPanelGuide">
+          <div class="flex justify-end">
+            <o-button>
+              <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
+              >จัดการ/เพิ่มไกด์
+            </o-button>
+          </div>
+          <div>
+            <ol class="relative border-l border-gray-200 dark:border-gray-700">
+              <li class="ml-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <div class="flex justify-beetween">
+                  <div>
+                    <h2
+                      class="mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      นายสมชาย วดี
+                    </h2>
+                  </div>
+                  <div>
+                    <Icon
+                      class="w-6 h-6 mx-3"
+                      name="majesticons:comment-text"
+                      @click="
+                        showItemsListCommentGuide != true
+                          ? (showItemsListCommentGuide = true)
+                          : (showItemsListCommentGuide = false)
+                      "
+                    ></Icon>
+                  </div>
+                </div>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-5 h-5 m-1" name="carbon:phone-filled"></Icon
+                  >092-868552
+                </p>
+                <p
+                  class="mb-4 text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon
+                    class="w-6 h-6 m-1"
+                    name="material-symbols:move-location-rounded"
+                  ></Icon
+                  >ทั่วไป/ภาคเหนือ
+                </p>
+              </li>
+              <li class="mb-10 ml-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <div class="flex justify-beetween">
+                  <div>
+                    <h2
+                      class="mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      นางสาวมณี วันดี
+                    </h2>
+                  </div>
+                  <div>
+                    <Icon
+                      class="w-6 h-6 mx-3"
+                      name="majesticons:comment-text"
+                      @click="
+                        showItemsListCommentGuide != true
+                          ? (showItemsListCommentGuide = true)
+                          : (showItemsListCommentGuide = false)
+                      "
+                    ></Icon>
+                  </div>
+                </div>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-5 h-5 m-1" name="carbon:phone-filled"></Icon
+                  >092-868552
+                </p>
+                <p
+                  class="mb-4 text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon
+                    class="w-6 h-6 m-1"
+                    name="material-symbols:move-location-rounded"
+                  ></Icon
+                  >ทั่วไป/ภาคเหนือ
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <div v-if="showItemsListCommentGuide">
+            <hr />
+            <h2
+              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+            >
+              คอมเมนต์
+            </h2>
+            <ul
+              class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+            >
+              <li class="flex justify-between">
+                <div>ไกด์เป็นคนตลก</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+              <li class="flex justify-between">
+                <div>ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+              <li class="flex justify-between">
+                <div>ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+            </ul>
+
+            <o-field label="เขียนคอมเมนต์">
+              <o-input type="textarea"></o-input>
+            </o-field>
+            <div class="flex">
+              <o-field
+                class="flex-1"
+                label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)"
+              >
+                <o-input></o-input>
+              </o-field>
+              <section class="flex-1 shrink flex items-center justify-end">
+                <o-button
+                  @click="showItemsListCommentGuide = false"
+                  class="ml-4 mt-5"
+                  >ปิด
+                </o-button>
+                <o-button class="mt-5">เพิ่ม</o-button>
+              </section>
+            </div>
+          </div>
+        </UiCard>
+        <!-- พาหนะ -->
+        <UiCard v-if="showItemsPanelVehicle">
+          <div class="flex justify-end">
+            <o-button>
+              <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
+              >จัดการ/เพิ่มพาหนะ
+            </o-button>
+          </div>
+          <div>
+            <ol class="relative border-l border-gray-200 dark:border-gray-700">
+              <li class="ml-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <div class="flex justify-beetween">
+                  <div>
+                    <h2
+                      class="mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      ทัวร์ VIP 1
+                    </h2>
+                  </div>
+                  <div>
+                    <Icon
+                      class="w-6 h-6 mx-3"
+                      name="majesticons:comment-text"
+                      @click="
+                        showItemsListCommentVehicle != true
+                          ? (showItemsListCommentVehicle = true)
+                          : (showItemsListCommentVehicle = false)
+                      "
+                    ></Icon>
+                  </div>
+                </div>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-5 h-5" name="mdi:card-text"></Icon>กข 5621
+                  ขอนแก่น
+                </p>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-6 h-6" name="mdi:car"></Icon>รถทัวร์
+                </p>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-6 h-6" name="tabler:brand-adobe"></Icon>เบนซ์
+                </p>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-6 h-6" name="mingcute:seat-fill"></Icon>20
+                  ที่นั่ง
+                </p>
+              </li>
+              <li class="mb-10 ml-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+                ></div>
+                <div class="flex justify-beetween">
+                  <div>
+                    <h2
+                      class="mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                    >
+                      ทัวร์ VIP 2
+                    </h2>
+                  </div>
+                  <div>
+                    <Icon
+                      class="w-6 h-6 mx-3"
+                      name="majesticons:comment-text"
+                      @click="
+                        showItemsListCommentVehicle != true
+                          ? (showItemsListCommentVehicle = true)
+                          : (showItemsListCommentVehicle = false)
+                      "
+                    ></Icon>
+                  </div>
+                </div>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-5 h-5" name="mdi:card-text"></Icon>กข 5621
+                  ขอนแก่น
+                </p>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-6 h-6" name="mdi:car"></Icon>รถทัวร์
+                </p>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-6 h-6" name="tabler:brand-adobe"></Icon>เบนซ์
+                </p>
+                <p
+                  class="text-base font-normal text-gray-900 dark:text-gray-400"
+                >
+                  <Icon class="w-6 h-6" name="mingcute:seat-fill"></Icon>20
+                  ที่นั่ง
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <div v-if="showItemsListCommentVehicle">
+            <hr />
+            <h2
+              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+            >
+              คอมเมนต์
+            </h2>
+            <ul
+              class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+            >
+              <li class="flex justify-between">
+                <div>ไกด์เป็นคนตลก</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+              <li class="flex justify-between">
+                <div>ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+              <li class="flex justify-between">
+                <div>ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+            </ul>
+
+            <o-field label="เขียนคอมเมนต์">
+              <o-input type="textarea"></o-input>
+            </o-field>
+            <div class="flex">
+              <o-field
+                class="flex-1"
+                label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)"
+              >
+                <o-input></o-input>
+              </o-field>
+              <section class="flex-1 shrink flex items-center justify-end">
+                <o-button
+                  @click="showItemsListCommentVehicle = false"
+                  class="ml-4 mt-5"
+                  >ปิด
+                </o-button>
+                <o-button class="mt-5">เพิ่ม</o-button>
+              </section>
+            </div>
+          </div>
+        </UiCard>
+        <!-- ร้านอาหาร -->
       </div>
       <div class="grid grid-cols-1 col-span-2 gap-4">
         <div class="flex flex-wrap gap-4">
-          <a
-            ><UiCard class="flex-1 text-white bg-blue-700 hover:bg-blue-800"
-              ><Icon
-                class="w-10 h-10"
-                name="majesticons:plus-line"
-              ></Icon></UiCard
-          ></a>
-          <UiCard v-for="item in 20" key="item" class="flex-1">
+          <UiCard class="flex-1 hover:bg-gray-100 hover:text-blue-700">
+            <NuxtLink
+              class="flex justify-center h-full items-center"
+              href="/tour_data_hotel"
+            >
+              <div>
+                <Icon class="w-10 h-10" name="tabler:settings-plus"></Icon>
+              </div>
+              <div>จัดการ/เพิ่มลูกทัวร์</div>
+            </NuxtLink>
+          </UiCard>
+          <UiCard class="flex-1" v-for="item in 10">
             <div class="flex justify-end">
               <Icon
                 class="text-xl font-medium text-green-600 dark:text-white"
                 name="mdi:gender-male"
               >
               </Icon>
-              <!-- <Icon
+            </div>
+            <div class="flex flex-col items-center">
+              <h5 class="text-md font-medium text-gray-900 dark:text-white">
+                สมหมาย ใจดี
+              </h5>
+              <h5
+                class="mb-1 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                sommai jaidee
+              </h5>
+              <span class="text-sm text-gray-500 dark:text-gray-400">Thai</span>
+              <div class="flex justify-center">
+                <Icon
+                  class="text-xl font-medium text-gray-500 dark:text-white"
+                  name="mingcute:cake-fill"
+                >
+                </Icon>
+                <Icon
+                  class="text-xl font-medium text-gray-500 dark:text-white"
+                  name="mdi:credit-card-remove-outline"
+                >
+                </Icon>
+              </div>
+              <div class="flex mt-4 space-x-3 md:mt-6">
+                <a
+                  href="#"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Confirm</a
+                >
+                <a
+                  href="#"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+                >
+                  Manage</a
+                >
+              </div>
+            </div>
+          </UiCard>
+          <UiCard class="flex-1" v-for="item in 10">
+            <div class="flex justify-end">
+              <Icon
                 class="text-xl font-medium text-pink-600 dark:text-white"
                 name="ph:gender-female-bold"
               >
-              </Icon> -->
+              </Icon>
             </div>
             <div class="flex flex-col items-center">
               <h5 class="text-md font-medium text-gray-900 dark:text-white">
@@ -334,9 +710,18 @@ import { initFlowbite } from "flowbite";
 import * as XLSX from "xlsx";
 
 const showItemsPanelHotel = ref(false);
-const showItemsListComment = ref(false);
-const name = ref("Tour member");
+const showItemsListCommentHotel = ref(false);
 
+const showItemsPanelGuide = ref(false);
+const showItemsListCommentGuide = ref(false);
+
+const showItemsPanelVehicle = ref(false);
+const showItemsListCommentVehicle = ref(false);
+
+const showItemsPanelRestaurant = ref(false);
+const showItemsListCommentRestaurant = ref(false);
+
+const name = ref("Tour member");
 const dataday = ref([
   {
     ลำดับ: 1,
