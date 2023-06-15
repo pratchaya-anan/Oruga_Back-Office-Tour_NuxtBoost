@@ -166,8 +166,8 @@
 </template>
   
 <script setup lang="ts">
-import * as XLSX from 'xlsx';
 import { initFlowbite } from 'flowbite';
+import * as XLSX from 'xlsx';
 
 const name = ref("Export report day")
 
@@ -216,5 +216,6 @@ function Export() {
   XLSX.writeFile(wb, name.value+'.xlsx')
 }
 
-onMounted(() => { initFlowbite() });
+onMounted(() => { 
+  initFlowbite() });
 </script>
