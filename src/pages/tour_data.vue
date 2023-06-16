@@ -622,23 +622,188 @@
                 >
                 </Icon>
               </div>
-              <div class="flex mt-4 space-x-3 md:mt-6">
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Confirm</a
-                >
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
-                >
-                  Manage</a
+              <div>
+                <span
+                  class="px-10 text-sm text-gray-500 dark:text-gray-400 truncate"
+                  ><Icon class="w-6 h-6" name="majesticons:comment-text"></Icon
+                  >แพ้กุ้ง</span
                 >
               </div>
             </div>
           </UiCard>
-          <UiCard class="flex-1" v-for="item in 10">
+          <o-modal v-model:active="isItemModalUserData">
+            <UiCard>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="p-3 border-r">
+                  <div class="flex items-center justify-start mb-2">
+                    <a href="#">
+                      <img
+                        class="w-10 h-10 rounded-full"
+                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                        alt="Jese Leos"
+                      />
+                    </a>
+                  </div>
+                  <p
+                    class="text-base font-semibold leading-none text-gray-900 dark:text-white"
+                  >
+                    <a href="#">สมหมาย ใจดี</a
+                    ><Icon
+                      class="text-xl font-medium text-green-600 dark:text-white"
+                      name="mdi:gender-male"
+                    >
+                    </Icon>
+                  </p>
+                  <p class="mb-3 text-sm font-normal">
+                    <a href="#" class="hover:underline">sommai jaidee</a>
+                  </p>
+                  <p
+                    class="text-base font-semibold leading-none text-gray-900 dark:text-white"
+                  >
+                    ข้อมูลส่วนตัว
+                  </p>
+                  <div class="grid grid-cols-2">
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="carbon:phone-filled"
+                      ></Icon
+                      >098-158-4478
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="mingcute:cake-fill"
+                      ></Icon
+                      >20/04/2000
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="fa-solid:id-card"
+                      ></Icon
+                      >1-7399-01893-76-5
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="gis:search-country"
+                      ></Icon
+                      >Thai
+                    </p>
+                    <p class="mb-4 text-sm col-span-2">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="ant-design:home-twotone"
+                      ></Icon
+                      >20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000
+                    </p>
+                  </div>
+                  <p
+                    class="text-base font-semibold leading-none text-gray-900 dark:text-white"
+                  >
+                    พาสปอร์ต
+                  </p>
+                  <div class="grid grid-cols-2">
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="fontisto:passport"
+                      ></Icon
+                      >1635501893
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="fluent-mdl2:number-field"
+                      ></Icon
+                      >1478/63
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="fa6-solid:calendar-check"
+                      ></Icon
+                      >25/01/2566
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="fa6-solid:calendar-xmark"
+                      ></Icon
+                      >25/01/2570
+                    </p>
+                  </div>
+                  <p
+                    class="text-base font-semibold leading-none text-gray-900 dark:text-white"
+                  >
+                    ข้อมูลเดินทาง
+                  </p>
+                  <div class="grid grid-cols-2">
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="tabler:number"
+                      ></Icon
+                      >3
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon
+                        class="w-6 h-6 text-gray-600"
+                        name="mingcute:bed-fill"
+                      ></Icon
+                      >คู่
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <h2
+                    class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
+                  >
+                    คอมเมนต์
+                  </h2>
+                  <ul
+                    class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+                  >
+                    <li class="flex justify-between">
+                      <div>แพ้กุ้ง</div>
+                      <div>20/06/66</div>
+                      <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    </li>
+                  </ul>
+                  <o-button @click="showItemsListCommentUser = true"
+                    >เขียนคอมเมนต์</o-button
+                  >
+
+                  <div v-if="showItemsListCommentUser">
+                    <o-field label="เขียนคอมเมนต์">
+                      <o-input type="textarea"></o-input>
+                    </o-field>
+                    <div class="flex">
+                      <o-field label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                        <o-input></o-input>
+                      </o-field>
+                      <section
+                        class="flex-1 shrink flex items-center justify-end"
+                      >
+                        <o-button
+                          @click="showItemsListCommentUser = false"
+                          class="ml-4 mt-5"
+                          >ปิด
+                        </o-button>
+                        <o-button class="mt-5">เพิ่ม</o-button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-popper-arrow></div>
+            </UiCard>
+          </o-modal>
+          <UiCard
+            class="flex-1 hover:bg-gray-100 cursor-pointer"
+            v-for="item in 10"
+          >
             <div class="flex justify-end">
               <Icon
                 class="text-xl font-medium text-pink-600 dark:text-white"
