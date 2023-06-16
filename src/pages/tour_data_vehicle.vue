@@ -116,9 +116,7 @@
               </div>
             </div>
             <div class="flex justify-end">
-
-              <o-button @click="newaddhotel = true">+ เพิ่มโรงแรม</o-button>
-
+              <o-button @click="newaddhotel = true">+ เพิ่มยานพาหนะ</o-button>
             </div>
           </div>
 
@@ -145,30 +143,30 @@ const newvehicle = ref(false);
 const columns = ref([
   {
     field: "id",
-    label: "ID",
+    label: "ลำดับ",
     width: "40",
     numeric: true,
   },
   {
     field: "name",
-    label: "Name",
+    label: "พาหนะ",
   },
   {
     field: "address",
-    label: "Address",
+    label: "ประเภทพาหนะ",
   },
   {
     field: "phone",
-    label: "Phone",
+    label: "เบอร์ติดต่อ",
   },
   {
     field: "comment",
-    label: "Comment",
+    label: "คอมเมนต์",
     position: "centered",
   },
   {
     field: "manage",
-    label: "Manage",
+    label: "จัดการ",
     position: "centered",
   },
 ]);
@@ -176,44 +174,28 @@ const columns = ref([
 const tableData = [
   {
     id: 1,
-    name: "Jesse",
-    address: "1 S. Simmons",
+    name: "รถทัวร์VIP",
+    address: "รถ",
     phone: "0428976765",
     comment: "ปานกลาง",
     manage: ". . .",
   },
   {
     id: 2,
-    name: "Pesse",
-    address: "92/4 mimons",
-    phone: "08978677867",
+    name: "รถตู้",
+    address: "รถตู้",
+    phone: "0897867787",
     comment: "ดี",
     manage: ". . .",
-  },
+  }, 
   {
     id: 3,
-    name: "Pesse",
-    address: "92/4 mimons",
-    phone: "08978677867",
+    name: "รถทัวร์บริษัทA",
+    address: "รถทัวร์",
+    phone: "0899854867",
     comment: "ดี",
     manage: ". . .",
-  },
-  {
-    id: 4,
-    name: "Pesse",
-    address: "92/4 mimons",
-    phone: "08978677867",
-    comment: "ดี",
-    manage: ". . .",
-  },
-  {
-    id: 5,
-    name: "Pesse",
-    address: "92/4 mimons",
-    phone: "08978677867",
-    comment: "ดี",
-    manage: ". . .",
-  },
+  }, 
 ];
 
 
