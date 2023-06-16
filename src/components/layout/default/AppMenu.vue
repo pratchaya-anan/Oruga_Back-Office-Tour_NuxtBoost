@@ -2,25 +2,19 @@
   <ul class="space-y-2">
     <li>
       <NuxtLink href="/tour_list">
-        <MenuItem icon-name="mdi:home">Home</MenuItem>
+        <MenuItem icon-name="line-md:home-twotone">Home</MenuItem>
       </NuxtLink>
     </li>
     <li>
       <MenuDropDown label="Report" icon-name="mdi:file-document">
         <MenuDropItem>
-          <NuxtLink to="/reportday">
-            รายวัน
-          </NuxtLink>
+          <NuxtLink to="/reportday"> รายวัน </NuxtLink>
         </MenuDropItem>
         <MenuDropItem>
-          <NuxtLink to="/reportmouth">
-            รายเดือน
-          </NuxtLink>
+          <NuxtLink to="/reportmouth"> รายเดือน </NuxtLink>
         </MenuDropItem>
         <MenuDropItem>
-          <NuxtLink to="/reportyear">
-            รายปี
-          </NuxtLink>
+          <NuxtLink to="/reportyear"> รายปี </NuxtLink>
         </MenuDropItem>
       </MenuDropDown>
     </li>
