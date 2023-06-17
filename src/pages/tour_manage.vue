@@ -66,7 +66,7 @@
                 <UiCard>
                     <div class="flex justify-between">
                         <h2 class="text-xl font-bold dark:text-white">
-                            ลูกทัวร์
+                            ลูกทัวร์ : 2
                         </h2>
                         <div class="flex">
                             <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
@@ -98,8 +98,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr
-                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                                    @click="isItemModalUserData = true">
                                     <th scope="row"
                                         class=" px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         นายสมหมาย ใจดี
@@ -144,7 +144,112 @@
                         </table>
                     </div>
                 </UiCard>
+                <o-modal v-model:active="isItemModalUserData">
+                    <UiCard>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="p-3 border-r">
+                                <div class="flex items-center justify-start mb-2">
+                                    <a href="#">
+                                        <img class="w-10 h-10 rounded-full"
+                                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                                            alt="Jese Leos" />
+                                    </a>
+                                </div>
+                                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                                    <a href="#">สมหมาย ใจดี</a>
+                                    <Icon class="text-xl font-medium text-green-600 dark:text-white" name="mdi:gender-male">
+                                    </Icon>
+                                </p>
+                                <p class="mb-3 text-sm font-normal">
+                                    <a href="#" class="hover:underline">sommai jaidee</a>
+                                </p>
+                                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                                    ข้อมูลส่วนตัว
+                                </p>
+                                <div class="grid grid-cols-2">
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="carbon:phone-filled"></Icon>098-158-4478
+                                    </p>
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="mingcute:cake-fill"></Icon>20/04/2000
+                                    </p>
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="fa-solid:id-card"></Icon>1-7399-01893-76-5
+                                    </p>
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="gis:search-country"></Icon>Thai
+                                    </p>
+                                    <p class="mb-4 text-sm col-span-2">
+                                        <Icon class="w-6 h-6 text-gray-600" name="ant-design:home-twotone"></Icon>20-22
+                                        หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000
+                                    </p>
+                                </div>
+                                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                                    พาสปอร์ต
+                                </p>
+                                <div class="grid grid-cols-2">
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="fontisto:passport"></Icon>1635501893
+                                    </p>
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="fluent-mdl2:number-field"></Icon>1478/63
+                                    </p>
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-check"></Icon>
+                                        25/01/2566
+                                    </p>
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-xmark"></Icon>
+                                        25/01/2570
+                                    </p>
+                                </div>
+                                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                                    ข้อมูลเดินทาง
+                                </p>
+                                <div class="grid grid-cols-2">
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="tabler:number"></Icon>3
+                                    </p>
+                                    <p class="mb-4 text-sm">
+                                        <Icon class="w-6 h-6 text-gray-600" name="mingcute:bed-fill"></Icon>คู่
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                                    คอมเมนต์
+                                </h2>
+                                <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                                    <li class="flex justify-between">
+                                        <div>แพ้อาหารทะเล</div>
+                                        <div>20/06/66</div>
+                                        <div class="flex justify-end mt-3">
+                                            <Icon class="w-5 h-5"  name="mdi:comment-edit"></Icon>
+                                            <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
+                                        </div>
+                                    </li>
+                                </ul>
 
+                                <div>
+                                    <o-field label="เขียนคอมเมนต์">
+                                        <o-input type="textarea"></o-input>
+                                    </o-field>
+                                    <div class="flex">
+                                        <o-field label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                                            <o-input></o-input>
+                                        </o-field>
+                                        <section class="flex-1 shrink flex items-center justify-end">
+                                            <o-button class="ml-4 mt-5" @click="isItemModalUserData = false">ปิด
+                                            </o-button>
+                                            <o-button class="mt-5" @click="isItemModalUserData = false">เพิ่ม</o-button>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-popper-arrow></div>
+                    </UiCard>
+                </o-modal>
             </div>
             <div class="col-span-2">
                 <UiCard>
@@ -178,6 +283,7 @@ import { initFlowbite } from 'flowbite';
 onMounted(() => { initFlowbite() });
 
 const showItemscomment = ref(false);
+const isItemModalUserData = ref(false);
 
 
 const columns = ref([
