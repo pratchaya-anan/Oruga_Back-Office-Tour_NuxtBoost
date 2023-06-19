@@ -1,12 +1,12 @@
 <template>
   <section class="h-m-screen">
-    <LayoutPageTitle> Tour / จัดทัวร์ / จัดการโรงแรม </LayoutPageTitle>
+    <LayoutPageTitle> Tour / จัดทัวร์ / จัดการยานพาหนะ </LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto">
-        <UiCard>
+        <UiCard class="mb-4">
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div>
-              <h2 class="text-xl font-bold dark:text-white mt-3">
+              <h2 class="text-xl font-bold dark:text-white mt-2">
                 ทัวร์เกาะเสม็ด เสร็จทุกราย
               </h2>
               <ul class="mt-2 space-y-1">
@@ -34,162 +34,128 @@
                 </li>
               </ul>
             </div>
-            <div class="mt-2 flex justify-between">
-              <h2 class="text-xl font-bold dark:text-white mt-3">
-                โรงแรม
-              </h2>
-              <div class="flex">
-                <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
-                <div class="px-2">
-                  <o-button>ค้นหา</o-button>
-                </div>
+          </div>
+        </UiCard>
+        <UiCard>
+          <div class="mt-2 flex justify-between">
+            <h2 class="text-xl font-bold dark:text-white">
+              ยานพาหนะ
+            </h2>
+            <div class="flex">
+              <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
+              <div class="px-2">
+                <o-button>ค้นหา</o-button>
               </div>
             </div>
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                  <tr>
-                    <th scope="col" class="px-2 py-3">ชื่อ-สกุล</th>
-                    <th scope="col" class="py-3 ">วันเข้าพัก
-                    </th>
-                    <th scope="col" class="py-3">
-                      วันออก
-                    </th>
-                    <th scope="col" class="py-3">คอมเมนต์</th>
-                    <th scope="col" class="py-3">..</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                    @click="isItemModalUserData = true">
-                    <th scope="row" class=" px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      โรงแรมกล้วยไม้สีขาว
-                    </th>
-                    <td class="py-4">
-                      <div class="flex items-center">
-                        25/06/2532
-                      </div>
-                    </td>
-                    <td class="py-4">
-                      <div class="flex items-center">
-                        25/06/2566
-                      </div>
-                    </td>
-                    <td>
-                      ปานกลาง
-                    </td>
-                    <td>
-                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-
-                      โรงแรมกุหลาบสีแดง
-                    </th>
-                    <td class="py-4">20/06/2566</td>
-                    <td class="py-4 flex">
-                      <div class="flex items-center">
-                        25/06/2566
-                      </div>
-                    </td>
-                    <td>
-                      ดี
-                    </td>
-                    <td>
-                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="mt-2 flex justify-end">
-              <o-button>เสร็จสิ้น</o-button>
-            </div>
+          </div>
+          <div class="relative overflow-x-auto border shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                  <th scope="col" class="px-2 py-3">
+                    ชื่อยานพาหนะ</th>
+                  <th scope="col" class="px-2 py-3 text-center items-center">
+                    เที่ยว
+                  </th>
+                  <th scope="col" class="px-2 py-3 text-center items-center">
+                    จำนวนที่นั้ง
+                  </th>
+                  <th scope="col" class="px-2 py-3 text-center items-center">คอมเมนต์</th>
+                  <th scope="col" class="px-2 py-3 text-center items-center">..</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  @click="isItemModalUserData = true">
+                  <th class=" px-2 py-3">
+                    รถบัสVIP
+                  </th>
+                  <td class="px-2 py-3 text-center items-center">
+                    ขาไป
+                  </td>
+                  <td class="px-2 py-3 text-center items-center">
+                    35
+                  </td>
+                  <td class="px-2 py-3 text-center items-center">
+                    ปานกลาง
+                  </td>
+                  <td class="px-2 py-3 text-center items-center">
+                    <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
+                  </td>
+                </tr>
+                <tr
+                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  <th class="px-2 py-3">
+                    นกแอร์
+                  </th>
+                  <td class="px-2 py-3 text-center items-center">
+                    ขาไป - ขากลับ
+                  </td>
+                  <td class="px-2 py-3 text-center items-center">
+                    35
+                  </td>
+                  <td class="px-2 py-3 text-center items-center">
+                    ดี
+                  </td>
+                  <td class="px-2 py-3 text-center items-center">
+                    <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-2 flex justify-end">
+            <o-button>เสร็จสิ้น</o-button>
           </div>
         </UiCard>
         <o-modal v-model:active="isItemModalUserData">
           <UiCard>
             <div class="grid grid-cols-2 gap-2">
-              <div class="p-3 border-r">
-                <div class="flex items-center justify-start mb-2">
-                  <a href="#">
-                    <img class="w-10 h-10 rounded-full"
-                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                      alt="Jese Leos" />
-                  </a>
+              <div class="p-2 border-r">
+                <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                  รถบัสVIP
+                </h2>
+                <p class="mb-2 text-base font-semibold leading-none text-gray-900 dark:text-white">
+                  เวลา
+                </p>
+                <div class="grid grid-cols-2">
+                  <p class="mb-4 text-sm col-span-2">
+                    <Icon class="w-6 h-6 text-gray-600 mr-2" name="uiw:time-o"></Icon>
+                    25/06/2532 - 25/06/2566
+                  </p>
                 </div>
-                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
-                  <a href="#">สมหมาย ใจดี</a>
-                  <Icon class="text-xl font-medium text-green-600 dark:text-white" name="mdi:gender-male">
-                  </Icon>
-                </p>
-                <p class="mb-3 text-sm font-normal">
-                  <a href="#" class="hover:underline">sommai jaidee</a>
-                </p>
-                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
-                  ข้อมูลส่วนตัว
+                <p class="mb-2 text-base font-semibold leading-none text-gray-900 dark:text-white">
+                  ข้อมูลโรงแรม
                 </p>
                 <div class="grid grid-cols-2">
                   <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="carbon:phone-filled"></Icon>098-158-4478
-                  </p>
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="mingcute:cake-fill"></Icon>20/04/2000
-                  </p>
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="fa-solid:id-card"></Icon>1-7399-01893-76-5
-                  </p>
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="gis:search-country"></Icon>Thai
+                    <Icon class="w-6 h-6 text-gray-600 mr-2" name="carbon:phone-filled"></Icon>0428976765
                   </p>
                   <p class="mb-4 text-sm col-span-2">
-                    <Icon class="w-6 h-6 text-gray-600" name="ant-design:home-twotone"></Icon>20-22
-                    หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000
-                  </p>
-                </div>
-                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
-                  พาสปอร์ต
-                </p>
-                <div class="grid grid-cols-2">
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="fontisto:passport"></Icon>1635501893
-                  </p>
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="fluent-mdl2:number-field"></Icon>1478/63
-                  </p>
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-check"></Icon>
-                    25/01/2566
-                  </p>
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-xmark"></Icon>
-                    25/01/2570
-                  </p>
-                </div>
-                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
-                  ข้อมูลเดินทาง
-                </p>
-                <div class="grid grid-cols-2">
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="tabler:number"></Icon>3
-                  </p>
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600" name="mingcute:bed-fill"></Icon>คู่
+                    <Icon class="w-6 h-6 text-gray-600 mr-2" name="entypo:address"></Icon>132 ม.1 บ้านไม้ ตำบนกล้วย
+                    อำเภอเมือง
+                    จังหวัดดินแดง
                   </p>
                 </div>
               </div>
               <div>
-                <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
                   คอมเมนต์
                 </h2>
-                <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-                  <li class="flex justify-between">
-                    <div>แพ้อาหารทะเล</div>
-                    <div>20/06/66</div>
-                    <div class="flex justify-end mt-3">
+                <ul class="p-2 max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                  <li class="grid grid-cols-3 gap-4 border-l ">
+                    <div class="w-full ml-1">ปานกลาง</div>
+                    <div class="w-full">20/06/66</div>
+                    <div class="flex w-full justify-end">
+                      <Icon class="w-5 h-5" name="mdi:comment-edit"></Icon>
+                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
+                    </div>
+                  </li>
+                  <li class="grid grid-cols-3 gap-4 border-l ">
+                    <div class="w-full ml-1">ดี</div>
+                    <div class="w-full">20/06/66</div>
+                    <div class="flex w-full justify-end">
                       <Icon class="w-5 h-5" name="mdi:comment-edit"></Icon>
                       <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
                     </div>
@@ -219,7 +185,7 @@
       </div>
       <div class="col-span-2">
         <UiCard>
-          <div class="my-2 grid grid-cols-2 gap-2 mt-5">
+          <div class="my-2 grid grid-cols-2 gap-2 mt-2">
             <div class="flex">
               <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
               <div class="px-2">
@@ -228,7 +194,7 @@
             </div>
             <div class="flex justify-end">
 
-              <o-button>+ เพิ่มโรงแรม</o-button>
+              <o-button>+ เพิ่มยานพาหนะ</o-button>
             </div>
           </div>
           <div class="relative overflow-x-auto">
@@ -236,22 +202,25 @@
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" class="px-6 py-3">
-                    id
+                    ลำดับ
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    name
+                    ชื่อยานพาหนะ
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    address
+                    ที่อยู่
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    phone
+                    เบอร์ติดต่อ
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    จำนวนที่นั่ง
                   </th>
                   <th scope="col" class="px-6 py-3 text-center items-center">
-                    comment
+                    คอมเมนต์
                   </th>
                   <th scope="col" class="px-6 py-3 text-center items-center">
-                    manage
+
                   </th>
                 </tr>
               </thead>
@@ -261,13 +230,16 @@
                     1
                   </th>
                   <td class="px-6 py-4">
-                    โรงแรมกล้วยไม้สีขาว
+                    รถบัสVIP
                   </td>
                   <td class="px-6 py-4">
                     132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
                   </td>
                   <td class="px-6 py-4">
                     0428976765
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    40
                   </td>
                   <td class="px-6 py-4 text-center items-center">
                     ปานกลาง
@@ -281,7 +253,7 @@
                     2
                   </th>
                   <td class="px-6 py-4">
-                    โรงแรมกุหลาบสีแดง
+                    นกแอร์
                   </td>
                   <td class="px-6 py-4">
                     33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
@@ -290,24 +262,7 @@
                     08978677867
                   </td>
                   <td class="px-6 py-4 text-center items-center">
-                    ดี
-                  </td>
-                  <td class="px-6 py-4 text-center items-center">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
-                  </td>
-                </tr>
-                <tr class="bg-white hover:bg-gray-100 dark:bg-gray-800">
-                  <th class="px-6 py-4">
-                    3
-                  </th>
-                  <td class="px-6 py-4">
-                    โรงแรมทิวลิปสีม่วง
-                  </td>
-                  <td class="px-6 py-4">
-                    127 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
-                  </td>
-                  <td class="px-6 py-4">
-                    04989712356
+                    100
                   </td>
                   <td class="px-6 py-4 text-center items-center">
                     ดี
@@ -320,7 +275,36 @@
             </table>
           </div>
         </UiCard>
+        <o-modal v-model:active="add">
+          <div class="grid grid-cols-2 gap-4 p-6">
+            <div class="col-span-2">
+              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                เลือกวันเข้าพัก
+              </h2>
+            </div>
+            <div>
+              <o-field label="วันเข้าพัก">
+                <o-input></o-input>
+              </o-field>
+            </div>
+            <div>
+              <o-field label="วันออก">
+                <o-input></o-input>
+              </o-field>
+            </div>
+            <div class="col-span-2">
+              <o-field label="จำนวนห้องพัก">
+                <o-input type="number"></o-input>
+              </o-field>
+            </div>
+            <div class="col-span-2">
+              <div class="flex justify-end">
+                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+              </div>
+            </div>
+          </div>
 
+        </o-modal>
       </div>
     </div>
   </section>
