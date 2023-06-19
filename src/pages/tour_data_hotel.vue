@@ -33,82 +33,189 @@
                   สนุกดี
                 </li>
               </ul>
+            </div>
+            <div class="mt-2 flex justify-between">
               <h2 class="text-xl font-bold dark:text-white mt-3">
                 โรงแรม
               </h2>
-              <ol class="relative border-l border-gray-200 dark:border-gray-700">
-                <li class="mb-10 ml-4">
-                  <div
-                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                  </div>
-                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">02 February
-                    2022 - 03 February
-                    2022</time>
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมกล้วยไม้สีขาว</h3>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
-                    จังหวัดดินแดง</p>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
-                </li>
-                <li class="mb-10 ml-4">
-                  <div
-                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                  </div>
-                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">04 February
-                    2022 - 05 February
-                    2022</time>
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมกุหลาบสีแดง</h3>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
-                    จังหวัดดินแดง</p>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
-                </li>
-                <li class="mb-10 ml-4">
-                  <div
-                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                  </div>
-                  <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">06 February
-                    2022 - 07 February
-                    2022</time>
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมทิวลิปสีม่วง</h3>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">127 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
-                    จังหวัดดินแดง</p>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
-                </li>
-              </ol>
+              <div class="flex">
+                <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
+                <div class="px-2">
+                  <o-button>ค้นหา</o-button>
+                </div>
+              </div>
             </div>
-            <div class="flex justify-end">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-2 py-3">ชื่อ-สกุล</th>
+                    <th scope="col" class="py-3 ">วันเข้าพัก
+                    </th>
+                    <th scope="col" class="py-3">
+                      วันออก
+                    </th>
+                    <th scope="col" class="py-3">คอมเมนต์</th>
+                    <th scope="col" class="py-3">..</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                    @click="isItemModalUserData = true">
+                    <th scope="row" class=" px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      โรงแรมกล้วยไม้สีขาว
+                    </th>
+                    <td class="py-4">
+                      <div class="flex items-center">
+                        25/06/2532
+                      </div>
+                    </td>
+                    <td class="py-4">
+                      <div class="flex items-center">
+                        25/06/2566
+                      </div>
+                    </td>
+                    <td class="text-center items-center">
+                      ปานกลาง
+                    </td>
+                    <td>
+                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+
+                      โรงแรมกุหลาบสีแดง
+                    </th>
+                    <td class="py-4">20/06/2566</td>
+                    <td class="py-4 flex">
+                      <div class="flex items-center">
+                        25/06/2566
+                      </div>
+                    </td>
+                    <td class="text-center items-center">
+                      ดี
+                    </td>
+                    <td>
+                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mt-2 flex justify-end">
               <o-button>เสร็จสิ้น</o-button>
             </div>
           </div>
-          <o-modal v-model:active="add">
-            <div class="grid grid-cols-2 gap-4 p-6">
-              <div class="col-span-2">
-                <label>เลือกวันเข้าพัก</label>
+        </UiCard>
+        <o-modal v-model:active="isItemModalUserData">
+          <UiCard>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="p-3 border-r">
+                <div class="flex items-center justify-start mb-2">
+                  <a href="#">
+                    <img class="w-10 h-10 rounded-full"
+                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                      alt="Jese Leos" />
+                  </a>
+                </div>
+                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                  <a href="#">สมหมาย ใจดี</a>
+                  <Icon class="text-xl font-medium text-green-600 dark:text-white" name="mdi:gender-male">
+                  </Icon>
+                </p>
+                <p class="mb-3 text-sm font-normal">
+                  <a href="#" class="hover:underline">sommai jaidee</a>
+                </p>
+                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                  ข้อมูลส่วนตัว
+                </p>
+                <div class="grid grid-cols-2">
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="carbon:phone-filled"></Icon>098-158-4478
+                  </p>
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="mingcute:cake-fill"></Icon>20/04/2000
+                  </p>
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="fa-solid:id-card"></Icon>1-7399-01893-76-5
+                  </p>
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="gis:search-country"></Icon>Thai
+                  </p>
+                  <p class="mb-4 text-sm col-span-2">
+                    <Icon class="w-6 h-6 text-gray-600" name="ant-design:home-twotone"></Icon>20-22
+                    หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000
+                  </p>
+                </div>
+                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                  พาสปอร์ต
+                </p>
+                <div class="grid grid-cols-2">
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="fontisto:passport"></Icon>1635501893
+                  </p>
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="fluent-mdl2:number-field"></Icon>1478/63
+                  </p>
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-check"></Icon>
+                    25/01/2566
+                  </p>
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-xmark"></Icon>
+                    25/01/2570
+                  </p>
+                </div>
+                <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                  ข้อมูลเดินทาง
+                </p>
+                <div class="grid grid-cols-2">
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="tabler:number"></Icon>3
+                  </p>
+                  <p class="mb-4 text-sm">
+                    <Icon class="w-6 h-6 text-gray-600" name="mingcute:bed-fill"></Icon>คู่
+                  </p>
+                </div>
               </div>
               <div>
-                <o-field label="วันเข้าพัก">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-              <div>
-                <o-field label="วันสิ้นสุด">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-              <div class="col-span-2">
-                <o-field label="จำนวนห้องพัก">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-              <div>
-                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
-                <o-button size="medium" variant="primary" @click="add = false"> ยกเลิก </o-button>
+                <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                  คอมเมนต์
+                </h2>
+                <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                  <li class="flex justify-between">
+                    <div>แพ้อาหารทะเล</div>
+                    <div>20/06/66</div>
+                    <div class="flex justify-end mt-3">
+                      <Icon class="w-5 h-5" name="mdi:comment-edit"></Icon>
+                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
+                    </div>
+                  </li>
+                </ul>
+
+                <div>
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button class="ml-4 mt-5" @click="isItemModalUserData = false">ปิด
+                      </o-button>
+                      <o-button class="mt-5" @click="isItemModalUserData = false">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
               </div>
             </div>
-          </o-modal>
-        </UiCard>
+            <div data-popper-arrow></div>
+          </UiCard>
+        </o-modal>
       </div>
       <div class="col-span-2">
         <UiCard>
@@ -213,6 +320,7 @@
             </table>
           </div>
         </UiCard>
+
       </div>
     </div>
   </section>
@@ -223,5 +331,5 @@ import { initFlowbite } from 'flowbite';
 onMounted(() => { initFlowbite() });
 
 const add = ref(false);
-
+const isItemModalUserData = ref(false);
 </script>
