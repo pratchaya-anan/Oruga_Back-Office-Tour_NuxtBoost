@@ -309,11 +309,13 @@
         </UiCard>
         <!-- พาหนะ -->
         <UiCard v-if="showItemsPanelVehicle">
-          <div class="flex justify-end">
+          <NuxtLink to="/tour_data_vehicle" class="flex justify-end">
             <o-button>
               <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon>จัดการ/เพิ่มพาหนะ
             </o-button>
-          </div>
+          </NuxtLink>
+          <!-- <div class="flex justify-end"> -->
+          <!-- </div> -->
           <div>
             <ol class="relative border-l border-gray-200 dark:border-gray-700">
               <li class="ml-4">
@@ -400,7 +402,7 @@
                 <div>20/06/66</div>
                 <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
               </li>
-              <li class="flex justify-between">
+              <li class="flex justify-between">                                                           
                 <div>ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</div>
                 <div>20/06/66</div>
                 <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>

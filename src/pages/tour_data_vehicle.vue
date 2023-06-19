@@ -105,9 +105,9 @@
                 </tbody>
               </table>
             </div>
-            <div class="mt-2 flex justify-end">
+            <NuxtLink to="/tour_data" class="mt-2 flex justify-end">
               <o-button>เสร็จสิ้น</o-button>
-            </div>
+            </NuxtLink>
           </div>
         </UiCard>
         <o-modal v-model:active="isItemModalUserData">
