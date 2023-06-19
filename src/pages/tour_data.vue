@@ -30,7 +30,7 @@
                     </NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink href="/invoice/quotation">
+                    <NuxtLink href="/invoice/quotation_list">
                       <MenuDropItem>
                         <Icon class="w-4 h-4 m-1" name="mdi:paper-check"> </Icon>ใบเสนอราคา
                       </MenuDropItem>
@@ -423,6 +423,7 @@
         </UiCard>
         <!-- ร้านอาหาร -->
       </div>
+      <!-- ลูกทัวร์ -->
       <div class="grid grid-cols-1 col-span-2 gap-4">
         <div class="flex flex-wrap gap-4">
           <UiCard class="flex-1 hover:bg-gray-100 hover:text-blue-700">
@@ -433,10 +434,19 @@
               <div>จัดการ/เพิ่มลูกทัวร์</div>
             </NuxtLink>
           </UiCard>
-          <UiCard class="flex-1" v-for="item in 10">
+          <UiCard
+            @click="isItemModalUserData = true"
+            class="flex-1 hover:bg-gray-100 cursor-pointer"
+            v-for="item in 10"
+          >
             <div class="flex justify-end">
               <Icon class="text-xl font-medium text-green-600 dark:text-white" name="mdi:gender-male">
               </Icon>
+              <!-- <Icon
+                class="text-xl font-medium text-pink-600 dark:text-white"
+                name="ph:gender-female-bold"
+              >
+              </Icon> -->
             </div>
             <div class="flex flex-col items-center">
               <h5 class="text-md font-medium text-gray-900 dark:text-white">
@@ -500,6 +510,9 @@
 import { initFlowbite } from "flowbite";
 import * as XLSX from "xlsx";
 
+const showItemsListCommentUser = ref(false);
+const isItemModalUserData = ref(false);
+
 const showItemsPanelHotel = ref(false);
 const showItemsListCommentHotel = ref(false);
 
@@ -513,7 +526,9 @@ const showItemsPanelRestaurant = ref(false);
 const showItemsListCommentRestaurant = ref(false);
 
 const name = ref("Tour member");
-const dataday = ref([
+
+const datamember = ref([
+  ["Program", "Hotel", "สะบายดี", "Checkon"],
   {
     ลำดับ: 1,
     ชื่อภาษาไทย: "นายเอ บี",
@@ -589,7 +604,17 @@ const dataday = ref([
 ]);
 
 function Export() {
-  const dataWS = XLSX.utils.json_to_sheet(dataday.value);
+  const dataWS = XLSX.utils.json_to_sheet(datamember.value);
+  const merge = [
+    { s: { r: 0, c: 0 }, e: { r: 0, c: 1 } },
+    { s: { r: 0, c: 3 }, e: { r: 0, c: 5 } },
+    { s: { r: 0, c: 6 }, e: { r: 0, c: 9 } },
+    { s: { r: 1, c: 2 }, e: { r: 2, c: 2 } },
+    { s: { r: 1, c: 3 }, e: { r: 2, c: 5 } },
+    { s: { r: 1, c: 6 }, e: { r: 1, c: 9 } },
+    { s: { r: 2, c: 6 }, e: { r: 2, c: 9 } },
+  ];
+  dataWS["!merges"] = merge;
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, dataWS);
   XLSX.writeFile(wb, name.value + ".xlsx");
