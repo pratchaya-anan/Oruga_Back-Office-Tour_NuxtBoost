@@ -58,148 +58,27 @@
               </address>
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <caption class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                หลักฐานผู้กู้
-              </caption>
-              <tbody>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    สำเนาบัตรประชาชน
-                  </th>
-                  <td class="px-6 py-4">
-                    <div>
-                      <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                    </div>
-                  </td>
-                  <td class="px-6 py-4 text-right">
-                    <o-checkbox class="flex justify-end"></o-checkbox>
-                  </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    สำเนาบัตรทะเบียนบ้าน
-                  </th>
-                  <td class="px-6 py-4">
-                    <div>
-                      <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                    </div>
-                  </td>
-                  <td class="px-6 py-4 text-right">
-                    <o-checkbox class="flex justify-end"></o-checkbox>
-                  </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    สลิปเงินเดือน
-                  </th>
-                  <td class="px-6 py-4">
-                    <div>
-                      <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                    </div>
-                  </td>
-                  <td class="px-6 py-4 text-right">
-                    <o-checkbox class="flex justify-end"></o-checkbox>
-                  </td>
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    สินทรัพย์
-                  </th>
-                  <td class="px-6 py-4">
-                    <div>
-                      <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
-                    </div>
-                  </td>
-                  <td class="px-6 py-4 text-right">
-                    <o-checkbox class="flex justify-end"></o-checkbox>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="w-full mt-4">
-              <o-field label="คอมเมนต์">
-                <o-input></o-input>
-              </o-field>
-            </div>
-          </div>
-
         </UiCard>
 
       </div>
       <div class="col-span-2 gap-4">
         <div class="flex flex-wrap gap-4">
           <UiCard class="flex-1">
-            
-        <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
-          หลักค้ำประกัน
-        </h5>
-        <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Connect with one of our available wallet providers or create a new one.</p>
-        <ul class="my-4 space-y-3">
-          <p class="text-sm font-normal text-gray-900 dark:text-gray-400">
-            ผู้ค้ำ
-          </p>
-            <li>
-                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
-                    <span class="flex-1 ml-3 whitespace-nowrap">นายกล้วยหอม หวี</span>
-                    <span class="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">Popular</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
-                    <span class="flex-1 ml-3 whitespace-nowrap">นายวัน  สอง</span>
-                </a>
-            </li>
-            <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
-              สินทรัพย์</p>
-            <li>
-                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
-                    <span class="flex-1 ml-3 whitespace-nowrap"></span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
-                    <span class="flex-1 ml-3 whitespace-nowrap">WalletConnect</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
-                    <span class="flex-1 ml-3 whitespace-nowrap">Fortmatic</span>
-                </a>
-            </li>
-        </ul>
-        <div>
-        </div>
 
-          </UiCard>
-          <!-- <UiCard class="flex-1">
+            <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
+              หลักค้ำประกัน
+            </h5>
+            <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Connect with one of our available wallet
+              providers or create a new one.</p>
             <div class="flex flex-col items-center">
               <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <caption class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                  ข้อมูลผู้ค้ำ
+                  หลักฐานผู้กู้
                 </caption>
-                <div>
-                  <ul class="mt-2 space-y-1">
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      ชื่อ-สกุล นายวัน สอง
-                    </li>
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      เงินเดือน
-                      50,000
-                    </li>
-                    <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      ตำแหน่ง ผู้ช่วยบริการ
-                    </li>
-                    <li class="text-lg font-semibold text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                      หลักฐานผู้ค้ำ
-                    </li>
-                  </ul>
-                </div>
                 <tbody>
                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สำเนาบัตรประชาชน</div>
+                      สำเนาบัตรประชาชน
                     </th>
                     <td class="px-6 py-4">
                       <div>
@@ -212,10 +91,10 @@
                   </tr>
                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สำเนาบัตรทะเบียนบ้าน</div>
+                      สำเนาบัตรทะเบียนบ้าน
                     </th>
                     <td class="px-6 py-4">
-                      <div class="flex justify-btween">
+                      <div>
                         <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
                       </div>
                     </td>
@@ -225,10 +104,10 @@
                   </tr>
                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สลิปเงินเดือน</div>
+                      สลิปเงินเดือน
                     </th>
                     <td class="px-6 py-4">
-                      <div class="flex justify-btween">
+                      <div>
                         <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
                       </div>
                     </td>
@@ -238,10 +117,10 @@
                   </tr>
                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      <div>สินทรัพย์</div>
+                      สินทรัพย์
                     </th>
                     <td class="px-6 py-4">
-                      <div class="flex justify-btween">
+                      <div>
                         <Icon class="w-4 h-4 m-2 text-gray-500" name="zondicons:view-show"></Icon>
                       </div>
                     </td>
@@ -251,20 +130,43 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="w-full mt-4">
+              <div class="w-full mt-2">
                 <o-field label="คอมเมนต์">
                   <o-input></o-input>
                 </o-field>
               </div>
             </div>
-          </UiCard>           -->
-          
+          </UiCard>
         </div>
-        <div class="flex justify-end">
+        <div class="col-span-2 gap-4">
+          <h5 class="mt-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
+            หลักค้ำประกัน
+          </h5>
+          <div class="flex flex-wrap gap-4">
+              <UiCard class="flex-1 mt-3">
+                <div class="sm:flex xl:block xl:space-y-4">
+                  <div class="sm:flex-1">
+                    <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                      <a class="text-sm font-medium text-gray-900 dark:text-white"
+                        href="mailto:webmaster@flowbite.com">นายกล้วยหอม หวี</a>
+                      <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                       ผู้ช่วย
+                      </div>
+                      <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        35,000 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </UiCard>              
+                           
+          </div>
+        </div>
+        <!-- <div class="flex justify-end">
           <o-button href="#"
             class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             บันทึก</o-button>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
