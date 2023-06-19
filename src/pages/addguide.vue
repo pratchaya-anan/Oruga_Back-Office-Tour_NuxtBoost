@@ -106,12 +106,22 @@
             </div>
             <div class="grid grid-cols-2 gap-4 pt-2">
                 <div>
-                    <o-field label="หมายเลขมัคคุเทศก์">
+                    <o-field label="ใบอนุญาตเลขที่">
+                        <o-input></o-input>
+                    </o-field>
+                </div>
+                <div>
+                    <o-field label="ID No.">
                         <o-input></o-input>
                     </o-field>
                 </div>
                 <div>
                     <o-field label="ชื่อ-สกุล">
+                        <o-input></o-input>
+                    </o-field>
+                </div>
+                <div>
+                    <o-field label="ชื่อ-สกุล ภาษาอังกฤษ">
                         <o-input></o-input>
                     </o-field>
                 </div>
@@ -156,7 +166,7 @@
                 </o-field>
             </div>
             <div class="pt-2">
-                <o-field label="แนบรูปภาพประกอบ">
+                <o-field label="แนบรูปภาพบัตรประจำตัวมัคคุเทศก์">
 
                     <div class="mt-2 flex items-center justify-center w-full">
                         <label for="dropzone-file"

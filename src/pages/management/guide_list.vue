@@ -3,7 +3,7 @@
     <LayoutPageTitle>Guide Management / จัดการไกด์</LayoutPageTitle>
     <UiManageBar>
       <NuxtLink
-        href="/create_tour/createtour"
+        href="/addguide"
         type="button"
         class="text-white bg-primary-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
       >
@@ -18,9 +18,7 @@
       <UiCard v-for="item in 10" key="item">
         <div class="text-center text-gray-500 dark:text-gray-400">
           <div class="flex justify-end">
-            <div
-              class="inline-block w-3 h-3 mr-2 bg-red-500 rounded-full"
-            ></div>
+            
           </div>
           <img
             class="mx-auto mb-4 w-36 h-36 rounded-full"
@@ -35,7 +33,7 @@
           <h3
             class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
           >
-            <a href="#">สมชาย ใจหาญ</a>
+            <a href="/management/guide_data">สมชาย ใจหาญ</a>
           </h3>
           <p>ภาคกลาง</p>
           <ul class="flex justify-center mt-4 space-x-4">
