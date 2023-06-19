@@ -30,7 +30,7 @@
                     </NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink href="/invoice/quotation_list">
+                    <NuxtLink href="/quotation_list">
                       <MenuDropItem>
                         <Icon class="w-4 h-4 m-1" name="mdi:paper-check"> </Icon>ใบเสนอราคา
                       </MenuDropItem>
