@@ -434,7 +434,7 @@
             <section>
                 <div class="w-[210mm] h-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow">
                     <div class="grid grid-rows-2 m-5">
-                        <img class="w-[12vmin]" src="../../assets/images/ll-01.png" alt="Logo" />
+                        <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo" />
                         <div class="grid grid-cols-3 text-sm">
                             <div class="col-span-2">
                                 <div>ห้างหุ้นส่วนจำกัด นิลผกา</div>
@@ -455,6 +455,8 @@
                         </div>
                     </div>
                     <hr class="col-span-3 mx-5" />
+
+                    <!-- ข้อมูลฝั่งซ้าย -->
                     <div class="col-span-2 grid grid-cols-3 m-5 text-xs">
                         <div class="col-span-2">
                             <div class="grid grid-cols-3">
@@ -472,6 +474,8 @@
                                 <div class="col-span-2">e@gmail.com</div>
                             </div>
                         </div>
+
+                        <!-- ข้อมูลฝั่งขวา -->
                         <div class="border-l px-5">
                             <div class="grid grid-cols-3">
                                 <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
@@ -487,7 +491,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="min-h-100 border-b border-black">
+
+                    <!-- ตาราง -->
+                    <div class="min-h-[400px] border-b border-black">
                         <table class="w-full text-center">
                             <tr class="h-8 border-y border-black text-center text-sm">
                                 <th class="text-center">ลำดับ</th>
@@ -499,8 +505,6 @@
                                 <th>ภาษี</th>
                                 <th>จำนวนเงิน</th>
                             </tr>
-                            <!-- v-for="(data, index) in idfiltered.product"
-            :key="index" -->
                             <tr class="h-10 text-xs" v-for="item in 8">
                                 <td>1</td>
                                 <td>14778854</td>
@@ -514,6 +518,7 @@
                         </table>
                     </div>
 
+                    <!-- รายละเอียดข้อตกลง(ด้านซ้าย) -->
                     <div class="grid grid-cols-3 text-xs p-2 border-b border-black">
                         <div class="col-span-2">
                             <div class="font-bold">หมายเหตุ:</div>
@@ -530,6 +535,7 @@
                             </div>
                         </div>
 
+                        <!-- สรุปรายการ(ด้านขวา) -->
                         <div class="grid grid-cols-2 p-2">
                             <div>มัดจำ</div>
                             <div class="text-right">5000 บาท</div>
@@ -553,7 +559,7 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-4 mt-25 text-xs">
+                    <div class="grid grid-cols-4 mt-[100px] text-xs">
                         <div class="text-center border-b border-black mx-5">
                             <div>ผู้เสนอราคา</div>
                             <div class="mb-5">วันที่</div>
@@ -573,11 +579,16 @@
                     </div>
                 </div>
             </section>
-            <div  class="flex justify-center mt-3">
-                <o-button>
-                    <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>                                           
+            <div class="flex justify-center mt-3">
+                <o-button variant="info">
+                    <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>
                     พิมพ์
                 </o-button>
+                <NuxtLink to="quotation_list">
+                    <o-button>
+                        บันทึก
+                    </o-button>
+                </NuxtLink>
             </div>
         </o-step-item>
     </o-steps>
