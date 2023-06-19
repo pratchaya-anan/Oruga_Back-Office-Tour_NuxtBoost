@@ -2,14 +2,6 @@
   <section class="min-h-screen">
     <LayoutPageTitle>Guide Management / จัดการไกด์</LayoutPageTitle>
     <UiManageBar>
-      <NuxtLink
-        href="/create_tour/createtour"
-        type="button"
-        class="text-white bg-primary-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
-      >
-        <Icon class="mr-1 -ml-1 w-5 h-5" name="mdi:plus"></Icon>
-        เพิ่มไกด์
-      </NuxtLink>
     </UiManageBar>
     <UiSectionTabs></UiSectionTabs>
     <div class="grid grid-cols-4 gap-4">
@@ -139,11 +131,55 @@
             </div>
             <div class="border-b">
               <dd class="font-light text-gray-500 dark:text-gray-400">
-                ความสามารถพิเศษ
+               เบอร์โทรศัพท์
               </dd>
-              <dt class="mb-2 text-md md:text-lg font-medium">บินได้</dt>
+              <dt class="mb-2 text-md md:text-lg font-medium">096-365-6958</dt>
             </div>
             <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                ความสามารถพิเศษ
+              </dd>
+              <dt class="mb-2 text-md md:text-lg font-medium">พูดภาษาไทยได้</dt>
+            </div>
+            <div class="border-b col-span-2">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                ที่อยู่
+              </dd>
+              <dt class="mb-10 text-sm md:text-md font-medium">
+                20-22 ม.2 ต.บ้านเป็ด อ.เมือง จ.ขอนแก่น 40000
+              </dt>
+            </div>
+          </div>
+        </UiCard>
+      </div>
+      <UiCard>
+        <img class="ml-10 h-40 w-30 rounded-lg" src="https://tonkit360.com/wp-content/uploads/2018/10/broze.jpg" alt="image description">
+ <div class="mt-5 grid grid-cols-2 gap-5">
+  <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                ID NO.
+              </dd>
+              <dt class="mb-2 text-md md:text-lg font-medium">0 1234 56789 001</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                ใบอนุญาตเลขที่
+              </dd>
+              <dt class="mb-2 text-md md:text-lg font-medium">5-xxxxxx</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                ประเภทมัคคุเทศก์
+              </dd>
+              <dt class="mb-2 text-md md:text-lg font-medium">เฉพาะภูมิภาค</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                ประเภทเฉพาะภูมิภาค
+              </dd>
+              <dt class="mb-2 text-md md:text-lg font-medium">เหนือ</dt>
+            </div>
+        <div class="border-b">
               <dd class="font-light text-gray-500 dark:text-gray-400">
                 วันออกใบอนุญาต
               </dd>
@@ -155,19 +191,36 @@
               </dd>
               <dt class="mb-2 text-md md:text-lg font-medium">02/02/2570</dt>
             </div>
-            <div class="border-b col-span-2">
-              <dd class="font-light text-gray-500 dark:text-gray-400">
-                ที่อยู่
-              </dd>
-              <dt class="mb-2 text-sm md:text-md font-medium">
-                20-22 ม.2 ต.บ้านเป็ด อ.เมือง จ.ขอนแก่น 40000
-              </dt>
-            </div>
-          </div>
+            
+          </div> 
         </UiCard>
-      </div>
-      <UiCard> </UiCard>
-      <UiCard> </UiCard>
+          <UiCard><img class="ml-10 h-40 w-30 rounded-lg" src="https://lp-cms-production.imgix.net/news/2015/01/New-Irish-passport.jpg?auto=compress&fit=crop&format=auto&q=50&w=1200&h=800" alt="image description">
+            <div class="mt-5 grid grid-cols-2 gap-5">
+  <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                หมายเลขพาสปอต
+              </dd>
+              <dt class="mb-2 text-md md:text-lg font-medium">AC1062346</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                ตรวจลงตราเลขที่
+              </dd>
+              <dt class="mb-2 text-md md:text-lg font-medium">5-xxxxxx</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                วันออกพาสปอร์ต
+              </dd>
+              <dt class="mb-2 text-md md:text-lg font-medium">02/02/2566</dt>
+            </div>
+            <div class="border-b">
+              <dd class="font-light text-gray-500 dark:text-gray-400">
+                วันหมดอายุพาสปอร์ต
+              </dd>
+              <dt class="mb-2 text-md md:text-lg font-medium">02/02/2570</dt>
+            </div>
+          </div></UiCard>
     </div>
   </section>
 </template>
