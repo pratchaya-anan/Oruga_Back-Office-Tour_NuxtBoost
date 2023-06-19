@@ -1,6 +1,5 @@
 <template>
     <section>
-
         <LayoutPageTitle>Quotation/ใบเสนอราคา</LayoutPageTitle>
 
         <UiManageBar>
@@ -65,7 +64,7 @@
                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                             รายละเอียด
                         </h3>
-                        <button type="button"
+                        <button @click="openmodal = false" type="button"
                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                             data-modal-hide="staticModal">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -161,16 +160,25 @@
 
                                     </diV>
                                     <div class="flex justify-end">
-                                        <button data-modal-hide="staticModal" type="button"
-                                            class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="icon-park-solid:bill"></Icon>
-                                            ใบแจ้งหนี้
-                                        </button>
-                                        <button data-modal-hide="staticModal" type="button"
-                                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="fa6-solid:file-invoice-dollar"></Icon>
-                                            ใบกำกับภาษี
-                                        </button>
+                                        <!-- <NuxtLink to="/paper/billing_paper"> -->
+                                        <a href="/paper/billing_paper">
+                                            <o-button
+                                                class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                <Icon class="mr-3 -ml-1 w-5 h-5" name="icon-park-solid:bill"></Icon>
+                                                ใบแจ้งหนี้
+                                            </o-button>
+                                        </a>
+                                        <!-- </NuxtLink> -->
+                                        <!-- <NuxtLink to="/paper/taxinvoice_paper"> -->
+                                        <a href="/paper/taxinvoice_paper">
+                                            <o-button
+                                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                <Icon class="mr-3 -ml-1 w-5 h-5" name="fa6-solid:file-invoice-dollar">
+                                                </Icon>
+                                                ใบกำกับภาษี
+                                            </o-button>
+                                        </a>
+                                        <!-- </NuxtLink> -->
                                     </div>
                                 </div>
                             </div>
@@ -191,10 +199,7 @@ import { initFlowbite } from 'flowbite';
 
 const openmodal = ref(false);
 const sec23 = Array.from(Array(6).keys()).map(x => x + 1);
-// console.log(sec23);
+console.log(sec23);
 
 onMounted(() => { initFlowbite() });
-
-
-
 </script>
