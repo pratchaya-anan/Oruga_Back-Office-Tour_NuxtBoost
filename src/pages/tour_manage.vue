@@ -224,7 +224,7 @@
                                         <div>แพ้อาหารทะเล</div>
                                         <div>20/06/66</div>
                                         <div class="flex justify-end mt-3">
-                                            <Icon class="w-5 h-5"  name="mdi:comment-edit"></Icon>
+                                            <Icon class="w-5 h-5" name="mdi:comment-edit"></Icon>
                                             <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
                                         </div>
                                     </li>
@@ -269,7 +269,7 @@
                     <o-table :data="data" v-model:checked-rows="checkedRows" checkable
                         :checkbox-position="checkboxPosition">
                         <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
-                            {{ row[column.field] }}
+                            {{ row[column.field ] }}
                         </o-table-column>
                     </o-table>
                 </UiCard>
@@ -284,7 +284,6 @@ onMounted(() => { initFlowbite() });
 
 const showItemscomment = ref(false);
 const isItemModalUserData = ref(false);
-
 
 const columns = ref([
     {
@@ -331,6 +330,7 @@ const tableData = [
         phone: "092-5364869",
         comment: "no comment",
         manage: ". . .",
+        status: 1
     },
     {
         id: 2,
