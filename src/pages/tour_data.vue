@@ -22,50 +22,48 @@
               <!-- Dropdown menu -->
               <div
                 id="dropdownDots"
-                class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
               >
                 <ul
-                  class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                  class="py-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer"
                   aria-labelledby="dropdownMenuIconButton"
                 >
-                  <li>
-                    <NuxtLink @click="Export">
-                      <MenuDropItem
-                        ><Icon
-                          class="w-4 h-4 m-1"
-                          name="icon-park-twotone:order"
-                        ></Icon
-                        >พิมพ์ใบ Order</MenuDropItem
-                      >
-                    </NuxtLink>
-                  </li>
-                  <li>
-                    <NuxtLink>
-                      <MenuDropItem
-                        ><Icon
-                          class="w-4 h-4 m-1"
-                          name="mingcute:sticker-fill"
-                        ></Icon
-                        >พิมพ์ใบ Sticker</MenuDropItem
-                      >
-                    </NuxtLink>
-                  </li>
-                  <li>
-                    <NuxtLink href="/quotation_list">
-                      <MenuDropItem>
-                        <Icon class="w-4 h-4 m-1" name="mdi:paper-check"> </Icon
-                        >ใบเสนอราคา
-                      </MenuDropItem>
-                    </NuxtLink>
-                  </li>
-                  <li>
-                    <NuxtLink>
-                      <MenuDropItem>
-                        <Icon class="w-4 h-4 m-1" name="mdi:tag"></Icon>
-                        พิมพ์ใบ Tag
-                      </MenuDropItem>
-                    </NuxtLink>
-                  </li>
+                  <NuxtLink @click="Export">
+                    <MenuDropItem
+                      ><Icon
+                        class="w-4 h-4 m-1"
+                        name="icon-park-twotone:order"
+                      ></Icon
+                      >พิมพ์ใบ Order</MenuDropItem
+                    >
+                  </NuxtLink>
+                  <NuxtLink>
+                    <MenuDropItem
+                      ><Icon
+                        class="w-4 h-4 m-1"
+                        name="mingcute:sticker-fill"
+                      ></Icon
+                      >พิมพ์ใบ Sticker</MenuDropItem
+                    >
+                  </NuxtLink>
+                  <NuxtLink>
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 m-1" name="mdi:tag"></Icon>
+                      พิมพ์ใบ Tag
+                    </MenuDropItem>
+                  </NuxtLink>
+                  <NuxtLink href="/quotation_list">
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 m-1" name="mdi:paper-check"> </Icon
+                      >ใบเสนอราคา
+                    </MenuDropItem>
+                  </NuxtLink>
+                  <NuxtLink href="#">
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 m-1" name="uil:bill"> </Icon
+                      >ใบเบิกค่าใช้จ่าย
+                    </MenuDropItem>
+                  </NuxtLink>
                 </ul>
               </div>
             </div>
@@ -161,17 +159,6 @@
                     ? (showItemsPanelVehicle = true)
                     : (showItemsPanelVehicle = false);
                   showItemsListCommentVehicle = false;
-                "
-              ></Icon>
-              <!-- เส้นทาง -->
-              <Icon
-                class="w-6 h-6"
-                name="healthicons:paved-road"
-                @click="
-                  showItemsPanelRoute != true
-                    ? (showItemsPanelRoute = true)
-                    : (showItemsPanelRoute = false);
-                  showItemsListCommentRoute = false;
                 "
               ></Icon>
               <!-- จุดแวะพัก -->
@@ -482,93 +469,6 @@
             </div>
           </div>
         </UiCard>
-        <!-- เส้นทาง -->
-        <UiCard v-if="showItemsPanelRoute">
-          <div class="flex justify-end">
-            <NuxtLink href="/tour_data_hotel">
-              <o-button>
-                <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
-                >จัดการ/เพิ่มเส้นทาง
-              </o-button>
-            </NuxtLink>
-          </div>
-          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table
-              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-            >
-              <thead
-                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-              >
-                <tr>
-                  <th scope="col" class="px-6 py-3">เส้นทาง</th>
-                  <th scope="col" class="px-6 py-3">วันที่ผ่าน</th>
-                  <th scope="col" class="px-6 py-3">คอมเมนต์</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                >
-                  <th
-                    scope="row"
-                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                  >
-                    ทางหลวง 1684
-                  </th>
-                  <td class="px-6 py-4">20/06/2566</td>
-                  <td class="px-6 py-4 text-center">
-                    <Icon
-                      class="w-6 h-6"
-                      name="majesticons:comment-text"
-                      @click="
-                        showItemsListCommentRoute != true
-                          ? (showItemsListCommentRoute = true)
-                          : (showItemsListCommentRoute = false)
-                      "
-                    ></Icon>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div v-if="showItemsListCommentRoute">
-            <h2
-              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
-            >
-              คอมเมนต์
-            </h2>
-            <ul
-              class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-            >
-              <li class="flex justify-between">
-                <div>มีการซ่อมทางระหว่างที่ผ่าน</div>
-                <div>20/06/66</div>
-                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-              </li>
-            </ul>
-
-            <o-field label="เขียนคอมเมนต์">
-              <o-input type="textarea"></o-input>
-            </o-field>
-            <div class="flex">
-              <o-field
-                class="flex-1"
-                label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)"
-              >
-                <o-input></o-input>
-              </o-field>
-              <section class="flex-1 shrink flex items-center justify-end">
-                <o-button
-                  @click="showItemsListCommentRoute = false"
-                  class="ml-4 mt-5"
-                  >ปิด
-                </o-button>
-                <o-button class="mt-5">เพิ่ม</o-button>
-              </section>
-            </div>
-          </div>
-        </UiCard>
         <!-- จุดแวะพัก -->
         <UiCard v-if="showItemsPanelStopover">
           <div class="flex justify-end">
@@ -871,9 +771,9 @@
                     <p class="mb-4 text-sm">
                       <Icon
                         class="w-6 h-6 text-gray-600"
-                        name="mdi:hands-pray"
+                        name="gis:search-country"
                       ></Icon
-                      >พุธ
+                      >Thai
                     </p>
                     <p class="mb-4 text-sm">
                       <Icon
@@ -881,13 +781,6 @@
                         name="fa-solid:id-card"
                       ></Icon
                       >1-7399-01893-76-5
-                    </p>
-                    <p class="mb-4 text-sm">
-                      <Icon
-                        class="w-6 h-6 text-gray-600"
-                        name="gis:search-country"
-                      ></Icon
-                      >Thai
                     </p>
                     <p class="mb-4 text-sm col-span-2">
                       <Icon
@@ -1062,9 +955,6 @@ const showItemsListCommentGuide = ref(false);
 
 const showItemsPanelVehicle = ref(false);
 const showItemsListCommentVehicle = ref(false);
-
-const showItemsPanelRoute = ref(false);
-const showItemsListCommentRoute = ref(false);
 
 const showItemsPanelStopover = ref(false);
 const showItemsListCommentStopover = ref(false);
