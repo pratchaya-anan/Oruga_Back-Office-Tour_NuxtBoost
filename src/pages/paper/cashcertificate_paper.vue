@@ -13,7 +13,7 @@
 
           <!-- ชื่อใบ/ข้อมูลใบ -->
           <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบเสนอราคา/ยืนยันการสั่งซื้อ</div>
+            <div class="col-span-3 font-bold text-center text-base">ใบสำคัญรับเงิน</div>
             <div class="col-span-3 text-center">Quatation</div>
             <div class="font-bold">เลขที่:</div>
             <div class="col-span-2 text-right">0841142174178</div>
@@ -28,18 +28,25 @@
       <div class="col-span-2 grid grid-cols-3 m-5  text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-3">
-            <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
+            <div class="col-span-1 font-bold">ชื่อ-สกุล:</div>
             <div class="col-span-2 ">ศศิศ วิรัตน์จินดา</div>
-            <div class="col-span-1 font-bold">ชื่อผู้ติดต่อ:</div>
-            <div class="col-span-2 ">มะนาว หวานจังเลย</div>
+            <div class="col-span-1 font-bold">เลขประจำตัวประชาชน:</div>
+            <div class="col-span-2 ">1023456789123</div>
+            <div class="col-span-1 font-bold">เบอร์โทร:</div>
+            <div class="col-span-2 ">0848456732</div>
             <div class="col-span-1 font-bold">ที่อยู่:</div>
             <div class="col-span-2 ">111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
-            <div class="col-span-1 font-bold">ID TAX:</div>
-            <div class="col-span-2 ">4585695214526</div>
-            <div class="col-span-1 font-bold">โทร:</div>
-            <div class="col-span-2 ">0254875858</div>
-            <div class="col-span-1 font-bold">Email:</div>
-            <div class="col-span-2 ">somchai@gmail.com</div>
+            <div class="flex items-center">
+              <input id="default-checkbox" type="checkbox" value=""
+                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="default-checkbox"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">จ่ายบุคคลภายใน</label>
+            </div>
+            <div class="flex items-center">
+              <input checked id="checked-checkbox" type="checkbox" value=""
+                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="checked-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">จ่ายบุคคลภายนอก</label>
+            </div>
           </div>
         </div>
 
@@ -59,7 +66,7 @@
       </div>
 
       <!-- ตาราง -->
-      <div class="min-h-[400] border-b border-black">
+      <div class="min-h-[400px] border-b border-black">
         <table class="w-full text-center">
           <tr class="h-8 border-y border-black text-center text-sm">
             <th class="text-center">ลำดับ</th>
@@ -93,7 +100,12 @@
           </div>
           <div class="font-bold">ดังรายละเอียดธนาคารดังต่อไปนี้ :</div>
           <div>1.กรุณาชำระเงิน ค่ามัดจำเบื้องต้นไม่ต่ำกว่า 40% ของราคาที่เสนอ โดยชำระเงินก่อนการติดตั้งอย่างน้อย 7 วัน
-            <br> 2.หลังติดตั้งและใช้งานได้เรียบร้อยแล้วให้ชำระเงินส่วนที่เหลือ</div>
+            <br> 2.หลังติดตั้งและใช้งานได้เรียบร้อยแล้วให้ชำระเงินส่วนที่เหลือ
+          </div>
+          <div class="flex">
+            <div class="font-black w-30">ตัวอักษร: </div>
+            <div class="font-black">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
+          </div>
         </div>
 
         <!-- สรุปรายการ(ด้านขวา) -->

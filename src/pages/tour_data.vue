@@ -133,10 +133,9 @@
                 class="w-6 h-6"
                 name="mdi:bed"
                 @click="
-                  showItemsPanelHotel != true
-                    ? (showItemsPanelHotel = true)
-                    : (showItemsPanelHotel = false);
-                  showItemsListCommentHotel = false;
+                  showItems != 'hotel'
+                    ? (showItems = 'hotel')
+                    : (showItems = ''); (showComment = false);
                 "
               ></Icon>
               <!-- มัคคุเทศก์ -->
@@ -144,10 +143,9 @@
                 class="w-6 h-6"
                 name="mdi:face-woman-shimmer"
                 @click="
-                  showItemsPanelGuide != true
-                    ? (showItemsPanelGuide = true)
-                    : (showItemsPanelGuide = false);
-                  showItemsListCommentGuide = false;
+                  showItems != 'guide'
+                    ? (showItems = 'guide')
+                    : (showItems = ''); (showComment = false);
                 "
               ></Icon>
               <!-- พาหนะ -->
@@ -155,10 +153,9 @@
                 class="w-6 h-6"
                 name="mdi:van-utility"
                 @click="
-                  showItemsPanelVehicle != true
-                    ? (showItemsPanelVehicle = true)
-                    : (showItemsPanelVehicle = false);
-                  showItemsListCommentVehicle = false;
+                  showItems != 'vehicle'
+                    ? (showItems = 'vehicle')
+                    : (showItems = ''); (showComment = false);
                 "
               ></Icon>
               <!-- จุดแวะพัก -->
@@ -166,20 +163,18 @@
                 class="w-6 h-6"
                 name="mdi:store-marker"
                 @click="
-                  showItemsPanelStopover != true
-                    ? (showItemsPanelStopover = true)
-                    : (showItemsPanelStopover = false);
-                  showItemsListCommentStopover = false;
+                  showItems != 'checkpoin'
+                    ? (showItems = 'checkpoin')
+                    : (showItems = ''); (showComment = false);
                 "
               ></Icon>
               <!-- ร้านอาหาร -->
               <Icon
                 class="w-6 h-6"
                 @click="
-                  showItemsPanelRestaurant != true
-                    ? (showItemsPanelRestaurant = true)
-                    : (showItemsPanelRestaurant = false);
-                  showItemsListCommentRestaurant = false;
+                  showItems != 'restaurant'
+                    ? (showItems = 'restaurant')
+                    : (showItems = ''); (showComment = false);
                 "
                 name="mdi:food-fork-drink"
               ></Icon>
@@ -187,7 +182,7 @@
           </div>
         </UiCard>
         <!-- โรงแรม -->
-        <UiCard v-if="showItemsPanelHotel">
+        <UiCard v-if="showItems == 'hotel'">
           <div class="flex justify-end">
             <NuxtLink href="/tour_data_hotel">
               <o-button>
@@ -233,9 +228,9 @@
                       class="w-6 h-6"
                       name="majesticons:comment-text"
                       @click="
-                        showItemsListCommentHotel != true
-                          ? (showItemsListCommentHotel = true)
-                          : (showItemsListCommentHotel = false)
+                        showComment != true
+                          ? (showComment = true)
+                          : (showComment = false)
                       "
                     ></Icon>
                   </td>
@@ -244,7 +239,7 @@
             </table>
           </div>
 
-          <div v-if="showItemsListCommentHotel">
+          <div v-if="showComment">
             <h2
               class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
             >
@@ -282,7 +277,7 @@
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
                 <o-button
-                  @click="showItemsListCommentHotel = false"
+                  @click="showComment = false"
                   class="ml-4 mt-5"
                   >ปิด
                 </o-button>
@@ -292,7 +287,7 @@
           </div>
         </UiCard>
         <!-- มัคคุเทศก์ -->
-        <UiCard v-if="showItemsPanelGuide">
+        <UiCard v-if="showItems == 'guide'">
           <div class="flex justify-end">
             <NuxtLink href="/tour_data_hotel">
               <o-button>
@@ -332,9 +327,9 @@
                       class="w-6 h-6"
                       name="majesticons:comment-text"
                       @click="
-                        showItemsListCommentGuide != true
-                          ? (showItemsListCommentGuide = true)
-                          : (showItemsListCommentGuide = false)
+                        showComment != true
+                          ? (showComment = true)
+                          : (showComment = false)
                       "
                     ></Icon>
                   </td>
@@ -343,7 +338,7 @@
             </table>
           </div>
 
-          <div v-if="showItemsListCommentGuide">
+          <div v-if="showComment">
             <h2
               class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
             >
@@ -371,7 +366,7 @@
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
                 <o-button
-                  @click="showItemsListCommentGuide = false"
+                  @click="showComment = false"
                   class="ml-4 mt-5"
                   >ปิด
                 </o-button>
@@ -381,7 +376,7 @@
           </div>
         </UiCard>
         <!-- พาหนะ -->
-        <UiCard v-if="showItemsPanelVehicle">
+        <UiCard v-if="showItems == 'vehicle'">
           <div class="flex justify-end">
             <NuxtLink href="/tour_data_hotel">
               <o-button>
@@ -421,9 +416,9 @@
                       class="w-6 h-6"
                       name="majesticons:comment-text"
                       @click="
-                        showItemsListCommentVehicle != true
-                          ? (showItemsListCommentVehicle = true)
-                          : (showItemsListCommentVehicle = false)
+                        showComment != true
+                          ? (showComment = true)
+                          : (showComment = false)
                       "
                     ></Icon>
                   </td>
@@ -432,7 +427,7 @@
             </table>
           </div>
 
-          <div v-if="showItemsListCommentVehicle">
+          <div v-if="showComment">
             <h2
               class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
             >
@@ -460,7 +455,7 @@
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
                 <o-button
-                  @click="showItemsListCommentVehicle = false"
+                  @click="showComment = false"
                   class="ml-4 mt-5"
                   >ปิด
                 </o-button>
@@ -470,7 +465,7 @@
           </div>
         </UiCard>
         <!-- จุดแวะพัก -->
-        <UiCard v-if="showItemsPanelStopover">
+        <UiCard v-if="showItems == 'checkpoin'">
           <div class="flex justify-end">
             <NuxtLink href="/tour_data_hotel">
               <o-button>
@@ -511,9 +506,9 @@
                       class="w-6 h-6"
                       name="majesticons:comment-text"
                       @click="
-                        showItemsListCommentStopover != true
-                          ? (showItemsListCommentStopover = true)
-                          : (showItemsListCommentStopover = false)
+                        showComment != true
+                          ? (showComment = true)
+                          : (showComment = false)
                       "
                     ></Icon>
                   </td>
@@ -522,7 +517,7 @@
             </table>
           </div>
 
-          <div v-if="showItemsListCommentStopover">
+          <div v-if="showComment">
             <h2
               class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
             >
@@ -550,7 +545,7 @@
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
                 <o-button
-                  @click="showItemsListCommentStopover = false"
+                  @click="showComment = false"
                   class="ml-4 mt-5"
                   >ปิด
                 </o-button>
@@ -560,7 +555,7 @@
           </div>
         </UiCard>
         <!-- ร้านอาหาร -->
-        <UiCard v-if="showItemsPanelRestaurant">
+        <UiCard v-if="showItems == 'restaurant'">
           <div class="flex justify-end">
             <NuxtLink href="/tour_data_hotel">
               <o-button>
@@ -601,9 +596,9 @@
                       class="w-6 h-6"
                       name="majesticons:comment-text"
                       @click="
-                        showItemsListCommentRestaurant != true
-                          ? (showItemsListCommentRestaurant = true)
-                          : (showItemsListCommentRestaurant = false)
+                        showComment != true
+                          ? (showComment = true)
+                          : (showComment = false)
                       "
                     ></Icon>
                   </td>
@@ -612,7 +607,7 @@
             </table>
           </div>
 
-          <div v-if="showItemsListCommentRestaurant">
+          <div v-if="showComment">
             <h2
               class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
             >
@@ -640,7 +635,7 @@
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
                 <o-button
-                  @click="showItemsListCommentRestaurant = false"
+                  @click="showComment = false"
                   class="ml-4 mt-5"
                   >ปิด
                 </o-button>
@@ -943,6 +938,9 @@
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
 import * as XLSX from "xlsx";
+
+const showItems = ref('');
+const showComment = ref(false);
 
 const showItemsListCommentUser = ref(false);
 const isItemModalUserData = ref(false);
