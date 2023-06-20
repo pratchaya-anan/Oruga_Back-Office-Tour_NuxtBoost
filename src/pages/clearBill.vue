@@ -121,7 +121,7 @@
                                             รายละเอียดโครงการ/กิจกรรม
                                         </div>
                                         <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            ค่าน้ำมันรถ
+                                            เบิกจ่ายทัวร์องค์การบริหารส่วนตำบลโพนงาม
                                         </div>
                                     </div>
                                     <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -129,7 +129,7 @@
                                             ผู้อนุมัติ (แบบอิเล็กทอรนิกส์)
                                         </div>
                                         <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            นายกล้วยหอม หวีน้ำหว้า
+                                            นายกล้วยหอม หวีน้ำว้า
                                         </div>
                                     </div>
                                 </div>
