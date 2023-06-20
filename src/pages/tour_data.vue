@@ -31,16 +31,25 @@
                   <NuxtLink @click="Export">
                     <MenuDropItem
                       ><Icon
-                        class="w-4 h-4 m-1"
+                        class="w-4 h-4 mr-1"
                         name="icon-park-twotone:order"
                       ></Icon
-                      >พิมพ์ใบ Order</MenuDropItem
+                      >พิมพ์ใบ NAMELISTGROUP</MenuDropItem
                     >
                   </NuxtLink>
                   <NuxtLink>
                     <MenuDropItem
                       ><Icon
-                        class="w-4 h-4 m-1"
+                        class="w-4 h-4 mr-1"
+                        name="icon-park-twotone:order"
+                      ></Icon
+                      >พิมพ์ใบสั่งงานมัคคุเทศก์</MenuDropItem
+                    >
+                  </NuxtLink>
+                  <NuxtLink>
+                    <MenuDropItem
+                      ><Icon
+                        class="w-4 h-4 mr-1"
                         name="mingcute:sticker-fill"
                       ></Icon
                       >พิมพ์ใบ Sticker</MenuDropItem
@@ -48,19 +57,19 @@
                   </NuxtLink>
                   <NuxtLink>
                     <MenuDropItem>
-                      <Icon class="w-4 h-4 m-1" name="mdi:tag"></Icon>
+                      <Icon class="w-4 h-4 mr-1" name="mdi:tag"></Icon>
                       พิมพ์ใบ Tag
                     </MenuDropItem>
                   </NuxtLink>
                   <NuxtLink href="/quotation_list">
                     <MenuDropItem>
-                      <Icon class="w-4 h-4 m-1" name="mdi:paper-check"> </Icon
+                      <Icon class="w-4 h-4 mr-1" name="mdi:paper-check"> </Icon
                       >ใบเสนอราคา
                     </MenuDropItem>
                   </NuxtLink>
                   <NuxtLink href="#">
                     <MenuDropItem>
-                      <Icon class="w-4 h-4 m-1" name="uil:bill"> </Icon
+                      <Icon class="w-4 h-4 mr-1" name="uil:bill"> </Icon
                       >ใบเบิกค่าใช้จ่าย
                     </MenuDropItem>
                   </NuxtLink>
@@ -161,7 +170,7 @@
                   showItemsListCommentVehicle = false;
                 "
               ></Icon>
-              <!-- จุดแวะพัก -->
+              <!-- สถานที่ -->
               <Icon
                 class="w-6 h-6"
                 name="mdi:store-marker"
@@ -469,13 +478,13 @@
             </div>
           </div>
         </UiCard>
-        <!-- จุดแวะพัก -->
+        <!-- สถานที่ -->
         <UiCard v-if="showItemsPanelStopover">
           <div class="flex justify-end">
             <NuxtLink href="/tour_data_hotel">
               <o-button>
                 <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
-                >จัดการ/เพิ่มจุดแวะพัก
+                >จัดการ/เพิ่มสถานที่
               </o-button>
             </NuxtLink>
           </div>
@@ -487,7 +496,7 @@
                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
               >
                 <tr>
-                  <th scope="col" class="px-6 py-3">จุดแวะพัก</th>
+                  <th scope="col" class="px-6 py-3">สถานที่</th>
                   <th scope="col" class="px-6 py-3">วันที่</th>
                   <th scope="col" class="px-6 py-3">คอมเมนต์</th>
                 </tr>
