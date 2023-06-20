@@ -34,6 +34,83 @@
                 </li>
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+            <div class="mt-2 flex justify-between">
+              <h2 class="text-xl font-bold dark:text-white mt-3">
+                โรงแรม
+              </h2>
+              <div class="flex">
+                <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
+                <div class="px-2">
+                  <o-button>ค้นหา</o-button>
+                </div>
+              </div>
+            </div>
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <tr>
+                    <th scope="col" class="px-2 py-3">ชื่อ-สกุล</th>
+                    <th scope="col" class="py-3 ">วันเข้าพัก
+                    </th>
+                    <th scope="col" class="py-3">
+                      วันออก
+                    </th>
+                    <th scope="col" class="py-3">คอมเมนต์</th>
+                    <th scope="col" class="py-3">..</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                    @click="isItemModalUserData = true">
+                    <th scope="row" class=" px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      โรงแรมกล้วยไม้สีขาว
+                    </th>
+                    <td class="py-4">
+                      <div class="flex items-center">
+                        25/06/2532
+                      </div>
+                    </td>
+                    <td class="py-4">
+                      <div class="flex items-center">
+                        25/06/2566
+                      </div>
+                    </td>
+                    <td>
+                      ปานกลาง
+                    </td>
+                    <td>
+                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+
+                      โรงแรมกุหลาบสีแดง
+                    </th>
+                    <td class="py-4">20/06/2566</td>
+                    <td class="py-4 flex">
+                      <div class="flex items-center">
+                        25/06/2566
+                      </div>
+                    </td>
+                    <td>
+                      ดี
+                    </td>
+                    <td>
+                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <NuxtLink to="/tour_data" class="mt-2 flex justify-end">
+              <o-button>เสร็จสิ้น</o-button>
+            </NuxtLink>
+>>>>>>> Dev-Boost-tour
           </div>
         </UiCard>
         <UiCard>
