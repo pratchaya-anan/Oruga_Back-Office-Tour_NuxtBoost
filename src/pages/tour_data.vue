@@ -954,21 +954,6 @@ const showComment = ref(false);
 const showItemsListCommentUser = ref(false);
 const isItemModalUserData = ref(false);
 
-const showItemsPanelHotel = ref(false);
-const showItemsListCommentHotel = ref(false);
-
-const showItemsPanelGuide = ref(false);
-const showItemsListCommentGuide = ref(false);
-
-const showItemsPanelVehicle = ref(false);
-const showItemsListCommentVehicle = ref(false);
-
-const showItemsPanelStopover = ref(false);
-const showItemsListCommentStopover = ref(false);
-
-const showItemsPanelRestaurant = ref(false);
-const showItemsListCommentRestaurant = ref(false);
-
 const memberdata = ref([
   {
     No: "",
