@@ -1,11 +1,11 @@
 <template>
-    <LayoutPageTitle>Quotation/ประมาณการเบิกเงินสดย่อย</LayoutPageTitle>
+    <LayoutPageTitle>แบบฟอร์มประมาณการเบิกเงินสดย่อย</LayoutPageTitle>
     <o-steps v-model="steps" variant="success">
         <o-step-item step="1" label="ผู้ขอเบิก" :clickable="true" icon="user-plus">
             <UiCard class="mb-3">
                 <div class="p-5">
                     <div>
-                        <label class="text-2xl font-medium">ข้อมูลลูกค้า</label>
+                        <label class="text-2xl font-medium">ข้อมูลผู้ขอเบิก</label>
                     </div>
                     <div class="grid grid-cols-2 gap-4 mt-3">
                         <div>
@@ -169,22 +169,57 @@
                                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <th scope="row"
                                         class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        Qu-285455
+                                        1
                                     </th>
                                     <td class="px-6 py-4">
-                                        1
+                                        ค่าน้ำแข็งถัง
                                     </td>
                                     <td class="px-6 py-4">
-                                        10,000
+                                        40
                                     </td>
                                     <td class="px-6 py-4">
-                                        10 %
+                                        ค่าน้ำแข็ง
                                     </td>
                                     <td class="px-6 py-4">
-                                        0%
+                                        2
                                     </td>
                                     <td class="px-6 py-4">
-                                        ห้องพักโรงแรม
+                                        80
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                                            class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                            type="button">
+                                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                                                </path>
+                                            </svg>
+                                        </button>
+
+                                    </td>
+                                </tr>
+                                <tr
+                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        2
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        ค่ารถนำเที่ยว
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        2,000
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        ค่าพาหนะ
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        2
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        4,000
                                     </td>
                                     <td class="px-6 py-4 text-right">
                                         <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
