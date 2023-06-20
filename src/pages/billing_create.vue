@@ -1,11 +1,11 @@
 <template>
-    <LayoutPageTitle>Taxinvoice/สร้างใบกำกับภาษี</LayoutPageTitle>
+    <LayoutPageTitle>Billing/สร้างใบวางบิล</LayoutPageTitle>
     <o-steps v-model="steps" variant="success">
         <o-step-item step="1" label="รายละเอียด" :clickable="true" icon="user-plus">
             <UiCard class="mb-3">
                 <div class="p-5">
                     <div>
-                        <label class="text-2xl font-medium">รายละเอียดใบกำกับภาษี</label>
+                        <label class="text-2xl font-medium">รายละเอียดใบวางบิล</label>
                     </div>
                     <div class="grid grid-cols-2 gap-4 mt-3">
                         <div>
@@ -19,20 +19,7 @@
                             </o-field>
                         </div>
                         <div>
-                            <o-field label="กำหนดการชำระ">
-                                <o-input></o-input>
-                            </o-field>
-                        </div>
-                        <div class="flex space-x-5">
-                            <o-radio v-model="branch" name="branchcheck" native-value="MainBranch">
-                                สำนักงานใหญ่
-                            </o-radio>
-                            <o-radio v-model="branch" name="branchcheck" native-value="SubBranch">
-                                สาขาย่อย
-                            </o-radio>
-                        </div>
-                        <div v-if="branch == 'SubBranch'">
-                            <o-field label="ชื่อสาขาย่อย">
+                            <o-field label="หมายเลขแฟกซ์">
                                 <o-input></o-input>
                             </o-field>
                         </div>
@@ -41,7 +28,7 @@
             </UiCard>
         </o-step-item>
         <o-step-item step="2" label="ยืนยัน" :clickable="true" icon="user-lock">
-            <PaperTaxinvoice_paper id="papertax"></PaperTaxinvoice_paper>
+            <PaperBilling_paper id="papertax"></PaperBilling_paper>
             <div class="flex justify-center mt-3">
                 <o-button @click="print" variant="info">
                     <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>
@@ -60,7 +47,6 @@
 <script setup lang="ts">
 import { initFlowbite } from 'flowbite';
 const steps = ref(1);
-const branch = ref('MainBranch');
 
 
 function print() {
