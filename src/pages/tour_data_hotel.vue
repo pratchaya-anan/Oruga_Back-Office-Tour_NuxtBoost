@@ -37,73 +37,51 @@
           </div>
         </UiCard>
         <UiCard>
-          <div class="mt-2 flex justify-between">
-            <h2 class="text-xl font-bold dark:text-white">
-              โรงแรม
-            </h2>
-            <div class="flex">
-              <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
-              <div class="px-2">
-                <o-button>ค้นหา</o-button>
-              </div>
-            </div>
-          </div>
-          <div class="relative overflow-x-auto border shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" class="px-2 py-3">ชื่อโรงแรม</th>
-                  <th scope="col" class="px-2 py-3 ">วันเข้าพัก
-                  </th>
-                  <th scope="col" class="px-2 py-3">
-                    วันออก
-                  </th>
-                  <th scope="col" class="px-2 py-3 text-center items-center">คอมเมนต์</th>
-                  <th scope="col" class="px-2 py-3 text-center items-center">..</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                  @click="isItemModalUserData = true">
-                  <th class="px-2 py-2">
-                    โรงแรมกล้วยไม้สีขาว
-                  </th>
-                  <td class="px-2 py-3">
-                      25/06/2532
-                  </td>
-                  <td class="px-2 py-3">
-                      25/06/2566
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    ปานกลาง
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th class="px-2 py-3">
 
-                    โรงแรมกุหลาบสีแดง
-                  </th>
-                  <td class="px-2 py-3">
-                    20/06/2566
-                  </td>
-                  <td class="px-2 py-3">
-                      25/06/2566
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    ดี
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h2 class="text-xl font-bold dark:text-white">
+            โรงแรม
+          </h2>
+          <ol class="relative border-l border-gray-200 dark:border-gray-700">
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">02 February
+                2022 - 03 February
+                2022</time>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมกล้วยไม้สีขาว</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
+                จังหวัดดินแดง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
+            </li>
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">04 February
+                2022 - 05 February
+                2022</time>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมกุหลาบสีแดง</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
+                จังหวัดดินแดง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
+            </li>
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">06 February
+                2022 - 07 February
+                2022</time>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมทิวลิปสีม่วง</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">127 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
+                จังหวัดดินแดง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
+            </li>
+          </ol>
           <div class="mt-2 flex justify-end">
             <o-button>เสร็จสิ้น</o-button>
           </div>
@@ -115,15 +93,6 @@
                 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                   โรงแรมกล้วยไม้สีขาว
                 </h2>
-                <p class="mb-2 text-base font-semibold leading-none text-gray-900 dark:text-white">
-                  เวลา
-                </p>
-                <div class="grid grid-cols-2">
-                  <p class="mb-4 text-sm col-span-2">
-                    <Icon class="w-6 h-6 text-gray-600 mr-2" name="uiw:time-o"></Icon>
-                    25/06/2532 - 25/06/2566
-                  </p>
-                </div>
                 <p class="mb-2 text-base font-semibold leading-none text-gray-900 dark:text-white">
                   ข้อมูลโรงแรม
                 </p>
@@ -160,7 +129,6 @@
                     </div>
                   </li>
                 </ul>
-
                 <div>
                   <o-field label="เขียนคอมเมนต์">
                     <o-input type="textarea"></o-input>
@@ -196,8 +164,8 @@
               <o-button>+ เพิ่มโรงแรม</o-button>
             </div>
           </div>
-          <div class="relative overflow-x-auto">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border shadow-mb">
+          <div class="relative overflow-x-auto border shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" class="px-6 py-3">
@@ -216,7 +184,7 @@
                     คอมเมนต์
                   </th>
                   <th scope="col" class="px-6 py-3 text-center items-center">
-                    
+
                   </th>
                 </tr>
               </thead>
@@ -238,7 +206,7 @@
                     ปานกลาง
                   </td>
                   <td class="px-6 py-4 text-center items-center">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                    <a href="#" @click="isItemModalUserData = true" class="text-blue-500 hover:text-blue-700">Edit</a>
                   </td>
                 </tr>
                 <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
@@ -290,7 +258,7 @@
             <div class="col-span-2">
               <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                 เลือกวันเข้าพัก
-                </h2>
+              </h2>
             </div>
             <div>
               <o-field label="วันเข้าพัก">
