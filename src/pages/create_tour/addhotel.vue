@@ -21,7 +21,7 @@
         <div class="grid grid-cols-10 gap-8 p-6">
           <div class="col-span-7">
             <o-field label="ค้นหาโรงแรม">
-              <o-autocomplete v-model="name" rounded expanded placeholder="ค้นหา ชื่อโรงแรม" icon="search">
+              <o-autocomplete rounded expanded placeholder="ค้นหา ชื่อโรงแรม" icon="search">
               </o-autocomplete>
             </o-field>
           </div>

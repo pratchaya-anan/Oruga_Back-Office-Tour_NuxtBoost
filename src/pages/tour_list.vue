@@ -76,5 +76,8 @@
 </template>
 
 <script setup lang="ts">
+import { initFlowbite } from 'flowbite';
+
 const sec23 = Array.from(Array(23).keys()).map((x) => x + 1);
+onMounted(() => { initFlowbite() });
 </script>
