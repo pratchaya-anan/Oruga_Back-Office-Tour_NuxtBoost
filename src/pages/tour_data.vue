@@ -661,7 +661,11 @@
       </div>
       <!-- ลูกทัวร์ -->
       <div class="grid grid-cols-1 col-span-2 gap-4">
-        <div class="flex flex-wrap gap-4">
+        <div
+          class="flex flex-wrap gap-4"
+          v-for="(item, idx) in memberdata"
+          :key="idx"
+        >
           <UiCard
             class="flex-1 hover:bg-gray-100 hover:text-blue-700 cursor-pointer"
           >
@@ -678,8 +682,6 @@
           <UiCard
             @click="isItemModalUserData = true"
             class="flex-1 hover:bg-gray-100 cursor-pointer"
-            v-for="item in 10"
-            :key="item"
           >
             <div class="flex justify-end">
               <Icon
@@ -695,12 +697,12 @@
             </div>
             <div class="flex flex-col items-center">
               <h5 class="text-md font-medium text-gray-900 dark:text-white">
-                สมหมาย ใจดี
+                {{ item.name_thai }} {{ item.lastname_thai }}
               </h5>
               <h5
                 class="mb-1 text-sm font-medium text-gray-900 dark:text-white"
               >
-                sommai jaidee
+                {{ item.name_eng }} {{ item.lastname_eng }}
               </h5>
               <span class="text-sm text-gray-500 dark:text-gray-400">Thai</span>
               <div class="flex justify-center">
@@ -740,7 +742,7 @@
                   <p
                     class="text-base font-semibold leading-none text-gray-900 dark:text-white"
                   >
-                    <a href="#">สมหมาย ใจดี</a
+                    <a href="#">{{ item.name_thai }} {{ item.lastname_thai }}</a
                     ><Icon
                       class="text-xl font-medium text-green-600 dark:text-white"
                       name="mdi:gender-male"
@@ -748,7 +750,9 @@
                     </Icon>
                   </p>
                   <p class="mb-3 text-sm font-normal">
-                    <a href="#" class="hover:underline">sommai jaidee</a>
+                    <a href="#" class="hover:underline"
+                      >{{ item.name_eng }} {{ item.lastname_eng }}</a
+                    >
                   </p>
                   <p
                     class="text-base font-semibold leading-none text-gray-900 dark:text-white"
@@ -978,6 +982,7 @@ const memberdata = ref([
     lastname_thai: "ใจดี",
     name_eng: "sommai",
     lastname_eng: "jaidee",
+    gender: "male",
 
     phone: "098-158-4478",
     birthday: "20 Aug 2000",
