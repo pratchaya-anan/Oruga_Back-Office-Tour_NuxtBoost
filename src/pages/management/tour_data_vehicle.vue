@@ -34,83 +34,6 @@
                 </li>
               </ul>
             </div>
-<<<<<<< HEAD
-=======
-            <div class="mt-2 flex justify-between">
-              <h2 class="text-xl font-bold dark:text-white mt-3">
-                โรงแรม
-              </h2>
-              <div class="flex">
-                <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
-                <div class="px-2">
-                  <o-button>ค้นหา</o-button>
-                </div>
-              </div>
-            </div>
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                  <tr>
-                    <th scope="col" class="px-2 py-3">ชื่อ-สกุล</th>
-                    <th scope="col" class="py-3 ">วันเข้าพัก
-                    </th>
-                    <th scope="col" class="py-3">
-                      วันออก
-                    </th>
-                    <th scope="col" class="py-3">คอมเมนต์</th>
-                    <th scope="col" class="py-3">..</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                    @click="isItemModalUserData = true">
-                    <th scope="row" class=" px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      โรงแรมกล้วยไม้สีขาว
-                    </th>
-                    <td class="py-4">
-                      <div class="flex items-center">
-                        25/06/2532
-                      </div>
-                    </td>
-                    <td class="py-4">
-                      <div class="flex items-center">
-                        25/06/2566
-                      </div>
-                    </td>
-                    <td>
-                      ปานกลาง
-                    </td>
-                    <td>
-                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-
-                      โรงแรมกุหลาบสีแดง
-                    </th>
-                    <td class="py-4">20/06/2566</td>
-                    <td class="py-4 flex">
-                      <div class="flex items-center">
-                        25/06/2566
-                      </div>
-                    </td>
-                    <td>
-                      ดี
-                    </td>
-                    <td>
-                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <NuxtLink to="/tour_data" class="mt-2 flex justify-end">
-              <o-button>เสร็จสิ้น</o-button>
-            </NuxtLink>
->>>>>>> Dev-Boost-tour
           </div>
         </UiCard>
         <UiCard>
@@ -122,11 +45,25 @@
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">16 April
-                2022 - 25 April
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">16 April
                 2022</time>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">รถบัสVIP</h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">นกแอร์</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 35 ที่นั่ง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+            </li>
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">17 April
+                2022 - 20 April
+                2022</time>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">รถบัส VIP 1</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 20 ที่นั่ง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">รถบัส VIP 2</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ที่นั่ง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
           </ol>
@@ -182,7 +119,53 @@
                     1
                   </th>
                   <td class="px-6 py-4">
-                    รถบัสVIP
+                    รถบัส VIP 1
+                  </td>
+                  <td class="px-6 py-4">
+                    132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
+                  </td>
+                  <td class="px-6 py-4">
+                    0428976765
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    40
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    ปานกลาง
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="px-6 py-4">
+                    2
+                  </th>
+                  <td class="px-6 py-4">
+                    รถบัส VIP 2
+                  </td>
+                  <td class="px-6 py-4">
+                    132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
+                  </td>
+                  <td class="px-6 py-4">
+                    0428976765
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    40
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    ปานกลาง
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="px-6 py-4">
+                    3
+                  </th>
+                  <td class="px-6 py-4">
+                    รถบัส VIP 3
                   </td>
                   <td class="px-6 py-4">
                     132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
@@ -202,7 +185,7 @@
                 </tr>
                 <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
                   <th class="px-6 py-4">
-                    2
+                    5
                   </th>
                   <td class="px-6 py-4">
                     นกแอร์

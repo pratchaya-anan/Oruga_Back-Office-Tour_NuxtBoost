@@ -49,7 +49,7 @@
                 2022 - 17 April
                 2022</time>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมกล้วยไม้สีขาว</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 35 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
             </li>
             <li class="mb-10 ml-4">
@@ -60,7 +60,7 @@
                 2022 - 18 April
                 2022</time>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมกุหลาบสีแดง</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 35 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
             </li>
             <li class="mb-10 ml-4">
@@ -71,7 +71,7 @@
                 2022 - 20 April
                 2022</time>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมทิวลิปสีม่วง</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 35 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
             </li>
           </ol>
