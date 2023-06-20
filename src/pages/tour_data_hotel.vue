@@ -22,7 +22,7 @@
                   <Icon class="w-6 h-6  mr-1" name="line-md:calendar"></Icon>
                   16/04/2566 &#32;
                   <Icon class="w-5 h-5  mr-1" name="line-md:arrow-right"></Icon>
-                  &#32; 16/04/2566
+                  &#32; 20/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="fluent:people-audience-24-filled"></Icon>
@@ -37,8 +37,7 @@
           </div>
         </UiCard>
         <UiCard>
-
-          <h2 class="text-xl font-bold dark:text-white">
+          <h2 class="mb-2 text-xl font-bold dark:text-white">
             โรงแรม
           </h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
@@ -46,39 +45,33 @@
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">02 February
-                2022 - 03 February
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">16 April
+                2022 - 17 April
                 2022</time>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมกล้วยไม้สีขาว</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
-                จังหวัดดินแดง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
             </li>
             <li class="mb-10 ml-4">
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">04 February
-                2022 - 05 February
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">17 April
+                2022 - 18 April
                 2022</time>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมกุหลาบสีแดง</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
-                จังหวัดดินแดง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
             </li>
             <li class="mb-10 ml-4">
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">06 February
-                2022 - 07 February
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">18 April
+                2022 - 20 April
                 2022</time>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรมทิวลิปสีม่วง</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 15 ห้อง</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">127 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
-                จังหวัดดินแดง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
             </li>
           </ol>
@@ -235,6 +228,46 @@
                   </th>
                   <td class="px-6 py-4">
                     โรงแรมทิวลิปสีม่วง
+                  </td>
+                  <td class="px-6 py-4">
+                    127 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
+                  </td>
+                  <td class="px-6 py-4">
+                    04989712356
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    ดี
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 dark:bg-gray-800">
+                  <th class="px-6 py-4">
+                    4
+                  </th>
+                  <td class="px-6 py-4">
+                    โรงแรมทิวลิปสีส้ม
+                  </td>
+                  <td class="px-6 py-4">
+                    127 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
+                  </td>
+                  <td class="px-6 py-4">
+                    04989712356
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    ดี
+                  </td>
+                  <td class="px-6 py-4 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 dark:bg-gray-800">
+                  <th class="px-6 py-4">
+                    5
+                  </th>
+                  <td class="px-6 py-4">
+                    โรงแรมทิวลิปสีเหลือง
                   </td>
                   <td class="px-6 py-4">
                     127 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง

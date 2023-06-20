@@ -37,151 +37,26 @@
           </div>
         </UiCard>
         <UiCard>
-          <div class="mt-2 flex justify-between">
-            <h2 class="text-xl font-bold dark:text-white">
-              ยานพาหนะ
-            </h2>
-            <div class="flex">
-              <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
-              <div class="px-2">
-                <o-button>ค้นหา</o-button>
+          <h2 class="mb-2 text-xl font-bold dark:text-white">
+            ยานพาหนะ
+          </h2>
+          <ol class="relative border-l border-gray-200 dark:border-gray-700">
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-            </div>
-          </div>
-          <div class="relative overflow-x-auto border shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" class="px-2 py-3">
-                    ชื่อยานพาหนะ</th>
-                  <th scope="col" class="px-2 py-3 text-center items-center">
-                    เที่ยว
-                  </th>
-                  <th scope="col" class="px-2 py-3 text-center items-center">
-                    จำนวนที่นั้ง
-                  </th>
-                  <th scope="col" class="px-2 py-3 text-center items-center">คอมเมนต์</th>
-                  <th scope="col" class="px-2 py-3 text-center items-center">..</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                  @click="isItemModalUserData = true">
-                  <th class=" px-2 py-3">
-                    รถบัสVIP
-                  </th>
-                  <td class="px-2 py-3 text-center items-center">
-                    ขาไป
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    35
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    ปานกลาง
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                  </td>
-                </tr>
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th class="px-2 py-3">
-                    นกแอร์
-                  </th>
-                  <td class="px-2 py-3 text-center items-center">
-                    ขาไป - ขากลับ
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    35
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    ดี
-                  </td>
-                  <td class="px-2 py-3 text-center items-center">
-                    <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">16 April
+                2022 - 25 April
+                2022</time>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">รถบัสVIP</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 35 ที่นั่ง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+            </li>
+          </ol>
           <div class="mt-2 flex justify-end">
             <o-button>เสร็จสิ้น</o-button>
           </div>
         </UiCard>
-        <o-modal v-model:active="isItemModalUserData">
-          <UiCard>
-            <div class="grid grid-cols-2 gap-2">
-              <div class="p-2 border-r">
-                <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                  รถบัสVIP
-                </h2>
-                <p class="mb-2 text-base font-semibold leading-none text-gray-900 dark:text-white">
-                  เวลา
-                </p>
-                <div class="grid grid-cols-2">
-                  <p class="mb-4 text-sm col-span-2">
-                    <Icon class="w-6 h-6 text-gray-600 mr-2" name="uiw:time-o"></Icon>
-                    25/06/2532 - 25/06/2566
-                  </p>
-                </div>
-                <p class="mb-2 text-base font-semibold leading-none text-gray-900 dark:text-white">
-                  ข้อมูลโรงแรม
-                </p>
-                <div class="grid grid-cols-2">
-                  <p class="mb-4 text-sm">
-                    <Icon class="w-6 h-6 text-gray-600 mr-2" name="carbon:phone-filled"></Icon>0428976765
-                  </p>
-                  <p class="mb-4 text-sm col-span-2">
-                    <Icon class="w-6 h-6 text-gray-600 mr-2" name="entypo:address"></Icon>132 ม.1 บ้านไม้ ตำบนกล้วย
-                    อำเภอเมือง
-                    จังหวัดดินแดง
-                  </p>
-                </div>
-              </div>
-              <div>
-                <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  คอมเมนต์
-                </h2>
-                <ul class="p-2 max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-                  <li class="grid grid-cols-3 gap-4 border-l ">
-                    <div class="w-full ml-1">ปานกลาง</div>
-                    <div class="w-full">20/06/66</div>
-                    <div class="flex w-full justify-end">
-                      <Icon class="w-5 h-5" name="mdi:comment-edit"></Icon>
-                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                    </div>
-                  </li>
-                  <li class="grid grid-cols-3 gap-4 border-l ">
-                    <div class="w-full ml-1">ดี</div>
-                    <div class="w-full">20/06/66</div>
-                    <div class="flex w-full justify-end">
-                      <Icon class="w-5 h-5" name="mdi:comment-edit"></Icon>
-                      <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                    </div>
-                  </li>
-                </ul>
-
-                <div>
-                  <o-field label="เขียนคอมเมนต์">
-                    <o-input type="textarea"></o-input>
-                  </o-field>
-                  <div class="flex">
-                    <o-field label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                      <o-input></o-input>
-                    </o-field>
-                    <section class="flex-1 shrink flex items-center justify-end">
-                      <o-button class="ml-4 mt-5" @click="isItemModalUserData = false">ปิด
-                      </o-button>
-                      <o-button class="mt-5" @click="isItemModalUserData = false">เพิ่ม</o-button>
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div data-popper-arrow></div>
-          </UiCard>
-        </o-modal>
       </div>
       <div class="col-span-2">
         <UiCard>
@@ -197,8 +72,8 @@
               <o-button>+ เพิ่มยานพาหนะ</o-button>
             </div>
           </div>
-          <div class="relative overflow-x-auto">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border shadow-mb">
+          <div class="relative overflow-x-auto border shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" class="px-6 py-3">
