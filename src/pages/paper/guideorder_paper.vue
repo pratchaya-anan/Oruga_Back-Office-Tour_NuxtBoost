@@ -25,7 +25,7 @@
             <div class=" font-bold">วันที่:</div>
             <div class="col-span-2 text-right">...................</div>
             <div class="font-bold">ใบสั่งงาน:</div>
-            <div class="col-span-2 text-right">...................</div>
+            <div class="col-span-2 text-right">ทัวร์เกาะเสม็ด เสร็จทุกราย</div>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
         <div class="col-span-2">
           <div class="grid grid-cols-2">
             <div class="mt-2 col-span-1 font-bold">จำนวนนักท่องเที่ยว</div>
-            <div class="mt-2 col-span-1 font-bold">ผู้ใหญ่ 19</div>
+            <div class="mt-2 col-span-1 font-bold">ผู้ใหญ่ 30   เด็ก 5</div>
             <div class="mt-2 col-span-1 font-bold">ห้องเดี่ยว</div>
             <div class="mt-2 col-span-1 font-bold">-</div>
             <div class="mt-2 col-span-1 font-bold">ห้องคู่</div>
@@ -44,7 +44,7 @@
             <div class="mt-2 col-span-1 font-bold">ห้องนอน 3 รวม</div>
             <div class="mt-2 col-span-1 font-bold">1</div>
             <div class="mt-2 col-span-1 font-bold">หมายเหตุ</div>
-            <div class="mt-2 col-span-1 font-bold">-</div>
+            <div class="mt-2 col-span-1 font-bold">สนุกดี</div>
 
           </div>
         </div>
@@ -63,7 +63,7 @@
             <div class="mt-2 col-span-1 font-bold">ทะเบียน: </div>
             <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
             <div class="mt-2 col-span-1 font-bold">โทร.</div>
-            <div class="mt-4 col-span-1 font-bold">....................................</div>
+            <div class="mt-4 col-span-1 font-bold">026-568-4785</div>
             
 </div>
           </div>

@@ -5,7 +5,7 @@
         <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo">
         <div class="grid grid-cols-3 text-sm">
           <div class="col-span-2">
-            <div>ห้างหุ้นส่วนจำกัด นิลผกา</div>
+            <div>ห้างหุ้นส่วนจำกัด นิลผกา???</div>
             <div>49/175 ม.5 ต.หนองบัว อ.เมืองอุดรธานี จ.อุดรธานี 41000</div>
             <div>เลขประจำตัวผู้เสียภาษี: 413558001156 | โทร.098-1047644</div>
             <div class="text-blue-400">www.facebook.com/Jampahomtour</div>
