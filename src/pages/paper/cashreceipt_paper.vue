@@ -13,7 +13,7 @@
 
           <!-- ชื่อใบ/ข้อมูลใบ -->
           <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบรับรองแทนใบเสร็จรับเงิน</div>
+            <div class="col-span-3 font-bold text-center text-base">ใบสำคัญรับเงิน</div>
             <div class="font-bold">เลขที่:</div>
             <div class="col-span-2 text-right">0841142174178</div>
             <div class="font-bold">วันที่:</div>
@@ -25,12 +25,28 @@
 
       <!-- ข้อมูลฝั่งซ้าย -->
       <div class="col-span-2 grid grid-cols-3 m-5 w-full text-xs">
-        <div class="col-span-1 font-bold">ชื่อน่วยงาน (ผู้ซื้อ/ผู้รับบริการ):</div>
+        <div class="col-span-1 font-bold">ชื่อ-สกุล:</div>
         <div class="col-span-2 ">ศศิศ วิรัตน์จินดา</div>
-        <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษ:</div>
+        <div class="col-span-1 font-bold">เลขประจำตัวประชาชน:</div>
         <div class="col-span-2 ">1023456789123</div>
+        <div class="col-span-1 font-bold">เบอร์โทร:</div>
+        <div class="col-span-2 ">0848456732</div>
         <div class="col-span-1 font-bold">ที่อยู่:</div>
         <div class="col-span-2 ">111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
+        <div class="flex col-span-2">
+          <div class="flex items-center mr-5">
+            <input id="default-checkbox" type="checkbox" value=""
+              class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="default-checkbox"
+              class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">จ่ายบุคคลภายใน</label>
+          </div>
+          <div class="flex items-center">
+            <input checked id="checked-checkbox" type="checkbox" value=""
+              class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="checked-checkbox"
+              class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">จ่ายบุคคลภายนอก</label>
+          </div>
+        </div>
       </div>
 
       <!-- ตาราง -->
@@ -40,10 +56,14 @@
             <th>วัน เดือน ปี</th>
             <th>รายละเอียดรายจ่าย</th>
             <th>จำนวนเงิน (บาท)</th>
+            <th>หักภาษี ณ ที่จ่าย (%)</th>
+            <th>เงินได้สุทธิ์ (บาท)</th>
           </tr>
           <tr class="h-10 text-xs">
             <td>1</td>
             <td>Q-4636653086</td>
+            <td>เที่ยวเกาะ เลาะรัก</td>
+            <td>เที่ยวเกาะ เลาะรัก</td>
             <td>เที่ยวเกาะ เลาะรัก</td>
           </tr>
         </table>
@@ -52,11 +72,11 @@
       <!-- รายละเอียดข้อตกลง(ด้านซ้าย) -->
       <div class="grid grid-cols-3 content-center gap-5 py-2 text-xs border-b border-black">
         <div class="col-span-2 flex">
-          <div class="mr-[15px]">รวมทั้งสิ้น(ตัวอักษร): </div>
+          <div class="mr-[15px]">จำนวนเงิน(ตัวอักษร) Total Amount: </div>
           <div class="text-right">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
         </div>
         <div class="flex">
-          <div class="mr-[15px]">รวมทั้งสิ้น:</div>
+          <div class="mr-[15px]">รวม(Total):</div>
           <div class="text-right">59920 บาท</div>
         </div>
       </div>
@@ -69,9 +89,13 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 mt-[100px] text-xs">
+      <div class="grid grid-cols-3 mt-[100px] text-xs">
         <div class="text-center border-b border-black mx-5">
-          <div>ผู้เบิกจ่าย</div>
+          <div>ผู้รับเงิน</div>
+          <div class="mb-5">วันที่</div>
+        </div>
+        <div class="text-center border-b border-black mx-5">
+          <div>จ่ายเงิน</div>
           <div class="mb-5">วันที่</div>
         </div>
         <div class="text-center border-b border-black mx-5">
