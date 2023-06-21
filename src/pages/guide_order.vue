@@ -1,22 +1,12 @@
 <template>
   <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
     <div class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border-1 solid rounded bg-white drop-shadow">
-      <div class="grid grid-rows-2 m-5">
-        <img class="col-span-2 w-[100px]" src="../assets/images/ll-01.png" alt="Logo">
-        <!-- <div class="grid grid-cols-3">
-          <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบสั่งงานมัคคุเทสก์</div>
-            <div class="col-span-3 text-center">GuideOrder</div>
-            <div class="font-bold">ใบอนุญาต:</div>
-            <div class="col-span-2 text-right">51/00481</div>
-          </div>
-        </div> -->
-
+      <div class="grid grid-rows-1 m-5">
+        
         <div class="grid grid-cols-3 text-sm">
           <div class="col-span-2">
+            <img class="ml-4 mb-3 w-[100px]" src="../assets/images/ll-01.png" alt="Logo">
             <div>บริษัท ศรีดาราทัวร์ จำกัด</div>
-            <div>ชื่อมัคคุเทศก์ นายวุฒินันท์ ศรีสุระ</div>
-            <div>ใบอนุญาตเลขที่ 11-57185</div>
           </div>
           <div class="grid grid-cols-3">
             <div class="col-span-3 font-bold text-center text-base">ใบสั่งงานมัคคุเทสก์</div>
@@ -33,9 +23,13 @@
       <hr class="col-span-3 mx-5">
 
       <!-- ข้อมูลฝั่งซ้าย -->
-      <div class="col-span-2 grid grid-cols-4 m-5  text-xs">
+      <div class="col-span-2 grid grid-cols-4 m-2 ml-10  text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-2">
+            <div class="mt-2 col-span-1 font-bold">ชื่อมัคคุเทศก์</div>
+            <div class="mt-2 col-span-1 font-bold">นายวุฒินันท์ ศรีสุระ</div>
+            <div class="mt-2 col-span-1 font-bold">ใบอนุญาตเลขที่</div>
+            <div class="mt-2 col-span-1 font-bold">11-57185</div>
             <div class="mt-2 col-span-1 font-bold">จำนวนนักท่องเที่ยว</div>
             <div class="mt-2 col-span-1 font-bold">ผู้ใหญ่ 30 เด็ก 5</div>
             <div class="mt-2 col-span-1 font-bold">ห้องเดี่ยว</div>
@@ -46,6 +40,8 @@
             <div class="mt-2 col-span-1 font-bold">1</div>
             <div class="mt-2 col-span-1 font-bold">หมายเหตุ</div>
             <div class="mt-2 col-span-1 font-bold">-</div>
+            <div class="mt-2 col-span-1 font-bold">โทร.</div>
+              <div class="mt-4 col-span-1 font-bold">....................................</div>
 
           </div>
         </div>
@@ -55,14 +51,25 @@
             <div class="grid grid-cols-2">
               <div class="mt-2 col-span-1 font-bold">กำหนดการเดินทาง:</div>
               <div class="mt-2 col-span-1 font-bold">16 เมษายน 2566</div>
+              <div class="mt-2 col-span-1 font-bold">จำนวนวัน:</div>
+              <div class="mt-2 col-span-1 font-bold">5 วัน 4 คืน</div>
               <div class="mt-2 col-span-1 font-bold">เดินทางจาก:</div>
               <div class="mt-2 col-span-1 font-bold">กาญจนบุรี-เพชรบุรี</div>
               <div class="mt-2 col-span-1 font-bold">รถเดินทาง:</div>
               <div class="mt-2 col-span-1 font-bold">รถบัสลาว</div>
               <div class="mt-2 col-span-1 font-bold">ทะเบียน: </div>
               <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
-              <div class="mt-2 col-span-1 font-bold">โทร.</div>
-              <div class="mt-4 col-span-1 font-bold">....................................</div>
+              <div class="mt-2 col-span-1 font-bold"></div>
+              <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
+              <div class="mt-2 col-span-1 font-bold"></div>
+              <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
+              <div class="mt-2 col-span-1 font-bold"></div>
+              <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
+              <div class="mt-2 col-span-1 font-bold"></div>
+              <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
+              <div class="mt-2 col-span-1 font-bold"></div>
+              
+  
             </div>
           </div>
         </div>
@@ -125,7 +132,7 @@
             </td>
             <td></td>
           </tr>
-          <tr class="h-10 text-xs">
+          <tr class="h-20 text-xs">
             <td></td>
             <td>
               มัคคุเทศก์ลงนาม..........................................................................................................................................
