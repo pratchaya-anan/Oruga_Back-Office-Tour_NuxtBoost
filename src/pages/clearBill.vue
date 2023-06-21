@@ -1,5 +1,5 @@
 <template>
-    <LayoutPageTitle>ออกใบเคียร์ประมาณการเงินสดย่อย</LayoutPageTitle>
+    <LayoutPageTitle>ออกใบเคลียร์ประมาณการเงินสดย่อย</LayoutPageTitle>
     <o-steps v-model="steps" variant="success">
         <o-step-item step="1" label="ผู้ขอเคลียร์" :clickable="true" icon="user-plus">
             <UiCard class="mb-3">
@@ -344,6 +344,18 @@
             </div>
         </o-step-item>
         <o-step-item step="3" label="ยืนยัน" :clickable="true" icon="user-plus">
+            <PaperEstimate_paper id="papertax"></PaperEstimate_paper>
+            <div class="flex justify-center mt-3">
+                <o-button @click="print" variant="info">
+                    <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>
+                    พิมพ์
+                </o-button>
+                <NuxtLink to="quotation_list">
+                    <o-button>
+                        บันทึก
+                    </o-button>
+                </NuxtLink>
+            </div>
         </o-step-item>
 
     </o-steps>
