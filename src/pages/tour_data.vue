@@ -1,6 +1,6 @@
 <template>
   <section class="min-h-screen">
-    <LayoutPageTitle> Tour / จัดทัวร์ </LayoutPageTitle>
+    <LayoutPageTitle> Tour Management / จัดทัวร์ </LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto mb-4">
         <UiCard>
@@ -85,7 +85,7 @@
                   class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
                 >
                   <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
-                  กาญจนบุรี-เพชรบุรี
+                  อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
                 </li>
                 <li
                   class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
@@ -697,7 +697,7 @@
               </NuxtLink>
             </UiCard>
           </div>
-          <div v-for="(item, idx) in memberdata" :key="idx">
+          <div v-for="(item, index) in memberdata" :key="index">
             <UiCard
               class="flex-1 hover:bg-gray-100 cursor-pointer"
               @click="isItemModalUserData = true"
@@ -876,8 +876,8 @@
                         <Icon
                           class="w-6 h-6 text-gray-600"
                           name="tabler:number"
-                        ></Icon
-                        >3
+                        ></Icon>
+                        {{ index + 1 }}
                       </p>
                       <p class="mb-4 text-sm">
                         <Icon
@@ -949,9 +949,9 @@ const showComment = ref(false);
 const showItemsListCommentUser = ref(false);
 const isItemModalUserData = ref(false);
 
+const items = ref([{ message: "Foo" }, { message: "Bar" }]);
 const memberdata = ref([
   {
-    No: "",
     name_thai: "สมหมาย ",
     lastname_thai: "ใจดี",
     name_eng: "sommai",
@@ -973,16 +973,15 @@ const memberdata = ref([
     bed: "คู่",
   },
   {
-    No: "",
-    name_thai: "สมหมาย ",
-    lastname_thai: "ใจดี",
-    name_eng: "sommai",
-    lastname_eng: "jaidee",
+    name_thai: "สมศรี ",
+    lastname_thai: "มีใจ",
+    name_eng: "somsri",
+    lastname_eng: "meejai",
     gender: "female",
 
     phone: "098-158-4478",
     birthday: "20 Aug 2000",
-    age: "35",
+    age: "27",
     religion: "พุธ",
     IDCard: "1-7399-01893-76-5",
     region: "Thai",
