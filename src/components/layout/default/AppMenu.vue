@@ -36,6 +36,16 @@
       <MenuItem icon-name="mdi:forum" badge="4">Messages</MenuItem>
     </li>
     <li>
+      <MenuDropDown
+        label="Documents"
+        icon-name="fluent:receipt-money-24-filled"
+      >
+        <MenuDropItem>Sign In</MenuDropItem>
+        <MenuDropItem>Sign Up</MenuDropItem>
+        <MenuDropItem>Forgot Password</MenuDropItem>
+      </MenuDropDown>
+    </li>
+    <li>
       <MenuDropDown label="Authentication" icon-name="mdi:lock">
         <MenuDropItem>Sign In</MenuDropItem>
         <MenuDropItem>Sign Up</MenuDropItem>
