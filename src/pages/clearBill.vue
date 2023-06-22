@@ -89,7 +89,7 @@
                             </section>
                         </section>
                         <section v-if="!showOrderPanel" class="my-4 border-t border-gray-200 dark:border-gray-700">
-                            <span>ข้อมูลผู้ขอเคลียร์</span>
+                            <span>ข้อมูลใบขอเคลียร์</span>
                             <div class="sm:flex xl:block xl:space-y-4">
                                 <div class="sm:flex-1">
                                     <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -299,7 +299,7 @@
                     </section>
                     <UiCard v-if="showItemsPanel">
                         <div class="grid grid-cols-2 gap-4">
-                            <o-field label="วันที่ต้องการใช้เงิน">
+                            <o-field label="วันที่ใบเสร็จ">
                                 <div class="relative ">
                                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                         <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -368,7 +368,7 @@
             </div>
         </o-step-item>
         <o-step-item step="3" label="ยืนยัน" :clickable="true" icon="user-plus">
-            <PaperEstimate_paper id="papertax"></PaperEstimate_paper>
+            <PaperEstimatePaper id="papertax"></PaperEstimatePaper>
             <div class="flex justify-center mt-3">
                 <o-button @click="print" variant="info">
                     <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>

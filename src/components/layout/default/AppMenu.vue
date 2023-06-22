@@ -6,7 +6,7 @@
       </NuxtLink>
     </li>
     <li>
-      <MenuDropDown label="Report" icon-name="mdi:file-document">
+      <MenuDropDown label="Report" icon-name="mdi:report-line">
         <MenuDropItem>
           <NuxtLink to="/reportday"> รายวัน </NuxtLink>
         </MenuDropItem>
@@ -15,6 +15,22 @@
         </MenuDropItem>
         <MenuDropItem>
           <NuxtLink to="/reportyear"> รายปี </NuxtLink>
+        </MenuDropItem>
+      </MenuDropDown>
+    </li>
+    <li>
+      <MenuDropDown label="Document" icon-name="mdi:file-document">
+        <MenuDropItem>
+          <NuxtLink to="#">ใบกำกับภาษี</NuxtLink>
+        </MenuDropItem>
+        <MenuDropItem>
+          <NuxtLink to="#">ใบเสร็จรับเงิน</NuxtLink>
+        </MenuDropItem>
+        <MenuDropItem>
+          <NuxtLink to="#">ใบสำคัญรับเงิน</NuxtLink>
+        </MenuDropItem>
+        <MenuDropItem>
+          <NuxtLink to="#">ใบประมาณการเบิกเงินสดย่อย</NuxtLink>
         </MenuDropItem>
       </MenuDropDown>
     </li>
