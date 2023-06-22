@@ -728,6 +728,7 @@
                 <span class="text-sm text-gray-500 dark:text-gray-400"
                   >Thai</span
                 >
+                <!-- แจ้งเตือนลูกทัวร์ -->
                 <div class="flex justify-center">
                   <div>
                     <Icon
@@ -739,17 +740,22 @@
                       class="flex absolute justify-center items-center ml-4 -mt-2 w-2 h-2 rounded-full border border-white bg-blue-500 dark:border-gray-700"
                     ></div>
                   </div>
-                  <Icon
-                    class="text-xl font-medium text-gray-500 dark:text-white"
-                    name="mdi:credit-card-remove-outline"
-                  >
-                  </Icon>
+                  <div>
+                    <Icon
+                      class="w-5 h-5 text-xl font-medium text-gray-500 dark:text-white"
+                      name="fa6-solid:passport"
+                    >
+                    </Icon>
+                    <div
+                      class="flex absolute justify-center items-center ml-4 -mt-1 w-2 h-2 rounded-full border border-white bg-red-500 dark:border-gray-700"
+                    ></div>
+                  </div>
                 </div>
                 <div>
                   <span
                     class="px-10 text-sm text-gray-500 dark:text-gray-400 truncate"
                     ><Icon
-                      class="w-6 h-6"
+                      class="w-4 h-4"
                       name="majesticons:comment-text"
                     ></Icon
                     >แพ้กุ้ง</span

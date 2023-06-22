@@ -505,11 +505,11 @@
                       <div>
                         <Icon
                           class="w-9 h-9 rounded-full text-xl font-medium text-gray-500 dark:text-white"
-                          name="bxs:file"
+                          name="fluent:certificate-24-filled"
                         >
                         </Icon>
                         <div
-                          class="flex absolute justify-center items-center ml-6 -mt-3 w-3 h-3 rounded-full border border-white bg-red-500 dark:border-gray-700"
+                          class="flex absolute justify-center items-center ml-6 -mt-4 w-3 h-3 rounded-full border border-white bg-red-500 dark:border-gray-700"
                         ></div>
                       </div>
                       <div class="ml-3">
@@ -598,11 +598,11 @@
                       <div>
                         <Icon
                           class="w-9 h-9 rounded-full text-xl font-medium text-gray-500 dark:text-white"
-                          name="bxs:file"
+                          name="fluent:certificate-24-filled"
                         >
                         </Icon>
                         <div
-                          class="flex absolute justify-center items-center ml-6 -mt-3 w-3 h-3 rounded-full border border-white bg-red-500 dark:border-gray-700"
+                          class="flex absolute justify-center items-center ml-6 -mt-4 w-3 h-3 rounded-full border border-white bg-red-500 dark:border-gray-700"
                         ></div>
                       </div>
                       <div class="ml-3">
@@ -690,11 +690,11 @@
                       <div>
                         <Icon
                           class="w-9 h-9 rounded-full text-xl font-medium text-gray-500 dark:text-white"
-                          name="bxs:file"
+                          name="fluent:certificate-24-filled"
                         >
                         </Icon>
                         <div
-                          class="flex absolute justify-center items-center ml-6 -mt-3 w-3 h-3 rounded-full border border-white bg-red-500 dark:border-gray-700"
+                          class="flex absolute justify-center items-center ml-6 -mt-4 w-3 h-3 rounded-full border border-white bg-red-500 dark:border-gray-700"
                         ></div>
                       </div>
                       <div class="ml-3">
