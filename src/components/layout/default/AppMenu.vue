@@ -44,12 +44,12 @@
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem
-          ><NuxtLink to="/bill_list">
+          ><NuxtLink to="/disbursement_list">
             ใบประมาณการเบิกเงินสดย่อย
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem
-          ><NuxtLink to="#">
+          ><NuxtLink to="/estimate_clear_list">
             ใบเคลียร์ประมาณการเบิกเงินสดย่อย
           </NuxtLink></MenuDropItem
         >
