@@ -98,23 +98,11 @@
           <div>
             <o-field label="วันหมดอายุพาสปอร์ต">
               <o-input variant="danger"></o-input>
-              <div class="flex text-sm text-red-800 rounded-lg" role="alert">
-                <svg
-                  aria-hidden="true"
-                  class="flex-shrink-0 inline w-5 h-5 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <p class="text-red-500">บัตรหมดอายุ</p>
-              </div>
             </o-field>
+            <div class="flex text-sm text-red-500" role="alert">
+              <Icon class="w-5 h-5 mr-1" name="mingcute:warning-line"></Icon>
+              <p>พาสปอร์ตจะหมดอายุภายใน 120 วัน</p>
+            </div>
           </div>
           <o-field label="อัพโหลดพาสปอร์ต">
             <div class="flex items-center justify-center w-full">
@@ -238,10 +226,10 @@
 
         <hr class="my-4 border-1.5" />
         <div class="flex justify-end">
-          <NuxtLink href="/tour_manage">
+          <NuxtLink href="/management/tour_data_members">
             <o-button>ยกเลิก</o-button>
           </NuxtLink>
-          <NuxtLink href="/tour_data">
+          <NuxtLink href="/management/tour_data_members">
             <o-button>บันทึก</o-button>
           </NuxtLink>
         </div>

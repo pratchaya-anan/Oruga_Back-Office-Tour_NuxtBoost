@@ -1,5 +1,7 @@
 <template>
-  <LayoutPageTitle>แบบฟอร์มใบรับรองแทนใบเสร็จรับเงิน</LayoutPageTitle>
+  <LayoutPageTitle>
+    Cashcertificate / แบบฟอร์มใบรับรองแทนใบเสร็จรับเงิน
+  </LayoutPageTitle>
   <o-steps v-model="steps" variant="success">
     <o-step-item
       step="1"

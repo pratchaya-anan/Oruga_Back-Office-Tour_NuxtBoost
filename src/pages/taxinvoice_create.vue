@@ -1,45 +1,205 @@
 <template>
     <LayoutPageTitle>Taxinvoice/สร้างใบกำกับภาษี</LayoutPageTitle>
     <o-steps v-model="steps" variant="success">
-        <o-step-item step="1" label="รายละเอียด" :clickable="true" icon="user-plus">
+        <o-step-item step="1" label="ข้อมูล" :clickable="true" icon="user-plus">
+            <UiCard class="mb-3">
+                <o-button @click="showItemsPanel ? showItemsPanel = false : showItemsPanel = true" class="ml-4">นำเข้าข้อมูล
+                </o-button>
+                <div v-if="showItemsPanel">
+
+                    <div class="flex">
+                        <o-input placeholder="ค้นหา ชื่อลูกค้า , รหัสลูกค้า"></o-input>
+                        <div class="px-2">
+                            <o-button>ค้นหา</o-button>
+                        </div>
+                    </div>
+                    <o-table :data="data" v-model:selected="selected">
+                        <o-table-column @click="isImageModalActive = true" v-for="column in columns" v-bind="column"
+                            #default="{ row }">
+                            {{ row[column.field] }}
+                        </o-table-column>
+                    </o-table>
+                    <p>
+                        {{ selected }}
+                    </p>
+                    <!-- <section v-if="!showItemslist" class="mt-4">
+                    <o-button @click="showItemslist = false">บันทึก</o-button>
+                    <o-button @click="showItemsPanel = false">ยกเลิก</o-button>
+                </section> -->
+                    <!-- <o-button size="medium" variant="primary" @click="isImageModalActive = true">
+                    Open modal
+                </o-button> -->
+                    <div class="flex justify-end">
+                        <o-button @click="setnull">ยกเลิก</o-button>
+                    </div>
+                </div>
+
+                <!-- <o-modal v-model:active="isImageModalActive">
+
+                    <div class="relative w-full max-w-md max-h-full">
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <button type="button"
+                                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                                data-modal-hide="popup-modal">
+                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                            <div class="p-6 text-center">
+                                <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you
+                                    want to delete this product?</h3>
+                                <button data-modal-hide="popup-modal" type="button"
+                                    class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                    Yes, I'm sure
+                                </button>
+                                <button data-modal-hide="popup-modal" type="button"
+                                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+                                    cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </o-modal> -->
+
+            </UiCard>
             <UiCard class="mb-3">
                 <div class="p-5">
                     <div>
-                        <label class="text-2xl font-medium">รายละเอียดใบกำกับภาษี</label>
+                        <label class="text-2xl font-medium">ข้อมูลลูกค้า</label>
                     </div>
                     <div class="grid grid-cols-2 gap-4 mt-3">
                         <div>
-                            <o-field label="เลขที่">
+                            <o-field label="ชื่อลูกค้า">
                                 <o-input></o-input>
                             </o-field>
                         </div>
                         <div>
-                            <o-field label="วันที่">
+                            <o-field label="เลขประจำตัวผู้เสียภาษี">
                                 <o-input></o-input>
                             </o-field>
                         </div>
                         <div>
-                            <o-field label="กำหนดการชำระ">
+                            <o-field label="ชื่อผู้ติดต่อ">
                                 <o-input></o-input>
                             </o-field>
                         </div>
-                        <div class="flex space-x-5">
-                            <o-radio v-model="branch" name="branchcheck" native-value="MainBranch">
-                                สำนักงานใหญ่
-                            </o-radio>
-                            <o-radio v-model="branch" name="branchcheck" native-value="SubBranch">
-                                สาขาย่อย
-                            </o-radio>
+                        <div>
+                            <o-field label="เบอร์โทรศัพท์">
+                                <o-input></o-input>
+                            </o-field>
                         </div>
-                        <div v-if="branch == 'SubBranch'">
-                            <o-field label="ชื่อสาขาย่อย">
+                        <div>
+                            <o-field label="อีเมล">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div>
+                            <o-field label="ที่อยู่">
                                 <o-input></o-input>
                             </o-field>
                         </div>
                     </div>
                 </div>
             </UiCard>
+            <UiCard class="mb-3">
+                <div class="p-5">
+                    <div>
+                        <label class="text-2xl font-medium">ข้อมูลฝ่ายขาย</label>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-2">
+                            <o-field label="รหัสลูกค้า">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div>
+                            <o-field label="ยืนยันราคาภายใน">
+                                <div class="relative ">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <input datepicker type="text"
+                                        class=" border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Select date">
+                                </div>
+                            </o-field>
+                        </div>
+                        <div>
+                            <o-field label="วันที่ส่งของ">
+                                <div class="relative ">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <input datepicker type="text"
+                                        class=" border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Select date">
+                                </div>
+                            </o-field>
+                        </div>
+                        <div>
+                            <o-field label="ผู้เสนอขาย">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div>
+                            <div>
+                                <o-field label="ฝ่ายขาย">
+                                    <o-select placeholder="การตลาด">
+                                        <option value="free">การตลาด</option>
+                                        <option value="1%">xxxx</option>
+                                        <option value="3%">xxxx</option>
+                                    </o-select>
+                                </o-field>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3">
+                        <o-field label="กำหนดราคามัดจำ">
+                            <div class="flex mt-3">
+                                <o-radio v-model="showcheck" name="name" native-value="persen" class="mr-3">
+                                    เปอร์เซ็น
+                                </o-radio>
+                                <o-radio v-model="showcheck" name="name" native-value="custom">
+                                    จำนวนเงิน
+                                </o-radio>
+                            </div>
+                        </o-field>
+                    </div>
+                    <section class="my-4 ">
+                        <o-field v-if="showcheck == 'persen'">
+                            <o-input modelValue=""></o-input>
+                        </o-field>
+                        <o-field v-if="showcheck == 'custom'">
+                            <o-input modelValue=""></o-input>
+                        </o-field>
+                        <!-- <section>
+                            <o-button @click="showcheck = false" class="mt-4">Save</o-button>
+                        </section> -->
+                    </section>
+                </div>
+            </UiCard>
         </o-step-item>
+        <!-- <o-step-item step="2" label="พนักงาน" :clickable="true" icon="user-plus">
+        </o-step-item> -->
         <o-step-item step="2" label="ใบกำกับภาษี" :clickable="true" icon="user-lock">
             <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
                 <div class="col-span-full xl:col-auto mb-4">
@@ -49,7 +209,7 @@
                                 <div>
                                     <div class="grid grid-cols-6">
                                         <div class="col-span-5">
-                                            <h2 class="text-xl font-bold dark:text-white">ใบกำกับภาษี/ยืนยันการสั่งซื้อ</h2>
+                                            <h2 class="text-xl font-bold dark:text-white">ใบกำกับภาษี</h2>
                                         </div>
                                         <div class="flex justify-end">
                                             <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit"
@@ -81,8 +241,6 @@
                             <o-field label="วัตถุประสงค์การยืมเงินทดลองจ่าย">
                                 <o-input modelValue="เพื่อจ่ายเงิน"></o-input>
                             </o-field>
-
-
                             <section>
                                 <o-button @click="showOrderPanel = false" class="mt-4">บันทึก</o-button>
                                 <o-button @click="showOrderPanel = false" class="mt-4">ยกเลิก</o-button>
@@ -180,53 +338,14 @@
                 </div>
                 <div class="col-span-2">
                     <div class=" overflow-x-auto shadow-md sm:rounded-lg mb-4">
-                        <UiCard>
-                            <div class="flex justify-between">
-                                <span class="text-xl">เลือกจำนวนใบกำกับภาษี</span>
-                                <div>
-                                    <o-button @click="cardreduce" class="mr-3">-</o-button>
-                                    <span>{{ cardcount }}</span>
-                                    <o-button @click="cardplus" class="ml-3">+</o-button>
-                                </div>
-                            </div>
-                        </UiCard>
-                        <UiCard v-for="(i, idx) in cardcount" class="mt-3">
+                        <UiCard class="mt-3">
                             <div class="p-5">
                                 <div>
-                                    <label class="text-2xl font-medium">ใบกำกับภาษีใบที่ {{ idx + 1 }} </label>
+                                    <label class="text-2xl font-medium">ใบกำกับภาษี</label>
                                 </div>
                                 <div class="grid grid-cols-2 gap-4 mt-3">
                                     <div>
-                                        <o-field label="เลขที่">
-                                            <o-input></o-input>
-                                        </o-field>
-                                    </div>
-                                    <div>
-                                        <o-field label="จำนวนเงินใบกำกับภาษี">
-                                            <o-input  placeholder="9,000"></o-input>
-                                        </o-field>
-                                    </div>                                   
-                                    <div>
                                         <o-field label="วันที่">
-                                            <div class="relative ">
-                                                <div
-                                                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd"
-                                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                                            clip-rule="evenodd"></path>
-                                                    </svg>
-                                                </div>
-                                                <input datepicker type="text"
-                                                    class=" border border-gray-300 text-gray-900  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                    placeholder="Select date">
-                                            </div>
-                                        </o-field>
-                                    </div>
-                                    <div>
-                                        <o-field label="กำหนดการชำระ">
                                             <div class="relative ">
                                                 <div
                                                     class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -257,236 +376,67 @@
                                             <o-input></o-input>
                                         </o-field>
                                     </div>
-
-                                </div>                               
-                                <div>
-                                    <div class="">
-                                        <div>
-                                            <label class="text-2xl font-medium">รายการสินค้า</label>
-                                        </div>
-                                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                            <thead
-                                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                                <tr>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        ลำดับ
-                                                    </th>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        รหัสลูกค้า
-                                                    </th>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        รายการสินค้า
-                                                    </th>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        จำนวน
-                                                    </th>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        ราคาต่อหน่วย
-                                                    </th>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        ส่วนลด
-                                                    </th>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        ภาษี
-                                                    </th>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        จำนวนเงิน
-                                                    </th>
-                                                    <th scope="col" class="px-6 py-3">
-                                                        <span class="sr-only">Edit</span>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr
-                                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                                    <th scope="row"
-                                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        2
-                                                    </th>
-                                                    <td class="px-6 py-4">
-                                                        Q-463665308
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        ค่าพาหนะ
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        2
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        2,000
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        0
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        0%
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        4,000
-                                                    </td>
-                                                    <td class="px-6 py-4 text-right">
-                                                        <button>
-                                                            <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr
-                                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                                    <th scope="row"
-                                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        1
-                                                    </th>
-                                                    <td class="px-6 py-4">
-                                                        P-463665308
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        ค่าที่พัก
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        5
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        1,000
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        0
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        0%
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        5,000
-                                                    </td>
-                                                    <td class="px-6 py-4 text-right">
-                                                        <button>
-                                                            <Icon class="text-red-900 w-5 h-5" name="typcn:delete"></Icon>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>                                
                                 </div>
                             </div>
+                            <o-table :data="data">
+                                <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
+                                    {{ row[column] }}
+                                </o-table-column>
+                            </o-table>
+                            <section v-if="!showItemslist" class="mt-4">
+                                <o-button @click="showItemsPanel = true">เพิ่มรายการ</o-button>
+                            </section>
+
+                            <div v-if="showItemslist" class="mt-5">
+                                <o-table :data="data" v-model:checked-rows="checkedRows" checkable
+                                    :checkbox-position="checkboxPosition">
+                                    <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
+                                        {{ row[column.field] }}
+                                    </o-table-column>
+                                </o-table>
+                                <section>
+                                    <o-button class="mt-4">บันทึก</o-button>
+                                    <o-button @click="showItemslist = false" class="ml-4">ยกเลิก</o-button>
+                                </section>
+                            </div>
+                            <UiCard v-if="showItemsPanel">
+                                <div class="flex gap-4">
+                                    <o-field class="flex-1" label="รหัสสินค้า">
+                                        <o-input></o-input>
+                                    </o-field>
+                                </div>
+                                <o-field class="flex-1" label="รายการสินค้า">
+                                    <o-input></o-input>
+                                </o-field>
+                                <div class="flex gap-4">
+                                    <o-field class="flex-1" label="จำนวน">
+                                        <o-input></o-input>
+                                    </o-field>
+                                    <o-field class="flex-1" label="ราคาต่อหน่วย">
+                                        <o-input></o-input>
+                                    </o-field>
+                                </div>
+                                <div class="flex gap-4">
+                                    <o-field class="flex-1" label="ส่วนลด">
+                                        <o-input></o-input>
+                                    </o-field>
+                                    <o-field class="flex-1" label="ภาษี (0% 7% 9%)">
+                                        <o-select placeholder="0 %">
+                                            <option value="flint">0 %</option>
+                                            <option value="silver">7 %</option>
+                                            <option value="silver">9 %</option>
+                                        </o-select>
+                                    </o-field>
+                                    <o-field class="flex-1" label="จำนวนเงิน">
+                                        <o-input></o-input>
+                                    </o-field>
+                                </div>
+                                <section>
+                                    <o-button class="mt-4" @click="showItemsPanel = false">บันทึก</o-button>
+                                    <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
+                                </section>
+                            </UiCard>
                         </UiCard>
-                        <!-- <UiCard>
-                            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                <thead
-                                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                    <tr>
-                                        <th scope="col" class="px-6 py-3">
-                                            ลำดับ
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            รายละเอียดค่าใช้จ่าย
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            ราคา
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            ประเถทค่าใช้จ่าย
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            จำนวน
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            ยอดสุทธิ
-                                        </th>
-                                        <th scope="col" class="px-6 py-3">
-                                            <span class="sr-only">Edit</span>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            1
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            ค่าน้ำแข็งถัง
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            40
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            ค่าน้ำแข็ง
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            2
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            80
-                                        </td>
-                                        <td class="px-6 py-4 text-right">
-                                            <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
-                                                class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                                                type="button">
-                                                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
-                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                                                    </path>
-                                                </svg>
-                                            </button>
-
-                                        </td>
-                                    </tr>
-                                    <tr
-                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                        <th scope="row"
-                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            2
-                                        </th>
-                                        <td class="px-6 py-4">
-                                            ค่ารถนำเที่ยว
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            2,000
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            ค่าพาหนะ
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            2
-                                        </td>
-                                        <td class="px-6 py-4">
-                                            4,000
-                                        </td>
-                                        <td class="px-6 py-4 text-right">
-                                            <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
-                                                class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                                                type="button">
-                                                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
-                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                                                    </path>
-                                                </svg>
-                                            </button>
-
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                
-                            </table>
-                        </UiCard> -->
-                        <!-- Dropdown menu -->
-                        <div id="dropdownDots"
-                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                            <div class="py-2">
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                                    ลบ</a>
-                            </div>
-                            <div class="py-2">
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                                    แก้ไข</a>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
@@ -515,34 +465,84 @@ const steps = ref(1);
 const branch = ref('MainBranch');
 const showItemsPanel = ref(false);
 const showOrderPanel = ref(false);
+const showItemslist = ref(false);
+const isImageModalActive = ref(false);
 const showcheck = ref('');
-const cardcount = ref(1);
+const selected = ref();
 
-function cardplus() {
-    cardcount.value += 1;
-}
-function cardreduce() {
-    if (cardcount.value != 1) {
-        cardcount.value -= 1;
-    }
+function setnull() {
+    selected.value = null;
 }
 
 function print() {
     window.print();
 }
-
-// function print() {
-//     const printableContent = document.getElementById('papertax');
-//     const printWindow = window.open('', '', 'height=1000,width=1000');
-//     printWindow.document.write(printableContent.innerHTML);
-//     printWindow.print();
-// }
-
 onMounted(() => { initFlowbite() });
+const showItemscomment = ref(false);
+const isItemModalUserData = ref(false);
+
+
+
+const columns = ref([
+    {
+        field: "id",
+        label: "ลำดับ",
+        width: "40",
+        numeric: true,
+    },
+    {
+        field: "productcode",
+        label: "รหัสลูกค้า",
+    },
+    {
+        field: "productlist",
+        label: "ชื่อลูกค้า",
+    },
+    {
+        field: "quantity",
+        label: "วันที่",
+    },
+    {
+        field: "unitprice",
+        label: "ยอดสุทธิ",
+        position: "centered",
+    },
+]);
+
+const tableData = [
+    {
+        id: 1,
+        productcode: "Lo-2586957",
+        productlist: "นายสายแสง ส่องไฟ",
+        quantity: "05-06-2566",
+        unitprice: "5,000",        
+
+    },
+    {
+        id: 2,
+        productcode: "Lo-2586957",
+        productlist: "นายสายแสง ส่องไฟ",
+        quantity: "05-06-2566",
+        unitprice: "6,000",        
+
+    },
+    
+];
+
+
+const data = ref(tableData);
+
 </script>
 
 
 <!-- <style>
+    
+    // function print() {
+    //     const printableContent = document.getElementById('papertax');
+    //     const printWindow = window.open('', '', 'height=1000,width=1000');
+    //     printWindow.document.write(printableContent.innerHTML);
+    //     printWindow.print();
+    // }
 @media print {
   /* header {
     display: none;

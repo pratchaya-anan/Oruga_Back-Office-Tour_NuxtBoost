@@ -6,7 +6,7 @@
       <NuxtLink
         href="/create_tour/createtour"
         type="button"
-        class="text-white bg-primary-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
+        class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
       >
         <Icon class="mr-1 -ml-1 w-5 h-5" name="mdi:plus"></Icon>
         สร้างทัวร์
@@ -76,8 +76,10 @@
 </template>
 
 <script setup lang="ts">
-import { initFlowbite } from 'flowbite';
+import { initFlowbite } from "flowbite";
 
 const sec23 = Array.from(Array(23).keys()).map((x) => x + 1);
-onMounted(() => { initFlowbite() });
+onMounted(() => {
+  initFlowbite();
+});
 </script>

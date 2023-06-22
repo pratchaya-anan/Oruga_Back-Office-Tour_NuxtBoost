@@ -1,6 +1,6 @@
 <template>
   <section>
-    <LayoutPageTitle> Quotation / รายการใบเสนอราคา </LayoutPageTitle>
+    <LayoutPageTitle> Receipt / รายการใบเสร็จรับเงิน </LayoutPageTitle>
 
     <UiManageBar>
       <NuxtLink
@@ -9,7 +9,7 @@
         class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
       >
         <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:plus"></Icon>
-        สร้างใบเสนอราคา
+        สร้างใบเสร็จรับเงิน
       </NuxtLink>
     </UiManageBar>
 
@@ -36,21 +36,21 @@
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h5" name="ri:phone-fill"></Icon>
-            095-382825
+            มะนาว หวานจังเลย
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="ic:baseline-date-range"
             ></Icon>
-            24-03-2566
+            4585695214526
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="majesticons:money-line"
             ></Icon>
-            59,920.00
+            0254875858
           </p>
         </div>
         <div>
@@ -105,13 +105,7 @@
                 >
                   <diV>
                     <div class="flex justify-between">
-                      <div>
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h5"
-                          name="eva:people-fill"
-                        ></Icon>
-                        ศศิศ วิรัตน์จินดา
-                      </div>
+                      <div>ศศิศ วิรัตน์จินดา</div>
                       <div>
                         <button
                           id="dropdownMenuIconButton"
@@ -155,79 +149,54 @@
                         >
                       </div>
                     </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="ri:phone-fill"
-                      ></Icon>
-                      095-658285
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      ชื่อผู้ติดต่อ
+                    </div>
+                    <div>มะนาว หวานจังเลย</div>
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      ที่อยู่
                     </div>
                     <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="majesticons:money-line"
-                      ></Icon>
-                      59,920.00
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="teenyicons:id-solid"
-                      ></Icon>
-                      020202
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="mdi:address-marker"
-                      ></Icon>
                       111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
                     </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="ic:baseline-email"
-                      ></Icon>
-                      somchai@gmail.com
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      ID TAX
                     </div>
+                    <div>4585695214526</div>
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      โทร
+                    </div>
+                    <div>0254875858</div>
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      Email
+                    </div>
+                    <div>somchai@gmail.com</div>
                   </diV>
                   <hr class="my-5 border-1.5" />
                   <diV>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h-5"
-                        name="tabler:user-code"
-                      ></Icon>
-                      C-58015259
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      รหัสลูกค้า
                     </div>
-                    <div>
-                      <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:user"></Icon>
-                      สมชัย ใจเกินร้อย
+                    <div>C-58015259</div>
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      ผู้เสนอขาย
                     </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h-5"
-                        name="fluent-emoji-high-contrast:department-store"
-                      ></Icon>
-                      การตลาด
+                    <div>สมชัย ใจเกินร้อย</div>
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      ฝ่าย:
                     </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h-5"
-                        name="material-symbols:date-range"
-                      ></Icon>
-                      31/03/2566
+                    <div>การตลาด</div>
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      ยืนยันราคาภายใน
                     </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h-5"
-                        name="material-symbols:date-range"
-                      ></Icon>
-                      02-04-2566
+                    <div>31-03-2566</div>
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      วันส่งของ:
                     </div>
+                    <div>02-04-2566</div>
                   </diV>
                   <div class="mt-5 flex justify-center">
-                    <a href="/quotation_create">
+                    <a href="/receipt_create">
                       <o-button
                         class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
@@ -235,10 +204,10 @@
                           class="mr-3 -ml-1 w-5 h-5"
                           name="mdi:paper-edit"
                         ></Icon>
-                        แก้ไขใบเสนอราคา
+                        แก้ไขใบเสร็จ
                       </o-button>
                     </a>
-                    <a href="/paper/quotation_paper">
+                    <a href="/paper/receipt_paper">
                       <o-button
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
@@ -247,7 +216,7 @@
                           name="mingcute:eye-2-fill"
                         >
                         </Icon>
-                        ดูใบเสนอราคา
+                        ดูใบเสร็จ
                       </o-button>
                     </a>
                   </div>

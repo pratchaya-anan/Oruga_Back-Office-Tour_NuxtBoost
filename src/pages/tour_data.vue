@@ -37,7 +37,7 @@
                       >พิมพ์ใบ NAMELISTGROUP</MenuDropItem
                     >
                   </NuxtLink>
-                  <NuxtLink>
+                  <NuxtLink href="paper/guideorder_paper">
                     <MenuDropItem
                       ><Icon
                         class="w-4 h-4 mr-1"
@@ -46,16 +46,7 @@
                       >พิมพ์ใบสั่งงานมัคคุเทศก์</MenuDropItem
                     >
                   </NuxtLink>
-                  <NuxtLink>
-                    <MenuDropItem
-                      ><Icon
-                        class="w-4 h-4 mr-1"
-                        name="mingcute:sticker-fill"
-                      ></Icon
-                      >พิมพ์ใบ Sticker</MenuDropItem
-                    >
-                  </NuxtLink>
-                  <NuxtLink>
+                  <NuxtLink href="/paper/tag_paper">
                     <MenuDropItem>
                       <Icon class="w-4 h-4 mr-1" name="mdi:tag"></Icon>
                       พิมพ์ใบ Tag
@@ -198,7 +189,7 @@
         <!-- โรงแรม -->
         <UiCard v-if="showItems == 'hotel'">
           <div class="flex justify-end">
-            <NuxtLink href="/tour_data_hotel">
+            <NuxtLink href="/management/tour_data_hotel">
               <o-button>
                 <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
                 >จัดการ/เพิ่มโรงแรม
@@ -257,7 +248,7 @@
                     scope="row"
                     class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white truncate"
                   >
-                    NHU MINH...
+                    Mercure Bana...
                   </th>
                   <td class="px-6 py-4">
                     <div>21/04/2566</div>
@@ -331,7 +322,7 @@
         <!-- มัคคุเทศก์ -->
         <UiCard v-if="showItems == 'guide'">
           <div class="flex justify-end">
-            <NuxtLink href="/tour_data_hotel">
+            <NuxtLink href="/management/tour_data_guide">
               <o-button>
                 <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
                 >จัดการ/เพิ่มมัคคุเทศก์
@@ -418,7 +409,7 @@
         <!-- พาหนะ -->
         <UiCard v-if="showItems == 'vehicle'">
           <div class="flex justify-end">
-            <NuxtLink href="/tour_data_hotel">
+            <NuxtLink href="/management/tour_data_vehicle">
               <o-button>
                 <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
                 >จัดการ/เพิ่มพาหนะ
@@ -505,7 +496,7 @@
         <!-- จุดแวะพัก -->
         <UiCard v-if="showItems == 'checkpoin'">
           <div class="flex justify-end">
-            <NuxtLink href="/tour_data_hotel">
+            <NuxtLink href="/management/tour_data_stopover">
               <o-button>
                 <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
                 >จัดการ/เพิ่มสถานที่
@@ -593,7 +584,7 @@
         <!-- ร้านอาหาร -->
         <UiCard v-if="showItems == 'restaurant'">
           <div class="flex justify-end">
-            <NuxtLink href="/tour_data_hotel">
+            <NuxtLink href="/management/tour_data_restaurant">
               <o-button>
                 <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon
                 >จัดการ/เพิ่มร้านอาหาร
@@ -688,7 +679,7 @@
             >
               <NuxtLink
                 class="h-full w-full text-center grid items-center"
-                href="/tour_data_hotel"
+                href="/management/tour_data_members"
               >
                 <div>
                   <Icon class="w-10 h-10" name="tabler:settings-plus"></Icon>
@@ -728,23 +719,34 @@
                 <span class="text-sm text-gray-500 dark:text-gray-400"
                   >Thai</span
                 >
+                <!-- แจ้งเตือนลูกทัวร์ -->
                 <div class="flex justify-center">
-                  <Icon
-                    class="text-xl font-medium text-gray-500 dark:text-white"
-                    name="mingcute:cake-fill"
-                  >
-                  </Icon>
-                  <Icon
-                    class="text-xl font-medium text-gray-500 dark:text-white"
-                    name="mdi:credit-card-remove-outline"
-                  >
-                  </Icon>
+                  <div>
+                    <Icon
+                      class="w-6 h-6 rounded-full text-xl font-medium text-gray-500 dark:text-white"
+                      name="mingcute:cake-fill"
+                    >
+                    </Icon>
+                    <div
+                      class="flex absolute justify-center items-center ml-4 -mt-2 w-2 h-2 rounded-full border border-white bg-blue-500 dark:border-gray-700"
+                    ></div>
+                  </div>
+                  <div>
+                    <Icon
+                      class="w-5 h-5 text-xl font-medium text-gray-500 dark:text-white"
+                      name="fa6-solid:passport"
+                    >
+                    </Icon>
+                    <div
+                      class="flex absolute justify-center items-center ml-4 -mt-1 w-2 h-2 rounded-full border border-white bg-red-500 dark:border-gray-700"
+                    ></div>
+                  </div>
                 </div>
                 <div>
                   <span
                     class="px-10 text-sm text-gray-500 dark:text-gray-400 truncate"
                     ><Icon
-                      class="w-6 h-6"
+                      class="w-4 h-4"
                       name="majesticons:comment-text"
                     ></Icon
                     >แพ้กุ้ง</span
@@ -781,11 +783,20 @@
                         >{{ item.name_eng }} {{ item.lastname_eng }}</a
                       >
                     </p>
-                    <p
-                      class="text-base font-semibold leading-none text-gray-900 dark:text-white"
-                    >
-                      ข้อมูลส่วนตัว
-                    </p>
+                    <div class="flex">
+                      <p
+                        class="text-base font-semibold leading-none text-gray-900 dark:text-white"
+                      >
+                        ข้อมูลส่วนตัว
+                      </p>
+                      <div class="flex text-sm text-blue-500" role="alert">
+                        <Icon
+                          class="w-5 h-5 mr-1"
+                          name="mingcute:warning-line"
+                        ></Icon>
+                        <p>วันเกิด</p>
+                      </div>
+                    </div>
                     <div class="grid grid-cols-2">
                       <p class="mb-4 text-sm">
                         <Icon
@@ -831,16 +842,25 @@
                         40000
                       </p>
                     </div>
-                    <p
-                      class="text-base font-semibold leading-none text-gray-900 dark:text-white"
-                    >
-                      พาสปอร์ต
-                    </p>
+                    <div class="flex">
+                      <p
+                        class="text-base font-semibold leading-none text-gray-900 dark:text-white"
+                      >
+                        พาสปอร์ต
+                      </p>
+                      <div class="flex text-sm text-red-500" role="alert">
+                        <Icon
+                          class="w-5 h-5 mr-1"
+                          name="mingcute:warning-line"
+                        ></Icon>
+                        <p>พาสปอร์ตจะหมดอายุภายใน 120 วัน</p>
+                      </div>
+                    </div>
                     <div class="grid grid-cols-2">
                       <p class="mb-4 text-sm">
                         <Icon
                           class="w-6 h-6 text-gray-600"
-                          name="fontisto:passport"
+                          name="fa6-solid:passport"
                         ></Icon
                         >1635501893
                       </p>

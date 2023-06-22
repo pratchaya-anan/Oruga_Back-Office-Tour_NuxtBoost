@@ -1,15 +1,15 @@
 <template>
   <section>
-    <LayoutPageTitle> Quotation / รายการใบเสนอราคา </LayoutPageTitle>
+    <LayoutPageTitle> Disbursement Estimate / รายการใบขอเบิก </LayoutPageTitle>
 
     <UiManageBar>
       <NuxtLink
-        to="quotation_create"
+        to="bill_payment"
         type="button"
         class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
       >
         <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:plus"></Icon>
-        สร้างใบเสนอราคา
+        สร้างใบเบิกค่าใช้จ่าย
       </NuxtLink>
     </UiManageBar>
 
@@ -36,7 +36,7 @@
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h5" name="ri:phone-fill"></Icon>
-            095-382825
+            ฝ่ายขาย
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
@@ -50,7 +50,7 @@
               class="mr-3 -ml-1 w-5 h-5"
               name="majesticons:money-line"
             ></Icon>
-            59,920.00
+            เพื่อจ่ายเงิน
           </p>
         </div>
         <div>
@@ -160,7 +160,7 @@
                         class="mr-3 -ml-1 w-5 h5"
                         name="ri:phone-fill"
                       ></Icon>
-                      095-658285
+                      ฝ่ายขาย
                     </div>
                     <div>
                       <Icon
@@ -227,7 +227,7 @@
                     </div>
                   </diV>
                   <div class="mt-5 flex justify-center">
-                    <a href="/quotation_create">
+                    <a href="/disbursement_paper_create">
                       <o-button
                         class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
@@ -235,10 +235,10 @@
                           class="mr-3 -ml-1 w-5 h-5"
                           name="mdi:paper-edit"
                         ></Icon>
-                        แก้ไขใบเสนอราคา
+                        แก้ไขใบขอเบิก
                       </o-button>
                     </a>
-                    <a href="/paper/quotation_paper">
+                    <a href="/paper/disbursement_paper_paper">
                       <o-button
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
@@ -247,7 +247,7 @@
                           name="mingcute:eye-2-fill"
                         >
                         </Icon>
-                        ดูใบเสนอราคา
+                        ดูใบขอเบิก
                       </o-button>
                     </a>
                   </div>
