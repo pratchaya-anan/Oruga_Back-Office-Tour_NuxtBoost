@@ -7,26 +7,26 @@
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div>
               <h2 class="text-xl font-bold dark:text-white mt-2">
-                ทัวร์เกาะเสม็ด เสร็จทุกราย
+                ทัวร์เว้ ดานัง ประเทศเวียดนาม
               </h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6 mr-1" name="ri:treasure-map-fill"></Icon>
-                  กาญจนบุรี-เพชรบุรี
+                  อำนาจเจริญ - เว้ ดานัง ประเทศเวียดนาม
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
-                  5 วัน 4 คืน
+                  4 วัน 3 คืน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="line-md:calendar"></Icon>
-                  16/04/2566 &#32;
-                  <Icon class="w-5 h-5  mr-1" name="line-md:arrow-right"></Icon>
-                  &#32; 16/04/2566
+                  21/04/2566
+                  <Icon class="w-5 h-5  mx-1" name="line-md:arrow-right"></Icon>
+                  24/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="fluent:people-audience-24-filled"></Icon>
-                  35 คน
+                  23 คน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="fluent:comment-error-16-filled"></Icon>
@@ -40,19 +40,12 @@
           <h2 class="mb-2 text-xl font-bold dark:text-white">
             ไกด์
           </h2>
-          <div class="flex text-center items-center mb-2 p-5 border-l border-">
+          <div class="flex  items-center mb-2 p-5 border-l shadow-md">
             <img class="w-10 h-10 rounded-full"
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
               <div class="ml-5">
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 026-568-4785</p>
-            </div>
-          </div>
-          <div class="flex text-center items-center p-5 border-l">
-            <img class="w-10 h-10 rounded-full"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
-            <div class="ml-5">
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 026-568-4785</p>
             </div>
           </div>
@@ -83,10 +76,13 @@
                     ลำดับ
                   </th>
                   <th scope="col" class="px-3 py-3">
-                    ชื่อยานพาหนะ
+                    ชื่อไกด์
                   </th>
                   <th scope="col" class="px-3 py-3">
-                    ที่อยู่
+                    ประเภทไกด์
+                  </th>
+                  <th scope="col" class="px-3 py-3">
+                    ความสามาถพิเศษ
                   </th>
                   <th scope="col" class="px-3 py-3">
                     เบอร์ติดต่อ
@@ -95,7 +91,6 @@
                     คอมเมนต์
                   </th>
                   <th scope="col" class="px-3 py-3 text-center items-center">
-
                   </th>
                 </tr>
               </thead>
@@ -108,13 +103,108 @@
                     วุฒินันท์ ศรีสุระ
                   </td>
                   <td class="px-3 py-3">
-                    132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
+                    ต่างประเทศ
+                  </td>
+                  <td class="px-3 py-3">
+                    ภาษาอังกฤษ
                   </td>
                   <td class="px-3 py-3">
                     0428976765
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    ปานกลาง
+                    บริการดีมาก
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th class="px-3 py-3">
+                    2
+                  </th>
+                  <td class="px-3 py-3">
+                   รินดา จุตโน
+                  </td>
+                  <td class="px-3 py-3">
+                    ในประเทศ
+                  </td>
+                  <td class="px-3 py-3">
+                    ภาษาอังกฤษ
+                  </td>
+                  <td class="px-3 py-3">
+                    0428976765
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    บริการดีมาก
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th class="px-3 py-3">
+                    3
+                  </th>
+                  <td class="px-3 py-3">
+                    นพรุจ ชูทำสิทธกุล
+                  </td>
+                  <td class="px-3 py-3">
+                    ต่างประเทศ
+                  </td>
+                  <td class="px-3 py-3">
+                    ภาษาอังกฤษ
+                  </td>
+                  <td class="px-3 py-3">
+                    0428976765
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    บริการดีมาก
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th class="px-3 py-3">
+                    4
+                  </th>
+                  <td class="px-3 py-3">
+                    กิตติพิชญ์ เสนานุช
+                  </td>
+                  <td class="px-3 py-3">
+                    ต่างประเทศ
+                  </td>
+                  <td class="px-3 py-3">
+                    ภาษาอังกฤษ
+                  </td>
+                  <td class="px-3 py-3">
+                    0428976765
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    บริการดีมาก
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th class="px-3 py-3">
+                    5
+                  </th>
+                  <td class="px-3 py-3">
+                    ดี ทำใจ
+                  </td>
+                  <td class="px-3 py-3">
+                    ต่างประเทศ
+                  </td>
+                  <td class="px-3 py-3">
+                    ภาษาอังกฤษ
+                  </td>
+                  <td class="px-3 py-3">
+                    0428976765
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    บริการดีมาก
                   </td>
                   <td class="px-3 py-3 text-center items-center">
                     <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>

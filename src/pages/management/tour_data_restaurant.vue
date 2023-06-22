@@ -7,26 +7,26 @@
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div>
               <h2 class="text-xl font-bold dark:text-white mt-2">
-                ทัวร์เกาะเสม็ด เสร็จทุกราย
+                ทัวร์เว้ ดานัง ประเทศเวียดนาม
               </h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6 mr-1" name="ri:treasure-map-fill"></Icon>
-                  กาญจนบุรี-เพชรบุรี
+                  อำนาจเจริญ - เว้ ดานัง ประเทศเวียดนาม
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
-                  5 วัน 4 คืน
+                  4 วัน 3 คืน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="line-md:calendar"></Icon>
-                  16/04/2566 &#32;
-                  <Icon class="w-5 h-5  mr-1" name="line-md:arrow-right"></Icon>
-                  &#32; 16/04/2566
+                  21/04/2566
+                  <Icon class="w-5 h-5  mx-1" name="line-md:arrow-right"></Icon>
+                  24/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="fluent:people-audience-24-filled"></Icon>
-                  35 คน
+                  23 คน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="fluent:comment-error-16-filled"></Icon>
@@ -45,44 +45,52 @@
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">16 April
-                2022</time>
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
+                2566</time>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านเลียจาน</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเที่ยง เวลา 12.00 น</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">โครตอร่อย!</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารค่ำ 19.00 น</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 7 โต๊ะ</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเย็น เวลา 18.00 น</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
             <li class="mb-10 ml-4">
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">17 April
-                2022</time>
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
+                2566</time>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านอาหารอาโนะเนะ</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารค่ำ 19.00 น</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 7 โต๊ะ</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเที่ยง เวลา 12.00 น</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">กินไหมจร๊ะ</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเย็น เวลา 18.00 น</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
             <li class="mb-10 ml-4">
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">18 April
-                2022</time>
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
+                2566</time>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านอาหาร อัลไล</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารค่ำ 19.00 น</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 7 โต๊ะ</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเที่ยง เวลา 12.00 น</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">วงวารอาหาร</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเย็น เวลา 18.00 น</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
             <li class="mb-10 ml-4">
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">19 April
-                2022</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">วงวารอาหาร</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารค่ำ 19.00 น</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 7 โต๊ะ</p>
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">24 เมษายน
+                2566</time>
+                <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">โครตอร่อย!</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเที่ยง เวลา 12.00 น</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านเลียจาน</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเย็น เวลา 18.00 น</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
           </ol>
@@ -113,7 +121,10 @@
                     ลำดับ
                   </th>
                   <th scope="col" class="px-3 py-3">
-                    ชื่อยานพาหนะ
+                    ชื่อร้าน
+                  </th>
+                  <th scope="col" class="px-3 py-3">
+                    ประเภทร้าน
                   </th>
                   <th scope="col" class="px-3 py-3">
                     ที่อยู่
@@ -141,6 +152,9 @@
                     โครตอร่อย!
                   </td>
                   <td class="px-3 py-3">
+                    อาหารทะเล
+                  </td>
+                  <td class="px-3 py-3">
                     132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
                   </td>
                   <td class="px-3 py-3">
@@ -162,6 +176,9 @@
                   </th>
                   <td class="px-3 py-3">
                     ร้านเลียจาน
+                  </td>
+                  <td class="px-3 py-3">
+                    อาหารทะเล
                   </td>
                   <td class="px-3 py-3">
                     132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
@@ -187,6 +204,9 @@
                     ร้านอาหารอาโนะเนะ
                   </td>
                   <td class="px-3 py-3">
+                    อาหารญี่ปุ่น
+                  </td>
+                  <td class="px-3 py-3">
                     132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
                   </td>
                   <td class="px-3 py-3">
@@ -208,6 +228,9 @@
                   </th>
                   <td class="px-3 py-3">
                     ร้านหอยคราง
+                  </td>
+                  <td class="px-3 py-3">
+                    อาหารทะเล
                   </td>
                   <td class="px-3 py-3">
                     33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
@@ -233,6 +256,9 @@
                     แอ๊บขายอาหาร
                   </td>
                   <td class="px-3 py-3">
+                    อาหารเหนือ
+                  </td>
+                  <td class="px-3 py-3">
                     33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
                   </td>
                   <td class="px-3 py-3">
@@ -254,6 +280,9 @@
                   </th>
                   <td class="px-3 py-3">
                     กินไหมจร๊ะ
+                  </td>
+                  <td class="px-3 py-3">
+                    อาหารไทย
                   </td>
                   <td class="px-3 py-3">
                     33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
@@ -279,6 +308,9 @@
                     ร้านอาหาร อัลไล
                   </td>
                   <td class="px-3 py-3">
+                    อาหารไทย
+                  </td>
+                  <td class="px-3 py-3">
                     33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
                   </td>
                   <td class="px-3 py-3">
@@ -300,6 +332,87 @@
                   </th>
                   <td class="px-3 py-3">
                     วงวารอาหาร
+                  </td>
+                  <td class="px-3 py-3">
+                    อาหารทะเล
+                  </td>
+                  <td class="px-3 py-3">
+                    33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
+                  </td>
+                  <td class="px-3 py-3">
+                    08978677867
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    40
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    ดี
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th class="px-3 py-3">
+                    9
+                  </th>
+                  <td class="px-3 py-3">
+                    ข้าวจ้าว
+                  </td>
+                  <td class="px-3 py-3">
+                    อาหารไทย
+                  </td>
+                  <td class="px-3 py-3">
+                    33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
+                  </td>
+                  <td class="px-3 py-3">
+                    08978677867
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    40
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    ดี
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th class="px-3 py-3">
+                    10
+                  </th>
+                  <td class="px-3 py-3">
+                    ในรู
+                  </td>
+                  <td class="px-3 py-3">
+                    อาหารอีสาน
+                  </td>
+                  <td class="px-3 py-3">
+                    33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
+                  </td>
+                  <td class="px-3 py-3">
+                    08978677867
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    40
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    ดี
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th class="px-3 py-3">
+                    11
+                  </th>
+                  <td class="px-3 py-3">
+                    โต๋วโภชนา
+                  </td>
+                  <td class="px-3 py-3">
+                    อาหารจีน
                   </td>
                   <td class="px-3 py-3">
                     33 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
@@ -349,7 +462,6 @@
               </div>
             </div>
           </div>
-
         </o-modal>
       </div>
     </div>
