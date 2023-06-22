@@ -292,6 +292,18 @@
             </div>
         </o-step-item>
         <o-step-item step="3" label="ยืนยัน" :clickable="true" icon="user-plus">
+            <PaperDisbursement_paper id="papertax"></PaperDisbursement_paper>
+            <div class="flex justify-center mt-3">
+                <o-button @click="print" variant="info">
+                    <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>
+                    พิมพ์
+                </o-button>
+                <NuxtLink to="quotation_list">
+                    <o-button>
+                        บันทึก
+                    </o-button>
+                </NuxtLink>
+            </div>
         </o-step-item>
 
     </o-steps>
