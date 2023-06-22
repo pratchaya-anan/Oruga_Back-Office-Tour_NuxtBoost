@@ -1,6 +1,6 @@
 <template>
   <section class="min-h-screen">
-    <LayoutPageTitle> Calendar</LayoutPageTitle>
+    <LayoutPageTitle> Calendar / ปฏิทิน</LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-4 xl:gap-4">
       <div class="col-span-full xl:col-auto mb-4">
         <div class="grid grid-cols-2 xl:grid-cols-2 xl:gap-4">
