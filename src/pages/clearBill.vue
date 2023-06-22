@@ -89,7 +89,7 @@
                             </section>
                         </section>
                         <section v-if="!showOrderPanel" class="my-4 border-t border-gray-200 dark:border-gray-700">
-                            <span>ข้อมูลผู้ขอเคลียร์</span>
+                            <span>ข้อมูลใบขอเคลียร์</span>
                             <div class="sm:flex xl:block xl:space-y-4">
                                 <div class="sm:flex-1">
                                     <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -144,139 +144,139 @@
                     <div class=" overflow-x-auto shadow-md sm:rounded-lg mb-4">
                         <UiCard>
                             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">
-                                        วันที่ใบเสร็จ
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        รายละเอียดค่าใช้จ่าย
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        เลขที่ใบเสร็จ
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        เลขประจำตัวผู้เสียภาษี
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        ยอดสุทธิ
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
-                                        <span class="sr-only">Edit</span>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr
-                                    class="bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                    <th scope="row"
-                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        หัวข้ออ้างอิงไม่แสดงในใบเคลียร์
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        ค่าน้ำแข็ง
-                                    </td>
-                                    <td class="px-6 py-4">
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-3">
+                                            วันที่ใบเสร็จ
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            รายละเอียดค่าใช้จ่าย
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            เลขที่ใบเสร็จ
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            เลขประจำตัวผู้เสียภาษี
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            ยอดสุทธิ
+                                        </th>
+                                        <th scope="col" class="px-6 py-3">
+                                            <span class="sr-only">Edit</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        class="bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            หัวข้ออ้างอิงไม่แสดงในใบเคลียร์
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            ค่าน้ำแข็ง
+                                        </td>
+                                        <td class="px-6 py-4">
 
-                                    </td>
-                                    <td class="px-6 py-4">
+                                        </td>
+                                        <td class="px-6 py-4">
 
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        80 .-
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            80 .-
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
 
-                                    </td>
-                                </tr>
-                                <tr
-                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                    <th scope="row"
-                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        03-06-2566
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        ค่าน้ำแข็งถัง
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        WQp7985
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        3885587473
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        80 .-
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
-                                            class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900  rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                                            type="button">
-                                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                                                </path>
-                                            </svg>
-                                        </button>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            03-06-2566
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            ค่าน้ำแข็งถัง
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            WQp7985
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            3885587473
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            80 .-
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                                                class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900  rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                                type="button">
+                                                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                                                    </path>
+                                                </svg>
+                                            </button>
 
-                                    </td>
-                                </tr>
-                                <tr class="bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700 ">
-                                    <th scope="row"
-                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        หัวข้ออ้างอิงไม่แสดงในใบเคลียร์
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        ค่ารถนำเที่ยว
-                                    </td>
-                                    <td class="px-6 py-4">
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700 ">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            หัวข้ออ้างอิงไม่แสดงในใบเคลียร์
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            ค่ารถนำเที่ยว
+                                        </td>
+                                        <td class="px-6 py-4">
 
-                                    </td>
-                                    <td class="px-6 py-4">
+                                        </td>
+                                        <td class="px-6 py-4">
 
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        4,000 .-
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            4,000 .-
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
 
-                                    </td>
-                                </tr>
-                                <tr
-                                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                                    <th scope="row"
-                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        03-06-2566
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        ค่ารถนำเที่ยว
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        A7858575
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        3885587473
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        4,000 .-
-                                    </td>
-                                    <td class="px-6 py-4 text-right">
-                                        <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
-                                            class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900  rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                                            type="button">
-                                            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                                                </path>
-                                            </svg>
-                                        </button>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                        <th scope="row"
+                                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            03-06-2566
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            ค่ารถนำเที่ยว
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            A7858575
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            3885587473
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            4,000 .-
+                                        </td>
+                                        <td class="px-6 py-4 text-right">
+                                            <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                                                class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900  rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                                type="button">
+                                                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                                                    </path>
+                                                </svg>
+                                            </button>
 
-                                    </td>
-                                </tr>                                
-                                                               
-                            </tbody>
-                        </table>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
                         </UiCard>
 
                         <!-- Dropdown menu -->
@@ -299,7 +299,7 @@
                     </section>
                     <UiCard v-if="showItemsPanel">
                         <div class="grid grid-cols-2 gap-4">
-                            <o-field label="วันที่ต้องการใช้เงิน">
+                            <o-field label="วันที่ใบเสร็จ">
                                 <div class="relative ">
                                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                         <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -333,6 +333,30 @@
                                     <option value="1%">ค่าน้ำมันรถ</option>
                                 </o-select>
                             </o-field>
+                            <o-field label="อัพโหลดใบเสร็จรับเงิน">
+                                <div class="flex items-center justify-center w-full">
+                                    <label for="dropzone-file"
+                                        class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                            <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                                                </path>
+                                            </svg>
+                                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                                                <span class="font-semibold">Click to upload</span> or drag
+                                                and drop
+                                            </p>
+                                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                                (ใบเสร็จรับเงิน) PDF, PNG, JPG
+                                            </p>
+                                        </div>
+                                        <input id="dropzone-file" type="file" class="hidden" />
+                                    </label>
+                                </div>
+                            </o-field>
                         </div>
 
                         <section>
@@ -344,7 +368,7 @@
             </div>
         </o-step-item>
         <o-step-item step="3" label="ยืนยัน" :clickable="true" icon="user-plus">
-            <PaperEstimate_paper id="papertax"></PaperEstimate_paper>
+            <PaperEstimatePaper id="papertax"></PaperEstimatePaper>
             <div class="flex justify-center mt-3">
                 <o-button @click="print" variant="info">
                     <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>

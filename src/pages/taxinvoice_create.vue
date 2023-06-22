@@ -378,11 +378,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <o-table :data="data">
-                                <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
-                                    {{ row[column] }}
-                                </o-table-column>
-                            </o-table>
+                            <o-field class="mb-5" label="รายการที่เลือก">
+                                <o-table :data="data">
+                                    <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
+                                        {{ row[column] }}
+                                    </o-table-column>
+                                </o-table>
+                            </o-field>
+                            <o-field class="mb-5" label="รายการที่ไม่ได้เลือก">
+                                <o-table :data="data">
+                                    <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
+                                        {{ row[column] }}
+                                    </o-table-column>
+                                </o-table>
+                            </o-field>
+
                             <section v-if="!showItemslist" class="mt-4">
                                 <o-button @click="showItemsPanel = true">เพิ่มรายการ</o-button>
                             </section>
@@ -443,7 +453,7 @@
             </div>
         </o-step-item>
         <o-step-item step="3" label="ยืนยัน" :clickable="true" icon="user-lock">
-            <PaperTaxinvoice_paper id="papertax"></PaperTaxinvoice_paper>
+            <PaperTaxinvoicePaper id="papertax"></PaperTaxinvoicePaper>
             <div class="flex justify-center mt-3">
                 <o-button @click="print" variant="info">
                     <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>
