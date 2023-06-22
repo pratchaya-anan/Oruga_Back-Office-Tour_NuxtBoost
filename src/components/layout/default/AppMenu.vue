@@ -6,7 +6,7 @@
       </NuxtLink>
     </li>
     <li>
-      <MenuDropDown label="Report" icon-name="mdi:file-document">
+      <MenuDropDown label="รายงาน" icon-name="mdi:file-document">
         <MenuDropItem>
           <NuxtLink to="/reportday"> รายวัน </NuxtLink>
         </MenuDropItem>
@@ -16,6 +16,48 @@
         <MenuDropItem>
           <NuxtLink to="/reportyear"> รายปี </NuxtLink>
         </MenuDropItem>
+      </MenuDropDown>
+    </li>
+    <li>
+      <MenuDropDown label="เอกสาร" icon-name="fluent:receipt-money-24-filled">
+        <MenuDropItem
+          ><NuxtLink to="/quotation_list"> ใบเสนอราคา </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/billing_list">
+            ใบวางบิล/ใบแจ้งหนี้
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/taxinvoice_list">
+            ใบกำกับภาษี
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/receipt_list">
+            ใบเสร็จรับเงิน
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/cashreceipt_list">
+            ใบสำคัญรับเงิน
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/bill_list">
+            ใบประมาณการเบิกเงินสดย่อย
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="#">
+            ใบเคลียร์ประมาณการเบิกเงินสดย่อย
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="cashcertificate_list">
+            ใบรับรองแทนใบเสร็จรับเงิน
+          </NuxtLink></MenuDropItem
+        >
       </MenuDropDown>
     </li>
     <li>
@@ -34,37 +76,6 @@
     </li>
     <li>
       <MenuItem icon-name="mdi:forum" badge="4">Messages</MenuItem>
-    </li>
-    <li>
-      <MenuDropDown
-        label="Documents"
-        icon-name="fluent:receipt-money-24-filled"
-      >
-        <MenuDropItem
-          ><NuxtLink to="/quotation_list"> ใบเสนอราคา </NuxtLink></MenuDropItem
-        >
-        <MenuDropItem
-          ><NuxtLink to="#"> ใบวางบิล/ใบแจ้งหนี้ </NuxtLink></MenuDropItem
-        >
-        <MenuDropItem><NuxtLink to="#"> ใบกำกับภาษี </NuxtLink></MenuDropItem>
-        <MenuDropItem
-          ><NuxtLink to="#"> ใบเสร็จรับเงิน </NuxtLink></MenuDropItem
-        >
-        <MenuDropItem
-          ><NuxtLink to="#"> ใบสำคัญรับเงิน </NuxtLink></MenuDropItem
-        >
-        <MenuDropItem
-          ><NuxtLink to="#"> ใบประมาณการเบิกเงินสดย่อย </NuxtLink></MenuDropItem
-        >
-        <MenuDropItem
-          ><NuxtLink to="#">
-            ใบเคลียร์ประมาณการเบิกเงินสดย่อย
-          </NuxtLink></MenuDropItem
-        >
-        <MenuDropItem
-          ><NuxtLink to="#"> ใบรับรองแทนใบเสร็จรับเงิน </NuxtLink></MenuDropItem
-        >
-      </MenuDropDown>
     </li>
     <li>
       <MenuDropDown label="Authentication" icon-name="mdi:lock">
