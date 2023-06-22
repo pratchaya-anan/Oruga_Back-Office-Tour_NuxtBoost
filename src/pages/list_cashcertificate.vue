@@ -1,12 +1,12 @@
 <template>
     <section>
-        <LayoutPageTitle>รายการใบเคลียร์</LayoutPageTitle>
+        <LayoutPageTitle>รายการใบรับรองแทนใบเสร็จ</LayoutPageTitle>
 
         <UiManageBar>
-            <NuxtLink to="clearBill" type="button"
+            <NuxtLink to="cashcertificate_create" type="button"
                 class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center">
                 <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:plus"></Icon>
-                สร้างใบเคลียร์
+                สร้างใบรับรองแทนใบเสร็จ
             </NuxtLink>
         </UiManageBar>
 
@@ -32,15 +32,11 @@
                     </p>
                     <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
                         <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:baseline-date-range"></Icon>
-                        5825-99868
+                        องค์การบริหารส่วนตำบลโพนงาม
                     </p>
                     <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
                         <Icon class="mr-3 -ml-1 w-5 h-5" name="majesticons:money-line"></Icon>
-                        เบิกจ่ายทัวร์องค์การบริหารส่วนตำบลโพนงาม
-                    </p>
-                    <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-                        <Icon class="mr-3 -ml-1 w-5 h-5" name="majesticons:money-line"></Icon>
-                        นายกล้วยหอม หวีน้ำว้า
+                        1023456789123
                     </p>
                 </div>
                 <div>
@@ -122,11 +118,11 @@
                                         </div>
                                         <div>
                                             <Icon class="mr-3 -ml-1 w-5 h5" name="majesticons:money-line"></Icon>
-                                            59,920.00
+                                            องค์การบริหารส่วนตำบลโพนงาม
                                         </div>
                                         <div>
                                             <Icon class="mr-3 -ml-1 w-5 h5" name="teenyicons:id-solid"></Icon>
-                                            020202
+                                            1023456789123
                                         </div>
                                         <div>
                                             <Icon class="mr-3 -ml-1 w-5 h5" name="mdi:address-marker"></Icon>
@@ -134,7 +130,7 @@
                                         </div>
                                         <div>
                                             <Icon class="mr-3 -ml-1 w-5 h5" name="ic:baseline-email"></Icon>
-                                            somchai@gmail.com
+                                            21 เมษายน 2566 ถึง 24 เมษายน 2566
                                         </div>
 
                                     </diV>
@@ -142,26 +138,12 @@
                                     <diV>
                                         <div>
                                             <Icon class="mr-3 -ml-1 w-5 h-5" name="tabler:user-code"></Icon>
-                                            C-58015259
+                                            ผู้อนุมัติ
                                         </div>
                                         <div>
                                             <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:user"></Icon>
-                                            สมชัย ใจเกินร้อย
+                                            สรสิริ สายบุตร
                                         </div>
-                                        <div>
-                                            <Icon class="mr-3 -ml-1 w-5 h-5"
-                                                name="fluent-emoji-high-contrast:department-store"></Icon>
-                                            การตลาด
-                                        </div>
-                                        <div>
-                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:date-range"></Icon>
-                                            31/03/2566
-                                        </div>
-                                        <div>
-                                            <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:date-range"></Icon>
-                                            02-04-2566
-                                        </div>
-
                                     </diV>
                                     <div class="flex justify-end">
                                         <!-- <NuxtLink to="/paper/billing_paper"> -->
