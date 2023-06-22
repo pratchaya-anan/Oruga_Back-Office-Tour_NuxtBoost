@@ -729,11 +729,16 @@
                   >Thai</span
                 >
                 <div class="flex justify-center">
-                  <Icon
-                    class="text-xl font-medium text-gray-500 dark:text-white"
-                    name="mingcute:cake-fill"
-                  >
-                  </Icon>
+                  <div>
+                    <Icon
+                      class="w-6 h-6 rounded-full text-xl font-medium text-gray-500 dark:text-white"
+                      name="mingcute:cake-fill"
+                    >
+                    </Icon>
+                    <div
+                      class="flex absolute justify-center items-center ml-4 -mt-2 w-2 h-2 rounded-full border border-white bg-blue-500 dark:border-gray-700"
+                    ></div>
+                  </div>
                   <Icon
                     class="text-xl font-medium text-gray-500 dark:text-white"
                     name="mdi:credit-card-remove-outline"

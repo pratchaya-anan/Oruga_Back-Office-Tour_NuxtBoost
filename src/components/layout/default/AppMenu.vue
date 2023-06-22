@@ -40,9 +40,30 @@
         label="Documents"
         icon-name="fluent:receipt-money-24-filled"
       >
-        <MenuDropItem>Sign In</MenuDropItem>
-        <MenuDropItem>Sign Up</MenuDropItem>
-        <MenuDropItem>Forgot Password</MenuDropItem>
+        <MenuDropItem
+          ><NuxtLink to="/quotation_list"> ใบเสนอราคา </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="#"> ใบวางบิล/ใบแจ้งหนี้ </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem><NuxtLink to="#"> ใบกำกับภาษี </NuxtLink></MenuDropItem>
+        <MenuDropItem
+          ><NuxtLink to="#"> ใบเสร็จรับเงิน </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="#"> ใบสำคัญรับเงิน </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="#"> ใบประมาณการเบิกเงินสดย่อย </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="#">
+            ใบเคลียร์ประมาณการเบิกเงินสดย่อย
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="#"> ใบรับรองแทนใบเสร็จรับเงิน </NuxtLink></MenuDropItem
+        >
       </MenuDropDown>
     </li>
     <li>
