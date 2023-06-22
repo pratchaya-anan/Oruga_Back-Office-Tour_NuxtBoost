@@ -493,7 +493,7 @@
             </div>
         </o-step-item>
         <o-step-item step="3" label="ยืนยัน" :clickable="true" icon="user-lock">
-            <PaperTaxinvoice_paper id="papertax"></PaperTaxinvoice_paper>
+            <PaperTaxinvoicePaper id="papertax"></PaperTaxinvoicePaper>
             <div class="flex justify-center mt-3">
                 <o-button @click="print" variant="info">
                     <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>

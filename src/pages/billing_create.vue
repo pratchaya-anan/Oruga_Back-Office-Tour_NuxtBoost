@@ -28,7 +28,7 @@
             </UiCard>
         </o-step-item>
         <o-step-item step="2" label="ยืนยัน" :clickable="true" icon="user-lock">
-            <PaperBilling_paper id="papertax"></PaperBilling_paper>
+            <PaperBillingPaper id="papertax"></PaperBillingPaper>
             <div class="flex justify-center mt-3">
                 <o-button @click="print" variant="info">
                     <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>
