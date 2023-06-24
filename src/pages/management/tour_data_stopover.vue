@@ -148,7 +148,7 @@
                     เช็คความพร้อม
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                    <a href="#" @click="isItemModalHotelData = true" class="text-blue-500 hover:text-blue-700">Edit</a>
                   </td>
                 </tr>
                 <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
@@ -169,7 +169,7 @@
                     เช็คความพร้อม
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                    <a href="#" @click="isItemModalHotelData = true" class="text-blue-500 hover:text-blue-700">Edit</a>
                   </td>
                 </tr>
                 <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
@@ -356,6 +356,73 @@
             </table>
           </div>
         </UiCard>
+        <o-modal v-model:active="isItemModalHotelData">
+          <UiCard>
+            <div class="flex justify-end">
+              <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
+                ? (editHotel = true)
+                : (editHotel = false)">
+              </Icon>
+            </div>
+            <div class="p-2 grid grid-cols-2 gap-0">
+              <div class="w-full border-r">
+                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                  บ้านหนองผือ
+                </h2>
+                <div class="px-2" v-if="!editHotel">
+                  <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white">บ้านหนองผือ ตำบลหนองผือ อำเภอชานุมาน อำนาจเจริญ 37000</p>
+                  <p class="text-base font-semibold  dark:text-white">ประเภทจุดแวะพัก</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white">จุดนัดหมาย</p>
+                  <p class="text-base font-semibold  dark:text-white">ชื่อผู้ติดต่อ</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white">นายธงไทย ธาตุทอง</p>
+                  <p class="text-base font-semibold  dark:text-white">เบอร์โทร</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white">0652224747</p>
+                </div>
+                <div class="px-2" v-if="editHotel">
+                  <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
+                  <o-input type="text" modelValue="บ้านหนองผือ ตำบลหนองผือ อำเภอชานุมาน อำนาจเจริญ 37000"></o-input>
+                  <p class="text-base font-semibold  dark:text-white">ประเภทจุดแวะพัก</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white"></p>
+                  <o-input type="text" modelValue="จุดนัดหมาย"></o-input>
+                  <p class="text-base font-semibold  dark:text-white">ชื่อผู้ติดต่อ</p>
+                  <o-input type="text" modelValue="นายธงไทย ธาตุทอง"></o-input>
+                  <p class="text-base font-semibold  dark:text-white">เบอร์โทร</p>
+                  <o-input type="text" modelValue="0652224747"></o-input>
+
+                </div>
+              </div>
+              <div class="w-full ml-4">
+                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                  คอมเมนต์
+                </h2>
+                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                  <p class="col-span-2">อากาศดีมาก </p>
+                  <p class="w-full text-end">20/06/66</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                </div>
+                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                <div v-if="showComment">
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                      </o-button>
+                      <o-button class="mt-5">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </UiCard>
+        </o-modal>
         <o-modal v-model:active="add">
           <div class="grid grid-cols-2 gap-4 p-6">
             <div class="col-span-2">
@@ -364,18 +431,13 @@
               </h2>
             </div>
             <div>
-              <o-field label="วันเข้าพัก">
+              <o-field label="วันที่เดินทาง">
                 <o-input></o-input>
               </o-field>
             </div>
             <div>
-              <o-field label="วันออก">
+              <o-field label="เวลาจุดนัดหมาย">
                 <o-input></o-input>
-              </o-field>
-            </div>
-            <div class="col-span-2">
-              <o-field label="จำนวนห้องพัก">
-                <o-input type="number"></o-input>
               </o-field>
             </div>
             <div class="col-span-2">
@@ -395,6 +457,11 @@ import { initFlowbite } from 'flowbite';
 
 onMounted(() => { initFlowbite() });
 
+const showComment = ref(false);
+const isItemModalHotelData = ref(false);
 const add = ref(false);
-const isItemModalUserData = ref(false);
+const editHotel = ref(false);
+const delete1 = ref(false);
+const delete2 = ref(false);
+const delete3= ref(false);
 </script>
