@@ -2,13 +2,13 @@
   <section class="min-h-screen">
     <LayoutPageTitle> สร้างทัวร์ / จัดทัวร์ </LayoutPageTitle>
     <o-steps variant="success">
+      <!-- 1 ทัวร์ -->
       <o-step-item
         step="1"
         label="ข้อมูลทัวร์"
         :clickable="true"
         icon="user-lock"
       >
-        <!-- 1 ทัวร์ -->
         <section>
           <div class="col-span-2">
             <UiCard>
@@ -143,8 +143,8 @@
           </div> -->
         </section>
       </o-step-item>
+      <!-- 2 ไกด์ -->
       <o-step-item step="2" label="ข้อมูลไกด์" :clickable="true" icon="user">
-        <!-- 2 ไกด์ -->
         <section class="h-m-screen">
           <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
             <div class="col-span-full xl:col-auto mb-4">
@@ -369,13 +369,13 @@
           </div>
         </section>
       </o-step-item>
+      <!-- 3 โรงแรม -->
       <o-step-item
         step="3"
         label="ข้อมูลโรงแรม"
         :clickable="true"
         icon="user-plus"
       >
-        <!-- 3 โรงแรม -->
         <section class="h-m-screen">
           <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
             <div class="col-span-full xl:col-auto mb-4">
@@ -584,13 +584,13 @@
           </div>
         </section>
       </o-step-item>
+      <!-- 4 พาหนะ -->
       <o-step-item
         step="4"
         label="ข้อมูลพหนะ"
         :clickable="true"
         icon="user-plus"
       >
-        <!-- 4 พาหนะ -->
         <section class="h-m-screen">
           <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
             <div class="col-span-full xl:col-auto mb-4">
