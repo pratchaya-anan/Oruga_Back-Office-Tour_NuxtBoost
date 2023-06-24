@@ -21,41 +21,43 @@
     <li>
       <MenuDropDown label="เอกสาร" icon-name="fluent:receipt-money-24-filled">
         <MenuDropItem
-          ><NuxtLink to="/quotation_list"> ใบเสนอราคา </NuxtLink></MenuDropItem
+          ><NuxtLink to="/paper_list/quotation_list">
+            ใบเสนอราคา
+          </NuxtLink></MenuDropItem
         >
         <MenuDropItem
-          ><NuxtLink to="/billing_list">
+          ><NuxtLink to="/paper_list/billing_list">
             ใบวางบิล/ใบแจ้งหนี้
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem
-          ><NuxtLink to="/taxinvoice_list">
+          ><NuxtLink to="/paper_list/taxinvoice_list">
             ใบกำกับภาษี
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem
-          ><NuxtLink to="/receipt_list">
+          ><NuxtLink to="/paper_list/receipt_list">
             ใบเสร็จรับเงิน
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem
-          ><NuxtLink to="/cashreceipt_list">
+          ><NuxtLink to="/paper_list/cashreceipt_list">
             ใบสำคัญรับเงิน
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem
-          ><NuxtLink to="/disbursement_list">
-            ใบประมาณการเบิกเงินสดย่อย
+          ><NuxtLink to="/paper_list/disbursement_list">
+            ใบขอเบิกเบิก
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem
-          ><NuxtLink to="/estimate_clear_list">
-            ใบเคลียร์ประมาณการเบิกเงินสดย่อย
+          ><NuxtLink to="/paper_list/estimate_list">
+            ใบเคลียร์เงินสดย่อย
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem
-          ><NuxtLink to="cashcertificate_list">
-            ใบรับรองแทนใบเสร็จรับเงิน
+          ><NuxtLink to="/paper_list/cashcertificate_list">
+            ใบรับรองแทนใบเสร็จ
           </NuxtLink></MenuDropItem
         >
       </MenuDropDown>
