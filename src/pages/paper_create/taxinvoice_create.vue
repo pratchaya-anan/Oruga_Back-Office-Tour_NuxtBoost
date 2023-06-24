@@ -1,20 +1,25 @@
 <template>
-    <LayoutPageTitle>Taxinvoice/สร้างใบกำกับภาษี</LayoutPageTitle>
+    <LayoutPageTitle> Taxinvoice / สร้างใบกำกับภาษี </LayoutPageTitle>
     <o-steps v-model="steps" variant="success">
         <o-step-item step="1" label="เลือก" :clickable="true" icon="user-plus">
             <UiCard>
-                <div class="flex">
-                    <o-input placeholder="ค้นหา ชื่อลูกค้า , รหัสลูกค้า"></o-input>
-                    <div class="px-2">
-                        <o-button>ค้นหา</o-button>
+                    <div class="flex items-center">
+                    <div class="relative w-full">
+                        <o-input placeholder="ค้นหา ชื่อลูกค้า , รหัสลูกค้า" class="w-full"></o-input>
+                    </div>
+                    <div  class="ml-2">
+                        <o-button @click="showListItem=true">ค้นหา</o-button>
                     </div>
                 </div>
-                <o-table :data="data" v-model:selected="selected">
+
+                <div v-if="showListItem">
+                    <o-table :data="data" v-model:selected="selected">
                     <o-table-column @click="isImageModalActive = true" v-for="column in columns" v-bind="column"
                         #default="{ row }">
                         {{ row[column.field] }}
                     </o-table-column>
                 </o-table>
+                </div>
             </UiCard>
 
 
@@ -28,7 +33,30 @@
                 </o-table>
             </UiCard>
         </o-step-item>
-        <o-step-item step="3" label="ข้อมูล" :clickable="true" icon="user-lock">
+        <o-step-item step="3" label="เลือกทัวร์" :clickable="true" icon="user-plus">
+            <UiCard>
+                <div class="flex items-center">
+                    <div class="relative w-full">
+                        <o-input placeholder="ค้นหา ชื่อลูกค้า , รหัสลูกค้า" class="w-full"></o-input>
+                    </div>
+                    <div  class="ml-2">
+                        <o-button @click="showListTour=true">ค้นหา</o-button>
+                    </div>
+                </div>
+                
+                <div v-if="showListTour">
+                    <o-table :data="data" v-model:selected="selected">
+                    <o-table-column @click="isImageModalActive = true" v-for="column in columns" v-bind="column"
+                        #default="{ row }">
+                        {{ row[column.field] }}
+                    </o-table-column>
+                </o-table>
+                </div>
+            </UiCard>
+
+
+        </o-step-item>
+        <o-step-item step="4" label="ข้อมูล" :clickable="true" icon="user-lock">
             <UiCard class="mb-3">
                 <div class="p-5">
                     <div>
@@ -203,6 +231,8 @@ const showItemslist = ref(false);
 const isImageModalActive = ref(false);
 const showcheck = ref('');
 const selected = ref();
+const showListItem = ref(false);
+const showListTour = ref(false);
 
 function setnull() {
     selected.value = null;
