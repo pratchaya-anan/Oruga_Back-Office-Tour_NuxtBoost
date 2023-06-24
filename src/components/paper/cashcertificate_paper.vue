@@ -27,7 +27,7 @@
       <div class="col-span-2 grid grid-cols-3 m-5 w-full text-xs">
         <div class="col-span-1 font-bold">ชื่อน่วยงาน (ผู้ซื้อ/ผู้รับบริการ):</div>
         <div class="col-span-2 ">ศศิศ วิรัตน์จินดา</div>
-        <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษี:</div>
+        <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษ:</div>
         <div class="col-span-2 ">1023456789123</div>
         <div class="col-span-1 font-bold">ที่อยู่:</div>
         <div class="col-span-2 ">111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>

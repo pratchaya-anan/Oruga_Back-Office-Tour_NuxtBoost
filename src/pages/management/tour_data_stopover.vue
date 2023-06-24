@@ -16,25 +16,20 @@
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
-                  5 วัน 4 คืน
+                  4 วัน 3 คืน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="line-md:calendar"></Icon>
-                  16/04/2566 &#32;
-                  <Icon class="w-5 h-5  mr-1" name="line-md:arrow-right"></Icon>
-                  &#32; 16/04/2566
+                  21/04/2566
+                  <Icon class="w-5 h-5  mx-1" name="line-md:arrow-right"></Icon>
+                  24/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   <Icon class="w-6 h-6  mr-1" name="fluent:people-audience-24-filled"></Icon>
-                  35 คน
+                  23 คน
                 </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon
-                    class="w-6 h-6 mr-1"
-                    name="fluent:comment-error-16-filled"
-                  ></Icon>
+                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                  <Icon class="w-6 h-6  mr-1" name="fluent:comment-error-16-filled"></Icon>
                   สนุกดี
                 </li>
               </ul>
@@ -42,17 +37,53 @@
           </div>
         </UiCard>
         <UiCard>
-          <h2 class="mb-2 text-xl font-bold dark:text-white">จุดแวะพัก</h2>
+          <h2 class="mb-2 text-xl font-bold dark:text-white">
+            จุดแวะพัก
+          </h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-4">
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">16 April
-                2022</time>
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
+                2566</time>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">บ้านหนองผือ</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จุดนัดหมาย เวลา 05:00 น.</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ตม.มุขดาหาร</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เวลา 10:20 น.</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">หน้าด่านข้ามประเทศ เวลา 12:00 น.</p>
+            </li>
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
+                2566</time>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">บาน่าฮิว</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จุดชมวิว เวลา 12:00 น.</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">สะพานมือทอง</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จุดชมวิว เวลา 14:00 น.</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">สวนดอกไม้</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จุดชมวิว เวลา 16:00 น.</p>
+            </li>
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
+                2566</time>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">พระราชวังได๋โหน๋ย</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">สถานที่ท่องเทียว เวลา 9:00 น.</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ตลาดดงบา</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">ตลาด เวลา 13:00 น.</p>
+            </li>
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">24 เมษายน
+                2566</time>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ด่านสะหวันนะเขต</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">หน้าด่านข้ามประเทศ เวลา 14:00 น.</p>
             </li>
           </ol>
           <div class="mt-2 flex justify-end">
@@ -70,42 +101,59 @@
               </div>
             </div>
             <div class="flex justify-end">
+
               <o-button>+ เพิ่มยานพาหนะ</o-button>
             </div>
           </div>
           <div class="relative overflow-x-auto border shadow-md sm:rounded-lg">
-            <table
-              class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-            >
-              <thead
-                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-              >
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" class="px-3 py-3">
                     ลำดับ
                   </th>
                   <th scope="col" class="px-3 py-3">
-                    ชื่อยานพาหนะ
+                    จุดแวะพัก
+                  </th>
+                  <th scope="col" class="px-3 py-3">
+                    ประเภทจุดแวะพัก
                   </th>
                   <th scope="col" class="px-3 py-3">
                     ที่อยู่
                   </th>
-                  <th scope="col" class="px-3 py-3">
-                    เบอร์ติดต่อ
-                  </th>
                   <th scope="col" class="px-3 py-3 text-center items-center">
                     คอมเมนต์
                   </th>
-                  <th
-                    scope="col"
-                    class="px-3 py-3 text-center items-center"
-                  ></th>
+                  <th scope="col" class="px-3 py-3 text-center items-center">
+
+                  </th>
                 </tr>
               </thead>
               <tbody @click="add = true">
                 <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
                   <th class="px-3 py-3">
                     1
+                  </th>
+                  <td class="px-3 py-3">
+                    บ้านหนองผือ
+                  </td>
+                  <td class="px-3 py-3">
+                    จุดนัดหมาย
+                  </td>
+                  <td class="px-3 py-3">
+                    บ้านหนองผือ ตำบลหนองผือ อำเภอชานุมาน อำนาจเจริญ 37000
+                  </td>
+
+                  <td class="px-3 py-3 text-center items-center">
+                    เช็คความพร้อม
+                  </td>
+                  <td class="px-3 py-3 text-center items-center">
+                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                  </td>
+                </tr>
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th class="px-3 py-3">
+                    2
                   </th>
                   <td class="px-3 py-3">
                     ตม.มุขดาหาร
@@ -295,10 +343,10 @@
                     หน้าด่านข้ามประเทศ
                   </td>
                   <td class="px-3 py-3">
-                    0428976765
+                    ด่าน
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    ปานกลาง
+                    ไม่มี
                   </td>
                   <td class="px-3 py-3 text-center items-center">
                     <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
@@ -311,9 +359,7 @@
         <o-modal v-model:active="add">
           <div class="grid grid-cols-2 gap-4 p-6">
             <div class="col-span-2">
-              <h2
-                class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
-              >
+              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                 เลือกวันเข้าพัก
               </h2>
             </div>
@@ -334,23 +380,20 @@
             </div>
             <div class="col-span-2">
               <div class="flex justify-end">
-                <o-button size="medium" variant="primary" @click="add = false">
-                  บันทึก
-                </o-button>
+                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
               </div>
             </div>
           </div>
+
         </o-modal>
       </div>
     </div>
   </section>
 </template>
 <script setup lang="ts">
-import { initFlowbite } from "flowbite";
+import { initFlowbite } from 'flowbite';
 
-onMounted(() => {
-  initFlowbite();
-});
+onMounted(() => { initFlowbite() });
 
 const add = ref(false);
 const isItemModalUserData = ref(false);

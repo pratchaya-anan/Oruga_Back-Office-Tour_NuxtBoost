@@ -1,8 +1,6 @@
 <template>
   <section>
-    <div
-      class="w-[210mm] h-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow"
-    >
+    <div class="w-[210mm] h-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow">
       <div class="grid grid-rows-2 m-5">
         <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo" />
         <div class="grid grid-cols-3 text-sm">
@@ -77,7 +75,7 @@
             <th>ภาษี</th>
             <th>จำนวนเงิน</th>
           </tr>
-          <tr class="h-10 text-xs" v-for="item in 8" :key="item">
+          <tr class="h-10 text-xs" v-for="item in 8">
             <td>1</td>
             <td>14778854</td>
             <td>ห้องพักและรถเดินทาง</td>
@@ -152,21 +150,21 @@
     </div>
   </section>
 
-  <div class="flex justify-center mt-3">
+  <!-- <div class="flex justify-center mt-3">
     <o-button variant="info">
-      <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"></Icon>
+      <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>
       พิมพ์
     </o-button>
     <NuxtLink to="quotation_list">
-      <o-button> บันทึก </o-button>
+      <o-button>
+        บันทึก
+      </o-button>
     </NuxtLink>
-  </div>
+  </div> -->
 </template>
 
 <script setup lang="ts">
-import { initFlowbite } from "flowbite";
+import { initFlowbite } from 'flowbite';
 
-onMounted(() => {
-  initFlowbite();
-});
+onMounted(() => { initFlowbite() });
 </script>

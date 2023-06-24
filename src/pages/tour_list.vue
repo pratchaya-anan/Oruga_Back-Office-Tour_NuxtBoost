@@ -18,7 +18,8 @@
         class="hover:bg-gray-100 tracking-tight cursor-pointer"
         v-for="item in 10"
         :key="item"
-        ><div class="grid grid-cols-2">
+      >
+        <div class="grid grid-cols-2">
           <div
             class="text-lg font-nolmal tracking-tight text-gray-900 dark:text-white"
           >

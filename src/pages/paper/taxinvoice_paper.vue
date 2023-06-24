@@ -1,8 +1,10 @@
 <template>
   <section>
-    <div class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow">
+    <div
+      class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow"
+    >
       <div class="grid grid-rows-2 m-5">
-        <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo">
+        <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo" />
         <div class="grid grid-cols-3 text-sm">
           <div class="col-span-2">
             <div>ห้างหุ้นส่วนจำกัด นิลผกา</div>
@@ -13,9 +15,13 @@
 
           <!-- ชื่อใบ/ข้อมูลใบ -->
           <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบกำกับภาษี/ใบส่งของ</div>
+            <div class="col-span-3 font-bold text-center text-base">
+              ใบกำกับภาษี/ใบส่งของ
+            </div>
             <div class="col-span-3 text-center">Tax Invoice/Delivery Order</div>
-            <div class="col-span-3 text-center text-[11px]">ต้นฉบับ/Original (เอกสารออกเป็นชุด)</div>
+            <div class="col-span-3 text-center text-[11px]">
+              ต้นฉบับ/Original (เอกสารออกเป็นชุด)
+            </div>
             <div class="font-bold">เลขที่:</div>
             <div class="col-span-2 text-right">0841142174178</div>
             <div class="font-bold">วันที่:</div>
@@ -23,31 +29,47 @@
           </div>
         </div>
       </div>
-      <hr class="col-span-3 mx-5">
+      <hr class="col-span-3 mx-5" />
 
       <!-- ข้อมูลฝั่งซ้าย -->
-      <div class="col-span-2 grid grid-cols-3 m-5  text-xs">
+      <div class="col-span-2 grid grid-cols-3 m-5 text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
-            <div class="col-span-2 ">ศศิศ วิรัตน์จินดา</div>
+            <div class="col-span-2">ศศิศ วิรัตน์จินดา</div>
             <div class="col-span-1 font-bold">ที่อยู่:</div>
-            <div class="col-span-2 ">111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
+            <div class="col-span-2">
+              111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+            </div>
             <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษี:</div>
-            <div class="col-span-2 ">4585695214526</div>
+            <div class="col-span-2">4585695214526</div>
             <div class="flex items-center">
-              <input id="default-checkbox" type="checkbox" value=""
-                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-              <label for="default-checkbox"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">สำนักงานใหญ่</label>
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="default-checkbox"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >สำนักงานใหญ่</label
+              >
             </div>
             <div class="flex items-center">
-              <input checked id="checked-checkbox" type="checkbox" value=""
-                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-              <label for="checked-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">สาขาที่:
-                บ้านใหญ่</label>
+              <input
+                checked
+                id="checked-checkbox"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="checked-checkbox"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >สาขาที่: บ้านใหญ่</label
+              >
             </div>
-
           </div>
         </div>
 
@@ -99,11 +121,14 @@
         <div class="col-span-2">
           <div class="font-bold">หมายเหตุ:</div>
           <div class="text-xs">
-            - หากสินค้าไม่ครบถ้วนกรุณาแจ้งกลับบริษัทฯ ภายใน 7 วัน หลังจากได้รับสินค้าแล้ว มิฉะนั้นบริษัทฯ จะไม่รับผิดชอบใด
-            ๆ ทั้งสิ้น <br>
-            - กรรมสิทธิ์สินค้าตามใบส่งของนี้ยังถือว่าเป็นของผู้ขายอยู่จนกว่าผู้ซื้อจะได้ชำระเงินหรือเช็คขึ้นเงินเรียบร้อย
-            <br>
-            - หากชำระเงินด้วยเช็คโปรดขีดคร่อมในนาม “บริษัทนิลผกาทัวร์จำกัด” และขีดฆ่าหรือผู้ถือออก
+            - หากสินค้าไม่ครบถ้วนกรุณาแจ้งกลับบริษัทฯ ภายใน 7 วัน
+            หลังจากได้รับสินค้าแล้ว มิฉะนั้นบริษัทฯ จะไม่รับผิดชอบใด ๆ ทั้งสิ้น
+            <br />
+            -
+            กรรมสิทธิ์สินค้าตามใบส่งของนี้ยังถือว่าเป็นของผู้ขายอยู่จนกว่าผู้ซื้อจะได้ชำระเงินหรือเช็คขึ้นเงินเรียบร้อย
+            <br />
+            - หากชำระเงินด้วยเช็คโปรดขีดคร่อมในนาม “บริษัทนิลผกาทัวร์จำกัด”
+            และขีดฆ่าหรือผู้ถือออก
           </div>
           <div class="flex">
             <div class="font-black w-30">ตัวอักษร:</div>
@@ -146,24 +171,23 @@
           <div class="mb-5">วันที่</div>
         </div>
       </div>
-
     </div>
   </section>
   <div class="flex justify-center mt-3">
     <o-button variant="info">
-      <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>
+      <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"></Icon>
       พิมพ์
     </o-button>
     <NuxtLink to="quotation_list">
-      <o-button>
-        บันทึก
-      </o-button>
+      <o-button> บันทึก </o-button>
     </NuxtLink>
   </div>
 </template>
 
 <script setup lang="ts">
-import { initFlowbite } from 'flowbite';
+import { initFlowbite } from "flowbite";
 
-onMounted(() => { initFlowbite() });
+onMounted(() => {
+  initFlowbite();
+});
 </script>

@@ -1,17 +1,15 @@
 <template>
   <section>
-    <LayoutPageTitle>
-      Estimate Clear / รายการใบเคลียร์ประมาณการเงินสดย่อย
-    </LayoutPageTitle>
+    <LayoutPageTitle> Disbursement Estimate / รายการใบขอเบิก </LayoutPageTitle>
 
     <UiManageBar>
       <NuxtLink
-        to="clearBill"
+        to="bill_payment"
         type="button"
         class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
       >
         <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:plus"></Icon>
-        สร้างใบเคลียร์
+        สร้างใบเบิกค่าใช้จ่าย
       </NuxtLink>
     </UiManageBar>
 
@@ -45,21 +43,14 @@
               class="mr-3 -ml-1 w-5 h-5"
               name="ic:baseline-date-range"
             ></Icon>
-            5825-99868
+            24-03-2566
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="majesticons:money-line"
             ></Icon>
-            เบิกจ่ายทัวร์องค์การบริหารส่วนตำบลโพนงาม
-          </p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon
-              class="mr-3 -ml-1 w-5 h-5"
-              name="majesticons:money-line"
-            ></Icon>
-            นายกล้วยหอม หวีน้ำว้า
+            เพื่อจ่ายเงิน
           </p>
         </div>
         <div>
@@ -244,19 +235,16 @@
                           class="mr-3 -ml-1 w-5 h-5"
                           name="mdi:paper-edit"
                         ></Icon>
-                        แก้ไขใบเคลียร์ประมาณการ
+                        แก้ไขใบขอเบิก
                       </o-button>
                     </a>
-                    <a href="/paper/disbursement_paper_paper">
+                    <a href="/paper/disbursement_paper">
                       <o-button
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h-5"
-                          name="mingcute:eye-2-fill"
-                        >
+                        <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
                         </Icon>
-                        ดูใบเคลียร์ประมาณการ
+                        พิมพ์ใบขอเบิก
                       </o-button>
                     </a>
                   </div>
