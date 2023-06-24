@@ -1,5 +1,5 @@
 <template>
-  <LayoutPageTitle> Billing / สร้างใบวางบิล </LayoutPageTitle>
+  <LayoutPageTitle> Disbursement / ใบประมาณการเบิกเงินสดย่อย </LayoutPageTitle>
   <o-steps v-model="steps" variant="success">
     <o-step-item step="1" label="เลือก" :clickable="true" icon="user-plus">
       <UiCard>
@@ -50,69 +50,31 @@
       <UiCard class="mb-3">
         <div class="p-5">
           <div>
-            <label class="text-2xl font-medium">ข้อมูลลูกค้า</label>
+            <label class="text-2xl font-medium">ข้อมูลผู้ขอเบิก</label>
           </div>
           <div class="grid grid-cols-2 gap-4 mt-3">
             <div>
-              <o-field label="ชื่อลูกค้า">
+              <o-field label="ชื่อผู้ขอเบิก">
                 <o-input></o-input>
               </o-field>
             </div>
             <div>
-              <o-field label="เลขประจำตัวผู้เสียภาษี">
+              <o-field label="แผนก">
                 <o-input></o-input>
               </o-field>
             </div>
             <div>
-              <o-field label="ชื่อผู้ติดต่อ">
+              <o-field label="วัตถุประสงค์การยืม">
                 <o-input></o-input>
               </o-field>
             </div>
             <div>
-              <o-field label="เบอร์โทรศัพท์">
+              <o-field label="เงินทดลองจ่าย">
                 <o-input></o-input>
               </o-field>
             </div>
             <div>
-              <o-field label="แฟกซ์">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="ที่อยู่">
-                <o-input></o-input>
-              </o-field>
-            </div>
-          </div>
-        </div>
-      </UiCard>
-      <UiCard class="mb-3">
-        <div class="p-5">
-          <div>
-            <label class="text-2xl font-medium">ข้อมูลฝ่ายขาย</label>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <o-field label="รหัสลูกค้า">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="ผู้เสนอขาย">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="ฝ่ายขาย">
-                <o-select placeholder="การตลาด">
-                  <option value="free">การตลาด</option>
-                  <option value="1%">xxxx</option>
-                  <option value="3%">xxxx</option>
-                </o-select>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="ยืนยันราคาวันที่">
+              <o-field label="วันที่ต้องการใช้เงิน">
                 <div class="relative">
                   <div
                     class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
@@ -140,11 +102,16 @@
                 </div>
               </o-field>
             </div>
+            <div>
+              <o-field label="โครงการ">
+                <o-input></o-input>
+              </o-field>
+            </div>
           </div>
         </div>
       </UiCard>
       <div class="flex justify-end">
-        <NuxtLink to="/billing_item">
+        <NuxtLink to="/disbursement_item">
           <o-button>บันทึก</o-button>
         </NuxtLink>
       </div>
@@ -221,36 +188,3 @@ const tableData = [
 
 const data = ref(tableData);
 </script>
-
-<!-- <style>
-  
-  // function print() {
-  //     const printableContent = document.getElementById('papertax');
-  //     const printWindow = window.open('', '', 'height=1000,width=1000');
-  //     printWindow.document.write(printableContent.innerHTML);
-  //     printWindow.print();
-  // }
-@media print {
-/* header {
-  display: none;
-}
-
-footer {
-  display: none;
-} */
-
-.navbar {
-  display: none !important;
-}
-
-#page {
-  margin: 0;
-  border: initial;
-  border-radius: initial;
-  box-shadow: initial;
-  background: initial;
-  page-break-after: always;
-  print-color-adjust: exact;
-}
-}
-</style> -->
