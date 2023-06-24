@@ -1,15 +1,15 @@
 <template>
   <section>
-    <LayoutPageTitle> Billing / รายการใบวางบิล</LayoutPageTitle>
+    <LayoutPageTitle> Receipt / รายการใบเสร็จรับเงิน </LayoutPageTitle>
 
     <UiManageBar>
       <NuxtLink
-        to="/billing_create"
+        to="quotation_create"
         type="button"
         class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
       >
         <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:plus"></Icon>
-        สร้างใบวางบิล
+        สร้างใบเสร็จรับเงิน
       </NuxtLink>
     </UiManageBar>
 
@@ -196,7 +196,7 @@
                     <div>02-04-2566</div>
                   </diV>
                   <div class="mt-5 flex justify-center">
-                    <a href="/billing_create">
+                    <a href="/receipt_create">
                       <o-button
                         class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
@@ -204,19 +204,16 @@
                           class="mr-3 -ml-1 w-5 h-5"
                           name="mdi:paper-edit"
                         ></Icon>
-                        แก้ไขใบวางบิล
+                        แก้ไขใบเสร็จ
                       </o-button>
                     </a>
-                    <a href="/paper/billing_paper">
+                    <a href="/paper/receipt_paper">
                       <o-button
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h-5"
-                          name="mingcute:eye-2-fill"
-                        >
+                        <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
                         </Icon>
-                        ดูใบวางบิล
+                        พิมพ์ใบเสร็จ
                       </o-button>
                     </a>
                   </div>
