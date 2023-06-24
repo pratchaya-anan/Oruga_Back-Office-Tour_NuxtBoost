@@ -187,7 +187,38 @@
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
 
-onMounted(() => {
-  initFlowbite();
-});
+function print() {
+  window.print();
+}
+
+onMounted(() => { initFlowbite() });
 </script>
+
+<style>
+@media print {
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  #page {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+    print-color-adjust: exact;
+  }
+
+  #pagebreak {
+    clear: both;
+    page-break-after: always;
+  }
+
+  /* #page {padding: none; margin: none; border: none; box-shadow: none;} */
+}
+</style>

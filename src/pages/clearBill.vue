@@ -46,7 +46,7 @@
                                 <div>
                                     <div class="grid grid-cols-6">
                                         <div class="col-span-5">
-                                            <h2 class="text-xl font-bold dark:text-white">ใบเคียร์ประมาณการเงินสดย่อย</h2>
+                                            <h2 class="text-xl font-bold dark:text-white">ใบเคลียร์ประมาณการเงินสดย่อย</h2>
                                         </div>
                                         <div class="flex justify-end">
                                             <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit"
