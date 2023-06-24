@@ -167,7 +167,7 @@
                     ปานกลาง
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                    <a href="#" @click="isItemModalHotelData = true" class="text-blue-500 hover:text-blue-700">Edit</a>
                   </td>
                 </tr>
                 <tr>
@@ -434,6 +434,79 @@
             </table>
           </div>
         </UiCard>
+        <o-modal v-model:active="isItemModalHotelData">
+          <UiCard>
+            <div class="flex justify-end">
+              <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
+                ? (editHotel = true)
+                : (editHotel = false)">
+              </Icon>
+            </div>
+            <div class="p-2 grid grid-cols-2 gap-0">
+              <div class="w-full border-r">
+                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                  โครตอร่อย!
+                </h2>
+                <div class="px-2" v-if="!editHotel">
+                  <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white">132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง</p>
+                  <p class="text-base font-semibold  dark:text-white">เบอร์ติดต่อ</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white">0428976765</p>
+                  <p class="text-base font-semibold  dark:text-white">ประเภทร้านอาหาร</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white">อาหารทะเล</p>
+                </div>
+                <div class="px-2" v-if="editHotel">
+                  <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
+                  <o-input type="text" modelValue="132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง"></o-input>
+                  <p class="text-base font-semibold  dark:text-white">เบอร์ติดต่อ</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white"></p>
+                  <o-input type="text" modelValue="0428976765"></o-input>
+                  <p class="text-base font-semibold  dark:text-white">ประเภทร้านอาหาร</p>
+                  <o-input type="text" modelValue="อาหารทะเล"></o-input>
+
+                </div>
+              </div>
+              <div class="w-full ml-4">
+                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                  คอมเมนต์
+                </h2>
+                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                  <p class="col-span-2">เป็นอาหารที่ดีที่สุดที่เคยทานมา</p>
+                  <p class="w-full text-end">20/06/66</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                  <p class="col-span-2">กุ้งสดมากครับ</p>
+                  <p class="w-full text-end">20/06/65</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                  <p class="col-span-2">กุ้งหมดอดล้างตูด</p>
+                  <p class="w-full text-end">20/06/64</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                </div>
+                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                <div v-if="showComment">
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                      </o-button>
+                      <o-button class="mt-5">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </UiCard>
+        </o-modal>
         <o-modal v-model:active="add">
           <div class="grid grid-cols-2 gap-4 p-6">
             <div class="col-span-2">
@@ -442,18 +515,13 @@
               </h2>
             </div>
             <div>
-              <o-field label="วันเข้าพัก">
+              <o-field label="วันที่เดินทาง">
                 <o-input></o-input>
               </o-field>
             </div>
             <div>
-              <o-field label="วันออก">
+              <o-field label="เวลาเข้าร้านอาหาร">
                 <o-input></o-input>
-              </o-field>
-            </div>
-            <div class="col-span-2">
-              <o-field label="จำนวนห้องพัก">
-                <o-input type="number"></o-input>
               </o-field>
             </div>
             <div class="col-span-2">
@@ -472,6 +540,11 @@ import { initFlowbite } from 'flowbite';
 
 onMounted(() => { initFlowbite() });
 
+const showComment = ref(false);
+const isItemModalHotelData = ref(false);
 const add = ref(false);
-const isItemModalUserData = ref(false);
+const editHotel = ref(false);
+const delete1 = ref(false);
+const delete2 = ref(false);
+const delete3= ref(false);
 </script>
