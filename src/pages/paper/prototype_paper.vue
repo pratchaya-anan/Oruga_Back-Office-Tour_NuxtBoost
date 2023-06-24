@@ -69,6 +69,7 @@
             v-for="column in columns"
             v-bind="column"
             #default="{ row }"
+            :key="column"
           >
             {{ row[column.field] }}
           </o-table-column>
@@ -131,7 +132,7 @@
         </div>
       </div>
     </div>
-  
+
     <div class="w-full mt-5 flex justify-center">
       <o-button @click="print">สั่งพิมพ์ หรือ บันทึกเป็น PDF</o-button>
     </div>
@@ -139,7 +140,6 @@
 </template>
 
 <script setup lang="ts">
-
 function print() {
   window.print();
 }

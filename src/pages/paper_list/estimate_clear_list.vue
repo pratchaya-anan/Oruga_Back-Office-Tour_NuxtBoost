@@ -1,17 +1,17 @@
 <template>
   <section>
     <LayoutPageTitle>
-      Cashcertificate / รายการใบรับรองแทนใบเสร็จ
+      Estimate Clear / รายการใบเคลียร์ประมาณการเงินสดย่อย
     </LayoutPageTitle>
 
     <UiManageBar>
       <NuxtLink
-        to="cashcertificate_create"
+        to="clearBill"
         type="button"
         class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
       >
         <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:plus"></Icon>
-        สร้างใบรับรองแทนใบเสร็จ
+        สร้างใบเคลียร์
       </NuxtLink>
     </UiManageBar>
 
@@ -45,14 +45,21 @@
               class="mr-3 -ml-1 w-5 h-5"
               name="ic:baseline-date-range"
             ></Icon>
-            องค์การบริหารส่วนตำบลโพนงาม
+            5825-99868
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="majesticons:money-line"
             ></Icon>
-            1023456789123
+            เบิกจ่ายทัวร์องค์การบริหารส่วนตำบลโพนงาม
+          </p>
+          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
+            <Icon
+              class="mr-3 -ml-1 w-5 h-5"
+              name="majesticons:money-line"
+            ></Icon>
+            นายกล้วยหอม หวีน้ำว้า
           </p>
         </div>
         <div>
@@ -169,14 +176,14 @@
                         class="mr-3 -ml-1 w-5 h5"
                         name="majesticons:money-line"
                       ></Icon>
-                      องค์การบริหารส่วนตำบลโพนงาม
+                      59,920.00
                     </div>
                     <div>
                       <Icon
                         class="mr-3 -ml-1 w-5 h5"
                         name="teenyicons:id-solid"
                       ></Icon>
-                      1023456789123
+                      020202
                     </div>
                     <div>
                       <Icon
@@ -190,7 +197,7 @@
                         class="mr-3 -ml-1 w-5 h5"
                         name="ic:baseline-email"
                       ></Icon>
-                      21 เมษายน 2566 ถึง 24 เมษายน 2566
+                      somchai@gmail.com
                     </div>
                   </diV>
                   <hr class="my-5 border-1.5" />
@@ -200,15 +207,36 @@
                         class="mr-3 -ml-1 w-5 h-5"
                         name="tabler:user-code"
                       ></Icon>
-                      ผู้อนุมัติ
+                      C-58015259
                     </div>
                     <div>
                       <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:user"></Icon>
-                      สรสิริ สายบุตร
+                      สมชัย ใจเกินร้อย
+                    </div>
+                    <div>
+                      <Icon
+                        class="mr-3 -ml-1 w-5 h-5"
+                        name="fluent-emoji-high-contrast:department-store"
+                      ></Icon>
+                      การตลาด
+                    </div>
+                    <div>
+                      <Icon
+                        class="mr-3 -ml-1 w-5 h-5"
+                        name="material-symbols:date-range"
+                      ></Icon>
+                      31/03/2566
+                    </div>
+                    <div>
+                      <Icon
+                        class="mr-3 -ml-1 w-5 h-5"
+                        name="material-symbols:date-range"
+                      ></Icon>
+                      02-04-2566
                     </div>
                   </diV>
                   <div class="mt-5 flex justify-center">
-                    <a href="/disbursement_paper_create">
+                    <a href="/disbursement_create">
                       <o-button
                         class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
@@ -216,19 +244,16 @@
                           class="mr-3 -ml-1 w-5 h-5"
                           name="mdi:paper-edit"
                         ></Icon>
-                        แก้ไขใบรับรองแทนใบเสร็จ
+                        แก้ไขใบเคลียร์ประมาณการ
                       </o-button>
                     </a>
-                    <a href="/paper/disbursement_paper_paper">
+                    <a href="/paper/disbursement_paper">
                       <o-button
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h-5"
-                          name="mingcute:eye-2-fill"
-                        >
+                        <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
                         </Icon>
-                        ดูใบรับรองแทนใบเสร็จ
+                        พิมพ์ใบเคลียร์ประมาณการ
                       </o-button>
                     </a>
                   </div>
