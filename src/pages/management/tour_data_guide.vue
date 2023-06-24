@@ -40,14 +40,18 @@
           <h2 class="mb-2 text-xl font-bold dark:text-white">
             ไกด์
           </h2>
-          <div class="flex  items-center mb-2 p-5 border-l shadow-md">
-            <img class="w-10 h-10 rounded-full"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
+          <div v-if="!delete1" class="flex items-center mb-4 p-4 border shadow-md">
+            <dev class="w-full relative inline-flex items-center">
+              <img class="w-10 h-10 rounded-full"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
               <div class="ml-5">
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 026-568-4785</p>
-            </div>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              </div>
+              <Icon @click="delete1 = true"
+                class="absolute inline-flex w-5 h-5 text-xs -top-1 -right-1 dark:border-gray-900" name="uil:x"></Icon>
+            </dev>
           </div>
           <div class="mt-2 flex justify-end">
             <o-button>เสร็จสิ้น</o-button>
@@ -115,7 +119,7 @@
                     บริการดีมาก
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                    <a href="#" @click="isItemModalGuideData = true" class="text-blue-500 hover:text-blue-700">Edit</a>
                   </td>
                 </tr>
                 <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
@@ -123,7 +127,7 @@
                     2
                   </th>
                   <td class="px-3 py-3">
-                   รินดา จุตโน
+                    รินดา จุตโน
                   </td>
                   <td class="px-3 py-3">
                     ในประเทศ
@@ -214,35 +218,111 @@
             </table>
           </div>
         </UiCard>
+        <o-modal v-model:active="isItemModalGuideData">
+          <UiCard>
+            <div class="flex justify-end">
+              <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
+                ? (editHotel = true)
+                : (editHotel = false)">
+              </Icon>
+            </div>
+            <div class="p-2 grid grid-cols-2 gap-0">
+              <div class="w-full border-r">
+                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                  ไกด์
+                </h2>
+                <div class="px-2 grid grid-cols-2 gap-4" v-if="!editHotel">
+                  <div>
+                    <p class="text-base font-semibold  dark:text-white">ชื่อไกด์</p>
+                    <p class="ml-2 text-base font-normal  dark:text-white">วุฒินันท์ ศรีสุระ</p>
+                  </div>
+                  <div>
+                    <p class="text-base font-semibold  dark:text-white">ประเภทไกด์</p>
+                    <p class="ml-2 text-base font-normal  dark:text-white">ต่างประเทศ</p>
+                  </div>
+                  <div>
+                    <p class="text-base font-semibold  dark:text-white">ความสามาถพิเศษ</p>
+                    <p class="ml-2 text-base font-normal  dark:text-white">ภาษาอังกฤษ</p>
+                  </div>
+                  <div>
+                    <p class="text-base font-semibold  dark:text-white">เบอร์ติดต่อ</p>
+                    <p class="ml-2 text-base font-normal  dark:text-white">0428976765</p>
+                  </div>
+                  <div class="col-span-2">
+                    <p class="text-base font-semibold  dark:text-white">ที่อยู่ติดต่อ</p>
+                    <p class="ml-2 text-base font-normal  dark:text-white">9 ถ. ราชปรารภ แขวงมักกะสัน เขตราชเทวี
+                      กรุงเทพมหานคร 10400</p>
+                  </div>
+                </div>
+                <div class="px-2" v-if="editHotel">
+                  <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
+                  <o-input type="text" modelValue="Lot 2 - A2 - KH, Phạm Văn Đồng, Street, Sơn Trà,
+                    Đà
+                    Nẵng
+                    550000 เวียดนาม"></o-input>
+                  <p class="text-base font-semibold  dark:text-white">เบอร์ติดต่อ</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white"></p>
+                  <o-input type="text" modelValue="0428976765"></o-input>
+                  <p class="text-base font-semibold  dark:text-white">จำนวนห้องพัก</p>
+                  <o-input type="text" modelValue="120"></o-input>
+
+                </div>
+              </div>
+              <div class="w-full ml-4">
+                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                  คอมเมนต์
+                </h2>
+                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                  <p class="col-span-2">บริการดีมาก</p>
+                  <p class="w-full text-end">20/06/66</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                </div>
+                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                <div v-if="showComment">
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                      </o-button>
+                      <o-button class="mt-5">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </UiCard>
+        </o-modal>
         <o-modal v-model:active="add">
-          <div class="grid grid-cols-2 gap-4 p-6">
-            <div class="col-span-2">
-              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                เลือกวันเข้าพัก
-              </h2>
-            </div>
-            <div>
-              <o-field label="วันเข้าพัก">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="วันออก">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div class="col-span-2">
-              <o-field label="จำนวนห้องพัก">
-                <o-input type="number"></o-input>
-              </o-field>
-            </div>
-            <div class="col-span-2">
-              <div class="flex justify-end">
-                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+          <div class="relative w-full max-w-md max-h-full">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+              <div class="p-6 mx-5 text-center">
+                <div class="flex items-center mb-4 p-4 border shadow-md">
+                  <dev class="w-full relative inline-flex items-center">
+                    <div class="mx-5">
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
+                      <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภทไกด์ ต่างประเทศ</p>
+                      <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+                    </div>
+                  </dev>
+                </div>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">ต้องการเพิ่มรถคันนี้ ใช่ หรือ ไม่?
+                </h3>
+                <o-button @click="add = false">
+                  Yes, I'm sure
+                </o-button>
+                <button @click="add = false" type="button"
+                  class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+                  cancel</button>
               </div>
             </div>
           </div>
-
         </o-modal>
       </div>
     </div>
@@ -254,5 +334,8 @@ import { initFlowbite } from 'flowbite';
 onMounted(() => { initFlowbite() });
 
 const add = ref(false);
-const isItemModalUserData = ref(false);
+const showComment = ref(false);
+const isItemModalGuideData = ref(false);
+const editHotel = ref(false);
+const delete1 = ref(false);
 </script>
