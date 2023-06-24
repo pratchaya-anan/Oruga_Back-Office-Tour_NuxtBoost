@@ -151,7 +151,7 @@
   </section>
   <div class="flex justify-center mt-3">
     <o-button variant="info">
-      <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print"></Icon>
+      <Icon class="mr-3 -ml-1 w-5 h-5" name="material-symbols:print" @click="print"></Icon>
       พิมพ์
     </o-button>
     <NuxtLink to="quotation_list">
@@ -165,5 +165,38 @@
 <script setup lang="ts">
 import { initFlowbite } from 'flowbite';
 
+function print() {
+  window.print();
+}
+
 onMounted(() => { initFlowbite() });
 </script>
+
+<style>
+@media print {
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  #page {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+    print-color-adjust: exact;
+  }
+
+  #pagebreak {
+    clear: both;
+    page-break-after: always;
+  }
+
+  /* #page {padding: none; margin: none; border: none; box-shadow: none;} */
+}
+</style>
