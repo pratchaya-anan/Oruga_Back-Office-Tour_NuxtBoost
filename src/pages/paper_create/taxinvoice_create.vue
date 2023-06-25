@@ -334,12 +334,12 @@
             <UiCard class="mb-3">
                 <div class="p-5">
                     <div>
-                        <label class="text-2xl font-medium">ข้อมูลฝ่ายขาย</label>
+                        <label class="text-2xl font-medium">ข้อมูลผู้ออกเอกสาร</label>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <o-field label="ฝ่ายขาย">
-                                <o-select placeholder="การตลาด">
+                            <o-field label="ผู้ทำรายการ">
+                                <o-select placeholder="เลือกผู้ทำรายการ">
                                     <option value="นายกอไก่ ขอไข่">นายกอไก่ ขอไข่</option>
                                     <option value="นายคอควาย งองู">นายคอควาย งองู</option>
                                     <option value="นางสวยสด งดงาม">นางสวยสด งดงาม</option>
