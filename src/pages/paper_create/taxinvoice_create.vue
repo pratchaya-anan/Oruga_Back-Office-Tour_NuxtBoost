@@ -3,22 +3,22 @@
     <o-steps v-model="steps" variant="success">
         <o-step-item step="1" label="เลือก" :clickable="true" icon="user-plus">
             <UiCard>
-                    <div class="flex items-center">
+                <div class="flex items-center">
                     <div class="relative w-full">
                         <o-input placeholder="ค้นหา ชื่อลูกค้า , รหัสลูกค้า" class="w-full"></o-input>
                     </div>
-                    <div  class="ml-2">
-                        <o-button @click="showListItem=true">ค้นหา</o-button>
+                    <div class="ml-2">
+                        <o-button @click="showListItem = true">ค้นหา</o-button>
                     </div>
                 </div>
 
                 <div v-if="showListItem">
                     <o-table :data="data" v-model:selected="selected">
-                    <o-table-column @click="isImageModalActive = true" v-for="column in columns" v-bind="column"
-                        #default="{ row }">
-                        {{ row[column.field] }}
-                    </o-table-column>
-                </o-table>
+                        <o-table-column @click="isImageModalActive = true" v-for="column in columns" v-bind="column"
+                            #default="{ row }">
+                            {{ row[column.field] }}
+                        </o-table-column>
+                    </o-table>
                 </div>
             </UiCard>
 
@@ -39,18 +39,18 @@
                     <div class="relative w-full">
                         <o-input placeholder="ค้นหา ชื่อลูกค้า , รหัสลูกค้า" class="w-full"></o-input>
                     </div>
-                    <div  class="ml-2">
-                        <o-button @click="showListTour=true">ค้นหา</o-button>
+                    <div class="ml-2">
+                        <o-button @click="showListTour = true">ค้นหา</o-button>
                     </div>
                 </div>
-                
+
                 <div v-if="showListTour">
                     <o-table :data="data" v-model:selected="selected">
-                    <o-table-column @click="isImageModalActive = true" v-for="column in columns" v-bind="column"
-                        #default="{ row }">
-                        {{ row[column.field] }}
-                    </o-table-column>
-                </o-table>
+                        <o-table-column @click="isImageModalActive = true" v-for="column in columns" v-bind="column"
+                            #default="{ row }">
+                            {{ row[column.field] }}
+                        </o-table-column>
+                    </o-table>
                 </div>
             </UiCard>
 
@@ -215,6 +215,11 @@
                     </div>
                 </div>
             </UiCard>
+            <div class="flex justify-end">
+                <NuxtLink to="/paper_edit/taxinvoice_item">
+                    <o-button>บันทึก</o-button>
+                </NuxtLink>
+            </div>
         </o-step-item>
 
 
