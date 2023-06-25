@@ -1,30 +1,34 @@
 <template>
     <LayoutPageTitle> Taxinvoice / สร้างใบกำกับภาษี </LayoutPageTitle>
     <o-steps v-model="stepnext" variant="success">
+        <!-- step 1 -->
         <o-step-item step="1" label="ค้นหาใบวางบิล" :clickable="true" icon="user-plus">
-            <UiCard>
-                <div class="flex items-center">
-                    <div class="relative w-full">
-                        <o-input placeholder="ค้นหา ชื่อลูกค้า , รหัสลูกค้า" class="w-full"></o-input>
+            <div class="space-y-4">
+                <UiCard>
+                    <h2 class="text-xl font-bold dark:text-white mb-2">
+                        ค้นหาใบวางบิล/ใบแจ้งหนี้
+                    </h2>
+                    <div class="flex items-center">
+                        <div class="relative w-full">
+                            <o-input placeholder="ค้นหา ชื่อลูกค้า, รหัสลูกค้า" class="w-full"></o-input>
+                        </div>
+                        <div class="ml-2">
+                            <o-button @click="showListItem = true">ค้นหา</o-button>
+                        </div>
                     </div>
-                    <div class="ml-2">
-                        <o-button @click="showListItem = true">ค้นหา</o-button>
-                    </div>
-                </div>
-
-                <div v-if="showListItem">
+                </UiCard>
+                <UiCard v-if="showListItem">
+                    <h2 class="text-xl font-bold dark:text-white mb-2">
+                        เลือกใบที่นำไปทำรายการ
+                    </h2>
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">ลำดับ</th>
-                                    <th scope="col" class=" py-3">รหัสสมาชิก</th>
-                                    <th scope="col" class="py-3">
-                                        ชื่อ-สกุล
-                                    </th>
-                                    <th scope="col" class="py-3">
-                                        วันที่ออกใบ
-                                    </th>
+                                    <th scope="col" class="py-3">รหัสสมาชิก</th>
+                                    <th scope="col" class="py-3">ชื่อ-สกุล</th>
+                                    <th scope="col" class="py-3">วันที่ออกใบ</th>
                                     <th scope="col" class="py-3">ยอดสุทธิ</th>
                                     <th></th>
                                 </tr>
@@ -42,19 +46,21 @@
                                     <td class="py-4">
                                         {{ i.productlist }}
                                     </td>
-                                    <td> {{ i.quantity }}</td>
-                                    <td> {{ i.unitprice }}</td>
+                                    <td>{{ i.quantity }}</td>
+                                    <td>{{ i.unitprice }}</td>
                                     <td>
-                                        <div class="font-medium text-blue-600 dark:text-blue-500 hover:underline">เลือก
+                                        <div class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                            เลือก
                                         </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </UiCard>
+                </UiCard>
+            </div>
         </o-step-item>
+        <!-- step 2 -->
         <o-step-item step="2" label="เลือกรายการ" :clickable="true" icon="user-lock">
             <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
                 <div class="col-span-full xl:col-auto mb-4">
@@ -179,128 +185,140 @@
                     </UiCard>
                 </div>
                 <div class="col-span-2">
-                    <div v-if="showItemslist" class="mt-5">
-                        <o-table :data="data" v-model:checked-rows="checkedRows" checkable
-                            :checkbox-position="checkboxPosition">
-                            <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
-                                {{ row[column.field] }}
-                            </o-table-column>
-                        </o-table>
-                        <section>
-                            <o-button class="mt-4">บันทึก</o-button>
-                            <o-button @click="showItemslist = false" class="ml-4">ยกเลิก</o-button>
-                        </section>
+                    <UiCard>
+                        <h2 class="text-xl font-bold dark:text-white mb-2">
+                            เลือกรายการที่ต้องการนำไปออกใบกำกับภาษี
+                        </h2>
+                        <div v-if="showItemslist" class="mt-5">
+                            <o-table :data="data" v-model:checked-rows="checkedRows" checkable
+                                :checkbox-position="checkboxPosition">
+                                <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
+                                    {{ row[column.field] }}
+                                </o-table-column>
+                            </o-table>
+                            <section>
+                                <o-button class="mt-4">บันทึก</o-button>
+                                <o-button @click="showItemslist = false" class="ml-4">ยกเลิก</o-button>
+                            </section>
+                        </div>
+                        <div>
+                            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                    <thead
+                                        class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                        <tr>
+                                            <th scope="col" class="p-4">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-all-search" type="checkbox"
+                                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                                    <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                                                </div>
+                                            </th>
+                                            <th scope="col" class="px-6 py-3">ลำดับ</th>
+                                            <th scope="col" class="py-3">รหัสสินค้า</th>
+                                            <th scope="col" class="py-3">รายการสินค้า</th>
+                                            <th scope="col" class="py-3">จำนวน</th>
+                                            <th scope="col" class="py-3">ราคาต่อหน่วย</th>
+                                            <th scope="col" class="py-3">ส่วนลด</th>
+                                            <th scope="col" class="py-3">ภาษี</th>
+                                            <th scope="col" class="py-3">จำนวนเงิน</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                                            v-for="i in tableDatalistitem" @click="stepnext = 2">
+                                            <th scope="col" class="p-4">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-all-search" type="checkbox"
+                                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                                    <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                                                </div>
+                                            </th>
+                                            <th scope="row"
+                                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                {{ i.id }}
+                                            </th>
+                                            <td class="py-4">
+                                                {{ i.productcode }}
+                                            </td>
+                                            <td class="py-4">{{ i.productlist }}</td>
+                                            <td>{{ i.quantity }}</td>
+                                            <td>{{ i.unitprice }}</td>
+                                            <td>{{ i.discount }}</td>
+                                            <td>{{ i.tax }}</td>
+                                            <td>{{ i.amount }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </UiCard>
+                </div>
+            </div>
+        </o-step-item>
+        <!-- step 3 -->
+        <o-step-item step="3" label="เลือกทัวร์" :clickable="true" icon="user-plus">
+            <div class="space-y-4">
+                <UiCard>
+                    <h2 class="text-xl font-bold dark:text-white mb-2">
+                        ค้นหารายการทัวร์
+                    </h2>
+                    <div class="flex items-center">
+                        <div class="relative w-full">
+                            <o-input placeholder="ค้นหา ชื่อลูกค้า, รหัสลูกค้า" class="w-full"></o-input>
+                        </div>
+                        <div class="ml-2">
+                            <o-button @click="showListTour = true">ค้นหา</o-button>
+                        </div>
                     </div>
-                    <div>
+                </UiCard>
+                <div>
+                    <UiCard v-if="showListTour">
+                        <h2 class="text-xl font-bold dark:text-white mb-2">
+                            เลือกทัวร์ที่ต้องการนำไปออกใบกำกับภาษี
+                        </h2>
                         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                 <thead
                                     class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>
-                                        <th scope="col" class="p-4">
-                                            <div class="flex items-center">
-                                                <input id="checkbox-all-search" type="checkbox"
-                                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                <label for="checkbox-all-search" class="sr-only">checkbox</label>
-                                            </div>
-                                        </th>
                                         <th scope="col" class="px-6 py-3">ลำดับ</th>
-                                        <th scope="col" class=" py-3">รหัสสินค้า</th>
-                                        <th scope="col" class="py-3">รายการสินค้า
-                                        </th>
-                                        <th scope="col" class="py-3">จำนวน</th>
-                                        <th scope="col" class="py-3">ราคาต่อหน่วย</th>
-                                        <th scope="col" class="py-3">ส่วนลด </th>
-                                        <th scope="col" class="py-3">ภาษี </th>
-                                        <th scope="col" class="py-3">จำนวนเงิน </th>
+                                        <th scope="col" class="py-3">ชื่อทริปทัวร์</th>
+                                        <th scope="col" class="py-3">ชื่อโปรแกรม</th>
+                                        <th scope="col" class="py-3">วันที่เดินทาง</th>
+                                        <th scope="col" class="py-3">วันที่สิ้นสุด</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                                        v-for="i in tableDatalistitem" @click="stepnext = 2">
-                                        <th scope="col" class="p-4">
-                                            <div class="flex items-center">
-                                                <input id="checkbox-all-search" type="checkbox"
-                                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                                <label for="checkbox-all-search" class="sr-only">checkbox</label>
-                                            </div>
-                                        </th>
+                                        v-for="i in tableDatatour" @click="stepnext = 4">
                                         <th scope="row"
                                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             {{ i.id }}
                                         </th>
                                         <td class="py-4">
-                                            {{ i.productcode }}
+                                            {{ i.nametour }}
                                         </td>
-                                        <td class="py-4">{{ i.productlist }}
+                                        <td class="py-4">
+                                            {{ i.triptour }}
                                         </td>
-                                        <td> {{ i.quantity }}</td>
-                                        <td> {{ i.unitprice }}</td>
-                                        <td> {{ i.discount }}</td>
-                                        <td> {{ i.tax }} </td>
-                                        <td> {{ i.amount }}</td>
+                                        <td>{{ i.datetours }}</td>
+                                        <td>{{ i.datetourend }}</td>
+                                        <td>
+                                            <div class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                เลือก
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+                    </UiCard>
                 </div>
             </div>
         </o-step-item>
-        <o-step-item step="3" label="เลือกทัวร์" :clickable="true" icon="user-plus">
-            <UiCard>
-                <div class="flex items-center">
-                    <div class="relative w-full">
-                        <o-input placeholder="ค้นหา ชื่อลูกค้า , รหัสลูกค้า" class="w-full"></o-input>
-                    </div>
-                    <div class="ml-2">
-                        <o-button @click="showListTour = true">ค้นหา</o-button>
-                    </div>
-                </div>
-
-                <div v-if="showListTour">
-                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3">ลำดับ</th>
-                                    <th scope="col" class=" py-3">ชื่อทริปทัวร์</th>
-                                    <th scope="col" class="py-3">
-                                        ชื่อโปรแกรม
-                                    </th>
-                                    <th scope="col" class="py-3">
-                                        วันที่เดินทาง
-                                    </th>
-                                    <th scope="col" class="py-3">วันที่สิ้นสุด</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                                    v-for="i in tableDatatour" @click="stepnext = 4">
-                                    <th scope="row"
-                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        {{ i.id }}
-                                    </th>
-                                    <td class="py-4">
-                                        {{ i.nametour }}
-                                    </td>
-                                    <td class="py-4">
-                                        {{ i.triptour }}
-                                    </td>
-                                    <td> {{ i.datetours }}</td>
-                                    <td> {{ i.datetourend }}</td>
-                                    <td>
-                                        <div class="font-medium text-blue-600 dark:text-blue-500 hover:underline">เลือก
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </UiCard>
-        </o-step-item>
+        <!-- step 4 -->
         <o-step-item step="4" label="ข้อมูล" :clickable="true" icon="user-lock">
             <UiCard class="mb-3">
                 <div class="p-5">
@@ -351,18 +369,9 @@
                                 <o-input></o-input>
                             </o-field>
                         </div>
-                        <!-- <div>
-                            <o-field label="ฝ่าย">
-                                <o-input></o-input>
-                            </o-field>
-                        </div> -->
                         <div>
                             <o-field label="ฝ่าย">
-                                <o-select placeholder="เลือกฝ่าย">
-                                    <option value="ขาย">ฝ่ายขาย</option>
-                                    <option value="บัญชี">ฝ่ายบัญชี</option>
-                                    <option value="บริการ">ฝ่ายบริการ</option>
-                                </o-select>
+                                <o-input></o-input>
                             </o-field>
                         </div>
                         <div>
@@ -442,8 +451,7 @@
                                 <o-input v-if="branch == 'SubBranch'"></o-input>
                             </o-field>
                         </div>
-                        <div class="grid gap-4 mt-3">
-                        </div>
+                        <div class="grid gap-4 mt-3"></div>
                     </div>
                 </div>
                 <div class="flex justify-end">
