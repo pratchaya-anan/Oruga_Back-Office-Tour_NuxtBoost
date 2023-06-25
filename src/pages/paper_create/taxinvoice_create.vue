@@ -347,7 +347,7 @@
                             </o-field>
                         </div>
                         <div>
-                            <o-field label="ผู้เสนอขาย">
+                            <o-field label="ผู้ขาย">
                                 <o-input></o-input>
                             </o-field>
                         </div>
