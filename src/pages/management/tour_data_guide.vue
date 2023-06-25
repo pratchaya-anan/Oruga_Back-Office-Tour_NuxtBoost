@@ -334,7 +334,7 @@ import { initFlowbite } from 'flowbite';
 onMounted(() => { initFlowbite() });
 
 const add = ref(false);
-const showComment = ref(false);
+const showComment  = ref(false);
 const isItemModalGuideData = ref(false);
 const editHotel = ref(false);
 const delete1 = ref(false);

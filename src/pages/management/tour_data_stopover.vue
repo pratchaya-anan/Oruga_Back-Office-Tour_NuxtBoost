@@ -37,9 +37,11 @@
           </div>
         </UiCard>
         <UiCard>
-          <h2 class="mb-2 text-xl font-bold dark:text-white">
-            จุดแวะพัก
-          </h2>
+          <div class="w-full relative inline-flex items-center">
+            <h2 class="mb-2 text-xl font-bold dark:text-white">
+              จุดแวะพัก
+            </h2>
+          </div>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-4">
               <div
@@ -47,10 +49,15 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">บ้านหนองผือ</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จุดนัดหมาย เวลา 05:00 น.</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white"><a href="#" @click="add = true" >บ้านหนองผือ</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">05.00 น. 
+                อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ตม.มุขดาหาร</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">หน้าด่านข้ามประเทศ เวลา 12:00 น.</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น.รับประทานอาหารเที่ยง
+                หน้าด่านลาวบาว ระหว่างรอเอกสารข้านแดน จากนั้นเดินทางต่อไปยังเมือง เว้-ตานัง</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">เว้-ตานัง</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เย็น รับประทานอาหารเย็น /
+                เที่ยวชมสะพานมังกร / สะพานแห่งความรัก / เข้าที่พัก</p>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -58,12 +65,16 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
                 2566</time>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">เว้-ตานัง</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เช้า รับประทานอาหารเช้าที่โรงแรม /
+                เดินทางไปเมืองฮอยอัน </p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ฮอยอัน</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">สาย นั่งเรือกระด้ง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เที่ยง รับประทานอาหารเที่ยง /
+                เดินทางขึ้นไปบาน่าฮิลล์</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">บาน่าฮิว</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จุดชมวิว เวลา 12:00 น.</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">สะพานมือทอง</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จุดชมวิว เวลา 14:00 น.</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">สวนดอกไม้</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จุดชมวิว เวลา 16:00 น.</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">บ่าย นั่งกระเช้าลอยฟ้า / สะพานเมืองทอง / สวนดอกไม้</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เย็น รับประทานอาหารเย็น / เข้าที่พัก</p>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -71,10 +82,11 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">พระราชวังได๋โหน๋ย</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">สถานที่ท่องเทียว เวลา 9:00 น.</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ตลาดดงบา</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">ตลาด เวลา 13:00 น.</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">บาน่าฮิว</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางลงจากบาน่าฮิลล์สู่เมืองเว้</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">เว้</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เที่ยง รับประทานอาหารเที่ยง / ชมพระราชวังได๋โหน๋ย / ตลาดดงบา / วัดเทียนมู๋ / ล่องเรือมังกร / รับประทานอาหารเย็น / เข้าที่พัก</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เย็น รับประทานอาหารเย็น / เข้าที่พัก</p>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -82,8 +94,13 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">24 เมษายน
                 2566</time>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">เว้</h3>ด่านลาวบาว
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางกลับประเทศไทย</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ด่านลาวบาว</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เทียง ทำพิธีการข้ามด่าน / รับประทานอาหารเที่ยง / เดินทางต่อมายังด่านสะหวันนะเขต</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ด่านสะหวันนะเขต</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">หน้าด่านข้ามประเทศ เวลา 14:00 น.</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เย็น รับประทานอาหารเย็น</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">20.00 น.เดินทางถึงจุดหมายปลายทางโดยสวัสดิภาพ</p>
             </li>
           </ol>
           <div class="mt-2 flex justify-end">
@@ -129,8 +146,8 @@
                   </th>
                 </tr>
               </thead>
-              <tbody @click="add = true">
-                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+              <tbody >
+                <tr @click="add = true" class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
                   <th class="px-3 py-3">
                     1
                   </th>
@@ -357,30 +374,52 @@
           </div>
         </UiCard>
         <o-modal v-model:active="add">
-          <div class="grid grid-cols-2 gap-4 p-6">
+          <div class="w-full grid grid-cols-2 gap-4 p-6">
             <div class="col-span-2">
               <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                เลือกวันเข้าพัก
+                เลือกจุดแวะพัก
               </h2>
+              <div class="flex items-center mb-4 p-4 border shadow-md">
+                <dev class="w-full relative inline-flex items-center">
+                  <div class="mx-5">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">บ้านหนองผือ</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภท จุดนัดหมาย</p>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ บ้านหนองผือ ตำบลหนองผือ
+                      อำเภอชานุมาน อำนาจเจริญ 37000</p>
+                  </div>
+                </dev>
+              </div>
             </div>
             <div>
-              <o-field label="วันเข้าพัก">
+              <o-field label="วันที่">
                 <o-input></o-input>
               </o-field>
             </div>
             <div>
-              <o-field label="วันออก">
-                <o-input></o-input>
-              </o-field>
+              <div class="flex gap-3">
+                <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
+                <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+              </div>
+              <o-input v-if="time == 'time'"></o-input>
+              <select v-if="time == 'duration'" id="countries"
+                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>เลือกช่วงเวลา</option>
+                <option value="US">เช้า</option>
+                <option value="CA">เที่ยง</option>
+                <option value="FR">บ่าย</option>
+                <option value="DE">เย็น</option>
+              </select>
             </div>
+
             <div class="col-span-2">
-              <o-field label="จำนวนห้องพัก">
-                <o-input type="number"></o-input>
+              <o-field label="หมายเหตุ">
+                <o-input type="textarea"></o-input>
               </o-field>
             </div>
+
             <div class="col-span-2">
               <div class="flex justify-end">
-                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+                <o-button size="medium" variant="primary" @click="add = false"> เพิ่ม </o-button>
               </div>
             </div>
           </div>
@@ -396,5 +435,6 @@ import { initFlowbite } from 'flowbite';
 onMounted(() => { initFlowbite() });
 
 const add = ref(false);
-const isItemModalUserData = ref(false);
+const edit = ref(false);
+const time = ref('time');
 </script>
