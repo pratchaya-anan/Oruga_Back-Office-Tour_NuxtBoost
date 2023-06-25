@@ -334,11 +334,11 @@
             <UiCard class="mb-3">
                 <div class="p-5">
                     <div>
-                        <label class="text-2xl font-medium">ข้อมูลผู้ออกเอกสาร</label>
+                        <label class="text-2xl font-medium">ข้อมูลเอกสาร</label>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <o-field label="ผู้ทำรายการ">
+                            <o-field label="ผู้ขาย">
                                 <o-select placeholder="เลือกผู้ทำรายการ">
                                     <option value="นายกอไก่ ขอไข่">นายกอไก่ ขอไข่</option>
                                     <option value="นายคอควาย งองู">นายคอควาย งองู</option>
@@ -351,9 +351,18 @@
                                 <o-input></o-input>
                             </o-field>
                         </div>
-                        <div>
+                        <!-- <div>
                             <o-field label="ฝ่าย">
                                 <o-input></o-input>
+                            </o-field>
+                        </div> -->
+                        <div>
+                            <o-field label="ฝ่าย">
+                                <o-select placeholder="เลือกฝ่าย">
+                                    <option value="ขาย">ฝ่ายขาย</option>
+                                    <option value="บัญชี">ฝ่ายบัญชี</option>
+                                    <option value="บริการ">ฝ่ายบริการ</option>
+                                </o-select>
                             </o-field>
                         </div>
                         <div>

@@ -138,19 +138,19 @@
 
       <div class="grid grid-cols-4 mt-[100px] text-xs">
         <div class="text-center border-b border-black mx-5">
-          <div>ผู้เสนอราคา</div>
+          <div>ผู้รับสินค้า</div>
           <div class="mb-5">วันที่</div>
         </div>
         <div class="text-center border-b border-black mx-5">
-          <div>ผู้รับเงิน</div>
+          <div>ผู้ส่งสินค้า</div>
           <div class="mb-5">วันที่</div>
         </div>
         <div class="text-center border-b border-black mx-5">
-          <div>ผู้ตรวจสอบ</div>
+          <div>ผู้ประสานงาน</div>
           <div class="mb-5">วันที่</div>
         </div>
         <div class="text-center border-b border-black mx-5">
-          <div>ผู้อนุมัติสั่งซื้อ</div>
+          <div>ผู้อนุมัติ</div>
           <div class="mb-5">วันที่</div>
         </div>
       </div>
