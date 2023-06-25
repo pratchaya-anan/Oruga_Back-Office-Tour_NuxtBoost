@@ -1,7 +1,12 @@
 <template>
   <LayoutPageTitle> Taxinvoice / สร้างใบกำกับภาษี </LayoutPageTitle>
   <o-steps v-model="steps" variant="success">
-    <o-step-item step="1" label="เลือก" :clickable="true" icon="user-plus">
+    <o-step-item
+      step="1"
+      label="เลือกใบวางบิล/ใบแจ้งหนี้"
+      :clickable="true"
+      icon="user-plus"
+    >
       <UiCard>
         <div class="flex items-center">
           <div class="relative w-full">
@@ -16,7 +21,7 @@
         </div>
 
         <div v-if="showListItem">
-          <o-table :data="data" v-model:selected="selected">
+          <o-table :data="data" v-model:selected="selected" focusable>
             <o-table-column
               @click="isImageModalActive = true"
               v-for="column in columns"
@@ -35,22 +40,229 @@
       :clickable="true"
       icon="user-lock"
     >
-      <UiCard class="mb-3">
-        <o-table
-          :data="data"
-          v-model:checked-rows="checkedRows"
-          checkable
-          :checkbox-position="checkboxPosition"
-        >
-          <o-table-column
-            v-for="column in columns"
-            v-bind="column"
-            #default="{ row }"
-          >
-            {{ row[column.field] }}
-          </o-table-column>
-        </o-table>
-      </UiCard>
+      <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
+        <div class="col-span-full xl:col-auto mb-4">
+          <UiCard class="mb-4">
+            <section>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                <div>
+                  <div class="grid grid-cols-6">
+                    <div class="col-span-5">
+                      <h2 class="text-xl font-bold dark:text-white">
+                        ใบวางบิล/ใบแจ้งหนี้
+                      </h2>
+                    </div>
+                    <div class="flex justify-end">
+                      <Icon
+                        class="mr-3 -ml-1 w-5 h-5"
+                        name="ic:round-edit"
+                        @click="
+                          showOrderPanel != true
+                            ? (showOrderPanel = true)
+                            : (showOrderPanel = false)
+                        "
+                      >
+                      </Icon>
+                    </div>
+                  </div>
+                  <ul class="mt-2 space-y-1">
+                    <li
+                      class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      Billing Note/Invoice
+                    </li>
+                    <li
+                      class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      เลขที่: 0841142174178
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section
+              v-if="showOrderPanel"
+              class="my-4 border-t border-gray-200 dark:border-gray-700"
+            >
+              <o-field label="ชื่อผู้ขอเบิก">
+                <o-input modelValue="ศศิศ วิรัตน์จินดา"></o-input>
+              </o-field>
+              <o-field label="ชื่อผู้ติดต่อ">
+                <o-input modelValue="มะนาว หวานจังเลย"></o-input>
+              </o-field>
+              <o-field label="ที่อยู่">
+                <o-input
+                  modelValue="111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100"
+                ></o-input>
+              </o-field>
+              <o-field label="ที่อยู่">
+                <o-input modelValue="4585695214526"></o-input>
+              </o-field>
+              <o-field label="วัตถุประสงค์การยืมเงินทดลองจ่าย">
+                <o-input modelValue="เพื่อจ่ายเงิน"></o-input>
+              </o-field>
+              <section>
+                <o-button @click="showOrderPanel = false" class="mt-4"
+                  >บันทึก</o-button
+                >
+                <o-button @click="showOrderPanel = false" class="mt-4"
+                  >ยกเลิก</o-button
+                >
+              </section>
+            </section>
+            <section
+              v-if="!showOrderPanel"
+              class="my-4 border-t border-gray-200 dark:border-gray-700"
+            >
+              <span>รายละเอียดใบกำกับภาษี</span>
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-4">ชื่อผู้ขอเบิก</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      ศศิศ วิรัตน์จินดา
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ชื่อผู้ติดต่อ</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      มะนาว หวานจังเลย
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ID TAX</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ที่อยู่</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      4585695214526
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">วัตถุประสงค์การยืมเงินทดลองจ่าย</div>
+                    <div
+                      class="border-b mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      เพื่อจ่ายเงิน
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">รหัสลูกค้า</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      C-58015259
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ผู้ขาย</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      สมชัย ใจเกินร้อย
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ฝ่าย</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      การตลาด
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ยืนยันราคาวันที่</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      31/03/2566
+                    </div>
+                  </div>
+                  <div
+                    class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">กำหนดชำระ</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      31/03/2566
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </UiCard>
+        </div>
+        <div class="col-span-2">
+          <div v-if="showItemslist" class="mt-5">
+            <o-table
+              :data="data"
+              v-model:checked-rows="checkedRows"
+              checkable
+              :checkbox-position="checkboxPosition"
+            >
+              <o-table-column
+                v-for="column in columns"
+                v-bind="column"
+                #default="{ row }"
+              >
+                {{ row[column.field] }}
+              </o-table-column>
+            </o-table>
+            <section>
+              <o-button class="mt-4">บันทึก</o-button>
+              <o-button @click="showItemslist = false" class="ml-4"
+                >ยกเลิก</o-button
+              >
+            </section>
+          </div>
+          <div>
+            <o-table
+              :data="data"
+              v-model:checked-rows="checkedRows"
+              checkable
+              :checkbox-position="checkboxPosition"
+            >
+              <o-table-column
+                v-for="column in columns"
+                v-bind="column"
+                #default="{ row }"
+              >
+                {{ row[column.field] }}
+              </o-table-column>
+            </o-table>
+          </div>
+        </div>
+      </div>
     </o-step-item>
     <o-step-item step="3" label="เลือกทัวร์" :clickable="true" icon="user-plus">
       <UiCard>
@@ -286,6 +498,11 @@
               </o-field>
             </div>
           </div>
+        </div>
+        <div class="flex justify-end">
+          <a href="/paper_edit/taxinvoice_item">
+            <o-button> บันทึก </o-button>
+          </a>
         </div>
       </UiCard>
     </o-step-item>
