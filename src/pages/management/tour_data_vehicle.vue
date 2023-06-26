@@ -11,29 +11,29 @@
               </h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="ri:treasure-map-fill"></Icon>
                   อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
                   4 วัน 3 คืน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
-                  21/04/2566 &#32;
-                  <Icon class="w-5 h-5" name="line-md:arrow-right"></Icon>
-                  &#32; 24/04/2566
+                  <Icon class="w-6 h-6 mr-1" name="line-md:calendar"></Icon>
+                  21/04/2566
+                  <Icon class="mx-1 w-5 h-5" name="line-md:arrow-right"></Icon>
+                  24/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:people-audience-24-filled"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="fluent:people-audience-24-filled"></Icon>
                   23 คน
-                  <Icon class="w-6 h-6 ml-6" name="el:person"></Icon>
+                  <Icon class="w-6 h-6 ml-4" name="el:person"></Icon>
                   19 คน
                   <Icon class="w-6 h-6 ml-2" name="material-symbols:child-care"></Icon>
                   3 คน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:comment-error-16-filled"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="fluent:comment-error-16-filled"></Icon>
                   ทัวร์นี้มีวันเกิดลูกค้า 1 คนที่ต้องทำเซอร์ไพร์
                 </li>
               </ul>
