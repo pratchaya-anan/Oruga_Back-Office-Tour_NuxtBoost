@@ -1,6 +1,6 @@
 <template>
   <section class="h-m-screen">
-    <LayoutPageTitle> Tour / จัดทัวร์ / จัดการจุดแวะพัก </LayoutPageTitle>
+    <LayoutPageTitle> Tour Management  / จัดทัวร์ / จัดการจุดแวะพัก </LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto">
         <UiCard class="mb-4">
