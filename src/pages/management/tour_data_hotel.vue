@@ -7,30 +7,34 @@
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div>
               <h2 class="text-xl font-bold dark:text-white mt-2">
-                ทัวร์เว้ ดานัง ประเทศเวียดนาม
+                องค์การบริหารส่วนตำบลโพนงาม
               </h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6 mr-1" name="ri:treasure-map-fill"></Icon>
-                  อำนาจเจริญ - เว้ ดานัง ประเทศเวียดนาม
+                  <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
+                  อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6  mr-1" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
+                  <Icon class="w-6 h-6" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
                   4 วัน 3 คืน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6  mr-1" name="line-md:calendar"></Icon>
+                  <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
                   21/04/2566
-                  <Icon class="w-5 h-5  mx-1" name="line-md:arrow-right"></Icon>
+                  <Icon class="mx-1 w-5 h-5" name="line-md:arrow-right"></Icon>
                   24/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6  mr-1" name="fluent:people-audience-24-filled"></Icon>
+                  <Icon class="w-6 h-6" name="fluent:people-audience-24-filled"></Icon>
                   23 คน
+                  <Icon class="w-6 h-6 ml-4" name="el:person"></Icon>
+                  19 คน
+                  <Icon class="w-6 h-6 ml-2" name="material-symbols:child-care"></Icon>
+                  3 คน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6  mr-1" name="fluent:comment-error-16-filled"></Icon>
-                  สนุกดี
+                  <Icon class="w-6 h-6" name="fluent:comment-error-16-filled"></Icon>
+                  ทัวร์นี้มีวันเกิดลูกค้า 1 คนที่ต้องทำเซอร์ไพร์
                 </li>
               </ul>
             </div>
@@ -42,51 +46,30 @@
           </h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li v-if="!delete1" class="mb-10 ml-4">
-              <div class="flex justify-end">
-                <Icon class="w-5 h-5" name="uil:x" @click="delete1 = true">
-                </Icon>
-              </div>
-              <div
-                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-              </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
-                2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA
+                2566 - 22 เมษายน 2566</time>
+              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >โรงแรม NHU MINH PLAZA</a>
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
             <li v-if="!delete2" class="mb-10 ml-4">
-              <div class="flex justify-end">
-                <Icon class="w-5 h-5" name="uil:x" @click="delete2 = true">
-                </Icon>
-              </div>
-              <div
-                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-              </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
-                2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม Mercure Bana hills</h3>
+                2566 - 23 เมษายน 2566</time>
+              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม Mercure Bana hills</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 08978677867</p>
             </li>
             <li v-if="!delete3" class="mb-10 ml-4">
-              <div class="flex justify-end">
-                <Icon class="w-5 h-5" name="uil:x" @click="delete3 = true">
-                </Icon>
-              </div>
-              <div
-                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-              </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
-                2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม Century hotel</h3>
+                2566 - 24 เมษายน 2566</time>
+              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม Century hotel</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
             </li>
           </ol>
           <div class="mt-2 flex justify-end">
-            <o-button>เสร็จสิ้น</o-button>
+            <NuxtLink href="/tour_data"> <o-button>เสร็จสิ้น</o-button> </NuxtLink>
           </div>
         </UiCard>
       </div>
@@ -334,8 +317,17 @@
           <div class="grid grid-cols-2 gap-4 p-6">
             <div class="col-span-2">
               <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                เลือกวันเข้าพัก
+                เลือกโรงแรมเข้าพัก
               </h2>
+              <div class="flex items-center mb-4 p-4 border shadow-md">
+                <dev class="w-full relative inline-flex items-center">
+                  <div class="mx-5">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm Văn Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
+                  </div>
+                </dev>
+              </div>
             </div>
             <div>
               <o-field label="วันเข้าพัก">

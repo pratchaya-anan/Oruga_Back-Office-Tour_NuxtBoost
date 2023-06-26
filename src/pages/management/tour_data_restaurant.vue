@@ -47,11 +47,11 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านเลียจาน</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเที่ยง เวลา 12.00 น</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >ร้านเลียจาน</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเทียง ร้านเลียจาน</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">โครตอร่อย!</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเย็น เวลา 18.00 น</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >โครตอร่อย!</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น โครตอร่อย!</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
             <li class="mb-10 ml-4">
@@ -60,11 +60,11 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านอาหารอาโนะเนะ</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเที่ยง เวลา 12.00 น</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >ร้านอาหารอาโนะเนะ</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเี่ยง ร้านอาหารอาโนะเนะ</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">กินไหมจร๊ะ</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเย็น เวลา 18.00 น</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >กินไหมจร๊ะ</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น กินไหมจร๊ะ</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
             <li class="mb-10 ml-4">
@@ -73,11 +73,11 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านอาหาร อัลไล</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเที่ยง เวลา 12.00 น</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >ร้านอาหาร อัลไล</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเที่ยง ร้านอาหาร อัลไล</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">วงวารอาหาร</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเย็น เวลา 18.00 น</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >วงวารอาหาร</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น วงวารอาหาร</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
             <li class="mb-10 ml-4">
@@ -86,11 +86,11 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">24 เมษายน
                 2566</time>
-                <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">โครตอร่อย!</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเที่ยง เวลา 12.00 น</p>
+                <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >ในรู</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเที่ยง ในรู</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านเลียจาน</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารเย็น เวลา 18.00 น</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >โต๋วโภชนา</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น โต๋วโภชนา</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
           </ol>
@@ -132,9 +132,6 @@
                   <th scope="col" class="px-3 py-3">
                     เบอร์ติดต่อ
                   </th>
-                  <th scope="col" class="px-3 py-3">
-                    จำนวนโต๊ะ
-                  </th>
                   <th scope="col" class="px-3 py-3 text-center items-center">
                     คอมเมนต์
                   </th>
@@ -143,8 +140,8 @@
                   </th>
                 </tr>
               </thead>
-              <tbody @click="add = true">
-                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+              <tbody >
+                <tr @click="add = true" class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
                   <th class="px-3 py-3">
                     1
                   </th>
@@ -159,9 +156,6 @@
                   </td>
                   <td class="px-3 py-3">
                     0428976765
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
-                    40
                   </td>
                   <td class="px-3 py-3 text-center items-center">
                     ปานกลาง
@@ -187,9 +181,6 @@
                     0428976765
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    40
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
                     ปานกลาง
                   </td>
                   <td class="px-3 py-3 text-center items-center">
@@ -211,9 +202,6 @@
                   </td>
                   <td class="px-3 py-3">
                     0428976765
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
-                    40
                   </td>
                   <td class="px-3 py-3 text-center items-center">
                     ปานกลาง
@@ -239,9 +227,6 @@
                     08978677867
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    40
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
                     ดี
                   </td>
                   <td class="px-3 py-3 text-center items-center">
@@ -263,9 +248,6 @@
                   </td>
                   <td class="px-3 py-3">
                     08978677867
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
-                    40
                   </td>
                   <td class="px-3 py-3 text-center items-center">
                     ดี
@@ -291,9 +273,6 @@
                     08978677867
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    40
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
                     ดี
                   </td>
                   <td class="px-3 py-3 text-center items-center">
@@ -315,9 +294,6 @@
                   </td>
                   <td class="px-3 py-3">
                     08978677867
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
-                    40
                   </td>
                   <td class="px-3 py-3 text-center items-center">
                     ดี
@@ -343,9 +319,6 @@
                     08978677867
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    40
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
                     ดี
                   </td>
                   <td class="px-3 py-3 text-center items-center">
@@ -367,9 +340,6 @@
                   </td>
                   <td class="px-3 py-3">
                     08978677867
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
-                    40
                   </td>
                   <td class="px-3 py-3 text-center items-center">
                     ดี
@@ -395,9 +365,6 @@
                     08978677867
                   </td>
                   <td class="px-3 py-3 text-center items-center">
-                    40
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
                     ดี
                   </td>
                   <td class="px-3 py-3 text-center items-center">
@@ -419,9 +386,6 @@
                   </td>
                   <td class="px-3 py-3">
                     08978677867
-                  </td>
-                  <td class="px-3 py-3 text-center items-center">
-                    40
                   </td>
                   <td class="px-3 py-3 text-center items-center">
                     ดี
@@ -463,7 +427,6 @@
                   <o-input type="text" modelValue="0428976765"></o-input>
                   <p class="text-base font-semibold  dark:text-white">ประเภทร้านอาหาร</p>
                   <o-input type="text" modelValue="อาหารทะเล"></o-input>
-
                 </div>
               </div>
               <div class="w-full ml-4">
@@ -511,18 +474,38 @@
           <div class="grid grid-cols-2 gap-4 p-6">
             <div class="col-span-2">
               <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                เลือกวันเข้าพัก
+                เลือกร้านอาหาร
               </h2>
+              <div class="flex items-center mb-4 p-4 border shadow-md">
+                <dev class="w-full relative inline-flex items-center">
+                  <div class="mx-9">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โครตอร่อย!</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารทะเล</p>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง</p>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 	0428976765</p>
+                  </div>
+                </dev>
+              </div>
             </div>
-            <div>
-              <o-field label="วันที่เดินทาง">
+             <div>
+              <o-field label="วันที่">
                 <o-input></o-input>
               </o-field>
             </div>
             <div>
-              <o-field label="เวลาเข้าร้านอาหาร">
-                <o-input></o-input>
-              </o-field>
+              <div class="flex gap-3">
+                <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
+                <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+              </div>
+              <o-input v-if="time == 'time'"></o-input>
+              <select v-if="time == 'duration'" id="countries"
+                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>เลือกช่วงเวลา</option>
+                <option value="US">เช้า</option>
+                <option value="CA">เที่ยง</option>
+                <option value="FR">บ่าย</option>
+                <option value="DE">เย็น</option>
+              </select>
             </div>
             <div class="col-span-2">
               <div class="flex justify-end">
@@ -544,7 +527,5 @@ const showComment = ref(false);
 const isItemModalHotelData = ref(false);
 const add = ref(false);
 const editHotel = ref(false);
-const delete1 = ref(false);
-const delete2 = ref(false);
-const delete3= ref(false);
+const time = ref('time');
 </script>
