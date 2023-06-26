@@ -185,11 +185,11 @@
             class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
           >
             <tr>
-              <th scope="col" class="px-6 py-3">รหัสสินค้า</th>
+              <th scope="col" class="px-6 py-3">ลำดับที่</th>
               <th scope="col" class="px-6 py-3">จำนวน</th>
               <th scope="col" class="px-6 py-3">ราคาต่อหน่วย</th>
               <th scope="col" class="px-6 py-3">ส่วนลด</th>
-              <th scope="col" class="px-6 py-3">ภาษี (0% 7% 9%)</th>
+              <th scope="col" class="px-6 py-3">ภาษี</th>
               <th scope="col" class="px-6 py-3">รายการสินค้า</th>
               <th scope="col" class="px-6 py-3">
                 <span class="sr-only">Edit</span>
@@ -204,12 +204,12 @@
                 scope="row"
                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                Qu-285455
+                1
               </th>
-              <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4">2</td>
               <td class="px-6 py-4">10,000</td>
-              <td class="px-6 py-4">10 %</td>
-              <td class="px-6 py-4">0%</td>
+              <td class="px-6 py-4">10%</td>
+              <td class="px-6 py-4">7%</td>
               <td class="px-6 py-4">ห้องพักโรงแรม</td>
               <td class="px-6 py-4 text-right">
                 <button
@@ -308,11 +308,6 @@
         </section>
       </div>
       <UiCard v-if="showItemsPanel">
-        <div class="flex gap-4">
-          <o-field class="flex-1" label="รหัสสินค้า">
-            <o-input></o-input>
-          </o-field>
-        </div>
         <o-field class="flex-1" label="รายการสินค้า">
           <o-input></o-input>
         </o-field>
@@ -328,9 +323,9 @@
           <o-field class="flex-1" label="ส่วนลด">
             <o-input></o-input>
           </o-field>
-          <o-field class="flex-1" label="ภาษี (0% 7% 9%)">
-            <o-select placeholder="0 %">
-              <option value="flint">0 %</option>
+          <o-field class="flex-1" label="ภาษี">
+            <o-select placeholder="ยกเว้นภาษี">
+              <option value="flint">ยกเว้นภาษี</option>
               <option value="silver">7 %</option>
               <option value="silver">9 %</option>
             </o-select>
