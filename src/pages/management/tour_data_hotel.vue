@@ -45,49 +45,24 @@
             </h3>
             <div class="flex space-x-3">
               <!-- โรงแรม -->
-              <Icon class="w-6 h-6" name="mdi:bed" @click="
-                showItems != 'hotel'
-                  ? (showItems = 'hotel')
-                  : (showItems = '');
-              showComment = false;
-              "></Icon>
+              <NuxtLink href="/management/tour_data_hotel"><Icon class="w-6 h-6 text-blue-700" name="mdi:bed"></Icon></NuxtLink>
               <!-- มัคคุเทศก์ -->
-              <Icon class="w-6 h-6" name="mdi:face-woman-shimmer" @click="
-                showItems != 'guide'
-                  ? (showItems = 'guide')
-                  : (showItems = '');
-              showComment = false;
-              "></Icon>
+              <NuxtLink href="/management/tour_data_guide"><Icon class="w-6 h-6" name="mdi:face-woman-shimmer"></Icon></NuxtLink>
               <!-- พาหนะ -->
-              <Icon class="w-6 h-6" name="mdi:van-utility" @click="
-                showItems != 'vehicle'
-                  ? (showItems = 'vehicle')
-                  : (showItems = '');
-              showComment = false;
-              "></Icon>
+              <NuxtLink href="/management/tour_data_vehicle"><Icon class="w-6 h-6" name="mdi:van-utility"></Icon></NuxtLink>
               <!-- สถานที่ -->
-              <Icon class="w-6 h-6" name="mdi:store-marker" @click="
-                showItems != 'checkpoin'
-                  ? (showItems = 'checkpoin')
-                  : (showItems = '');
-              showComment = false;
-              "></Icon>
+              <NuxtLink href="/management/tour_data_stopover"><Icon class="w-6 h-6" name="mdi:store-marker"></Icon></NuxtLink>
               <!-- ร้านอาหาร -->
-              <Icon class="w-6 h-6" @click="
-                showItems != 'restaurant'
-                  ? (showItems = 'restaurant')
-                  : (showItems = '');
-              showComment = false;
-              " name="mdi:food-fork-drink"></Icon>
+              <NuxtLink href="/management/tour_data_restaurant"><Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon></NuxtLink>
             </div>
           </div>
         </UiCard>
         <UiCard>
-          <div class="w-full relative">
+          <div class="p-2 w-full relative">
             <NuxtLink href="/tour_data">
               <o-button
-                class="absolute -top-2 -right-1 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
-                <Icon class="w-6 h-6" name="ooui:previous-ltr"></Icon>
+                class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                <Icon class="w-6 h-6" name="ic:baseline-minus"></Icon>
               </o-button>
             </NuxtLink>
           </div>
@@ -113,7 +88,6 @@
                     : (showComment = false)
                   "></Icon>
               </p>
-
               <div v-if="showComment" class="w-full p-4 border shadow-md">
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
                   คอมเมนต์
@@ -152,7 +126,6 @@
                   </div>
                 </div>
               </div>
-
             </li>
             <li v-if="!delete2" class="mb-10 ml-4">
               <div
@@ -177,9 +150,7 @@
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
             </li>
           </ol>
-          <div class="mt-2 flex justify-end">
-            <NuxtLink href="/tour_data"> <o-button>เสร็จสิ้น</o-button> </NuxtLink>
-          </div>
+
         </UiCard>
       </div>
       <div class="col-span-2">
