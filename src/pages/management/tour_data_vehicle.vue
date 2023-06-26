@@ -664,9 +664,16 @@
             </div>
           </div>
         </UiCard>
-   
-        <UiCard>
-          <h2 class="mb-2 text-xl font-bold dark:text-white">
+        <UiCard class="mt-4">
+          <div class="w-full relative">
+            <NuxtLink href="/tour_data">
+              <o-button
+                class="absolute -top-2 -right-1 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                <Icon class="w-6 h-6" name="ooui:previous-ltr"></Icon>
+              </o-button>
+            </NuxtLink>
+          </div>
+          <h2 class="mt-12 text-xl font-bold dark:text-white">
             รถประจำทัวร์
           </h2>
           <div v-if="!delete1" class="flex items-center mb-4 p-4 border shadow-md">

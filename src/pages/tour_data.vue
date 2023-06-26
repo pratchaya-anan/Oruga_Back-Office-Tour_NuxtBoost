@@ -125,116 +125,125 @@
         </UiCard>
         <!-- โรงแรม -->
         <UiCard v-if="showItems == 'hotel'">
-          <div class="flex justify-end">
+          <div class="w-full relative">
             <NuxtLink href="/management/tour_data_hotel">
-              <o-button>
-                <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon>จัดการ/เพิ่มโรงแรม
+              <o-button class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                <Icon class="w-6 h-6" name="ic:baseline-plus"></Icon>
               </o-button>
             </NuxtLink>
           </div>
-          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" class="px-6 py-3">โรงแรม</th>
-                  <th scope="col" class="px-6 py-3">วันเข้าพัก</th>
-                  <th scope="col" class="px-6 py-3">วันออก</th>
-                  <th scope="col" class="px-6 py-3">คอมเมนต์</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white truncate">
-                    NHU MINH...
-                  </th>
-                  <td class="px-6 py-4">
-                    <div>21/04/2566</div>
-                    <div class="text-xs">16:00 น.</div>
-                  </td>
-                  <td class="px-6 py-4">
-                    <div>22/04/2566</div>
-                    <div class="text-xs">10:20 น.</div>
-                  </td>
-                  <td class="px-6 py-4 text-center">
-                    <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
-                      showComment != true
-                        ? (showComment = true)
-                        : (showComment = false)
-                      "></Icon>
-                  </td>
-                </tr>
+          <h2 class="mb-2 text-xl font-bold dark:text-white">
+            โรงแรม
+          </h2>
+          <ol class="relative border-l border-gray-200 dark:border-gray-700">
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
+                2566 - 22 เมษายน 2566</time>
+              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม NHU MINH PLAZA
+              </h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+              เป็นโรงแรมที่ดีมาก <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
+                  showComment != true
+                    ? (showComment = true)
+                    : (showComment = false)
+                  "></Icon> 
+              </p>
 
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white truncate">
-                    Mercure Bana...
-                  </th>
-                  <td class="px-6 py-4">
-                    <div>21/04/2566</div>
-                    <div class="text-xs">16:00 น.</div>
-                  </td>
-                  <td class="px-6 py-4">
-                    <div>22/04/2566</div>
-                    <div class="text-xs">10:20 น.</div>
-                  </td>
-                  <td class="px-6 py-4 text-center">
-                    <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
-                      showComment != true
-                        ? (showComment = true)
-                        : (showComment = false)
-                      "></Icon>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div v-if="showComment">
-            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              คอมเมนต์
-            </h2>
-            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-              <li class="flex justify-between">
-                <div>เป็นโรงแรมที่ดีมาก</div>
-                <div>20/06/66</div>
-                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-              </li>
-              <li class="flex justify-between">
-                <div>ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</div>
-                <div>20/06/66</div>
-                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-              </li>
-              <li class="flex justify-between">
-                <div>ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</div>
-                <div>20/06/66</div>
-                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-              </li>
-            </ul>
-
-            <o-field label="เขียนคอมเมนต์">
-              <o-input type="textarea"></o-input>
-            </o-field>
-            <div class="flex">
-              <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                <o-input></o-input>
-              </o-field>
-              <section class="flex-1 shrink flex items-center justify-end">
-                <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                </o-button>
-                <o-button class="mt-5">เพิ่ม</o-button>
-              </section>
-            </div>
-          </div>
+              <div v-if="showComment" class="w-full p-4 border shadow-md">
+                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                  คอมเมนต์
+                </h2>
+                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                  <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <p class="w-full text-end">20/06/66</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                  <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  <p class="w-full text-end">20/06/65</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                  <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+                  <p class="w-full text-end">20/06/64</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                </div>
+                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                <div v-if="showComment">
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                      </o-button>
+                      <o-button class="mt-5">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
+                2566 - 23 เมษายน 2566</time>
+              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม Mercure Bana
+                hills</h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 08978677867</p>
+            </li>
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+              </div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
+                2566 - 24 เมษายน 2566</time>
+              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม Century hotel
+              </h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
+            </li>
+          </ol>
         </UiCard>
         <!-- มัคคุเทศก์ -->
         <UiCard v-if="showItems == 'guide'">
           <div class="flex justify-end">
             <NuxtLink href="/management/tour_data_guide">
               <o-button>
-                <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon>จัดการ/เพิ่มมัคคุเทศก์
+                <Icon class="w-6 h-6" name="ic:baseline-plus"></Icon>
               </o-button>
             </NuxtLink>
+          </div>
+          <h2 class="mb-2 text-xl font-bold dark:text-white">
+            ไกด์
+          </h2>
+          <div v-if="!delete1" class="flex items-center mb-4 p-4 border shadow-md">
+            <dev class="w-full relative inline-flex items-center">
+              <img class="w-10 h-10 rounded-full"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
+              <div class="ml-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              </div>
+              <Icon @click="delete1 = true"
+                class="absolute inline-flex w-5 h-5 text-xs -top-1 -right-1 dark:border-gray-900" name="uil:x"></Icon>
+            </dev>
+          </div>
+          <div class="mt-2 flex justify-end">
+            <o-button>เสร็จสิ้น</o-button>
           </div>
           <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -298,38 +307,36 @@
           <div class="flex justify-end">
             <NuxtLink href="/management/tour_data_vehicle">
               <o-button>
-                <Icon class="w-6 h-6" name="tabler:settings-plus"></Icon>จัดการ/เพิ่มพาหนะ
+                <Icon class="w-6 h-6" name="ic:baseline-plus"></Icon>
               </o-button>
             </NuxtLink>
           </div>
           <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" class="px-6 py-3">พาหนะที่ใช้</th>
-                  <th scope="col" class="px-6 py-3">ทะเบียน</th>
-                  <th scope="col" class="px-6 py-3">โทรศัพท์</th>
-                  <th scope="col" class="px-6 py-3">คอมเมนต์</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    รถบัสลาว
-                  </th>
-                  <td class="px-6 py-4">8989 นครหลงเวียงจันทร์</td>
-                  <td class="px-6 py-4">065-857-4587</td>
-                  <td class="px-6 py-4">
+          <h2 class="mb-2 text-xl font-bold dark:text-white">
+            รถประจำทัวร์
+          </h2>
+          <div v-if="!delete1" class="flex items-center mb-4 p-4 border shadow-md">
+            <dev class="w-full relative inline-flex items-center">
+              <Icon class="w-10 h-10 rounded-full bg-gray-300" name="mdi:bus"></Icon>
+              <div class="ml-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">รถบัสลาว</h3>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ทะเบียน 8989 ประเทศเวียงจันน์</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">21/04/2566 ถึง 24/04/2566</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              </div>
+              <Icon @click="delete1 = true"
+                class="absolute inline-flex w-5 h-5 text-xs -top-1 -right-1 dark:border-gray-900" name="uil:x"></Icon>
+            </dev>
+          </div>
+          <div class="mt-2 flex justify-end">
+            <o-button>เสร็จสิ้น</o-button>
+          </div>
+        
                     <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
                       showComment != true
                         ? (showComment = true)
                         : (showComment = false)
                       "></Icon>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
           </div>
 
           <div v-if="showComment">
