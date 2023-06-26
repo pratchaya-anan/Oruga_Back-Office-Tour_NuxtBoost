@@ -35,13 +35,36 @@
               </ul>
             </div>
           </div>
+          <div>
+            <h3 class="mt-2 text-base font-bold text-gray-900 dark:text-white">
+              จัดการเพิ่มเติม
+            </h3>
+            <div class="flex space-x-3">
+              <!-- โรงแรม -->
+              <NuxtLink href="/management/tour_data_hotel"><Icon class="w-6 h-6" name="mdi:bed"></Icon></NuxtLink>
+              <!-- มัคคุเทศก์ -->
+              <NuxtLink href="/management/tour_data_guide"><Icon class="w-6 h-6 " name="mdi:face-woman-shimmer"></Icon></NuxtLink>
+              <!-- พาหนะ -->
+              <NuxtLink href="/management/tour_data_vehicle"><Icon class="w-6 h-6 " name="mdi:van-utility"></Icon></NuxtLink>
+              <!-- สถานที่ -->
+              <NuxtLink href="/management/tour_data_stopover"><Icon class="w-6 h-6 text-blue-700" name="mdi:store-marker"></Icon></NuxtLink>
+              <!-- ร้านอาหาร -->
+              <NuxtLink href="/management/tour_data_restaurant"><Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon></NuxtLink>
+            </div>
+          </div>
         </UiCard>
         <UiCard>
-          <div class="w-full relative inline-flex items-center">
-            <h2 class="mb-2 text-xl font-bold dark:text-white">
-              จุดแวะพัก
-            </h2>
+          <div class="p-2 w-full relative">
+            <NuxtLink href="/tour_data">
+              <o-button
+                class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                <Icon class="w-6 h-6" name="ic:baseline-minus"></Icon>
+              </o-button>
+            </NuxtLink>
           </div>
+          <h2 class="mb-2 text-xl font-bold dark:text-white">
+            จุดแวะพัก
+          </h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-4">
               <div
@@ -49,8 +72,8 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white"><a href="#" @click="add = true" >บ้านหนองผือ</a></h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">05.00 น. 
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white"><a href="#">บ้านหนองผือ</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">05.00 น.
                 อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ตม.มุขดาหาร</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น.รับประทานอาหารเที่ยง
@@ -73,7 +96,8 @@
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เที่ยง รับประทานอาหารเที่ยง /
                 เดินทางขึ้นไปบาน่าฮิลล์</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">บาน่าฮิว</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">บ่าย นั่งกระเช้าลอยฟ้า / สะพานเมืองทอง / สวนดอกไม้</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">บ่าย นั่งกระเช้าลอยฟ้า / สะพานเมืองทอง /
+                สวนดอกไม้</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เย็น รับประทานอาหารเย็น / เข้าที่พัก</p>
             </li>
             <li class="mb-10 ml-4">
@@ -83,9 +107,11 @@
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
                 2566</time>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">บาน่าฮิว</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางลงจากบาน่าฮิลล์สู่เมืองเว้</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เช้า รับประทานอาหารเช้าที่โรงแรม /
+                เดินทางลงจากบาน่าฮิลล์สู่เมืองเว้</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">เว้</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เที่ยง รับประทานอาหารเที่ยง / ชมพระราชวังได๋โหน๋ย / ตลาดดงบา / วัดเทียนมู๋ / ล่องเรือมังกร / รับประทานอาหารเย็น / เข้าที่พัก</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เที่ยง รับประทานอาหารเที่ยง /
+                ชมพระราชวังได๋โหน๋ย / ตลาดดงบา / วัดเทียนมู๋ / ล่องเรือมังกร / รับประทานอาหารเย็น / เข้าที่พัก</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เย็น รับประทานอาหารเย็น / เข้าที่พัก</p>
             </li>
             <li class="mb-10 ml-4">
@@ -95,16 +121,43 @@
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">24 เมษายน
                 2566</time>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">เว้</h3>ด่านลาวบาว
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางกลับประเทศไทย</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เช้า รับประทานอาหารเช้าที่โรงแรม /
+                เดินทางกลับประเทศไทย</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ด่านลาวบาว</h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เทียง ทำพิธีการข้ามด่าน / รับประทานอาหารเที่ยง / เดินทางต่อมายังด่านสะหวันนะเขต</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เทียง ทำพิธีการข้ามด่าน /
+                รับประทานอาหารเที่ยง / เดินทางต่อมายังด่านสะหวันนะเขต</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ด่านสะหวันนะเขต</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เย็น รับประทานอาหารเย็น</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">20.00 น.เดินทางถึงจุดหมายปลายทางโดยสวัสดิภาพ</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">20.00
+                น.เดินทางถึงจุดหมายปลายทางโดยสวัสดิภาพ</p>
             </li>
           </ol>
-          <div class="mt-2 flex justify-end">
-            <NuxtLink href="/tour_data"> <o-button>เสร็จสิ้น</o-button> </NuxtLink>
+
+          <div v-if="showComment">
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+              คอมเมนต์
+            </h2>
+            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+              <li class="flex justify-between">
+                <div>ตม.ให้บริการดี</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+            </ul>
+
+            <o-field label="เขียนคอมเมนต์">
+              <o-input type="textarea"></o-input>
+            </o-field>
+            <div class="flex">
+              <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                <o-input></o-input>
+              </o-field>
+              <section class="flex-1 shrink flex items-center justify-end">
+                <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                </o-button>
+                <o-button class="mt-5">เพิ่ม</o-button>
+              </section>
+            </div>
           </div>
         </UiCard>
       </div>
