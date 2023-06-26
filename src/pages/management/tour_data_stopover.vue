@@ -104,7 +104,7 @@
             </li>
           </ol>
           <div class="mt-2 flex justify-end">
-            <o-button>เสร็จสิ้น</o-button>
+            <NuxtLink href="/tour_data"> <o-button>เสร็จสิ้น</o-button> </NuxtLink>
           </div>
         </UiCard>
       </div>
@@ -376,9 +376,9 @@
         <o-modal v-model:active="isItemModalHotelData">
           <UiCard>
             <div class="flex justify-end">
-              <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
-                ? (editHotel = true)
-                : (editHotel = false)">
+              <Icon class="w-6 h-6" name="ic:round-edit" @click="edit != true
+                ? (edit = true)
+                : (edit = false)">
               </Icon>
             </div>
             <div class="p-2 grid grid-cols-2 gap-0">
@@ -386,7 +386,7 @@
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
                   บ้านหนองผือ
                 </h2>
-                <div class="px-2" v-if="!editHotel">
+                <div class="px-2" v-if="!edit">
                   <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
                   <p class="ml-2 text-base font-normal  dark:text-white">บ้านหนองผือ ตำบลหนองผือ อำเภอชานุมาน อำนาจเจริญ 37000</p>
                   <p class="text-base font-semibold  dark:text-white">ประเภทจุดแวะพัก</p>
@@ -396,7 +396,7 @@
                   <p class="text-base font-semibold  dark:text-white">เบอร์โทร</p>
                   <p class="ml-2 text-base font-normal  dark:text-white">0652224747</p>
                 </div>
-                <div class="px-2" v-if="editHotel">
+                <div class="px-2" v-if="edit">
                   <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
                   <o-input type="text" modelValue="บ้านหนองผือ ตำบลหนองผือ อำเภอชานุมาน อำนาจเจริญ 37000"></o-input>
                   <p class="text-base font-semibold  dark:text-white">ประเภทจุดแวะพัก</p>
