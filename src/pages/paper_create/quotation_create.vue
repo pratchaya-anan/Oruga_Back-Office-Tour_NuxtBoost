@@ -169,16 +169,18 @@
           <UiCard class="mb-4">
             <section>
               <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-                <div class="grid grid-cols-6">
-                  <div class="col-span-5">
-                    <h2 class="text-xl font-bold dark:text-white">
-                      ข้อมูลหน่วยงาน / ลูกค้า
-                    </h2>
+                <div>
+                  <div class="grid grid-cols-6">
+                    <div class="col-span-5">
+                      <h2 class="text-xl font-bold dark:text-white">
+                        ข้อมูลหน่วยงาน / ลูกค้า
+                      </h2>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
-            <section class="my-4 border-t border-gray-200 dark:border-gray-700">
+            <section class="border-t border-gray-200 dark:border-gray-700">
               <div class="sm:flex xl:block xl:space-y-4">
                 <div class="sm:flex-1">
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -209,6 +211,51 @@
               </div>
             </section>
           </UiCard>
+          <UiCard class="mb-4">
+            <section>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                <div>
+                  <div class="grid grid-cols-6">
+                    <div class="col-span-5">
+                      <h2 class="text-xl font-bold dark:text-white">
+                        ข้อมูลทัวร์
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="border-t border-gray-200 dark:border-gray-700">
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-4">ชื่อทริปทัวร์</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      องค์การบริหารส่วนตำบลโพนงาม
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">ชื่อโปรแกรมทัวร์</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">วันที่เดินทาง</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      05-06-2566
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">วันที่สิ้นสุด</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      07-06-2566
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </UiCard>
         </div>
         <div class="col-span-2">
           <UiCard class="mb-3">
@@ -218,8 +265,8 @@
               </div>
               <div class="grid grid-cols-2 gap-4">
                 <div>
-                  <o-field label="ผู้เสนอขาย">
-                    <o-select placeholder="เลือกผู้เสนอขาย">
+                  <o-field label="ผู้ขาย">
+                    <o-select placeholder="เลือกผู้ขาย">
                       <option value="นายกอไก่ ขอไข่">นายกอไก่ ขอไข่</option>
                       <option value="นายคอควาย งองู">นายคอควาย งองู</option>
                       <option value="นางสวยสด งดงาม">นางสวยสด งดงาม</option>
@@ -233,40 +280,6 @@
                       <option value="การเงิน">การเงิน</option>
                       <option value="??">??</option>
                     </o-select>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="ยืนยันราคาภายในวันที่">
-                    <div class="relative">
-                      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd"
-                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </div>
-                      <input datepicker type="text"
-                        class="border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Select date" />
-                    </div>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="วันส่งของ">
-                    <div class="relative">
-                      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd"
-                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </div>
-                      <input datepicker type="text"
-                        class="border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Select date" />
-                    </div>
                   </o-field>
                 </div>
                 <div>
@@ -286,6 +299,78 @@
                     </div>
                   </o-field>
                 </div>
+                <div>
+                  <o-field label="ยืนยันราคาวันที่">
+                    <div class="relative">
+                      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </div>
+                      <input datepicker type="text"
+                        class="border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Select date" />
+                    </div>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="กำหนดชำระ">
+                    <div class="relative">
+                      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </div>
+                      <input datepicker type="text"
+                        class="border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Select date" />
+                    </div>
+                  </o-field>
+                </div>
+                <div class="flex gap-4">
+                  <o-field class="flex-1" label="ID TAX ลูกค้า">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div class="flex gap-4">
+                  <o-field class="flex-1" label="Email ลูกค้า">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4 mt-3">
+                <div>
+                  <o-field label="กำหนดราคามัดจำ">
+                    <div class="flex mt-3">
+                      <o-radio v-model="showcheck" name="name" native-value="persen" class="mr-3">
+                        เปอร์เซ็น
+                      </o-radio>
+                      <o-radio v-model="showcheck" name="name" native-value="custom">
+                        จำนวนเงิน
+                      </o-radio>
+                    </div>
+                    <o-input modelValue=""></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="ประเภทสาขา">
+                    <div class="flex mt-3">
+                      <o-radio v-model="branch" name="branchcheck" native-value="MainBranch" class="mr-3">
+                        สำนักงานใหญ่
+                      </o-radio>
+                      <o-radio v-model="branch" name="branchcheck" native-value="SubBranch">
+                        สาขาย่อย
+                      </o-radio>
+                    </div>
+                    <o-input v-if="branch == 'SubBranch'"></o-input>
+                  </o-field>
+                </div>
               </div>
             </div>
             <div class="flex justify-end">
@@ -296,128 +381,6 @@
           </UiCard>
         </div>
       </div>
-      <div class="p-5">
-        <div>
-          <label class="text-2xl font-medium">ข้อมูลลูกค้า</label>
-        </div>
-        <div class="grid grid-cols-2 gap-4 mt-3">
-          <div>
-            <o-field label="ชื่อลูกค้า">
-              <o-input></o-input>
-            </o-field>
-          </div>
-          <div>
-            <o-field label="เลขประจำตัวผู้เสียภาษี">
-              <o-input></o-input>
-            </o-field>
-          </div>
-          <div>
-            <o-field label="ชื่อผู้ติดต่อ">
-              <o-input></o-input>
-            </o-field>
-          </div>
-          <div>
-            <o-field label="เบอร์โทรศัพท์">
-              <o-input></o-input>
-            </o-field>
-          </div>
-          <div>
-            <o-field label="อีเมล">
-              <o-input></o-input>
-            </o-field>
-          </div>
-          <div>
-            <o-field label="ที่อยู่">
-              <o-input></o-input>
-            </o-field>
-          </div>
-        </div>
-      </div>
-      <UiCard class="mb-3">
-        <div class="p-5">
-          <div>
-            <label class="text-2xl font-medium">ข้อมูลฝ่ายขาย</label>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="col-span-2">
-              <o-field label="รหัสลูกค้า">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="ยืนยันราคาภายใน">
-                <div class="relative">
-                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                      viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <input datepicker type="text"
-                    class="border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Select date" />
-                </div>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="วันที่ส่งของ">
-                <div class="relative">
-                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                      viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                  <input datepicker type="text"
-                    class="border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Select date" />
-                </div>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="ผู้เสนอขาย">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div>
-              <div>
-                <o-field label="ฝ่ายขาย">
-                  <o-select placeholder="การตลาด">
-                    <option value="free">การตลาด</option>
-                    <option value="1%">xxxx</option>
-                    <option value="3%">xxxx</option>
-                  </o-select>
-                </o-field>
-              </div>
-            </div>
-            <o-field label="กำหนดราคามัดจำ">
-              <div class="flex mt-3">
-                <o-radio v-model="showcheck" name="name" native-value="persen" class="mr-3">
-                  เปอร์เซ็น
-                </o-radio>
-                <o-radio v-model="showcheck" name="name" native-value="custom">
-                  จำนวนเงิน
-                </o-radio>
-              </div>
-            </o-field>
-            <o-field v-if="showcheck == 'persen'">
-              <o-input modelValue=""></o-input>
-            </o-field>
-            <o-field v-if="showcheck == 'custom'">
-              <o-input modelValue=""></o-input>
-            </o-field>
-          </div>
-        </div>
-        <div class="flex justify-end">
-          <NuxtLink to="/paper_edit/quotation_item">
-            <o-button>บันทึก</o-button>
-          </NuxtLink>
-        </div>
-      </UiCard>
     </o-step-item>
   </o-steps>
 </template>
@@ -427,6 +390,7 @@ import { initFlowbite } from "flowbite";
 const showListAgency = ref();
 const stepnext = ref(1);
 const showListTour = ref(false);
+
 
 const tableAgency = [
   {
