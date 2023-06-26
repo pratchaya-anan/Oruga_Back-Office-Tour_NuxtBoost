@@ -11,21 +11,21 @@
               </h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="ri:treasure-map-fill"></Icon>
                   อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
                   4 วัน 3 คืน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="line-md:calendar"></Icon>
                   21/04/2566
                   <Icon class="mx-1 w-5 h-5" name="line-md:arrow-right"></Icon>
                   24/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:people-audience-24-filled"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="fluent:people-audience-24-filled"></Icon>
                   23 คน
                   <Icon class="w-6 h-6 ml-4" name="el:person"></Icon>
                   19 คน
@@ -33,7 +33,7 @@
                   3 คน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:comment-error-16-filled"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="fluent:comment-error-16-filled"></Icon>
                   ทัวร์นี้มีวันเกิดลูกค้า 1 คนที่ต้องทำเซอร์ไพร์
                 </li>
               </ul>
@@ -76,56 +76,12 @@
               </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566 - 22 เมษายน 2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#"
-                  @click="add = true">โรงแรม NHU MINH PLAZA</a>
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#"
+                  @click="add = true">โรงแรม NHU MINH PLAZA</a> <a href="#" @click="add = true" class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                เป็นโรงแรมที่ดีมาก <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
-                  showComment != true
-                    ? (showComment = true)
-                    : (showComment = false)
-                  "></Icon>
-              </p>
-              <div v-if="showComment" class="w-full p-4 border shadow-md">
-                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  คอมเมนต์
-                </h2>
-                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
-                  <p class="w-full text-end">20/06/66</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                  <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
-                  <p class="w-full text-end">20/06/65</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                  <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
-                  <p class="w-full text-end">20/06/64</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                </div>
-                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
-                <div v-if="showComment">
-                  <o-field label="เขียนคอมเมนต์">
-                    <o-input type="textarea"></o-input>
-                  </o-field>
-                  <div class="flex">
-                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                      <o-input></o-input>
-                    </o-field>
-                    <section class="flex-1 shrink flex items-center justify-end">
-                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                      </o-button>
-                      <o-button class="mt-5">เพิ่ม</o-button>
-                    </section>
-                  </div>
-                </div>
-              </div>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> เป็นโรงแรมที่ดีมาก </p>
             </li>
             <li v-if="!delete2" class="mb-10 ml-4">
               <div
@@ -407,7 +363,9 @@
                       Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
                   </div>
+                  
                 </dev>
+              
               </div>
             </div>
 
@@ -422,9 +380,45 @@
               </o-field>
             </div>
             <div class="col-span-2">
-              <o-field label="จำนวนห้องพัก">
+              <o-field label="จำนวนห้องพักกกก">
                 <o-input type="number"></o-input>
               </o-field>
+              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                  คอมเมนต์
+                </h2>
+                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                  <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <p class="w-full text-end">20/06/66</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                  <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  <p class="w-full text-end">20/06/65</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                  <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+                  <p class="w-full text-end">20/06/64</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                  </p>
+                </div>
+                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                <div v-if="showComment">
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                      </o-button>
+                      <o-button class="mt-5">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
             </div>
             <div class="col-span-2">
               <div class="flex justify-end">
