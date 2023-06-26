@@ -32,7 +32,7 @@
       <div class="col-span-2 grid grid-cols-3 m-5 text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-3">
-            <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
+            <div class="col-span-1 font-bold">หน่วยงาน / ลูกค้า:</div>
             <div class="col-span-2">S</div>
             <div class="col-span-1 font-bold">ชื่อผู้ติดต่อ:</div>
             <div class="col-span-2">N</div>
@@ -77,7 +77,7 @@
             <th>ภาษี</th>
             <th>จำนวนเงิน</th>
           </tr>
-          <tr class="h-10 text-xs" v-for="item in 8" :key="item">
+          <tr class="h-10 text-xs" v-for="item in 1" :key="item">
             <td>1</td>
             <td>14778854</td>
             <td>ห้องพักและรถเดินทาง</td>

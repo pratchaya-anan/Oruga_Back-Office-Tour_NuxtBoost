@@ -956,7 +956,6 @@
 
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
-const steps = ref(1);
 const branch = ref("MainBranch");
 const showItemslist = ref(false);
 const isImageModalActive = ref(false);
@@ -1044,6 +1043,7 @@ const tableDatalistitem = [
     amount: "2,140",
   },
 ];
+
 const tableDatatour = [
   {
     id: 1,

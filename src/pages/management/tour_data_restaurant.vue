@@ -1,6 +1,6 @@
 <template>
   <section class="h-m-screen">
-    <LayoutPageTitle> Tour / จัดทัวร์ / จัดการร้านอาหาร </LayoutPageTitle>
+    <LayoutPageTitle> Tour Management / จัดทัวร์ / จัดการร้านอาหาร </LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto">
         <UiCard class="mb-4">
@@ -35,8 +35,43 @@
               </ul>
             </div>
           </div>
+          <div>
+            <h3 class="mt-2 text-base font-bold text-gray-900 dark:text-white">
+              จัดการเพิ่มเติม
+            </h3>
+            <div class="flex space-x-3">
+              <!-- โรงแรม -->
+              <NuxtLink href="/management/tour_data_hotel">
+                <Icon class="w-6 h-6" name="mdi:bed"></Icon>
+              </NuxtLink>
+              <!-- มัคคุเทศก์ -->
+              <NuxtLink href="/management/tour_data_guide">
+                <Icon class="w-6 h-6 " name="mdi:face-woman-shimmer"></Icon>
+              </NuxtLink>
+              <!-- พาหนะ -->
+              <NuxtLink href="/management/tour_data_vehicle">
+                <Icon class="w-6 h-6 " name="mdi:van-utility"></Icon>
+              </NuxtLink>
+              <!-- สถานที่ -->
+              <NuxtLink href="/management/tour_data_stopover">
+                <Icon class="w-6 h-6 " name="mdi:store-marker"></Icon>
+              </NuxtLink>
+              <!-- ร้านอาหาร -->
+              <NuxtLink href="/management/tour_data_restaurant">
+                <Icon class="w-6 h-6 text-blue-700" name="mdi:food-fork-drink"></Icon>
+              </NuxtLink>
+            </div>
+          </div>
         </UiCard>
         <UiCard>
+          <div class="p-2 w-full relative">
+            <NuxtLink href="/tour_data">
+              <o-button
+                class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                <Icon class="w-6 h-6" name="ic:baseline-minus"></Icon>
+              </o-button>
+            </NuxtLink>
+          </div>
           <h2 class="mb-2 text-xl font-bold dark:text-white">
             ร้านอาหาร
           </h2>
@@ -47,10 +82,12 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >ร้านเลียจาน</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
+                  href="#">ร้านเลียจาน</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเทียง ร้านเลียจาน</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >โครตอร่อย!</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
+                  href="#">โครตอร่อย!</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น โครตอร่อย!</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
@@ -60,10 +97,13 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >ร้านอาหารอาโนะเนะ</a></h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเี่ยง ร้านอาหารอาโนะเนะ</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
+                  href="#">ร้านอาหารอาโนะเนะ</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเี่ยง ร้านอาหารอาโนะเนะ
+              </p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >กินไหมจร๊ะ</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
+                  href="#">กินไหมจร๊ะ</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น กินไหมจร๊ะ</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
@@ -73,10 +113,13 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >ร้านอาหาร อัลไล</a></h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเที่ยง ร้านอาหาร อัลไล</p>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
+                  href="#">ร้านอาหาร อัลไล</a></h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเที่ยง ร้านอาหาร อัลไล
+              </p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >วงวารอาหาร</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
+                  href="#">วงวารอาหาร</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น วงวารอาหาร</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
@@ -86,16 +129,42 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">24 เมษายน
                 2566</time>
-                <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >ในรู</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
+                  href="#">ในรู</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเที่ยง ในรู</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#" @click="add = true" >โต๋วโภชนา</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
+                  href="#">โต๋วโภชนา</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น โต๋วโภชนา</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
           </ol>
-          <div class="mt-2 flex justify-end">
-            <o-button>เสร็จสิ้น</o-button>
+
+          <div v-if="showComment">
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+              คอมเมนต์
+            </h2>
+            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+              <li class="flex justify-between">
+                <div>รสชาติอาหารดี</div>
+                <div>20/06/66</div>
+                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+              </li>
+            </ul>
+
+            <o-field label="เขียนคอมเมนต์">
+              <o-input type="textarea"></o-input>
+            </o-field>
+            <div class="flex">
+              <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                <o-input></o-input>
+              </o-field>
+              <section class="flex-1 shrink flex items-center justify-end">
+                <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                </o-button>
+                <o-button class="mt-5">เพิ่ม</o-button>
+              </section>
+            </div>
           </div>
         </UiCard>
       </div>
