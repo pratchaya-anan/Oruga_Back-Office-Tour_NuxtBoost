@@ -32,7 +32,10 @@
             <div class="col-span-1 ">ศศิศ วิรัตน์จินดา</div>
             <div class="col-span-1 font-bold">อ้างอิงถึงเลขที่ใบขอเคลียร์เงินทดลองจ่าย:</div>
             <div class="col-span-1 ">2665519328591</div>
-
+            <div class="col-span-1 font-bold">โครงการ:</div>
+            <div class="col-span-1 ">เที่ยวเกาะ เลาะรัก</div>
+            <div class="col-span-1 font-bold">รายละเอียดโครงการ/กิจกรรม:</div>
+            <div class="col-span-1 ">หาดพัทยา</div>
           </div>
         </div>
 
@@ -41,8 +44,6 @@
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ฝ่าย/แผนก:</div>
             <div class="col-span-2 text-right">บริการ</div>
-            <div class="col-span-1 font-bold">โครงการ:</div>
-            <div class="col-span-2 text-right">เที่ยวเกาะ เลาะรัก</div>
           </div>
         </div>
       </div>
