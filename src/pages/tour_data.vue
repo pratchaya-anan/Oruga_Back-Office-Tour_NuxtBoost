@@ -52,21 +52,21 @@
               </h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
+                  <Icon class="w-6 h-6 mr-2" name="ri:treasure-map-fill"></Icon>
                   อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
+                  <Icon class="w-6 h-6 mr-2" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
                   4 วัน 3 คืน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
+                  <Icon class="w-6 h-6 mr-2" name="line-md:calendar"></Icon>
                   21/04/2566
                   <Icon class="mx-1 w-5 h-5" name="line-md:arrow-right"></Icon>
                   24/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:people-audience-24-filled"></Icon>
+                  <Icon class="w-6 h-6 mr-2" name="fluent:people-audience-24-filled"></Icon>
                   23 คน
                   <Icon class="w-6 h-6 ml-4" name="el:person"></Icon>
                   19 คน
@@ -74,7 +74,7 @@
                   3 คน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:comment-error-16-filled"></Icon>
+                  <Icon class="w-6 h-6 mr-2" name="fluent:comment-error-16-filled"></Icon>
                   ทัวร์นี้มีวันเกิดลูกค้า 1 คนที่ต้องทำเซอร์ไพร์
                 </li>
               </ul>
@@ -125,9 +125,10 @@
         </UiCard>
         <!-- โรงแรม -->
         <UiCard v-if="showItems == 'hotel'">
-          <div class="w-full relative">
+          <div class="p-2 w-full relative">
             <NuxtLink href="/management/tour_data_hotel">
-              <o-button class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+              <o-button
+                class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
                 <Icon class="w-6 h-6" name="ic:baseline-plus"></Icon>
               </o-button>
             </NuxtLink>
@@ -144,14 +145,14 @@
                 2566 - 22 เมษายน 2566</time>
               <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม NHU MINH PLAZA
               </h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-              เป็นโรงแรมที่ดีมาก <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6 mr-2" name="material-symbols:meeting-room"></Icon>จำนวน 12 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6 mr-2" name="solar:phone-bold"></Icon>T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6 mr-2" name="fluent:comment-error-16-filled"></Icon>เป็นโรงแรมที่ดีมาก
+              <Icon class="w-6 h-6" name="iconamoon:edit-fill" @click="
                   showComment != true
                     ? (showComment = true)
                     : (showComment = false)
-                  "></Icon> 
+                  "></Icon>
               </p>
 
               <div v-if="showComment" class="w-full p-4 border shadow-md">
@@ -219,9 +220,10 @@
         </UiCard>
         <!-- มัคคุเทศก์ -->
         <UiCard v-if="showItems == 'guide'">
-          <div class="flex justify-end">
-            <NuxtLink href="/management/tour_data_guide">
-              <o-button>
+          <div class="p-2 w-full relative">
+            <NuxtLink href="/management/tour_data_hotel">
+              <o-button
+                class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
                 <Icon class="w-6 h-6" name="ic:baseline-plus"></Icon>
               </o-button>
             </NuxtLink>
@@ -229,7 +231,7 @@
           <h2 class="mb-2 text-xl font-bold dark:text-white">
             ไกด์
           </h2>
-          <div v-if="!delete1" class="flex items-center mb-4 p-4 border shadow-md">
+          <div class="flex items-center mb-4 p-4 border shadow-md">
             <dev class="w-full relative inline-flex items-center">
               <img class="w-10 h-10 rounded-full"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
@@ -237,45 +239,17 @@
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ให้บริการดีมาก
+                  <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
+                    showComment != true
+                      ? (showComment = true)
+                      : (showComment = false)
+                    "></Icon>
+                </p>
               </div>
-              <Icon @click="delete1 = true"
-                class="absolute inline-flex w-5 h-5 text-xs -top-1 -right-1 dark:border-gray-900" name="uil:x"></Icon>
             </dev>
           </div>
-          <div class="mt-2 flex justify-end">
-            <o-button>เสร็จสิ้น</o-button>
-          </div>
-          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" class="px-6 py-3">ชื่อมัคคุเทศก์</th>
-                  <th scope="col" class="px-6 py-3">โทรศัพท์</th>
-                  <th scope="col" class="px-6 py-3">พื้นที่</th>
-                  <th scope="col" class="px-6 py-3">คอมเมนต์</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    วุฒินันท์ ศรีสุระ
-                  </th>
-                  <td class="px-6 py-4">026-568-4785</td>
-                  <td class="px-6 py-4">ภาคกลาง</td>
-                  <td class="px-6 py-4 text-center">
-                    <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
-                      showComment != true
-                        ? (showComment = true)
-                        : (showComment = false)
-                      "></Icon>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div v-if="showComment">
+          <div v-if="showComment" class="w-full p-4 border shadow-md">
             <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
               คอมเมนต์
             </h2>
@@ -301,6 +275,9 @@
               </section>
             </div>
           </div>
+          <div class="mt-4 flex justify-end">
+            <o-button>เสร็จสิ้น</o-button>
+          </div>
         </UiCard>
         <!-- พาหนะ -->
         <UiCard v-if="showItems == 'vehicle'">
@@ -312,31 +289,31 @@
             </NuxtLink>
           </div>
           <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-          <h2 class="mb-2 text-xl font-bold dark:text-white">
-            รถประจำทัวร์
-          </h2>
-          <div v-if="!delete1" class="flex items-center mb-4 p-4 border shadow-md">
-            <dev class="w-full relative inline-flex items-center">
-              <Icon class="w-10 h-10 rounded-full bg-gray-300" name="mdi:bus"></Icon>
-              <div class="ml-5">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">รถบัสลาว</h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ทะเบียน 8989 ประเทศเวียงจันน์</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">21/04/2566 ถึง 24/04/2566</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              </div>
-              <Icon @click="delete1 = true"
-                class="absolute inline-flex w-5 h-5 text-xs -top-1 -right-1 dark:border-gray-900" name="uil:x"></Icon>
-            </dev>
-          </div>
-          <div class="mt-2 flex justify-end">
-            <o-button>เสร็จสิ้น</o-button>
-          </div>
-        
-                    <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
-                      showComment != true
-                        ? (showComment = true)
-                        : (showComment = false)
-                      "></Icon>
+            <h2 class="mb-2 text-xl font-bold dark:text-white">
+              รถประจำทัวร์
+            </h2>
+            <div class="flex items-center mb-4 p-4 border shadow-md">
+              <dev class="w-full relative inline-flex items-center">
+                <Icon class="w-10 h-10 rounded-full bg-gray-300" name="mdi:bus"></Icon>
+                <div class="ml-5">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">รถบัสลาว</h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ทะเบียน 8989 ประเทศเวียงจันน์</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">21/04/2566 ถึง 24/04/2566</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+                </div>
+                <Icon class="absolute inline-flex w-5 h-5 text-xs -top-1 -right-1 dark:border-gray-900" name="uil:x">
+                </Icon>
+              </dev>
+            </div>
+            <div class="mt-2 flex justify-end">
+              <o-button>เสร็จสิ้น</o-button>
+            </div>
+
+            <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
+              showComment != true
+                ? (showComment = true)
+                : (showComment = false)
+              "></Icon>
           </div>
 
           <div v-if="showComment">
