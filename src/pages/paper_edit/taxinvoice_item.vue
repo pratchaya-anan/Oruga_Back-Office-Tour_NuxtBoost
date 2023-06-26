@@ -74,11 +74,11 @@
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-4">ชื่อผู้ขอเบิก</div>
+                <div class="mt-4">หน่วยงาน / ลูกค้า</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  ศศิศ วิรัตน์จินดา
+                เทศบาลขอนแก่น
                 </div>
               </div>
               <div
@@ -191,9 +191,7 @@
               <th scope="col" class="px-6 py-3">ส่วนลด</th>
               <th scope="col" class="px-6 py-3">ภาษี</th>
               <th scope="col" class="px-6 py-3">รายการสินค้า</th>
-              <th scope="col" class="px-6 py-3">
-                <span class="sr-only">Edit</span>
-              </th>
+              <th scope="col" class="px-6 py-3"></th>
             </tr>
           </thead>
           <tbody>
@@ -325,13 +323,10 @@
           </o-field>
           <o-field class="flex-1" label="ภาษี">
             <o-select placeholder="ยกเว้นภาษี">
-              <option value="flint">ยกเว้นภาษี</option>
-              <option value="silver">7 %</option>
-              <option value="silver">9 %</option>
+              <option value="flint">ยกเว้นภาษี/0%</option>
+              <option value="silver">7%</option>
+              <option value="silver">9%</option>
             </o-select>
-          </o-field>
-          <o-field class="flex-1" label="จำนวนเงิน">
-            <o-input></o-input>
           </o-field>
         </div>
         <section>
