@@ -9,11 +9,7 @@
                 <div class="col-span-5">
                   <h2 class="text-xl font-bold dark:text-white">ใบขอเบิก</h2>
                 </div>
-                <div class="flex justify-end">
-                  <NuxtLink to="/paper/taxinvoice_paper">
-                    <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
-                    </Icon>
-                  </NuxtLink>
+                <div class="flex justify-end">                 
                   <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit"
                     @click="showOrderPanel != true ? showOrderPanel = true : showOrderPanel = false">
                   </Icon>
@@ -21,7 +17,7 @@
               </div>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  Billing Note/Invoice
+                  Disbursement Estimate
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   เลขที่: 0841142174178
@@ -49,7 +45,7 @@
           </section>
         </section>
         <section v-if="!showOrderPanel" class="my-4 border-t border-gray-200 dark:border-gray-700">
-          <span>รายละเอียดใบกำกับภาษี</span>
+          <span>รายละเอียดใบเบิกเงินสดย่อย</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -62,76 +58,44 @@
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                 <div class="mt-2">
-                  ชื่อผู้ติดต่อ
+                  แผนก
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  มะนาว หวานจังเลย
+                  บริการ
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                 <div class="mt-2">
-                  ID TAX
+                  วัตถุประสงค์การยืม
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+                  เงินทดลองจ่าย
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                 <div class="mt-2">
-                  ที่อยู่
+                  วันที่ต้องการใช้เงิน
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  4585695214526
+                 26/06/2566
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                 <div class="mt-2">
-                  วัตถุประสงค์การยืมเงินทดลองจ่าย
-                </div>
-                <div class="border-b mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  เพื่อจ่ายเงิน
-                </div>
-              </div>
-              <div class="mt-3 text-sm not-italic  font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">
-                  รหัสลูกค้า
+                  โครงการ
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  C-58015259
+                  องค์การบริหารส่วนตำบลโพนงาม
                 </div>
               </div>
-              <div class="mt-3 text-sm not-italic  font-normal text-gray-500 dark:text-gray-400">
+              <div class="text-sm not-italic  font-normal text-gray-500 dark:text-gray-400">
                 <div class="mt-2">
-                  ผู้ขาย
+                  รายละเอียดโครงการ/กิจกรรม
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  สมชัย ใจเกินร้อย
+                  นำสมาชิกประชุม
                 </div>
-              </div>
-              <div class="mt-3 text-sm not-italic  font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">
-                  ฝ่าย
-                </div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  การตลาด
-                </div>
-              </div>
-              <div class="mt-3 text-sm not-italic  font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">
-                  ยืนยันราคาวันที่
-                </div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  31/03/2566
-                </div>
-              </div>
-              <div class="mt-3 text-sm not-italic  font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">
-                  กำหนดชำระ
-                </div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  31/03/2566
-                </div>
-              </div>
+              </div>             
             </div>
 
           </div>
@@ -139,7 +103,6 @@
       </UiCard>
     </div>
     <div class="col-span-2">
-      <div class=" overflow-x-auto shadow-md sm:rounded-lg mb-4">
         <UiCard class="mt-3">
           <div class="p-5">
             <div>
@@ -148,27 +111,23 @@
           </div>
           <div class="col-span-2">
             <div class=" overflow-x-auto shadow-md sm:rounded-lg mb-4">
-
               <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
                     <th scope="col" class="px-6 py-3">
-                      รหัสสินค้า
+                      รายละเอียดค่าใช้จ่าย
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      ประเภทค่าใช้จ่าย
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      ราคา
                     </th>
                     <th scope="col" class="px-6 py-3">
                       จำนวน
                     </th>
                     <th scope="col" class="px-6 py-3">
-                      ราคาต่อหน่วย
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                      ส่วนลด
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                      ภาษี (0% 7% 9%)
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                      รายการสินค้า
+                      ยอดสุทธิ
                     </th>
                     <th scope="col" class="px-6 py-3">
                       <span class="sr-only">Edit</span>
@@ -179,22 +138,19 @@
                   <tr
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      Qu-285455
+                      น้ำมันรถบัส
                     </th>
                     <td class="px-6 py-4">
-                      1
+                      ค่าน้ำมัน
                     </td>
                     <td class="px-6 py-4">
-                      10,000
+                      2,000
                     </td>
                     <td class="px-6 py-4">
-                      10 %
+                      2
                     </td>
                     <td class="px-6 py-4">
-                      0%
-                    </td>
-                    <td class="px-6 py-4">
-                      ห้องพักโรงแรม
+                      4,000
                     </td>
                     <td class="px-6 py-4 text-right">
                       <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
@@ -262,47 +218,43 @@
               <o-button @click="showItemslist = false" class="ml-4">ยกเลิก</o-button>
             </section>
           </div>
-          <UiCard v-if="showItemsPanel">
-            <div class="flex gap-4">
-              <o-field class="flex-1" label="รหัสสินค้า">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <o-field class="flex-1" label="รายการสินค้า">
+        </UiCard>
+        <UiCard v-if="showItemsPanel">
+
+          <div class="flex gap-4">
+            <o-field class="flex-1" label="รายละเอียดค่าใช้จ่าย">
               <o-input></o-input>
             </o-field>
-            <div class="flex gap-4">
-              <o-field class="flex-1" label="จำนวน">
-                <o-input></o-input>
-              </o-field>
-              <o-field class="flex-1" label="ราคาต่อหน่วย">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div class="flex gap-4">
-              <o-field class="flex-1" label="ส่วนลด">
-                <o-input></o-input>
-              </o-field>
-              <o-field class="flex-1" label="ภาษี (0% 7% 9%)">
-                <o-select placeholder="0 %">
-                  <option value="flint">0 %</option>
-                  <option value="silver">7 %</option>
-                  <option value="silver">9 %</option>
-                </o-select>
-              </o-field>
-              <o-field class="flex-1" label="จำนวนเงิน">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <section>
-              <o-button class="mt-4" @click="showItemsPanel = false">บันทึก</o-button>
-              <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
-            </section>
-          </UiCard>
+            <o-field class="flex-1" label="ประเภทค่าใช้จ่าย">
+            <o-select v-model="typeselected" placeholder="ประเภทค่าใช้จ่าย">
+                <option value="flint">เบี้ยเลี้ยง</option>
+                <option value="silver">ค่าที่พัก</option>
+                <option value="silver">ค่ายานพาหนะ</option>
+                <option value="silver">ค่าน้ำมัน</option>
+                <option value="silver">ไกด์</option>
+                <option value="other">อื่น ๆ</option>
+              </o-select>
+            </o-field>
+          </div>
+          <o-field v-if="typeselected == 'other'" class="flex-1" label="อื่น ๆ">
+              <o-input></o-input>
+            </o-field>
+          <div class="flex gap-4">
+            <o-field class="flex-1" label="ราคา">
+              <o-input></o-input>
+            </o-field>
+            <o-field class="flex-1" label="จำนวน">
+              <o-input></o-input>
+            </o-field>
+           
+          </div>
+          <section>
+            <o-button class="mt-4" @click="showItemsPanel = false">บันทึก</o-button>
+            <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
+          </section>
         </UiCard>
       </div>
     </div>
-  </div>
   <NuxtLink to="/paper/disbursement_paper" class="flex justify-end w-full ">
     <o-button>
       บันทึก
@@ -316,6 +268,7 @@ const showItemsPanel = ref(false);
 const showOrderPanel = ref(false);
 const showItemslist = ref(false);
 const selected = ref();
+const typeselected = ref();
 
 function setnull() {
   selected.value = null;
