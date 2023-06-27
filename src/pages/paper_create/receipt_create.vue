@@ -1,9 +1,133 @@
 <template>
-  <LayoutPageTitle> Taxinvoice / สร้างใบกำกับภาษี </LayoutPageTitle>
+  <LayoutPageTitle> Receipt / สร้างใบเสร็จรับเงิน </LayoutPageTitle>
   <o-steps v-model="stepnext" variant="success">
     <!-- step 1 -->
     <o-step-item
       step="1"
+      label="เลือกลูกค้า"
+      :clickable="true"
+      icon="user-plus"
+    >
+      <div class="space-y-4">
+        <UiCard>
+          <h2 class="text-xl font-bold dark:text-white mb-2">
+            ค้นหาหน่วยงาน / ลูกค้า
+          </h2>
+          <div class="flex items-center">
+            <div class="relative w-full">
+              <o-input
+                placeholder="ค้นหา ชื่อลูกค้า, รหัสลูกค้า"
+                class="w-full"
+              ></o-input>
+            </div>
+            <div class="ml-2">
+              <o-button @click="showListAgency = true">ค้นหา</o-button>
+            </div>
+          </div>
+        </UiCard>
+        <div>
+          <UiCard v-if="showListAgency">
+            <h2 class="text-xl font-bold dark:text-white mb-2">
+              เลือก หน่วยงาน / ลูกค้า ที่ต้องการนำไปออกใบเสร็จรับเงิน
+            </h2>
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+              <table
+                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+              >
+                <thead
+                  class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+                >
+                  <tr>
+                    <th scope="col" class="px-6 py-4">ลำดับ</th>
+                    <th scope="col" class="px-6 py-4">หน่วยงาน / ลูกค้า</th>
+                    <th scope="col" class="px-6 py-4">รหัสลูกค้า</th>
+                    <th scope="col" class="px-6 py-4">
+                      เลขประจำตัวผู้เสียภาษี
+                    </th>
+                    <th scope="col" class="px-6 py-4">ที่อยู่</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                    v-for="i in tableAgency"
+                    @click="stepnext = 2"
+                  >
+                    <th
+                      scope="row"
+                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      {{ i.id }}
+                    </th>
+                    <td class="px-6 py-4">
+                      {{ i.nameagency }}
+                    </td>
+                    <td class="px-6 py-4">
+                      {{ i.idagency }}
+                    </td>
+                    <td class="px-6 py-4">{{ i.taxagency }}</td>
+                    <td class="px-6 py-4">{{ i.addressagency }}</td>
+                    <td class="px-6 py-4">
+                      <div
+                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                      >
+                        เลือก
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </UiCard>
+        </div>
+        <section v-if="!showAddAgency">
+          <o-button @click="showAddAgency = true"
+            >เพิ่มหน่วยงาน / ลูกค้า</o-button
+          >
+        </section>
+        <UiCard v-if="showAddAgency">
+          <div>
+            <h2 class="text-xl font-bold dark:text-white mb-2">
+              ข้อมูล หน่วยงาน / ลูกค้า
+            </h2>
+            <div class="grid grid-cols-2 gap-4 mt-3">
+              <div>
+                <o-field label="หน่วยงาน / ลูกค้า">
+                  <o-input></o-input>
+                </o-field>
+              </div>
+              <div>
+                <o-field label="รหัสลูกค้า">
+                  <o-input></o-input>
+                </o-field>
+              </div>
+              <div>
+                <o-field label="เลขประจำตัวผู้เสียภาษี">
+                  <o-input></o-input>
+                </o-field>
+              </div>
+              <div>
+                <o-field label="ที่อยู่">
+                  <o-input></o-input>
+                </o-field>
+              </div>
+            </div>
+            <div class="flex justify-end">
+              <div>
+                <o-button @click="showAddAgency = false">ยกเลิก</o-button>
+              </div>
+              <div>
+                <o-button @click="stepnext = 2">ตกลง</o-button>
+              </div>
+            </div>
+          </div>
+        </UiCard>
+      </div>
+    </o-step-item>
+    <!-- step 2 -->
+    <o-step-item
+      step="2"
       label="ค้นหาใบวางบิล"
       :clickable="true"
       icon="user-plus"
@@ -49,7 +173,7 @@
                 <tr
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                   v-for="i in tableData"
-                  @click="stepnext = 2"
+                  @click="stepnext = 3"
                 >
                   <th
                     scope="row"
@@ -77,11 +201,14 @@
             </table>
           </div>
         </UiCard>
+        <div class="flex justify-end">
+          <o-button @click="stepnext = 4">ข้าม</o-button>
+        </div>
       </div>
     </o-step-item>
-    <!-- step 2 -->
+    <!-- step 3 -->
     <o-step-item
-      step="2"
+      step="3"
       label="เลือกรายการ"
       :clickable="true"
       icon="user-lock"
@@ -330,7 +457,6 @@
                     <tr
                       class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                       v-for="i in tableDatalistitem"
-                      @click="stepnext = 2"
                     >
                       <th scope="col" class="p-4">
                         <div class="flex items-center">
@@ -367,9 +493,12 @@
           </UiCard>
         </div>
       </div>
+      <div class="flex justify-end">
+        <o-button @click="stepnext = 5">ตกลง</o-button>
+      </div>
     </o-step-item>
-    <!-- step 3 -->
-    <o-step-item step="3" label="เลือกทัวร์" :clickable="true" icon="user-plus">
+    <!-- step 4 -->
+    <o-step-item step="4" label="เลือกทัวร์" :clickable="true" icon="user-plus">
       <div class="space-y-4">
         <UiCard>
           <h2 class="text-xl font-bold dark:text-white mb-2">
@@ -400,7 +529,7 @@
                   class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
                 >
                   <tr>
-                    <th scope="col" class="px-6 py-3">ลำดับ</th>
+                    <th scope="col" class="px-4 py-3">ลำดับ</th>
                     <th scope="col" class="py-3">ชื่อทริปทัวร์</th>
                     <th scope="col" class="py-3">ชื่อโปรแกรม</th>
                     <th scope="col" class="py-3">วันที่เดินทาง</th>
@@ -412,7 +541,8 @@
                   <tr
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                     v-for="i in tableDatatour"
-                    @click="stepnext = 4"
+                    @click="stepnext = 5"
+                    :key="i"
                   >
                     <th
                       scope="row"
@@ -443,130 +573,6 @@
         </div>
       </div>
     </o-step-item>
-    <!-- step 4 -->
-    <o-step-item
-      step="4"
-      label="เลือกลูกค้า"
-      :clickable="true"
-      icon="user-plus"
-    >
-      <div class="space-y-4">
-        <UiCard>
-          <h2 class="text-xl font-bold dark:text-white mb-2">
-            ค้นหาหน่วยงาน / ลูกค้า
-          </h2>
-          <div class="flex items-center">
-            <div class="relative w-full">
-              <o-input
-                placeholder="ค้นหา ชื่อลูกค้า, รหัสลูกค้า"
-                class="w-full"
-              ></o-input>
-            </div>
-            <div class="ml-2">
-              <o-button @click="showListAgency = true">ค้นหา</o-button>
-            </div>
-          </div>
-        </UiCard>
-        <div>
-          <UiCard v-if="showListAgency">
-            <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือก หน่วยงาน / ลูกค้า ที่ต้องการนำไปออกใบกำกับภาษี
-            </h2>
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-              <table
-                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-              >
-                <thead
-                  class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-                >
-                  <tr>
-                    <th scope="col" class="px-6 py-4">ลำดับ</th>
-                    <th scope="col" class="px-6 py-4">หน่วยงาน / ลูกค้า</th>
-                    <th scope="col" class="px-6 py-4">รหัสลูกค้า</th>
-                    <th scope="col" class="px-6 py-4">
-                      เลขประจำตัวผู้เสียภาษี
-                    </th>
-                    <th scope="col" class="px-6 py-4">ที่อยู่</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                    v-for="i in tableAgency"
-                    @click="stepnext = 5"
-                  >
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      {{ i.id }}
-                    </th>
-                    <td class="px-6 py-4">
-                      {{ i.nameagency }}
-                    </td>
-                    <td class="px-6 py-4">
-                      {{ i.idagency }}
-                    </td>
-                    <td class="px-6 py-4">{{ i.taxagency }}</td>
-                    <td class="px-6 py-4">{{ i.addressagency }}</td>
-                    <td class="px-6 py-4">
-                      <div
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                      >
-                        เลือก
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </UiCard>
-        </div>
-        <section v-if="!showAddAgency">
-          <o-button @click="showAddAgency = true"
-            >เพิ่มหน่วยงาน / ลูกค้า</o-button
-          >
-        </section>
-        <UiCard v-if="showAddAgency">
-          <div>
-            <h2 class="text-xl font-bold dark:text-white mb-2">
-              ข้อมูล หน่วยงาน / ลูกค้า
-            </h2>
-            <div class="grid grid-cols-2 gap-4 mt-3">
-              <div>
-                <o-field label="หน่วยงาน / ลูกค้า">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-              <div>
-                <o-field label="รหัสลูกค้า">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-              <div>
-                <o-field label="เลขประจำตัวผู้เสียภาษี">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-              <div>
-                <o-field label="ที่อยู่">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-            </div>
-            <div class="flex justify-end">
-              <div>
-                <o-button @click="showAddAgency = false">ยกเลิก</o-button>
-              </div>
-              <div>
-                <o-button @click="stepnext = 5">ตกลง</o-button>
-              </div>
-            </div>
-          </div>
-        </UiCard>
-      </div>
-    </o-step-item>
     <!-- step 5 -->
     <o-step-item step="5" label="ข้อมูล" :clickable="true" icon="user-lock">
       <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
@@ -585,8 +591,7 @@
                 </div>
               </div>
             </section>
-            <section class="my-4 border-t border-gray-200 dark:border-gray-700">
-              <span>รายละเอียดหน่วยงาน / ลูกค้า</span>
+            <section class="border-t border-gray-200 dark:border-gray-700">
               <div class="sm:flex xl:block xl:space-y-4">
                 <div class="sm:flex-1">
                   <div
@@ -627,6 +632,150 @@
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </UiCard>
+          <UiCard class="mb-4">
+            <section>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                <div>
+                  <div class="grid grid-cols-6">
+                    <div class="col-span-5">
+                      <h2 class="text-xl font-bold dark:text-white">
+                        ข้อมูลทัวร์
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="border-t border-gray-200 dark:border-gray-700">
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-4">ชื่อทริปทัวร์</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      องค์การบริหารส่วนตำบลโพนงาม
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ชื่อโปรแกรมทัวร์</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">วันที่เดินทาง</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      05-06-2566
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">วันที่สิ้นสุด</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      07-06-2566
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </UiCard>
+          <UiCard class="mb-4">
+            <section>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                <div>
+                  <div class="grid grid-cols-6">
+                    <div class="col-span-5">
+                      <h2 class="text-xl font-bold dark:text-white">
+                        ใบวางบิล/ใบแจ้งหนี้
+                      </h2>
+                    </div>
+                  </div>
+                  <ul class="mt-2 space-y-1">
+                    <li
+                      class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      Billing Note/Invoice
+                    </li>
+                    <li
+                      class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      เลขที่: 0841142174178
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section class="border-t border-gray-200 dark:border-gray-700">
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-4">ชื่อผู้ขอเบิก</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      ศศิศ วิรัตน์จินดา
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ชื่อผู้ติดต่อ</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      มะนาว หวานจังเลย
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ID TAX</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ที่อยู่</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      4585695214526
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">วัตถุประสงค์การยืมเงินทดลองจ่าย</div>
+                    <div
+                      class="text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      เพื่อจ่ายเงิน
                     </div>
                   </div>
                 </div>
@@ -808,7 +957,6 @@
 
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
-const steps = ref(1);
 const branch = ref("MainBranch");
 const showItemslist = ref(false);
 const isImageModalActive = ref(false);
@@ -816,6 +964,7 @@ const showcheck = ref("");
 const selected = ref();
 const showListItem = ref(false);
 const showListTour = ref(false);
+const showOrderPanel = ref(false);
 const stepnext = ref();
 const showListAgency = ref(false);
 const showAddAgency = ref(false);
@@ -895,6 +1044,7 @@ const tableDatalistitem = [
     amount: "2,140",
   },
 ];
+
 const tableDatatour = [
   {
     id: 1,
@@ -916,14 +1066,14 @@ const tableAgency = [
   {
     id: 1,
     nameagency: "เทศบาลขอนแก่น",
-    idagency: "1552555214",
+    idagency: "C-58015259",
     taxagency: "1522236",
     addressagency: "156 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น",
   },
   {
     id: 2,
     nameagency: "สรสิริ สายบุตร",
-    idagency: "1547896524",
+    idagency: "C-58015475",
     taxagency: "13524569",
     addressagency: "175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น",
   },
@@ -931,5 +1081,3 @@ const tableAgency = [
 
 const data = ref(tableData);
 </script>
-
-

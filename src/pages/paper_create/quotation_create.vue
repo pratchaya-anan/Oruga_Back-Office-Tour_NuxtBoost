@@ -1,5 +1,5 @@
 <template>
-  <LayoutPageTitle>Quotation/สร้างใบเสนอราคา</LayoutPageTitle>
+  <LayoutPageTitle> Quotation / สร้างใบเสนอราคา </LayoutPageTitle>
   <o-steps v-model="stepnext">
     <o-step-item
       step="1"
@@ -145,7 +145,7 @@
         <div>
           <UiCard v-if="showListTour">
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือกทัวร์ที่ต้องการนำไปออกใบกำกับภาษี
+              เลือกทัวร์ที่ต้องการนำไปออกใบเสนอราคา
             </h2>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
               <table
@@ -195,6 +195,9 @@
               </table>
             </div>
           </UiCard>
+        </div>
+        <div class="flex justify-end">
+          <o-button @click="stepnext = 3">ข้าม</o-button>
         </div>
       </div>
     </o-step-item>
