@@ -33,11 +33,13 @@
         <div class="col-span-1">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อผู้ขอเบิก:</div>
-            <div class="col-span-2 ">นายสรณ์สิริ สายบุตร</div>
+            <div class="col-span-2">นายสรณ์สิริ สายบุตร</div>
             <div class="col-span-1 font-bold">ฝ่าย/แผนก:</div>
-            <div class="col-span-2 ">บริการลูกค้า</div>
-            <div class="col-span-1 font-bold">วัตถุประสงค์การยืมเงินทดลองจ่าย:</div>
-            <div class="col-span-2 ">ค่าใช้จ่ายในทัวร์</div>
+            <div class="col-span-2">บริการลูกค้า</div>
+            <div class="col-span-1 font-bold">
+              วัตถุประสงค์การยืมเงินทดลองจ่าย:
+            </div>
+            <div class="col-span-2">ค่าใช้จ่ายในทัวร์</div>
           </div>
         </div>
 
