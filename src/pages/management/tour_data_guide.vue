@@ -73,8 +73,9 @@
             <dev class="w-full relative inline-flex items-center">
               <img class="w-10 h-10 rounded-full"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
-              <div class="ml-5">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
+                <div class="ml-5 w-full">
+                <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ <a href="#" @click="isItemModalHotelData3 = true"
+                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">ให้บริการดีมาก
@@ -393,6 +394,7 @@ onMounted(() => { initFlowbite() });
 const add = ref(false);
 const showComment = ref(false);
 const isItemModalGuideData = ref(false);
+const isItemModalHotelData3 = ref(false);
 const editHotel = ref(false);
 const delete1 = ref(false);
 
