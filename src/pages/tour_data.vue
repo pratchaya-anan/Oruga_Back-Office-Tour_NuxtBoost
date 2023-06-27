@@ -21,7 +21,7 @@
                       <Icon class="w-4 h-4 mr-1" name="icon-park-twotone:order"></Icon>พิมพ์ใบ NAMELISTGROUP
                     </MenuDropItem>
                   </NuxtLink>
-                  <NuxtLink href="paper/guideorder_paper">
+                  <NuxtLink href="/guide_order">
                     <MenuDropItem>
                       <Icon class="w-4 h-4 mr-1" name="icon-park-twotone:order"></Icon>พิมพ์ใบสั่งงานมัคคุเทศก์
                     </MenuDropItem>
@@ -686,22 +686,45 @@
                     คอมเมนต์
                   </h2>
                   <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                    <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
-                    <p class="w-full text-end">20/06/66</p>
-                    <p class="w-full text-end">
-                      <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                    </p>
-                    <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
-                    <p class="w-full text-end">20/06/65</p>
-                    <p class="w-full text-end">
-                      <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                    </p>
-                    <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
-                    <p class="w-full text-end">20/06/64</p>
-                    <p class="w-full text-end">
-                      <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                    </p>
-                  </div>
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <p class="w-full text-end">20/06/66</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
+                  </p>
+                  
+                  <div v-if="editcomment2" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  <p class="w-full text-end">20/06/65</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
+                ? (editcomment2 = true)
+                : (editcomment2 = false)">
+              </Icon>
+                  </p>
+
+                  <div v-if="editcomment3" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+                  <p class="w-full text-end">20/06/64</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
+                ? (editcomment3 = true)
+                : (editcomment3 = false)">
+              </Icon>
+                  </p>
+                </div>
                   <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
                   <div v-if="showComment">
                     <o-field label="เขียนคอมเมนต์">
@@ -719,7 +742,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-full border-r">
+                <div class="w-full">
                   <div class="px-2">
                     <p class="text-lg font-semibold  dark:text-white">วันเข้าพัก</p>
                     <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
@@ -760,22 +783,20 @@
                     คอมเมนต์
                   </h2>
                   <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                    <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
-                    <p class="w-full text-end">20/06/66</p>
-                    <p class="w-full text-end">
-                      <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                    </p>
-                    <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
-                    <p class="w-full text-end">20/06/65</p>
-                    <p class="w-full text-end">
-                      <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                    </p>
-                    <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
-                    <p class="w-full text-end">20/06/64</p>
-                    <p class="w-full text-end">
-                      <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                    </p>
-                  </div>
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">ให้บริการดีมาก</p>
+                  <p class="w-full text-end">20/06/66</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
+                  </p>
+                  
+                </div>
                   <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
                   <div v-if="showComment">
                     <o-field label="เขียนคอมเมนต์">
@@ -793,11 +814,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-full border-r">
+                <div class="w-full ">
                  
 
                   <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบไกด์</o-button>
-                    <o-button size="medium" variant="primary" @click="isItemModalHotelData2 = false"> บันทึก </o-button>
+                    <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
                   </div>
                 </div>
               </UiCard>
@@ -901,6 +922,9 @@ const showItemsListCommentUser = ref(false);
 const isItemModalUserData = ref(false);
 const isItemModalHotelData2 = ref(false);
 const isItemModalHotelData3 = ref(false);
+const editcomment = ref(false);
+const editcomment2 = ref(false);
+const editcomment3 = ref(false);
 
 const items = ref([{ message: "Foo" }, { message: "Bar" }]);
 const memberdata = ref([
