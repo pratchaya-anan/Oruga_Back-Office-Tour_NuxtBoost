@@ -128,7 +128,7 @@
     <!-- step 2 -->
     <o-step-item
       step="2"
-      label="ค้นหาใบวางบิล"
+      label="ค้นหาใบเสนอราคา"
       :clickable="true"
       icon="user-plus"
     >
@@ -519,7 +519,7 @@
         <div>
           <UiCard v-if="showListTour">
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือกทัวร์ที่ต้องการนำไปออกใบสำคัญรับเงิน
+              เลือกทัวร์ที่ต้องการนำไปออกใบวางบิล
             </h2>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
               <table
@@ -709,7 +709,7 @@
                   <div class="grid grid-cols-6">
                     <div class="col-span-5">
                       <h2 class="text-xl font-bold dark:text-white">
-                        ใบวางบิล/ใบแจ้งหนี้
+                        ใบเสนอราคา/ยืนยันการสั่งซื้อ
                       </h2>
                     </div>
                   </div>
@@ -717,7 +717,7 @@
                     <li
                       class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
                     >
-                      Billing Note/Invoice
+                      Quatation
                     </li>
                     <li
                       class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
@@ -728,13 +728,14 @@
                 </div>
               </div>
             </section>
-            <section class="border-t border-gray-200 dark:border-gray-700">
+            <section class="my-4 border-t border-gray-200 dark:border-gray-700">
+              <span>รายละเอียดใบเสนอราคา</span>
               <div class="sm:flex xl:block xl:space-y-4">
                 <div class="sm:flex-1">
                   <div
                     class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                   >
-                    <div class="mt-4">ชื่อผู้ขอเบิก</div>
+                    <div class="mt-4">หน่วยงาน / ลูกค้า</div>
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
@@ -754,7 +755,7 @@
                   <div
                     class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                   >
-                    <div class="mt-2">ID TAX</div>
+                    <div class="mt-2">ที่อยู่</div>
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
@@ -764,7 +765,7 @@
                   <div
                     class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                   >
-                    <div class="mt-2">ที่อยู่</div>
+                    <div class="mt-2">ID TAX</div>
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
@@ -774,11 +775,31 @@
                   <div
                     class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                   >
-                    <div class="mt-2">วัตถุประสงค์การยืมเงินทดลองจ่าย</div>
+                    <div class="mt-2">โทร</div>
                     <div
-                      class="text-sm font-medium text-gray-900 dark:text-white"
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      เพื่อจ่ายเงิน
+                      0254875858
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">Email</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      somchai@gmail.com
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">รหัสลูกค้า</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      C-58015259
                     </div>
                   </div>
                 </div>
