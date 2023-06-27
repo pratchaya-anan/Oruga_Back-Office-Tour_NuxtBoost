@@ -53,18 +53,15 @@
           <o-field label="ผู้เสนอขาย">
             <o-input modelValue="สมชัย ใจเกินร้อย"></o-input>
           </o-field>
-          <o-field label="ฝ่าย">
-            <o-input modelValue="การตลาด"></o-input>
+          <o-field label="ฝ่าย/แผนก">
+            <o-input modelValue="ฝ่ายขาย"></o-input>
           </o-field>
-          <o-field label="ยืนยันราคาภายใน">
-            <o-input modelValue="31-03-2566"></o-input>
+          <o-field label="ยืนยันราคาภายในวันที่">
+            <o-input modelValue="16/07/2566"></o-input>
           </o-field>
           <o-field label="วันส่งของ">
-            <o-input modelValue="02-04-2566"></o-input>
-          </o-field>
-          <o-field label="ค่ามัดจำ">
-            <o-input modelValue="20%"></o-input>
-          </o-field>
+            <o-input modelValue="17/07/2566"></o-input>
+          </o-field>          
           <section>
             <o-button @click="showOrderPanel = false" class="mt-4">บันทึก</o-button>
             <o-button @click="showOrderPanel = false" class="ml-4">ยกเลิก</o-button>
@@ -101,6 +98,12 @@
                   </div>
                 </div>
                 <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">Email</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    somchai@gmail.com
+                  </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                   <div class="mt-2">ที่อยู่</div>
                   <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
@@ -118,7 +121,7 @@
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">ฝ่าย:</div>
+                <div class="mt-2">ฝ่าย/แผนก</div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   ฝ่ายขาย
                 </div>
