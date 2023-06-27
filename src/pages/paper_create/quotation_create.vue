@@ -372,7 +372,7 @@
                   </o-field>
                 </div>
                 <div>
-                  <o-field label="ฝ่าย">
+                  <o-field label="ฝ่าย/แผนก">
                     <o-select placeholder="เลือกฝ่าย">
                       <option value="บัญชี">บัญชี</option>
                       <option value="การเงิน">การเงิน</option>

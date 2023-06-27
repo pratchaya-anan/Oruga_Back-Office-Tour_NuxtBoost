@@ -44,23 +44,41 @@
           v-if="showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <o-field label="ชื่อผู้ขอเบิก">
-            <o-input modelValue="ศศิศ วิรัตน์จินดา"></o-input>
+          <o-field label="หน่วยงาน / ลูกค้า">
+            <o-input modelValue="เทศบาลขอนแก่น"></o-input>
+          </o-field>
+          <o-field label="รหัสลูกค้า">
+            <o-input modelValue="1552555214"></o-input>
           </o-field>
           <o-field label="ชื่อผู้ติดต่อ">
-            <o-input modelValue="มะนาว หวานจังเลย"></o-input>
+            <o-input modelValue="นายภาคภูมิ ภูเขียว"></o-input>
+          </o-field>
+          <o-field label="เบอร์ติดต่อ">
+            <o-input modelValue="0625584785"></o-input>
+          </o-field>
+          <o-field label="เลขประจำตัวผู้เสียภาษี">
+            <o-input modelValue="1522236"></o-input>
           </o-field>
           <o-field label="ที่อยู่">
             <o-input
-              modelValue="111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100"
+              modelValue="175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น"
             ></o-input>
-          </o-field>
-          <o-field label="ที่อยู่">
-            <o-input modelValue="4585695214526"></o-input>
-          </o-field>
-          <o-field label="วัตถุประสงค์การยืมเงินทดลองจ่าย">
-            <o-input modelValue="เพื่อจ่ายเงิน"></o-input>
-          </o-field>
+          </o-field>  
+          <o-field label="เลขประจำตัวผู้เสียภาษี">
+            <o-input modelValue="1522236"></o-input>
+          </o-field>               
+          <o-field label="ผู้เสนอขาย">
+            <o-input modelValue="สมชัย ใจเกินร้อย"></o-input>
+          </o-field>               
+          <o-field label="ฝ่าย/แผนก">
+            <o-input modelValue="ฝ่ายขาย"></o-input>
+          </o-field>               
+          <o-field label="ยืนยันราคาภายในวันที่">
+            <o-input modelValue="16/07/2566"></o-input>
+          </o-field>               
+          <o-field label="วันส่งของ">
+            <o-input modelValue="17/07/2566"></o-input>
+          </o-field>               
           <section>
             <o-button @click="showOrderPanel = false" class="mt-4"
               >บันทึก</o-button
@@ -74,107 +92,74 @@
           v-if="!showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <span>รายละเอียดใบกำกับภาษี</span>
+        <span>รายละเอียดใบเสนอราคา</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-4">ชื่อผู้ขอเบิก</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  ศศิศ วิรัตน์จินดา
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    เทศบาลขอนแก่น
+                  </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">รหัสลูกค้า</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    1552555214
+                  </div>
+                  <div class="mt-2">ชื่อผู้ติดต่อ</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    นายภาคภูมิ ภูเขียว
+                  </div>
+                  <div class="mt-2">เบอร์ติดต่อ</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">0625584785
+                  </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    1522236
+                  </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">Email</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    somchai@gmail.com
+                  </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">ที่อยู่</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                  </div>
                 </div>
               </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">ชื่อผู้ติดต่อ</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  มะนาว หวานจังเลย
-                </div>
-              </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">ID TAX</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
-                </div>
-              </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">ที่อยู่</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  4585695214526
-                </div>
-              </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">วัตถุประสงค์การยืมเงินทดลองจ่าย</div>
-                <div
-                  class="border-b mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  เพื่อจ่ายเงิน
-                </div>
-              </div>
-              <div
-                class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">รหัสลูกค้า</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  C-58015259
-                </div>
-              </div>
-              <div
-                class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">ผู้ขาย</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+            </div>
+            <div class="sm:flex-1">
+              <div class="my-4 border-t border-gray-200 dark:border-gray-700"></div>
+              <span>รายละเอียดฝ่ายขาย</span>
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">ผู้เสนอขาย</div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   สมชัย ใจเกินร้อย
                 </div>
               </div>
-              <div
-                class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">ฝ่าย</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  การตลาด
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">ฝ่าย/แผนก</div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  ฝ่ายขาย
                 </div>
               </div>
-              <div
-                class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">ยืนยันราคาวันที่</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  31/03/2566
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">ยืนยันราคาภายในวันที่</div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  16/07/2566
                 </div>
               </div>
-              <div
-                class="mt-3 text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">กำหนดชำระ</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  31/03/2566
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">วันส่งของ:</div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  17/07/2566
                 </div>
               </div>
             </div>
@@ -184,120 +169,89 @@
     </div>
     <div class="col-span-2">
       <div class="overflow-x-auto shadow-md sm:rounded-lg mb-4">
-        <table
-          class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-        >
-          <thead
-            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-          >
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" class="px-6 py-3">ลำดับที่</th>
-              <th scope="col" class="px-6 py-3">จำนวน</th>
+              <th scope="col" class="px-6 py-3">ลำดับ</th>
+              <th scope="col" class="px-6 py-3">รายการสินค้า</th>
+              <th scope="col" class="px-6 py-3">จำนวน	</th>
               <th scope="col" class="px-6 py-3">ราคาต่อหน่วย</th>
               <th scope="col" class="px-6 py-3">ส่วนลด</th>
               <th scope="col" class="px-6 py-3">ภาษี</th>
-              <th scope="col" class="px-6 py-3">รายการสินค้า</th>
+              <th scope="col" class="px-6 py-3">จำนวนเงิน</th>
               <th scope="col" class="px-6 py-3"></th>
             </tr>
           </thead>
           <tbody>
-            <tr
-              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-            >
-              <th
-                scope="row"
-                class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 1
               </th>
-              <td class="px-6 py-2">2</td>
-              <td class="px-6 py-2">10,000</td>
-              <td class="px-6 py-2">10%</td>
-              <td class="px-6 py-2">7%</td>
-              <td class="px-6 py-2">ห้องพักโรงแรม</td>
-              <td class="px-6 py-2 text-right">
-                <button
-                  id="dropdownMenuIconButton"
-                  data-dropdown-toggle="dropdownDots"
+              <td class="px-6 py-4">ค่าตั๋วเครื่องบิน</td>
+              <td class="px-6 py-4">3</td>
+              <td class="px-6 py-4">1000</td>
+              <td class="px-6 py-4">0%</td>
+              <td class="px-6 py-4">7%</td>
+              <td class="px-6 py-4">3210</td>
+              <td class="px-6 py-4 text-right">
+                <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
                   class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                  type="button"
-                >
-                  <svg
-                    class="w-6 h-6"
-                    aria-hidden="true"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  type="button">
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
-                    ></path>
+                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                    </path>
                   </svg>
                 </button>
               </td>
             </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                2
+              </th>
+              <td class="px-6 py-4">ค่าโรงแรม</td>
+              <td class="px-6 py-4">2</td>
+              <td class="px-6 py-4">1500</td>
+              <td class="px-6 py-4">0%</td>
+              <td class="px-6 py-4">7%</td>
+              <td class="px-6 py-4">3210</td>
+              <td class="px-6 py-4 text-right">
+                <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                  class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  type="button">
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                    </path>
+                  </svg>
+                </button>
+              </td>
+            </tr>           
           </tbody>
         </table>
 
         <!-- Dropdown menu -->
-        <ul
-          id="dropdownDots"
-          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-        >
-          <MenuDropItem>แก้ไข</MenuDropItem>
-          <MenuDropItem>ลบ</MenuDropItem>
-        </ul>
+        <div id="dropdownDots"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+          <div class="py-2">
+            <a href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+              ลบ</a>
+          </div>
+          <div class="py-2">
+            <a href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+              แก้ไข</a>
+          </div>
+        </div>
       </div>
+
       <section v-if="!showItemsPanel">
-        <o-button @click="showItemsPanel = true">เพิ่มรายการ</o-button>
+        <o-button @click="showItemsPanel = true">เพิ่มข้อมูล</o-button>
       </section>
 
-      <!-- Dropdown menu -->
-      <div
-        id="dropdownDots"
-        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-      >
-        <div class="py-2">
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-          >
-            ลบ</a
-          >
-        </div>
-        <div class="py-2">
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-          >
-            แก้ไข</a
-          >
-        </div>
-      </div>
-
-      <div v-if="showItemslist" class="mt-5">
-        <o-table
-          :data="data"
-          v-model:checked-rows="checkedRows"
-          checkable
-          :checkbox-position="checkboxPosition"
-        >
-          <o-table-column
-            v-for="column in columns"
-            v-bind="column"
-            #default="{ row }"
-            :key="column"
-          >
-            {{ row[column.field] }}
-          </o-table-column>
-        </o-table>
-        <section>
-          <o-button class="mt-4">บันทึก</o-button>
-          <o-button @click="showItemslist = false" class="ml-4"
-            >ยกเลิก</o-button
-          >
-        </section>
-      </div>
       <UiCard v-if="showItemsPanel">
         <o-field class="flex-1" label="รายการสินค้า">
           <o-input></o-input>
@@ -323,12 +277,8 @@
           </o-field>
         </div>
         <section>
-          <o-button class="mt-4" @click="showItemsPanel = false"
-            >บันทึก</o-button
-          >
-          <o-button @click="showItemsPanel = false" class="ml-4"
-            >ยกเลิก</o-button
-          >
+          <o-button class="mt-4" @click="showItemsPanel = false">บันทึก</o-button>
+          <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
         </section>
       </UiCard>
     </div>
