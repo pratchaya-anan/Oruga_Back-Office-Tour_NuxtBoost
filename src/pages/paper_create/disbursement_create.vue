@@ -82,25 +82,25 @@
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                     <div class="mt-4">ชื่อทริปทัวร์</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      องค์การบริหารส่วนตำบลโพนงาม
+                      เกาะล้าน
                     </div>
                   </div>
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                     <div class="mt-2">ชื่อโปรแกรมทัวร์</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
+                      ซื่อ 10 จ่าย 8
                     </div>
                   </div>
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                     <div class="mt-2">วันที่เดินทาง</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      05-06-2566
+                      05/06/2566
                     </div>
                   </div>
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                     <div class="mt-2">วันที่สิ้นสุด</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      07-06-2566
+                      07/06/2566
                     </div>
                   </div>
                 </div>
