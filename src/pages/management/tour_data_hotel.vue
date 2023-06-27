@@ -294,7 +294,7 @@
 
         <o-modal v-model:active="isItemModalHotelData">
           <UiCard>
-            <div class="flex justify-end">
+            <div class="mr-10 flex justify-center">
               <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
                 ? (editHotel = true)
                 : (editHotel = false)">
@@ -327,7 +327,6 @@
                   <o-input type="text" modelValue="0428976765"></o-input>
                   <p class="text-lg font-semibold  dark:text-white">จำนวนห้องพัก</p>
                   <o-input type="text" modelValue="120"></o-input>
-
                 </div>
               </div>
               <div class="w-full ml-4">
@@ -335,20 +334,43 @@
                   คอมเมนต์
                 </h2>
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
                   </p>
-                  <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  
+                  <div v-if="editcomment2" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
                   <p class="w-full text-end">20/06/65</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
+                ? (editcomment2 = true)
+                : (editcomment2 = false)">
+              </Icon>
                   </p>
-                  <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+
+                  <div v-if="editcomment3" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
                   <p class="w-full text-end">20/06/64</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
+                ? (editcomment3 = true)
+                : (editcomment3 = false)">
+              </Icon>
                   </p>
                 </div>
                 <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
@@ -396,20 +418,43 @@
                   คอมเมนต์
                 </h2>
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
                   </p>
-                  <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  
+                  <div v-if="editcomment2" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
                   <p class="w-full text-end">20/06/65</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
+                ? (editcomment2 = true)
+                : (editcomment2 = false)">
+              </Icon>
                   </p>
-                  <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+
+                  <div v-if="editcomment3" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
                   <p class="w-full text-end">20/06/64</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
+                ? (editcomment3 = true)
+                : (editcomment3 = false)">
+              </Icon>
                   </p>
                 </div>
                 <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
@@ -472,20 +517,43 @@
               <div class="w-full p-4 border shadow-md">
 
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
                   </p>
-                  <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  
+                  <div v-if="editcomment2" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
                   <p class="w-full text-end">20/06/65</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
+                ? (editcomment2 = true)
+                : (editcomment2 = false)">
+              </Icon>
                   </p>
-                  <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+
+                  <div v-if="editcomment3" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
                   <p class="w-full text-end">20/06/64</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
+                ? (editcomment3 = true)
+                : (editcomment3 = false)">
+              </Icon>
                   </p>
                 </div>
                 <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
@@ -626,6 +694,9 @@ const add = ref(false);
 const add2 = ref(false);
 const editHotel = ref(false);
 const editHotel2 = ref(false);
+const editcomment = ref(false);
+const editcomment2 = ref(false);
+const editcomment3 = ref(false);
 const delete1 = ref(false);
 const delete2 = ref(false);
 const delete3 = ref(false);
