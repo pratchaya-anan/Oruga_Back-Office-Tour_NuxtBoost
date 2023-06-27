@@ -8,7 +8,7 @@
       :clickable="true"
       icon="user-plus"
     >
-      <div class="space-y-4">
+      <div class="space-y-4"> ใบเบิกเงินสดย่อย
         <UiCard>
           <h2 class="text-xl font-bold dark:text-white mb-2">
             ค้นหาหน่วยงาน / ลูกค้า
@@ -542,6 +542,7 @@
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                     v-for="i in tableDatatour"
                     @click="stepnext = 5"
+                    :key="i"
                   >
                     <th
                       scope="row"

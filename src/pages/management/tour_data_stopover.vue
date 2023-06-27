@@ -136,33 +136,6 @@
                 น.เดินทางถึงจุดหมายปลายทางโดยสวัสดิภาพ</p>
             </li>
           </ol>
-
-          <div v-if="showComment">
-            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              คอมเมนต์
-            </h2>
-            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-              <li class="flex justify-between">
-                <div>ตม.ให้บริการดี</div>
-                <div>20/06/66</div>
-                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-              </li>
-            </ul>
-
-            <o-field label="เขียนคอมเมนต์">
-              <o-input type="textarea"></o-input>
-            </o-field>
-            <div class="flex">
-              <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                <o-input></o-input>
-              </o-field>
-              <section class="flex-1 shrink flex items-center justify-end">
-                <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                </o-button>
-                <o-button class="mt-5">เพิ่ม</o-button>
-              </section>
-            </div>
-          </div>
         </UiCard>
       </div>
       <div class="col-span-2">

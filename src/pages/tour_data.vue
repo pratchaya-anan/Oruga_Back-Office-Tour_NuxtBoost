@@ -200,56 +200,15 @@
               </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566 - 22 เมษายน 2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม NHU MINH PLAZA
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA
+                <a href="#" @click="add = true"
+                  class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                เป็นโรงแรมที่ดีมาก <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
-                  showComment != true
-                    ? (showComment = true)
-                    : (showComment = false)
-                  "></Icon> 
+                เป็นโรงแรมที่ดีมาก
               </p>
-
-              <div v-if="showComment" class="w-full mt-2 p-4 border shadow-md">
-                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  คอมเมนต์
-                </h2>
-                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
-                  <p class="w-full text-end">20/06/66</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                  <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
-                  <p class="w-full text-end">20/06/65</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                  <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
-                  <p class="w-full text-end">20/06/64</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                </div>
-                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
-                <div v-if="showComment">
-                  <o-field label="เขียนคอมเมนต์">
-                    <o-input type="textarea"></o-input>
-                  </o-field>
-                  <div class="flex">
-                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                      <o-input></o-input>
-                    </o-field>
-                    <section class="flex-1 shrink flex items-center justify-end">
-                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                      </o-button>
-                      <o-button class="mt-5">เพิ่ม</o-button>
-                    </section>
-                  </div>
-                </div>
-              </div>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -257,8 +216,11 @@
               </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
                 2566 - 23 เมษายน 2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม Mercure Bana
-                hills</h3>
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">โรงแรม Mercure Bana
+                hills
+                <a href="#" @click="add = true"
+                  class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
+              </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 08978677867</p>
             </li>
@@ -268,7 +230,9 @@
               </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
                 2566 - 24 เมษายน 2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม Century hotel
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">โรงแรม Century hotel
+                <a href="#" @click="add = true"
+                  class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
@@ -296,51 +260,21 @@
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ให้บริการดีมาก
+                  <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
+                    showComment != true
+                      ? (showComment = true)
+                      : (showComment = false)
+                    "></Icon>
+                </p>
               </div>
-              <Icon @click="delete1 = true"
-                class="absolute inline-flex w-5 h-5 text-xs -top-1 -right-1 dark:border-gray-900" name="uil:x"></Icon>
             </dev>
           </div>
-          <div class="mt-2 flex justify-end">
-            <o-button>เสร็จสิ้น</o-button>
-          </div>
-          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                  <th scope="col" class="px-6 py-3">ชื่อมัคคุเทศก์</th>
-                  <th scope="col" class="px-6 py-3">โทรศัพท์</th>
-                  <th scope="col" class="px-6 py-3">พื้นที่</th>
-                  <th scope="col" class="px-6 py-3">คอมเมนต์</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    วุฒินันท์ ศรีสุระ
-                  </th>
-                  <td class="px-6 py-4">026-568-4785</td>
-                  <td class="px-6 py-4">ภาคกลาง</td>
-                  <td class="px-6 py-4 text-center">
-                    <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
-                      showComment != true
-                        ? (showComment = true)
-                        : (showComment = false)
-                      "></Icon>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div v-if="showComment">
+          <div v-if="showComment" class="w-full p-4 border shadow-md">
             <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
               คอมเมนต์
             </h2>
-            <ul
-              class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-            >
+            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
               <li class="flex justify-between">
                 <div>ให้บริการดีมาก</div>
                 <div>20/06/66</div>
@@ -351,15 +285,11 @@
               <o-input type="textarea"></o-input>
             </o-field>
             <div class="flex">
-              <o-field
-                class="flex-1"
-                label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)"
-              >
+              <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
                 <o-input></o-input>
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
-                <o-button @click="showComment = false" class="ml-4 mt-5"
-                  >ปิด
+                <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
                 </o-button>
                 <o-button class="mt-5">เพิ่ม</o-button>
               </section>
@@ -377,7 +307,7 @@
             </NuxtLink>
           </div>
           <h2 class="mb-2 text-xl font-bold dark:text-white">
-            โรงรถประจำทัวร์แรม
+            ยานพาหนะ
           </h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-4">
@@ -386,46 +316,13 @@
               </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566 - 22 เมษายน 2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรถบัสลาว
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรถบัสลาว
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">ทะเบียน 8989 ประเทศเวียงจันน์</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                ปานกลาง <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
-                  showComment != true
-                    ? (showComment = true)
-                    : (showComment = false)
-                  "></Icon>
+                ปานกลาง
               </p>
-
-              <div v-if="showComment" class="w-full mt-2 p-4 border shadow-md">
-                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  คอมเมนต์
-                </h2>
-                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">ปานกลาง</p>
-                  <p class="w-full text-end">20/06/66</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                </div>
-                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
-                <div v-if="showComment">
-                  <o-field label="เขียนคอมเมนต์">
-                    <o-input type="textarea"></o-input>
-                  </o-field>
-                  <div class="flex">
-                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                      <o-input></o-input>
-                    </o-field>
-                    <section class="flex-1 shrink flex items-center justify-end">
-                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                      </o-button>
-                      <o-button class="mt-5">เพิ่ม</o-button>
-                    </section>
-                  </div>
-                </div>
-              </div>
             </li>
           </ol>
         </UiCard>
@@ -449,7 +346,7 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white"><a href="#">บ้านหนองผือ</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">บ้านหนองผือ</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">05.00 น.
                 อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ตม.มุขดาหาร</h3>
@@ -511,14 +408,10 @@
           </ol>
 
           <div v-if="showComment">
-            <h2
-              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
-            >
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
               คอมเมนต์
             </h2>
-            <ul
-              class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-            >
+            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
               <li class="flex justify-between">
                 <div>ตม.ให้บริการดี</div>
                 <div>20/06/66</div>
@@ -530,15 +423,11 @@
               <o-input type="textarea"></o-input>
             </o-field>
             <div class="flex">
-              <o-field
-                class="flex-1"
-                label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)"
-              >
+              <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
                 <o-input></o-input>
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
-                <o-button @click="showComment = false" class="ml-4 mt-5"
-                  >ปิด
+                <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
                 </o-button>
                 <o-button class="mt-5">เพิ่ม</o-button>
               </section>
@@ -548,7 +437,7 @@
         <!-- ร้านอาหาร -->
         <UiCard v-if="showItems == 'restaurant'">
           <div class="p-2 w-full relative">
-            <NuxtLink href="/management/tour_data_stopover">
+            <NuxtLink href="/management/tour_data_restaurant">
               <o-button
                 class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
                 <Icon class="w-6 h-6" name="ic:baseline-plus"></Icon>
@@ -565,12 +454,10 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">ร้านเลียจาน</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านเลียจาน</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเทียง ร้านเลียจาน</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">โครตอร่อย!</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">โครตอร่อย!</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น โครตอร่อย!</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
@@ -580,13 +467,11 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">ร้านอาหารอาโนะเนะ</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านอาหารอาโนะเนะ</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเี่ยง ร้านอาหารอาโนะเนะ
               </p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">กินไหมจร๊ะ</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">กินไหมจร๊ะ</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น กินไหมจร๊ะ</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
@@ -596,13 +481,11 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">ร้านอาหาร อัลไล</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ร้านอาหาร อัลไล</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเที่ยง ร้านอาหาร อัลไล
               </p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">วงวารอาหาร</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">วงวารอาหาร</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น วงวารอาหาร</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
@@ -612,26 +495,20 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">24 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">ในรู</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ในรู</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเที่ยง ในรู</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">โต๋วโภชนา</a></h3>
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">โต๋วโภชนา</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น โต๋วโภชนา</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
           </ol>
 
           <div v-if="showComment">
-            <h2
-              class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
-            >
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
               คอมเมนต์
             </h2>
-            <ul
-              class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-            >
+            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
               <li class="flex justify-between">
                 <div>รสชาติอาหารดี</div>
                 <div>20/06/66</div>
@@ -643,15 +520,11 @@
               <o-input type="textarea"></o-input>
             </o-field>
             <div class="flex">
-              <o-field
-                class="flex-1"
-                label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)"
-              >
+              <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
                 <o-input></o-input>
               </o-field>
               <section class="flex-1 shrink flex items-center justify-end">
-                <o-button @click="showComment = false" class="ml-4 mt-5"
-                  >ปิด
+                <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
                 </o-button>
                 <o-button class="mt-5">เพิ่ม</o-button>
               </section>
@@ -941,6 +814,84 @@
                 <div data-popper-arrow></div>
               </UiCard>
             </o-modal>
+            <o-modal v-model:active="add">
+              <div class="grid grid-cols-2 gap-4 p-6">
+                <div class="col-span-2">
+                  <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    เลือกโรงแรมเข้าพัก
+                  </h2>
+                  <div class="flex items-center mb-4 p-4 border shadow-md">
+                    <dev class="w-full relative inline-flex items-center">
+                      <div class="mx-5">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm
+                          Văn
+                          Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
+                      </div>
+                    </dev>
+                  </div>
+                  <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                    คอมเมนต์
+                  </h2>
+                  <div class="w-full mb-4 p-4 border shadow-md">
+                    <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                      <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                      <p class="w-full text-end">20/06/66</p>
+                      <p class="w-full text-end">
+                        <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                      </p>
+                      <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                      <p class="w-full text-end">20/06/65</p>
+                      <p class="w-full text-end">
+                        <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                      </p>
+                      <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+                      <p class="w-full text-end">20/06/64</p>
+                      <p class="w-full text-end">
+                        <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                      </p>
+                    </div>
+                    <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                    <div v-if="showComment">
+                      <o-field label="เขียนคอมเมนต์">
+                        <o-input type="textarea"></o-input>
+                      </o-field>
+                      <div class="flex">
+                        <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                          <o-input></o-input>
+                        </o-field>
+                        <section class="flex-1 shrink flex items-center justify-end">
+                          <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                          </o-button>
+                          <o-button class="mt-5">เพิ่ม</o-button>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <o-field label="วันเข้าพัก">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="วันออก">
+                    <o-input></o-input>
+                  </o-field>
+                </div>
+                <div class="col-span-2">
+                  <o-field label="จำนวนห้องพัก">
+                    <o-input type="number"></o-input>
+                  </o-field>
+                </div>
+                <div class="col-span-2">
+                  <div class="flex justify-end">
+                    <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+                  </div>
+                </div>
+              </div>
+            </o-modal>
           </div>
         </div>
       </div>
@@ -951,6 +902,8 @@
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
 import * as XLSX from "xlsx";
+
+const add = ref(false);
 
 const showItems = ref("");
 const showComment = ref(false);

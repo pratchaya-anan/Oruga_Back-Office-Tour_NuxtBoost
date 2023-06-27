@@ -44,6 +44,8 @@
             <div class="col-span-1 text-right"></div>
             <div class="col-span-1 font-bold">โครงการ:</div>
             <div class="col-span-1 text-right">องค์การบริหารส่วนตำบลโพนงาม</div>
+            <div class="col-span-1 font-bold">รายละเอียดโครงการ/กิจกรรม:</div>
+            <div class="col-span-1 text-right">นำสมาชิกประชุม</div>
           </div>
         </div>
       </div>

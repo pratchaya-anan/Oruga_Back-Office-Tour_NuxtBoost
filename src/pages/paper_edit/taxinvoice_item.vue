@@ -1,4 +1,5 @@
 <template>
+  <LayoutPageTitle> Taxinvoice / ใบกำกับภาษี </LayoutPageTitle>
   <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
     <div class="col-span-full xl:col-auto mb-4">
       <UiCard class="mb-4">
@@ -66,9 +67,8 @@
         </section>
         <section
           v-if="!showOrderPanel"
-          class="my-4 border-t border-gray-200 dark:border-gray-700"
+          class="my-2 border-t border-gray-200 dark:border-gray-700"
         >
-          <span>รายละเอียดใบกำกับภาษี</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
               <div
@@ -78,7 +78,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                เทศบาลขอนแก่น
+                  เทศบาลขอนแก่น
                 </div>
               </div>
               <div
@@ -200,16 +200,16 @@
             >
               <th
                 scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
                 1
               </th>
-              <td class="px-6 py-4">2</td>
-              <td class="px-6 py-4">10,000</td>
-              <td class="px-6 py-4">10%</td>
-              <td class="px-6 py-4">7%</td>
-              <td class="px-6 py-4">ห้องพักโรงแรม</td>
-              <td class="px-6 py-4 text-right">
+              <td class="px-6 py-2">2</td>
+              <td class="px-6 py-2">10,000</td>
+              <td class="px-6 py-2">10%</td>
+              <td class="px-6 py-2">7%</td>
+              <td class="px-6 py-2">ห้องพักโรงแรม</td>
+              <td class="px-6 py-2 text-right">
                 <button
                   id="dropdownMenuIconButton"
                   data-dropdown-toggle="dropdownDots"
@@ -294,6 +294,7 @@
             v-for="column in columns"
             v-bind="column"
             #default="{ row }"
+            :key="column"
           >
             {{ row[column.field] }}
           </o-table-column>
