@@ -2,154 +2,139 @@
   <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
     <div class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border-1 solid rounded bg-white drop-shadow">
       <div class="grid grid-rows-1 m-5">
-        
         <div class="grid grid-cols-3 text-sm">
           <div class="col-span-2">
             <img class="ml-4 mb-3 w-[100px]" src="../assets/images/ll-01.png" alt="Logo">
             <div>บริษัท ศรีดาราทัวร์ จำกัด</div>
           </div>
-          <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบสั่งงานมัคคุเทสก์</div>
+          <div class="grid grid-cols-3 gap-2">
+            <div class="col-span-3 font-bold text-center text-base">ใบสั่งงานมัคคุเทศก์</div>
             <div class="col-span-3 text-center">GuideOrder</div>
-            <div class="font-bold">ใบอนุญาต:</div>
-            <div class="col-span-2 text-right">51/00481</div>
-            <div class=" font-bold">วันที่:</div>
-            <div class="col-span-2 text-right">...................</div>
-            <div class="font-bold">ใบสั่งงาน:</div>
-            <div class="col-span-2 text-right">...................</div>
+            <div class="text-sm font-bold text-right">ใบอนุญาต:</div>
+            <div class="col-span-2 text-sm text-center">51/00481</div>
+            <div class="text-sm font-bold text-right">วันที่:</div>
+            <div class="mt-1 col-span-2 text-sm text-center">...................................................</div>
+            <div class="text-sm font-bold text-right">ใบสั่งงาน:</div>
+            <div class="mt-1 col-span-2 text-sm text-center">...................................................</div>
           </div>
         </div>
       </div>
-      <hr class="col-span-3 mx-5">
-
+      <hr class="mb-2 col-span-3">
       <!-- ข้อมูลฝั่งซ้าย -->
-      <div class="col-span-2 grid grid-cols-4 m-2 ml-10  text-xs">
-        <div class="col-span-2">
-          <div class="grid grid-cols-2">
-            <div class="mt-2 col-span-1 font-bold">ชื่อมัคคุเทศก์</div>
-            <div class="mt-2 col-span-1 font-bold">นายวุฒินันท์ ศรีสุระ</div>
-            <div class="mt-2 col-span-1 font-bold">ใบอนุญาตเลขที่</div>
-            <div class="mt-2 col-span-1 font-bold">11-57185</div>
-            <div class="mt-2 col-span-1 font-bold">จำนวนนักท่องเที่ยว</div>
-            <div class="mt-2 col-span-1 font-bold">ผู้ใหญ่ 30 เด็ก 5</div>
-            <div class="mt-2 col-span-1 font-bold">ห้องเดี่ยว</div>
-            <div class="mt-2 col-span-1 font-bold">-</div>
-            <div class="mt-2 col-span-1 font-bold">ห้องคู่</div>
-            <div class="mt-2 col-span-1 font-bold">11</div>
-            <div class="mt-2 col-span-1 font-bold">ห้องนอน 3 รวม</div>
-            <div class="mt-2 col-span-1 font-bold">1</div>
-            <div class="mt-2 col-span-1 font-bold">หมายเหตุ</div>
-            <div class="mt-2 col-span-1 font-bold">-</div>
-            <div class="mt-2 col-span-1 font-bold">โทร.</div>
-              <div class="mt-4 col-span-1 font-bold">....................................</div>
-
+      <div class="col-span-2 grid grid-cols-4 gap-1">
+        <div class="col-span-2 border-r">
+          <div class="p-2 grid grid-cols-2 gap-1">
+            <div class="col-span-1 text-sm font-bold">ชื่อมัคคุเทศก์</div>
+            <div class="col-span-1 text-sm font-normal">นายวุฒินันท์ ศรีสุระ</div>
+            <div class="col-span-1 text-sm font-bold">ใบอนุญาตเลขที่</div>
+            <div class="col-span-1 text-sm font-normal">11-57185</div>
+            <div class="col-span-1 text-sm font-bold">จำนวนนักท่องเที่ยว</div>
+            <div class="col-span-1 text-sm font-normal">ผู้ใหญ่ 30 เด็ก 5</div>
+            <div class="col-span-1 text-sm font-bold">ห้องเดี่ยว</div>
+            <div class="col-span-1 text-sm font-normal">-</div>
+            <div class="col-span-1 text-sm font-bold">ห้องคู่</div>
+            <div class="col-span-1 text-sm font-normal">11</div>
+            <div class="col-span-1 text-sm font-bold">ห้องนอน 3 รวม</div>
+            <div class="col-span-1 text-sm font-normal">1</div>
+            <div class="col-span-1 text-sm font-bold">หมายเหตุ</div>
+            <div class="col-span-1 text-sm font-normal">-</div>
+            <div class="col-span-1 text-sm font-bold">โทร.</div>
+            <div class="mt-1  col-span-1 text-sm font-normal">...................................................</div>
           </div>
         </div>
-
+        <!-- ข้อมูลฝั่งขวา -->
         <div class="col-span-2">
-          <div class="border-l px-5">
-            <div class="grid grid-cols-2">
-              <div class="mt-2 col-span-1 font-bold">กำหนดการเดินทาง:</div>
-              <div class="mt-2 col-span-1 font-bold">16 เมษายน 2566</div>
-              <div class="mt-2 col-span-1 font-bold">จำนวนวัน:</div>
-              <div class="mt-2 col-span-1 font-bold">5 วัน 4 คืน</div>
-              <div class="mt-2 col-span-1 font-bold">เดินทางจาก:</div>
-              <div class="mt-2 col-span-1 font-bold">กาญจนบุรี-เพชรบุรี</div>
-              <div class="mt-2 col-span-1 font-bold">รถเดินทาง:</div>
-              <div class="mt-2 col-span-1 font-bold">รถบัสลาว</div>
-              <div class="mt-2 col-span-1 font-bold">ทะเบียน: </div>
-              <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
-              <div class="mt-2 col-span-1 font-bold"></div>
-              <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
-              <div class="mt-2 col-span-1 font-bold"></div>
-              <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
-              <div class="mt-2 col-span-1 font-bold"></div>
-              <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
-              <div class="mt-2 col-span-1 font-bold"></div>
-              <div class="mt-2 col-span-1 font-bold">8989 นครหลวงเวียงจันทร์</div>
-              <div class="mt-2 col-span-1 font-bold"></div>
-              
-  
-            </div>
+          <div class="p-2 grid grid-cols-2 gap-1">
+            <div class="col-span-1 text-sm font-bold">กำหนดการเดินทาง:</div>
+            <div class="col-span-1 text-sm font-normal">21 เมษายน 2566</div>
+            <div class="col-span-1 text-sm font-bold">กำหนดการเดินทางกลับ:</div>
+            <div class="col-span-1 text-sm font-normal">24 เมษายน 2566</div>
+            <div class="col-span-1 text-sm font-bold">จำนวนวัน:</div>
+            <div class="col-span-1 text-sm font-normal">4 วัน 3 คืน</div>
+            <div class="col-span-1 text-sm font-bold">เดินทางจาก:</div>
+            <div class="col-span-1 text-sm font-normal">กาญจนบุรี-เพชรบุรี</div>
+            <div class="col-span-1 text-sm font-bold">รถเดินทาง:</div>
+            <div class="col-span-1 text-sm font-normal">รถบัสลาว</div>
+            <div class="col-span-1 text-sm font-bold">ทะเบียน: </div>
+            <div class="col-span-1 text-sm font-normal">8989 นครหลวงเวียงจันทร์</div>
           </div>
         </div>
       </div>
 
 
-      <!-- รายละเอียดข้อตกลง(ด้านซ้าย) -->
-      <div class="min-h-[200px] border-b border-black">
-        <table class="mt-3 w-full ">
-          <tr class="h-8 border-y border-black text-sm text-center">
-            <th class="w-[100px]">วันเดือนปี</th>
-            <th>สถานที่ท่องเที่ยว</th>
-            <th>โรงแรม</th>
-          </tr>
-          <tr class="h-10 text-xs border-b border-black">
-            <td class="px-6 py-2">21/4/2566</td>
-            <td class="px-6 py-2">
-              05.00 น. รับคณะที่จุดนัดหมายบ้านหนองผื่อ อ.ชานุมาน อำนาจเจริญ<br>
-              ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว<br>
-              12.00 น.รับประทานอาหารเที่ยง หน้าด่านลาวบาว ระหว่างรอเอกสารข้านแดน<br>
-              จากนั้นเดินทางต่อไปยังเมือง เว้-ตานัง /รับประทานอาหารเย็น<br>
-              เที่ยวชมสะพานมังกร / สะพานแห่งความรัก / เข้าที่พัก
-            </td>
-            <td class="px-6 py-2">โรงแรม NHU MINH PLAZA</td>
-          </tr>
-
-          <tr class="h-10 text-xs border-b border-black">
-            <td class="px-6 py-2">22/4/2566</td>
-            <td class="px-6 py-2">
-              เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางไปเมืองฮอยอัน / นั่งเรือกระด้ง<br>
-              เที่ยง รับประทานอาหารเที่ยง / เดินทางขึ้นไปบาน่าฮิลล์<br>
-              บ่าย นั่งกระเช้าลอยฟ้า / สะพานเมืองทอง / สวนดอกไม้<br>
-              เย็น รับประทานอาหารเย็น / เข้าที่พัก
-            </td>
-            <td class="px-6 py-2">โรงแรม Mercure Bana hills</td>
-          </tr>
-          <tr class="h-10 text-xs border-b border-black">
-            <td class="px-6 py-2">23/4/2566</td>
-            <td class="px-6 py-2">
-              เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางลงจากบาน่าฮิลล์สู่เมืองเว้<br>
-              เที่ยง รับประทานอาหารเที่ยง / ชมพระราชวังได๋โหน๋ย / ตลาดดงบา<br>
-              วัดเทียนมู๋ / ล่องเรือมังกร / รับประทานอาหารเย็น / เข้าที่พัก
-            </td>
-            <td class="px-6 py-2">โรงแรม Century hotel</td>
-          </tr>
-          <tr class="h-10 text-xs border-b border-black">
-            <td class="px-6 py-2">24/4/2566</td>
-            <td class="px-6 py-2">
-              เช้า รับประทานอาหารเช้าที่โรงแรม / เดินทางกลับประเทศไทย<br>
-              เดินทางถึงด่านลาวบาว ทำพิธีการข้ามด่าน / รับประทานอาหารเที่ยง<br>
-              เดินทางต่อมายังด่านสะหวันนะเขต / รับประทานอาหารเย็น<br>
-              20.00 น.เดินทางถึงจุดหมายปลายทางโดยสวัสดิภาพ
-            </td>
-            <td class="px-6 py-2"></td>
-          </tr>
-          <tr class="h-20 text-xs">
-            <td></td>
-            <td>
-              ค่าจ้างมัคคุเทศก์................................................................................................................................บาท
-            </td>
-            <td></td>
-          </tr>
-          <tr class="h-20 text-xs">
-            <td></td>
-            <td>
-              มัคคุเทศก์ลงนาม..........................................................................................................................................
-            </td>
-            <td></td>
-          </tr>
-        </table>
-      </div>
-      <table class="mt-[100px] ml-10 w-full">
-        <tr>
-          <td><b>ผู้มีอำนาจลงนาม นางศรีดารา ประเปรียว</b></td>
-          <td><b>ตราประทับบริษัท</b>
+      <!-- รายละเอียดข้อตกลง -->
+      <table class="my-3 w-full ">
+        <tr class="h-8 border-y border-black text-sm text-center">
+          <th class="w-[100px]">วันเดือนปี</th>
+          <th>สถานที่ท่องเที่ยว</th>
+          <th>โรงแรม</th>
+        </tr>
+        <tr class="h-10 text-xs border-b border-black">
+          <td class="px-6 py-2">21/4/2566</td>
+          <td class="px-6 py-2">
+            <p>05.00 น. บ้านหนองผือ
+              จุดนัดหมาย อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว</p>
+            <p>12.00 น. ตม.มุขดาหาร
+              รับประทานอาหารเที่ยง หน้าด่านลาวบาว ระหว่างรอเอกสารข้านแดน จากนั้นเดินทางต่อไปยังเมือง เว้-ตานัง</p>
+            <p>เย็น เว้-ตานัง
+              รับประทานอาหารเย็น / เที่ยวชมสะพานมังกร / สะพานแห่งความรัก / เข้าที่พัก</p>
           </td>
-          <td></td>
-          <td></td>
+          <td class="px-6 py-2">โรงแรม NHU MINH PLAZA</td>
+        </tr>
+
+        <tr class="h-10 text-xs border-b border-black">
+          <td class="px-6 py-2">22/4/2566</td>
+          <td class="px-6 py-2">
+            <p>เช้า เว้-ตานัง รับประทานอาหารเช้าที่โรงแรม / เดินทางไปเมืองฮอยอัน</p>
+            <p>สาย ฮอยอัน นั่งเรือกระด้ง </p>
+            <p>เที่ยง ฮอยอัน รับประทานอาหารเที่ยง /
+              เดินทางขึ้นไปบาน่าฮิลล์</p>
+            <p>บ่าย บาน่าฮิว นั่งกระเช้าลอยฟ้า / สะพานเมืองทอง /
+              สวนดอกไม้</p>
+            <p>เย็น บาน่าฮิว รับประทานอาหารเย็น / เข้าที่พัก</p>
+          </td>
+          <td class="px-6 py-2">โรงแรม Mercure Bana hills</td>
+        </tr>
+        <tr class="h-10 text-xs border-b border-black">
+          <td class="px-6 py-2">23/4/2566</td>
+          <td class="px-6 py-2">
+            <p>เช้า บาน่าฮิว รับประทานอาหารเช้าที่โรงแรม /
+              เดินทางลงจากบาน่าฮิลล์สู่เมืองเว้</p>
+            <p>เที่ยง บาน่าฮิว รับประทานอาหารเที่ยง /
+              ชมพระราชวังได๋โหน๋ย / ตลาดดงบา / วัดเทียนมู๋ / ล่องเรือมังกร / รับประทานอาหารเย็น / เข้าที่พัก</p>
+            <p>เย็น เว้ รับประทานอาหารเย็น / เข้าที่พัก</p>
+          </td>
+          <td class="px-6 py-2">โรงแรม Century hotel</td>
+        </tr>
+        <tr class="h-10 text-xs border-b border-black">
+          <td class="px-6 py-2">24/4/2566</td>
+          <td class="px-6 py-2">
+            <p>เช้า เว้ รับประทานอาหารเช้าที่โรงแรม /
+              เดินทางกลับประเทศไทย</p>
+            <p>เทียง ด่านลาวบาว ทำพิธีการข้ามด่าน /
+              รับประทานอาหารเที่ยง / เดินทางต่อมายังด่านสะหวันนะเขต</p>
+            <p>เย็น ด่านสะหวันนะเขต รับประทานอาหารเย็น</p>
+            <p>20.00 น. เดินทางถึงจุดหมายปลายทางโดยสวัสดิภาพ</p>
+          </td>
+          <td class="px-6 py-2"></td>
         </tr>
       </table>
+      <div class="mt-3 text-center">
+        <p class="mt-5 text-sm font-normal">
+          ค่าจ้างมัคคุเทศก์................................................................................................................................บาท
+        </p>
+        <p class="mt-5 text-sm font-normal">
+          มัคคุเทศก์ลงนาม..........................................................................................................................................
+        </p>
+      </div>
+      <div class="mt-20 grid grid-cols-2 gap-8 text-center">
+        <p class="border-t text-sm font-normal">
+          ผู้มีอำนาจลงนาม นางศรีดารา ประเปรียว
+        </p>
+        <p class="border-t text-sm font-normal">
+          ตราประทับบริษัท
+        </p>
+      </div>
     </div>
   </section>
 </template>
