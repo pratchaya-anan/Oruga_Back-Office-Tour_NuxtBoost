@@ -7,7 +7,7 @@
             <div>
               <div class="grid grid-cols-6">
                 <div class="col-span-5">
-                  <h2 class="text-xl font-bold dark:text-white">ใบเคลียร์เงินสดย่อย</h2>
+                  <h2 class="text-xl font-bold dark:text-white">ใบรับรองแทนใบเสร็จรับเงิน</h2>
                 </div>
                 <div class="flex justify-end">
                   <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit"
@@ -17,10 +17,7 @@
               </div>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  Estimate Clearing
-                </li>
-                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  เลขที่: 0642531698546
+                  เลขที่: 3462584695127
                 </li>
               </ul>
             </div>
@@ -50,7 +47,7 @@
             <div class="sm:flex-1">
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                 <div class="mt-4">
-                  ชื่อผู้ขอเคลียร์
+                  ชื่อหน่วยงาน (ผู้ซื้อ/ผู้รับบริการ)
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   นายสรณ์สิริ สายบุตร
@@ -136,10 +133,10 @@
               <th scope="col" class="px-6 py-3">
                 วันที่ใบเสร็จ
               </th>
-              <th scope="col" class=" py-3 px-1">
+              <th scope="col" class="py-3 px-1">
                 รายละเอียดค่าใช้จ่าย
               </th>
-              <th scope="col" class=" py-3 px-1"> 
+              <th scope="col" class="py-3 px-1"> 
                 ประเภทค่าใช้จ่าย
               </th>
               <th scope="col" class="px-6 py-3">
@@ -164,10 +161,10 @@
               <td class="px-6 py-4">
                 {{ i.datereceipt }}
               </td>
-              <td class=" py-4">
+              <td class=" py-4 px-1">
                 {{ i.detail }}
               </td>
-              <td class=" py-4">
+              <td class=" py-4 px-1">
                 {{ i.type }}
               </td>
               <td class="px-6 py-4">
@@ -264,13 +261,13 @@
     </div>
   </div>
   <div class="flex justify-end">
-    <a href="/paper/estimate_paper">
+    <a href="/paper/cashcertificate_paper">
       <o-button>
         <Icon class="mr-2 -mt-1 w-6 h-6" name="ic:round-print"></Icon>
         พิมพ์
       </o-button>
     </a>
-    <a href="/paper_list/estimate_list">
+    <a href="/paper_list/cashcertificate_list">
       <o-button variant="info">
         <Icon class="mr-2 -mt-1 w-6 h-6" name="iconamoon:close-bold"></Icon>
         ปิด
@@ -296,8 +293,9 @@ function setnull() {
 function print() {
   window.print();
 }
-
 onMounted(() => { initFlowbite() });
+
+
 
 const columns = ref([
   {
@@ -372,5 +370,7 @@ const datapaper = ref([
   },
 ])
 
+
 const data = ref(tableData);
+
 </script>
