@@ -9,7 +9,7 @@
                 <div class="col-span-5">
                   <h2 class="text-xl font-bold dark:text-white">ใบขอเบิกเงินสดย่อย</h2>
                 </div>
-                <div class="flex justify-end">                 
+                <div class="flex justify-end">
                   <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit"
                     @click="showOrderPanel != true ? showOrderPanel = true : showOrderPanel = false">
                   </Icon>
@@ -77,7 +77,7 @@
                   วันที่ต้องการใช้เงิน
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                 26/06/2566
+                  26/06/2566
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -95,7 +95,7 @@
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   นำสมาชิกประชุม
                 </div>
-              </div>             
+              </div>
             </div>
 
           </div>
@@ -103,94 +103,65 @@
       </UiCard>
     </div>
     <div class="col-span-2">
-        <UiCard class="mt-3">
-          <div class="p-5">
-            <div>
-              <label class="text-2xl font-medium">รายการ</label>
-            </div>
-          </div>
-          <div class="col-span-2">
-            <div class=" overflow-x-auto shadow-md sm:rounded-lg mb-4">
-              <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                  <tr>
-                    <th scope="col" class="px-6 py-3">
-                      รายละเอียดค่าใช้จ่าย
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                      ประเภทค่าใช้จ่าย
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                      ราคา
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                      จำนวน
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                      ยอดสุทธิ
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                      <span class="sr-only">Edit</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                      น้ำมันรถบัส
-                    </th>
-                    <td class="px-6 py-4">
-                      ค่าน้ำมัน
-                    </td>
-                    <td class="px-6 py-4">
-                      2,000
-                    </td>
-                    <td class="px-6 py-4">
-                      2
-                    </td>
-                    <td class="px-6 py-4">
-                      4,000
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
-                        class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        type="button">
-                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                          </path>
-                        </svg>
-                      </button>
 
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+      <div class="col-span-2">
+        <div class=" overflow-x-auto shadow-md sm:rounded-lg mb-4">
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" class="px-6 py-3">
+                  รายละเอียดค่าใช้จ่าย
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  ประเภทค่าใช้จ่าย
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  ราคา
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  จำนวน
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  ยอดสุทธิ
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  <span class="sr-only">Edit</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  น้ำมันรถบัส
+                </th>
+                <td class="px-6 py-4">
+                  ค่าน้ำมัน
+                </td>
+                <td class="px-6 py-4">
+                  2,000
+                </td>
+                <td class="px-6 py-4">
+                  2
+                </td>
+                <td class="px-6 py-4">
+                  4,000
+                </td>
+                <td class="px-6 py-4 text-right">
+                  <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    type="button">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                      </path>
+                    </svg>
+                  </button>
 
-              <!-- Dropdown menu -->
-              <div id="dropdownDots"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <div class="py-2">
-                  <a href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                    ลบ</a>
-                </div>
-                <div class="py-2">
-                  <a href="#"
-                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                    แก้ไข</a>
-                </div>
-              </div>
-
-            </div>
-            <section v-if="!showItemsPanel">
-              <o-button @click="showItemsPanel = true">เพิ่มข้อมูล</o-button>
-            </section>
-
-
-          </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
           <!-- Dropdown menu -->
           <div id="dropdownDots"
@@ -206,60 +177,89 @@
                 แก้ไข</a>
             </div>
           </div>
-
-          <div v-if="showItemslist" class="mt-5">
-            <o-table :data="data" v-model:checked-rows="checkedRows" checkable :checkbox-position="checkboxPosition">
-              <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
-                {{ row[column.field] }}
-              </o-table-column>
-            </o-table>
-            <section>
-              <o-button class="mt-4">บันทึก</o-button>
-              <o-button @click="showItemslist = false" class="ml-4">ยกเลิก</o-button>
-            </section>
-          </div>
-        </UiCard>
-        <UiCard v-if="showItemsPanel">
-
-          <div class="flex gap-4">
-            <o-field class="flex-1" label="รายละเอียดค่าใช้จ่าย">
-              <o-input></o-input>
-            </o-field>
-            <o-field class="flex-1" label="ประเภทค่าใช้จ่าย">
-            <o-select v-model="typeselected" placeholder="ประเภทค่าใช้จ่าย">
-                <option value="flint">เบี้ยเลี้ยง</option>
-                <option value="silver">ค่าที่พัก</option>
-                <option value="silver">ค่ายานพาหนะ</option>
-                <option value="silver">ค่าน้ำมัน</option>
-                <option value="silver">ไกด์</option>
-                <option value="other">อื่น ๆ</option>
-              </o-select>
-            </o-field>
-          </div>
-          <o-field v-if="typeselected == 'other'" class="flex-1" label="อื่น ๆ">
-              <o-input></o-input>
-            </o-field>
-          <div class="flex gap-4">
-            <o-field class="flex-1" label="ราคา">
-              <o-input></o-input>
-            </o-field>
-            <o-field class="flex-1" label="จำนวน">
-              <o-input></o-input>
-            </o-field>
-           
-          </div>
-          <section>
-            <o-button class="mt-4" @click="showItemsPanel = false">บันทึก</o-button>
-            <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
-          </section>
-        </UiCard>
+        </div>
       </div>
+
+      <!-- Dropdown menu -->
+      <div id="dropdownDots"
+        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+        <div class="py-2">
+          <a href="#"
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+            ลบ</a>
+        </div>
+        <div class="py-2">
+          <a href="#"
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+            แก้ไข</a>
+        </div>
+      </div>
+
+      <div v-if="showItemslist" class="mt-5">
+        <o-table :data="data" v-model:checked-rows="checkedRows" checkable :checkbox-position="checkboxPosition">
+          <o-table-column v-for="column in columns" v-bind="column" #default="{ row }">
+            {{ row[column.field] }}
+          </o-table-column>
+        </o-table>
+        <section>
+          <o-button class="mt-4">บันทึก</o-button>
+          <o-button @click="showItemslist = false" class="ml-4">ยกเลิก</o-button>
+        </section>
+      </div>
+
+      <section v-if="!showItemsPanel">
+        <o-button @click="showItemsPanel = true">เพิ่มข้อมูล</o-button>
+      </section>
+
+      <UiCard v-if="showItemsPanel">
+        <div class="flex gap-4">
+          <o-field class="flex-1" label="รายละเอียดค่าใช้จ่าย">
+            <o-input></o-input>
+          </o-field>
+          <o-field class="flex-1" label="ประเภทค่าใช้จ่าย">
+            <o-select v-model="typeselected" placeholder="ประเภทค่าใช้จ่าย">
+              <option value="flint">เบี้ยเลี้ยง</option>
+              <option value="silver">ค่าที่พัก</option>
+              <option value="silver">ค่ายานพาหนะ</option>
+              <option value="silver">ค่าน้ำมัน</option>
+              <option value="silver">ไกด์</option>
+              <option value="other">อื่น ๆ</option>
+            </o-select>
+          </o-field>
+        </div>
+        <o-field v-if="typeselected == 'other'" class="flex-1" label="อื่น ๆ">
+          <o-input></o-input>
+        </o-field>
+        <div class="flex gap-4">
+          <o-field class="flex-1" label="ราคา">
+            <o-input></o-input>
+          </o-field>
+          <o-field class="flex-1" label="จำนวน">
+            <o-input></o-input>
+          </o-field>
+
+        </div>
+        <section>
+          <o-button class="mt-4" @click="showItemsPanel = false">บันทึก</o-button>
+          <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
+        </section>
+      </UiCard>
     </div>
-  <NuxtLink to="/paper/disbursement_paper" class="flex justify-end w-full ">
-    <o-button>
-      บันทึก
-    </o-button>
-  </NuxtLink>
+  </div>
+  <div class="flex justify-end">
+    <a href="/paper/disbursement_paper">
+      <o-button>
+        <Icon class="mr-2 -mt-1 w-6 h-6" name="ic:round-print"></Icon>
+        พิมพ์
+      </o-button>
+    </a>
+    <a href="/paper_list/disbursement_list">
+      <o-button variant="info">
+        <Icon class="mr-2 -mt-1 w-6 h-6" name="iconamoon:close-bold"></Icon>
+        ปิด
+      </o-button>
+    </a>
+  </div>
 </template>
 
 <script setup lang="ts">

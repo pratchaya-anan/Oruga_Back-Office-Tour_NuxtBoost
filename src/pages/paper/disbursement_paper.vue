@@ -16,9 +16,9 @@
             <div class="col-span-3 font-bold text-center text-base">ใบประมาณการเบิกเงินสดย่อย</div>
             <div class="col-span-3 text-center">Disbursement Estimate</div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">2665519328591</div>
+            <div class="col-span-2 text-right">2310652498375</div>
             <div class="font-bold">วันที่:</div>
-            <div class="col-span-2 text-right">24/03/2566</div>
+            <div class="col-span-2 text-right">24/06/2566</div>
           </div>
         </div>
       </div>
@@ -29,11 +29,11 @@
         <div class="col-span-1">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อผู้ขอเบิก:</div>
-            <div class="col-span-2 "></div>
+            <div class="col-span-2 ">นายสรณ์สิริ สายบุตร</div>
             <div class="col-span-1 font-bold">แผนก:</div>
-            <div class="col-span-2 "></div>
+            <div class="col-span-2 ">บริการลูกค้า</div>
             <div class="col-span-1 font-bold">วัตถุประสงค์การยืมเงินทดลองจ่าย:</div>
-            <div class="col-span-2 "></div>
+            <div class="col-span-2 ">ค่าใช้จ่ายในทัวร์</div>
           </div>
         </div>
 
@@ -41,11 +41,11 @@
         <div class="border-l px-5">
           <div class="grid grid-cols-2">
             <div class="col-span-1 font-bold">วันที่ต้องการใช้เงิน:</div>
-            <div class="col-span-1 text-right"></div>
+            <div class="col-span-1 text-right">03/07/2566</div>
             <div class="col-span-1 font-bold">โครงการ:</div>
             <div class="col-span-1 text-right">องค์การบริหารส่วนตำบลโพนงาม</div>
             <div class="col-span-1 font-bold">รายละเอียดโครงการ/กิจกรรม:</div>
-            <div class="col-span-1 text-right">นำสมาชิกประชุม</div>
+            <div class="col-span-1 text-right">นำสมาชิกเข้าร่วมการอบรมณ์</div>
           </div>
         </div>
       </div>
@@ -55,19 +55,19 @@
         <table class="w-full text-center">
           <tr class="h-8 border-y border-black text-center text-sm">
             <th class="text-center">ลำดับ</th>
-            <th>รายละเอียดค่าใช้จ่าย</th>
+            <!-- <th>รายละเอียดค่าใช้จ่าย</th> -->
             <th>ประเภทค่าใช้จ่าย</th>
             <th>ราคา</th>
             <th>จำนวน</th>
             <th>ยอดสุทธิ</th>
           </tr>
-          <tr class="h-10 text-xs">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr v-for=" (i, idx) in datapaper" class="h-10 text-xs">
+            <td>{{ idx+1 }}</td>
+            <!-- <td></td> -->
+            <td>{{ i.type }}</td>
+            <td>{{ i.price }}</td>
+            <td>{{ i.unit }}</td>
+            <td>{{ i.price * i.unit }}</td>
           </tr>
         </table>
       </div>
@@ -79,7 +79,7 @@
             <div class="font-black w-[120px]">ตัวอักษร:</div>
             <div class="font-black">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
           </div>
-          <div class="font-black">ผู้อนุมัติ (แบบอิเล็กทอรนิกส์):</div>
+          <div class="font-black">ผู้อนุมัติ (แบบอิเล็กทอรนิกส์): นางสาวรินดา จุตตะโน</div>
           <div class="text-xs">
             ข้าพเจ้าขอรับรองว่ารายการที่กล่าวมาข้างต้นเป็นความจริง พร้อมหลักฐานการจ่าย/แผนประกอบการที่ส่งมา
             รวมทั้งจำนวนเงินที่ขอเบิกถูกต้องตามระเบียบบริษัททุกประการ
@@ -89,7 +89,7 @@
         <!-- สรุปรายการ(ด้านขวา) -->
         <div class="grid grid-cols-2 p-2">
           <div class="font-bold">รวมสุทธิ</div>
-          <div class="text-right font-bold"></div>
+          <div class="text-right font-bold">152,000</div>
         </div>
       </div>
 
@@ -116,3 +116,34 @@
   </section>
   <!-- <div class="flex bg-gray-900"></div> -->
 </template>
+
+<script setup lang="ts">
+import { initFlowbite } from "flowbite";
+
+const datapaper = ref([
+  {
+    type:'ค่าน้ำมัน',
+    price:5600,
+    unit:3,
+  },
+  {
+    type:'ค่าไกด์',
+    price:2000,
+    unit:2,
+  },
+  {
+    type:'ค่าเช่าเหมายานพาหนะท้องถิ่น',
+    price:52000,
+    unit:1,
+  },
+  {
+    type:'ค่าอารหาร',
+    price:10000,
+    unit:1,
+  },
+])
+
+onMounted(() => {
+  initFlowbite();
+});
+</script>
