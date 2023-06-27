@@ -15,22 +15,30 @@
           <div class="grid grid-cols-3">
             <div class="col-span-3 font-bold text-center text-base">ใบรับรองแทนใบเสร็จรับเงิน</div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">0841142174178</div>
+            <div class="col-span-2 text-right">3462584695127</div>
             <div class="font-bold">วันที่:</div>
-            <div class="col-span-2 text-right">24/03/2566</div>
+            <div class="col-span-2 text-right">9/07/2566</div>
           </div>
         </div>
       </div>
       <hr class="col-span-3 mx-5">
 
       <!-- ข้อมูลฝั่งซ้าย -->
-      <div class="col-span-2 grid grid-cols-3 m-5 w-full text-xs">
-        <div class="col-span-1 font-bold">ชื่อน่วยงาน (ผู้ซื้อ/ผู้รับบริการ):</div>
-        <div class="col-span-2 ">ศศิศ วิรัตน์จินดา</div>
-        <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษี:</div>
-        <div class="col-span-2 ">1023456789123</div>
-        <div class="col-span-1 font-bold">ที่อยู่:</div>
-        <div class="col-span-2 ">111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
+      <div class="col-span-2 grid grid-cols-3 m-5  text-xs">
+        <div class="col-span-2 grid grid-cols-3 m-5 w-full text-xs">
+          <div class="col-span-1 font-bold">ชื่อหน่วยงาน (ผู้ซื้อ/ผู้รับบริการ):</div>
+          <div class="col-span-2 ">นายสรณ์สิริ สายบุตร</div>
+          <div class="col-span-1 font-bold">ที่อยู่:</div>
+          <div class="col-span-2 ">111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
+        </div>
+
+        <!-- ข้อมูลฝั่งขวา -->
+        <div class="border-l px-5">
+          <div class="grid grid-cols-2">
+            <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษี:</div>
+            <div class="col-span-1 text-right">2345016574356</div>
+          </div>
+        </div>
       </div>
 
       <!-- ตาราง -->
@@ -41,10 +49,10 @@
             <th>รายละเอียดรายจ่าย</th>
             <th>จำนวนเงิน (บาท)</th>
           </tr>
-          <tr class="h-10 text-xs">
-            <td>1</td>
-            <td>Q-4636653086</td>
-            <td>เที่ยวเกาะ เลาะรัก</td>
+          <tr v-for="(i, idx) in datapaper" class="h-10 text-xs">
+            <td>{{ i.datereceipt }}</td>
+            <td>{{ i.detail }}</td>
+            <td>{{ i.price }}</td>
           </tr>
         </table>
       </div>
@@ -53,19 +61,19 @@
       <div class="grid grid-cols-3 content-center gap-5 py-2 text-xs border-b border-black">
         <div class="col-span-2 flex">
           <div class="mr-[15px]">รวมทั้งสิ้น(ตัวอักษร): </div>
-          <div class="text-right">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
+          <div class="text-right">สี่หมื่นเก้าพันสามร้อยบาทถ้วน</div>
         </div>
         <div class="flex">
           <div class="mr-[15px]">รวมทั้งสิ้น:</div>
-          <div class="text-right">59920 บาท</div>
+          <div class="text-right">49,300 บาท</div>
         </div>
       </div>
 
       <div class="grid grid-cols-3 text-xs p-2 border-b border-black">
         <div class="col-span-3 indent-8">
-          ข้าพเจ้า นายกอไก่ ขอไข่ (ผู้เบิกจ่าย)ตำแหน่ง บัญชี ขอรับรองว่า
+          ข้าพเจ้า นายสรณ์สิริ สายบุตร (ผู้เบิกจ่าย)ตำแหน่ง บริการลูกค้า ขอรับรองว่า
           รายจ่ายข้างต้นนี้ไม่อาจเรียกเก็บใบเสร็จรับเงินจากผู้รับเงินได้และข้าพเจ้าได้จ่ายไปในงาน
-          ของทางบริษัท ศรีดาราทัวร์จำกัด โดยแท้จริง ตั้งแต่วันที่ 19 เมษายน 2566 ถึงวันที่ 21 เมษายน 2566
+          ของทางบริษัท ศรีดาราทัวร์จำกัด โดยแท้จริง ตั้งแต่วันที่ 5 มิถุนายน 2566 ถึงวันที่ 8 มิถุนายน 2566
         </div>
       </div>
 
@@ -82,4 +90,58 @@
 
     </div>
   </section>
+  <div class="flex justify-center mt-3">
+    <NuxtLink href="/paper_edit/cashcertificate_item">
+      <o-button>
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon> แก้ไข
+      </o-button>
+    </NuxtLink>
+    <o-button @click="print">
+      <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"></Icon> พิมพ์
+    </o-button>
+    <NuxtLink href="/paper_list/cashcertificate_list">
+      <o-button variant="info">
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="iconamoon:close-bold"></Icon>
+        ปิด
+      </o-button>
+    </NuxtLink>
+  </div>
 </template>
+
+<script setup lang="ts">
+import { initFlowbite } from 'flowbite';
+
+
+const datapaper = ref([
+  {
+    datereceipt: '05/07/2566',
+    detail: 'ค่าน้ำมันคันที่ 1 และ 2',
+    type: 'ค่าน้ำมัน',
+    receiptnumber: '008327530',
+    taxnumber: '0237854852147',
+    price: 13300,
+  },
+  {
+    datereceipt: '08/07/2566',
+    detail: 'ค่าไกด์ทั้งสองคน',
+    type: 'ค่าน้ำมัน',
+    receiptnumber: '007167530',
+    taxnumber: '0435698165428',
+    price: 4000,
+  },
+  {
+    datereceipt: '06/07/2566',
+    detail: 'ค่าเช่าเหมายานพาหนะท้องถิ่น 3 คัน',
+    type: 'ค่าเช่าเหมายานพาหนะท้องถิ่น',
+    receiptnumber: '003481630',
+    taxnumber: '0529863568452',
+    price: 32000,
+  },
+])
+
+function print() {
+  window.print();
+}
+
+onMounted(() => { initFlowbite() });
+</script>

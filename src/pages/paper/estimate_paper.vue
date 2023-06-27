@@ -114,8 +114,23 @@
           <div class="mb-5">วันที่</div>
         </div>
       </div>
-
     </div>
+    <div class="flex justify-center mt-3">
+    <NuxtLink href="/paper_edit/estimate_item">
+      <o-button>
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon> แก้ไข
+      </o-button>
+    </NuxtLink>
+    <o-button @click="print">
+      <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"></Icon> พิมพ์
+    </o-button>
+    <NuxtLink href="/paper_list/estimate_list">
+      <o-button variant="info">
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="iconamoon:close-bold"></Icon>
+        ปิด
+      </o-button>
+    </NuxtLink>
+  </div>
   </section>
   <!-- <div class="flex bg-gray-900"></div> -->
 </template>
@@ -149,6 +164,10 @@ const datapaper = ref([
     price:32000,
   },
 ])
+
+function print() {
+  window.print();
+}
 
 onMounted(() => {
   initFlowbite();
