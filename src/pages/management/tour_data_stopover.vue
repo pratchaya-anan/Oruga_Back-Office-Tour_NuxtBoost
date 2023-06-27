@@ -78,7 +78,7 @@
                 2566</time>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white"><a href="#">บ้านหนองผือ</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">05.00 น.
-                อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว</p>
+                จุดนัดหมาย อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ตม.มุขดาหาร</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น.รับประทานอาหารเที่ยง
                 หน้าด่านลาวบาว ระหว่างรอเอกสารข้านแดน จากนั้นเดินทางต่อไปยังเมือง เว้-ตานัง</p>
@@ -124,7 +124,7 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">24 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">เว้</h3>ด่านลาวบาว
+              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">เว้</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เช้า รับประทานอาหารเช้าที่โรงแรม /
                 เดินทางกลับประเทศไทย</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ด่านลาวบาว</h3>
