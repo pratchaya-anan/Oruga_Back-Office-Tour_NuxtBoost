@@ -7,7 +7,7 @@
             <div>
               <div class="grid grid-cols-6">
                 <div class="col-span-5">
-                  <h2 class="text-xl font-bold dark:text-white">ใบขอเบิกเงินสดย่อย</h2>
+                  <h2 class="text-xl font-bold dark:text-white">ใบเบิกเงินสดย่อย</h2>
                 </div>
                 <div class="flex justify-end">
                   <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit"
@@ -103,14 +103,13 @@
       </UiCard>
     </div>
     <div class="col-span-2">
-
       <div class="col-span-2">
         <div class=" overflow-x-auto shadow-md sm:rounded-lg mb-4">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th scope="col" class="px-6 py-3">
-                  รายละเอียดค่าใช้จ่าย
+                  ลำดับ
                 </th>
                 <th scope="col" class="px-6 py-3">
                   ประเภทค่าใช้จ่าย
@@ -130,21 +129,21 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <tr v-for="(i, idx) in datapaper" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                  น้ำมันรถบัส
+                  {{ idx+1 }}
                 </th>
                 <td class="px-6 py-4">
-                  ค่าน้ำมัน
+                  {{ i.type }}
                 </td>
                 <td class="px-6 py-4">
-                  5600
+                  {{ i.price }}
                 </td>
                 <td class="px-6 py-4">
-                  3
+                  {{ i.unit }}
                 </td>
                 <td class="px-6 py-4">
-                  16800
+                  {{ i.price * i.unit}}
                 </td>
                 <td class="px-6 py-4 text-right">
                   <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
@@ -160,7 +159,7 @@
 
                 </td>
               </tr>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <!-- <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                   จ่ายค่าไกด์
                 </th>
@@ -249,7 +248,7 @@
                   </button>
 
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
 
@@ -371,7 +370,28 @@ onMounted(() => { initFlowbite() });
 const showItemscomment = ref(false);
 const isItemModalUserData = ref(false);
 
-
+const datapaper = ref([
+  {
+    type:'ค่าน้ำมัน',
+    price:5600,
+    unit:3,
+  },
+  {
+    type:'ค่าไกด์',
+    price:2000,
+    unit:2,
+  },
+  {
+    type:'ค่าเช่าเหมายานพาหนะท้องถิ่น',
+    price:52000,
+    unit:1,
+  },
+  {
+    type:'ค่าอารหาร',
+    price:10000,
+    unit:1,
+  },
+])
 
 const columns = ref([
   {

@@ -30,7 +30,7 @@
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อผู้ขอเบิก:</div>
             <div class="col-span-2 ">นายสรณ์สิริ สายบุตร</div>
-            <div class="col-span-1 font-bold">แผนก:</div>
+            <div class="col-span-1 font-bold">ฝ่าย/แผนก:</div>
             <div class="col-span-2 ">บริการลูกค้า</div>
             <div class="col-span-1 font-bold">วัตถุประสงค์การยืมเงินทดลองจ่าย:</div>
             <div class="col-span-2 ">ค่าใช้จ่ายในทัวร์</div>
@@ -76,8 +76,8 @@
       <div class="grid grid-cols-3 text-xs p-2 border-b border-black">
         <div class="col-span-2">
           <div class="flex">
-            <div class="font-black w-[120px]">ตัวอักษร:</div>
-            <div class="font-black">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
+            <div class="font-black w-[100px]">ตัวอักษร:</div>
+            <div class="font-black">แปดหมื่นสองพันแปดร้อยบาทถ้วน</div>
           </div>
           <div class="font-black">ผู้อนุมัติ (แบบอิเล็กทอรนิกส์): นางสาวรินดา จุตตะโน</div>
           <div class="text-xs">
@@ -89,7 +89,7 @@
         <!-- สรุปรายการ(ด้านขวา) -->
         <div class="grid grid-cols-2 p-2">
           <div class="font-bold">รวมสุทธิ</div>
-          <div class="text-right font-bold">152,000</div>
+          <div class="text-right font-bold">82,800</div>
         </div>
       </div>
 

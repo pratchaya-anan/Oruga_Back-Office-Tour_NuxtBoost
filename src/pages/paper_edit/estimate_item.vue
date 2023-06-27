@@ -20,7 +20,7 @@
                   Estimate Clearing
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  เลขที่: 0841142174178
+                  เลขที่: 0642531698546
                 </li>
               </ul>
             </div>
@@ -53,15 +53,15 @@
                   ชื่อผู้ขอเคลียร์
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  ศศิศ วิรัตน์จินดา
+                  นายสรณ์สิริ สายบุตร
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                 <div class="mt-2">
-                  อ้างอิงถึงเลขที่ใบขอเคลียร์เงินทดลองจ่าย
+                  อ้างอิงถึงเลขที่ใบเบิกเงินสดย่อย
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  2665519328591
+                  2310652498375
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -69,7 +69,7 @@
                   โครงการ
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  เที่ยวเกาะ เลาะรัก
+                  องค์การบริหารส่วนตำบลโพนงาม
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -77,7 +77,7 @@
                   รายละเอียดโครงการ/กิจกรรม
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  หาดพัทยา
+                  นำสมาชิกเข้าร่วมการอบรมณ์
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -93,7 +93,7 @@
                   ยอดเงินประมาณการ:
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  10000
+                  82,800
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -101,7 +101,7 @@
                   ยอดสุทธิ:
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  0
+                  49,300
                 </div>
               </div>
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
@@ -117,7 +117,7 @@
                   ยอดเงินส่งคืน:
                 </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  0
+                  33,500
                 </div>
               </div>
             </div>
@@ -136,11 +136,11 @@
               <th scope="col" class="px-6 py-3">
                 วันที่ใบเสร็จ
               </th>
-              <th scope="col" class="px-6 py-3">
-                ประเภทค่าใช้จ่าย
-              </th>
-              <th scope="col" class="px-6 py-3">
+              <th scope="col" class=" py-3">
                 รายละเอียดค่าใช้จ่าย
+              </th>
+              <th scope="col" class=" py-3"> 
+                ประเภทค่าใช้จ่าย
               </th>
               <th scope="col" class="px-6 py-3">
                 เลขที่ใบเสร็จ
@@ -157,27 +157,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <tr v-for="(i, idx) in datapaper" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
               <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                1
+                {{ idx+1 }}
               </th>
               <td class="px-6 py-4">
-                25/04/2566
+                {{ i.datereceipt }}
+              </td>
+              <td class=" py-4">
+                {{ i.detail }}
+              </td>
+              <td class=" py-4">
+                {{ i.type }}
               </td>
               <td class="px-6 py-4">
-                น้ำแข็ง
+                {{ i.receiptnumber }}
               </td>
               <td class="px-6 py-4">
-                น้ำแข็งรถคันที่หนึ่ง
+                {{ i.taxnumber }}
               </td>
               <td class="px-6 py-4">
-                123
-              </td>
-              <td class="px-6 py-4">
-                1234
-              </td>
-              <td class="px-6 py-4">
-                700
+                {{ i.price }}
               </td>
               <td class="px-6 py-4 text-right">
                 <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
@@ -264,13 +264,13 @@
     </div>
   </div>
   <div class="flex justify-end">
-    <a href="/paper/taxinvoice_paper">
+    <a href="/paper/estimate_paper">
       <o-button>
         <Icon class="mr-2 -mt-1 w-6 h-6" name="ic:round-print"></Icon>
         พิมพ์
       </o-button>
     </a>
-    <a href="/paper_list/taxinvoice_list">
+    <a href="/paper_list/estimate_list">
       <o-button variant="info">
         <Icon class="mr-2 -mt-1 w-6 h-6" name="iconamoon:close-bold"></Icon>
         ปิด
@@ -345,6 +345,33 @@ const tableData = [
   },
 
 ];
+
+const datapaper = ref([
+  {
+    datereceipt:'05/07/2566',
+    detail:'ค่าน้ำมันคันที่ 1 และ 2',
+    type:'ค่าน้ำมัน',
+    receiptnumber:'008327530',
+    taxnumber:'0237854852147',
+    price:13300,
+  },
+  {
+    datereceipt:'08/07/2566',
+    detail:'ค่าไกด์ทั้งสองคน',
+    type:'ค่าน้ำมัน',
+    receiptnumber:'007167530',
+    taxnumber:'0435698165428',
+    price:4000,
+  },
+  {
+    datereceipt:'06/07/2566',
+    detail:'ค่าเช่าเหมายานพาหนะท้องถิ่น 3 คัน',
+    type:'ค่าเช่าเหมายานพาหนะท้องถิ่น',
+    receiptnumber:'003481630',
+    taxnumber:'0529863568452',
+    price:32000,
+  },
+])
 
 
 const data = ref(tableData);

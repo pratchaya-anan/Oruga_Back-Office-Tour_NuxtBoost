@@ -24,11 +24,10 @@
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
-                  <th scope="col" class="px-6 py-3">ลำดับ</th>
-                  <th scope="col" class="py-3">รหัสสมาชิก</th>
-                  <th scope="col" class="py-3">ชื่อ-สกุล</th>
-                  <th scope="col" class="py-3">วันที่ออกใบ</th>
-                  <th scope="col" class="py-3">ยอดสุทธิ</th>
+                  <th scope="col" class="py-4 px-4">วัตถุประสงค์การยืมเงินทดลองจ่าย</th>
+                  <th scope="col" class="py-4">ชื่อผู้ขอเบิก</th>
+                  <th scope="col" class="py-4">โครงการ</th>
+                  <th scope="col" class="py-4">รายละเอียดโครงการ/กิจกรรม</th>
                   <th></th>
                 </tr>
               </thead>
@@ -36,18 +35,15 @@
                 <tr
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                   v-for="i in tableData" @click="stepnext = 2">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {{ i.id }}
-                  </th>
-                  <td class="py-4">
+                  <td class="py-4 px-4">
                     {{ i.productcode }}
                   </td>
                   <td class="py-4">
                     {{ i.productlist }}
                   </td>
-                  <td>{{ i.quantity }}</td>
-                  <td>{{ i.unitprice }}</td>
-                  <td>
+                  <td class="py-4">{{ i.quantity }}</td>
+                  <td class="py-4">{{ i.unitprice }}</td>
+                  <td class="py-4">
                     <div class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       เลือก
                     </div>
@@ -78,7 +74,7 @@
                       Disbursement Estimate
                     </li>
                     <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      เลขที่: 0841142174178
+                      เลขที่: 2310652498375
                     </li>
                   </ul>
                 </div>
@@ -88,36 +84,55 @@
               <div class="sm:flex xl:block xl:space-y-4">
                 <div class="sm:flex-1">
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-4">ชื่อผู้ขอเบิก</div>
+                    <div class="mt-4">
+                      ชื่อผู้ขอเบิก
+                    </div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      ศศิศ วิรัตน์จินดา
+                      นายสรณ์สิริ สายบุตร
                     </div>
                   </div>
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">แผนก</div>
+                    <div class="mt-2">
+                      แผนก
+                    </div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      บริการ
+                      บริการลูกค้า
                     </div>
                   </div>
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">วัตถุประสงค์การยืม:</div>
+                    <div class="mt-2">
+                      วัตถุประสงค์การยืมเงินทดลองจ่าย
+                    </div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+                      ค่าใช้จ่ายในทัวร์
                     </div>
                   </div>
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">ที่อยู่</div>
+                    <div class="mt-2">
+                      วันที่ต้องการใช้เงิน
+                    </div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      4585695214526
+                      03/07/2566
                     </div>
                   </div>
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">วัตถุประสงค์การยืมเงินทดลองจ่าย</div>
-                    <div class="text-sm font-medium text-gray-900 dark:text-white">
-                      เพื่อจ่ายเงิน
+                    <div class="mt-2">
+                      โครงการ
+                    </div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      องค์การบริหารส่วนตำบลโพนงาม
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic  font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">
+                      รายละเอียดโครงการ/กิจกรรม
+                    </div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      นำสมาชิกเข้าร่วมการอบรมณ์
                     </div>
                   </div>
                 </div>
+
               </div>
             </section>
           </UiCard>
@@ -143,7 +158,8 @@
                     <o-select placeholder="เลือกฝ่าย/แผนก">
                       <option value="บัญชี">บัญชี</option>
                       <option value="การเงิน">การเงิน</option>
-                      <option value="??">??</option>
+                      <option value="ผู้บริหาร">ผู้บริหาร</option>
+                      <option value="ฝ่ายบริการ">ผู้บริหาร</option>
                     </o-select>
                   </o-field>
                 </div>
@@ -161,18 +177,9 @@
                     <o-select placeholder="เลือกฝ่าย/แผนก">
                       <option value="บัญชี">บัญชี</option>
                       <option value="การเงิน">การเงิน</option>
-                      <option value="??">??</option>
+                      <option value="ผู้บริหาร">ผู้บริหาร</option>
+                      <option value="ฝ่ายบริการ">ผู้บริหาร</option>
                     </o-select>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="โครงการ">
-                    <o-input></o-input>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="รายละเอียดโครงการ/กิจกรรม">
-                    <o-input></o-input>
                   </o-field>
                 </div>
               </div>
@@ -223,18 +230,16 @@ const columns = ref([
 
 const tableData = [
   {
-    id: 1,
-    productcode: "Lo-2586957",
-    productlist: "นายสายแสง ส่องไฟ",
-    quantity: "05-06-2566",
-    unitprice: "5,000",
+    productcode: "ค่าใช้จ่ายในทัวร์",
+    productlist: "นายสรณ์สิริ สายบุตร",
+    quantity: "องค์การบริหารส่วนตำบลโพนงาม",
+    unitprice: "นำสมาชิกเข้าร่วมการอบรมณ์",
   },
   {
-    id: 2,
-    productcode: "Lo-2586957",
-    productlist: "นายสายแสง ส่องไฟ",
-    quantity: "05-06-2566",
-    unitprice: "6,000",
+    productcode: "เพื่อนำจ่ายเงินเดือนให้กับพนักงาน",
+    productlist: "นายสาวรินดา จุตตะโน",
+    quantity: "เงินเดือนพนักงาน",
+    unitprice: "นำจ่ายพนักงานจำนวน 6 คน",
   },
 ];
 
