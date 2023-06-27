@@ -7,7 +7,7 @@
             <div>
               <div class="grid grid-cols-6">
                 <div class="col-span-5">
-                  <h2 class="text-xl font-bold dark:text-white">ใบขอเบิก</h2>
+                  <h2 class="text-xl font-bold dark:text-white">ใบขอเบิกเงินสดย่อย</h2>
                 </div>
                 <div class="flex justify-end">                 
                   <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-edit"
@@ -314,7 +314,7 @@ const tableData = [
     id: 1,
     productcode: "Lo-2586957",
     productlist: "นายสายแสง ส่องไฟ",
-    quantity: "05-06-2566",
+    quantity: "05/06/2566",
     unitprice: "5,000",
 
   },
@@ -322,7 +322,7 @@ const tableData = [
     id: 2,
     productcode: "Lo-2586957",
     productlist: "นายสายแสง ส่องไฟ",
-    quantity: "05-06-2566",
+    quantity: "05/06/2566",
     unitprice: "6,000",
 
   },
