@@ -11,7 +11,7 @@
       <div class="space-y-4">
         <UiCard>
           <h2 class="text-xl font-bold dark:text-white mb-2">
-            ค้นหาหน่วยงาน / ลูกค้า
+            ค้นหาหน่วยงาน/ลูกค้า
           </h2>
           <div class="flex items-center">
             <div class="relative w-full">
@@ -28,7 +28,7 @@
         <div>
           <UiCard v-if="showListAgency">
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือก หน่วยงาน / ลูกค้า ที่ต้องการนำไปออกใบวางบิล
+              เลือกหน่วยงาน/ลูกค้า ที่ต้องการนำไปออกใบวางบิล
             </h2>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
               <table
@@ -83,13 +83,13 @@
         </div>
         <section v-if="!showAddAgency">
           <o-button @click="showAddAgency = true"
-            >เพิ่มหน่วยงาน / ลูกค้า</o-button
+            >เพิ่มหน่วยงาน/ลูกค้า</o-button
           >
         </section>
         <UiCard v-if="showAddAgency">
           <div>
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              ข้อมูล หน่วยงาน / ลูกค้า
+              ข้อมูลหน่วยงาน/ลูกค้า
             </h2>
             <div class="grid grid-cols-2 gap-4 mt-3">
               <div>
@@ -398,7 +398,7 @@
         <div class="col-span-2">
           <UiCard>
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือกรายการที่ต้องการนำไปออกใบสำคัญรับเงิน
+              เลือกรายการที่ต้องการนำไปออกใบวางบิล/ใบแจ้งหนี้
             </h2>
             <div v-if="showItemslist" class="mt-5">
               <o-table
@@ -519,7 +519,7 @@
         <div>
           <UiCard v-if="showListTour">
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือกทัวร์ที่ต้องการนำไปออกใบวางบิล
+              เลือกทัวร์ที่ต้องการนำไปออกใบวางบิล/ใบแจ้งหนี้
             </h2>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
               <table
@@ -587,7 +587,7 @@
                   <div class="grid grid-cols-6">
                     <div class="col-span-5">
                       <h2 class="text-xl font-bold dark:text-white">
-                        ข้อมูลหน่วยงาน / ลูกค้า
+                        ข้อมูลหน่วยงาน/ลูกค้า
                       </h2>
                     </div>
                   </div>
@@ -927,7 +927,7 @@
               </div>
             </div>
             <div class="flex justify-end">
-              <a href="/paper_edit/cashreceipt_item">
+              <a href="/paper_edit/billing_item">
                 <o-button> บันทึก </o-button>
               </a>
             </div>

@@ -8,7 +8,7 @@
       :clickable="true"
       icon="user-plus"
     >
-      <div class="space-y-4"> ใบเบิกเงินสดย่อย
+      <div class="space-y-4">
         <UiCard>
           <h2 class="text-xl font-bold dark:text-white mb-2">
             ค้นหาหน่วยงาน / ลูกค้า

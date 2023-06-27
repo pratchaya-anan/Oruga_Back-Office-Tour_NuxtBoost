@@ -32,7 +32,7 @@
       <div class="col-span-2 grid grid-cols-3 m-5 text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-3">
-            <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
+            <div class="col-span-1 font-bold">หน่วยงาน / ลูกค้า:</div>
             <div class="col-span-2">ศศิศ วิรัตน์จินดา</div>
             <div class="col-span-1 font-bold">ชื่อผู้ติดต่อ:</div>
             <div class="col-span-2">มะนาว หวานจังเลย</div>
