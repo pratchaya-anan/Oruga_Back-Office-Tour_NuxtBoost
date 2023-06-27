@@ -79,7 +79,7 @@
             </NuxtLink>
           </div>
           <h2 class="mb-2 text-xl font-bold dark:text-white">
-            โรงรถประจำทัวร์แรม
+            ยานพาหนะ
           </h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-4">
