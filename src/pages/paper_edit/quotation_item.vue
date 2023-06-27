@@ -74,7 +74,9 @@
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                <div class="mt-4">
+                  หน่วยงาน / ลูกค้า
+                </div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   ศศิศ วิรัตน์จินดา
                 </div>
@@ -188,6 +190,7 @@
           </tbody>
         </table>
 
+
         <!-- Dropdown menu -->
         <div id="dropdownDots"
           class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
@@ -203,6 +206,7 @@
           </div>
         </div>
       </div>
+
       <section v-if="!showItemsPanel">
         <o-button @click="showItemsPanel = true">เพิ่มข้อมูล</o-button>
       </section>
@@ -232,12 +236,8 @@
           </o-field>
         </div>
         <section>
-          <o-button class="mt-4" @click="showItemsPanel = false"
-            >บันทึก</o-button
-          >
-          <o-button @click="showItemsPanel = false" class="ml-4"
-            >ยกเลิก</o-button
-          >
+          <o-button class="mt-4" @click="showItemsPanel = false">บันทึก</o-button>
+          <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
         </section>
       </UiCard>
     </div>
@@ -257,6 +257,7 @@
     </a>
   </div>
 </template>
+
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
 const showItemsPanel = ref(false);
