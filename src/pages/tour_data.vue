@@ -3,48 +3,28 @@
     <LayoutPageTitle> Tour Management / จัดทัวร์ </LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto mb-4">
-        <UiCard>
+        <UiCard class="mb-4">
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div class="w-full relative">
-              <button
-                id="dropdownMenuIconButton"
-                data-dropdown-toggle="dropdownDots"
+              <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
                 class="absolute top-0 right-0 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 rounded-full hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
-                type="button"
-              >
-                <Icon
-                  aria-hidden="true"
-                  class="w-8 h-8"
-                  name="mingcute:more-2-fill"
-                ></Icon>
+                type="button">
+                <Icon aria-hidden="true" class="w-8 h-8" name="mingcute:more-2-fill"></Icon>
               </button>
-
               <!-- Dropdown menu -->
-              <div
-                id="dropdownDots"
-                class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
-              >
-                <ul
-                  class="py-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer"
-                  aria-labelledby="dropdownMenuIconButton"
-                >
+              <div id="dropdownDots"
+                class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer"
+                  aria-labelledby="dropdownMenuIconButton">
                   <NuxtLink @click="Export">
-                    <MenuDropItem
-                      ><Icon
-                        class="w-4 h-4 mr-1"
-                        name="icon-park-twotone:order"
-                      ></Icon
-                      >พิมพ์ใบ NAMELISTGROUP</MenuDropItem
-                    >
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 mr-1" name="icon-park-twotone:order"></Icon>พิมพ์ใบ NAMELISTGROUP
+                    </MenuDropItem>
                   </NuxtLink>
                   <NuxtLink href="paper/guideorder_paper">
-                    <MenuDropItem
-                      ><Icon
-                        class="w-4 h-4 mr-1"
-                        name="icon-park-twotone:order"
-                      ></Icon
-                      >พิมพ์ใบสั่งงานมัคคุเทศก์</MenuDropItem
-                    >
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 mr-1" name="icon-park-twotone:order"></Icon>พิมพ์ใบสั่งงานมัคคุเทศก์
+                    </MenuDropItem>
                   </NuxtLink>
                   <NuxtLink href="/paper/tag_paper">
                     <MenuDropItem>
@@ -54,14 +34,12 @@
                   </NuxtLink>
                   <NuxtLink href="/quotation_list">
                     <MenuDropItem>
-                      <Icon class="w-4 h-4 mr-1" name="mdi:paper-check"> </Icon
-                      >ใบเสนอราคา
+                      <Icon class="w-4 h-4 mr-1" name="mdi:paper-check"> </Icon>ใบเสนอราคา
                     </MenuDropItem>
                   </NuxtLink>
                   <NuxtLink href="#">
                     <MenuDropItem>
-                      <Icon class="w-4 h-4 mr-1" name="uil:bill"> </Icon
-                      >ใบเบิกค่าใช้จ่าย
+                      <Icon class="w-4 h-4 mr-1" name="uil:bill"> </Icon>ใบเบิกค่าใช้จ่าย
                     </MenuDropItem>
                   </NuxtLink>
                 </ul>
@@ -91,10 +69,7 @@
                   23 คน
                   <Icon class="w-6 h-6 ml-6" name="el:person"></Icon>
                   19 คน
-                  <Icon
-                    class="w-6 h-6 ml-2"
-                    name="material-symbols:child-care"
-                  ></Icon>
+                  <Icon class="w-6 h-6 ml-2" name="material-symbols:child-care"></Icon>
                   3 คน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
@@ -185,7 +160,8 @@
         <UiCard v-if="showItems == 'hotel'">
           <div class="w-full relative">
             <NuxtLink href="/management/tour_data_hotel">
-              <o-button class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+              <o-button
+                class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
                 <Icon class="w-6 h-6" name="ic:baseline-plus"></Icon>
               </o-button>
             </NuxtLink>
@@ -536,13 +512,8 @@
       <div class="grid grid-cols-1 col-span-2 gap-4">
         <div class="flex flex-wrap gap-4">
           <div>
-            <UiCard
-              class="flex-1 hover:bg-gray-100 hover:text-blue-700 cursor-pointer"
-            >
-              <NuxtLink
-                class="h-full w-full text-center grid items-center"
-                href="/management/tour_data_members"
-              >
+            <UiCard class="flex-1 hover:bg-gray-100 hover:text-blue-700 cursor-pointer">
+              <NuxtLink class="h-full w-full text-center grid items-center" href="/management/tour_data_members">
                 <div>
                   <Icon class="w-10 h-10" name="tabler:settings-plus"></Icon>
                 </div>
@@ -551,68 +522,44 @@
             </UiCard>
           </div>
           <div v-for="(item, index) in memberdata" :key="index">
-            <UiCard
-              class="flex-1 hover:bg-gray-100 cursor-pointer"
-              @click="isItemModalUserData = true"
-            >
+            <UiCard class="flex-1 hover:bg-gray-100 cursor-pointer" @click="isItemModalUserData = true">
               <div class="flex justify-end">
-                <Icon
-                  v-if="item.gender == 'male'"
-                  class="text-xl font-medium text-green-600 dark:text-white"
-                  name="mdi:gender-male"
-                >
+                <Icon v-if="item.gender == 'male'" class="text-xl font-medium text-green-600 dark:text-white"
+                  name="mdi:gender-male">
                 </Icon>
-                <Icon
-                  v-else
-                  class="text-xl font-medium text-pink-600 dark:text-white"
-                  name="ph:gender-female-bold"
-                >
+                <Icon v-else class="text-xl font-medium text-pink-600 dark:text-white" name="ph:gender-female-bold">
                 </Icon>
               </div>
               <div class="flex flex-col items-center">
                 <h5 class="text-md font-medium text-gray-900 dark:text-white">
                   {{ item.name_thai }} {{ item.lastname_thai }}
                 </h5>
-                <h5
-                  class="mb-1 text-sm font-medium text-gray-900 dark:text-white"
-                >
+                <h5 class="mb-1 text-sm font-medium text-gray-900 dark:text-white">
                   {{ item.name_eng }} {{ item.lastname_eng }}
                 </h5>
-                <span class="text-sm text-gray-500 dark:text-gray-400"
-                  >Thai</span
-                >
+                <span class="text-sm text-gray-500 dark:text-gray-400">Thai</span>
                 <!-- แจ้งเตือนลูกทัวร์ -->
                 <div class="flex justify-center">
                   <div>
-                    <Icon
-                      class="w-6 h-6 rounded-full text-xl font-medium text-gray-500 dark:text-white"
-                      name="mingcute:cake-fill"
-                    >
+                    <Icon class="w-6 h-6 rounded-full text-xl font-medium text-gray-500 dark:text-white"
+                      name="mingcute:cake-fill">
                     </Icon>
                     <div
-                      class="flex absolute justify-center items-center ml-4 -mt-2 w-2 h-2 rounded-full border border-white bg-blue-500 dark:border-gray-700"
-                    ></div>
+                      class="flex absolute justify-center items-center ml-4 -mt-2 w-2 h-2 rounded-full border border-white bg-blue-500 dark:border-gray-700">
+                    </div>
                   </div>
                   <div>
-                    <Icon
-                      class="w-5 h-5 text-xl font-medium text-gray-500 dark:text-white"
-                      name="fa6-solid:passport"
-                    >
+                    <Icon class="w-5 h-5 text-xl font-medium text-gray-500 dark:text-white" name="fa6-solid:passport">
                     </Icon>
                     <div
-                      class="flex absolute justify-center items-center ml-4 -mt-1 w-2 h-2 rounded-full border border-white bg-red-500 dark:border-gray-700"
-                    ></div>
+                      class="flex absolute justify-center items-center ml-4 -mt-1 w-2 h-2 rounded-full border border-white bg-red-500 dark:border-gray-700">
+                    </div>
                   </div>
                 </div>
                 <div>
-                  <span
-                    class="px-10 text-sm text-gray-500 dark:text-gray-400 truncate"
-                    ><Icon
-                      class="w-4 h-4"
-                      name="majesticons:comment-text"
-                    ></Icon
-                    >แพ้กุ้ง</span
-                  >
+                  <span class="px-10 text-sm text-gray-500 dark:text-gray-400 truncate">
+                    <Icon class="w-4 h-4" name="majesticons:comment-text"></Icon>แพ้กุ้ง
+                  </span>
                 </div>
               </div>
             </UiCard>
@@ -622,172 +569,98 @@
                   <div class="p-3 border-r">
                     <div class="flex items-center justify-start mb-2">
                       <a href="#">
-                        <img
-                          class="w-10 h-10 rounded-full"
+                        <img class="w-10 h-10 rounded-full"
                           src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                          alt="Jese Leos"
-                        />
+                          alt="Jese Leos" />
                       </a>
                     </div>
-                    <p
-                      class="text-base font-semibold leading-none text-gray-900 dark:text-white"
-                    >
-                      <a href="#"
-                        >{{ item.name_thai }} {{ item.lastname_thai }}</a
-                      ><Icon
-                        class="text-xl font-medium text-green-600 dark:text-white"
-                        name="mdi:gender-male"
-                      >
+                    <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                      <a href="#">{{ item.name_thai }} {{ item.lastname_thai }}</a>
+                      <Icon class="text-xl font-medium text-green-600 dark:text-white" name="mdi:gender-male">
                       </Icon>
                     </p>
                     <p class="mb-3 text-sm font-normal">
-                      <a href="#" class="hover:underline"
-                        >{{ item.name_eng }} {{ item.lastname_eng }}</a
-                      >
+                      <a href="#" class="hover:underline">{{ item.name_eng }} {{ item.lastname_eng }}</a>
                     </p>
                     <div class="flex">
-                      <p
-                        class="text-base font-semibold leading-none text-gray-900 dark:text-white"
-                      >
+                      <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
                         ข้อมูลส่วนตัว
                       </p>
                       <div class="flex text-sm text-blue-500" role="alert">
-                        <Icon
-                          class="w-5 h-5 mr-1"
-                          name="mingcute:warning-line"
-                        ></Icon>
+                        <Icon class="w-5 h-5 mr-1" name="mingcute:warning-line"></Icon>
                         <p>วันเกิด</p>
                       </div>
                     </div>
                     <div class="grid grid-cols-2">
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="carbon:phone-filled"
-                        ></Icon
-                        >098-158-4478
+                        <Icon class="w-6 h-6 text-gray-600" name="carbon:phone-filled"></Icon>098-158-4478
                       </p>
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="mingcute:cake-fill"
-                        ></Icon
-                        >20/04/2000
+                        <Icon class="w-6 h-6 text-gray-600" name="mingcute:cake-fill"></Icon>20/04/2000
                       </p>
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="fa6-solid:people-arrows"
-                        ></Icon
-                        >35 ปี
+                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:people-arrows"></Icon>35 ปี
                       </p>
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="gis:search-country"
-                        ></Icon
-                        >Thai
+                        <Icon class="w-6 h-6 text-gray-600" name="gis:search-country"></Icon>Thai
                       </p>
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="fa-solid:id-card"
-                        ></Icon
-                        >1-7399-01893-76-5
+                        <Icon class="w-6 h-6 text-gray-600" name="fa-solid:id-card"></Icon>1-7399-01893-76-5
                       </p>
                       <p class="mb-4 text-sm col-span-2">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="ant-design:home-twotone"
-                        ></Icon
-                        >20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น
+                        <Icon class="w-6 h-6 text-gray-600" name="ant-design:home-twotone"></Icon>20-22 หมู่13
+                        ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น
                         40000
                       </p>
                     </div>
                     <div class="flex">
-                      <p
-                        class="text-base font-semibold leading-none text-gray-900 dark:text-white"
-                      >
+                      <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
                         พาสปอร์ต
                       </p>
                       <div class="flex text-sm text-red-500" role="alert">
-                        <Icon
-                          class="w-5 h-5 mr-1"
-                          name="mingcute:warning-line"
-                        ></Icon>
+                        <Icon class="w-5 h-5 mr-1" name="mingcute:warning-line"></Icon>
                         <p>พาสปอร์ตจะหมดอายุภายใน 120 วัน</p>
                       </div>
                     </div>
                     <div class="grid grid-cols-2">
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="fa6-solid:passport"
-                        ></Icon
-                        >1635501893
+                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:passport"></Icon>1635501893
                       </p>
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="fluent-mdl2:number-field"
-                        ></Icon
-                        >1478/63
+                        <Icon class="w-6 h-6 text-gray-600" name="fluent-mdl2:number-field"></Icon>1478/63
                       </p>
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="fa6-solid:calendar-check"
-                        ></Icon
-                        >25/01/2566
+                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-check"></Icon>25/01/2566
                       </p>
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="fa6-solid:calendar-xmark"
-                        ></Icon
-                        >25/01/2570
+                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-xmark"></Icon>25/01/2570
                       </p>
                     </div>
-                    <p
-                      class="text-base font-semibold leading-none text-gray-900 dark:text-white"
-                    >
+                    <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
                       ข้อมูลเดินทาง
                     </p>
                     <div class="grid grid-cols-2">
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="tabler:number"
-                        ></Icon>
+                        <Icon class="w-6 h-6 text-gray-600" name="tabler:number"></Icon>
                         {{ index + 1 }}
                       </p>
                       <p class="mb-4 text-sm">
-                        <Icon
-                          class="w-6 h-6 text-gray-600"
-                          name="mingcute:bed-fill"
-                        ></Icon
-                        >คู่
+                        <Icon class="w-6 h-6 text-gray-600" name="mingcute:bed-fill"></Icon>คู่
                       </p>
                     </div>
                   </div>
                   <div>
-                    <h2
-                      class="mb-2 text-lg font-semibold text-gray-900 dark:text-white"
-                    >
+                    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                       คอมเมนต์
                     </h2>
-                    <ul
-                      class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
-                    >
+                    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
                       <li class="flex justify-between">
                         <div>แพ้กุ้ง</div>
                         <div>20/06/66</div>
                         <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
                       </li>
                     </ul>
-                    <o-button @click="showItemsListCommentUser = true"
-                      >เขียนคอมเมนต์</o-button
-                    >
+                    <o-button @click="showItemsListCommentUser = true">เขียนคอมเมนต์</o-button>
 
                     <div v-if="showItemsListCommentUser">
                       <o-field label="เขียนคอมเมนต์">
@@ -797,13 +670,8 @@
                         <o-field label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
                           <o-input></o-input>
                         </o-field>
-                        <section
-                          class="flex-1 shrink flex items-center justify-end"
-                        >
-                          <o-button
-                            @click="showItemsListCommentUser = false"
-                            class="ml-4 mt-5"
-                            >ปิด
+                        <section class="flex-1 shrink flex items-center justify-end">
+                          <o-button @click="showItemsListCommentUser = false" class="ml-4 mt-5">ปิด
                           </o-button>
                           <o-button class="mt-5">เพิ่ม</o-button>
                         </section>
