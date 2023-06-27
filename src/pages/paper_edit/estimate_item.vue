@@ -357,7 +357,7 @@ const datapaper = ref([
   {
     datereceipt:'08/07/2566',
     detail:'ค่าไกด์ทั้งสองคน',
-    type:'ค่าน้ำมัน',
+    type:'ค่าไกด์',
     receiptnumber:'007167530',
     taxnumber:'0435698165428',
     price:4000,

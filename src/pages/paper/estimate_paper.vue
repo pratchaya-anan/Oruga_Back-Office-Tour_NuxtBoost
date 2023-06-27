@@ -75,11 +75,11 @@
         <div class="col-span-2">
           <div class="flex">
             <div class="font-black mr-5">รายละเอียดโครงการ/กิจกรรม:</div>
-            <div> เที่ยวที่ไหน</div>
+            <div>นำสมาชิกเข้าร่วมการอบรมณ์</div>
           </div>
           <div class="flex">
             <div class="font-black mr-5">ผู้อนุมัติ (แบบอิเล็กทอรนิกส์):</div>
-            <div> นายสอง สามสี่</div>
+            <div>นางสาวรินดา จุตตะโน</div>
           </div>
         </div>
 
@@ -150,7 +150,7 @@ const datapaper = ref([
   {
     datereceipt:'08/07/2566',
     detail:'ค่าไกด์ทั้งสองคน',
-    type:'ค่าน้ำมัน',
+    type:'ค่าไกด์',
     receiptnumber:'007167530',
     taxnumber:'0435698165428',
     price:4000,
