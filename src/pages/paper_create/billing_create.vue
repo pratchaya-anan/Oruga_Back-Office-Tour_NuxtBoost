@@ -180,7 +180,9 @@
                 <tr>
                   <th scope="col" class="px-6 py-3">ลำดับ</th>
                   <th scope="col" class="py-3">รหัสสมาชิก</th>
-                  <th scope="col" class="py-3">ชื่อ-สกุล</th>
+                  <th scope="col" class="py-3">หน่วยงาน/ลูกค้า</th>
+                  <th scope="col" class="py-3">ผู้ติดต่อ</th>
+                  <th scope="col" class="py-3">ผู้เสนอขาย</th>
                   <th scope="col" class="py-3">วันที่ออกใบ</th>
                   <th scope="col" class="py-3">ยอดสุทธิ</th>
                   <th></th>
@@ -189,7 +191,7 @@
               <tbody>
                 <tr
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                  v-for="i in tableData"
+                  v-for="i in tablequotation"
                   @click="stepnext = 3"
                 >
                   <th
@@ -199,13 +201,15 @@
                     {{ i.id }}
                   </th>
                   <td class="py-4">
-                    {{ i.productcode }}
+                    {{ i.nameagency }}
                   </td>
                   <td class="py-4">
-                    {{ i.productlist }}
+                    {{ i.idagency }}
                   </td>
-                  <td>{{ i.quantity }}</td>
-                  <td>{{ i.unitprice }}</td>
+                  <td>{{ i.namecontact }}</td>
+                  <td>{{ i.taxagency }}</td>
+                  <td>{{ i.phoneagency }}</td>
+                  <td>{{ i.addressagency }}</td>
                   <td>
                     <div
                       class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
@@ -501,7 +505,7 @@
         <div>
           <UiCard v-if="showListTour">
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือกทัวร์ที่ต้องการนำไปออกใบเสนอราคา
+              เลือกทัวร์ที่ต้องการนำไปออกใบวางบิล/แจ้งหนี้
             </h2>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
               <table
@@ -551,10 +555,7 @@
               </table>
             </div>
           </UiCard>
-        </div>
-        <div class="flex justify-end">
-          <o-button @click="stepnext = 3">ข้าม</o-button>
-        </div>
+        </div>       
       </div>
     </o-step-item>
     <!-- step 5 -->
@@ -1006,6 +1007,18 @@ const tableAgency = [
     phoneagency: "0925584785",
     addressagency: "175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น",
   },
+];
+
+const tablequotation= [
+  {
+    id: 1,
+    nameagency: "1522236",
+    idagency: " เทศบาลขอนแก่น ",
+    namecontact: "นายภาคภูมิ ภูเขียว",
+    taxagency: "นายกอไก่ ขอไข่ ",
+    phoneagency: "05/06/2566",
+    addressagency: "6420",
+  }, 
 ];
 
 const data = ref(tableData);
