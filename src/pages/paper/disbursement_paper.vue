@@ -1,8 +1,10 @@
 <template>
   <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
-    <div class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow">
+    <div
+      class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow"
+    >
       <div class="grid grid-rows-2 m-5">
-        <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo">
+        <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo" />
         <div class="grid grid-cols-3 text-sm">
           <div class="col-span-2">
             <div>ห้างหุ้นส่วนจำกัด นิลผกา</div>
@@ -13,7 +15,9 @@
 
           <!-- ชื่อใบ/ข้อมูลใบ -->
           <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบประมาณการเบิกเงินสดย่อย</div>
+            <div class="col-span-3 font-bold text-center text-base">
+              ใบประมาณการเบิกเงินสดย่อย
+            </div>
             <div class="col-span-3 text-center">Disbursement Estimate</div>
             <div class="font-bold">เลขที่:</div>
             <div class="col-span-2 text-right">2310652498375</div>
@@ -22,18 +26,20 @@
           </div>
         </div>
       </div>
-      <hr class="col-span-3 mx-5">
+      <hr class="col-span-3 mx-5" />
 
       <!-- ข้อมูลฝั่งซ้าย -->
-      <div class="col-span-2 grid grid-cols-2 m-5  text-xs">
+      <div class="col-span-2 grid grid-cols-2 m-5 text-xs">
         <div class="col-span-1">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อผู้ขอเบิก:</div>
-            <div class="col-span-2 ">นายสรณ์สิริ สายบุตร</div>
+            <div class="col-span-2">นายสรณ์สิริ สายบุตร</div>
             <div class="col-span-1 font-bold">แผนก:</div>
-            <div class="col-span-2 ">บริการลูกค้า</div>
-            <div class="col-span-1 font-bold">วัตถุประสงค์การยืมเงินทดลองจ่าย:</div>
-            <div class="col-span-2 ">ค่าใช้จ่ายในทัวร์</div>
+            <div class="col-span-2">บริการลูกค้า</div>
+            <div class="col-span-1 font-bold">
+              วัตถุประสงค์การยืมเงินทดลองจ่าย:
+            </div>
+            <div class="col-span-2">ค่าใช้จ่ายในทัวร์</div>
           </div>
         </div>
 
@@ -61,8 +67,8 @@
             <th>จำนวน</th>
             <th>ยอดสุทธิ</th>
           </tr>
-          <tr v-for=" (i, idx) in datapaper" class="h-10 text-xs">
-            <td>{{ idx+1 }}</td>
+          <tr v-for="(i, idx) in datapaper" class="h-10 text-xs">
+            <td>{{ idx + 1 }}</td>
             <!-- <td></td> -->
             <td>{{ i.type }}</td>
             <td>{{ i.price }}</td>
@@ -79,9 +85,12 @@
             <div class="font-black w-[120px]">ตัวอักษร:</div>
             <div class="font-black">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
           </div>
-          <div class="font-black">ผู้อนุมัติ (แบบอิเล็กทอรนิกส์): นางสาวรินดา จุตตะโน</div>
+          <div class="font-black">
+            ผู้อนุมัติ (แบบอิเล็กทอรนิกส์): นางสาวรินดา จุตตะโน
+          </div>
           <div class="text-xs">
-            ข้าพเจ้าขอรับรองว่ารายการที่กล่าวมาข้างต้นเป็นความจริง พร้อมหลักฐานการจ่าย/แผนประกอบการที่ส่งมา
+            ข้าพเจ้าขอรับรองว่ารายการที่กล่าวมาข้างต้นเป็นความจริง
+            พร้อมหลักฐานการจ่าย/แผนประกอบการที่ส่งมา
             รวมทั้งจำนวนเงินที่ขอเบิกถูกต้องตามระเบียบบริษัททุกประการ
           </div>
         </div>
@@ -111,9 +120,24 @@
           <div class="mb-5">วันที่</div>
         </div>
       </div>
-
     </div>
   </section>
+  <div class="flex justify-center mt-3">
+    <NuxtLink href="/paper_edit/disbursement_item">
+      <o-button>
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon> แก้ไข
+      </o-button>
+    </NuxtLink>
+    <o-button @click="print">
+      <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"></Icon> พิมพ์
+    </o-button>
+    <NuxtLink href="/paper_list/disbursement_list">
+      <o-button variant="info">
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="iconamoon:close-bold"></Icon>
+        ปิด
+      </o-button>
+    </NuxtLink>
+  </div>
   <!-- <div class="flex bg-gray-900"></div> -->
 </template>
 
@@ -122,26 +146,29 @@ import { initFlowbite } from "flowbite";
 
 const datapaper = ref([
   {
-    type:'ค่าน้ำมัน',
-    price:5600,
-    unit:3,
+    type: "ค่าน้ำมัน",
+    price: 5600,
+    unit: 3,
   },
   {
-    type:'ค่าไกด์',
-    price:2000,
-    unit:2,
+    type: "ค่าไกด์",
+    price: 2000,
+    unit: 2,
   },
   {
-    type:'ค่าเช่าเหมายานพาหนะท้องถิ่น',
-    price:52000,
-    unit:1,
+    type: "ค่าเช่าเหมายานพาหนะท้องถิ่น",
+    price: 52000,
+    unit: 1,
   },
   {
-    type:'ค่าอารหาร',
-    price:10000,
-    unit:1,
+    type: "ค่าอารหาร",
+    price: 10000,
+    unit: 1,
   },
-])
+]);
+function print() {
+  window.print();
+}
 
 onMounted(() => {
   initFlowbite();

@@ -151,20 +151,30 @@
       </div>
     </div>
   </section>
-
   <div class="flex justify-center mt-3">
-    <o-button variant="info">
-      <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"></Icon>
-      พิมพ์
+    <NuxtLink href="/paper_edit/quotation_item">
+      <o-button>
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon> แก้ไข
+      </o-button>
+    </NuxtLink>
+    <o-button @click="print">
+      <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"></Icon> พิมพ์
     </o-button>
-    <NuxtLink to="quotation_list">
-      <o-button> บันทึก </o-button>
+    <NuxtLink href="/paper_list/quotation_list">
+      <o-button variant="info">
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="iconamoon:close-bold"></Icon>
+        ปิด
+      </o-button>
     </NuxtLink>
   </div>
 </template>
 
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
+
+function print() {
+  window.print();
+}
 
 onMounted(() => {
   initFlowbite();
