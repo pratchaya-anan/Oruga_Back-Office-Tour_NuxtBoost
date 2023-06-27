@@ -45,15 +45,25 @@
             </h3>
             <div class="flex space-x-3">
               <!-- โรงแรม -->
-              <NuxtLink href="/management/tour_data_hotel"><Icon class="w-6 h-6 text-blue-700" name="mdi:bed"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_hotel">
+                <Icon class="w-6 h-6 text-blue-700" name="mdi:bed"></Icon>
+              </NuxtLink>
               <!-- มัคคุเทศก์ -->
-              <NuxtLink href="/management/tour_data_guide"><Icon class="w-6 h-6" name="mdi:face-woman-shimmer"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_guide">
+                <Icon class="w-6 h-6" name="mdi:face-woman-shimmer"></Icon>
+              </NuxtLink>
               <!-- พาหนะ -->
-              <NuxtLink href="/management/tour_data_vehicle"><Icon class="w-6 h-6" name="mdi:van-utility"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_vehicle">
+                <Icon class="w-6 h-6" name="mdi:van-utility"></Icon>
+              </NuxtLink>
               <!-- สถานที่ -->
-              <NuxtLink href="/management/tour_data_stopover"><Icon class="w-6 h-6" name="mdi:store-marker"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_stopover">
+                <Icon class="w-6 h-6" name="mdi:store-marker"></Icon>
+              </NuxtLink>
               <!-- ร้านอาหาร -->
-              <NuxtLink href="/management/tour_data_restaurant"><Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_restaurant">
+                <Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon>
+              </NuxtLink>
             </div>
           </div>
         </UiCard>
@@ -76,31 +86,38 @@
               </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566 - 22 เมษายน 2566</time>
-              <h3 class="flex justify-between text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a href="#"
-                  @click="add = true">โรงแรม NHU MINH PLAZA</a> <a href="#" @click="add = true" class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">
+                โรงแรม NHU MINH PLAZA
+                <a href="#" @click="add = true"
+                  class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> เป็นโรงแรมที่ดีมาก </p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เป็นโรงแรมที่ดีมาก </p>
             </li>
-            <li v-if="!delete2" class="mb-10 ml-4">
+            <li class="mb-10 ml-4">
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 เมษายน
                 2566 - 23 เมษายน 2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม Mercure Bana
-                hills</h3>
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">โรงแรม Mercure Bana
+                hills
+                <a href="#" @click="add = true"
+                  class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
+                </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 08978677867</p>
             </li>
-            <li v-if="!delete3" class="mb-10 ml-4">
+            <li class="mb-10 ml-4">
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
                 2566 - 24 เมษายน 2566</time>
-              <h3 class="text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">โรงแรม Century hotel
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">โรงแรม Century hotel
+                <a href="#" @click="add = true"
+                  class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
@@ -363,29 +380,13 @@
                       Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
                   </div>
-                  
                 </dev>
-              
               </div>
-            </div>
-
-            <div>
-              <o-field label="วันเข้าพัก">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="วันออก">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div class="col-span-2">
-              <o-field label="จำนวนห้องพักกกก">
-                <o-input type="number"></o-input>
-              </o-field>
-              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  คอมเมนต์
-                </h2>
+              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                คอมเมนต์
+              </h2>
+              <div class="w-full p-4 border shadow-md">
+                
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
                   <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
@@ -419,6 +420,23 @@
                     </section>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div>
+              <o-field label="วันเข้าพัก">
+                <o-input></o-input>
+              </o-field>
+            </div>
+            <div>
+              <o-field label="วันออก">
+                <o-input></o-input>
+              </o-field>
+            </div>
+            <div class="col-span-2">
+              <o-field label="จำนวนห้องพักกกก">
+                <o-input type="number"></o-input>
+              </o-field>
             </div>
             <div class="col-span-2">
               <div class="flex justify-end">

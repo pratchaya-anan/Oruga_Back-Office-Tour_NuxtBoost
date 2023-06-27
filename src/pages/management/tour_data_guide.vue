@@ -78,11 +78,6 @@
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">ให้บริการดีมาก
-                  <Icon class="w-6 h-6" name="majesticons:comment-text" @click="
-                    showComment != true
-                      ? (showComment = true)
-                      : (showComment = false)
-                    "></Icon>
                 </p>
               </div>
             </dev>
