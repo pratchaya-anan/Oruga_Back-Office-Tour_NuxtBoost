@@ -9,7 +9,7 @@
               <div class="grid grid-cols-6">
                 <div class="col-span-5">
                   <h2 class="text-xl font-bold dark:text-white">
-                    ใบเสนอราคา/ยืนยันการสั่งซื้อ
+                    ใบเสนอราคา
                   </h2>
                 </div>
                 <div class="flex justify-end">
@@ -44,7 +44,7 @@
             <o-input modelValue="ศศิศ วิรัตน์จินดา"></o-input>
           </o-field>
           <o-field label="ชื่อผู้ติดต่อ">
-            <o-input modelValue="มะนาว หวานจังเลย"></o-input>
+            <o-input modelValue="ศศิศ วิรัตน์จินดา"></o-input>
           </o-field>
           <o-field label="ที่อยู่">
             <o-input
