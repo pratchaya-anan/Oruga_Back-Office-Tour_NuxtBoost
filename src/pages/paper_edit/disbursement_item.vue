@@ -1,7 +1,4 @@
 <template>
-  <LayoutPageTitle>
-    Disbursement Estimate / ใบขอเบิกเงินสดย่อย
-  </LayoutPageTitle>
   <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
     <div class="col-span-full xl:col-auto mb-4">
       <UiCard class="mb-4">
@@ -10,9 +7,7 @@
             <div>
               <div class="grid grid-cols-6">
                 <div class="col-span-5">
-                  <h2 class="text-xl font-bold dark:text-white">
-                    ใบขอเบิกเงินสดย่อย
-                  </h2>
+                  <h2 class="text-xl font-bold dark:text-white">ใบขอเบิกเงินสดย่อย</h2>
                 </div>
                 <div class="flex justify-end">
                   <Icon
@@ -151,30 +146,43 @@
               class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
             >
               <tr>
-                <th scope="col" class="px-6 py-3">รายละเอียดค่าใช้จ่าย</th>
-                <th scope="col" class="px-6 py-3">ประเภทค่าใช้จ่าย</th>
-                <th scope="col" class="px-6 py-3">ราคา</th>
-                <th scope="col" class="px-6 py-3">จำนวน</th>
-                <th scope="col" class="px-6 py-3">ยอดสุทธิ</th>
+                <th scope="col" class="px-6 py-3">
+                  รายละเอียดค่าใช้จ่าย
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  ประเภทค่าใช้จ่าย
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  ราคา
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  จำนวน
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  ยอดสุทธิ
+                </th>
                 <th scope="col" class="px-6 py-3">
                   <span class="sr-only">Edit</span>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr
-                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-              >
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                   น้ำมันรถบัส
                 </th>
-                <td class="px-6 py-4">ค่าน้ำมัน</td>
-                <td class="px-6 py-4">5600</td>
-                <td class="px-6 py-4">3</td>
-                <td class="px-6 py-4">16800</td>
+                <td class="px-6 py-4">
+                  ค่าน้ำมัน
+                </td>
+                <td class="px-6 py-4">
+                  5600
+                </td>
+                <td class="px-6 py-4">
+                  3
+                </td>
+                <td class="px-6 py-4">
+                  16800
+                </td>
                 <td class="px-6 py-4 text-right">
                   <button
                     id="dropdownMenuIconButton"
@@ -196,13 +204,8 @@
                   </button>
                 </td>
               </tr>
-              <tr
-                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-              >
-                <th
-                  scope="row"
-                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                   จ่ายค่าไกด์
                 </th>
                 <td class="px-6 py-4">ค่าไกด์</td>
@@ -297,7 +300,7 @@
                     </svg>
                   </button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
 
@@ -450,6 +453,8 @@ onMounted(() => {
 });
 const showItemscomment = ref(false);
 const isItemModalUserData = ref(false);
+
+
 
 const columns = ref([
   {

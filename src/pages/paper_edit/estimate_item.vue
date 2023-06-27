@@ -8,9 +8,7 @@
             <div>
               <div class="grid grid-cols-6">
                 <div class="col-span-5">
-                  <h2 class="text-xl font-bold dark:text-white">
-                    ใบเคลียร์เงินสดย่อย
-                  </h2>
+                  <h2 class="text-xl font-bold dark:text-white">ใบเคลียร์เงินสดย่อย</h2>
                 </div>
                 <div class="flex justify-end">
                   <Icon
@@ -31,9 +29,7 @@
                 >
                   Estimate Clearing
                 </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
+                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                   เลขที่: 0841142174178
                 </li>
               </ul>
@@ -74,43 +70,35 @@
           <span>รายละเอียดใบเคลียร์เงินสดย่อย</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-4">ชื่อผู้ขอเคลียร์</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-4">
+                  ชื่อผู้ขอเคลียร์
+                </div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   ศศิศ วิรัตน์จินดา
                 </div>
               </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">อ้างอิงถึงเลขที่ใบขอเคลียร์เงินทดลองจ่าย</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">
+                  อ้างอิงถึงเลขที่ใบขอเคลียร์เงินทดลองจ่าย
+                </div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   2665519328591
                 </div>
               </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">โครงการ</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">
+                  โครงการ
+                </div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   เที่ยวเกาะ เลาะรัก
                 </div>
               </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">รายละเอียดโครงการ/กิจกรรม</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">
+                  รายละเอียดโครงการ/กิจกรรม
+                </div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   หาดพัทยา
                 </div>
               </div>
@@ -124,23 +112,19 @@
                   บริการ
                 </div>
               </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">ยอดเงินประมาณการ:</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">
+                  ยอดเงินประมาณการ:
+                </div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   10000
                 </div>
               </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">ยอดสุทธิ:</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">
+                  ยอดสุทธิ:
+                </div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   0
                 </div>
               </div>
@@ -154,13 +138,11 @@
                   0
                 </div>
               </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-2">ยอดเงินส่งคืน:</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">
+                  ยอดเงินส่งคืน:
+                </div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   0
                 </div>
               </div>
@@ -178,34 +160,55 @@
             class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
           >
             <tr>
-              <th scope="col" class="px-6 py-3">ลำดับ</th>
-              <th scope="col" class="px-6 py-3">วันที่ใบเสร็จ</th>
-              <th scope="col" class="px-6 py-3">ประเภทค่าใช้จ่าย</th>
-              <th scope="col" class="px-6 py-3">รายละเอียดค่าใช้จ่าย</th>
-              <th scope="col" class="px-6 py-3">เลขที่ใบเสร็จ</th>
-              <th scope="col" class="px-6 py-3">เลขประจำตัวผู้เสียภาษี</th>
-              <th scope="col" class="px-6 py-3">ยอดสุทธิ</th>
+              <th scope="col" class="px-6 py-3">
+                ลำดับ
+              </th>
+              <th scope="col" class="px-6 py-3">
+                วันที่ใบเสร็จ
+              </th>
+              <th scope="col" class="px-6 py-3">
+                ประเภทค่าใช้จ่าย
+              </th>
+              <th scope="col" class="px-6 py-3">
+                รายละเอียดค่าใช้จ่าย
+              </th>
+              <th scope="col" class="px-6 py-3">
+                เลขที่ใบเสร็จ
+              </th>
+              <th scope="col" class="px-6 py-3">
+                เลขประจำตัวผู้เสียภาษี
+              </th>
+              <th scope="col" class="px-6 py-3">
+                ยอดสุทธิ
+              </th>
               <th scope="col" class="px-6 py-3">
                 <span class="sr-only">Edit</span>
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr
-              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-            >
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 1
               </th>
-              <td class="px-6 py-4">25/04/2566</td>
-              <td class="px-6 py-4">น้ำแข็ง</td>
-              <td class="px-6 py-4">น้ำแข็งรถคันที่หนึ่ง</td>
-              <td class="px-6 py-4">123</td>
-              <td class="px-6 py-4">1234</td>
-              <td class="px-6 py-4">700</td>
+              <td class="px-6 py-4">
+                25/04/2566
+              </td>
+              <td class="px-6 py-4">
+                น้ำแข็ง
+              </td>
+              <td class="px-6 py-4">
+                น้ำแข็งรถคันที่หนึ่ง
+              </td>
+              <td class="px-6 py-4">
+                123
+              </td>
+              <td class="px-6 py-4">
+                1234
+              </td>
+              <td class="px-6 py-4">
+                700
+              </td>
               <td class="px-6 py-4 text-right">
                 <button
                   id="dropdownMenuIconButton"
@@ -317,13 +320,13 @@
     </div>
   </div>
   <div class="flex justify-end">
-    <a href="/paper/taxinvoice_paper">
+    <a href="/paper/estimate_paper">
       <o-button>
         <Icon class="mr-2 -mt-1 w-6 h-6" name="ic:round-print"></Icon>
         พิมพ์
       </o-button>
     </a>
-    <a href="/paper_list/taxinvoice_list">
+    <a href="/paper_list/estimate_list">
       <o-button variant="info">
         <Icon class="mr-2 -mt-1 w-6 h-6" name="iconamoon:close-bold"></Icon>
         ปิด
@@ -395,6 +398,7 @@ const tableData = [
     unitprice: "6,000",
   },
 ];
+
 
 const data = ref(tableData);
 </script>
