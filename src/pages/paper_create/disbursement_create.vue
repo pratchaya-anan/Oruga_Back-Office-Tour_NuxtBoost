@@ -134,7 +134,7 @@
                   </o-field>
                 </div>
                 <div>
-                  <o-field label="วัตถุประสงค์การยืม">
+                  <o-field label="วัตถุประสงค์การยืมเงินทดลองจ่าย">
                     <o-input></o-input>
                   </o-field>
                 </div>
@@ -245,14 +245,14 @@ const tableData = [
     id: 1,
     productcode: "Lo-2586957",
     productlist: "นายสายแสง ส่องไฟ",
-    quantity: "05-06-2566",
+    quantity: "05/06/2566",
     unitprice: "5,000",
   },
   {
     id: 2,
     productcode: "Lo-2586957",
     productlist: "นายสายแสง ส่องไฟ",
-    quantity: "05-06-2566",
+    quantity: "05/06/2566",
     unitprice: "6,000",
   },
 ];
@@ -283,15 +283,15 @@ const tableDatatour = [
     id: 1,
     nametour: "เกาะล้าน",
     triptour: "ซื้อ 10 จ่าย 8",
-    datetours: "05-06-2566",
-    datetourend: "07-06-2566",
+    datetours: "05/06/2566",
+    datetourend: "07/06/2566",
   },
   {
     id: 2,
     nametour: "เที่ยวเกาะเลาะรัก",
     triptour: "กาญจนบุรี-พัทยา",
-    datetours: "20-06-2566",
-    datetourend: "24-06-2566",
+    datetours: "20/06/2566",
+    datetourend: "24/06/2566",
   },
 ];
 
