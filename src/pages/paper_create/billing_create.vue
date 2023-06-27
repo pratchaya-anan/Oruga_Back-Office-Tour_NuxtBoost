@@ -815,8 +815,8 @@
               </div>
               <div class="grid grid-cols-2 gap-4">
                 <div>
-                  <o-field label="ผู้ขายสินค้า / ผู้ให้บริการ">
-                    <o-select placeholder="เลือก">
+                  <o-field label="ผู้ขาย">
+                    <o-select placeholder="เลือกผู้ขาย">
                       <option value="นายกอไก่ ขอไข่">นายกอไก่ ขอไข่</option>
                       <option value="นายคอควาย งองู">นายคอควาย งองู</option>
                       <option value="นางสวยสด งดงาม">นางสวยสด งดงาม</option>
@@ -824,27 +824,16 @@
                   </o-field>
                 </div>
                 <div>
-                  <o-field label="เลขประจำตัวประชาชน">
-                    <o-input></o-input>
-                    <!-- <o-select placeholder="เลือกฝ่าย">
+                  <o-field label="ฝ่าย">
+                    <o-select placeholder="เลือกฝ่าย">
                       <option value="บัญชี">บัญชี</option>
                       <option value="การเงิน">การเงิน</option>
                       <option value="??">??</option>
-                    </o-select> -->
+                    </o-select>
                   </o-field>
                 </div>
                 <div>
-                  <o-field label="เบอร์โทร">
-                    <o-input></o-input>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="ที่อยู่">
-                    <o-input></o-input>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="ตั้งแต่วันที่">
+                  <o-field label="วันที่ออกใบ">
                     <div class="relative">
                       <div
                         class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
@@ -873,7 +862,7 @@
                   </o-field>
                 </div>
                 <div>
-                  <o-field label="ถึงวันที่">
+                  <o-field label="ยืนยันราคาวันที่">
                     <div class="relative">
                       <div
                         class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
@@ -904,7 +893,7 @@
               </div>
               <div class="grid grid-cols-2 gap-4 mt-3">
                 <div>
-                  <o-field label="จ่ายให้">
+                  <o-field label="กำหนดราคามัดจำ">
                     <div class="flex mt-3">
                       <o-radio
                         v-model="showcheck"
@@ -912,16 +901,17 @@
                         native-value="persen"
                         class="mr-3"
                       >
-                        จ่ายบุคคลภายใน
+                        เปอร์เซ็น
                       </o-radio>
                       <o-radio
                         v-model="showcheck"
                         name="name"
                         native-value="custom"
                       >
-                        จ่ายบุคคลภายนอก
+                        จำนวนเงิน
                       </o-radio>
                     </div>
+                    <o-input modelValue=""></o-input>
                   </o-field>
                 </div>
               </div>
