@@ -39,30 +39,57 @@
         <div class="col-span-2">
           111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
         </div>
-        <div class="col-span-1 font-bold">
-          ได้รับเงินจาก (ผู้ซื้อ/ผู้รับบริการ):
+        <div class="flex col-span-2 mt-2">
+          <div class="flex items-center mr-5">
+            <input
+              id="default-checkbox"
+              type="checkbox"
+              value=""
+              class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <label
+              for="default-checkbox"
+              class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >จ่ายบุคคลภายใน</label
+            >
+          </div>
+          <div class="flex items-center">
+            <input
+              checked
+              id="checked-checkbox"
+              type="checkbox"
+              value=""
+              class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <label
+              for="checked-checkbox"
+              class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >จ่ายบุคคลภายนอก</label
+            >
+          </div>
         </div>
-        <div class="col-span-2">สรณ์สิริ สายบุตร</div>
+        <div class="col-span-2 my-1 flex w-full text-xs">
+          <div class="font-bold">รับจาก:</div>
+          <div class="ml-5">ศศิศ วิรัตน์จินดา</div>
+        </div>
       </div>
 
       <!-- ตาราง -->
       <div class="min-h-[400px] border-b border-black">
         <table class="w-full text-center">
           <tr class="h-8 border-y border-black text-center text-sm">
-            <th>ลำดับ</th>
             <th>วัน เดือน ปี</th>
             <th>รายการ</th>
             <th>จำนวนเงิน (บาท)</th>
             <!-- <th>หักภาษี ณ ที่จ่าย (%)</th>
-            <th>เงินได้สุทธิ์ (บาท)</th> -->
+              <th>เงินได้สุทธิ์ (บาท)</th> -->
           </tr>
           <tr class="h-10 text-xs">
-            <td>1</td>
             <td>31/03/2566</td>
             <td>เที่ยวเกาะ เลาะรัก</td>
             <td>5,000</td>
             <!-- <td>7%</td>
-            <td>4,650</td> -->
+              <td>4,650</td> -->
           </tr>
         </table>
       </div>
@@ -81,13 +108,26 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 mt-[100px] text-xs">
+      <div class="grid grid-cols-3 text-xs p-2 border-b border-black">
+        <div class="col-span-3 indent-8">
+          ข้าพเจ้า นายกอไก่ ขอไข่ (ผู้เบิกจ่าย)ตำแหน่ง บัญชี ขอรับรองว่า
+          รายจ่ายข้างต้นนี้ไม่อาจเรียกเก็บใบเสร็จรับเงินจากผู้รับเงินได้และข้าพเจ้าได้จ่ายไปในงาน
+          ของทางบริษัท ศรีดาราทัวร์จำกัด โดยแท้จริง ตั้งแต่วันที่ 19 เมษายน 2566
+          ถึงวันที่ 21 เมษายน 2566
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 mt-[100px] text-xs">
         <div class="text-center border-b border-black mx-5">
           <div>ผู้รับเงิน</div>
           <div class="mb-5">วันที่</div>
         </div>
         <div class="text-center border-b border-black mx-5">
-          <div>ผู้จ่ายเงิน</div>
+          <div>จ่ายเงิน</div>
+          <div class="mb-5">วันที่</div>
+        </div>
+        <div class="text-center border-b border-black mx-5">
+          <div>ผู้อนุมัติ</div>
           <div class="mb-5">วันที่</div>
         </div>
       </div>

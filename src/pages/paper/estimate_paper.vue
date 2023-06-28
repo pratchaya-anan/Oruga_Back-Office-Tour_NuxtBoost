@@ -13,12 +13,12 @@
 
           <!-- ชื่อใบ/ข้อมูลใบ -->
           <div class="grid grid-cols-3">
-            <div class="col-span-3 font-bold text-center text-base">ใบเคลียร์ประมาณการเงินสดย่อย</div>
+            <div class="col-span-3 font-bold text-center text-base">ใบเคลียร์เงินสดย่อย</div>
             <div class="col-span-3 text-center">Estimate Clearing</div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">0841142174178</div>
+            <div class="col-span-2 text-right">0642531698546</div>
             <div class="font-bold">วันที่:</div>
-            <div class="col-span-2 text-right">24/03/2566</div>
+            <div class="col-span-2 text-right">09/07/2566</div>
           </div>
         </div>
       </div>
@@ -28,22 +28,22 @@
       <div class="col-span-2 grid grid-cols-3 m-5  text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-2">
-            <div class="col-span-1 font-bold">ผู้ขอเคลียร์:</div>
-            <div class="col-span-1 ">ศศิศ วิรัตน์จินดา</div>
             <div class="col-span-1 font-bold">อ้างอิงถึงเลขที่ใบขอเคลียร์เงินทดลองจ่าย:</div>
-            <div class="col-span-1 ">2665519328591</div>
+            <div class="col-span-1 ">2310652498375</div>
             <div class="col-span-1 font-bold">โครงการ:</div>
-            <div class="col-span-1 ">เที่ยวเกาะ เลาะรัก</div>
+            <div class="col-span-1 ">องค์การบริหารส่วนตำบลโพนงาม</div>
             <div class="col-span-1 font-bold">รายละเอียดโครงการ/กิจกรรม:</div>
-            <div class="col-span-1 ">หาดพัทยา</div>
+            <div class="col-span-1 ">นำสมาชิกเข้าร่วมการอบรมณ์</div>
           </div>
         </div>
 
         <!-- ข้อมูลฝั่งขวา -->
         <div class="border-l px-5">
           <div class="grid grid-cols-3">
+            <div class="col-span-1 font-bold">ผู้ขอเคลียร์:</div>
+            <div class="col-span-2 text-right">นายสรณ์สิริ สายบุตร</div>
             <div class="col-span-1 font-bold">ฝ่าย/แผนก:</div>
-            <div class="col-span-2 text-right">บริการ</div>
+            <div class="col-span-2 text-right">บริการลูกค้า</div>
           </div>
         </div>
       </div>
@@ -59,13 +59,13 @@
             <th>เลขประจำตัวผู้เสียภาษี</th>
             <th>ยอดสุทธิ</th>
           </tr>
-          <tr class="h-10 text-xs">
-            <td>1</td>
-            <td>25/04/2566</td>
-            <td>น้ำแข็งรถคันที่หนึ่ง</td>
-            <td>123</td>
-            <td>1234</td>
-            <td>700</td>
+          <tr v-for="(i, idx) in datapaper" class="h-10 text-xs">
+            <td>{{ idx+1 }}</td>
+            <td>{{ i.datereceipt }}</td>
+            <td>{{ i.detail }}</td>
+            <td>{{ i.receiptnumber }}</td>
+            <td>{{ i.taxnumber }}</td>
+            <td>{{ i.price }}</td>
           </tr>
         </table>
       </div>
@@ -75,22 +75,22 @@
         <div class="col-span-2">
           <div class="flex">
             <div class="font-black mr-5">รายละเอียดโครงการ/กิจกรรม:</div>
-            <div> เที่ยวที่ไหน</div>
+            <div>นำสมาชิกเข้าร่วมการอบรมณ์</div>
           </div>
           <div class="flex">
             <div class="font-black mr-5">ผู้อนุมัติ (แบบอิเล็กทอรนิกส์):</div>
-            <div> นายสอง สามสี่</div>
+            <div>นางสาวรินดา จุตตะโน</div>
           </div>
         </div>
 
         <!-- สรุปรายการ(ด้านขวา) -->
         <div class="grid grid-cols-2 p-2">
-          <div>รวมสุทธิ</div>
-          <div class="text-right">700 บาท</div>
+          <div>ยอดสุทธิ</div>
+          <div class="text-right">49,300 บาท</div>
           <div>ยอกเงินประมาณการ</div>
-          <div class="text-right">750 บาท</div>
+          <div class="text-right">82,800 บาท</div>
           <div>ยอดเงินส่งคืน</div>
-          <div class="text-right">50 บาท</div>
+          <div class="text-right">33,500 บาท</div>
           <div>ยอดเงินเบิกเพิ่ม </div>
           <div class="text-right">0 บาท</div>
         </div>
@@ -114,8 +114,62 @@
           <div class="mb-5">วันที่</div>
         </div>
       </div>
-
     </div>
+    <div class="flex justify-center mt-3">
+    <NuxtLink href="/paper_edit/estimate_item">
+      <o-button>
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon> แก้ไข
+      </o-button>
+    </NuxtLink>
+    <o-button @click="print">
+      <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"></Icon> พิมพ์
+    </o-button>
+    <NuxtLink href="/paper_list/estimate_list">
+      <o-button variant="info">
+        <Icon class="mr-3 -ml-1 w-5 h-5" name="iconamoon:close-bold"></Icon>
+        ปิด
+      </o-button>
+    </NuxtLink>
+  </div>
   </section>
   <!-- <div class="flex bg-gray-900"></div> -->
 </template>
+
+<script setup lang="ts">
+import { initFlowbite } from "flowbite";
+
+const datapaper = ref([
+{
+    datereceipt:'05/07/2566',
+    detail:'ค่าน้ำมันคันที่ 1 และ 2',
+    type:'ค่าน้ำมัน',
+    receiptnumber:'008327530',
+    taxnumber:'0237854852147',
+    price:13300,
+  },
+  {
+    datereceipt:'08/07/2566',
+    detail:'ค่าไกด์ทั้งสองคน',
+    type:'ค่าไกด์',
+    receiptnumber:'007167530',
+    taxnumber:'0435698165428',
+    price:4000,
+  },
+  {
+    datereceipt:'06/07/2566',
+    detail:'ค่าเช่าเหมายานพาหนะท้องถิ่น 3 คัน',
+    type:'ค่าเช่าเหมายานพาหนะท้องถิ่น',
+    receiptnumber:'003481630',
+    taxnumber:'0529863568452',
+    price:32000,
+  },
+])
+
+function print() {
+  window.print();
+}
+
+onMounted(() => {
+  initFlowbite();
+});
+</script>

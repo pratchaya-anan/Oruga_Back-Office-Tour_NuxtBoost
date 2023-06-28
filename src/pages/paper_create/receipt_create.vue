@@ -11,7 +11,7 @@
       <div class="space-y-4">
         <UiCard>
           <h2 class="text-xl font-bold dark:text-white mb-2">
-            ค้นหาหน่วยงาน / ลูกค้า
+            ค้นหาหน่วยงาน/ลูกค้า
           </h2>
           <div class="flex items-center">
             <div class="relative w-full">
@@ -28,7 +28,7 @@
         <div>
           <UiCard v-if="showListAgency">
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือก หน่วยงาน / ลูกค้า ที่ต้องการนำไปออกใบเสร็จรับเงิน
+              เลือกหน่วยงาน/ลูกค้า ที่ต้องการนำไปออกใบเสร็จรับเงิน
             </h2>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
               <table
@@ -145,7 +145,7 @@
     <!-- step 2 -->
     <o-step-item
       step="2"
-      label="ค้นหาใบวางบิล"
+      label="ค้นหาใบกำกับภาษี"
       :clickable="true"
       icon="user-plus"
     >
@@ -239,7 +239,7 @@
                   <div class="grid grid-cols-6">
                     <div class="col-span-5">
                       <h2 class="text-xl font-bold dark:text-white">
-                        ใบวางบิล/ใบแจ้งหนี้
+                        ใบกำกับภาษี
                       </h2>
                     </div>
                     <div class="flex justify-end">
@@ -259,7 +259,7 @@
                     <li
                       class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
                     >
-                      Billing Note/Invoice
+                      Tax Invoice/Delivery Order
                     </li>
                     <li
                       class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
@@ -285,9 +285,6 @@
                   modelValue="111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100"
                 ></o-input>
               </o-field>
-              <o-field label="ที่อยู่">
-                <o-input modelValue="4585695214526"></o-input>
-              </o-field>
               <o-field label="วัตถุประสงค์การยืมเงินทดลองจ่าย">
                 <o-input modelValue="เพื่อจ่ายเงิน"></o-input>
               </o-field>
@@ -310,11 +307,11 @@
                   <div
                     class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                   >
-                    <div class="mt-4">ชื่อผู้ขอเบิก</div>
+                    <div class="mt-4">หน่วยงาน / ลูกค้า</div>
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      ศศิศ วิรัตน์จินดา
+                      เทศบาลขอนแก่น
                     </div>
                   </div>
                   <div
@@ -415,7 +412,7 @@
         <div class="col-span-2">
           <UiCard>
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือกรายการที่ต้องการนำไปออกใบกำกับภาษี
+              เลือกรายการที่ต้องการนำไปออกใบเสร็จรับเงิน
             </h2>
             <div v-if="showItemslist" class="mt-5">
               <o-table
@@ -536,7 +533,7 @@
         <div>
           <UiCard v-if="showListTour">
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือกทัวร์ที่ต้องการนำไปออกใบกำกับภาษี
+              เลือกทัวร์ที่ต้องการนำไปออกใบเสร็จรับเงิน
             </h2>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
               <table
@@ -559,7 +556,6 @@
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                     v-for="i in tableDatatour"
                     @click="stepnext = 5"
-                    :key="i"
                   >
                     <th
                       scope="row"
@@ -589,6 +585,9 @@
           </UiCard>
         </div>
       </div>
+      <div class="flex justify-end">
+        <o-button @click="stepnext = 5">ข้าม</o-button>
+      </div>
     </o-step-item>
     <!-- step 5 -->
     <o-step-item step="5" label="ข้อมูล" :clickable="true" icon="user-lock">
@@ -601,7 +600,7 @@
                   <div class="grid grid-cols-6">
                     <div class="col-span-5">
                       <h2 class="text-xl font-bold dark:text-white">
-                        ข้อมูลหน่วยงาน / ลูกค้า
+                        ข้อมูลหน่วยงาน/ลูกค้า
                       </h2>
                     </div>
                   </div>
@@ -614,7 +613,7 @@
                   <div
                     class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                   >
-                    <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                    <div class="mt-4">หน่วยงาน/ลูกค้า</div>
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
@@ -723,7 +722,7 @@
                   <div class="grid grid-cols-6">
                     <div class="col-span-5">
                       <h2 class="text-xl font-bold dark:text-white">
-                        ใบวางบิล/ใบแจ้งหนี้
+                        ใบกำกับภาษี
                       </h2>
                     </div>
                   </div>
@@ -731,7 +730,7 @@
                     <li
                       class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
                     >
-                      Billing Note/Invoice
+                      Tax Invoice/Delivery Order
                     </li>
                     <li
                       class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
@@ -742,17 +741,17 @@
                 </div>
               </div>
             </section>
-            <section class="border-t border-gray-200 dark:border-gray-700">
+            <section class="my-2 border-t border-gray-200 dark:border-gray-700">
               <div class="sm:flex xl:block xl:space-y-4">
                 <div class="sm:flex-1">
                   <div
                     class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                   >
-                    <div class="mt-4">ชื่อผู้ขอเบิก</div>
+                    <div class="mt-4">หน่วยงาน / ลูกค้า</div>
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      ศศิศ วิรัตน์จินดา
+                      เทศบาลขอนแก่น
                     </div>
                   </div>
                   <div
@@ -962,7 +961,7 @@
               </div>
             </div>
             <div class="flex justify-end">
-              <a href="/paper_edit/taxinvoice_item">
+              <a href="/paper_edit/receipt_item">
                 <o-button> บันทึก </o-button>
               </a>
             </div>

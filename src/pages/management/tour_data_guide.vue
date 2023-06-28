@@ -73,11 +73,12 @@
             <dev class="w-full relative inline-flex items-center">
               <img class="w-10 h-10 rounded-full"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
-              <div class="ml-5">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
+                <div class="ml-5 w-full">
+                <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ <a href="#" @click="isItemModalHotelData3 = true"
+                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ให้บริการดีมาก
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> ให้บริการดีมาก
                 </p>
               </div>
             </dev>
@@ -109,6 +110,94 @@
           </div>
         </UiCard>
       </div>
+
+      <o-modal v-model:active="isItemModalHotelData3">
+              <UiCard>
+                <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขข้อมูลไกด์</h3>
+                <div class="flex justify-end">
+                </div>
+                <div class="flex items-center mb-4 p-4 border shadow-md">
+                  <dev class="w-full relative inline-flex items-center">
+              <img class="w-10 h-10 rounded-full"
+                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
+                <div class="ml-5 w-full">
+                <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ </h3>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
+              </div>
+            </dev>
+                </div>
+                <div class="w-full ml-2">
+                  <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                    คอมเมนต์
+                  </h2>
+                  <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <p class="w-full text-end">20/06/66</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
+                  </p>
+                  
+                  <div v-if="editcomment2" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  <p class="w-full text-end">20/06/65</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
+                ? (editcomment2 = true)
+                : (editcomment2 = false)">
+              </Icon>
+                  </p>
+
+                  <div v-if="editcomment3" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+                  <p class="w-full text-end">20/06/64</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
+                ? (editcomment3 = true)
+                : (editcomment3 = false)">
+              </Icon>
+                  </p>
+                </div>
+                  <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+                  <div v-if="showComment">
+                    <o-field label="เขียนคอมเมนต์">
+                      <o-input type="textarea"></o-input>
+                    </o-field>
+                    <div class="flex">
+                      <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                        <o-input></o-input>
+                      </o-field>
+                      <section class="flex-1 shrink flex items-center justify-end">
+                        <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                        </o-button>
+                        <o-button class="mt-5">เพิ่ม</o-button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full ">
+                 
+
+                  <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบไกด์</o-button>
+                    <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+                  </div>
+                </div>
+              </UiCard>
+            </o-modal>
       <div class="col-span-2">
         <UiCard>
           <div class="my-2 grid grid-cols-2 gap-2 mt-2">
@@ -149,24 +238,24 @@
                   </th>
                 </tr>
               </thead>
-              <tbody @click="add = true">
+              <tbody>
                 <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
-                  <th class="px-3 py-3">
+                  <th @click="add = true" class="px-3 py-3">
                     1
                   </th>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     วุฒินันท์ ศรีสุระ
                   </td>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     ต่างประเทศ
                   </td>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     ภาษาอังกฤษ
                   </td>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     0428976765
                   </td>
-                  <td class="px-3 py-3 text-center items-center">
+                  <td @click="add = true" class="px-3 py-3 text-center items-center">
                     บริการดีมาก
                   </td>
                   <td class="px-3 py-3 text-center items-center">
@@ -271,7 +360,7 @@
         </UiCard>
         <o-modal v-model:active="isItemModalGuideData">
           <UiCard>
-            <div class="flex justify-end">
+            <div class="mr-10 flex justify-center">
               <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
                 ? (editHotel = true)
                 : (editHotel = false)">
@@ -280,7 +369,7 @@
             <div class="p-2 grid grid-cols-2 gap-0">
               <div class="w-full border-r">
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  ไกด์หหห
+                  ไกด์
                 </h2>
                 <div class="px-2 grid grid-cols-2 gap-4" v-if="!editHotel">
                   <div>
@@ -324,11 +413,20 @@
                   คอมเมนต์
                 </h2>
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">บริการดีมาก</p>
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
                   </p>
+         
+                
                 </div>
                 <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
                 <div v-if="showComment">
@@ -393,7 +491,11 @@ onMounted(() => { initFlowbite() });
 const add = ref(false);
 const showComment = ref(false);
 const isItemModalGuideData = ref(false);
+const isItemModalHotelData3 = ref(false);
 const editHotel = ref(false);
 const delete1 = ref(false);
+const editcomment = ref(false);
+const editcomment2 = ref(false);
+const editcomment3 = ref(false);
 
 </script>

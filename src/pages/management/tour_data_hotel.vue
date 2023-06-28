@@ -76,7 +76,7 @@
               </o-button>
             </NuxtLink>
           </div>
-          <h2 class="mb-2 text-xl font-bold dark:text-white">
+          <h2 class="text-xl font-bold dark:text-white">
             โรงแรม
           </h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
@@ -88,12 +88,12 @@
                 2566 - 22 เมษายน 2566</time>
               <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">
                 โรงแรม NHU MINH PLAZA
-                <a href="#" @click="add = true"
+                <a href="#" @click="isItemModalHotelData2 = true"
                   class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เป็นโรงแรมที่ดีมาก </p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> เป็นโรงแรมที่ดีมาก </p>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -103,11 +103,12 @@
                 2566 - 23 เมษายน 2566</time>
               <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">โรงแรม Mercure Bana
                 hills
-                <a href="#" @click="add = true"
+                <a href="#" @click="isItemModalHotelData2 = true"
                   class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
-                </h3>
+              </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 08978677867</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> </p>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -116,11 +117,12 @@
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">23 เมษายน
                 2566 - 24 เมษายน 2566</time>
               <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">โรงแรม Century hotel
-                <a href="#" @click="add = true"
+                <a href="#" @click="isItemModalHotelData2 = true"
                   class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> </p>
             </li>
           </ol>
 
@@ -211,7 +213,7 @@
                     ดี
                   </td>
                   <td class="px-3 py-4 text-center items-center">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                    <a href="#" @click="isItemModalHotelData = true" class="text-blue-500 hover:text-blue-700">Edit</a>
                   </td>
                 </tr>
                 <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800">
@@ -234,7 +236,7 @@
                     ดี
                   </td>
                   <td class="px-3 py-4 text-center items-center">
-                    <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
+                    <a href="#" @click="isItemModalHotelData = true" class="text-blue-500 hover:text-blue-700">Edit</a>
                   </td>
                 </tr>
                 <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800">
@@ -287,9 +289,12 @@
             </table>
           </div>
         </UiCard>
+
+        <!-- แก้ไขข้อมูลหลัก -->
+
         <o-modal v-model:active="isItemModalHotelData">
           <UiCard>
-            <div class="flex justify-end">
+            <div class="mr-10 flex justify-center">
               <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
                 ? (editHotel = true)
                 : (editHotel = false)">
@@ -322,7 +327,6 @@
                   <o-input type="text" modelValue="0428976765"></o-input>
                   <p class="text-lg font-semibold  dark:text-white">จำนวนห้องพัก</p>
                   <o-input type="text" modelValue="120"></o-input>
-
                 </div>
               </div>
               <div class="w-full ml-4">
@@ -330,20 +334,43 @@
                   คอมเมนต์
                 </h2>
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
                   </p>
-                  <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  
+                  <div v-if="editcomment2" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
                   <p class="w-full text-end">20/06/65</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
+                ? (editcomment2 = true)
+                : (editcomment2 = false)">
+              </Icon>
                   </p>
-                  <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+
+                  <div v-if="editcomment3" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
                   <p class="w-full text-end">20/06/64</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
+                ? (editcomment3 = true)
+                : (editcomment3 = false)">
+              </Icon>
                   </p>
                 </div>
                 <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
@@ -366,6 +393,108 @@
             </div>
           </UiCard>
         </o-modal>
+
+        
+        <o-modal v-model:active="isItemModalHotelData2">
+          <UiCard>
+            <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขข้อมูล</h3>
+            <div class="flex justify-end">
+             
+            </div>
+            
+            <div class="flex items-center mb-4 p-4 border shadow-md">
+              
+              <dev class="w-full relative inline-flex items-center">
+                <div class="mx-5">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm Văn
+                    Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
+                </div>
+              </dev>
+            </div>
+            <div class="w-full ml-2">
+                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                  คอมเมนต์
+                </h2>
+                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <p class="w-full text-end">20/06/66</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
+                  </p>
+                  
+                  <div v-if="editcomment2" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  <p class="w-full text-end">20/06/65</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
+                ? (editcomment2 = true)
+                : (editcomment2 = false)">
+              </Icon>
+                  </p>
+
+                  <div v-if="editcomment3" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+                  <p class="w-full text-end">20/06/64</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
+                ? (editcomment3 = true)
+                : (editcomment3 = false)">
+              </Icon>
+                  </p>
+                </div>
+                <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+                <div v-if="showComment">
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                      </o-button>
+                      <o-button class="mt-5">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            <div class="w-full border-r">
+              <div class="px-2">
+                <p class="text-lg font-semibold  dark:text-white">วันเข้าพัก</p>
+                <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
+                <p class="text-lg font-semibold  dark:text-white">วันออก</p>
+                <p class="ml-2 text-lg font-normal  dark:text-white"></p>
+                <o-input type="text" modelValue="22 เมษายน 2566"></o-input>
+                <p class="text-lg font-semibold  dark:text-white">จำนวนห้องพัก</p>
+                <o-input type="text" modelValue="120"></o-input>
+              </div>
+              
+              <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบโรงแรม</o-button>
+                <o-button size="medium" variant="primary" @click="isItemModalHotelData2 = false"> บันทึก </o-button></div>
+            </div>
+          </UiCard>
+        </o-modal>
+
+
+
+        <!-- เลือกโรงแรม -->
+
         <o-modal v-model:active="add">
           <div class="grid grid-cols-2 gap-4 p-6">
             <div class="col-span-2">
@@ -386,7 +515,110 @@
                 คอมเมนต์
               </h2>
               <div class="w-full p-4 border shadow-md">
-                
+
+                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <p class="w-full text-end">20/06/66</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
+                  </p>
+                  
+                  <div v-if="editcomment2" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  <p class="w-full text-end">20/06/65</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
+                ? (editcomment2 = true)
+                : (editcomment2 = false)">
+              </Icon>
+                  </p>
+
+                  <div v-if="editcomment3" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+                  <p class="w-full text-end">20/06/64</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
+                ? (editcomment3 = true)
+                : (editcomment3 = false)">
+              </Icon>
+                  </p>
+                </div>
+                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                <div v-if="showComment">
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                      </o-button>
+                      <o-button class="mt-5">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <o-field label="วันเข้าพัก">
+                <o-input></o-input>
+              </o-field>
+            </div>
+            <div>
+              <o-field label="วันออก">
+                <o-input></o-input>
+              </o-field>
+            </div>
+            <div class="col-span-2">
+              <o-field label="จำนวนห้องพัก">
+                <o-input type="number"></o-input>
+              </o-field>
+            </div>
+            <div class="col-span-2">
+              <div class="flex justify-end">
+                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+              </div>
+            </div>
+          </div>
+        </o-modal>
+        <!-- แก้ไข -->
+        <o-modal v-model:active="add2">
+          <div class="grid grid-cols-2 gap-4 p-6">
+            <div class="col-span-2">
+              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                แก้ไขโรงแรมเข้าพักและคอมเมนต์
+              </h2>
+              <div class="flex items-center mb-4 p-4 border shadow-md">
+                <dev class="w-full relative inline-flex items-center">
+                  <div class="mx-5">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm Văn
+                      Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
+                  </div>
+                </dev>
+              </div>
+              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                คอมเมนต์
+              </h2>
+              <div class="w-full p-4 border shadow-md">
+
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
                   <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
@@ -434,17 +666,18 @@
               </o-field>
             </div>
             <div class="col-span-2">
-              <o-field label="จำนวนห้องพักกกก">
+              <o-field label="จำนวนห้องพัก">
                 <o-input type="number"></o-input>
               </o-field>
             </div>
             <div class="col-span-2">
               <div class="flex justify-end">
-                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+                <o-button size="medium" variant="primary" @click="add2 = false"> บันทึก </o-button>
               </div>
             </div>
           </div>
         </o-modal>
+
       </div>
     </div>
   </section>
@@ -456,8 +689,14 @@ onMounted(() => { initFlowbite() });
 const showComment = ref(false);
 const showItems = ref('');
 const isItemModalHotelData = ref(false);
+const isItemModalHotelData2 = ref(false);
 const add = ref(false);
+const add2 = ref(false);
 const editHotel = ref(false);
+const editHotel2 = ref(false);
+const editcomment = ref(false);
+const editcomment2 = ref(false);
+const editcomment3 = ref(false);
 const delete1 = ref(false);
 const delete2 = ref(false);
 const delete3 = ref(false);
