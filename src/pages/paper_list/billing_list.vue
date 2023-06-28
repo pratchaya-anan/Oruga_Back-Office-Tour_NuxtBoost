@@ -26,7 +26,7 @@
           <p
             class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-right"
           >
-            QUTT0001
+            B230430-0001
           </p>
         </a>
         <div>
