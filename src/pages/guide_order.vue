@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <hr class="mb-2 col-span-3">
+      <hr class="mb-1 col-span-3">
       <!-- ข้อมูลฝั่งซ้าย -->
       <div class="col-span-2 grid grid-cols-4 gap-1">
         <div class="col-span-2 border-r">
@@ -29,7 +29,7 @@
             <div class="col-span-1 text-sm font-bold">ใบอนุญาตเลขที่</div>
             <div class="col-span-1 text-sm font-normal">11-57185</div>
             <div class="col-span-1 text-sm font-bold">จำนวนนักท่องเที่ยว</div>
-            <div class="col-span-1 text-sm font-normal">ผู้ใหญ่ 30 เด็ก 5</div>
+            <div class="col-span-1 text-sm font-normal">ผู้ใหญ่ 19 เด็ก 3</div>
             <div class="col-span-1 text-sm font-bold">ห้องเดี่ยว</div>
             <div class="col-span-1 text-sm font-normal">-</div>
             <div class="col-span-1 text-sm font-bold">ห้องคู่</div>
@@ -63,13 +63,13 @@
 
 
       <!-- รายละเอียดข้อตกลง -->
-      <table class="my-3 w-full ">
-        <tr class="h-8 border-y border-black text-sm text-center">
+      <table class="my-2 w-full ">
+        <tr class="border-y border-black text-sm text-center">
           <th class="w-[100px]">วันเดือนปี</th>
           <th>สถานที่ท่องเที่ยว</th>
           <th>โรงแรม</th>
         </tr>
-        <tr class="h-10 text-xs border-b border-black">
+        <tr class="text-xs border-b border-black">
           <td class="px-6 py-2">21/4/2566</td>
           <td class="px-6 py-2">
             <p>05.00 น. บ้านหนองผือ
@@ -78,24 +78,33 @@
               รับประทานอาหารเที่ยง หน้าด่านลาวบาว ระหว่างรอเอกสารข้านแดน จากนั้นเดินทางต่อไปยังเมือง เว้-ตานัง</p>
             <p>เย็น เว้-ตานัง
               รับประทานอาหารเย็น / เที่ยวชมสะพานมังกร / สะพานแห่งความรัก / เข้าที่พัก</p>
+              <hr class="my-1 col-span-3">
+            <p>12.00 น. ทานอาหารเทียง ร้านเลียจาน</p>
+            <p>18.00 น. ทานอาหารเย็น ร้านโครตอร่อย!</p>
           </td>
           <td class="px-6 py-2">โรงแรม NHU MINH PLAZA</td>
         </tr>
 
-        <tr class="h-10 text-xs border-b border-black">
+
+        <tr class="text-xs border-b border-black">
           <td class="px-6 py-2">22/4/2566</td>
           <td class="px-6 py-2">
             <p>เช้า เว้-ตานัง รับประทานอาหารเช้าที่โรงแรม / เดินทางไปเมืองฮอยอัน</p>
             <p>สาย ฮอยอัน นั่งเรือกระด้ง </p>
+            <p>12.00 น. ทานอาหารเที่ยง ร้านอาหารอาโนะเนะ</p>
             <p>เที่ยง ฮอยอัน รับประทานอาหารเที่ยง /
               เดินทางขึ้นไปบาน่าฮิลล์</p>
             <p>บ่าย บาน่าฮิว นั่งกระเช้าลอยฟ้า / สะพานเมืองทอง /
               สวนดอกไม้</p>
+            <p>18.00 น. ทานอาหารเย็น กินไหมจร๊ะ</p>
             <p>เย็น บาน่าฮิว รับประทานอาหารเย็น / เข้าที่พัก</p>
+            <hr class="my-1 col-span-3">
+            <p>12.00 น. ทานอาหารเี่ยง ร้านอาหารอาโนะเนะ</p>
+            <p>18.00 น. ทานอาหารเย็น กินไหมจร๊ะ</p>
           </td>
           <td class="px-6 py-2">โรงแรม Mercure Bana hills</td>
         </tr>
-        <tr class="h-10 text-xs border-b border-black">
+        <tr class="text-xs border-b border-black">
           <td class="px-6 py-2">23/4/2566</td>
           <td class="px-6 py-2">
             <p>เช้า บาน่าฮิว รับประทานอาหารเช้าที่โรงแรม /
@@ -103,10 +112,13 @@
             <p>เที่ยง บาน่าฮิว รับประทานอาหารเที่ยง /
               ชมพระราชวังได๋โหน๋ย / ตลาดดงบา / วัดเทียนมู๋ / ล่องเรือมังกร / รับประทานอาหารเย็น / เข้าที่พัก</p>
             <p>เย็น เว้ รับประทานอาหารเย็น / เข้าที่พัก</p>
+            <hr class="my-1 col-span-3">
+            <p>12.00 น. ทานอาหารเที่ยง ร้านอาหาร อัลไล</p>
+            <p>18.00 น. ทานอาหารเย็น วงวารอาหาร</p>
           </td>
           <td class="px-6 py-2">โรงแรม Century hotel</td>
         </tr>
-        <tr class="h-10 text-xs border-b border-black">
+        <tr class="text-xs border-b border-black">
           <td class="px-6 py-2">24/4/2566</td>
           <td class="px-6 py-2">
             <p>เช้า เว้ รับประทานอาหารเช้าที่โรงแรม /
@@ -115,12 +127,15 @@
               รับประทานอาหารเที่ยง / เดินทางต่อมายังด่านสะหวันนะเขต</p>
             <p>เย็น ด่านสะหวันนะเขต รับประทานอาหารเย็น</p>
             <p>20.00 น. เดินทางถึงจุดหมายปลายทางโดยสวัสดิภาพ</p>
+            <hr class="my-1 col-span-3">
+            <p>12.00 น. ทานอาหารเที่ยง ในรู</p>
+            <p>18.00 น. ทานอาหารเย็น โต๋วโภชนา</p>
           </td>
           <td class="px-6 py-2"></td>
         </tr>
       </table>
-      <div class="mt-3 text-center">
-        <p class="mt-5 text-sm font-normal">
+      <div class="text-center">
+        <p class="mt-8 text-sm font-normal">
           ค่าจ้างมัคคุเทศก์................................................................................................................................บาท
         </p>
         <p class="mt-5 text-sm font-normal">
@@ -128,10 +143,10 @@
         </p>
       </div>
       <div class="mt-20 grid grid-cols-2 gap-8 text-center">
-        <p class="border-t text-sm font-normal">
+        <p class="p-1 border-t text-sm font-normal">
           ผู้มีอำนาจลงนาม นางศรีดารา ประเปรียว
         </p>
-        <p class="border-t text-sm font-normal">
+        <p class="p-1 border-t text-sm font-normal">
           ตราประทับบริษัท
         </p>
       </div>
