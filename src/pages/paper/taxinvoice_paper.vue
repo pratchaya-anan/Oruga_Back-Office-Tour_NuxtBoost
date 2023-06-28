@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow">
+    <div class="w-[210mm] h-[297mm] p-[5mm] mx-auto border rounded bg-white">
       <div class="grid grid-rows-2 m-5">
         <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo" />
         <div class="grid grid-cols-3 text-sm">
@@ -42,16 +42,31 @@
             <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษี:</div>
             <div class="col-span-2">1522236</div>
             <div class="flex items-center">
-              <input id="default-checkbox" type="checkbox" value=""
-                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-              <label for="default-checkbox"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">สำนักงานใหญ่</label>
+              <input
+                id="default-checkbox"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="default-checkbox"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >สำนักงานใหญ่</label
+              >
             </div>
             <div class="flex items-center">
-              <input checked id="checked-checkbox" type="checkbox" value=""
-                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-              <label for="checked-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">สาขาที่:
-                บ้านใหญ่</label>
+              <input
+                checked
+                id="checked-checkbox"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="checked-checkbox"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >สาขาที่: บ้านใหญ่</label
+              >
             </div>
           </div>
         </div>
@@ -86,7 +101,7 @@
             <th>จำนวนเงิน</th>
           </tr>
           <tr v-for="(i, idx) in dataitem" :key="idx" class="h-10 text-xs">
-            <td>{{ idx+1 }}</td>
+            <td>{{ idx + 1 }}</td>
             <td>{{ i.nameitem }}</td>
             <td>{{ i.quantity }}</td>
             <td>{{ i.unitprice }}</td>
@@ -177,23 +192,22 @@ import { initFlowbite } from "flowbite";
 
 const dataitem = [
   {
-    nameitem:'ค่าตั๋วเครื่องบิน',
-    quantity:3,
-    unitprice:'1000',
-    discount:'0%',
-    tax:210,
-    amount:'3210',
+    nameitem: "ค่าตั๋วเครื่องบิน",
+    quantity: 3,
+    unitprice: "1000",
+    discount: "0%",
+    tax: 210,
+    amount: "3210",
   },
   {
-    nameitem:'ค่าโรงแรม',
-    quantity:2,
-    unitprice:'1500',
-    discount:'0%',
-    tax:210,
-    amount:'3210',
-  }
-  
-]
+    nameitem: "ค่าโรงแรม",
+    quantity: 2,
+    unitprice: "1500",
+    discount: "0%",
+    tax: 210,
+    amount: "3210",
+  },
+];
 
 function print() {
   window.print();

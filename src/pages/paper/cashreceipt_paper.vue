@@ -1,8 +1,6 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
-    <div
-      class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border-1 solid rounded bg-white drop-shadow"
-    >
+  <section>
+    <div class="w-[210mm] h-[297mm] p-[5mm] mx-auto border rounded bg-white">
       <div class="grid grid-rows-2 m-5">
         <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo" />
         <div class="grid grid-cols-3 text-sm">
@@ -19,7 +17,7 @@
               ใบสำคัญรับเงิน
             </div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">0841142174178</div>
+            <div class="col-span-2 text-right">CR230430-0001</div>
             <div class="font-bold">วันที่:</div>
             <div class="col-span-2 text-right">24/03/2566</div>
           </div>

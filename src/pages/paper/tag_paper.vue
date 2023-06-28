@@ -2,7 +2,7 @@
   <section>
     <div
       id="page"
-      class="w-[210mm] h-[297mm] p-[2mm] my-1 mx-auto border-1 solid rounded bg-white drop-shadow"
+      class="w-[210mm] h-[297mm] p-[5mm] mx-auto border rounded bg-white"
     >
       <div class="flex flex-wrap justify-center">
         <div v-for="i in 10">
