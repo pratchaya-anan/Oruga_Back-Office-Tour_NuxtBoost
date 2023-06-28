@@ -45,15 +45,25 @@
             </h3>
             <div class="flex space-x-3">
               <!-- โรงแรม -->
-              <NuxtLink href="/management/tour_data_hotel"><Icon class="w-6 h-6" name="mdi:bed"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_hotel">
+                <Icon class="w-6 h-6" name="mdi:bed"></Icon>
+              </NuxtLink>
               <!-- มัคคุเทศก์ -->
-              <NuxtLink href="/management/tour_data_guide"><Icon class="w-6 h-6 text-blue-700" name="mdi:face-woman-shimmer"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_guide">
+                <Icon class="w-6 h-6 text-blue-700" name="mdi:face-woman-shimmer"></Icon>
+              </NuxtLink>
               <!-- พาหนะ -->
-              <NuxtLink href="/management/tour_data_vehicle"><Icon class="w-6 h-6" name="mdi:van-utility"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_vehicle">
+                <Icon class="w-6 h-6" name="mdi:van-utility"></Icon>
+              </NuxtLink>
               <!-- สถานที่ -->
-              <NuxtLink href="/management/tour_data_stopover"><Icon class="w-6 h-6" name="mdi:store-marker"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_stopover">
+                <Icon class="w-6 h-6" name="mdi:store-marker"></Icon>
+              </NuxtLink>
               <!-- ร้านอาหาร -->
-              <NuxtLink href="/management/tour_data_restaurant"><Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_restaurant">
+                <Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon>
+              </NuxtLink>
             </div>
           </div>
         </UiCard>
@@ -73,131 +83,84 @@
             <dev class="w-full relative inline-flex items-center">
               <img class="w-10 h-10 rounded-full"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
-                <div class="ml-5 w-full">
-                <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ <a href="#" @click="isItemModalHotelData3 = true"
-                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> ให้บริการดีมาก
+              <div class="ml-5 w-full">
+                <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ <a
+                    href="#" @click="isItemModalHotelData3 = true"
+                    class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภทไกด์ ต่างประเทศ</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                  <Icon class="w-6 h-6" name="octicon:comment-16"></Icon> บริการดีมาก
                 </p>
               </div>
             </dev>
-          </div>
-          <div v-if="showComment" class="w-full p-4 border shadow-md">
-            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              คอมเมนต์
-            </h2>
-            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-              <li class="flex justify-between">
-                <div>ให้บริการดีมาก</div>
-                <div>20/06/66</div>
-                <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-              </li>
-            </ul>
-            <o-field label="เขียนคอมเมนต์">
-              <o-input type="textarea"></o-input>
-            </o-field>
-            <div class="flex">
-              <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                <o-input></o-input>
-              </o-field>
-              <section class="flex-1 shrink flex items-center justify-end">
-                <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                </o-button>
-                <o-button class="mt-5">เพิ่ม</o-button>
-              </section>
-            </div>
           </div>
         </UiCard>
       </div>
 
       <o-modal v-model:active="isItemModalHotelData3">
-              <UiCard>
-                <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขข้อมูลไกด์</h3>
-                <div class="flex justify-end">
-                </div>
-                <div class="flex items-center mb-4 p-4 border shadow-md">
-                  <dev class="w-full relative inline-flex items-center">
+        <UiCard>
+          <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขข้อมูลไกด์</h3>
+          <div class="flex justify-end">
+          </div>
+          <div class="flex items-center mb-4 p-4 border shadow-md">
+            <dev class="w-full relative inline-flex items-center">
               <img class="w-10 h-10 rounded-full"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
-                <div class="ml-5 w-full">
-                <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ </h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <div class="ml-5 w-full">
+                <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ
+                </h3>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภทไกด์ ต่างประเทศ</p>
+                <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
                 <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
               </div>
             </dev>
-                </div>
-                <div class="w-full ml-2">
-                  <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                    คอมเมนต์
-                  </h2>
-                  <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
-                </div>
-                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
-                  <p class="w-full text-end">20/06/66</p>
+          </div>
+          <div class="w-full ml-2">
+            <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+              คอมเมนต์
+            </h2>
+            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+              <div v-if="editcomment" class="col-span-2">
+                <o-input type="text" modelValue="บริการดีมาก"></o-input>
+              </div>
+              <p v-if="!editcomment" class="col-span-2">บริการดีมาก</p>
+              <p class="w-full text-end">20/06/66</p>
 
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                ? (editcomment = true)
-                : (editcomment = false)">
-              </Icon>
-                  </p>
-                  
-                  <div v-if="editcomment2" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
-                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
-                  <p class="w-full text-end">20/06/65</p>
+              <p class="w-full text-end">
+                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                  ? (editcomment = true)
+                  : (editcomment = false)">
+                </Icon>
+              </p>
+            </div>
+            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+            <div v-if="showComment">
+              <o-field label="เขียนคอมเมนต์">
+                <o-input type="textarea"></o-input>
+              </o-field>
+              <div class="flex">
+                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                  <o-input></o-input>
+                </o-field>
+                <section class="flex-1 shrink flex items-center justify-end">
+                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                  </o-button>
+                  <o-button class="mt-5">เพิ่ม</o-button>
+                </section>
+              </div>
+            </div>
+            
+          </div>
+          <div class="w-full ">
 
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
-                ? (editcomment2 = true)
-                : (editcomment2 = false)">
-              </Icon>
-                  </p>
 
-                  <div v-if="editcomment3" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
-                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
-                  <p class="w-full text-end">20/06/64</p>
-
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
-                ? (editcomment3 = true)
-                : (editcomment3 = false)">
-              </Icon>
-                  </p>
-                </div>
-                  <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-                  <div v-if="showComment">
-                    <o-field label="เขียนคอมเมนต์">
-                      <o-input type="textarea"></o-input>
-                    </o-field>
-                    <div class="flex">
-                      <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                        <o-input></o-input>
-                      </o-field>
-                      <section class="flex-1 shrink flex items-center justify-end">
-                        <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                        </o-button>
-                        <o-button class="mt-5">เพิ่ม</o-button>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full ">
-                 
-
-                  <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบไกด์</o-button>
-                    <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
-                  </div>
-                </div>
-              </UiCard>
-            </o-modal>
+            <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบไกด์</o-button>
+              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+            </div>
+          </div>
+        </UiCard>
+      </o-modal>
       <div class="col-span-2">
         <UiCard>
           <div class="my-2 grid grid-cols-2 gap-2 mt-2">
@@ -360,16 +323,15 @@
         </UiCard>
         <o-modal v-model:active="isItemModalGuideData">
           <UiCard>
-            <div class="mr-10 flex justify-center">
-              <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
-                ? (editHotel = true)
-                : (editHotel = false)">
-              </Icon>
+            <div class="mr-10  flex justify-center">
             </div>
             <div class="p-2 grid grid-cols-2 gap-0">
               <div class="w-full border-r">
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  ไกด์
+                  แก้ไขไกด์ <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
+                ? (editHotel = true)
+                : (editHotel = false)">
+              </Icon>
                 </h2>
                 <div class="px-2 grid grid-cols-2 gap-4" v-if="!editHotel">
                   <div>
@@ -394,18 +356,27 @@
                       กรุงเทพมหานคร 10400</p>
                   </div>
                 </div>
-                <div class="px-2" v-if="editHotel">
-                  <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
-                  <o-input type="text" modelValue="Lot 2 - A2 - KH, Phạm Văn Đồng, Street, Sơn Trà,
-                    Đà
-                    Nẵng
-                    550000 เวียดนาม"></o-input>
-                  <p class="text-base font-semibold  dark:text-white">เบอร์ติดต่อ</p>
-                  <p class="ml-2 text-base font-normal  dark:text-white"></p>
-                  <o-input type="text" modelValue="0428976765"></o-input>
-                  <p class="text-base font-semibold  dark:text-white">จำนวนห้องพัก</p>
-                  <o-input type="text" modelValue="120"></o-input>
-
+                <div class="px-2 grid grid-cols-2 gap-4" v-if="editHotel">
+                  <div>
+                    <p class="text-base font-semibold  dark:text-white">ชื่อไกด์</p>
+                    <o-input class=" text-base font-normal  dark:text-white " modelValue="วุฒินันท์ ศรีสุระ"></o-input>
+                  </div>
+                  <div>
+                    <p class="text-base font-semibold  dark:text-white">ประเภทไกด์</p>
+                    <o-input class=" text-base font-normal  dark:text-white" modelValue="ต่างประเทศ"></o-input>
+                  </div>
+                  <div>
+                    <p class="text-base font-semibold  dark:text-white">ความสามาถพิเศษ</p>
+                    <o-input class=" text-base font-normal  dark:text-white" modelValue="ภาษาอังกฤษ"></o-input>
+                  </div>
+                  <div>
+                    <p class="text-base font-semibold  dark:text-white">เบอร์ติดต่อ</p>
+                    <o-input class=" text-base font-normal  dark:text-white" modelValue="0428976765"></o-input>
+                  </div>
+                  <div class="col-span-2">
+                    <p class="text-base font-semibold  dark:text-white">ที่อยู่ติดต่อ</p>
+                    <o-input class=" text-base font-normal  dark:text-white" modelValue="9 ถ. ราชปรารภ แขวงมักกะสัน เขตราชเทวี กรุงเทพมหานคร 10400"> </o-input>
+                  </div>
                 </div>
               </div>
               <div class="w-full ml-4">
@@ -414,19 +385,19 @@
                 </h2>
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
                   <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
-                </div>
-                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                    <o-input type="text" modelValue="บริการดีมาก"></o-input>
+                  </div>
+                  <p v-if="!editcomment" class="col-span-2">บริการดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
 
                   <p class="w-full text-end">
                     <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                ? (editcomment = true)
-                : (editcomment = false)">
-              </Icon>
+                      ? (editcomment = true)
+                      : (editcomment = false)">
+                    </Icon>
                   </p>
-         
-                
+
+
                 </div>
                 <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
                 <div v-if="showComment">
@@ -445,6 +416,9 @@
                   </div>
                 </div>
               </div>
+              <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบไกด์</o-button>
+              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+            </div>
             </div>
           </UiCard>
         </o-modal>
@@ -460,17 +434,37 @@
                     <div class="mx-5">
                       <h3 class="text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ</h3>
                       <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภทไกด์ ต่างประเทศ</p>
-                      <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+                      <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
                     </div>
                   </dev>
                 </div>
-                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">ต้องการเพิ่มไกด์คนนี้ ใช่ หรือ ไม่?
+                <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                คอมเมนต์
+              </h2>
+              <div class="mb-5 w-full p-4 border shadow-md">
+
+                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                  <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="บริการดีมาก"></o-input>
+                </div>
+                  <p v-if="!editcomment" class="ml-15 col-span-2">บริการดีมาก</p>
+                  <p class="mr-15  text-end">20/06/66</p>
+
+                  <p class="w-20 text-end">
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                ? (editcomment = true)
+                : (editcomment = false)">
+              </Icon>
+                  </p>
+                  </div>
+                  </div>
+                <h3 class="ml-10 mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">ต้องการเพิ่มไกด์คนนี้ ใช่ หรือ ไม่?
                 </h3>
                 <o-button class="ml-12" @click="add = false">
                   ใช่
                 </o-button>
                 <button @click="add = false" type="button"
-                  class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                  class="ml-12 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
                   ยกเลิก</button>
               </div>
             </div>

@@ -86,14 +86,23 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">ร้านเลียจาน</a></h3>
+              <h3 class="mt-1 flex justify-between text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
+                  href="#">ร้านเลียจาน</a><a href="#" @click="isItemModalHotelData3 = true"
+                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเทียง ร้านเลียจาน</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="octicon:comment-16" @click="
+                  showComment != true
+                    ? (showComment = true)
+                    : (showComment = false)
+                  "></Icon> เป็นอาหารที่ดีที่สุดที่เคยทานมา
+              </p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
                   href="#">โครตอร่อย!</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น โครตอร่อย!</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
+              
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -105,11 +114,11 @@
                   href="#">ร้านอาหารอาโนะเนะ</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเี่ยง ร้านอาหารอาโนะเนะ
               </p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
                   href="#">กินไหมจร๊ะ</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น กินไหมจร๊ะ</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -121,11 +130,11 @@
                   href="#">ร้านอาหาร อัลไล</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเที่ยง ร้านอาหาร อัลไล
               </p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
                   href="#">วงวารอาหาร</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น วงวารอาหาร</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -136,11 +145,11 @@
               <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
                   href="#">ในรู</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเที่ยง ในรู</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
                   href="#">โต๋วโภชนา</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">18.00 น. ทานอาหารเย็น โต๋วโภชนา</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
             </li>
           </ol>
 
@@ -172,6 +181,99 @@
           </div>
         </UiCard>
       </div>
+
+      <o-modal v-model:active="isItemModalHotelData3">
+        <UiCard>
+          <div class="col-span-2">
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+              เลือกจุดแวะพัก
+            </h2>
+            <div class="flex items-center mb-4 p-4 border shadow-md">
+              <dev class="w-full relative inline-flex items-center">
+                <div class="mx-5">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">บ้านหนองผือ</h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภท จุดนัดหมาย</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ บ้านหนองผือ ตำบลหนองผือ
+                    อำเภอชานุมาน อำนาจเจริญ 37000</p>
+                </div>
+              </dev>
+            </div>
+          </div>
+          <div class="w-full ml-2">
+            <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+              คอมเมนต์
+            </h2>
+            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+              <div v-if="editcomment" class="col-span-2">
+                <o-input type="text" modelValue="เป็นอาหารที่ดีที่สุดที่เคยทานมา
+
+"></o-input>
+              </div>
+              <p v-if="!editcomment" class="col-span-2">เป็นอาหารที่ดีที่สุดที่เคยทานมา
+
+</p>
+              <p class="w-full text-end">20/06/66</p>
+
+              <p class="w-full text-end">
+                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                  ? (editcomment = true)
+                  : (editcomment = false)">
+                </Icon>
+              </p>
+
+            </div>
+            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+            <div v-if="showComment">
+              <o-field label="เขียนคอมเมนต์">
+                <o-input type="textarea"></o-input>
+              </o-field>
+              <div class="flex">
+                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                  <o-input></o-input>
+                </o-field>
+                <section class="flex-1 shrink flex items-center justify-end">
+                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                  </o-button>
+                  <o-button class="mt-5">เพิ่ม</o-button>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="text-lg font-semibold  dark:text-white">วันที่</p>
+            <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
+          </div>
+          <div>
+            <div class="flex gap-3">
+              <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
+              <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+            </div>
+            <o-input type="text" modelValue="12.00 น." v-if="time == 'time'"></o-input>
+            <select v-if="time == 'duration'" id="countries"
+              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option selected>เลือกช่วงเวลา</option>
+              <option value="US">เช้า</option>
+              <option value="CA">เที่ยง</option>
+              <option value="FR">บ่าย</option>
+              <option value="DE">เย็น</option>
+            </select>
+          </div>
+
+          <div class="col-span-2">
+            <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
+            <o-input type="text"
+              modelValue="ทานอาหารเทียง ร้านเลียจาน"></o-input>
+          </div>
+          <div class="w-full ">
+
+
+            <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบจุดแวะพัก</o-button>
+              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+            </div>
+          </div>
+        </UiCard>
+      </o-modal>
+
       <div class="col-span-2">
         <UiCard>
           <div class="my-2 grid grid-cols-2 gap-2 mt-2">
@@ -214,23 +316,23 @@
                 </tr>
               </thead>
               <tbody >
-                <tr @click="add = true" class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr  class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
                   <th class="px-3 py-3">
                     1
                   </th>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" lass="px-3 py-3">
                     โครตอร่อย!
                   </td>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     อาหารทะเล
                   </td>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง
                   </td>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     0428976765
                   </td>
-                  <td class="px-3 py-3 text-center items-center">
+                  <td @click="add = true" class="px-3 py-3 text-center items-center">
                     ปานกลาง
                   </td>
                   <td class="px-3 py-3 text-center items-center">
@@ -474,15 +576,15 @@
         <o-modal v-model:active="isItemModalHotelData">
           <UiCard>
             <div class="flex justify-end">
-              <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
-                ? (editHotel = true)
-                : (editHotel = false)">
-              </Icon>
+              
             </div>
             <div class="p-2 grid grid-cols-2 gap-0">
               <div class="w-full border-r">
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  โครตอร่อย!
+                  โครตอร่อย! <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
+                ? (editHotel = true)
+                : (editHotel = false)">
+              </Icon>
                 </h2>
                 <div class="px-2" v-if="!editHotel">
                   <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
@@ -504,42 +606,43 @@
               </div>
               <div class="w-full ml-4">
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  คอมเมนต์
-                </h2>
-                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">เป็นอาหารที่ดีที่สุดที่เคยทานมา</p>
-                  <p class="w-full text-end">20/06/66</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                  <p class="col-span-2">กุ้งสดมากครับ</p>
-                  <p class="w-full text-end">20/06/65</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                  <p class="col-span-2">กุ้งหมดอดล้างตูด</p>
-                  <p class="w-full text-end">20/06/64</p>
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                  </p>
-                </div>
-                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
-                <div v-if="showComment">
-                  <o-field label="เขียนคอมเมนต์">
-                    <o-input type="textarea"></o-input>
-                  </o-field>
-                  <div class="flex">
-                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                      <o-input></o-input>
-                    </o-field>
-                    <section class="flex-1 shrink flex items-center justify-end">
-                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                      </o-button>
-                      <o-button class="mt-5">เพิ่ม</o-button>
-                    </section>
-                  </div>
-                </div>
+              คอมเมนต์
+            </h2>
+            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+              <div v-if="editcomment" class="col-span-2">
+                <o-input type="text" modelValue="เป็นอาหารที่ดีที่สุดที่เคยทานมา"></o-input>
               </div>
+              <p v-if="!editcomment" class="col-span-2">เป็นอาหารที่ดีที่สุดที่เคยทานมา</p>
+              <p class="w-full text-end">20/06/66</p>
+
+              <p class="w-full text-end">
+                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                  ? (editcomment = true)
+                  : (editcomment = false)">
+                </Icon>
+              </p>
+
+            </div>
+            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+            <div v-if="showComment">
+              <o-field label="เขียนคอมเมนต์">
+                <o-input type="textarea"></o-input>
+              </o-field>
+              <div class="flex">
+                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                  <o-input></o-input>
+                </o-field>
+                <section class="flex-1 shrink flex items-center justify-end">
+                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                  </o-button>
+                  <o-button class="mt-5">เพิ่ม</o-button>
+                </section>
+              </div>
+            </div>
+            </div>
+            <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบร้านอาหาร</o-button>
+              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+            </div>
             </div>
           </UiCard>
         </o-modal>
@@ -555,11 +658,51 @@
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โครตอร่อย!</h3>
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารทะเล</p>
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง จังหวัดดินแดง</p>
-                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 	0428976765</p>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
                   </div>
                 </dev>
               </div>
+              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+              คอมเมนต์
+            </h2>
+            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+              <div v-if="editcomment" class="col-span-2">
+                <o-input type="text" modelValue="เป็นอาหารที่ดีที่สุดที่เคยทานมา
+
+"></o-input>
+              </div>
+              <p v-if="!editcomment" class="col-span-2">เป็นอาหารที่ดีที่สุดที่เคยทานมา
+
+</p>
+              <p class="w-full text-end">20/06/66</p>
+
+              <p class="w-full text-end">
+                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                  ? (editcomment = true)
+                  : (editcomment = false)">
+                </Icon>
+              </p>
+
             </div>
+            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+            <div v-if="showComment">
+              <o-field label="เขียนคอมเมนต์">
+                <o-input type="textarea"></o-input>
+              </o-field>
+              <div class="flex">
+                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                  <o-input></o-input>
+                </o-field>
+                <section class="flex-1 shrink flex items-center justify-end">
+                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                  </o-button>
+                  <o-button class="mt-5">เพิ่ม</o-button>
+                </section>
+              </div>
+            </div>
+            </div>
+
+            
              <div>
               <o-field label="วันที่">
                 <o-input></o-input>
@@ -581,6 +724,11 @@
               </select>
             </div>
             <div class="col-span-2">
+              <o-field label="หมายเหตุ">
+                <o-input type="textarea"></o-input>
+              </o-field>
+            </div>
+            <div class="col-span-2">
               <div class="flex justify-end">
                 <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
               </div>
@@ -598,6 +746,8 @@ onMounted(() => { initFlowbite() });
 
 const showComment = ref(false);
 const isItemModalHotelData = ref(false);
+const isItemModalHotelData3 = ref(false);
+const editcomment = ref(false);
 const add = ref(false);
 const editHotel = ref(false);
 const time = ref('time');
