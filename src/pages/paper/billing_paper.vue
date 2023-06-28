@@ -1,8 +1,6 @@
 <template>
   <section>
-    <div
-      class="w-[210mm] h-[297mm] p-[5mm] my-1 mx-auto border solid rounded bg-white drop-shadow"
-    >
+    <div class="w-[210mm] h-[297mm] p-[5mm] mx-auto border rounded bg-white">
       <div class="grid grid-rows-2 m-5">
         <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo" />
         <div class="grid grid-cols-3 text-sm">

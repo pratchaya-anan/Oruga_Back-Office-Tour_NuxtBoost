@@ -1,8 +1,6 @@
 <template>
-  <section class="bg-gray-100 dark:bg-gray-900 p-3 sm:p-5">
-    <div
-      class="w-[210mm] h-min-[297mm] p-[5mm] my-1 mx-auto border-1 solid rounded bg-white drop-shadow"
-    >
+  <section>
+    <div class="w-[210mm] h-[297mm] p-[5mm] mx-auto border rounded bg-white">
       <div class="grid grid-rows-2 m-5">
         <img class="w-[100px]" src="../../assets/images/ll-01.png" alt="Logo" />
         <div class="grid grid-cols-3 text-sm">
@@ -16,10 +14,10 @@
           <!-- ชื่อใบ/ข้อมูลใบ -->
           <div class="grid grid-cols-3">
             <div class="col-span-3 font-bold text-center text-base">
-              ใบสำคัญรับเงิน
+              ใบสำคัญจ่าย
             </div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">0841142174178</div>
+            <div class="col-span-2 text-right">CP230430-0001</div>
             <div class="font-bold">วันที่:</div>
             <div class="col-span-2 text-right">24/03/2566</div>
           </div>
@@ -29,9 +27,9 @@
 
       <!-- ข้อมูลฝั่งซ้าย -->
       <div class="col-span-2 grid grid-cols-3 m-5 w-full text-xs">
-        <div class="col-span-1 font-bold">ชื่อ (ผู้ขายสินค้า/ให้บริการ):</div>
+        <div class="col-span-1 font-bold">จ่ายให้:</div>
         <div class="col-span-2">ศศิศ วิรัตน์จินดา</div>
-        <div class="col-span-1 font-bold">เลขประจำตัวประชาชน:</div>
+        <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษี:</div>
         <div class="col-span-2">1023456789123</div>
         <div class="col-span-1 font-bold">เบอร์โทร:</div>
         <div class="col-span-2">0848456732</div>
@@ -39,7 +37,7 @@
         <div class="col-span-2">
           111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
         </div>
-        <div class="flex col-span-2 mt-2">
+        <div class="flex col-span-1 my-1">
           <div class="flex items-center mr-5">
             <input
               id="default-checkbox"
@@ -50,10 +48,10 @@
             <label
               for="default-checkbox"
               class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >จ่ายบุคคลภายใน</label
+              >เงินสด</label
             >
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center mr-5">
             <input
               checked
               id="checked-checkbox"
@@ -64,13 +62,21 @@
             <label
               for="checked-checkbox"
               class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >จ่ายบุคคลภายนอก</label
+              >เช็คธนาคาร</label
             >
           </div>
         </div>
-        <div class="col-span-2 my-1 flex w-full text-xs">
-          <div class="font-bold">รับจาก:</div>
-          <div class="ml-5">ศศิศ วิรัตน์จินดา</div>
+        <div class="flex col-span-2 my-1 gap-2">
+          <div class="col-span-1 font-bold">เลขที่:</div>
+          <div class="col-span-2">55469456732</div>
+        </div>
+        <div class="col-span-1 flex w-full text-xs">
+          <div class="font-bold">ลงวันที่:</div>
+          <div class="ml-3">24/03/2566</div>
+        </div>
+        <div class="col-span-2 flex w-full text-xs">
+          <div class="font-bold">เพื่อชำระ:</div>
+          <div class="ml-3">ค่ามัคคุเทศ</div>
         </div>
       </div>
 
@@ -81,15 +87,15 @@
             <th>วัน เดือน ปี</th>
             <th>รายการ</th>
             <th>จำนวนเงิน (บาท)</th>
-            <!-- <th>หักภาษี ณ ที่จ่าย (%)</th>
-              <th>เงินได้สุทธิ์ (บาท)</th> -->
+            <th>หักภาษี ณ ที่จ่าย (%)</th>
+            <th>เงินได้สุทธิ์ (บาท)</th>
           </tr>
           <tr class="h-10 text-xs">
             <td>31/03/2566</td>
             <td>เที่ยวเกาะ เลาะรัก</td>
             <td>5,000</td>
-            <!-- <td>7%</td>
-              <td>4,650</td> -->
+            <td>7%</td>
+            <td>4,650</td>
           </tr>
         </table>
       </div>
@@ -111,9 +117,9 @@
       <div class="grid grid-cols-3 text-xs p-2 border-b border-black">
         <div class="col-span-3 indent-8">
           ข้าพเจ้า นายกอไก่ ขอไข่ (ผู้เบิกจ่าย)ตำแหน่ง บัญชี ขอรับรองว่า
-          รายจ่ายข้างต้นนี้ไม่อาจเรียกเก็บใบเสร็จรับเงินจากผู้รับเงินได้และข้าพเจ้าได้จ่ายไปในงาน
-          ของทางบริษัท ศรีดาราทัวร์จำกัด โดยแท้จริง ตั้งแต่วันที่ 19 เมษายน 2566
-          ถึงวันที่ 21 เมษายน 2566
+          รายจ่ายข้างต้นนี้ ไม่อาจเรียกเก็บใบเสร็จรับเงินจากผู้รับเงินได้
+          และข้าพเจ้าได้จ่ายไปในงาน ของทางบริษัท ศรีดาราทัวร์ จำกัด โดยแท้จริง
+          ตั้งแต่วันที่ 19 เมษายน 2566 ถึงวันที่ 21 เมษายน 2566
         </div>
       </div>
 
@@ -134,7 +140,7 @@
     </div>
   </section>
   <div class="flex justify-center mt-3">
-    <NuxtLink href="/paper_edit/receipt_item">
+    <NuxtLink href="/paper_edit/cashpayment_item">
       <o-button>
         <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon> แก้ไข
       </o-button>
@@ -142,7 +148,7 @@
     <o-button @click="print">
       <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"></Icon> พิมพ์
     </o-button>
-    <NuxtLink href="/paper_list/receipt_list">
+    <NuxtLink href="/paper_list/cashpayment_list">
       <o-button variant="info">
         <Icon class="mr-3 -ml-1 w-5 h-5" name="iconamoon:close-bold"></Icon>
         ปิด
