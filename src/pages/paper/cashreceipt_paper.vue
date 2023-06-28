@@ -19,7 +19,7 @@
             <div class="font-bold">เลขที่:</div>
             <div class="col-span-2 text-right">CR230430-0001</div>
             <div class="font-bold">วันที่:</div>
-            <div class="col-span-2 text-right">24/03/2566</div>
+            <div class="col-span-2 text-right">	01/04/2566</div>
           </div>
         </div>
       </div>
@@ -30,17 +30,17 @@
         <div class="col-span-1 font-bold">ชื่อ (ผู้ขายสินค้า/ให้บริการ):</div>
         <div class="col-span-2">เทศบาลขอนแก่น</div>
         <div class="col-span-1 font-bold">เลขประจำตัวประชาชน:</div>
-        <div class="col-span-2">1023456789123</div>
+        <div class="col-span-2">1522236</div>
         <div class="col-span-1 font-bold">เบอร์โทร:</div>
-        <div class="col-span-2">0848456732</div>
+        <div class="col-span-2">0625584785</div>
         <div class="col-span-1 font-bold">ที่อยู่:</div>
         <div class="col-span-2">
-          111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+          175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
         </div>
         <div class="col-span-1 font-bold">
           ได้รับเงินจาก (ผู้ซื้อ/ผู้รับบริการ):
         </div>
-        <div class="col-span-2">สรณ์สิริ สายบุตร</div>
+        <div class="col-span-2">นายนที บุญมา</div>
       </div>
 
       <!-- ตาราง -->
@@ -56,9 +56,17 @@
           </tr>
           <tr class="h-10 text-xs">
             <td>1</td>
-            <td>31/03/2566</td>
-            <td>เที่ยวเกาะ เลาะรัก</td>
-            <td>5,000</td>
+            <td>30/03/2566</td>
+            <td>ค่าตั๋วเครื่องบิน</td>
+            <td>3,210</td>
+            <!-- <td>7%</td>
+            <td>4,650</td> -->
+          </tr>
+          <tr class="h-10 text-xs">
+            <td>1</td>
+            <td>30/03/2566</td>
+            <td>ค่าโรงแรม</td>
+            <td>3,210</td>
             <!-- <td>7%</td>
             <td>4,650</td> -->
           </tr>
@@ -71,11 +79,11 @@
       >
         <div class="col-span-2 flex">
           <div class="mr-[15px]">จำนวนเงิน(ตัวอักษร) Total Amount:</div>
-          <div class="text-right">ห้าหมื่นเก้าพันเก้าร้อยยี่สิบบาทถ้วน</div>
+          <div class="text-right">หกพันสี่ร้อยยี่สิบบาทถ้วน</div>
         </div>
         <div class="flex">
           <div class="mr-[15px]">รวม(Total):</div>
-          <div class="text-right">59920 บาท</div>
+          <div class="text-right">6,420 บาท</div>
         </div>
       </div>
 
