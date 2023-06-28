@@ -41,9 +41,9 @@
                     <th scope="col" class="px-6 py-4">ลำดับ</th>
                     <th scope="col" class="px-6 py-4">หน่วยงาน / ลูกค้า</th>
                     <th scope="col" class="px-6 py-4">รหัสลูกค้า</th>
-                    <th scope="col" class="px-6 py-4">
-                      เลขประจำตัวผู้เสียภาษี
-                    </th>
+                    <th scope="col" class="px-6 py-4">ชื่อผู้ติดต่อ</th>
+                    <th scope="col" class="px-6 py-4">เลขประจำตัวผู้เสียภาษี</th>
+                    <th scope="col" class="px-6 py-4">เบอร์ติดต่อ</th>
                     <th scope="col" class="px-6 py-4">ที่อยู่</th>
                     <th></th>
                   </tr>
@@ -66,7 +66,9 @@
                     <td class="px-6 py-4">
                       {{ i.idagency }}
                     </td>
+                    <td class="px-6 py-4">{{ i.namecontact}}</td>
                     <td class="px-6 py-4">{{ i.taxagency }}</td>
+                    <td class="px-6 py-4">{{ i.phoneagency }}</td>
                     <td class="px-6 py-4">{{ i.addressagency }}</td>
                     <td class="px-6 py-4">
                       <div
@@ -93,17 +95,27 @@
             </h2>
             <div class="grid grid-cols-2 gap-4 mt-3">
               <div>
-                <o-field label="หน่วยงาน / ลูกค้า">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-              <div>
                 <o-field label="รหัสลูกค้า">
                   <o-input></o-input>
                 </o-field>
               </div>
               <div>
+                <o-field label="หน่วยงาน / ลูกค้า">
+                  <o-input></o-input>
+                </o-field>
+              </div>
+              <div>
+                <o-field label="ชื่อผู้ติดต่อ">
+                  <o-input></o-input>
+                </o-field>
+              </div>              
+              <div>
                 <o-field label="เลขประจำตัวผู้เสียภาษี">
+                  <o-input></o-input>
+                </o-field>
+              </div>
+              <div>
+                <o-field label="โทร">
                   <o-input></o-input>
                 </o-field>
               </div>
@@ -111,14 +123,19 @@
                 <o-field label="ที่อยู่">
                   <o-input></o-input>
                 </o-field>
-              </div>
+              </div>                       
+              <div>
+                <o-field label="Email">
+                  <o-input></o-input>
+                </o-field>
+              </div> 
             </div>
             <div class="flex justify-end">
               <div>
                 <o-button @click="showAddAgency = false">ยกเลิก</o-button>
               </div>
               <div>
-                <o-button @click="stepnext = 2">ตกลง</o-button>
+                <o-button @click="stepnext = 5">ตกลง</o-button>
               </div>
             </div>
           </div>
@@ -135,12 +152,12 @@
       <div class="space-y-4">
         <UiCard>
           <h2 class="text-xl font-bold dark:text-white mb-2">
-            ค้นหาใบวางบิล/ใบแจ้งหนี้
+            ค้นหาใบกำกับภาษี
           </h2>
           <div class="flex items-center">
             <div class="relative w-full">
               <o-input
-                placeholder="ค้นหา ชื่อลูกค้า, รหัสลูกค้า"
+                placeholder="ค้นหา ชื่อลูกค้า"
                 class="w-full"
               ></o-input>
             </div>
@@ -931,7 +948,8 @@
                         สำนักงานใหญ่
                       </o-radio>
                       <o-radio
-                        v-model="branch"
+
+                      v-model="branch"
                         name="branchcheck"
                         native-value="SubBranch"
                       >
@@ -1066,15 +1084,19 @@ const tableAgency = [
   {
     id: 1,
     nameagency: "เทศบาลขอนแก่น",
-    idagency: "C-58015259",
+    idagency: "1552555214",
+    namecontact: "นายภาคภูมิ ภูเขียว ",
     taxagency: "1522236",
+    phoneagency: "0625584785",
     addressagency: "156 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น",
   },
   {
     id: 2,
     nameagency: "สรสิริ สายบุตร",
-    idagency: "C-58015475",
+    idagency: "1547896524",
+    namecontact: "นางสาวดวงจันทร์ พันดาว ",
     taxagency: "13524569",
+    phoneagency: "0925584785",
     addressagency: "175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น",
   },
 ];
