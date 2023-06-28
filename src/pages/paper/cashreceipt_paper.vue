@@ -28,7 +28,7 @@
       <!-- ข้อมูลฝั่งซ้าย -->
       <div class="col-span-2 grid grid-cols-3 m-5 w-full text-xs">
         <div class="col-span-1 font-bold">ชื่อ (ผู้ขายสินค้า/ให้บริการ):</div>
-        <div class="col-span-2">ศศิศ วิรัตน์จินดา</div>
+        <div class="col-span-2">เทศบาลขอนแก่น</div>
         <div class="col-span-1 font-bold">เลขประจำตัวประชาชน:</div>
         <div class="col-span-2">1023456789123</div>
         <div class="col-span-1 font-bold">เบอร์โทร:</div>
