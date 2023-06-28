@@ -55,25 +55,25 @@
                   อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
+                  <Icon class="w-6 h-6 mr-2" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
                   4 วัน 3 คืน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
+                  <Icon class="w-6 h-6 mr-2" name="line-md:calendar"></Icon>
                   21/04/2566
                   <Icon class="mx-1 w-5 h-5" name="line-md:arrow-right"></Icon>
                   24/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:people-audience-24-filled"></Icon>
+                  <Icon class="w-6 h-6 mr-2" name="fluent:people-audience-24-filled"></Icon>
                   23 คน
-                  <Icon class="w-6 h-6 ml-6" name="el:person"></Icon>
+                  <Icon class="w-6 h-6 mr-2 ml-6" name="el:person"></Icon>
                   19 คน
-                  <Icon class="w-6 h-6 ml-2" name="material-symbols:child-care"></Icon>
+                  <Icon class="w-6 h-6 mr-2 ml-2" name="material-symbols:child-care"></Icon>
                   3 คน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="fluent:comment-error-16-filled"></Icon>
+                  <Icon class="w-6 h-6 mr-2" name="fluent:comment-error-16-filled"></Icon>
                   ทัวร์นี้มีวันเกิดลูกค้า 1 คนที่ต้องทำเซอร์ไพร์
                 </li>
               </ul>
@@ -252,7 +252,7 @@
               </div>
             </dev>
           </div>
-          
+
         </UiCard>
         <!-- พาหนะ -->
         <UiCard v-if="showItems == 'vehicle'">
@@ -461,7 +461,6 @@
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
             </li>
           </ol>
-
           <div v-if="showComment">
             <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
               คอมเมนต์
@@ -473,7 +472,6 @@
                 <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
               </li>
             </ul>
-
             <o-field label="เขียนคอมเมนต์">
               <o-input type="textarea"></o-input>
             </o-field>
@@ -489,22 +487,279 @@
             </div>
           </div>
         </UiCard>
+        <!-- แก้ไขโรงแรม -->
+        <o-modal v-model:active="isItemModalHotelData2">
+          <UiCard>
+            <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขข้อมูล</h3>
+            <div class="flex justify-end">
+
+            </div>
+            <div class="flex items-center mb-4 p-4 border shadow-md">
+
+              <dev class="w-full relative inline-flex items-center">
+                <div class="mx-5">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm Văn
+                    Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
+                </div>
+              </dev>
+            </div>
+            <div class="w-full ml-2">
+              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                คอมเมนต์
+              </h2>
+              <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                <p class="w-full text-end">20/06/66</p>
+
+                <p class="w-full text-end">
+                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                    ? (editcomment = true)
+                    : (editcomment = false)">
+                  </Icon>
+                </p>
+                <div v-if="editcomment2" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                <p class="w-full text-end">20/06/65</p>
+
+                <p class="w-full text-end">
+                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
+                    ? (editcomment2 = true)
+                    : (editcomment2 = false)">
+                  </Icon>
+                </p>
+                <div v-if="editcomment3" class="col-span-2">
+                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                </div>
+                <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+                <p class="w-full text-end">20/06/64</p>
+
+                <p class="w-full text-end">
+                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
+                    ? (editcomment3 = true)
+                    : (editcomment3 = false)">
+                  </Icon>
+                </p>
+              </div>
+              <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+              <div v-if="showComment">
+                <o-field label="เขียนคอมเมนต์">
+                  <o-input type="textarea"></o-input>
+                </o-field>
+                <div class="flex">
+                  <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                    <o-input></o-input>
+                  </o-field>
+                  <section class="flex-1 shrink flex items-center justify-end">
+                    <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                    </o-button>
+                    <o-button class="mt-5">เพิ่ม</o-button>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="w-full">
+              <div class="px-2">
+                <p class="text-lg font-semibold  dark:text-white">วันเข้าพัก</p>
+                <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
+                <p class="text-lg font-semibold  dark:text-white">วันออก</p>
+                <p class="ml-2 text-lg font-normal  dark:text-white"></p>
+                <o-input type="text" modelValue="22 เมษายน 2566"></o-input>
+                <p class="text-lg font-semibold  dark:text-white">จำนวนห้องพัก</p>
+                <o-input type="text" modelValue="120"></o-input>
+              </div>
+
+              <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบโรงแรม</o-button>
+                <o-button size="medium" variant="primary" @click="isItemModalHotelData2 = false"> บันทึก </o-button>
+              </div>
+            </div>
+          </UiCard>
+        </o-modal>
+        <o-modal v-model:active="add">
+          <div class="p-6">
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+              แก้ไขข้อมูล
+            </h2>
+            <div class="flex items-center mb-2 p-4 border shadow-md">
+              <dev class="w-full relative inline-flex items-center">
+                <div class="mx-5">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm
+                    Văn
+                    Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
+                </div>
+              </dev>
+            </div>
+            <div class="w-full mb-2 p-4 border shadow-md">
+              <div class="mx-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">คอมเมนต์</h3>
+                <div class="mb-2 grid grid-cols-4 gap-0">
+                  <div v-if="editcomment" class="col-span-2">
+                    <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                  </div>
+                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
+                  <p class="w-full text-end">20/06/66</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit" @click="editcomment != true
+                      ? (editcomment = true)
+                      : (editcomment = false)">
+                    </Icon>
+                  </p>
+                  <div v-if="editcomment2" class="col-span-2">
+                    <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                  </div>
+                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
+                  <p class="w-full text-end">20/06/65</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit" @click="editcomment2 != true
+                      ? (editcomment2 = true)
+                      : (editcomment2 = false)">
+                    </Icon>
+                  </p>
+                  <div v-if="editcomment3" class="col-span-2">
+                    <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                  </div>
+                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
+                  <p class="w-full text-end">20/06/64</p>
+
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit" @click="editcomment3 != true
+                      ? (editcomment3 = true)
+                      : (editcomment3 = false)">
+                    </Icon>
+                  </p>
+                </div>
+                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                <div v-if="showComment">
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                      </o-button>
+                      <o-button class="mt-5">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+              ข้อมูลเดินทาง
+            </h2>
+            <div class="grid grid-cols-2 gap-4 w-full mb-4 p-4 border shadow-md">
+              <div>
+                <o-field label="วันเข้าพัก">
+                  <o-input modelValue="21 เมษายน 2566"></o-input>
+                </o-field>
+              </div>
+              <div>
+                <o-field label="วันออก">
+                  <o-input modelValue="24 เมษายน 2566"></o-input>
+                </o-field>
+              </div>
+              <div class="col-span-2">
+                <o-field label="จำนวนห้องพัก">
+                  <o-input type="number" modelValue="12"></o-input>
+                </o-field>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <div class="ml-2 flex justify-between">
+                <o-button size="medium" variant="danger" @click="add = false"> ลบโรงแรม </o-button>
+                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+              </div>
+            </div>
+          </div>
+        </o-modal>
+        <!-- แก้ไข้ไกด์ -->
+        <o-modal v-model:active="isItemModalHotelData3">
+          <UiCard>
+            <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขข้อมูลไกด์</h3>
+            <div class="flex justify-end">
+            </div>
+            <div class="flex items-center mb-4 p-4 border shadow-md">
+              <dev class="w-full relative inline-flex items-center">
+                <img class="w-10 h-10 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
+                <div class="ml-5 w-full">
+                  <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์
+                    ศรีสุระ </h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </div>
+              </dev>
+            </div>
+            <div class="w-full ml-2">
+              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                คอมเมนต์
+              </h2>
+              <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                </div>
+                <p v-if="!editcomment" class="col-span-2">ให้บริการดีมาก</p>
+                <p class="w-full text-end">20/06/66</p>
+
+                <p class="w-full text-end">
+                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                    ? (editcomment = true)
+                    : (editcomment = false)">
+                  </Icon>
+                </p>
+              </div>
+              <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+              <div v-if="showComment">
+                <o-field label="เขียนคอมเมนต์">
+                  <o-input type="textarea"></o-input>
+                </o-field>
+                <div class="flex">
+                  <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                    <o-input></o-input>
+                  </o-field>
+                  <section class="flex-1 shrink flex items-center justify-end">
+                    <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                    </o-button>
+                    <o-button class="mt-5">เพิ่ม</o-button>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="w-full ">
+              <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบไกด์</o-button>
+                <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+              </div>
+            </div>
+          </UiCard>
+        </o-modal>
       </div>
       <!-- ลูกทัวร์ -->
-      <div class="grid grid-cols-1 col-span-2 gap-4">
-        <div class="flex flex-wrap gap-4">
-          <div>
-            <UiCard class="flex-1 hover:bg-gray-100 hover:text-blue-700 cursor-pointer">
-              <NuxtLink class="h-full w-full text-center grid items-center" href="/management/tour_data_members">
-                <div>
-                  <Icon class="w-10 h-10" name="tabler:settings-plus"></Icon>
-                </div>
-                <div>จัดการ/เพิ่มลูกทัวร์</div>
-              </NuxtLink>
+      <div class="col-span-2">
+        <div class="grid grid-cols-3 gap-3">
+          <div class="w-full items-center">
+            <UiCard @click="isItemModalAddUser = true"
+              class="px-14 py-14 hover:bg-gray-100 hover:text-blue-700 cursor-pointer">
+              <div class="w-full h-full text-center items-center">
+                <Icon class="w-12 h-12" name="wpf:adduser"></Icon>
+                <div>เพิ่มลูกทัวร์</div>
+              </div>
             </UiCard>
           </div>
           <div v-for="(item, index) in memberdata" :key="index">
-            <UiCard class="flex-1 hover:bg-gray-100 cursor-pointer" @click="isItemModalUserData = true">
+            <UiCard class="p-2 hover:bg-gray-100 cursor-pointer" @click="isItemModalUserData = true">
               <div class="flex justify-end">
                 <Icon v-if="item.gender == 'male'" class="text-xl font-medium text-green-600 dark:text-white"
                   name="mdi:gender-male">
@@ -512,14 +767,14 @@
                 <Icon v-else class="text-xl font-medium text-pink-600 dark:text-white" name="ph:gender-female-bold">
                 </Icon>
               </div>
-              <div class="flex flex-col items-center">
+              <div class="w-full flex flex-col items-center">
                 <h5 class="text-md font-medium text-gray-900 dark:text-white">
                   {{ item.name_thai }} {{ item.lastname_thai }}
                 </h5>
-                <h5 class="mb-1 text-sm font-medium text-gray-900 dark:text-white">
+                <h5 class=" text-sm font-medium text-gray-900 dark:text-white">
                   {{ item.name_eng }} {{ item.lastname_eng }}
                 </h5>
-                <span class="text-sm text-gray-500 dark:text-gray-400">Thai</span>
+                <span class="text-sm text-gray-500 dark:text-gray-400"> {{ item.region }}</span>
                 <!-- แจ้งเตือนลูกทัวร์ -->
                 <div class="flex justify-center">
                   <div>
@@ -545,364 +800,150 @@
                 </div>
               </div>
             </UiCard>
-            <o-modal v-model:active="isItemModalUserData">
-              <UiCard>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="p-3 border-r">
-                    <div class="flex items-center justify-start mb-2">
-                      <a href="#">
-                        <img class="w-10 h-10 rounded-full"
-                          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                          alt="Jese Leos" />
-                      </a>
-                    </div>
-                    <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
-                      <a href="#">{{ item.name_thai }} {{ item.lastname_thai }}</a>
-                      <Icon class="text-xl font-medium text-green-600 dark:text-white" name="mdi:gender-male">
-                      </Icon>
-                    </p>
-                    <p class="mb-3 text-sm font-normal">
-                      <a href="#" class="hover:underline">{{ item.name_eng }} {{ item.lastname_eng }}</a>
-                    </p>
-                    <div class="flex">
-                      <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
-                        ข้อมูลส่วนตัว
-                      </p>
-                      <div class="flex text-sm text-blue-500" role="alert">
-                        <Icon class="w-5 h-5 mr-1" name="mingcute:warning-line"></Icon>
-                        <p>วันเกิด</p>
-                      </div>
-                    </div>
-                    <div class="grid grid-cols-2">
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="carbon:phone-filled"></Icon>098-158-4478
-                      </p>
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="mingcute:cake-fill"></Icon>20/04/2000
-                      </p>
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:people-arrows"></Icon>35 ปี
-                      </p>
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="gis:search-country"></Icon>Thai
-                      </p>
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="fa-solid:id-card"></Icon>1-7399-01893-76-5
-                      </p>
-                      <p class="mb-4 text-sm col-span-2">
-                        <Icon class="w-6 h-6 text-gray-600" name="ant-design:home-twotone"></Icon>20-22 หมู่13
-                        ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น
-                        40000
-                      </p>
-                    </div>
-                    <div class="flex">
-                      <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
-                        พาสปอร์ต
-                      </p>
-                      <div class="flex text-sm text-red-500" role="alert">
-                        <Icon class="w-5 h-5 mr-1" name="mingcute:warning-line"></Icon>
-                        <p>พาสปอร์ตจะหมดอายุภายใน 120 วัน</p>
-                      </div>
-                    </div>
-                    <div class="grid grid-cols-2">
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:passport"></Icon>1635501893
-                      </p>
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="fluent-mdl2:number-field"></Icon>1478/63
-                      </p>
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-check"></Icon>25/01/2566
-                      </p>
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="fa6-solid:calendar-xmark"></Icon>25/01/2570
-                      </p>
-                    </div>
-                    <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
-                      ข้อมูลเดินทาง
-                    </p>
-                    <div class="grid grid-cols-2">
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="tabler:number"></Icon>
-                        {{ index + 1 }}
-                      </p>
-                      <p class="mb-4 text-sm">
-                        <Icon class="w-6 h-6 text-gray-600" name="mingcute:bed-fill"></Icon>คู่
-                      </p>
-                    </div>
-                  </div>
-                  <div>
-                    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                      คอมเมนต์
-                    </h2>
-                    <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-                      <li class="flex justify-between">
-                        <div>แพ้กุ้ง</div>
-                        <div>20/06/66</div>
-                        <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                      </li>
-                    </ul>
-                    <o-button @click="showItemsListCommentUser = true">เขียนคอมเมนต์</o-button>
-
-                    <div v-if="showItemsListCommentUser">
-                      <o-field label="เขียนคอมเมนต์">
-                        <o-input type="textarea"></o-input>
-                      </o-field>
-                      <div class="flex">
-                        <o-field label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                          <o-input></o-input>
-                        </o-field>
-                        <section class="flex-1 shrink flex items-center justify-end">
-                          <o-button @click="showItemsListCommentUser = false" class="ml-4 mt-5">ปิด
-                          </o-button>
-                          <o-button class="mt-5">เพิ่ม</o-button>
-                        </section>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div data-popper-arrow></div>
-              </UiCard>
-            </o-modal>
-            <o-modal v-model:active="isItemModalHotelData2">
-              <UiCard>
-                <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขข้อมูล</h3>
-                <div class="flex justify-end">
-
-                </div>
-                <div class="flex items-center mb-4 p-4 border shadow-md">
-
-                  <dev class="w-full relative inline-flex items-center">
-                    <div class="mx-5">
-                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
-                      <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm Văn
-                        Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
-                      <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
-                    </div>
-                  </dev>
-                </div>
-                <div class="w-full ml-2">
-                  <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                    คอมเมนต์
-                  </h2>
-                  <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
-                </div>
-                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
-                  <p class="w-full text-end">20/06/66</p>
-
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                ? (editcomment = true)
-                : (editcomment = false)">
-              </Icon>
-                  </p>
-                  
-                  <div v-if="editcomment2" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
-                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
-                  <p class="w-full text-end">20/06/65</p>
-
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
-                ? (editcomment2 = true)
-                : (editcomment2 = false)">
-              </Icon>
-                  </p>
-
-                  <div v-if="editcomment3" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
-                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
-                  <p class="w-full text-end">20/06/64</p>
-
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
-                ? (editcomment3 = true)
-                : (editcomment3 = false)">
-              </Icon>
-                  </p>
-                </div>
-                  <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-                  <div v-if="showComment">
-                    <o-field label="เขียนคอมเมนต์">
-                      <o-input type="textarea"></o-input>
-                    </o-field>
-                    <div class="flex">
-                      <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                        <o-input></o-input>
-                      </o-field>
-                      <section class="flex-1 shrink flex items-center justify-end">
-                        <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                        </o-button>
-                        <o-button class="mt-5">เพิ่ม</o-button>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full">
-                  <div class="px-2">
-                    <p class="text-lg font-semibold  dark:text-white">วันเข้าพัก</p>
-                    <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
-                    <p class="text-lg font-semibold  dark:text-white">วันออก</p>
-                    <p class="ml-2 text-lg font-normal  dark:text-white"></p>
-                    <o-input type="text" modelValue="22 เมษายน 2566"></o-input>
-                    <p class="text-lg font-semibold  dark:text-white">จำนวนห้องพัก</p>
-                    <o-input type="text" modelValue="120"></o-input>
-                  </div>
-
-                  <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบโรงแรม</o-button>
-                    <o-button size="medium" variant="primary" @click="isItemModalHotelData2 = false"> บันทึก </o-button>
-                  </div>
-                </div>
-              </UiCard>
-            </o-modal>
-
-<!-- แก้ไข้ไกด์ -->
-            <o-modal v-model:active="isItemModalHotelData3">
-              <UiCard>
-                <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขข้อมูลไกด์</h3>
-                <div class="flex justify-end">
-                </div>
-                <div class="flex items-center mb-4 p-4 border shadow-md">
-                  <dev class="w-full relative inline-flex items-center">
-              <img class="w-10 h-10 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
-                <div class="ml-5 w-full">
-                <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ </h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
-              </div>
-            </dev>
-                </div>
-                <div class="w-full ml-2">
-                  <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                    คอมเมนต์
-                  </h2>
-                  <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
-                </div>
-                  <p v-if="!editcomment" class="col-span-2">ให้บริการดีมาก</p>
-                  <p class="w-full text-end">20/06/66</p>
-
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                ? (editcomment = true)
-                : (editcomment = false)">
-              </Icon>
-                  </p>
-                  
-                </div>
-                  <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-                  <div v-if="showComment">
-                    <o-field label="เขียนคอมเมนต์">
-                      <o-input type="textarea"></o-input>
-                    </o-field>
-                    <div class="flex">
-                      <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                        <o-input></o-input>
-                      </o-field>
-                      <section class="flex-1 shrink flex items-center justify-end">
-                        <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                        </o-button>
-                        <o-button class="mt-5">เพิ่ม</o-button>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-full ">
-                 
-
-                  <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบไกด์</o-button>
-                    <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
-                  </div>
-                </div>
-              </UiCard>
-            </o-modal>
-
-            <o-modal v-model:active="add">
-              <div class="grid grid-cols-2 gap-4 p-6">
-                <div class="col-span-2">
-                  <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                    เลือกโรงแรมเข้าพัก
-                  </h2>
-                  <div class="flex items-center mb-4 p-4 border shadow-md">
-                    <dev class="w-full relative inline-flex items-center">
-                      <div class="mx-5">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
-                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm
-                          Văn
-                          Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
-                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
-                      </div>
-                    </dev>
-                  </div>
-                  <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                    คอมเมนต์
-                  </h2>
-                  <div class="w-full mb-4 p-4 border shadow-md">
-                    <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                      <p class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
-                      <p class="w-full text-end">20/06/66</p>
-                      <p class="w-full text-end">
-                        <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                      </p>
-                      <p class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
-                      <p class="w-full text-end">20/06/65</p>
-                      <p class="w-full text-end">
-                        <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                      </p>
-                      <p class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
-                      <p class="w-full text-end">20/06/64</p>
-                      <p class="w-full text-end">
-                        <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
-                      </p>
-                    </div>
-                    <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
-                    <div v-if="showComment">
-                      <o-field label="เขียนคอมเมนต์">
-                        <o-input type="textarea"></o-input>
-                      </o-field>
-                      <div class="flex">
-                        <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                          <o-input></o-input>
-                        </o-field>
-                        <section class="flex-1 shrink flex items-center justify-end">
-                          <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                          </o-button>
-                          <o-button class="mt-5">เพิ่ม</o-button>
-                        </section>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <o-field label="วันเข้าพัก">
-                    <o-input></o-input>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="วันออก">
-                    <o-input></o-input>
-                  </o-field>
-                </div>
-                <div class="col-span-2">
-                  <o-field label="จำนวนห้องพัก">
-                    <o-input type="number"></o-input>
-                  </o-field>
-                </div>
-                <div class="col-span-2">
-                  <div class="flex justify-end">
-                    <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
-                  </div>
-                </div>
-              </div>
-            </o-modal>
           </div>
+          <!-- รายละเอียดข้อมูลลูกทัวร์ -->
+          <o-modal v-model:active="isItemModalUserData">
+            <UiCard>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="p-3 border-r">
+                  <div class="flex items-center justify-start mb-2">
+                    <a href="#">
+                      <img class="w-10 h-10 rounded-full"
+                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                        alt="Jese Leos" />
+                    </a>
+                  </div>
+                  <p class="text-base font-semibold leading-none text-gray-900 dark:text-white">
+                    <a href="#">สมหมาย ใจดี</a>
+                    <Icon class="ml-2 text-xl font-medium text-green-600 dark:text-white" name="mdi:gender-male">
+                    </Icon>
+                  </p>
+                  <p class="mb-3 text-sm font-normal">
+                    <a href="#" class="hover:underline">sommai jaidee</a>
+                  </p>
+                  <div class="flex">
+                    <p class="mb-2 text-base font-semibold leading-none text-gray-900 dark:text-white">
+                      ข้อมูลส่วนตัว
+                    </p>
+                    <div class="flex text-sm text-blue-500" role="alert">
+                      <Icon class="w-5 h-5 mx-2" name="mingcute:warning-line"></Icon>
+                      <p>วันเกิด</p>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2">
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="carbon:phone-filled"></Icon>098-158-4478
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="mingcute:cake-fill"></Icon>20/04/2000
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="fa6-solid:people-arrows"></Icon>35 ปี
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="gis:search-country"></Icon>Thai
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="fa-solid:id-card"></Icon>1-7399-01893-76-5
+                    </p>
+                    <p class="mb-4 text-sm col-span-2">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="ant-design:home-twotone"></Icon>20-22 หมู่13
+                      ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น
+                      40000
+                    </p>
+                  </div>
+                  <div class="flex">
+                    <p class="mb-2 text-base font-semibold leading-none text-gray-900 dark:text-white">
+                      พาสปอร์ต
+                    </p>
+                    <div class="flex text-sm text-red-500" role="alert">
+                      <Icon class="mx-2 w-5 h-5" name="mingcute:warning-line"></Icon>
+                      <p>พาสปอร์ตจะหมดอายุภายใน 120 วัน</p>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2">
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="fa6-solid:passport"></Icon>1635501893
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="fluent-mdl2:number-field"></Icon>1478/63
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="fa6-solid:calendar-check"></Icon>25/01/2566
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="fa6-solid:calendar-xmark"></Icon>25/01/2570
+                    </p>
+                  </div>
+                  <p class="mb-2 text-base font-semibold leading-none text-gray-900 dark:text-white">
+                    ข้อมูลเดินทาง
+                  </p>
+                  <div class="grid grid-cols-2">
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="tabler:number"></Icon>
+                      1
+                    </p>
+                    <p class="mb-4 text-sm">
+                      <Icon class="mr-2 w-6 h-6 text-gray-600" name="mingcute:bed-fill"></Icon>คู่
+                    </p>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">คอมเมนต์</h3>
+                  <div class="p-2 grid grid-cols-4 gap-0">
+                    <p class="col-span-2">แพ้กุ้ง</p>
+                    <p class="w-full text-end">20/06/66</p>
+                    <p class="w-full text-end">
+                      <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    </p>
+                  </div>
+                  <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                  <div v-if="showComment">
+                    <o-field label="เขียนคอมเมนต์">
+                      <o-input type="textarea"></o-input>
+                    </o-field>
+                    <div class="flex">
+                      <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                        <o-input></o-input>
+                      </o-field>
+                      <section class="flex-1 shrink flex items-center justify-end">
+                        <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                        </o-button>
+                        <o-button class="mt-5">เพิ่ม</o-button>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2 flex justify-between border-t">
+                <o-button size="medium" variant="danger" @click="add = false"> ลบลูกทัวร์ </o-button>
+                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+              </div>
+            </UiCard>
+          </o-modal>
+          <!-- เพิ่มข้อมูลลูกทัวร์ -->
+          <o-modal v-model:active="isItemModalAddUser">
+            <UiCard>
+              <div class="my-2 grid grid-cols-2 gap-2 mt-5">
+                <div class="flex">
+                  <o-input placeholder="ค้นหาลูกทัวร์"></o-input>
+                  <div class="px-2">
+                    <o-button>ค้นหา</o-button>
+                  </div>
+                </div>
+                <div class="flex justify-end">
+                  <NuxtLink to="/adduser">
+                    <o-button>+ เพิ่มลูกทัวร์ใหม่</o-button>
+                  </NuxtLink>
+                </div>
+              </div>
+              <o-table :data="memberdata">
+                <o-table-column v-for="column in columns" v-bind="column" :key="column" #default="{ row }">
+                  {{ row[column.field] || '' }} {{ row[column.field2] || '' }}
+                </o-table-column>
+              </o-table>
+            </UiCard>
+          </o-modal>
         </div>
       </div>
     </div>
@@ -918,7 +959,7 @@ const add = ref(false);
 const showItems = ref("");
 const showComment = ref(false);
 
-const showItemsListCommentUser = ref(false);
+const isItemModalAddUser = ref(false);
 const isItemModalUserData = ref(false);
 const isItemModalHotelData2 = ref(false);
 const isItemModalHotelData3 = ref(false);
@@ -927,9 +968,41 @@ const editcomment2 = ref(false);
 const editcomment3 = ref(false);
 
 const items = ref([{ message: "Foo" }, { message: "Bar" }]);
+
+const columns = ref([
+
+  {
+    field: "name_thai",
+    field2: "lastname_thai",
+    label: "ชื่อ-สกุล",
+  },
+  {
+    field: "birthday",
+    label: "วันเกิด",
+  },
+  {
+    field: "date_exp",
+    label: "วันหมดอายุพาสปอต",
+  },
+  {
+    field: "phone",
+    label: "เบอร์ติดต่อ",
+    position: "centered",
+  },
+  {
+    field: "comment",
+    label: "คอมเมนต์",
+    position: "centered",
+  },
+  {
+    field: "manage",
+    label: "จัดการ",
+    position: "centered",
+  },
+]);
 const memberdata = ref([
   {
-    name_thai: "สมหมาย ",
+    name_thai: "สมหมาย",
     lastname_thai: "ใจดี",
     name_eng: "sommai",
     lastname_eng: "jaidee",
@@ -940,7 +1013,7 @@ const memberdata = ref([
     age: "35",
     religion: "พุธ",
     IDCard: "1-7399-01893-76-5",
-    region: "Thai",
+    region: "ไทย",
     address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
 
     passport: "1635501893",
@@ -961,7 +1034,7 @@ const memberdata = ref([
     age: "27",
     religion: "พุธ",
     IDCard: "1-7399-01893-76-5",
-    region: "Thai",
+    region: "ไทย",
     address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
 
     passport: "1635501893",
@@ -970,8 +1043,449 @@ const memberdata = ref([
     date_exp: "20 Aug 2026",
     bed: "คู่",
   },
-]);
+  {
+    name_thai: "กนกนันทร์ ",
+    lastname_thai: "สุเชาว์อินทร์",
+    name_eng: "Kanoknan",
+    lastname_eng: "Suchao-in",
+    gender: "female",
 
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "จาริยา ",
+    lastname_thai: "รัชตาธิวัฒน์",
+    name_eng: "Jariya",
+    lastname_eng: "Ratchatathiwat",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "จารุนันท์ ",
+    lastname_thai: "พันธ์งามตา",
+    name_eng: "Jarunan",
+    lastname_eng: "Phanggamta",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "จิตราพร ",
+    lastname_thai: "ทองคง",
+    name_eng: "Chittraporn",
+    lastname_eng: "Thongkong",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "เฉลิมเดช ",
+    lastname_thai: "ประพิณไพโรจน์",
+    name_eng: "Chalermdej",
+    lastname_eng: "Prapinpairoj",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "ณภัทร ",
+    lastname_thai: "เครือทิวา",
+    name_eng: "Naphat",
+    lastname_eng: "Kruatiwa",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "ณัฏฐา ",
+    lastname_thai: "สุภาสนันท",
+    name_eng: "Nattha",
+    lastname_eng: "Suphasanan",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "ณัฐดา ",
+    lastname_thai: "ฟักทอง",
+    name_eng: "Nuttida",
+    lastname_eng: "Fangthong",
+    gender: "male",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "ณัฐพงษ์",
+    lastname_thai: "ธนโชติเจริญ",
+    name_eng: "Natthapong",
+    lastname_eng: "Thanachotcharoen",
+    gender: "male",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "ทวีภรณ์",
+    lastname_thai: "ศรีสุขคํา",
+    name_eng: "Thaweeporn",
+    lastname_eng: "Srisukkham",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  }, {
+    name_thai: "สมหมาย ",
+    lastname_thai: "ใจดี",
+    name_eng: "sommai",
+    lastname_eng: "jaidee",
+    gender: "male",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "35",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "สมศรี ",
+    lastname_thai: "มีใจ",
+    name_eng: "somsri",
+    lastname_eng: "meejai",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "กนกนันทร์ ",
+    lastname_thai: "สุเชาว์อินทร์",
+    name_eng: "Kanoknan",
+    lastname_eng: "Suchao-in",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "จาริยา ",
+    lastname_thai: "รัชตาธิวัฒน์",
+    name_eng: "Jariya",
+    lastname_eng: "Ratchatathiwat",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "จารุนันท์ ",
+    lastname_thai: "พันธ์งามตา",
+    name_eng: "Jarunan",
+    lastname_eng: "Phanggamta",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "จิตราพร ",
+    lastname_thai: "ทองคง",
+    name_eng: "Chittraporn",
+    lastname_eng: "Thongkong",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "เฉลิมเดช ",
+    lastname_thai: "ประพิณไพโรจน์",
+    name_eng: "Chalermdej",
+    lastname_eng: "Prapinpairoj",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "ณภัทร ",
+    lastname_thai: "เครือทิวา",
+    name_eng: "Naphat",
+    lastname_eng: "Kruatiwa",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "ณัฏฐา ",
+    lastname_thai: "สุภาสนันท",
+    name_eng: "Nattha",
+    lastname_eng: "Suphasanan",
+    gender: "female",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "ณัฐดา ",
+    lastname_thai: "ฟักทอง",
+    name_eng: "Nuttida",
+    lastname_eng: "Fangthong",
+    gender: "male",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+  {
+    name_thai: "ณัฐพงษ์",
+    lastname_thai: "ธนโชติเจริญ",
+    name_eng: "Natthapong",
+    lastname_eng: "Thanachotcharoen",
+    gender: "male",
+
+    phone: "098-158-4478",
+    birthday: "20 Aug 2000",
+    age: "27",
+    religion: "พุธ",
+    IDCard: "1-7399-01893-76-5",
+    region: "ไทย",
+    address: "20-22 หมู่13 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000",
+
+    passport: "1635501893",
+    no_passport: "1478/63",
+    date_issue: "20 Aug 2022",
+    date_exp: "20 Aug 2026",
+    bed: "คู่",
+  },
+
+]);
+const data = ref(memberdata);
 const name = ref("Tour member");
 
 const datamember = ref([
