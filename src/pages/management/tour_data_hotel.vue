@@ -693,6 +693,7 @@ const showComment = ref(false);
 const showItems = ref('');
 const isItemModalHotelData = ref(false);
 const isItemModalHotelData2 = ref(false);
+const isItemModalHotelData3 = ref(false);
 const add = ref(false);
 const add2 = ref(false);
 const editHotel = ref(false);
