@@ -47,7 +47,7 @@
         >
         <MenuDropItem
           ><NuxtLink to="/paper_list/disbursement_list">
-            ใบขอเบิกเบิก
+            ใบขอเบิก
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem
@@ -58,6 +58,11 @@
         <MenuDropItem
           ><NuxtLink to="/paper_list/cashcertificate_list">
             ใบรับรองแทนใบเสร็จ
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/cashpayment_list">
+            ใบสำคัญจ่าย
           </NuxtLink></MenuDropItem
         >
       </MenuDropDown>

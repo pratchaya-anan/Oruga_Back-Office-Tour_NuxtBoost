@@ -102,7 +102,7 @@
 
       <!-- รายละเอียดข้อตกลง(ด้านซ้าย) -->
       <div
-        class="grid grid-cols-3 content-center gap-5 py-2 text-xs border-b border-black"
+        class="flex justify-between content-center gap-5 py-2 text-xs border-b border-black px-5"
       >
         <div class="col-span-2 flex">
           <div class="mr-[15px]">จำนวนเงิน(ตัวอักษร) Total Amount:</div>
@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-3 text-xs p-2 border-b border-black">
+      <div class="grid grid-cols-3 text-xs p-2 border-b border-black px-5">
         <div class="col-span-3 indent-8">
           ข้าพเจ้า นายกอไก่ ขอไข่ (ผู้เบิกจ่าย)ตำแหน่ง บัญชี ขอรับรองว่า
           รายจ่ายข้างต้นนี้ ไม่อาจเรียกเก็บใบเสร็จรับเงินจากผู้รับเงินได้

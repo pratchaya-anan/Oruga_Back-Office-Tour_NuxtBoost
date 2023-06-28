@@ -28,7 +28,7 @@
           <p
             class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-right"
           >
-            QUTT0001
+            CC230430-0001
           </p>
         </a>
         <div>
@@ -208,7 +208,7 @@
                     </div>
                   </diV>
                   <div class="mt-5 flex justify-center">
-                    <a href="/paper_edit/disbursement_item">
+                    <a href="/paper_edit/cashcertificate_item">
                       <o-button
                         class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
@@ -219,7 +219,7 @@
                         แก้ไข
                       </o-button>
                     </a>
-                    <a href="/paper/disbursement_paper">
+                    <a href="/paper/cashcertificate_paper">
                       <o-button
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
