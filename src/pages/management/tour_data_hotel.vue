@@ -91,8 +91,8 @@
                 <a href="#" @click="isItemModalHotelData2 = true"
                   class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 12 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> เป็นโรงแรมที่ดีมาก </p>
             </li>
             <li class="mb-10 ml-4">
@@ -106,8 +106,8 @@
                 <a href="#" @click="isItemModalHotelData2 = true"
                   class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 08978677867</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 12 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 08978677867</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> </p>
             </li>
             <li class="mb-10 ml-4">
@@ -120,8 +120,8 @@
                 <a href="#" @click="isItemModalHotelData2 = true"
                   class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวน 12 ห้อง</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 04989712356</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 12 ห้อง</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 04989712356</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> </p>
             </li>
           </ol>
@@ -170,23 +170,23 @@
                 </tr>
               </thead>
               <tbody>
-                <tr @click="add = true" class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
-                  <th class="px-3 py-4">
+                <tr  class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th @click="add = true" class="px-3 py-4">
                     1
                   </th>
-                  <td class="px-3 py-4">
+                  <td @click="add = true" class="px-3 py-4">
                     โรงแรม NHU MINH PLAZA
                   </td>
-                  <td class="px-3 py-4">
+                  <td @click="add = true" class="px-3 py-4">
                     Lot 2 - A2 - KH, Phạm Văn Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม
                   </td>
-                  <td class="px-3 py-4">
+                  <td @click="add = true" class="px-3 py-4">
                     0428976765
                   </td>
-                  <td class="px-3 py-4 text-center items-center">
+                  <td @click="add = true" class="px-3 py-4 text-center items-center">
                     120
                   </td>
-                  <td class="px-3 py-4 text-center items-center">
+                  <td @click="add = true" class="px-3 py-4 text-center items-center">
                     เป็นโรงแรมที่ดีมาก
                   </td>
                   <td class="px-3 py-4 text-center items-center">
@@ -295,15 +295,15 @@
         <o-modal v-model:active="isItemModalHotelData">
           <UiCard>
             <div class="mr-10 flex justify-center">
-              <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
-                ? (editHotel = true)
-                : (editHotel = false)">
-              </Icon>
+              
             </div>
             <div class="p-2 grid grid-cols-2 gap-0">
               <div class="w-full border-r">
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  โรงแรม NHU MINH PLAZA
+                  โรงแรม NHU MINH PLAZA <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
+                ? (editHotel = true)
+                : (editHotel = false)">
+              </Icon>
                 </h2>
                 <div class="px-2" v-if="!editHotel">
                   <p class="text-lg font-semibold  dark:text-white">ที่อยู่</p>
@@ -390,6 +390,9 @@
                   </div>
                 </div>
               </div>
+              <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบโรงแรม</o-button>
+              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+            </div>
             </div>
           </UiCard>
         </o-modal>

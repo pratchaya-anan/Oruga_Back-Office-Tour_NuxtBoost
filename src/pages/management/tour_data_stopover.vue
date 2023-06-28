@@ -1,6 +1,6 @@
 <template>
   <section class="h-m-screen">
-    <LayoutPageTitle> Tour Management  / จัดทัวร์ / จัดการจุดแวะพัก </LayoutPageTitle>
+    <LayoutPageTitle> Tour Management / จัดทัวร์ / จัดการจุดแวะพัก </LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto">
         <UiCard class="mb-4">
@@ -45,15 +45,25 @@
             </h3>
             <div class="flex space-x-3">
               <!-- โรงแรม -->
-              <NuxtLink href="/management/tour_data_hotel"><Icon class="w-6 h-6" name="mdi:bed"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_hotel">
+                <Icon class="w-6 h-6" name="mdi:bed"></Icon>
+              </NuxtLink>
               <!-- มัคคุเทศก์ -->
-              <NuxtLink href="/management/tour_data_guide"><Icon class="w-6 h-6 " name="mdi:face-woman-shimmer"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_guide">
+                <Icon class="w-6 h-6 " name="mdi:face-woman-shimmer"></Icon>
+              </NuxtLink>
               <!-- พาหนะ -->
-              <NuxtLink href="/management/tour_data_vehicle"><Icon class="w-6 h-6 " name="mdi:van-utility"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_vehicle">
+                <Icon class="w-6 h-6 " name="mdi:van-utility"></Icon>
+              </NuxtLink>
               <!-- สถานที่ -->
-              <NuxtLink href="/management/tour_data_stopover"><Icon class="w-6 h-6 text-blue-700" name="mdi:store-marker"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_stopover">
+                <Icon class="w-6 h-6 text-blue-700" name="mdi:store-marker"></Icon>
+              </NuxtLink>
               <!-- ร้านอาหาร -->
-              <NuxtLink href="/management/tour_data_restaurant"><Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon></NuxtLink>
+              <NuxtLink href="/management/tour_data_restaurant">
+                <Icon class="w-6 h-6" name="mdi:food-fork-drink"></Icon>
+              </NuxtLink>
             </div>
           </div>
         </UiCard>
@@ -76,9 +86,18 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-              <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white"><a href="#">บ้านหนองผือ</a></h3>
+              <h3 class="mt-1 flex justify-between text-lg font-semibold text-gray-900 dark:text-white">
+                <a>บ้านหนองผือ</a><a href="#" @click="isItemModalHotelData3 = true"
+                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">05.00 น.
-                จุดนัดหมาย อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว</p>
+                อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว</p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="octicon:comment-16" @click="
+                  showComment != true
+                    ? (showComment = true)
+                    : (showComment = false)
+                  "></Icon> เช็คความพร้อม
+              </p>
               <h3 class="mt-1 text-lg font-semibold text-gray-900 dark:text-white">ตม.มุขดาหาร</h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น.รับประทานอาหารเที่ยง
                 หน้าด่านลาวบาว ระหว่างรอเอกสารข้านแดน จากนั้นเดินทางต่อไปยังเมือง เว้-ตานัง</p>
@@ -138,6 +157,96 @@
           </ol>
         </UiCard>
       </div>
+
+      <o-modal v-model:active="isItemModalHotelData3">
+        <UiCard>
+          <div class="col-span-2">
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+              เลือกจุดแวะพัก
+            </h2>
+            <div class="flex items-center mb-4 p-4 border shadow-md">
+              <dev class="w-full relative inline-flex items-center">
+                <div class="mx-5">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">บ้านหนองผือ</h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภท จุดนัดหมาย</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ บ้านหนองผือ ตำบลหนองผือ
+                    อำเภอชานุมาน อำนาจเจริญ 37000</p>
+                </div>
+              </dev>
+            </div>
+          </div>
+          <div class="w-full ml-2">
+            <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+              คอมเมนต์
+            </h2>
+            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+              <div v-if="editcomment" class="col-span-2">
+                <o-input type="text" modelValue="เช็คความพร้อม"></o-input>
+              </div>
+              <p v-if="!editcomment" class="col-span-2">เช็คความพร้อม</p>
+              <p class="w-full text-end">20/06/66</p>
+
+              <p class="w-full text-end">
+                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                  ? (editcomment = true)
+                  : (editcomment = false)">
+                </Icon>
+              </p>
+
+            </div>
+            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+            <div v-if="showComment">
+              <o-field label="เขียนคอมเมนต์">
+                <o-input type="textarea"></o-input>
+              </o-field>
+              <div class="flex">
+                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                  <o-input></o-input>
+                </o-field>
+                <section class="flex-1 shrink flex items-center justify-end">
+                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                  </o-button>
+                  <o-button class="mt-5">เพิ่ม</o-button>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="text-lg font-semibold  dark:text-white">วันที่</p>
+            <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
+          </div>
+          <div>
+            <div class="flex gap-3">
+              <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
+              <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+            </div>
+            <o-input type="text" modelValue="05.00 น." v-if="time == 'time'"></o-input>
+            <select v-if="time == 'duration'" id="countries"
+              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <option selected>เลือกช่วงเวลา</option>
+              <option value="US">เช้า</option>
+              <option value="CA">เที่ยง</option>
+              <option value="FR">บ่าย</option>
+              <option value="DE">เย็น</option>
+            </select>
+          </div>
+
+          <div class="col-span-2">
+            <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
+            <o-input type="text"
+              modelValue="05.00 น. อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว"></o-input>
+          </div>
+          <div class="w-full ">
+
+
+            <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบจุดแวะพัก</o-button>
+              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+            </div>
+          </div>
+        </UiCard>
+      </o-modal>
+
+
       <div class="col-span-2">
         <UiCard>
           <div class="my-2 grid grid-cols-2 gap-2 mt-2">
@@ -149,7 +258,7 @@
             </div>
             <div class="flex justify-end">
 
-              <o-button>+ เพิ่มยานพาหนะ</o-button>
+              <o-button>+ เพิ่มจุดแวะพัก</o-button>
             </div>
           </div>
           <div class="relative overflow-x-auto border shadow-md sm:rounded-lg">
@@ -176,22 +285,22 @@
                   </th>
                 </tr>
               </thead>
-              <tbody >
-                <tr @click="add = true" class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
-                  <th class="px-3 py-3">
+              <tbody>
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th @click="add = true" class="px-3 py-3">
                     1
                   </th>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     บ้านหนองผือ
                   </td>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     จุดนัดหมาย
                   </td>
-                  <td class="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     บ้านหนองผือ ตำบลหนองผือ อำเภอชานุมาน อำนาจเจริญ 37000
                   </td>
 
-                  <td class="px-3 py-3 text-center items-center">
+                  <td @click="add = true" class="px-3 py-3 text-center items-center">
                     เช็คความพร้อม
                   </td>
                   <td class="px-3 py-3 text-center items-center">
@@ -406,19 +515,20 @@
         <o-modal v-model:active="isItemModalHotelData">
           <UiCard>
             <div class="flex justify-end">
-              <Icon class="w-6 h-6" name="ic:round-edit" @click="edit != true
-                ? (edit = true)
-                : (edit = false)">
-              </Icon>
+
             </div>
             <div class="p-2 grid grid-cols-2 gap-0">
               <div class="w-full border-r">
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  บ้านหนองผือ
+                  บ้านหนองผือ <Icon class="w-6 h-6" name="ic:round-edit" @click="edit != true
+                    ? (edit = true)
+                    : (edit = false)">
+                  </Icon>
                 </h2>
                 <div class="px-2" v-if="!edit">
                   <p class="text-base font-semibold  dark:text-white">ที่อยู่</p>
-                  <p class="ml-2 text-base font-normal  dark:text-white">บ้านหนองผือ ตำบลหนองผือ อำเภอชานุมาน อำนาจเจริญ 37000</p>
+                  <p class="ml-2 text-base font-normal  dark:text-white">บ้านหนองผือ ตำบลหนองผือ อำเภอชานุมาน อำนาจเจริญ
+                    37000</p>
                   <p class="text-base font-semibold  dark:text-white">ประเภทจุดแวะพัก</p>
                   <p class="ml-2 text-base font-normal  dark:text-white">จุดนัดหมาย</p>
                   <p class="text-base font-semibold  dark:text-white">ชื่อผู้ติดต่อ</p>
@@ -444,13 +554,21 @@
                   คอมเมนต์
                 </h2>
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <p class="col-span-2">อากาศดีมาก </p>
+                  <div v-if="editcomment" class="col-span-2">
+                    <o-input type="text" modelValue="เช็คความพร้อม"></o-input>
+                  </div>
+                  <p v-if="!editcomment" class="col-span-2">เช็คความพร้อม</p>
                   <p class="w-full text-end">20/06/66</p>
+
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="mdi:comment-edit"></Icon>
+                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                      ? (editcomment = true)
+                      : (editcomment = false)">
+                    </Icon>
                   </p>
+
                 </div>
-                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
                 <div v-if="showComment">
                   <o-field label="เขียนคอมเมนต์">
                     <o-input type="textarea"></o-input>
@@ -463,11 +581,20 @@
                       <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
                       </o-button>
                       <o-button class="mt-5">เพิ่ม</o-button>
+
                     </section>
+
                   </div>
+
                 </div>
+
               </div>
+
             </div>
+            <o-button variant="danger" @click="isItemModalHotelData = false" class="ml-4 mt-5">ลบจุดแวะพัก
+            </o-button>
+            <o-button @click="isItemModalHotelData = false" class="ml-4 mt-5">ปิด
+            </o-button>
           </UiCard>
         </o-modal>
         <o-modal v-model:active="add">
@@ -486,6 +613,40 @@
                   </div>
                 </dev>
               </div>
+              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+              คอมเมนต์
+            </h2>
+            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+              <div v-if="editcomment" class="col-span-2">
+                <o-input type="text" modelValue="เช็คความพร้อม"></o-input>
+              </div>
+              <p v-if="!editcomment" class="col-span-2">เช็คความพร้อม</p>
+              <p class="w-full text-end">20/06/66</p>
+
+              <p class="w-full text-end">
+                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                  ? (editcomment = true)
+                  : (editcomment = false)">
+                </Icon>
+              </p>
+
+            </div>
+            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+            <div v-if="showComment">
+              <o-field label="เขียนคอมเมนต์">
+                <o-input type="textarea"></o-input>
+              </o-field>
+              <div class="flex">
+                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                  <o-input></o-input>
+                </o-field>
+                <section class="flex-1 shrink flex items-center justify-end">
+                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                  </o-button>
+                  <o-button class="mt-5">เพิ่ม</o-button>
+                </section>
+              </div>
+            </div>
             </div>
             <div>
               <o-field label="วันที่">
@@ -533,6 +694,8 @@ onMounted(() => { initFlowbite() });
 
 const showComment = ref(false);
 const isItemModalHotelData = ref(false);
+const isItemModalHotelData3 = ref(false);
+const editcomment = ref(false);
 const add = ref(false);
 const edit = ref(false);
 const time = ref('time');
