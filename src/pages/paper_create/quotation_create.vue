@@ -10,7 +10,7 @@
       <div class="space-y-4">
         <UiCard>
           <h2 class="text-xl font-bold dark:text-white mb-2">
-            ค้นหาหน่วยงาน / ลูกค้า
+            ค้นหาหน่วยงาน/ลูกค้า
           </h2>
           <div class="flex items-center">
             <div class="relative w-full">
@@ -27,7 +27,7 @@
         <div>
           <UiCard v-if="showListAgency">
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือก หน่วยงาน / ลูกค้า ที่ต้องการนำไปออกใบเสนอราคา
+              เลือกหน่วยงาน/ลูกค้า ที่ต้องการนำไปออกใบเสนอราคา
             </h2>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
               <table
@@ -41,7 +41,9 @@
                     <th scope="col" class="px-6 py-4">หน่วยงาน / ลูกค้า</th>
                     <th scope="col" class="px-6 py-4">รหัสลูกค้า</th>
                     <th scope="col" class="px-6 py-4">ชื่อผู้ติดต่อ</th>
-                    <th scope="col" class="px-6 py-4">เลขประจำตัวผู้เสียภาษี</th>
+                    <th scope="col" class="px-6 py-4">
+                      เลขประจำตัวผู้เสียภาษี
+                    </th>
                     <th scope="col" class="px-6 py-4">เบอร์ติดต่อ</th>
                     <th scope="col" class="px-6 py-4">ที่อยู่</th>
                     <th></th>
@@ -65,7 +67,7 @@
                     <td class="px-6 py-4">
                       {{ i.idagency }}
                     </td>
-                    <td class="px-6 py-4">{{ i.namecontact}}</td>
+                    <td class="px-6 py-4">{{ i.namecontact }}</td>
                     <td class="px-6 py-4">{{ i.taxagency }}</td>
                     <td class="px-6 py-4">{{ i.phoneagency }}</td>
                     <td class="px-6 py-4">{{ i.addressagency }}</td>
@@ -84,13 +86,13 @@
         </div>
         <section v-if="!showAddAgency">
           <o-button @click="showAddAgency = true"
-            >เพิ่มหน่วยงาน / ลูกค้า</o-button
+            >เพิ่มหน่วยงาน/ลูกค้า</o-button
           >
         </section>
         <UiCard v-if="showAddAgency">
           <div>
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              ข้อมูล หน่วยงาน / ลูกค้า
+              เพิ่มหน่วยงาน/ลูกค้า
             </h2>
             <div class="grid grid-cols-2 gap-4 mt-3">
               <div>
@@ -107,7 +109,7 @@
                 <o-field label="ชื่อผู้ติดต่อ">
                   <o-input></o-input>
                 </o-field>
-              </div>              
+              </div>
               <div>
                 <o-field label="เลขประจำตัวผู้เสียภาษี">
                   <o-input></o-input>
@@ -122,12 +124,12 @@
                 <o-field label="ที่อยู่">
                   <o-input></o-input>
                 </o-field>
-              </div>                       
+              </div>
               <div>
                 <o-field label="Email">
                   <o-input></o-input>
                 </o-field>
-              </div> 
+              </div>
             </div>
             <div class="flex justify-end">
               <div>
@@ -149,10 +151,7 @@
           </h2>
           <div class="flex items-center">
             <div class="relative w-full">
-              <o-input
-                placeholder="ค้นหา ชื่อทัวร์"
-                class="w-full"
-              ></o-input>
+              <o-input placeholder="ค้นหา ชื่อทัวร์" class="w-full"></o-input>
             </div>
             <div class="ml-2">
               <o-button @click="showListTour = true">ค้นหา</o-button>
@@ -228,7 +227,7 @@
                   <div class="grid grid-cols-6">
                     <div class="col-span-5">
                       <h2 class="text-xl font-bold dark:text-white">
-                        ข้อมูลหน่วยงาน / ลูกค้า
+                        ข้อมูลหน่วยงาน/ลูกค้า
                       </h2>
                     </div>
                   </div>
@@ -241,7 +240,7 @@
                   <div
                     class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                   >
-                    <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                    <div class="mt-4">หน่วยงาน/ลูกค้า</div>
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
@@ -266,7 +265,18 @@
                     <div class="mt-2">เบอร์ติดต่อ</div>
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >0625584785                      
+                    >
+                      0625584785
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">Email</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      somchai@gmail.com
                     </div>
                   </div>
                   <div
@@ -379,7 +389,7 @@
                       <option value="??">??</option>
                     </o-select>
                   </o-field>
-                </div>               
+                </div>
                 <div>
                   <o-field label="ยืนยันราคาภายในวันที่">
                     <div class="relative">
@@ -437,9 +447,31 @@
                       />
                     </div>
                   </o-field>
-                </div> 
+                </div>
                 <div>
-                  <o-field label="วันที่ออกใบ">
+                  <o-field label="กำหนดราคามัดจำ">
+                    <div class="flex mt-2">
+                      <o-radio
+                        v-model="showcheck"
+                        name="name"
+                        native-value="persen"
+                        class="mr-3"
+                      >
+                        เปอร์เซ็น
+                      </o-radio>
+                      <o-radio
+                        v-model="showcheck"
+                        name="name"
+                        native-value="custom"
+                      >
+                        จำนวนเงิน
+                      </o-radio>
+                    </div>
+                    <o-input modelValue=""></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="วันที่ออกใบ" class="mt-8">
                     <div class="relative">
                       <div
                         class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
@@ -466,8 +498,8 @@
                       />
                     </div>
                   </o-field>
-                </div>            
-              </div>             
+                </div>
+              </div>
             </div>
             <div class="flex justify-end">
               <a href="/paper_edit/quotation_item">
