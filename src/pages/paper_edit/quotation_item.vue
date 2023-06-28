@@ -72,7 +72,7 @@
           </o-field>
           <o-field label="วันส่งของ">
             <o-input modelValue="17/07/2566"></o-input>
-          </o-field>          
+          </o-field>
           <section>
             <o-button @click="showOrderPanel = false" class="mt-4"
               >บันทึก</o-button
@@ -95,7 +95,7 @@
                 <div
                   class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                 >
-                  <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                  <div class="mt-4">หน่วยงาน/ลูกค้า</div>
                   <div
                     class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
@@ -134,13 +134,19 @@
                     1522236
                   </div>
                 </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
                   <div class="mt-2">Email</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
                     somchai@gmail.com
                   </div>
                 </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
                   <div class="mt-2">ที่อยู่</div>
                   <div
                     class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -152,7 +158,7 @@
             </div>
             <div class="sm:flex-1">
               <div
-                class="my-4 border-t border-gray-200 dark:border-gray-700"
+                class="my-2 border-t border-gray-200 dark:border-gray-700"
               ></div>
               <span>รายละเอียดฝ่ายขาย</span>
               <div
@@ -162,13 +168,17 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  สมชัย ใจเกินร้อย
+                  นายกอไก่ ขอไข่
                 </div>
               </div>
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+              <div
+                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+              >
                 <div class="mt-2">ฝ่าย/แผนก</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  ฝ่ายขาย
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  การเงิน
                 </div>
               </div>
               <div
@@ -178,17 +188,17 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  16/07/2566
+                  30/3/2566
                 </div>
               </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">วันส่งของ:</div>
+                <div class="mt-2">วันส่งของ</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  17/07/2566
+                  5/04/2566
                 </div>
               </div>
             </div>
@@ -227,10 +237,10 @@
               </th>
               <td class="px-6 py-4">ค่าตั๋วเครื่องบิน</td>
               <td class="px-6 py-4">3</td>
-              <td class="px-6 py-4">1000</td>
+              <td class="px-6 py-4">1,000</td>
               <td class="px-6 py-4">0%</td>
               <td class="px-6 py-4">7%</td>
-              <td class="px-6 py-4">3210</td>
+              <td class="px-6 py-4">3,210</td>
               <td class="px-6 py-4 text-right">
                 <button
                   id="dropdownMenuIconButton"
@@ -263,10 +273,10 @@
               </th>
               <td class="px-6 py-4">ค่าโรงแรม</td>
               <td class="px-6 py-4">2</td>
-              <td class="px-6 py-4">1500</td>
+              <td class="px-6 py-4">1,500</td>
               <td class="px-6 py-4">0%</td>
               <td class="px-6 py-4">7%</td>
-              <td class="px-6 py-4">3210</td>
+              <td class="px-6 py-4">3,210</td>
               <td class="px-6 py-4 text-right">
                 <button
                   id="dropdownMenuIconButton"

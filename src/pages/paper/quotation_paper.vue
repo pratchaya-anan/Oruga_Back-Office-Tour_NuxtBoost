@@ -20,7 +20,7 @@
             </div>
             <div class="col-span-3 text-center">Quatation</div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">0841142174178</div>
+            <div class="col-span-2 text-right">Q230430-0001</div>
             <div class="font-bold">วันที่:</div>
             <div class="col-span-2 text-right">24/03/2566</div>
           </div>
@@ -32,18 +32,20 @@
       <div class="col-span-2 grid grid-cols-3 m-5 text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-3">
-            <div class="col-span-1 font-bold">หน่วยงาน / ลูกค้า:</div>
-            <div class="col-span-2">S</div>
+            <div class="col-span-1 font-bold">หน่วยงาน/ลูกค้า:</div>
+            <div class="col-span-2">เทศบาลขอนแก่น</div>
             <div class="col-span-1 font-bold">ชื่อผู้ติดต่อ:</div>
-            <div class="col-span-2">N</div>
+            <div class="col-span-2">นายภาคภูมิ ภูเขียว</div>
             <div class="col-span-1 font-bold">ที่อยู่:</div>
-            <div class="col-span-2">20-22 ม.2 ขอนแก่น</div>
+            <div class="col-span-2">
+              175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+            </div>
             <div class="col-span-1 font-bold">ID TAX:</div>
-            <div class="col-span-2">12345</div>
+            <div class="col-span-2">1522236</div>
             <div class="col-span-1 font-bold">โทร:</div>
             <div class="col-span-2">0625584785</div>
             <div class="col-span-1 font-bold">Email:</div>
-            <div class="col-span-2">e@gmail.com</div>
+            <div class="col-span-2">somchai@gmail.com</div>
           </div>
         </div>
 
@@ -51,15 +53,15 @@
         <div class="border-l px-5">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
-            <div class="col-span-2 text-right">12345</div>
+            <div class="col-span-2 text-right">1552555214</div>
             <div class="col-span-1 font-bold">ผู้เสนอขาย:</div>
-            <div class="col-span-2 text-right">B</div>
-            <div class="col-span-1 font-bold">ฝ่าย:</div>
+            <div class="col-span-2 text-right">นายกอไก่ ขอไข่</div>
+            <div class="col-span-1 font-bold">ฝ่าย/แผนก:</div>
             <div class="col-span-2 text-right">การเงิน</div>
             <div class="col-span-2 font-bold">ยืนยันราคาภายใน:</div>
-            <div class="col-span-1 text-right">20/05/66</div>
+            <div class="col-span-1 text-right">30/3/2566</div>
             <div class="col-span-1 font-bold">วันส่งของ:</div>
-            <div class="col-span-2 text-right">30/05/66</div>
+            <div class="col-span-2 text-right">5/04/2566</div>
           </div>
         </div>
       </div>
@@ -69,7 +71,7 @@
         <table class="w-full text-center">
           <tr class="h-8 border-y border-black text-center text-sm">
             <th class="text-center">ลำดับ</th>
-            <th>รหัสสินค้า</th>
+            <!-- <th>รหัสสินค้า</th> -->
             <th>รายการสินค้า</th>
             <th>จำนวน</th>
             <th>ราคาต่อหน่วย</th>
@@ -77,15 +79,25 @@
             <th>ภาษี</th>
             <th>จำนวนเงิน</th>
           </tr>
-          <tr class="h-10 text-xs" v-for="item in 1" :key="item">
+          <tr class="h-10 text-xs">
             <td>1</td>
-            <td>14778854</td>
-            <td>ห้องพักและรถเดินทาง</td>
-            <td>12</td>
-            <td>20000</td>
-            <td>100</td>
-            <td>100</td>
-            <td>5%</td>
+            <!-- <td>---</td> -->
+            <td>ค่าตั๋วเครื่องบิน</td>
+            <td>3</td>
+            <td>1000</td>
+            <td>0</td>
+            <td>7%</td>
+            <td>3,210</td>
+          </tr>
+          <tr class="h-10 text-xs">
+            <td>2</td>
+            <!-- <td>---</td> -->
+            <td>ค่าโรงแรม</td>
+            <td>2</td>
+            <td>1,500</td>
+            <td>0</td>
+            <td>7%</td>
+            <td>3,210</td>
           </tr>
         </table>
       </div>
@@ -110,17 +122,17 @@
         <!-- สรุปรายการ(ด้านขวา) -->
         <div class="grid grid-cols-2 p-2">
           <div>มัดจำ</div>
-          <div class="text-right">5000 บาท</div>
-          <div>รวมเงิน</div>
-          <div class="text-right">59920 บาท</div>
+          <div class="text-right">3,000 บาท</div>
+          <div>มูลค่าสินค้า</div>
+          <div class="text-right">6,000 บาท</div>
           <div>ส่วนลดสินค้า</div>
           <div class="text-right">0 บาท</div>
-          <div>มูลค่าสินค้า</div>
-          <div class="text-right">56000 บาท</div>
-          <div>ภาษีมูลค่าเพิ่ม 7 %</div>
-          <div class="text-right">3920 บาท</div>
+          <div>รวมเงิน</div>
+          <div class="text-right">6,000 บาท</div>
+          <div>ภาษีมูลค่าเพิ่ม</div>
+          <div class="text-right">420 บาท</div>
           <div class="font-bold">จำนวนเงินทั้งสิ้น</div>
-          <div class="text-right font-bold">59920 บาท</div>
+          <div class="text-right font-bold">6,420 บาท</div>
         </div>
       </div>
 
