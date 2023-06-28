@@ -293,7 +293,7 @@
         <o-modal v-model:active="isItemModalHotelData4">
         <UiCard>
           <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-            เลือกรถ
+            แก้ไขรถ
           </h2>
           <div class="flex items-center mb-4 p-4 border shadow-md">
             <dev class="w-full relative inline-flex items-center">
@@ -479,7 +479,7 @@
         <UiCard>
           <div class="col-span-2">
             <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              เลือกจุดแวะพัก
+              แก้ไขจุดแวะพัก
             </h2>
             <div class="flex items-center mb-4 p-4 border shadow-md">
               <dev class="w-full relative inline-flex items-center">
@@ -669,7 +669,7 @@
         <UiCard>
           <div class="col-span-2">
             <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              เลือกจุดแวะพัก
+              แก้ไขร้านอาหาร
             </h2>
             <div class="flex items-center mb-4 p-4 border shadow-md">
                 <dev class="w-full relative inline-flex items-center">
