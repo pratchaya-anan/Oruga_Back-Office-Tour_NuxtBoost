@@ -166,7 +166,7 @@
               <tbody>
                 <tr
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                  v-for="i in tableData" @click="stepnext = 3">
+                  v-for="i in tableData">
 
                   <th scope="col" class="p-4">
                     <div class="flex items-center">
@@ -185,17 +185,16 @@
                     {{ i.productlist }}
                   </td>
                   <td>{{ i.quantity }}</td>
-                  <td>{{ i.unitprice }}</td>
-                  <td>
-                    <div class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                      เลือก
-                    </div>
-                  </td>
+                  <td>{{ i.unitprice }}</td>                  
                 </tr>
               </tbody>
             </table>
           </div>
         </UiCard>
+      </div>
+      <div class="flex justify-end">
+        <o-button @click="stepnext = 3" class="mt-4"
+          >บันทึก</o-button>
       </div>
     </o-step-item>
     <!-- step 3 -->
@@ -207,7 +206,7 @@
           </h2>
           <div class="flex items-center">
             <div class="relative w-full">
-              <o-input placeholder="ค้นหา ชื่อลูกค้า, รหัสลูกค้า" class="w-full"></o-input>
+              <o-input placeholder="ค้นหา ชื่อทัวร์" class="w-full"></o-input>
             </div>
             <div class="ml-2">
               <o-button @click="showListTour = true">ค้นหา</o-button>
@@ -234,7 +233,7 @@
                 <tbody>
                   <tr
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                    v-for="i in tableDatatour" @click="stepnext = 5">
+                    v-for="i in tableDatatour" @click="stepnext = 4">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       {{ i.id }}
                     </th>
@@ -281,29 +280,42 @@
               <div class="sm:flex xl:block xl:space-y-4">
                 <div class="sm:flex-1">
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-4">หน่วยงาน/ลูกค้า</div>
-                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      เทศบาลขอนแก่น
-                    </div>
+                  <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    เทศบาลขอนแก่น
                   </div>
-                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">รหัสลูกค้า</div>
-                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      1552555214
-                    </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">รหัสลูกค้า</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    1552555214
                   </div>
-                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
-                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      1522236
-                    </div>
+                  <div class="mt-2">ชื่อผู้ติดต่อ</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    นายภาคภูมิ ภูเขียว
                   </div>
-                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">ที่อยู่</div>
-                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
-                    </div>
+                  <div class="mt-2">เบอร์ติดต่อ</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">0625584785
                   </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    1522236
+                  </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">Email</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    somchai@gmail.com
+                  </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">ที่อยู่</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                  </div>
+                </div>
                 </div>
               </div>
             </section>
@@ -363,53 +375,124 @@
                         ใบกำกับภาษี
                       </h2>
                     </div>
+                    <!-- <div class="flex justify-end">
+                      <Icon
+                        class="mr-3 -ml-1 w-5 h-5"
+                        name="ic:round-edit"
+                        @click="
+                          showOrderPanel != true
+                            ? (showOrderPanel = true)
+                            : (showOrderPanel = false)
+                        "
+                      >
+                      </Icon>
+                    </div> -->
                   </div>
                   <ul class="mt-2 space-y-1">
                     <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                       Tax Invoice/Delivery Order
                     </li>
                     <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      เลขที่: 0841142174178
+                      เลขที่: B230430-0001
                     </li>
                   </ul>
                 </div>
               </div>
             </section>
-            <section class="my-2 border-t border-gray-200 dark:border-gray-700">
-              <div class="sm:flex xl:block xl:space-y-4">
-                <div class="sm:flex-1">
-                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-4">หน่วยงาน / ลูกค้า</div>
-                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      เทศบาลขอนแก่น
-                    </div>
+            <section v-if="showOrderPanel" class="my-4 border-t border-gray-200 dark:border-gray-700">
+              <o-field label="ชื่อผู้ขอเบิก">
+                <o-input modelValue="ศศิศ วิรัตน์จินดา"></o-input>
+              </o-field>
+              <o-field label="ชื่อผู้ติดต่อ">
+                <o-input modelValue="มะนาว หวานจังเลย"></o-input>
+              </o-field>
+              <o-field label="ที่อยู่">
+                <o-input modelValue="111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100"></o-input>
+              </o-field>
+              <o-field label="ที่อยู่">
+                <o-input modelValue="4585695214526"></o-input>
+              </o-field>
+              <o-field label="วัตถุประสงค์การยืมเงินทดลองจ่าย">
+                <o-input modelValue="เพื่อจ่ายเงิน"></o-input>
+              </o-field>
+              <section>
+                <o-button @click="showOrderPanel = false" class="mt-4">บันทึก</o-button>
+                <o-button @click="showOrderPanel = false" class="mt-4">ยกเลิก</o-button>
+              </section>
+            </section>
+            <section v-if="!showOrderPanel" class="my-4 border-t border-gray-200 dark:border-gray-700">
+              <span>รายละเอียดใบกำกับภาษี</span>
+               <div class="sm:flex xl:block xl:space-y-4">
+            <div class="sm:flex-1">
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    เทศบาลขอนแก่น
                   </div>
-                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">ชื่อผู้ติดต่อ</div>
-                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      มะนาว หวานจังเลย
-                    </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">รหัสลูกค้า</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    1552555214
                   </div>
-                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">ID TAX</div>
-                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
-                    </div>
+                  <div class="mt-2">ชื่อผู้ติดต่อ</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    นายภาคภูมิ ภูเขียว
                   </div>
-                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">ที่อยู่</div>
-                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      4585695214526
-                    </div>
+                  <div class="mt-2">เบอร์ติดต่อ</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">0625584785
                   </div>
-                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                    <div class="mt-2">วัตถุประสงค์การยืมเงินทดลองจ่าย</div>
-                    <div class="text-sm font-medium text-gray-900 dark:text-white">
-                      เพื่อจ่ายเงิน
-                    </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    1522236
+                  </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">Email</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    somchai@gmail.com
+                  </div>
+                </div>
+                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                  <div class="mt-2">ที่อยู่</div>
+                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="sm:flex-1">
+              <div class="my-4 border-t border-gray-200 dark:border-gray-700"></div>
+              <span>รายละเอียดฝ่ายขาย</span>
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">ผู้เสนอขาย</div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  สมชัย ใจเกินร้อย
+                </div>
+              </div>
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">ฝ่าย:</div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  ฝ่ายขาย
+                </div>
+              </div>
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">ยืนยันราคาภายในวันที่</div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  16/07/2566
+                </div>
+              </div>
+              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                <div class="mt-2">วันส่งของ:</div>
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  17/07/2566
+                </div>
+              </div>
+            </div>
+          </div>
             </section>
           </UiCard>
         </div>
@@ -590,17 +673,17 @@ const columns = ref([
 const tableData = [
   {
     id: 1,
-    productcode: "Lo-2586957",
-    productlist: "นายสายแสง ส่องไฟ",
-    quantity: "05-06-2566",
-    unitprice: "5,000",
+    productcode: "1552555214",
+    productlist: "นายภาคภูมิ ภูเขียว",
+    quantity: "05/06/2566",
+    unitprice: "6,420",
   },
   {
     id: 2,
-    productcode: "Lo-2586957",
-    productlist: "นายสายแสง ส่องไฟ",
-    quantity: "05-06-2566",
-    unitprice: "6,000",
+    productcode: "1552555214",
+    productlist: "นายภาคภูมิ ภูเขียว",
+    quantity: "05/06/2566",
+    unitprice: "6,420",
   },
 ];
 const tableDatalistitem = [
