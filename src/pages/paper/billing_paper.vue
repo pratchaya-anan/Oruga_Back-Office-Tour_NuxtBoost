@@ -20,7 +20,7 @@
             </div>
             <div class="col-span-3 text-center">Billing Note/Invoice</div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">0841142174178</div>
+            <div class="col-span-2 text-right">B230430-0001</div>
             <div class="font-bold">วันที่:</div>
             <div class="col-span-2 text-right">24/03/2566</div>
           </div>
@@ -53,11 +53,11 @@
         <div class="border-l px-5">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
-            <div class="col-span-2 text-right">C-58015259</div>
+            <div class="col-span-2 text-right">1552555214</div>
             <div class="col-span-1 font-bold">ผู้เสนอขาย:</div>
-            <div class="col-span-2 text-right">สมชัย ใจเกินร้อย</div>
-            <div class="col-span-1 font-bold">ฝ่าย:</div>
-            <div class="col-span-2 text-right">การตลาด</div>
+            <div class="col-span-2 text-right">นายกอไก่ ขอไข่</div>
+            <div class="col-span-1 font-bold">ฝ่าย/แผนก:</div>
+            <div class="col-span-2 text-right">การเงิน</div>
             <div class="col-span-2 font-bold">ยืนยันราคาวันที่:</div>
             <div class="col-span-1 text-right">31/03/2566</div>
           </div>
@@ -69,7 +69,7 @@
         <table class="w-full text-center">
           <tr class="h-8 border-y border-black text-center text-sm">
             <th class="text-center">ลำดับ</th>
-            <th>รหัสสินค้า</th>
+            <!-- <th>รหัสสินค้า</th> -->
             <th>รายการสินค้า</th>
             <th>จำนวน</th>
             <th>ราคาต่อหน่วย</th>
@@ -79,13 +79,23 @@
           </tr>
           <tr class="h-10 text-xs">
             <td>1</td>
-            <td>Q-4636653086</td>
-            <td>เที่ยวเกาะ เลาะรัก</td>
-            <td>10</td>
-            <td>5600</td>
-            <td>0</td>
+            <!-- <td>--</td> -->
+            <td>ค่าตั๋วเครื่องบิน</td>
+            <td>3</td>
+            <td>1000</td>
+            <td>0%</td>
             <td>7%</td>
-            <td>59920</td>
+            <td>3210</td>
+          </tr>
+          <tr class="h-10 text-xs">
+            <td>1</td>
+            <!-- <td>--</td> -->
+            <td>ค่าโรงแรม</td>
+            <td>2</td>
+            <td>1500</td>
+            <td>0%</td>
+            <td>7%</td>
+            <td>3210</td>
           </tr>
         </table>
       </div>
@@ -109,16 +119,16 @@
 
         <!-- สรุปรายการ(ด้านขวา) -->
         <div class="grid grid-cols-2 p-2">
+          <div>มัดจำ</div>
+          <div class="text-right">3,000 บาท</div>
           <div>รวมเงิน</div>
-          <div class="text-right">59920 บาท</div>
-          <div>มัดจำ 100%</div>
-          <div class="text-right">5000 บาท</div>
+          <div class="text-right">6,000 บาท</div>
           <div>มูลค่าคิดภาษี</div>
-          <div class="text-right">56000 บาท</div>
+          <div class="text-right">6,000 บาท</div>
           <div>ภาษีมูลค่าเพิ่ม</div>
-          <div class="text-right">3920 บาท</div>
+          <div class="text-right">420 บาท</div>
           <div class="font-bold">ยอดสุทธิ</div>
-          <div class="text-right font-bold">59920 บาท</div>
+          <div class="text-right font-bold">3,420บาท</div>
         </div>
       </div>
 

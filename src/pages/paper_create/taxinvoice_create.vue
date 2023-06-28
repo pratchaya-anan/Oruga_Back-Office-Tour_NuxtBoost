@@ -215,7 +215,7 @@
                       Tax Invoice/Delivery Order
                     </li>
                     <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      เลขที่: 0841142174178
+                      เลขที่: B230430-0001
                     </li>
                   </ul>
                 </div>
@@ -567,7 +567,7 @@
                       Billing Note/Invoice
                     </li>
                     <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      เลขที่: 0841142174178
+                      เลขที่: B230430-0001
                     </li>
                   </ul>
                 </div>

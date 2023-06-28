@@ -28,7 +28,7 @@
                 <li
                   class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
                 >
-                  เลขที่: 0841142174178
+                  เลขที่: Q230430-0001
                 </li>
               </ul>
             </div>

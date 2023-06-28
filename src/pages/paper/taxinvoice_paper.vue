@@ -21,7 +21,7 @@
               ต้นฉบับ/Original (เอกสารออกเป็นชุด)
             </div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">0841142174178</div>
+            <div class="col-span-2 text-right">T230430-0001</div>
             <div class="font-bold">วันที่:</div>
             <div class="col-span-2 text-right">24/03/2566</div>
           </div>
@@ -34,13 +34,13 @@
         <div class="col-span-2">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
-            <div class="col-span-2">ศศิศ วิรัตน์จินดา</div>
+            <div class="col-span-2">นายภาคภูมิ ภูเขียว</div>
             <div class="col-span-1 font-bold">ที่อยู่:</div>
             <div class="col-span-2">
-              111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+              175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
             </div>
             <div class="col-span-1 font-bold">เลขประจำตัวผู้เสียภาษี:</div>
-            <div class="col-span-2">4585695214526</div>
+            <div class="col-span-2">1522236</div>
             <div class="flex items-center">
               <input id="default-checkbox" type="checkbox" value=""
                 class="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
@@ -60,11 +60,11 @@
         <div class="border-l px-5">
           <div class="grid grid-cols-3">
             <div class="col-span-1 font-bold">รหัสลูกค้า:</div>
-            <div class="col-span-2 text-right">C-58015259</div>
+            <div class="col-span-2 text-right">1552555214</div>
             <div class="col-span-1 font-bold">ผู้ขาย:</div>
-            <div class="col-span-2 text-right">สมชัย ใจเกินร้อย</div>
-            <div class="col-span-1 font-bold">ฝ่าย:</div>
-            <div class="col-span-2 text-right">การตลาด</div>
+            <div class="col-span-2 text-right">นายกอไก่ ขอไข่</div>
+            <div class="col-span-1 font-bold">ฝ่าย/แผนก:</div>
+            <div class="col-span-2 text-right">การเงิน</div>
             <div class="col-span-2 font-bold">ยืนยันราคาวันที่:</div>
             <div class="col-span-1 text-right">31/03/2566</div>
             <div class="col-span-2 font-bold">กำหนดชำระ:</div>
@@ -78,7 +78,6 @@
         <table class="w-full text-center">
           <tr class="h-8 border-y border-black text-center text-sm">
             <th class="text-center">ลำดับ</th>
-            <th>รหัสสินค้า</th>
             <th>รายการสินค้า</th>
             <th>จำนวน</th>
             <th>ราคาต่อหน่วย</th>
@@ -88,7 +87,6 @@
           </tr>
           <tr v-for="(i, idx) in dataitem" :key="idx" class="h-10 text-xs">
             <td>{{ idx+1 }}</td>
-            <td>{{ i.id }}</td>
             <td>{{ i.nameitem }}</td>
             <td>{{ i.quantity }}</td>
             <td>{{ i.unitprice }}</td>
@@ -122,17 +120,17 @@
         <!-- สรุปรายการ(ด้านขวา) -->
         <div class="grid grid-cols-2 p-2">
           <div>รวมเงิน</div>
-          <div class="text-right">59920 บาท</div>
+          <div class="text-right">6,000 บาท</div>
           <div>หักส่วนลดพิเศษ</div>
-          <div class="text-right">5000 บาท</div>
+          <div class="text-right">6,000 บาท</div>
           <div>มูลค่ายกเว้นภาษี</div>
-          <div class="text-right">0 บาท</div>
+          <div class="text-right">6,000 บาท</div>
           <div>มูลค่าคิดภาษี</div>
-          <div class="text-right">5600 บาท</div>
+          <div class="text-right">6,000 บาท</div>
           <div>ภาษีมูลค่าเพิ่ม</div>
-          <div class="text-right">3920 บาท</div>
+          <div class="text-right">420 บาท</div>
           <div class="font-bold">จำนวนเงินทั้งสิ้น</div>
-          <div class="text-right font-bold">59920 บาท</div>
+          <div class="text-right font-bold">6,420 บาท</div>
         </div>
       </div>
 
@@ -179,14 +177,22 @@ import { initFlowbite } from "flowbite";
 
 const dataitem = [
   {
-    id:'Q-4636653086',
-    nameitem:'เที่ยวเกาะ เลาะรัก',
-    quantity:10,
-    unitprice:5600,
-    discount:0,
-    tax:7,
-    amount:59920
+    nameitem:'ค่าตั๋วเครื่องบิน',
+    quantity:3,
+    unitprice:'1000',
+    discount:'0%',
+    tax:210,
+    amount:'3210',
+  },
+  {
+    nameitem:'ค่าโรงแรม',
+    quantity:2,
+    unitprice:'1500',
+    discount:'0%',
+    tax:210,
+    amount:'3210',
   }
+  
 ]
 
 function print() {
