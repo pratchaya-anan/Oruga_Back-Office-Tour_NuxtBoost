@@ -1,13 +1,13 @@
 <template>
   <section class="h-m-screen">
-    <LayoutPageTitle> Tour / จัดทัวร์ / จัดการไกด์ </LayoutPageTitle>
+    <LayoutPageTitle> Tour Management  / จัดทัวร์ / จัดการไกด์ </LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto mb-4">
         <UiCard class="mb-4">
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div>
               <h2 class="text-xl font-bold dark:text-white">
-                องค์การบริหารส่วนตำบลโพนงาม
+                ทัวร์เว้ ดานัง ประเทศเวียดนาม
               </h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
