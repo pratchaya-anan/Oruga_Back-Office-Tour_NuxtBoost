@@ -36,13 +36,13 @@
           </o-field>
           <o-field label="เลขประจำตัวผู้เสียภาษี">
             <o-input modelValue="1522236"></o-input>
-          </o-field>          
+          </o-field>
           <o-field label="เบอร์โทร">
             <o-input modelValue="0625584785"></o-input>
-          </o-field>          
+          </o-field>
           <o-field label="ที่อยู่">
             <o-input modelValue="175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น"></o-input>
-          </o-field>          
+          </o-field>
           <o-field label="ได้รับเงินจาก (ผู้ซื้อ/ผู้รับบริการ)">
             <o-input modelValue="นายนที บุญมา"></o-input>
           </o-field>
@@ -83,12 +83,12 @@
                 <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                   <div class="mt-2">ได้รับเงินจาก (ผู้ซื้อ/ผู้รับบริการ)</div>
                   <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    นายนที  บุญมา
+                    นายนที บุญมา
                   </div>
-                </div>                                          
+                </div>
               </div>
             </div>
-            
+
           </div>
         </section>
       </UiCard>
@@ -145,30 +145,22 @@
                   </svg>
                 </button>
               </td>
-            </tr>          
+            </tr>
           </tbody>
         </table>
 
         <!-- Dropdown menu -->
-        <div
-          id="dropdownDots"
-          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-        >
+        <div id="dropdownDots"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
           <div class="py-2">
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >
-              ลบ</a
-            >
+            <a href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+              ลบ</a>
           </div>
           <div class="py-2">
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >
-              แก้ไข</a
-            >
+            <a href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+              แก้ไข</a>
           </div>
         </div>
       </div>
@@ -177,73 +169,53 @@
       </section>
 
       <!-- Dropdown menu -->
-      <div
-        id="dropdownDots"
-        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-      >
+      <div id="dropdownDots"
+        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
         <div class="py-2">
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-          >
-            ลบ</a
-          >
+          <a href="#"
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+            ลบ</a>
         </div>
         <div class="py-2">
-          <a
-            href="#"
-            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-          >
-            แก้ไข</a
-          >
+          <a href="#"
+            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+            แก้ไข</a>
         </div>
       </div>
 
       <div v-if="showItemslist" class="mt-5">
-        <o-table
-          :data="data"
-          v-model:checked-rows="checkedRows"
-          checkable
-          :checkbox-position="checkboxPosition"
-        >
-          <o-table-column
-            v-for="column in columns"
-            v-bind="column"
-            #default="{ row }"
-            :key="column"
-          >
+        <o-table :data="data" v-model:checked-rows="checkedRows" checkable :checkbox-position="checkboxPosition">
+          <o-table-column v-for="column in columns" v-bind="column" #default="{ row }" :key="column">
             {{ row[column.field] }}
           </o-table-column>
         </o-table>
         <section>
           <o-button class="mt-4">บันทึก</o-button>
-          <o-button @click="showItemslist = false" class="ml-4"
-            >ยกเลิก</o-button
-          >
+          <o-button @click="showItemslist = false" class="ml-4">ยกเลิก</o-button>
         </section>
       </div>
       <UiCard v-if="showItemsPanel">
-        <o-field class="flex-1" label="รายการสินค้า">
-          <o-input></o-input>
-        </o-field>
-        <div class="flex gap-4">
-          <o-field class="flex-1" label="จำนวน">
+        <div class="flex flex-1 gap-4">
+          <o-field class="flex-1" label="วัน เดือน ปี">
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <input datepicker type="text"
+                class="border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Select date" />
+            </div>
+          </o-field>
+          <o-field class="flex-1" label="รายการ">
             <o-input></o-input>
           </o-field>
-          <o-field class="flex-1" label="ราคาต่อหน่วย">
+          <o-field class="flex-1" label="จำนวนเงิน (บาท)">
             <o-input></o-input>
-          </o-field>
-        </div>
-        <div class="flex gap-4">
-          <o-field class="flex-1" label="ส่วนลด">
-            <o-input></o-input>
-          </o-field>
-          <o-field class="flex-1" label="ภาษี">
-            <o-select placeholder="ยกเว้นภาษี">
-              <option value="flint">ยกเว้นภาษี/0%</option>
-              <option value="silver">7%</option>
-              <option value="silver">9%</option>
-            </o-select>
           </o-field>
         </div>
         <section>
@@ -261,8 +233,8 @@
       </o-button>
     </a>
     <a href="/paper_list/cashreceipt_list">
-      <o-button variant="info"
-        ><Icon class="mr-2 -mt-1 w-6 h-6" name="iconamoon:close-bold"></Icon>
+      <o-button variant="info">
+        <Icon class="mr-2 -mt-1 w-6 h-6" name="iconamoon:close-bold"></Icon>
         ปิด
       </o-button>
     </a>
