@@ -18,9 +18,9 @@
             </div>
             <div class="col-span-3 text-center">Disbursement Estimate</div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">2310652498375</div>
+            <div class="col-span-2 text-right">D230627-0001</div>
             <div class="font-bold">วันที่:</div>
-            <div class="col-span-2 text-right">24/06/2566</div>
+            <div class="col-span-2 text-right">23/06/2566</div>
           </div>
         </div>
       </div>

@@ -15,9 +15,9 @@
 
     <UiSectionTabs></UiSectionTabs>
 
-    <section class="flex flex-wrap gap-4">
+    <section class="grid grid-cols-5 gap-4">
       <UiCard
-        v-for="(it, idx) in sec23"
+        v-for="(it, idx) in tableDatatour"
         :key="idx"
         @click="openmodal = true"
         class="flex-1 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -26,38 +26,40 @@
           <p
             class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-right"
           >
-            Q230430-0001
+            {{ it.idpaper }}
           </p>
         </a>
         <div>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
+            <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
+            {{ it.agency }}
+          </p>
+          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
+            <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
+            {{ it.agency }}
+          </p>
+          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h-5" name="eva:people-fill"></Icon>
-            ศศิศ วิรัตน์จินดา
+            {{ it.name }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h5" name="ri:phone-fill"></Icon>
-            095-382825
+            {{ it.phone }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="ic:baseline-date-range"
             ></Icon>
-            24-03-2566
+            {{ it.date }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="majesticons:money-line"
             ></Icon>
-            59,920.00
+            {{ it.price }}
           </p>
-        </div>
-        <div>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
         </div>
       </UiCard>
     </section>
@@ -66,16 +68,23 @@
             class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"> -->
 
     <o-modal v-model:active="openmodal">
-      <div class="relative w-full max-w-2xl max-h-full">
+      <div class="relative w-full min-w-[400px] max-w-2xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <!-- Modal header -->
           <div
             class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
           >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              รายละเอียด
-            </h3>
+            <ul class="mt-2 space-y-1">
+              <li class="text-xl font-semibold text-gray-900 dark:text-white">
+                ใบเสนอราคา
+              </li>
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                เลขที่: Q230430-0001
+              </li>
+            </ul>
             <button
               @click="openmodal = false"
               type="button"
@@ -97,160 +106,72 @@
             </button>
           </div>
           <!-- Modal body -->
-          <div>
+          <div class="p-6 font-normal text-gray-700 dark:text-gray-400">
             <div>
-              <div>
-                <div
-                  class="p-6 font-normal text-gray-700 dark:text-gray-400 mb-3"
-                >
-                  <diV>
-                    <div class="flex justify-between">
-                      <div>
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h5"
-                          name="eva:people-fill"
-                        ></Icon>
-                        ศศิศ วิรัตน์จินดา
-                      </div>
-                      <div>
-                        <button
-                          id="dropdownMenuIconButton"
-                          data-dropdown-toggle="dropdownDots"
-                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                          type="button"
-                        >
-                          <svg
-                            class="w-6 h-6"
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <!-- Dropdown menu -->
-                    <div
-                      id="dropdownDots"
-                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                    >
-                      <div class="py-2">
-                        <a
-                          href="#"
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          แก้ไข</a
-                        >
-                      </div>
-                      <div class="py-2">
-                        <a
-                          href="#"
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          ลบ</a
-                        >
-                      </div>
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="ri:phone-fill"
-                      ></Icon>
-                      095-658285
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="majesticons:money-line"
-                      ></Icon>
-                      59,920.00
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="teenyicons:id-solid"
-                      ></Icon>
-                      020202
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="mdi:address-marker"
-                      ></Icon>
-                      111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="ic:baseline-email"
-                      ></Icon>
-                      somchai@gmail.com
-                    </div>
-                  </diV>
-                  <hr class="my-5 border-1.5" />
-                  <diV>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h-5"
-                        name="tabler:user-code"
-                      ></Icon>
-                      C-58015259
-                    </div>
-                    <div>
-                      <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:user"></Icon>
-                      สมชัย ใจเกินร้อย
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h-5"
-                        name="fluent-emoji-high-contrast:department-store"
-                      ></Icon>
-                      การตลาด
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h-5"
-                        name="material-symbols:date-range"
-                      ></Icon>
-                      31/03/2566
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h-5"
-                        name="material-symbols:date-range"
-                      ></Icon>
-                      02-04-2566
-                    </div>
-                  </diV>
-                  <div class="mt-5 flex justify-center">
-                    <a href="/paper_edit/quotation_item">
-                      <o-button
-                        class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h-5"
-                          name="mdi:paper-edit"
-                        ></Icon>
-                        แก้ไข
-                      </o-button>
-                    </a>
-                    <a href="/paper/quotation_paper">
-                      <o-button
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
-                        </Icon>
-                        พิมพ์
-                      </o-button>
-                    </a>
-                  </div>
-                </div>
+              <span>รายละเอียดลูกค้า</span>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                หน่วยงาน/ลูกค้า
               </div>
-              <div></div>
+              <div>เทศบาลขอนแก่น</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                รหัสลูกค้า
+              </div>
+              <div>1552555214</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ชื่อผู้ติดต่อ
+              </div>
+              <div>นายภาคภูมิ ภูเขียว</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                เบอร์ติดต่อ
+              </div>
+              <div>0625584785</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                เลขประจำตัวผู้เสียภาษี
+              </div>
+              <div>1522236</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                Email
+              </div>
+              <div>somchai@gmail.com</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ที่อยู่
+              </div>
+              <div>175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น</div>
+              <hr class="my-5 border-1.5" />
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ผู้เสนอขาย
+              </div>
+              <div>นายกอไก่ ขอไข่</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ฝ่าย/แผนก
+              </div>
+              <div>การเงิน</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ยืนยันราคาภายในวันที่
+              </div>
+              <div>30/3/2566</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                วันส่งของ
+              </div>
+              <div>05/04/2566</div>
+              <hr class="my-5 border-1.5" />
+              <div class="mt-5 flex justify-center">
+                <a href="/paper_edit/quotation_item">
+                  <o-button
+                    class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
+                    แก้ไข
+                  </o-button>
+                </a>
+                <a href="/paper/quotation_paper">
+                  <o-button
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
+                    </Icon>
+                    พิมพ์
+                  </o-button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -266,6 +187,17 @@ import { initFlowbite } from "flowbite";
 const openmodal = ref(false);
 const sec23 = Array.from(Array(6).keys()).map((x) => x + 1);
 console.log(sec23);
+
+const tableDatatour = [
+  {
+    idpaper: "Q230430-0001",
+    agency: "เทศบาลขอนแก่น",
+    name: "นายสรณ์สิริ สายบุตร",
+    phone: "0625584785",
+    date: "03/07/2566",
+    price: 6420,
+  },
+];
 
 onMounted(() => {
   initFlowbite();

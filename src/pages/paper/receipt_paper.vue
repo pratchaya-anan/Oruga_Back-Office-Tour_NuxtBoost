@@ -30,7 +30,7 @@
       <div class="col-span-2 grid grid-cols-3 m-5 text-xs">
         <div class="col-span-2">
           <div class="grid grid-cols-3">
-            <div class="col-span-1 font-bold">ชื่อลูกค้า:</div>
+            <div class="col-span-1 font-bold">หน่วยงาน/ลูกค้า:</div>
             <div class="col-span-2">เทศบาลขอนแก่น</div>
             <div class="col-span-1 font-bold">ที่อยู่:</div>
             <div class="col-span-2">
@@ -56,9 +56,7 @@
             <td>{{ i }}</td>
             <td>24/03/2566</td>
             <td>1552555214</td>
-            <td>
-              เทศบาลขอนแก่น 175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
-            </td>
+            <td>เทศบาลขอนแก่น 175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น</td>
             <td>6,420</td>
           </tr>
         </table>
@@ -76,9 +74,7 @@
         </div>
         <div class="col-span-4">
           <div class="mb-1">12,840 บาท</div>
-          <div class="mb-1">
-            หนึ่งหมื่นสองพันแปดร้อยสี่สิบบาทถ้วน
-          </div>
+          <div class="mb-1">หนึ่งหมื่นสองพันแปดร้อยสี่สิบบาทถ้วน</div>
           <div class="mb-1">เช็คธนาคาร</div>
           <div class="mb-1">898.80 บาท</div>
           <div class="mb-1">7842744 // 24/03/2566</div>

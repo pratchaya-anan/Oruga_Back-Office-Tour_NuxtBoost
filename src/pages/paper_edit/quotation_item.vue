@@ -86,7 +86,7 @@
           v-if="!showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <span>รายละเอียดใบเสนอราคา</span>
+          <span>รายละเอียดลูกค้า</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
               <div
@@ -151,7 +151,7 @@
                   <div
                     class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
                   </div>
                 </div>
               </div>
@@ -160,7 +160,7 @@
               <div
                 class="my-2 border-t border-gray-200 dark:border-gray-700"
               ></div>
-              <span>รายละเอียดฝ่ายขาย</span>
+              <span>รายละเอียดผู้ติดต่อ</span>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
@@ -195,10 +195,8 @@
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
                 <div class="mt-2">วันส่งของ</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  5/04/2566
+                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  05/04/2566
                 </div>
               </div>
             </div>
@@ -302,27 +300,13 @@
         </table>
 
         <!-- Dropdown menu -->
-        <div
+        <ul
           id="dropdownDots"
           class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
         >
-          <div class="py-2">
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >
-              ลบ</a
-            >
-          </div>
-          <div class="py-2">
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            >
-              แก้ไข</a
-            >
-          </div>
-        </div>
+          <MenuDropItem>แก้ไข</MenuDropItem>
+          <MenuDropItem>ลบ</MenuDropItem>
+        </ul>
       </div>
 
       <section v-if="!showItemsPanel">
@@ -346,7 +330,7 @@
             <o-input></o-input>
           </o-field>
           <o-field class="flex-1" label="ภาษี">
-            <o-select placeholder="ยกเว้นภาษี">
+            <o-select placeholder="ยกเว้นภาษี/0%">
               <option value="flint">ยกเว้นภาษี/0%</option>
               <option value="silver">7%</option>
               <option value="silver">9%</option>
@@ -384,6 +368,17 @@
 import { initFlowbite } from "flowbite";
 const showItemsPanel = ref(false);
 const showOrderPanel = ref(false);
+
+const tableDatatour = [
+  {
+    idpaper: 'B230430-0001',
+    agency: "เทศบาลขอนแก่น",
+    name: "นายสรณ์สิริ สายบุตร",
+    phone: "0625584785",
+    date: "03/07/2566",
+    price: 6420,
+  },
+];
 
 onMounted(() => {
   initFlowbite();

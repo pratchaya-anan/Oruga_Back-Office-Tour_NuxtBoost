@@ -6,7 +6,7 @@
 
     <UiManageBar>
       <NuxtLink
-        to="/paper_create/cashcertificate_create"
+        to="/paper_create/estimate_create"
         type="button"
         class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
       >
@@ -17,9 +17,9 @@
 
     <UiSectionTabs></UiSectionTabs>
 
-    <section class="flex flex-wrap gap-4">
+    <section class="grid grid-cols-5 gap-4">
       <UiCard
-        v-for="(it, idx) in sec23"
+        v-for="(it, idx) in tableDatatour"
         :key="idx"
         @click="openmodal = true"
         class="flex-1 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -28,38 +28,35 @@
           <p
             class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-right"
           >
-            CC230430-0001
+            {{ it.idpaper }}
           </p>
         </a>
         <div>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h-5" name="eva:people-fill"></Icon>
-            ศศิศ วิรัตน์จินดา
+            {{ it.name }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h5" name="ri:phone-fill"></Icon>
-            ฝ่ายขาย
+            <Icon
+              class="mr-3 -ml-1 w-5 h5"
+              name="mingcute:department-fill"
+            ></Icon>
+            {{ it.type }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="ic:baseline-date-range"
             ></Icon>
-            องค์การบริหารส่วนตำบลโพนงาม
+            {{ it.date }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="majesticons:money-line"
             ></Icon>
-            1023456789123
+            {{ it.objective }}
           </p>
-        </div>
-        <div>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
         </div>
       </UiCard>
     </section>
@@ -68,16 +65,23 @@
             class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"> -->
 
     <o-modal v-model:active="openmodal">
-      <div class="relative w-full max-w-2xl max-h-full">
+      <div class="relative w-full min-w-[400px] max-w-2xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <!-- Modal header -->
           <div
             class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
           >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              รายละเอียด
-            </h3>
+            <ul class="mt-2 space-y-1">
+              <li class="text-xl font-semibold text-gray-900 dark:text-white">
+                ใบรับรองแทนใบเสร็จ
+              </li>
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                เลขที่: CC230430-0001
+              </li>
+            </ul>
             <button
               @click="openmodal = false"
               type="button"
@@ -100,138 +104,69 @@
           </div>
           <!-- Modal body -->
           <div>
-            <div>
-              <div>
-                <div
-                  class="p-6 font-normal text-gray-700 dark:text-gray-400 mb-3"
-                >
-                  <diV>
-                    <div class="flex justify-between">
-                      <div>
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h5"
-                          name="eva:people-fill"
-                        ></Icon>
-                        ศศิศ วิรัตน์จินดา
-                      </div>
-                      <div>
-                        <button
-                          id="dropdownMenuIconButton"
-                          data-dropdown-toggle="dropdownDots"
-                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                          type="button"
-                        >
-                          <svg
-                            class="w-6 h-6"
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <!-- Dropdown menu -->
-                    <div
-                      id="dropdownDots"
-                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                    >
-                      <div class="py-2">
-                        <a
-                          href="#"
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          แก้ไข</a
-                        >
-                      </div>
-                      <div class="py-2">
-                        <a
-                          href="#"
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          ลบ</a
-                        >
-                      </div>
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="ri:phone-fill"
-                      ></Icon>
-                      ฝ่ายขาย
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="majesticons:money-line"
-                      ></Icon>
-                      องค์การบริหารส่วนตำบลโพนงาม
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="teenyicons:id-solid"
-                      ></Icon>
-                      1023456789123
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="mdi:address-marker"
-                      ></Icon>
-                      111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
-                    </div>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h5"
-                        name="ic:baseline-email"
-                      ></Icon>
-                      21 เมษายน 2566 ถึง 24 เมษายน 2566
-                    </div>
-                  </diV>
-                  <hr class="my-5 border-1.5" />
-                  <diV>
-                    <div>
-                      <Icon
-                        class="mr-3 -ml-1 w-5 h-5"
-                        name="tabler:user-code"
-                      ></Icon>
-                      ผู้อนุมัติ
-                    </div>
-                    <div>
-                      <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:user"></Icon>
-                      สรสิริ สายบุตร
-                    </div>
-                  </diV>
-                  <div class="mt-5 flex justify-center">
-                    <a href="/paper_edit/cashcertificate_item">
-                      <o-button
-                        class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h-5"
-                          name="mdi:paper-edit"
-                        ></Icon>
-                        แก้ไข
-                      </o-button>
-                    </a>
-                    <a href="/paper/cashcertificate_paper">
-                      <o-button
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
-                        </Icon>
-                        พิมพ์
-                      </o-button>
-                    </a>
-                  </div>
-                </div>
+            <div class="p-6 font-normal text-gray-700 dark:text-gray-400 mb-3">
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ชื่อผู้ขอเบิก
               </div>
-              <div></div>
+              <div>นายสรณ์สิริ สายบุตร</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                แผนก
+              </div>
+              <div>บริการลูกค้า</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                วัตถุประสงค์การยืมเงินทดลองจ่าย
+              </div>
+              <div>ค่าใช้จ่ายในทัวร์</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                วันที่เคลียร์
+              </div>
+              <div>05/07/2566</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                โครงการ
+              </div>
+              <div>องค์การบริหารส่วนตำบลโพนงาม</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                รายละเอียดโครงการ/กิจกรรม
+              </div>
+              <div>นำสมาชิกเข้าร่วมการอบรมณ์</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ยอดเงินประมาณการ
+              </div>
+              <div>82,800</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ยอดสุทธิ
+              </div>
+              <div>49,300</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ยอดเงินเบิกเพิ่ม
+              </div>
+              <div>0</div>
+              <div class="font-semibold text-gray-900 dark:text-white">
+                ยอดเงินส่งคืน
+              </div>
+              <div>33,500</div>
+              <div class="mt-5 flex justify-center">
+                <a href="/paper_edit/cashcertificate_item">
+                  <o-button
+                    class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    <Icon
+                      class="mr-3 -ml-1 w-5 h-5"
+                      name="mdi:paper-edit"
+                    ></Icon>
+                    แก้ไข
+                  </o-button>
+                </a>
+                <a href="/paper/cashcertificate_paper">
+                  <o-button
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
+                    </Icon>
+                    พิมพ์
+                  </o-button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -247,6 +182,44 @@ import { initFlowbite } from "flowbite";
 const openmodal = ref(false);
 const sec23 = Array.from(Array(6).keys()).map((x) => x + 1);
 console.log(sec23);
+
+const tableDatatour = [
+  {
+    idpaper: "CR230705-0001",
+    name: "นายสรณ์สิริ สายบุตร",
+    type: "ฝ่ายบริการลูกค้า",
+    objective: "ค่าใช้จ่ายในทัวร์",
+    date: "03/07/2566",
+  },
+  {
+    idpaper: "CR230705-0002",
+    name: "นางสาวรินดา จุตตะโน",
+    type: "การเงิน",
+    objective: "ใช้จ่ายทั่วไปในบริษัทย์",
+    date: "30/06/2566",
+  },
+  {
+    idpaper: "CR230705-0003",
+    name: "นางสาวรินดา จุตตะโน",
+    type: "การเงิน",
+    objective: "ใช้จ่ายทั่วไปในบริษัทย์",
+    date: "30/06/2566",
+  },
+  {
+    idpaper: "CR230705-0004",
+    name: "นางสาวรินดา จุตตะโน",
+    type: "การเงิน",
+    objective: "ใช้จ่ายทั่วไปในบริษัทย์",
+    date: "30/06/2566",
+  },
+  {
+    idpaper: "CR230705-0005",
+    name: "นางสาวรินดา จุตตะโน",
+    type: "การเงิน",
+    objective: "ใช้จ่ายทั่วไปในบริษัทย์",
+    date: "30/06/2566",
+  },
+];
 
 onMounted(() => {
   initFlowbite();
