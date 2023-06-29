@@ -226,10 +226,10 @@
 
         <hr class="my-4 border-1.5" />
         <div class="flex justify-end">
-          <NuxtLink href="/management/tour_data_members">
+          <NuxtLink href="/tour_data">
             <o-button>ยกเลิก</o-button>
           </NuxtLink>
-          <NuxtLink href="/management/tour_data_members">
+          <NuxtLink href="/tour_data">
             <o-button>บันทึก</o-button>
           </NuxtLink>
         </div>
