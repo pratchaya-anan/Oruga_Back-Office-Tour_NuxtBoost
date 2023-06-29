@@ -18,9 +18,9 @@
             </div>
             <div class="col-span-3 text-center">Estimate Clearing</div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">0642531698546</div>
+            <div class="col-span-2 text-right">E230705-0001</div>
             <div class="font-bold">วันที่:</div>
-            <div class="col-span-2 text-right">09/07/2566</div>
+            <div class="col-span-2 text-right">05/07/2566</div>
           </div>
         </div>
       </div>

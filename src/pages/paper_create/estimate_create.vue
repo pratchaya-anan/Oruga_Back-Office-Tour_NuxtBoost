@@ -74,7 +74,7 @@
                       Disbursement Estimate
                     </li>
                     <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                      เลขที่: 2310652498375
+                      เลขที่: D230705-0001
                     </li>
                   </ul>
                 </div>
