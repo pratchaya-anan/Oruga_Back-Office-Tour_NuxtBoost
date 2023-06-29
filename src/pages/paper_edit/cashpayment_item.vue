@@ -1,4 +1,5 @@
 <template>
+  <LayoutPageTitle> Cashpayment / ใบสำคัญจ่าย </LayoutPageTitle>
   <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
     <div class="col-span-full xl:col-auto mb-4">
       <UiCard class="mb-4">
@@ -63,97 +64,127 @@
           v-if="!showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <span>รายละเอียดใบเคลียร์เงินสดย่อย</span>
+          <span>รายละเอียดใบสำคัญจ่าย</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-4">ชื่อหน่วยงาน (ผู้ซื้อ/ผู้รับบริการ)</div>
+                <div class="mt-4">ชื่อผู้เบิกจ่าย</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  นายสรณ์สิริ สายบุตร
+                  -------
                 </div>
               </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">อ้างอิงถึงเลขที่ใบเบิกเงินสดย่อย</div>
+                <div class="mt-4">ฝ่าย/แผนก</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  2310652498375
+                  -------
                 </div>
               </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">โครงการ</div>
+                <div class="mt-4">จ่ายให้</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  องค์การบริหารส่วนตำบลโพนงาม
+                  -------
                 </div>
               </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">รายละเอียดโครงการ/กิจกรรม</div>
+                <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  นำสมาชิกเข้าร่วมการอบรมณ์
+                  -------
                 </div>
               </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">ฝ่าย/แผนก:</div>
+                <div class="mt-2">เบอร์โทร</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  บริการ
+                  -------
                 </div>
               </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">ยอดเงินประมาณการ:</div>
+                <div class="mt-2">ที่อยู่</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  82,800
+                  -------
                 </div>
               </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">ยอดสุทธิ:</div>
+                <div class="mt-2">จ่ายผ่าน</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  49,300
+                  -------
                 </div>
               </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">ยอดเงินเบิกเพิ่ม:</div>
+                <div class="mt-2">เลขที่</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  0
+                  -------
                 </div>
               </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">ยอดเงินส่งคืน:</div>
+                <div class="mt-2">ลงวันที่</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  33,500
+                  -------
+                </div>
+              </div>
+              <div
+                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+              >
+                <div class="mt-2">เพื่อชำระ</div>
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  -------
+                </div>
+              </div>
+              <div
+                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+              >
+                <div class="mt-2">ตั้งแต่วันที่</div>
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  -------
+                </div>
+              </div>
+              <div
+                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+              >
+                <div class="mt-2">ถึงวันที่</div>
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  -------
                 </div>
               </div>
             </div>
@@ -171,12 +202,20 @@
           >
             <tr>
               <th scope="col" class="px-6 py-3">ลำดับ</th>
-              <th scope="col" class="px-6 py-3">วันที่ใบเสร็จ</th>
-              <th scope="col" class="py-3 px-1">รายละเอียดค่าใช้จ่าย</th>
-              <th scope="col" class="py-3 px-1">ประเภทค่าใช้จ่าย</th>
-              <th scope="col" class="px-6 py-3">เลขที่ใบเสร็จ</th>
-              <th scope="col" class="px-6 py-3">เลขประจำตัวผู้เสียภาษี</th>
-              <th scope="col" class="px-6 py-3">ยอดสุทธิ</th>
+              <th scope="col" class="px-6 py-3">วัน เดือน ปี</th>
+              <th scope="col" class="py-3 px-1">รายการ</th>
+              <th scope="col" class="py-3 px-1">
+                <p>จำนวนเงิน</p>
+                <p>(บาท)</p>
+              </th>
+              <th scope="col" class="px-6 py-3">
+                <p>หักภาษี ณ ที่จ่าย</p>
+                <p>(%)</p>
+              </th>
+              <th scope="col" class="px-6 py-3">
+                <p>เงินได้สุทธิ</p>
+                <p>บาท</p>
+              </th>
               <th scope="col" class="px-6 py-3">
                 <span class="sr-only">Edit</span>
               </th>
@@ -204,9 +243,6 @@
               </td>
               <td class="px-6 py-4">
                 {{ i.receiptnumber }}
-              </td>
-              <td class="px-6 py-4">
-                {{ i.taxnumber }}
               </td>
               <td class="px-6 py-4">
                 {{ i.price }}
@@ -265,48 +301,27 @@
 
       <UiCard v-if="showItemsPanel">
         <div class="flex gap-4">
-          <o-field class="flex-1" label="วันที่ใบ้เสร็จ">
+          <o-field class="flex-1" label="วัน เดือน ปี">
             <o-input></o-input>
           </o-field>
-          <o-field class="flex-1" label="ประเภทค่าใช้จ่าย">
-            <o-select
-              v-model="typeselected"
-              placeholder="เลือกประเภทค่าใช้จ่าย"
-            >
-              <option value="flint">เบี้ยเลี้ยง</option>
-              <option value="silver">ค่าที่พัก</option>
-              <option value="silver">ค่ายานพาหนะ</option>
-              <option value="silver">ค่าน้ำมัน</option>
-              <option value="silver">ค่าไกด์</option>
-              <option value="other">อื่น ๆ</option>
+          <o-field class="flex-1" label="รายการ">
+            <o-input></o-input>
+          </o-field>
+        </div>
+        <div class="flex gap-4">
+          <o-field class="flex-1" label="จำนวนเงิน">
+            <o-input></o-input>
+          </o-field>
+          <o-field class="flex-1" label="หักภาษี ณ ที่จ่าย">
+            <o-select v-model="typeselected" placeholder="ยกเว้นภาษี/0%">
+              <option value="ยกเว้นภาษี/0%">ยกเว้นภาษี/0%</option>
+              <option value="7%">7%</option>
+              <option value="9%">9%</option>
             </o-select>
           </o-field>
         </div>
-        <o-field
-          v-if="typeselected == 'other'"
-          class="flex-1"
-          label="รายละเอียดค่าใช้จ่าย"
-        >
-          <o-input></o-input>
-        </o-field>
         <div class="flex gap-4">
-          <o-field class="flex-1" label="รายละเอียดค่าใช้จ่าย">
-            <o-input></o-input>
-          </o-field>
-          <o-field class="flex-1" label="ราคาต่อหน่วย">
-            <o-input></o-input>
-          </o-field>
-        </div>
-        <div class="flex gap-4">
-          <o-field class="flex-1" label="เลขที่ใบเสร็จ">
-            <o-input></o-input>
-          </o-field>
-          <o-field class="flex-1" label="เลขประจำตัวผู้เสียภาษี">
-            <o-input></o-input>
-          </o-field>
-        </div>
-        <div class="flex gap-4">
-          <o-field class="basis-1/2" label="ยอดสุทธิ">
+          <o-field class="basis-1/2 pr-2" label="เงินได้สุทธิ">
             <o-input></o-input>
           </o-field>
         </div>
@@ -322,13 +337,13 @@
     </div>
   </div>
   <div class="flex justify-end">
-    <a href="/paper/cashcertificate_paper">
+    <a href="/paper/cashpayment_paper">
       <o-button>
         <Icon class="mr-2 -mt-1 w-6 h-6" name="ic:round-print"></Icon>
         พิมพ์
       </o-button>
     </a>
-    <a href="/paper_list/cashcertificate_list">
+    <a href="/paper_list/cashcashpayment_list">
       <o-button variant="info">
         <Icon class="mr-2 -mt-1 w-6 h-6" name="iconamoon:close-bold"></Icon>
         ปิด
