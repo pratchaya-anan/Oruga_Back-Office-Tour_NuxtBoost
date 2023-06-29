@@ -78,7 +78,7 @@
             </h2>
             <div class="grid grid-cols-2 gap-4 mt-3">
               <div>
-                <o-field label="ผู้รับเงิน">
+                <o-field label="ชื่อผู้รับเงิน">
                   <o-input></o-input>
                 </o-field>
               </div>
@@ -93,13 +93,13 @@
                 </o-field>
               </div>
               <div>
-                <o-field label="ที่อยู่">
+                <o-field label="Email">
                   <o-input></o-input>
                 </o-field>
               </div>
               <div>
-                <o-field label="Email">
-                  <o-input></o-input>
+                <o-field label="ที่อยู่">
+                  <o-input type="textarea"></o-input>
                 </o-field>
               </div>
             </div>
@@ -142,7 +142,7 @@
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      -------
+                      นายภาคภูมิ ภูเขียว
                     </div>
                   </div>
                   <div
@@ -152,7 +152,7 @@
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      -------
+                      0105556128421
                     </div>
                   </div>
                   <div
@@ -162,7 +162,7 @@
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      -------
+                      0625584785
                     </div>
                   </div>
                   <div
@@ -172,7 +172,7 @@
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      -------
+                      156 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
                     </div>
                   </div>
                 </div>
@@ -318,21 +318,18 @@ const showAddAgency = ref(false);
 const tableAgency = [
   {
     id: 1,
-    nameagency: "เทศบาลขอนแก่น",
-    idagency: "1552555214",
-    namecontact: "นายภาคภูมิ ภูเขียว ",
-    taxagency: "1522236",
+    namecontact: "นายภาคภูมิ ภูเขียว",
+    taxagency: "0105556128421",
     phoneagency: "0625584785",
-    addressagency: "156 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น",
+    addressagency: "156 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000",
   },
   {
     id: 2,
     nameagency: "สรสิริ สายบุตร",
-    idagency: "1547896524",
-    namecontact: "นางสาวดวงจันทร์ พันดาว ",
-    taxagency: "13524569",
+    namecontact: "นางสาวดวงจันทร์ พันดาว",
+    taxagency: "0105556128421",
     phoneagency: "0925584785",
-    addressagency: "175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น",
+    addressagency: "175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000",
   },
 ];
 
