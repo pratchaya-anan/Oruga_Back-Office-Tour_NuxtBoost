@@ -1211,7 +1211,7 @@
               </div>
               <o-table :data="memberdata">
                 <o-table-column v-for="column in columns" v-bind="column" :key="column" #default="{ row }">
-                  {{ row[column.field] || '' }} {{ row[column.field2] || '' }}
+                  {{ row[column.field] || '' }} {{ row[column.field2] || '' }} 
                 </o-table-column>
               </o-table>
             </UiCard>
