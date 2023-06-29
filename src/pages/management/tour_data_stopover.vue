@@ -3,10 +3,10 @@
     <LayoutPageTitle> Tour Management / จัดทัวร์ / จัดการจุดแวะพัก </LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto">
-        <UiCard class="mb-4">
+        <UiCard>
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div>
-              <h2 class="text-xl font-bold dark:text-white mt-2">
+              <h2 class="text-xl font-bold dark:text-white">
                 ทัวร์เว้ ดานัง ประเทศเวียดนาม
               </h2>
               <ul class="mt-2 space-y-1">
@@ -67,7 +67,7 @@
             </div>
           </div>
         </UiCard>
-        <UiCard>
+        <UiCard class="mt-4">
           <div class="p-2 w-full relative">
             <NuxtLink href="/tour_data">
               <o-button
