@@ -200,7 +200,7 @@
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">วันส่งของ:</div>
+                <div class="mt-2">วันส่งของ</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >

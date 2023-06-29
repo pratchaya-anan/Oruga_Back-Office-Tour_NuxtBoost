@@ -134,7 +134,7 @@
               <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                 <div class="mt-2">วันส่งของ</div>
                 <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  5/04/2566
+                  05/04/2566
                 </div>
               </div>
             </div>
@@ -272,6 +272,17 @@
 import { initFlowbite } from "flowbite";
 const showItemsPanel = ref(false);
 const showOrderPanel = ref(false);
+
+const tableDatatour = [
+  {
+    idpaper: 'B230430-0001',
+    agency: "เทศบาลขอนแก่น",
+    name: "นายสรณ์สิริ สายบุตร",
+    phone: "0625584785",
+    date: "03/07/2566",
+    price: 6420,
+  },
+];
 
 onMounted(() => {
   initFlowbite();

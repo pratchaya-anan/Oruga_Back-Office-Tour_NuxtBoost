@@ -98,6 +98,7 @@
                 ที่อยู่
               </div>
               <div>175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น</div>
+              <hr class="my-5 border-1.5" />
               <div class="font-semibold text-gray-900 dark:text-white">
                 ผู้เสนอขาย
               </div>
@@ -105,25 +106,25 @@
               <div class="font-semibold text-gray-900 dark:text-white">
                 ฝ่าย/แผนก
               </div>
-              <div>ฝ่ายขาย</div>
+              <div>การเงิน</div>
               <div class="font-semibold text-gray-900 dark:text-white">
                 ยืนยันราคาภายในวันที่
               </div>
-              <div>16/07/2566</div>
+              <div>30/3/2566</div>
               <div class="font-semibold text-gray-900 dark:text-white">
                 วันส่งของ
               </div>
-              <div>317/07/2566</div>
+              <div>05/04/2566</div>
               <hr class="my-5 border-1.5" />
               <div class="mt-5 flex justify-center">
-                <a href="/paper_edit/estimate_item">
+                <a href="/paper_edit/quotation_item">
                   <o-button
                     class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
                     แก้ไข
                   </o-button>
                 </a>
-                <a href="/paper/estimate_paper">
+                <a href="/paper/quotation_paper">
                   <o-button
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
