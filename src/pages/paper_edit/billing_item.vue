@@ -44,7 +44,7 @@
           v-if="showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <o-field label="หน่วยงาน / ลูกค้า">
+          <o-field label="หน่วยงาน/ลูกค้า">
             <o-input modelValue="เทศบาลขอนแก่น"></o-input>
           </o-field>
           <o-field label="รหัสลูกค้า">
@@ -92,7 +92,7 @@
           v-if="!showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <span>รายละเอียดใบวางบิล/ใบแจ้งหนี้</span>
+          <span>รายละเอียดลูกค้า</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
               <div
@@ -166,7 +166,7 @@
               <div
                 class="my-4 border-t border-gray-200 dark:border-gray-700"
               ></div>
-              <span>รายละเอียดฝ่ายขาย</span>
+              <span>รายละเอียดผู้ติดต่อ</span>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
