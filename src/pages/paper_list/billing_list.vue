@@ -12,7 +12,7 @@
 
     <UiSectionTabs></UiSectionTabs>
 
-    <section class="flex flex-wrap gap-4">
+    <section class="grid grid-cols-5 gap-4">
       <UiCard v-for="(it, idx) in tableDatatour" :key="idx" @click="openmodal = true"
         class="flex-1 hover:bg-gray-100 dark:hover:bg-gray-700">
         <a href="#">
@@ -22,19 +22,19 @@
         </a>
         <div>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h-5" name="eva:people-fill"></Icon>
+            <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
             {{ it.agency }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h5" name="ri:phone-fill"></Icon>
+            <Icon class="mr-3 -ml-1 w-5 h5" name="eva:people-fill"></Icon>
             {{ it.name }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:baseline-date-range"></Icon>
+            <Icon class="mr-3 -ml-1 w-5 h-5" name="ri:phone-fill"></Icon>
             {{ it.phone }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h-5" name="majesticons:money-line"></Icon>
+            <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:baseline-date-range"></Icon>
             {{ it.date }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">

@@ -26,6 +26,10 @@
             {{ it.agency }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
+            <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
+            {{ it.agency }}
+          </p>
+          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h-5" name="eva:people-fill"></Icon>
             {{ it.name }}
           </p>
