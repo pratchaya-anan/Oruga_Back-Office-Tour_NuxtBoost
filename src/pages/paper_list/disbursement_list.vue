@@ -84,9 +84,6 @@
               </div>
               <div>องค์การบริหารส่วนตำบลโพนงาม</div>
               <div class="font-semibold text-gray-900 dark:text-white">
-                ยอดเงินประมาณการ
-              </div>
-              <div class="font-semibold text-gray-900 dark:text-white">
                 รายละเอียดโครงการ/กิจกรรม
               </div>
               <div>นำสมาชิกเข้าร่วมการอบรมณ์</div>
