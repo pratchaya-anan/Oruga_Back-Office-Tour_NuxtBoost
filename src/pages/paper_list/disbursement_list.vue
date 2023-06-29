@@ -12,43 +12,37 @@
 
     <UiSectionTabs></UiSectionTabs>
 
-    <section class="flex flex-wrap gap-4">
+    <section class="grid grid-cols-4 gap-4">
       <UiCard v-for="(it, idx) in tableDatatour" :key="idx" @click="openmodal = true"
         class="flex-1 hover:bg-gray-100 dark:hover:bg-gray-700">
         <a href="#">
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-right">
-            QUTT0001
+            {{ it.idpaper }}
           </p>
         </a>
         <div>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h-5" name="eva:people-fill"></Icon>
-            ศศิศ วิรัตน์จินดา
+            {{ it.name }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h5" name="ri:phone-fill"></Icon>
-            ฝ่ายขาย
+            {{ it.type }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:baseline-date-range"></Icon>
-            24-03-2566
+            {{ it.date }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h-5" name="majesticons:money-line"></Icon>
-            เพื่อจ่ายเงิน
+            {{ it.objective }}
           </p>
-        </div>
-        <div>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
         </div>
       </UiCard>
     </section>
 
     <o-modal v-model:active="openmodal">
-      <div class="relative w-full max-w-2xl max-h-full">
+      <div class="relative w-full min-w-[400px] max-w-2xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <!-- Modal header -->
@@ -69,7 +63,6 @@
           <!-- Modal body -->
           <div>
             <div class="p-6 font-normal text-gray-700 dark:text-gray-400 mb-3">
-              <diV>
                 <div class="font-semibold text-gray-900 dark:text-white">
                   ชื่อผู้ขอเบิก
                 </div>
@@ -97,6 +90,9 @@
                   รายละเอียดโครงการ/กิจกรรม
                 </div>
                 <div>นำสมาชิกเข้าร่วมการอบรมณ์</div>
+                <div class="font-semibold text-gray-900 dark:text-white">
+                  ยอดเงินประมาณการ
+                </div>
                 <div>82,800</div>
                 <div class="font-semibold text-gray-900 dark:text-white">
                   ยอดสุทธิ
@@ -110,7 +106,6 @@
                   ยอดเงินส่งคืน
                 </div>
                 <div>33,500</div>
-              </diV>
               <div class="mt-5 flex justify-center">
                 <a href="/paper_edit/disbursement_item">
                   <o-button
@@ -146,18 +141,39 @@ const sec23 = Array.from(Array(4).keys()).map((x) => x + 1);
 
 const tableDatatour = [
   {
-    id: 1,
-    nametour: "เกาะล้าน",
-    triptour: "ซื้อ 10 จ่าย 8",
-    datetours: "05/06/2566",
-    datetourend: "07/06/2566",
+    idpaper: 'E660627-0001',
+    name: "นายสรณ์สิริ สายบุตร",
+    type: "ฝ่ายบริการลูกค้า",
+    objective: "ค่าใช้จ่ายในทัวร์",
+    date: "03/07/2566",
   },
   {
-    id: 2,
-    nametour: "เที่ยวเกาะเลาะรัก",
-    triptour: "กาญจนบุรี-พัทยา",
-    datetours: "20/06/2566",
-    datetourend: "24/06/2566",
+    idpaper: 'E660627-0002',
+    name: "นางสาวรินดา จุตตะโน",
+    type: "การเงิน",
+    objective: "ใช้จ่ายทั่วไปในบริษัทย์",
+    date: "30/06/2566",
+  },
+  {
+    idpaper: 'E660627-0002',
+    name: "นางสาวรินดา จุตตะโน",
+    type: "การเงิน",
+    objective: "ใช้จ่ายทั่วไปในบริษัทย์",
+    date: "30/06/2566",
+  },
+  {
+    idpaper: 'E660627-0002',
+    name: "นางสาวรินดา จุตตะโน",
+    type: "การเงิน",
+    objective: "ใช้จ่ายทั่วไปในบริษัทย์",
+    date: "30/06/2566",
+  },
+  {
+    idpaper: 'E660627-0002',
+    name: "นางสาวรินดา จุตตะโน",
+    type: "การเงิน",
+    objective: "ใช้จ่ายทั่วไปในบริษัทย์",
+    date: "30/06/2566",
   },
 ];
 
