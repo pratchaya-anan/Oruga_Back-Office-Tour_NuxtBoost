@@ -7,7 +7,7 @@
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div>
               <h2 class="text-xl font-bold dark:text-white">
-                องค์การบริหารส่วนตำบลโพนงาม
+                ทัวร์เว้ ดานัง ประเทศเวียดนาม
               </h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
