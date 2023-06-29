@@ -32,6 +32,10 @@
         <div>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
+            {{ it.idpaper }}
+          </p>
+          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
+            <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
             {{ it.agency }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
@@ -57,17 +61,11 @@
             {{ it.price }}
           </p>
         </div>
-        <div>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-        </div>
       </UiCard>
     </section>
 
     <o-modal v-model:active="openmodal">
-      <div class="relative w-full max-w-2xl max-h-full">
+      <div class="relative w-full min-w-[400px] max-w-2xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <!-- Modal header -->
