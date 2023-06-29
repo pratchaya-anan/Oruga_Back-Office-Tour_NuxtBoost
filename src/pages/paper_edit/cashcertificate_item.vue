@@ -28,7 +28,7 @@
                 <li
                   class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
                 >
-                  เลขที่: 3462584695127
+                  เลขที่: CC230430-0001
                 </li>
               </ul>
             </div>
@@ -65,7 +65,7 @@
           v-if="!showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <span>รายละเอียดใบเคลียร์เงินสดย่อย</span>
+          <span>รายละเอียดลูกค้า</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
               <div
@@ -85,7 +85,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  2310652498375
+                  E230628-0001
                 </div>
               </div>
               <div
@@ -111,7 +111,7 @@
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">ฝ่าย/แผนก:</div>
+                <div class="mt-2">ฝ่าย/แผนก</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
@@ -121,7 +121,7 @@
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">ยอดเงินประมาณการ:</div>
+                <div class="mt-2">ยอดเงินประมาณการ</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
@@ -141,7 +141,7 @@
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">ยอดเงินเบิกเพิ่ม:</div>
+                <div class="mt-2">ยอดเงินเบิกเพิ่ม</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
@@ -151,7 +151,7 @@
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">ยอดเงินส่งคืน:</div>
+                <div class="mt-2">ยอดเงินส่งคืน</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >

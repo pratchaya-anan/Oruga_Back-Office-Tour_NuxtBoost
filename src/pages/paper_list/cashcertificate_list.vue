@@ -1,22 +1,33 @@
 <template>
   <section>
-    <LayoutPageTitle> Cashcertificate / รายการใบรับรองแทนใบเสร็จ </LayoutPageTitle>
+    <LayoutPageTitle>
+      Cashcertificate / รายการใบรับรองแทนใบเสร็จ
+    </LayoutPageTitle>
 
     <UiManageBar>
-      <NuxtLink to="/paper_create/estimate_create" type="button"
-        class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center">
+      <NuxtLink
+        to="/paper_create/estimate_create"
+        type="button"
+        class="text-white bg-blue-700 justify-center hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 inline-flex items-center"
+      >
         <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:plus"></Icon>
-        สร้างใบเคลียร์
+        สร้างใบรับรองแทนใบเสร็จ
       </NuxtLink>
     </UiManageBar>
 
     <UiSectionTabs></UiSectionTabs>
 
     <section class="grid grid-cols-5 gap-4">
-      <UiCard v-for="(it, idx) in tableDatatour" :key="idx" @click="openmodal = true"
-        class="flex-1 hover:bg-gray-100 dark:hover:bg-gray-700">
+      <UiCard
+        v-for="(it, idx) in tableDatatour"
+        :key="idx"
+        @click="openmodal = true"
+        class="flex-1 hover:bg-gray-100 dark:hover:bg-gray-700"
+      >
         <a href="#">
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-right">
+          <p
+            class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-right"
+          >
             {{ it.idpaper }}
           </p>
         </a>
@@ -26,15 +37,24 @@
             {{ it.name }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h5" name="mingcute:department-fill"></Icon>
+            <Icon
+              class="mr-3 -ml-1 w-5 h5"
+              name="mingcute:department-fill"
+            ></Icon>
             {{ it.type }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:baseline-date-range"></Icon>
+            <Icon
+              class="mr-3 -ml-1 w-5 h-5"
+              name="ic:baseline-date-range"
+            ></Icon>
             {{ it.date }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h-5" name="majesticons:money-line"></Icon>
+            <Icon
+              class="mr-3 -ml-1 w-5 h-5"
+              name="majesticons:money-line"
+            ></Icon>
             {{ it.objective }}
           </p>
         </div>
@@ -49,17 +69,36 @@
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <!-- Modal header -->
-          <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              รายละเอียด
-            </h3>
-            <button @click="openmodal = false" type="button"
+          <div
+            class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+          >
+            <ul class="mt-2 space-y-1">
+              <li class="text-xl font-semibold text-gray-900 dark:text-white">
+                ใบรับรองแทนใบเสร็จ
+              </li>
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                เลขที่: CC230430-0001
+              </li>
+            </ul>
+            <button
+              @click="openmodal = false"
+              type="button"
               class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              data-modal-hide="staticModal">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
+              data-modal-hide="staticModal"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
                   d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
+                  clip-rule="evenodd"
+                ></path>
               </svg>
             </button>
           </div>
@@ -107,16 +146,21 @@
               </div>
               <div>33,500</div>
               <div class="mt-5 flex justify-center">
-                <a href="/paper_edit/estimate_item">
+                <a href="/paper_edit/cashcertificate_item">
                   <o-button
-                    class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
+                    class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    <Icon
+                      class="mr-3 -ml-1 w-5 h-5"
+                      name="mdi:paper-edit"
+                    ></Icon>
                     แก้ไข
                   </o-button>
                 </a>
-                <a href="/paper/estimate_paper">
+                <a href="/paper/cashcertificate_paper">
                   <o-button
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
                     <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
                     </Icon>
                     พิมพ์
@@ -141,35 +185,35 @@ console.log(sec23);
 
 const tableDatatour = [
   {
-    idpaper: 'CR230705-0001',
+    idpaper: "CR230705-0001",
     name: "นายสรณ์สิริ สายบุตร",
     type: "ฝ่ายบริการลูกค้า",
     objective: "ค่าใช้จ่ายในทัวร์",
     date: "03/07/2566",
   },
   {
-    idpaper: 'CR230705-0002',
+    idpaper: "CR230705-0002",
     name: "นางสาวรินดา จุตตะโน",
     type: "การเงิน",
     objective: "ใช้จ่ายทั่วไปในบริษัทย์",
     date: "30/06/2566",
   },
   {
-    idpaper: 'CR230705-0003',
+    idpaper: "CR230705-0003",
     name: "นางสาวรินดา จุตตะโน",
     type: "การเงิน",
     objective: "ใช้จ่ายทั่วไปในบริษัทย์",
     date: "30/06/2566",
   },
   {
-    idpaper: 'CR230705-0004',
+    idpaper: "CR230705-0004",
     name: "นางสาวรินดา จุตตะโน",
     type: "การเงิน",
     objective: "ใช้จ่ายทั่วไปในบริษัทย์",
     date: "30/06/2566",
   },
   {
-    idpaper: 'CR230705-0005',
+    idpaper: "CR230705-0005",
     name: "นางสาวรินดา จุตตะโน",
     type: "การเงิน",
     objective: "ใช้จ่ายทั่วไปในบริษัทย์",
