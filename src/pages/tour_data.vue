@@ -392,7 +392,8 @@
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เทียง ทำพิธีการข้ามด่าน /
                 รับประทานอาหารเที่ยง / เดินทางต่อมายังด่านสะหวันนะเขต</p>
               <h3 class="mt-1 flex justify-between text-lg font-semibold text-gray-900 dark:text-white">
-                <a>ด่านสะหวันนะเขต</a><a href="#" class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
+                <a>ด่านสะหวันนะเขต</a><a href="#"
+                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เย็น รับประทานอาหารเย็น</p>
               <h3 class="mt-1 flex justify-between text-lg font-semibold text-gray-900 dark:text-white">
@@ -850,6 +851,8 @@
             </div>
             <div class="w-full items-center mb-4 p-4 border shadow-md">
               <div class="mx-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">ข้อมูลเดินทาง
+                </h3>
                 <div class="grid grid-cols-2 gap-4 ">
                   <div class="w-full">
                     <o-field label="วันที่">
@@ -943,6 +946,8 @@
             </div>
             <div class="w-full items-center mb-4 p-4 border shadow-md">
               <div class="mx-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">ข้อมูลเดินทาง
+                </h3>
                 <div class="grid grid-cols-2 gap-4 ">
                   <div class="w-full">
                     <o-field label="วันที่">
