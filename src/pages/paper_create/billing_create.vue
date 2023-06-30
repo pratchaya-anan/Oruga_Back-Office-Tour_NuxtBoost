@@ -11,7 +11,7 @@
       <div class="space-y-4">
         <UiCard>
           <h2 class="text-xl font-bold dark:text-white mb-2">
-            ค้นหาหน่วยงาน / ลูกค้า
+            ค้นหาหน่วยงาน/ลูกค้า
           </h2>
           <div class="flex items-center">
             <div class="relative w-full">
@@ -28,7 +28,7 @@
         <div>
           <UiCard v-if="showListAgency">
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              เลือก หน่วยงาน / ลูกค้า ที่ต้องการนำไปออกใบวางบิล/แจ้งหนี้
+              เลือกหน่วยงาน/ลูกค้า ที่ต้องการนำไปออกใบวางบิล/แจ้งหนี้
             </h2>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
               <table
@@ -42,7 +42,9 @@
                     <th scope="col" class="px-6 py-4">หน่วยงาน / ลูกค้า</th>
                     <th scope="col" class="px-6 py-4">รหัสลูกค้า</th>
                     <th scope="col" class="px-6 py-4">ชื่อผู้ติดต่อ</th>
-                    <th scope="col" class="px-6 py-4">เลขประจำตัวผู้เสียภาษี</th>
+                    <th scope="col" class="px-6 py-4">
+                      เลขประจำตัวผู้เสียภาษี
+                    </th>
                     <th scope="col" class="px-6 py-4">เบอร์ติดต่อ</th>
                     <th scope="col" class="px-6 py-4">ที่อยู่</th>
                     <th></th>
@@ -66,7 +68,7 @@
                     <td class="px-6 py-4">
                       {{ i.idagency }}
                     </td>
-                    <td class="px-6 py-4">{{ i.namecontact}}</td>
+                    <td class="px-6 py-4">{{ i.namecontact }}</td>
                     <td class="px-6 py-4">{{ i.taxagency }}</td>
                     <td class="px-6 py-4">{{ i.phoneagency }}</td>
                     <td class="px-6 py-4">{{ i.addressagency }}</td>
@@ -85,13 +87,13 @@
         </div>
         <section v-if="!showAddAgency">
           <o-button @click="showAddAgency = true"
-            >เพิ่มหน่วยงาน / ลูกค้า</o-button
+            >เพิ่มหน่วยงาน/ลูกค้า</o-button
           >
         </section>
         <UiCard v-if="showAddAgency">
           <div>
             <h2 class="text-xl font-bold dark:text-white mb-2">
-              ข้อมูล หน่วยงาน / ลูกค้า
+              ข้อมูลหน่วยงาน/ลูกค้า
             </h2>
             <div class="grid grid-cols-2 gap-4 mt-3">
               <div>
@@ -108,7 +110,7 @@
                 <o-field label="ชื่อผู้ติดต่อ">
                   <o-input></o-input>
                 </o-field>
-              </div>              
+              </div>
               <div>
                 <o-field label="เลขประจำตัวผู้เสียภาษี">
                   <o-input></o-input>
@@ -123,12 +125,12 @@
                 <o-field label="ที่อยู่">
                   <o-input></o-input>
                 </o-field>
-              </div>                       
+              </div>
               <div>
                 <o-field label="Email">
                   <o-input></o-input>
                 </o-field>
-              </div> 
+              </div>
             </div>
             <div class="flex justify-end">
               <div>
@@ -308,78 +310,123 @@
               v-if="!showOrderPanel"
               class="my-4 border-t border-gray-200 dark:border-gray-700"
             >
-            <span>รายละเอียดใบเสนอราคา</span>
-          <div class="sm:flex xl:block xl:space-y-4">
-            <div class="sm:flex-1">
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-4">หน่วยงาน / ลูกค้า</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    เทศบาลขอนแก่น
+              <span>รายละเอียดใบเสนอราคา</span>
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-4">หน่วยงาน/ลูกค้า</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        เทศบาลขอนแก่น
+                      </div>
+                    </div>
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-2">รหัสลูกค้า</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        1552555214
+                      </div>
+                      <div class="mt-2">ชื่อผู้ติดต่อ</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        นายภาคภูมิ ภูเขียว
+                      </div>
+                      <div class="mt-2">เบอร์ติดต่อ</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        0625584785
+                      </div>
+                    </div>
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        1522236
+                      </div>
+                    </div>
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-2">Email</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        somchai@gmail.com
+                      </div>
+                    </div>
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-2">ที่อยู่</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">รหัสลูกค้า</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    1552555214
+                <div class="sm:flex-1">
+                  <div
+                    class="my-4 border-t border-gray-200 dark:border-gray-700"
+                  ></div>
+                  <span>รายละเอียดฝ่ายขาย</span>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ผู้เสนอขาย</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      สมชัย ใจเกินร้อย
+                    </div>
                   </div>
-                  <div class="mt-2">ชื่อผู้ติดต่อ</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    นายภาคภูมิ ภูเขียว
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ฝ่าย:</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      ฝ่ายขาย
+                    </div>
                   </div>
-                  <div class="mt-2">เบอร์ติดต่อ</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">0625584785
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ยืนยันราคาภายในวันที่</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      16/07/2566
+                    </div>
                   </div>
-                </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    1522236
-                  </div>
-                </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">Email</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    somchai@gmail.com
-                  </div>
-                </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">ที่อยู่</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">วันส่งของ:</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      17/07/2566
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="sm:flex-1">
-              <div class="my-4 border-t border-gray-200 dark:border-gray-700"></div>
-              <span>รายละเอียดฝ่ายขาย</span>
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">ผู้เสนอขาย</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  สมชัย ใจเกินร้อย
-                </div>
-              </div>
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">ฝ่าย:</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  ฝ่ายขาย
-                </div>
-              </div>
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">ยืนยันราคาภายในวันที่</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  16/07/2566
-                </div>
-              </div>
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">วันส่งของ:</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  17/07/2566
-                </div>
-              </div>
-            </div>
-          </div>
             </section>
           </UiCard>
         </div>
@@ -492,10 +539,7 @@
           </h2>
           <div class="flex items-center">
             <div class="relative w-full">
-              <o-input
-                placeholder="ค้นหา ชื่อทัวร์"
-                class="w-full"
-              ></o-input>
+              <o-input placeholder="ค้นหา ชื่อทัวร์" class="w-full"></o-input>
             </div>
             <div class="ml-2">
               <o-button @click="showListTour = true">ค้นหา</o-button>
@@ -555,7 +599,7 @@
               </table>
             </div>
           </UiCard>
-        </div>       
+        </div>
       </div>
     </o-step-item>
     <!-- step 5 -->
@@ -607,7 +651,8 @@
                     <div class="mt-2">เบอร์ติดต่อ</div>
                     <div
                       class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                    >0625584785                      
+                    >
+                      0625584785
                     </div>
                   </div>
                   <div
@@ -723,77 +768,122 @@
             </section>
             <section class="my-4 border-t border-gray-200 dark:border-gray-700">
               <span>รายละเอียดใบเสนอราคา</span>
-          <div class="sm:flex xl:block xl:space-y-4">
-            <div class="sm:flex-1">
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-4">หน่วยงาน / ลูกค้า</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    เทศบาลขอนแก่น
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        เทศบาลขอนแก่น
+                      </div>
+                    </div>
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-2">รหัสลูกค้า</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        1552555214
+                      </div>
+                      <div class="mt-2">ชื่อผู้ติดต่อ</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        นายภาคภูมิ ภูเขียว
+                      </div>
+                      <div class="mt-2">เบอร์ติดต่อ</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        0625584785
+                      </div>
+                    </div>
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        1522236
+                      </div>
+                    </div>
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-2">Email</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        somchai@gmail.com
+                      </div>
+                    </div>
+                    <div
+                      class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="mt-2">ที่อยู่</div>
+                      <div
+                        class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >
+                        175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">รหัสลูกค้า</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    1552555214
+                <div class="sm:flex-1">
+                  <div
+                    class="my-4 border-t border-gray-200 dark:border-gray-700"
+                  ></div>
+                  <span>รายละเอียดฝ่ายขาย</span>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ผู้เสนอขาย</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      สมชัย ใจเกินร้อย
+                    </div>
                   </div>
-                  <div class="mt-2">ชื่อผู้ติดต่อ</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    นายภาคภูมิ ภูเขียว
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ฝ่าย:</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      ฝ่ายขาย
+                    </div>
                   </div>
-                  <div class="mt-2">เบอร์ติดต่อ</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">0625584785
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ยืนยันราคาภายในวันที่</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      16/07/2566
+                    </div>
                   </div>
-                </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    1522236
-                  </div>
-                </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">Email</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    somchai@gmail.com
-                  </div>
-                </div>
-                <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">ที่อยู่</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">วันส่งของ:</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      17/07/2566
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="sm:flex-1">
-              <div class="my-4 border-t border-gray-200 dark:border-gray-700"></div>
-              <span>รายละเอียดฝ่ายขาย</span>
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">ผู้เสนอขาย</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  สมชัย ใจเกินร้อย
-                </div>
-              </div>
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">ฝ่าย:</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  ฝ่ายขาย
-                </div>
-              </div>
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">ยืนยันราคาภายในวันที่</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  16/07/2566
-                </div>
-              </div>
-              <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                <div class="mt-2">วันส่งของ:</div>
-                <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  17/07/2566
-                </div>
-              </div>
-            </div>
-          </div>
             </section>
           </UiCard>
         </div>
@@ -821,7 +911,7 @@
                       <option value="??">??</option>
                     </o-select>
                   </o-field>
-                </div>               
+                </div>
                 <div>
                   <o-field label="ยืนยันราคาภายในวันที่">
                     <div class="relative">
@@ -850,7 +940,7 @@
                       />
                     </div>
                   </o-field>
-                </div>                 
+                </div>
                 <div>
                   <o-field label="วันที่ออกใบ">
                     <div class="relative">
@@ -879,8 +969,8 @@
                       />
                     </div>
                   </o-field>
-                </div>            
-              </div>             
+                </div>
+              </div>
             </div>
             <div class="flex justify-end">
               <a href="/paper_edit/billing_item">
@@ -948,7 +1038,7 @@ const tableData = [
     productlist: "เทศบาลขอนแก่น",
     quantity: "05/06/2566",
     unitprice: "6,420",
-  },  
+  },
 ];
 const tableDatalistitem = [
   {
@@ -959,7 +1049,7 @@ const tableDatalistitem = [
     discount: "0%",
     tax: "7%",
     sumprice: "3210",
-  },  
+  },
   {
     id: 2,
     productlist: "ค่าโรงแรม",
@@ -968,7 +1058,7 @@ const tableDatalistitem = [
     discount: "0%",
     tax: "7%",
     sumprice: "3210",
-  },  
+  },
 ];
 
 const tableDatatour = [
@@ -1009,7 +1099,7 @@ const tableAgency = [
   },
 ];
 
-const tablequotation= [
+const tablequotation = [
   {
     id: 1,
     nameagency: "1522236",
@@ -1018,7 +1108,7 @@ const tablequotation= [
     taxagency: "นายกอไก่ ขอไข่ ",
     phoneagency: "05/06/2566",
     addressagency: "6420",
-  }, 
+  },
 ];
 
 const data = ref(tableData);

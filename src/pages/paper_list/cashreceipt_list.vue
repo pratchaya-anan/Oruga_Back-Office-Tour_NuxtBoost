@@ -73,9 +73,16 @@
           <div
             class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
           >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              รายละเอียด
-            </h3>
+            <ul class="mt-2 space-y-1">
+              <li class="text-xl font-semibold text-gray-900 dark:text-white">
+                ใบสำคัญรับเงิน
+              </li>
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                เลขที่: CR230430-0001
+              </li>
+            </ul>
             <button
               @click="openmodal = false"
               type="button"
@@ -97,129 +104,59 @@
             </button>
           </div>
           <!-- Modal body -->
-          <div>
-            <div>
-              <div>
-                <div
-                  class="p-6 font-normal text-gray-700 dark:text-gray-400 mb-3"
-                >
-                  <diV>
-                    <div class="flex justify-between">
-                      <div>ศศิศ วิรัตน์จินดา</div>
-                      <div>
-                        <button
-                          id="dropdownMenuIconButton"
-                          data-dropdown-toggle="dropdownDots"
-                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                          type="button"
-                        >
-                          <svg
-                            class="w-6 h-6"
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <!-- Dropdown menu -->
-                    <div
-                      id="dropdownDots"
-                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                    >
-                      <div class="py-2">
-                        <a
-                          href="#"
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          แก้ไข</a
-                        >
-                      </div>
-                      <div class="py-2">
-                        <a
-                          href="#"
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          ลบ</a
-                        >
-                      </div>
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      ชื่อผู้ติดต่อ
-                    </div>
-                    <div>มะนาว หวานจังเลย</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      ที่อยู่
-                    </div>
-                    <div>
-                      111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      ID TAX
-                    </div>
-                    <div>4585695214526</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      โทร
-                    </div>
-                    <div>0254875858</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      Email
-                    </div>
-                    <div>somchai@gmail.com</div>
-                  </diV>
-                  <hr class="my-5 border-1.5" />
-                  <diV>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      รหัสลูกค้า
-                    </div>
-                    <div>C-58015259</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      ผู้เสนอขาย
-                    </div>
-                    <div>สมชัย ใจเกินร้อย</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      ฝ่าย:
-                    </div>
-                    <div>การตลาด</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      ยืนยันราคาภายใน
-                    </div>
-                    <div>31-03-2566</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      วันส่งของ:
-                    </div>
-                    <div>02-04-2566</div>
-                  </diV>
-                  <div class="mt-5 flex justify-center">
-                    <a href="/paper_edit/cashreceipt_item">
-                      <o-button
-                        class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h-5"
-                          name="mdi:paper-edit"
-                        ></Icon>
-                        แก้ไข
-                      </o-button>
-                    </a>
-                    <a href="/paper/cashreceipt_paper">
-                      <o-button
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
-                        </Icon>
-                        พิมพ์
-                      </o-button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div></div>
+          <div class="p-4 font-normal text-gray-700 dark:text-gray-400">
+            <span>รายละเอียดลูกค้า</span>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ชื่อผู้ติดต่อ
+            </div>
+            <div>มะนาว หวานจังเลย</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ที่อยู่
+            </div>
+            <div>111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ID TAX
+            </div>
+            <div>4585695214526</div>
+            <div class="font-semibold text-gray-900 dark:text-white">โทร</div>
+            <div>0254875858</div>
+            <div class="font-semibold text-gray-900 dark:text-white">Email</div>
+            <div>somchai@gmail.com</div>
+            <hr class="my-2" />
+            <span>รายละเอียดผู้ติดต่อ</span>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              รหัสลูกค้า
+            </div>
+            <div>C-58015259</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ผู้เสนอขาย
+            </div>
+            <div>สมชัย ใจเกินร้อย</div>
+            <div class="font-semibold text-gray-900 dark:text-white">ฝ่าย:</div>
+            <div>การตลาด</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ยืนยันราคาภายใน
+            </div>
+            <div>31-03-2566</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              วันส่งของ:
+            </div>
+            <div>02-04-2566</div>
+            <hr class="my-2" />
+            <div class="mt-5 flex justify-center">
+              <a href="/paper_edit/cashreceipt_item">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
+                  แก้ไข
+                </o-button>
+              </a>
+              <a href="/paper/cashreceipt_paper">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
+                  </Icon>
+                  พิมพ์
+                </o-button>
+              </a>
             </div>
           </div>
         </div>
