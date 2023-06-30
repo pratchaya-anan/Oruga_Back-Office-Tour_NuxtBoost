@@ -201,8 +201,6 @@
               <p class="text-lg font-semibold  dark:text-white">วันที่กลับ</p>
               <p class="ml-2 text-lg font-normal  dark:text-white"></p>
               <o-input type="text" modelValue="22 เมษายน 2566"></o-input>
-              <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
-              <o-input type="text" modelValue=""></o-input>
             </div>
 
             <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบยานพาหนะ</o-button>
@@ -469,43 +467,7 @@
                   </div>
                 </dev>
               </div>
-              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                คอมเมนต์
-              </h2>
-              <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="ปานกลาง"></o-input>
-                </div>
-                <p v-if="!editcomment" class="col-span-2">ปานกลาง</p>
-                <p class="w-full text-end">20/06/66</p>
-
-                <p class="w-full text-end">
-                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                    ? (editcomment = true)
-                    : (editcomment = false)">
-                  </Icon>
-                </p>
-
               </div>
-              <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-              <div v-if="showComment">
-                <o-field label="เขียนคอมเมนต์">
-                  <o-input type="textarea"></o-input>
-                </o-field>
-                <div class="flex">
-                  <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                    <o-input></o-input>
-                  </o-field>
-                  <section class="flex-1 shrink flex items-center justify-end">
-                    <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                    </o-button>
-                    <o-button class="mt-5">เพิ่ม</o-button>
-                  </section>
-                </div>
-              </div>
-
-            </div>
-
             <div>
               <o-field label="วันที่ไป">
                 <o-input></o-input>
@@ -518,9 +480,7 @@
             </div>
 
             <div class="col-span-2">
-              <o-field label="หมายเหตุ">
-                <o-input type="textarea"></o-input>
-              </o-field>
+              
             </div>
 
             <div class="col-span-2">

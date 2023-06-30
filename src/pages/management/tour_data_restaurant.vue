@@ -361,7 +361,7 @@
                   <th class="px-3 py-3">
                     1
                   </th>
-                  <td @click="add = true" lass="px-3 py-3">
+                  <td @click="add = true" class="px-3 py-3">
                     โครตอร่อย!
                   </td>
                   <td @click="add = true" class="px-3 py-3">
@@ -705,42 +705,8 @@
                   </div>
                 </dev>
               </div>
-              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                คอมเมนต์
-              </h2>
-              <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="เป็นอาหารที่ดีที่สุดที่เคยทานมา"></o-input>
-                </div>
-                <p v-if="!editcomment" class="col-span-2">เป็นอาหารที่ดีที่สุดที่เคยทานมา
 
-                </p>
-                <p class="w-full text-end">20/06/66</p>
-
-                <p class="w-full text-end">
-                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                    ? (editcomment = true)
-                    : (editcomment = false)">
-                  </Icon>
-                </p>
-
-              </div>
-              <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-              <div v-if="showComment">
-                <o-field label="เขียนคอมเมนต์">
-                  <o-input type="textarea"></o-input>
-                </o-field>
-                <div class="flex">
-                  <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                    <o-input></o-input>
-                  </o-field>
-                  <section class="flex-1 shrink flex items-center justify-end">
-                    <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                    </o-button>
-                    <o-button class="mt-5">เพิ่ม</o-button>
-                  </section>
-                </div>
-              </div>
+    
             </div>
 
 
