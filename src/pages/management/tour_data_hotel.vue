@@ -439,68 +439,63 @@
 
         
         <o-modal v-model:active="isItemModalHotelData2">
-          <UiCard>
-            <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขข้อมูล</h3>
-            <div class="flex justify-end">
-             
-            </div>
-            
-            <div class="flex items-center mb-4 p-4 border shadow-md">
-              
+          <div class="p-6">
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+              แก้ไขโรงแรม
+            </h2>
+            <div class="flex items-center mb-2 p-4 border shadow-md">
               <dev class="w-full relative inline-flex items-center">
                 <div class="mx-5">
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm Văn
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm
+                    Văn
                     Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
                   <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
                 </div>
               </dev>
             </div>
-            <div class="w-full ml-2">
-                <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  คอมเมนต์
-                </h2>
-                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+            <div class="w-full mb-2 p-4 border shadow-md">
+              <div class="mx-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">คอมเมนต์</h3>
+                <div class="mb-2 grid grid-cols-4 gap-0">
                   <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
-                </div>
+                    <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                  </div>
                   <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
 
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                ? (editcomment = true)
-                : (editcomment = false)">
-              </Icon>
+                    <Icon class="w-6 h-6" name="mdi:comment-edit" @click="editcomment != true
+                      ? (editcomment = true)
+                      : (editcomment = false)">
+                    </Icon>
                   </p>
-                  
                   <div v-if="editcomment2" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
+                    <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                  </div>
                   <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
                   <p class="w-full text-end">20/06/65</p>
 
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
-                ? (editcomment2 = true)
-                : (editcomment2 = false)">
-              </Icon>
+                    <Icon class="w-6 h-6" name="mdi:comment-edit" @click="editcomment2 != true
+                      ? (editcomment2 = true)
+                      : (editcomment2 = false)">
+                    </Icon>
                   </p>
-
                   <div v-if="editcomment3" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
+                    <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                  </div>
                   <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
                   <p class="w-full text-end">20/06/64</p>
 
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
-                ? (editcomment3 = true)
-                : (editcomment3 = false)">
-              </Icon>
+                    <Icon class="w-6 h-6" name="mdi:comment-edit" @click="editcomment3 != true
+                      ? (editcomment3 = true)
+                      : (editcomment3 = false)">
+                    </Icon>
                   </p>
                 </div>
-                <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
                 <div v-if="showComment">
                   <o-field label="เขียนคอมเมนต์">
                     <o-input type="textarea"></o-input>
@@ -517,21 +512,37 @@
                   </div>
                 </div>
               </div>
-            <div class="w-full border-r">
-              <div class="px-2">
-                <p class="text-lg font-semibold  dark:text-white">วันเข้าพัก</p>
-                <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
-                <p class="text-lg font-semibold  dark:text-white">วันออก</p>
-                <p class="ml-2 text-lg font-normal  dark:text-white"></p>
-                <o-input type="text" modelValue="22 เมษายน 2566"></o-input>
-                <p class="text-lg font-semibold  dark:text-white">จำนวนห้องพัก</p>
-                <o-input type="text" modelValue="120"></o-input>
-              </div>
-              
-              <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบโรงแรม</o-button>
-                <o-button size="medium" variant="primary" @click="isItemModalHotelData2 = false"> บันทึก </o-button></div>
             </div>
-          </UiCard>
+            <div class="w-full mb-4 p-4 border shadow-md">
+              <div class="mx-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">ข้อมูลเดินทาง
+                </h3>
+              </div>
+              <div class="grid grid-cols-2 gap-4 mx-5">
+                <div>
+                  <o-field label="วันเข้าพัก">
+                    <o-input modelValue="21 เมษายน 2566"></o-input>
+                  </o-field>
+                </div>
+                <div>
+                  <o-field label="วันออก">
+                    <o-input modelValue="24 เมษายน 2566"></o-input>
+                  </o-field>
+                </div>
+                <div class="col-span-2">
+                  <o-field label="จำนวนห้องพัก">
+                    <o-input type="number" modelValue="12"></o-input>
+                  </o-field>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-2">
+              <div class="ml-2 flex justify-between">
+                <o-button size="medium" variant="danger" @click="add = false"> ลบโรงแรม </o-button>
+                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+              </div>
+            </div>
+          </div>
         </o-modal>
 
 
@@ -553,68 +564,6 @@
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
                   </div>
                 </dev>
-              </div>
-              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                คอมเมนต์
-              </h2>
-              <div class="w-full p-4 border shadow-md">
-
-                <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                  <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
-                </div>
-                  <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
-                  <p class="w-full text-end">20/06/66</p>
-
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                ? (editcomment = true)
-                : (editcomment = false)">
-              </Icon>
-                  </p>
-                  
-                  <div v-if="editcomment2" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
-                  <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
-                  <p class="w-full text-end">20/06/65</p>
-
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
-                ? (editcomment2 = true)
-                : (editcomment2 = false)">
-              </Icon>
-                  </p>
-
-                  <div v-if="editcomment3" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
-                  <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
-                  <p class="w-full text-end">20/06/64</p>
-
-                  <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
-                ? (editcomment3 = true)
-                : (editcomment3 = false)">
-              </Icon>
-                  </p>
-                </div>
-                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
-                <div v-if="showComment">
-                  <o-field label="เขียนคอมเมนต์">
-                    <o-input type="textarea"></o-input>
-                  </o-field>
-                  <div class="flex">
-                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                      <o-input></o-input>
-                    </o-field>
-                    <section class="flex-1 shrink flex items-center justify-end">
-                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                      </o-button>
-                      <o-button class="mt-5">เพิ่ม</o-button>
-                    </section>
-                  </div>
-                </div>
               </div>
             </div>
 

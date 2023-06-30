@@ -30,14 +30,14 @@
               class="mr-1 -ml-1 w-5 h-5"
               name="pepicons-pencil:people"
             ></Icon
-            >10/50
+            >23/50
           </div>
         </div>
         <div>
           <div>ชื่อโปรแกรมทัวร์: กาญจนบุรี-เพชรบุรี</div>
           <div class="grid grid-cols-2">
-            <div>วันเดินทาง: 06/07/66</div>
-            <div>วันสิ้นสุด: 20/07/66</div>
+            <div>วันเดินทาง: 21/04/66</div>
+            <div>วันสิ้นสุด: 24/04/66</div>
           </div>
         </div>
         <div class="grid grid-cols-2">

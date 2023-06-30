@@ -146,70 +146,75 @@
 
       <o-modal v-model:active="isItemModalHotelData3">
         <UiCard>
-          <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-            เลือกรถ
-          </h2>
-          <div class="flex items-center mb-4 p-4 border shadow-md">
-            <dev class="w-full relative inline-flex items-center">
-              <div class="mx-5">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">รถบัสลาว</h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ทะเบียน 8989 ประเทศเวียงจันน์</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์โทร 0428976765</p>
-              </div>
-            </dev>
-          </div>
-          <div class="w-full ml-2">
-            <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-              คอมเมนต์
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+              แก้ไขยานพาหนะ
             </h2>
-            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-              <div v-if="editcomment" class="col-span-2">
-                <o-input type="text" modelValue="ปานกลาง"></o-input>
+            <div class="flex items-center mb-4 p-4 border shadow-md">
+              <dev class="w-full relative inline-flex items-center">
+                <div class="mx-5">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">รถบัสลาว</h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ทะเบียน 8989 ประเทศเวียงจันน์</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์โทร 0428976765</p>
+                </div>
+              </dev>
+            </div>
+            <div class="w-full items-center mb-4 p-4 border shadow-md">
+              <div class="mx-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">คอมเมนต์</h3>
+                <div class="mb-2 grid grid-cols-4 gap-0">
+                  <div v-if="editcomment" class="col-span-2">
+                    <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                  </div>
+                  <p v-if="!editcomment" class="col-span-2">ปานกลาง</p>
+                  <p class="w-full text-end">20/06/66</p>
+                  <p class="w-full text-end">
+                    <Icon class="w-6 h-6" name="mdi:comment-edit" @click="editcomment != true
+                      ? (editcomment = true)
+                      : (editcomment = false)">
+                    </Icon>
+                  </p>
+                </div>
+                <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
+                <div v-if="showComment">
+                  <o-field label="เขียนคอมเมนต์">
+                    <o-input type="textarea"></o-input>
+                  </o-field>
+                  <div class="flex">
+                    <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                      <o-input></o-input>
+                    </o-field>
+                    <section class="flex-1 shrink flex items-center justify-end">
+                      <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                      </o-button>
+                      <o-button class="mt-5">เพิ่ม</o-button>
+                    </section>
+                  </div>
+                </div>
               </div>
-              <p v-if="!editcomment" class="col-span-2">ปานกลาง</p>
-              <p class="w-full text-end">20/06/66</p>
-
-              <p class="w-full text-end">
-                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                  ? (editcomment = true)
-                  : (editcomment = false)">
-                </Icon>
-              </p>
-
             </div>
-            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-            <div v-if="showComment">
-              <o-field label="เขียนคอมเมนต์">
-                <o-input type="textarea"></o-input>
-              </o-field>
-              <div class="flex">
-                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                  <o-input></o-input>
-                </o-field>
-                <section class="flex-1 shrink flex items-center justify-end">
-                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                  </o-button>
-                  <o-button class="mt-5">เพิ่ม</o-button>
-                </section>
+            <div class="w-full items-center mb-4 p-4 border shadow-md">
+              <div class="mx-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">ข้อมูลเดินทาง
+                </h3>
+                <div class="grid grid-cols-2 gap-4 w-full ">
+                  <div class="w-full ">
+                    <o-field label="วันที่ไป">
+                      <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
+                    </o-field>
+                  </div>
+                  <div class="w-full ">
+                    <o-field label="วันที่กลับ">
+                      <o-input type="text" modelValue="22 เมษายน 2566"></o-input>
+                    </o-field>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="w-full ">
-            <div class="px-2">
-              <p class="text-lg font-semibold  dark:text-white">วันที่ไป</p>
-              <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
-              <p class="text-lg font-semibold  dark:text-white">วันที่กลับ</p>
-              <p class="ml-2 text-lg font-normal  dark:text-white"></p>
-              <o-input type="text" modelValue="22 เมษายน 2566"></o-input>
-              <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
-              <o-input type="text" modelValue=""></o-input>
-            </div>
 
+            </div>
             <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบยานพาหนะ</o-button>
               <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
             </div>
-          </div>
-        </UiCard>
+          </UiCard>
       </o-modal>
 
       <div class="col-span-2">
@@ -353,12 +358,11 @@
         <o-modal v-model:active="isItemModalVehicleData">
           <UiCard>
             <div class="flex justify-end">
-
             </div>
             <div class="p-2 grid grid-cols-2 gap-0">
               <div class="w-full">
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                  รถประจำทัวร์ <Icon class="mb-2 w-6 h-6" name="ic:round-edit" @click="editHotel != true
+                  รถประจำทัวร์ <Icon class="mb-2 w-6 h-6" name="mdi:comment-edit" @click="editHotel != true
                     ? (editHotel = true)
                     : (editHotel = false)">
                   </Icon>
@@ -423,7 +427,7 @@
                   <p class="w-full text-end">20/06/66</p>
 
                   <p class="w-full text-end">
-                    <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                    <Icon class="w-6 h-6" name="mdi:comment-edit" @click="editcomment != true
                       ? (editcomment = true)
                       : (editcomment = false)">
                     </Icon>
@@ -469,43 +473,7 @@
                   </div>
                 </dev>
               </div>
-              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-                คอมเมนต์
-              </h2>
-              <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-                <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="ปานกลาง"></o-input>
-                </div>
-                <p v-if="!editcomment" class="col-span-2">ปานกลาง</p>
-                <p class="w-full text-end">20/06/66</p>
-
-                <p class="w-full text-end">
-                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                    ? (editcomment = true)
-                    : (editcomment = false)">
-                  </Icon>
-                </p>
-
               </div>
-              <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-              <div v-if="showComment">
-                <o-field label="เขียนคอมเมนต์">
-                  <o-input type="textarea"></o-input>
-                </o-field>
-                <div class="flex">
-                  <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                    <o-input></o-input>
-                  </o-field>
-                  <section class="flex-1 shrink flex items-center justify-end">
-                    <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                    </o-button>
-                    <o-button class="mt-5">เพิ่ม</o-button>
-                  </section>
-                </div>
-              </div>
-
-            </div>
-
             <div>
               <o-field label="วันที่ไป">
                 <o-input></o-input>
@@ -518,9 +486,7 @@
             </div>
 
             <div class="col-span-2">
-              <o-field label="หมายเหตุ">
-                <o-input type="textarea"></o-input>
-              </o-field>
+              
             </div>
 
             <div class="col-span-2">
