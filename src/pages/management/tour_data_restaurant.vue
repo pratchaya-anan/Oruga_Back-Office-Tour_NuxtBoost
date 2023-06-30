@@ -5,6 +5,46 @@
       <div class="col-span-full xl:col-auto mb-4">
         <UiCard>
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+            <div class="w-full relative">
+              <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                class="absolute top-0 right-0 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 rounded-full hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+                type="button">
+                <Icon aria-hidden="true" class="w-8 h-8" name="mingcute:more-2-fill"></Icon>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdownDots"
+                class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer"
+                  aria-labelledby="dropdownMenuIconButton">
+                  <NuxtLink @click="Export">
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 mr-1" name="icon-park-twotone:order"></Icon>พิมพ์ใบ NAMELISTGROUP
+                    </MenuDropItem>
+                  </NuxtLink>
+                  <NuxtLink href="/guide_order">
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 mr-1" name="icon-park-twotone:order"></Icon>พิมพ์ใบสั่งงานมัคคุเทศก์
+                    </MenuDropItem>
+                  </NuxtLink>
+                  <NuxtLink href="/paper/tag_paper">
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 mr-1" name="mdi:tag"></Icon>
+                      พิมพ์ใบ Tag
+                    </MenuDropItem>
+                  </NuxtLink>
+                  <NuxtLink href="/quotation_list">
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 mr-1" name="mdi:paper-check"> </Icon>ใบเสนอราคา
+                    </MenuDropItem>
+                  </NuxtLink>
+                  <NuxtLink href="#">
+                    <MenuDropItem>
+                      <Icon class="w-4 h-4 mr-1" name="uil:bill"> </Icon>ใบเบิกค่าใช้จ่าย
+                    </MenuDropItem>
+                  </NuxtLink>
+                </ul>
+              </div>
+            </div>
             <div>
               <h2 class="text-xl font-bold dark:text-white ">
                 ทัวร์เว้ ดานัง ประเทศเวียดนาม

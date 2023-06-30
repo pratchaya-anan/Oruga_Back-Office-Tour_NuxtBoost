@@ -157,8 +157,8 @@
           </div>
         </UiCard>
         <!-- โรงแรม -->
-        <UiCard class="mt-4" v-if="showItems == 'hotel'">
-          <div class="w-full relative">
+        <UiCard v-if="showItems == 'hotel'">
+          <div class="p-2 w-full relative">
             <NuxtLink href="/management/tour_data_hotel">
               <o-button
                 class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
@@ -166,7 +166,7 @@
               </o-button>
             </NuxtLink>
           </div>
-          <h2 class="mt-2 text-xl font-bold dark:text-white">
+          <h2 class="text-xl font-bold dark:text-white">
             โรงแรม
           </h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
