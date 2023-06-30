@@ -587,7 +587,8 @@
               <h3
                 class="mt-1 flex justify-between text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">
                 <a href="#">ร้านเลียจาน</a><a href="#" @click="isItemModalHotelData6 = true"
-                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
+                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
+              </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเทียง ร้านเลียจาน</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">
@@ -1210,11 +1211,14 @@
                   </NuxtLink>
                 </div>
               </div>
-              <o-table :data="memberdata" checkable >
+              <o-table :data="memberdata" checkable>
                 <o-table-column v-for="column in columns" v-bind="column" :key="column" #default="{ row }">
                   {{ row[column.field] || '' }} {{ row[column.field2] || '' }}
                 </o-table-column>
               </o-table>
+              <div @click="isItemModalAddUser = false"  class="flex justify-end my-2">
+                <o-button>บันทึก</o-button>
+              </div>
             </UiCard>
           </o-modal>
         </div>
