@@ -559,7 +559,8 @@
         </UiCard>
         <!-- แก้ไขโรงแรม -->
         <o-modal v-model:active="add">
-          <div class="p-6">
+          <UiCard>
+
             <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
               แก้ไขโรงแรม
             </h2>
@@ -662,7 +663,8 @@
                 <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
               </div>
             </div>
-          </div>
+
+          </UiCard>
         </o-modal>
         <!-- แก้ไข้ไกด์ -->
         <o-modal v-model:active="isItemModalHotelData3">
@@ -900,7 +902,7 @@
               </h2>
               <div class="flex items-center mb-4 p-4 border shadow-md">
                 <dev class="w-full relative inline-flex items-center">
-                  <div class="mx-9">
+                  <div class="mx-5">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โครตอร่อย!</h3>
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">อาหารทะเล</p>
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">132 ม.1 บ้านไม้ ตำบนกล้วย อำเภอเมือง
