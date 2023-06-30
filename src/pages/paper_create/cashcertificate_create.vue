@@ -1,5 +1,5 @@
 <template>
-  <LayoutPageTitle> ใบรับรองแทนใบเสร็จรับเงิน </LayoutPageTitle>
+  <LayoutPageTitle> Cashcertificate / รายการใบรับรองแทนใบเสร็จ </LayoutPageTitle>
   <o-steps v-model="stepnext" variant="success">
     <o-step-item step="1" label="เลือก" :clickable="true" icon="user-plus">
       <div class="space-y-4">

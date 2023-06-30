@@ -18,7 +18,7 @@
             </div>
             <div class="col-span-3 text-center">Receipt</div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">0841142174178</div>
+            <div class="col-span-2 text-right">R230430-0001</div>
             <div class="font-bold">วันที่:</div>
             <div class="col-span-2 text-right">24/03/2566</div>
           </div>
@@ -34,7 +34,7 @@
             <div class="col-span-2">เทศบาลขอนแก่น</div>
             <div class="col-span-1 font-bold">ที่อยู่:</div>
             <div class="col-span-2">
-              175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+              175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
             </div>
             <div class="col-span-1 font-bold">สาขา:</div>
             <div class="col-span-2">สำนักงานใหญ่</div>
@@ -46,18 +46,18 @@
       <div class="min-h-[400px] border-b border-black">
         <table class="w-full text-center">
           <tr class="h-8 border-y border-black text-center text-sm">
-            <th class="text-center">ลำดับ</th>
+            <th>ลำดับ</th>
             <th>วันที่</th>
             <th>เลขที่ใบกำกับภาษี</th>
             <th>รายละเอียด</th>
             <th>จำนวนเงิน</th>
           </tr>
-          <tr v-for="i in 2" class="h-10 text-xs">
-            <td>{{ i }}</td>
-            <td>24/03/2566</td>
-            <td>1552555214</td>
-            <td>เทศบาลขอนแก่น 175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น</td>
-            <td>6,420</td>
+          <tr v-for="(i,idx) in tableData" class="h-10 text-xs">
+            <td>{{ idx+1 }}</td>
+            <td>{{ i.productcode }}</td>
+            <td>{{ i.productlist }}</td>
+            <td>{{ i.quantity }}</td>
+            <td>{{ i.unitprice }}</td>
           </tr>
         </table>
       </div>
@@ -121,6 +121,26 @@
 
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
+
+const tableData = [
+  {
+    id: 1,
+    productcode: "24/03/2566",
+    productlist: "CR230430-0001",
+    quantity:
+      "เทศบาลขอนแก่น 175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000",
+    unitprice: "6,420",
+  },
+  {
+    id: 2,
+    productcode: "24/03/2566",
+    productlist: "CR230430-0002",
+    quantity:
+      "เทศบาลขอนแก่น 175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000",
+    unitprice: "6,420",
+  },
+];
+
 
 function print() {
   window.print();
