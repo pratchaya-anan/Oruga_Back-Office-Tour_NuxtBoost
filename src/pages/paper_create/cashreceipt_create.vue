@@ -674,12 +674,12 @@
               <div class="grid grid-cols-2 gap-4">
                 <div>
                   <o-field label="ชื่อ (ผู้ขายสินค้า/ให้บริการ)">
-                    <div class="flex mt-3">
-                      <o-radio v-model="vendor" name="vendorcheck" native-value="company" class="mr-3">
-                        ชื่อบริษัทย์
-                      </o-radio>
+                    <div class="flex mt-3 gap-3">
                       <o-radio v-model="vendor" name="vendorcheck" native-value="employee">
                         ชื่อพนักงาน
+                      </o-radio>
+                      <o-radio v-model="vendor" name="vendorcheck" native-value="company">
+                        ชื่อบริษัทย์
                       </o-radio>
                     </div>
                     <!-- <o-input v-if="vendor == 'company'"></o-input> -->
@@ -701,8 +701,8 @@
                 </o-field>
                 <div>
                   <o-field label="ประเภทสาขา">
-                    <div class="flex mt-3">
-                      <o-radio v-model="branch" name="branchcheck" native-value="MainBranch" class="mr-3">
+                    <div class="flex mt-3 gap-3">
+                      <o-radio v-model="branch" name="branchcheck" native-value="MainBranch">
                         สำนักงานใหญ่
                       </o-radio>
                       <o-radio v-model="branch" name="branchcheck" native-value="SubBranch">
@@ -759,7 +759,7 @@ const showOrderPanel = ref(false);
 const stepnext = ref();
 const showListAgency = ref(false);
 const showAddAgency = ref(false);
-const vendor = ref("company")
+const vendor = ref("employee")
 
 function setnull() {
   selected.value = null;
