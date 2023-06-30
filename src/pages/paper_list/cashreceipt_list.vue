@@ -73,9 +73,16 @@
           <div
             class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
           >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              รายละเอียด
-            </h3>
+            <ul class="mt-2 space-y-1">
+              <li class="text-xl font-semibold text-gray-900 dark:text-white">
+                ใบสำคัญรับเงิน
+              </li>
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                เลขที่: CR230430-0001
+              </li>
+            </ul>
             <button
               @click="openmodal = false"
               type="button"

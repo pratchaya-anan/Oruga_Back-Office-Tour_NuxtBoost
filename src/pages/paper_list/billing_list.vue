@@ -32,10 +32,6 @@
         <div>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
-            {{ it.idpaper }}
-          </p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
             {{ it.agency }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
@@ -153,28 +149,21 @@
               </div>
               <div>05/04/2566</div>
               <hr class="my-2" />
-              <div class="mt-5 flex justify-center">
-                <a href="/paper_edit/quotation_item">
-                  <o-button
-                    class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    <Icon
-                      class="mr-3 -ml-1 w-5 h-5"
-                      name="mdi:paper-edit"
-                    ></Icon>
-                    แก้ไข
-                  </o-button>
-                </a>
-                <a href="/paper/quotation_paper">
-                  <o-button
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
-                    </Icon>
-                    พิมพ์
-                  </o-button>
-                </a>
-              </div>
+            </div>
+            <div class="mt-5 flex justify-center">
+              <a href="/paper_edit/billing_item">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
+                  แก้ไข
+                </o-button>
+              </a>
+              <a href="/paper/billing_paper">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
+                  </Icon>
+                  พิมพ์
+                </o-button>
+              </a>
             </div>
           </div>
         </div>
