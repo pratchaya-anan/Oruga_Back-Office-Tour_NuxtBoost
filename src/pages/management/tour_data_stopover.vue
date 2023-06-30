@@ -16,7 +16,7 @@
                 class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer"
                   aria-labelledby="dropdownMenuIconButton">
-                  <NuxtLink @click="Export">
+                  <NuxtLink>
                     <MenuDropItem>
                       <Icon class="w-4 h-4 mr-1" name="icon-park-twotone:order"></Icon>พิมพ์ใบ NAMELISTGROUP
                     </MenuDropItem>
@@ -696,10 +696,10 @@
           </UiCard>
         </o-modal>
         <o-modal v-model:active="add">
-          <div class="w-full grid grid-cols-2 gap-4 p-6">
+          <UiCard>
             <div class="col-span-2">
               <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                เลือกจุดแวะพัก
+                เพิ่มจุดแวะพัก
               </h2>
               <div class="flex items-center mb-4 p-4 border shadow-md">
                 <dev class="w-full relative inline-flex items-center">
@@ -711,42 +711,48 @@
                   </div>
                 </dev>
               </div>
-             </div>
-            <div>
-              
-              <o-field label="วันที่">
-                <o-input></o-input>
-              </o-field>
             </div>
-            <div>
-              <div class="flex gap-3">
-                <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
-                <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+            <div class="w-full items-center mb-4 p-4 border shadow-md">
+              <div class="mx-5">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">ข้อมูลเดินทาง
+                </h3>
+                <div class="grid grid-cols-2 gap-4 ">
+                  <div class="w-full">
+                    <o-field label="วันที่">
+                      <o-input type="text"></o-input>
+                    </o-field>
+                  </div>
+                  <div class="w-full">
+                    <div class="flex gap-3">
+                      <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
+                      <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+                    </div>
+                    <o-input type="text" v-if="time == 'time'"></o-input>
+                    <select v-if="time == 'duration'" id="countries"
+                      class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                      <option selected>เลือกช่วงเวลา</option>
+                      <option value="US">เช้า</option>
+                      <option value="CA">เที่ยง</option>
+                      <option value="FR">บ่าย</option>
+                      <option value="DE">เย็น</option>
+                    </select>
+                  </div>
+                  <div class="col-span-2">
+                    <o-field label="หมายเหตุ">
+                      <o-input type="textarea"
+                        ></o-input>
+                    </o-field>
+                  </div>
+                </div>
               </div>
-              <o-input v-if="time == 'time'"></o-input>
-              <select v-if="time == 'duration'" id="countries"
-                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option selected>เลือกช่วงเวลา</option>
-                <option value="US">เช้า</option>
-                <option value="CA">เที่ยง</option>
-                <option value="FR">บ่าย</option>
-                <option value="DE">เย็น</option>
-              </select>
             </div>
-
-            <div class="col-span-2">
-              <o-field label="หมายเหตุ">
-                <o-input type="textarea"></o-input>
-              </o-field>
-            </div>
-
-            <div class="col-span-2">
-              <div class="flex justify-end">
-                <o-button size="medium" variant="primary" @click="add = false"> เพิ่ม </o-button>
+            <div class="w-full ">
+              <div class="mt-5 flex justify-between">
+                <o-button variant="danger" class="ml-2" @click="add = false">ยกเลิก</o-button>
+                <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> เพิ่ม </o-button>
               </div>
             </div>
-          </div>
-
+          </UiCard>
         </o-modal>
       </div>
     </div>

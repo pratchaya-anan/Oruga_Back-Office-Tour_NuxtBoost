@@ -16,7 +16,7 @@
                 class="text-left z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600">
                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 cursor-pointer"
                   aria-labelledby="dropdownMenuIconButton">
-                  <NuxtLink @click="Export">
+                  <NuxtLink>
                     <MenuDropItem>
                       <Icon class="w-4 h-4 mr-1" name="icon-park-twotone:order"></Icon>พิมพ์ใบ NAMELISTGROUP
                     </MenuDropItem>
@@ -133,7 +133,9 @@
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> เป็นโรงแรมที่ดีมาก </p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="octicon:comment-16"></Icon> เป็นโรงแรมที่ดีมาก
+              </p>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -148,7 +150,9 @@
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 08978677867</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> </p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="octicon:comment-16"></Icon>
+              </p>
             </li>
             <li class="mb-10 ml-4">
               <div
@@ -162,7 +166,9 @@
               </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 12 ห้อง</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 04989712356</p>
-              <p class="text-base font-normal text-gray-500 dark:text-gray-400"><Icon class="w-6 h-6" name="octicon:comment-16"></Icon> </p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="octicon:comment-16"></Icon>
+              </p>
             </li>
           </ol>
 
@@ -210,7 +216,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr  class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr class="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700">
                   <th @click="add = true" class="px-3 py-4">
                     1
                   </th>
@@ -335,15 +341,15 @@
         <o-modal v-model:active="isItemModalHotelData">
           <UiCard>
             <div class="mr-10 flex justify-center">
-              
+
             </div>
             <div class="p-2 grid grid-cols-2 gap-0">
               <div class="w-full border-r">
                 <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
                   โรงแรม NHU MINH PLAZA <Icon class="w-6 h-6" name="ic:round-edit" @click="editHotel != true
-                ? (editHotel = true)
-                : (editHotel = false)">
-              </Icon>
+                    ? (editHotel = true)
+                    : (editHotel = false)">
+                  </Icon>
                 </h2>
                 <div class="px-2" v-if="!editHotel">
                   <p class="text-lg font-semibold  dark:text-white">ที่อยู่</p>
@@ -375,42 +381,42 @@
                 </h2>
                 <div class="px-2 mb-2 grid grid-cols-4 gap-0">
                   <div v-if="editcomment" class="col-span-2">
-                  <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
-                </div>
+                    <o-input type="text" modelValue="เป็นโรงแรมที่ดีมาก"></o-input>
+                  </div>
                   <p v-if="!editcomment" class="col-span-2">เป็นโรงแรมที่ดีมาก</p>
                   <p class="w-full text-end">20/06/66</p>
 
                   <p class="w-full text-end">
                     <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                ? (editcomment = true)
-                : (editcomment = false)">
-              </Icon>
+                      ? (editcomment = true)
+                      : (editcomment = false)">
+                    </Icon>
                   </p>
-                  
+
                   <div v-if="editcomment2" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
+                    <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                  </div>
                   <p v-if="!editcomment2" class="col-span-2">ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว</p>
                   <p class="w-full text-end">20/06/65</p>
 
                   <p class="w-full text-end">
                     <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment2 != true
-                ? (editcomment2 = true)
-                : (editcomment2 = false)">
-              </Icon>
+                      ? (editcomment2 = true)
+                      : (editcomment2 = false)">
+                    </Icon>
                   </p>
 
                   <div v-if="editcomment3" class="col-span-2">
-                  <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
-                </div>
+                    <o-input type="text" modelValue="ปรับปรุงครั้งล่าสุดดีขึ้นแล้ว"></o-input>
+                  </div>
                   <p v-if="!editcomment3" class="col-span-2">ที่ไปครั้งนี้ไม่ค่อยดีเท่าไหร่</p>
                   <p class="w-full text-end">20/06/64</p>
 
                   <p class="w-full text-end">
                     <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment3 != true
-                ? (editcomment3 = true)
-                : (editcomment3 = false)">
-              </Icon>
+                      ? (editcomment3 = true)
+                      : (editcomment3 = false)">
+                    </Icon>
                   </p>
                 </div>
                 <o-button v-if="!showComment" @click="showComment = true">เขียนคอมเมนต์</o-button>
@@ -431,13 +437,11 @@
                 </div>
               </div>
               <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบโรงแรม</o-button>
-              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
-            </div>
+                <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+              </div>
             </div>
           </UiCard>
         </o-modal>
-
-        
         <o-modal v-model:active="isItemModalHotelData2">
           <div class="p-6">
             <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
@@ -538,56 +542,60 @@
             </div>
             <div class="col-span-2">
               <div class="ml-2 flex justify-between">
-                <o-button size="medium" variant="danger" @click="add = false"> ลบโรงแรม </o-button>
-                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+                <o-button size="medium" variant="danger" @click="isItemModalHotelData2 = false"> ลบโรงแรม </o-button>
+                <o-button size="medium" variant="primary" @click="isItemModalHotelData2 = false"> บันทึก </o-button>
               </div>
             </div>
           </div>
         </o-modal>
-
-
-
         <!-- เลือกโรงแรม -->
-
         <o-modal v-model:active="add">
-          <div class="grid grid-cols-2 gap-4 p-6">
-            <div class="col-span-2">
+          <UiCard>
+          
               <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                เลือกโรงแรมเข้าพัก
+               เพิ่มไขโรงแรม
               </h2>
-              <div class="flex items-center mb-4 p-4 border shadow-md">
+              <div class="flex items-center mb-2 p-4 border shadow-md">
                 <dev class="w-full relative inline-flex items-center">
                   <div class="mx-5">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โรงแรม NHU MINH PLAZA</h3>
-                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm Văn
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ Lot 2 - A2 - KH, Phạm
+                      Văn
                       Đồng, Street, Sơn Trà, Đà Nẵng 550000 เวียดนาม</p>
                     <p class="text-base font-normal text-gray-500 dark:text-gray-400">จำนวนห้องพัก 120</p>
                   </div>
                 </dev>
               </div>
-            </div>
-
-            <div>
-              <o-field label="วันเข้าพัก">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div>
-              <o-field label="วันออก">
-                <o-input></o-input>
-              </o-field>
-            </div>
-            <div class="col-span-2">
-              <o-field label="จำนวนห้องพัก">
-                <o-input type="number"></o-input>
-              </o-field>
-            </div>
-            <div class="col-span-2">
-              <div class="flex justify-end">
-                <o-button size="medium" variant="primary" @click="add = false"> บันทึก </o-button>
+              <div class="w-full mb-4 p-4 border shadow-md">
+                <div class="mx-5">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">ข้อมูลเดินทาง
+                  </h3>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mx-5">
+                  <div>
+                    <o-field label="วันเข้าพัก">
+                      <o-input ></o-input>
+                    </o-field>
+                  </div>
+                  <div>
+                    <o-field label="วันออก">
+                      <o-input ></o-input>
+                    </o-field>
+                  </div>
+                  <div class="col-span-2">
+                    <o-field label="จำนวนห้องพัก">
+                      <o-input type="number" ></o-input>
+                    </o-field>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+              <div class="col-span-2">
+                <div class="ml-2 flex justify-between">
+                  <o-button size="medium" variant="danger" @click="add = false"> ยกเลิก </o-button>
+                  <o-button size="medium" variant="primary" @click="add = false"> เพิ่ม </o-button>
+                </div>
+              </div>
+          </UiCard>
         </o-modal>
         <!-- แก้ไข -->
         <o-modal v-model:active="add2">
@@ -645,8 +653,7 @@
                   </div>
                 </div>
               </div>
-            </div>
-
+            </div> 
             <div>
               <o-field label="วันเข้าพัก">
                 <o-input></o-input>
