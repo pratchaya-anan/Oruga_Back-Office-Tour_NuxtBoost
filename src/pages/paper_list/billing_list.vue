@@ -32,10 +32,6 @@
         <div>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
-            {{ it.idpaper }}
-          </p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
             {{ it.agency }}
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
@@ -104,77 +100,66 @@
           </div>
           <!-- Modal body -->
           <div class="p-4 font-normal text-gray-700 dark:text-gray-400">
-            <div>
-              <span>รายละเอียดลูกค้า</span>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                หน่วยงาน/ลูกค้า
-              </div>
-              <div>เทศบาลขอนแก่น</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                รหัสลูกค้า
-              </div>
-              <div>1552555214</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ชื่อผู้ติดต่อ
-              </div>
-              <div>นายภาคภูมิ ภูเขียว</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                เบอร์ติดต่อ
-              </div>
-              <div>0625584785</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                เลขประจำตัวผู้เสียภาษี
-              </div>
-              <div>1522236</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                Email
-              </div>
-              <div>somchai@gmail.com</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ที่อยู่
-              </div>
-              <div>175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000</div>
-              <hr class="my-2" />
-              <span>รายละเอียดผู้ติดต่อ</span>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ผู้เสนอขาย
-              </div>
-              <div>นายกอไก่ ขอไข่</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ฝ่าย/แผนก
-              </div>
-              <div>การเงิน</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ยืนยันราคาภายในวันที่
-              </div>
-              <div>30/3/2566</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                วันส่งของ
-              </div>
-              <div>05/04/2566</div>
-              <hr class="my-2" />
-              <div class="mt-5 flex justify-center">
-                <a href="/paper_edit/quotation_item">
-                  <o-button
-                    class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    <Icon
-                      class="mr-3 -ml-1 w-5 h-5"
-                      name="mdi:paper-edit"
-                    ></Icon>
-                    แก้ไข
-                  </o-button>
-                </a>
-                <a href="/paper/quotation_paper">
-                  <o-button
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
-                    </Icon>
-                    พิมพ์
-                  </o-button>
-                </a>
-              </div>
+            <span>รายละเอียดลูกค้า</span>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              หน่วยงาน/ลูกค้า
+            </div>
+            <div>เทศบาลขอนแก่น</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              รหัสลูกค้า
+            </div>
+            <div>1552555214</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ชื่อผู้ติดต่อ
+            </div>
+            <div>นายภาคภูมิ ภูเขียว</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              เบอร์ติดต่อ
+            </div>
+            <div>0625584785</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              เลขประจำตัวผู้เสียภาษี
+            </div>
+            <div>1522236</div>
+            <div class="font-semibold text-gray-900 dark:text-white">Email</div>
+            <div>somchai@gmail.com</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ที่อยู่
+            </div>
+            <div>175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000</div>
+            <hr class="my-2" />
+            <span>รายละเอียดผู้ติดต่อ</span>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ผู้เสนอขาย
+            </div>
+            <div>นายกอไก่ ขอไข่</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ฝ่าย/แผนก
+            </div>
+            <div>การเงิน</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ยืนยันราคาภายในวันที่
+            </div>
+            <div>30/3/2566</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              วันส่งของ
+            </div>
+            <div>05/04/2566</div>
+            <hr class="my-2" />
+            <div class="mt-5 flex justify-center">
+              <a href="/paper_edit/billing_item">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
+                  แก้ไข
+                </o-button>
+              </a>
+              <a href="/paper/billing_paper">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
+                  </Icon>
+                  พิมพ์
+                </o-button>
+              </a>
             </div>
           </div>
         </div>

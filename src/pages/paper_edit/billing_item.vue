@@ -68,16 +68,16 @@
             <o-input modelValue="1522236"></o-input>
           </o-field>
           <o-field label="ผู้เสนอขาย">
-            <o-input modelValue="สมชัย ใจเกินร้อย"></o-input>
+            <o-input modelValue="นายกอไก่ ขอไข่"></o-input>
           </o-field>
           <o-field label="ฝ่าย/แผนก">
-            <o-input modelValue="ฝ่ายขาย"></o-input>
+            <o-input modelValue="การเงิน"></o-input>
           </o-field>
           <o-field label="ยืนยันราคาภายในวันที่">
-            <o-input modelValue="16/07/2566"></o-input>
+            <o-input modelValue="30/3/2566"></o-input>
           </o-field>
           <o-field label="วันส่งของ">
-            <o-input modelValue="17/07/2566"></o-input>
+            <o-input modelValue="05/04/2566"></o-input>
           </o-field>
           <section>
             <o-button @click="showOrderPanel = false" class="mt-4"
