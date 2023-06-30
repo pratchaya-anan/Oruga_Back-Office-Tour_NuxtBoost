@@ -28,19 +28,19 @@
       <!-- ข้อมูลฝั่งซ้าย -->
       <div class="col-span-2 grid grid-cols-3 m-5 w-full text-xs">
         <div class="col-span-1 font-bold">ชื่อ (ผู้ขายสินค้า/ให้บริการ):</div>
-        <div class="col-span-2">เทศบาลขอนแก่น</div>
+        <div class="col-span-2">นายนที บุญมา</div>
         <div class="col-span-1 font-bold">เลขประจำตัวประชาชน:</div>
-        <div class="col-span-2">1522236</div>
+        <div class="col-span-2">1356984582</div>
         <div class="col-span-1 font-bold">เบอร์โทร:</div>
-        <div class="col-span-2">0625584785</div>
+        <div class="col-span-2">0825584785</div>
         <div class="col-span-1 font-bold">ที่อยู่:</div>
         <div class="col-span-2">
-          175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+          153 ม.7 ต.หนองบัว อ.เมืองอุดรธานี จ.อุดรธานี 41000
         </div>
         <div class="col-span-1 font-bold">
           ได้รับเงินจาก (ผู้ซื้อ/ผู้รับบริการ):
         </div>
-        <div class="col-span-2">นายนที บุญมา</div>
+        <div class="col-span-2">เทศบาลขอนแก่น ( นายภาคภูมิ ภูเขียว )</div>
       </div>
 
       <!-- ตาราง -->
