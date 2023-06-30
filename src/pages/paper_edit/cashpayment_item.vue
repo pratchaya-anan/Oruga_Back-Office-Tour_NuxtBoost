@@ -5,32 +5,35 @@
       <UiCard class="mb-4">
         <section>
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-            <div>
-              <div class="grid grid-cols-6">
-                <div class="col-span-5">
-                  <h2 class="text-xl font-bold dark:text-white">ใบสำคัญจ่าย</h2>
-                </div>
-                <div class="flex justify-end">
-                  <Icon
-                    class="mr-3 -ml-1 w-5 h-5"
-                    name="ic:round-edit"
-                    @click="
-                      showOrderPanel != true
-                        ? (showOrderPanel = true)
-                        : (showOrderPanel = false)
-                    "
-                  >
-                  </Icon>
-                </div>
+            <div class="grid grid-cols-6">
+              <div class="col-span-5">
+                <h2 class="text-xl font-bold dark:text-white">ใบสำคัญจ่าย</h2>
               </div>
-              <ul class="mt-2 space-y-1">
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              <div class="flex justify-end">
+                <Icon
+                  class="mr-3 -ml-1 w-5 h-5"
+                  name="ic:round-edit"
+                  @click="
+                    showOrderPanel != true
+                      ? (showOrderPanel = true)
+                      : (showOrderPanel = false)
+                  "
                 >
-                  เลขที่: CP230430-0001
-                </li>
-              </ul>
+                </Icon>
+              </div>
             </div>
+            <ul class="mt-2 space-y-1">
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                Cashpayment
+              </li>
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                เลขที่: CP230430-0001
+              </li>
+            </ul>
           </div>
         </section>
         <section
@@ -64,29 +67,9 @@
           v-if="!showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <span>รายละเอียดใบสำคัญจ่าย</span>
+          <span>รายละเอียดผู้รับเงิน</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-4">ชื่อผู้เบิกจ่าย</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  นายสวยสด งดงาม
-                </div>
-              </div>
-              <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-4">ฝ่าย/แผนก</div>
-                <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  การเงิน
-                </div>
-              </div>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
@@ -118,13 +101,34 @@
                 </div>
               </div>
               <div
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                class="border-b text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
                 <div class="mt-2">ที่อยู่</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   156 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
+                </div>
+              </div>
+              <span>รายละเอียดผู้จ่าย</span>
+              <div
+                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+              >
+                <div class="mt-4">ชื่อผู้เบิกจ่าย</div>
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  นายสวยสด งดงาม
+                </div>
+              </div>
+              <div
+                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+              >
+                <div class="mt-4">ฝ่าย/แผนก</div>
+                <div
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  การเงิน
                 </div>
               </div>
               <div

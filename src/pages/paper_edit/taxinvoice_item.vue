@@ -88,21 +88,11 @@
                 <div
                   class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                 >
-                  <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                  <div class="mt-4">หน่วยงาน/ลูกค้า</div>
                   <div
                     class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     เทศบาลขอนแก่น
-                  </div>
-                </div>
-                <div
-                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <div class="mt-2">ที่อยู่</div>
-                  <div
-                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
                   </div>
                 </div>
                 <div
@@ -113,6 +103,16 @@
                     class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     1522236
+                  </div>
+                </div>
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <div class="mt-2">ที่อยู่</div>
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
                   </div>
                 </div>
               </div>

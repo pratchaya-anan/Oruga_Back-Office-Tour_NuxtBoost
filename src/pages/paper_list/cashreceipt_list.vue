@@ -66,101 +66,123 @@
             class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"> -->
 
     <o-modal v-model:active="openmodal">
-      <div class="relative w-full max-w-2xl max-h-full">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-          <!-- Modal header -->
-          <div
-            class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
-          >
-            <ul class="mt-2 space-y-1">
-              <li class="text-xl font-semibold text-gray-900 dark:text-white">
-                ใบสำคัญรับเงิน
-              </li>
+      <UiCard class="relative w-full min-w-[400px] max-w-2xl max-h-full">
+        <section>
+          <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+            <div class="grid grid-cols-6">
+              <div class="col-span-5">
+                <h2 class="text-xl font-bold dark:text-white">
+                  ใบสำคัญรับเงิน
+                </h2>
+              </div>
+              <div class="flex justify-end">
+                <button
+                  @click="openmodal = false"
+                  type="button"
+                  class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="staticModal"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <ul class="space-y-1">
               <li
                 class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
               >
                 เลขที่: CR230430-0001
               </li>
             </ul>
-            <button
-              @click="openmodal = false"
-              type="button"
-              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              data-modal-hide="staticModal"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+          </div>
+        </section>
+        <section class="my-4 border-t border-gray-200 dark:border-gray-700">
+          <span>รายละเอียดการทำรายการ</span>
+          <div class="sm:flex xl:block xl:space-y-4">
+            <div class="sm:flex-1">
+              <div
+                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <!-- Modal body -->
-          <div class="p-4 font-normal text-gray-700 dark:text-gray-400">
-            <span>รายละเอียดลูกค้า</span>
-            <div class="font-semibold text-gray-900 dark:text-white">
-              ชื่อผู้ติดต่อ
-            </div>
-            <div>มะนาว หวานจังเลย</div>
-            <div class="font-semibold text-gray-900 dark:text-white">
-              ที่อยู่
-            </div>
-            <div>111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100</div>
-            <div class="font-semibold text-gray-900 dark:text-white">
-              ID TAX
-            </div>
-            <div>4585695214526</div>
-            <div class="font-semibold text-gray-900 dark:text-white">โทร</div>
-            <div>0254875858</div>
-            <div class="font-semibold text-gray-900 dark:text-white">Email</div>
-            <div>somchai@gmail.com</div>
-            <hr class="my-2" />
-            <span>รายละเอียดผู้ติดต่อ</span>
-            <div class="font-semibold text-gray-900 dark:text-white">
-              รหัสลูกค้า
-            </div>
-            <div>C-58015259</div>
-            <div class="font-semibold text-gray-900 dark:text-white">
-              ผู้เสนอขาย
-            </div>
-            <div>สมชัย ใจเกินร้อย</div>
-            <div class="font-semibold text-gray-900 dark:text-white">ฝ่าย:</div>
-            <div>การตลาด</div>
-            <div class="font-semibold text-gray-900 dark:text-white">
-              ยืนยันราคาภายใน
-            </div>
-            <div>31-03-2566</div>
-            <div class="font-semibold text-gray-900 dark:text-white">
-              วันส่งของ:
-            </div>
-            <div>02-04-2566</div>
-            <hr class="my-2" />
-            <div class="mt-5 flex justify-center">
-              <a href="/paper_edit/cashreceipt_item">
-                <o-button>
-                  <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
-                  แก้ไข
-                </o-button>
-              </a>
-              <a href="/paper/cashreceipt_paper">
-                <o-button>
-                  <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
-                  </Icon>
-                  พิมพ์
-                </o-button>
-              </a>
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <div class="mt-4">ชื่อ (ผู้ขายสินค้า/ให้บริการ)</div>
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    เทศบาลขอนแก่น
+                  </div>
+                </div>
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    1522236
+                  </div>
+                </div>
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <div class="mt-2">เบอร์โทร</div>
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    0625584785
+                  </div>
+                </div>
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <div class="mt-2">ที่อยู่</div>
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                  </div>
+                </div>
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <div class="mt-2">ได้รับเงินจาก (ผู้ซื้อ/ผู้รับบริการ)</div>
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    นายนที บุญมา
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+        <hr class="my-2" />
+        <section class="mt-5 flex justify-center">
+          <a href="/paper_edit/cashreceipt_item">
+            <o-button>
+              <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
+              แก้ไข
+            </o-button>
+          </a>
+          <a href="/paper/cashreceipt_paper">
+            <o-button>
+              <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print"> </Icon>
+              พิมพ์
+            </o-button>
+          </a>
+        </section>
+      </UiCard>
     </o-modal>
     <!-- </div> -->
   </section>

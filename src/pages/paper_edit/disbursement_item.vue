@@ -1,42 +1,40 @@
 <template>
   <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
     <div class="col-span-full xl:col-auto mb-4">
-      <UiCard class="mb-4">
+      <UiCard>
         <section>
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-            <div>
-              <div class="grid grid-cols-6">
-                <div class="col-span-5">
-                  <h2 class="text-xl font-bold dark:text-white">
-                    ใบเบิกเงินสดย่อย
-                  </h2>
-                </div>
-                <div class="flex justify-end">
-                  <Icon
-                    class="mr-3 -ml-1 w-5 h-5"
-                    name="ic:round-edit"
-                    @click="
-                      showOrderPanel != true
-                        ? (showOrderPanel = true)
-                        : (showOrderPanel = false)
-                    "
-                  >
-                  </Icon>
-                </div>
+            <div class="grid grid-cols-6">
+              <div class="col-span-5">
+                <h2 class="text-xl font-bold dark:text-white">
+                  ใบเบิกเงินสดย่อย
+                </h2>
               </div>
-              <ul class="mt-2 space-y-1">
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              <div class="flex justify-end">
+                <Icon
+                  class="mr-3 -ml-1 w-5 h-5"
+                  name="ic:round-edit"
+                  @click="
+                    showOrderPanel != true
+                      ? (showOrderPanel = true)
+                      : (showOrderPanel = false)
+                  "
                 >
-                  Disbursement Estimate
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  เลขที่: D230627-0001
-                </li>
-              </ul>
+                </Icon>
+              </div>
             </div>
+            <ul class="mt-2 space-y-1">
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                Disbursement Estimate
+              </li>
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                เลขที่: D230627-0001
+              </li>
+            </ul>
           </div>
         </section>
         <section
@@ -70,7 +68,7 @@
           v-if="!showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <span>รายละเอียดใบเบิกเงินสดย่อย</span>
+          <span>รายละเอียดผู้ขอเบิก</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
               <div
