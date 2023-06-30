@@ -31,26 +31,22 @@
         </a>
         <div>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h-5" name="eva:people-fill"></Icon>
-            ศศิศ วิรัตน์จินดา
-          </p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
-            <Icon class="mr-3 -ml-1 w-5 h5" name="ri:phone-fill"></Icon>
-            มะนาว หวานจังเลย
+            <Icon class="mr-3 -ml-1 w-5 h-5" name="map:travel-agency"></Icon>
+            เทศบาลขอนแก่น
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="ic:baseline-date-range"
             ></Icon>
-            4585695214526
+            24/03/2566
           </p>
           <p class="mb-1 font-normal text-gray-700 dark:text-gray-400">
             <Icon
               class="mr-3 -ml-1 w-5 h-5"
               name="majesticons:money-line"
             ></Icon>
-            0254875858
+            12,840 บาท
           </p>
         </div>
         <div>
@@ -73,9 +69,16 @@
           <div
             class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
           >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              รายละเอียด
-            </h3>
+          <ul class="mt-2 space-y-1">
+              <li class="text-xl font-semibold text-gray-900 dark:text-white">
+                ใบเสร็จรับเงิน
+              </li>
+              <li
+                class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
+              >
+                เลขที่: R230430-0001
+              </li>
+            </ul>
             <button
               @click="openmodal = false"
               type="button"
@@ -104,96 +107,62 @@
                   class="p-6 font-normal text-gray-700 dark:text-gray-400 mb-3"
                 >
                   <diV>
-                    <div class="flex justify-between">
-                      <div>ศศิศ วิรัตน์จินดา</div>
-                      <div>
-                        <button
-                          id="dropdownMenuIconButton"
-                          data-dropdown-toggle="dropdownDots"
-                          class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                          type="button"
-                        >
-                          <svg
-                            class="w-6 h-6"
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
+                    <div>รายละเอียดใบเสร็จ</div>
+                    <div class="font-semibold text-gray-900 dark:text-white">
+                      หน่วยงาน/ลูกค้า
                     </div>
-                    <!-- Dropdown menu -->
-                    <div
-                      id="dropdownDots"
-                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                    >
-                      <div class="py-2">
-                        <a
-                          href="#"
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          แก้ไข</a
-                        >
-                      </div>
-                      <div class="py-2">
-                        <a
-                          href="#"
-                          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          ลบ</a
-                        >
-                      </div>
+                    <div class="flex justify-between">
+                      <div>เทศบาลขอนแก่น</div>
                     </div>
                     <div class="font-semibold text-gray-900 dark:text-white">
-                      ชื่อผู้ติดต่อ
+                      สาขา
                     </div>
-                    <div>มะนาว หวานจังเลย</div>
+                    <div>
+                      สำนักงานใหญ่
+                    </div>
                     <div class="font-semibold text-gray-900 dark:text-white">
                       ที่อยู่
                     </div>
                     <div>
-                      111/0 ถนนบ้านเตย อำเภอศรีวิชัย จังหวัดสุรินทร์ 25100
+                      175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
                     </div>
                     <div class="font-semibold text-gray-900 dark:text-white">
-                      ID TAX
+                      รวมทั้งสิ้น
                     </div>
-                    <div>4585695214526</div>
+                    <div>
+                      12,840 บาท
+                    </div>
                     <div class="font-semibold text-gray-900 dark:text-white">
-                      โทร
+                      รวมทั้งสิ้น ตัวอักษร
                     </div>
-                    <div>0254875858</div>
+                    <div>
+                      หนึ่งหมื่นสองพันแปดร้อยสี่สิบบาทถ้วน
+                    </div>
                     <div class="font-semibold text-gray-900 dark:text-white">
-                      Email
+                      ชำระผ่าน
                     </div>
-                    <div>somchai@gmail.com</div>
-                  </diV>
-                  <hr class="my-5 border-1.5" />
-                  <diV>
+                    <div>
+                      เช็คธนาคาร
+                    </div>
                     <div class="font-semibold text-gray-900 dark:text-white">
-                      รหัสลูกค้า
+                      หักภาษี ณ ที่จ่าย
                     </div>
-                    <div>C-58015259</div>
+                    <div>
+                      898.80 บาท
+                    </div>
                     <div class="font-semibold text-gray-900 dark:text-white">
-                      ผู้เสนอขาย
+                      เลขที่เช็ค
                     </div>
-                    <div>สมชัย ใจเกินร้อย</div>
+                    <div>
+                      7842744
+                    </div>
                     <div class="font-semibold text-gray-900 dark:text-white">
-                      ฝ่าย:
+                      วันที่เช็ค
                     </div>
-                    <div>การตลาด</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      ยืนยันราคาภายใน
+                    <div>
+                      24/03/2566
                     </div>
-                    <div>31-03-2566</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      วันส่งของ:
-                    </div>
-                    <div>02-04-2566</div>
+                    
                   </diV>
                   <div class="mt-5 flex justify-center">
                     <a href="/paper_edit/receipt_item">

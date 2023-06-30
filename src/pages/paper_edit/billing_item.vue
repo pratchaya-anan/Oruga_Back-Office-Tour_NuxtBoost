@@ -44,7 +44,7 @@
           v-if="showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <o-field label="หน่วยงาน / ลูกค้า">
+          <o-field label="หน่วยงาน/ลูกค้า">
             <o-input modelValue="เทศบาลขอนแก่น"></o-input>
           </o-field>
           <o-field label="รหัสลูกค้า">
@@ -92,7 +92,7 @@
           v-if="!showOrderPanel"
           class="my-4 border-t border-gray-200 dark:border-gray-700"
         >
-          <span>รายละเอียดใบเสนอราคา</span>
+          <span>รายละเอียดลูกค้า</span>
           <div class="sm:flex xl:block xl:space-y-4">
             <div class="sm:flex-1">
               <div
@@ -101,7 +101,7 @@
                 <div
                   class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                 >
-                  <div class="mt-4">หน่วยงาน / ลูกค้า</div>
+                  <div class="mt-4">หน่วยงาน/ลูกค้า</div>
                   <div
                     class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
@@ -157,7 +157,7 @@
                   <div
                     class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
                   </div>
                 </div>
               </div>
@@ -166,7 +166,7 @@
               <div
                 class="my-4 border-t border-gray-200 dark:border-gray-700"
               ></div>
-              <span>รายละเอียดฝ่ายขาย</span>
+              <span>รายละเอียดผู้ติดต่อ</span>
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
@@ -200,7 +200,7 @@
               <div
                 class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
               >
-                <div class="mt-2">วันส่งของ:</div>
+                <div class="mt-2">วันส่งของ</div>
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >

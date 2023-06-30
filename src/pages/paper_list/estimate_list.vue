@@ -38,12 +38,6 @@
             {{ it.objective }}
           </p>
         </div>
-        <div>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-          <p class="mb-1 font-normal text-gray-700 dark:text-gray-400"></p>
-        </div>
       </UiCard>
     </section>
 
@@ -92,9 +86,6 @@
                 โครงการ
               </div>
               <div>องค์การบริหารส่วนตำบลโพนงาม</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ยอดเงินประมาณการ
-              </div>
               <div class="font-semibold text-gray-900 dark:text-white">
                 รายละเอียดโครงการ/กิจกรรม
               </div>

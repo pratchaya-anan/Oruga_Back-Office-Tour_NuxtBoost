@@ -47,29 +47,29 @@
             </div>
             <div>
               <h2 class="text-xl font-bold dark:text-white">
-                องค์การบริหารส่วนตำบลโพนงาม
+                ทัวร์เว้ ดานัง ประเทศเวียดนาม
               </h2>
               <ul class="mt-2 space-y-1">
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6 mr-2" name="ri:treasure-map-fill"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="ri:treasure-map-fill"></Icon>
                   อำนาจเจริญ-เว้ดานัง (ประเทศเวียดนาม)
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6 mr-2" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="line-md:moon-filled-to-sunny-filled-transition"></Icon>
                   4 วัน 3 คืน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6 mr-2" name="line-md:calendar"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="line-md:calendar"></Icon>
                   21/04/2566
                   <Icon class="mx-1 w-5 h-5" name="line-md:arrow-right"></Icon>
                   24/04/2566
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6 mr-2" name="fluent:people-audience-24-filled"></Icon>
+                  <Icon class="w-6 h-6 mr-1" name="fluent:people-audience-24-filled"></Icon>
                   23 คน
-                  <Icon class="w-6 h-6 mr-2 ml-6" name="el:person"></Icon>
+                  <Icon class="w-6 h-6 mr-1 ml-6" name="el:person"></Icon>
                   19 คน
-                  <Icon class="w-6 h-6 mr-2 ml-2" name="material-symbols:child-care"></Icon>
+                  <Icon class="w-6 h-6 mr-1 ml-2" name="material-symbols:child-care"></Icon>
                   3 คน
                 </li>
                 <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
@@ -157,8 +157,8 @@
           </div>
         </UiCard>
         <!-- โรงแรม -->
-        <UiCard class="mt-4" v-if="showItems == 'hotel'">
-          <div class="w-full relative">
+        <UiCard v-if="showItems == 'hotel'">
+          <div class="p-2 w-full relative">
             <NuxtLink href="/management/tour_data_hotel">
               <o-button
                 class="absolute -top-2 -right-2 inline-flex items-center p-2 text-sm font-medium text-center text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
@@ -166,7 +166,7 @@
               </o-button>
             </NuxtLink>
           </div>
-          <h2 class="mt-2 text-xl font-bold dark:text-white">
+          <h2 class="text-xl font-bold dark:text-white">
             โรงแรม
           </h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
@@ -273,7 +273,7 @@
               </div>
               <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566 - 22 เมษายน 2566</time>
-                <h3 class="flex justify-between text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">
                 รถบัสลาว <a href="#" @click="isItemModalHotelData4 = true"
                   class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
 
@@ -291,72 +291,72 @@
         </UiCard>
 
         <o-modal v-model:active="isItemModalHotelData4">
-        <UiCard>
-          <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-            แก้ไขรถ
-          </h2>
-          <div class="flex items-center mb-4 p-4 border shadow-md">
-            <dev class="w-full relative inline-flex items-center">
-              <div class="mx-5">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">รถบัสลาว</h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ทะเบียน 8989 ประเทศเวียงจันน์</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์โทร 0428976765</p>
-              </div>
-            </dev>
-          </div>
-          <div class="w-full ml-2">
-            <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-              คอมเมนต์
+          <UiCard>
+            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+              แก้ไขรถ
             </h2>
-            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-              <div v-if="editcomment" class="col-span-2">
-                <o-input type="text" modelValue="ปานกลาง"></o-input>
-              </div>
-              <p v-if="!editcomment" class="col-span-2">ปานกลาง</p>
-              <p class="w-full text-end">20/06/66</p>
-
-              <p class="w-full text-end">
-                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                  ? (editcomment = true)
-                  : (editcomment = false)">
-                </Icon>
-              </p>
-
+            <div class="flex items-center mb-4 p-4 border shadow-md">
+              <dev class="w-full relative inline-flex items-center">
+                <div class="mx-5">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">รถบัสลาว</h3>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ทะเบียน 8989 ประเทศเวียงจันน์</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์โทร 0428976765</p>
+                </div>
+              </dev>
             </div>
-            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-            <div v-if="showComment">
-              <o-field label="เขียนคอมเมนต์">
-                <o-input type="textarea"></o-input>
-              </o-field>
-              <div class="flex">
-                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                  <o-input></o-input>
+            <div class="w-full ml-2">
+              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                คอมเมนต์
+              </h2>
+              <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="ปานกลาง"></o-input>
+                </div>
+                <p v-if="!editcomment" class="col-span-2">ปานกลาง</p>
+                <p class="w-full text-end">20/06/66</p>
+
+                <p class="w-full text-end">
+                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                    ? (editcomment = true)
+                    : (editcomment = false)">
+                  </Icon>
+                </p>
+
+              </div>
+              <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+              <div v-if="showComment">
+                <o-field label="เขียนคอมเมนต์">
+                  <o-input type="textarea"></o-input>
                 </o-field>
-                <section class="flex-1 shrink flex items-center justify-end">
-                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                  </o-button>
-                  <o-button class="mt-5">เพิ่ม</o-button>
-                </section>
+                <div class="flex">
+                  <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                    <o-input></o-input>
+                  </o-field>
+                  <section class="flex-1 shrink flex items-center justify-end">
+                    <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                    </o-button>
+                    <o-button class="mt-5">เพิ่ม</o-button>
+                  </section>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="w-full ">
-            <div class="px-2">
-              <p class="text-lg font-semibold  dark:text-white">วันที่ไป</p>
-              <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
-              <p class="text-lg font-semibold  dark:text-white">วันที่กลับ</p>
-              <p class="ml-2 text-lg font-normal  dark:text-white"></p>
-              <o-input type="text" modelValue="22 เมษายน 2566"></o-input>
-              <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
-              <o-input type="text" modelValue=""></o-input>
-            </div>
+            <div class="w-full ">
+              <div class="px-2">
+                <p class="text-lg font-semibold  dark:text-white">วันที่ไป</p>
+                <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
+                <p class="text-lg font-semibold  dark:text-white">วันที่กลับ</p>
+                <p class="ml-2 text-lg font-normal  dark:text-white"></p>
+                <o-input type="text" modelValue="22 เมษายน 2566"></o-input>
+                <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
+                <o-input type="text" modelValue=""></o-input>
+              </div>
 
-            <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบยานพาหนะ</o-button>
-              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+              <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบยานพาหนะ</o-button>
+                <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+              </div>
             </div>
-          </div>
-        </UiCard>
-      </o-modal>
+          </UiCard>
+        </o-modal>
         <!-- จุดแวะพัก -->
         <UiCard v-if="showItems == 'checkpoin'">
           <div class="p-2 w-full relative">
@@ -377,9 +377,10 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-                <h3 class="mt-1 flex justify-between text-lg font-semibold text-gray-900 dark:text-white">
+              <h3 class="mt-1 flex justify-between text-lg font-semibold text-gray-900 dark:text-white">
                 <a>บ้านหนองผือ</a><a href="#" @click="isItemModalHotelData5 = true"
-                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
+                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
+              </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">05.00 น.
                 อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">
@@ -476,92 +477,92 @@
         </UiCard>
 
         <o-modal v-model:active="isItemModalHotelData5">
-        <UiCard>
-          <div class="col-span-2">
-            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              แก้ไขจุดแวะพัก
-            </h2>
-            <div class="flex items-center mb-4 p-4 border shadow-md">
-              <dev class="w-full relative inline-flex items-center">
-                <div class="mx-5">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">บ้านหนองผือ</h3>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภท จุดนัดหมาย</p>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ บ้านหนองผือ ตำบลหนองผือ
-                    อำเภอชานุมาน อำนาจเจริญ 37000</p>
+          <UiCard>
+            <div class="col-span-2">
+              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                แก้ไขจุดแวะพัก
+              </h2>
+              <div class="flex items-center mb-4 p-4 border shadow-md">
+                <dev class="w-full relative inline-flex items-center">
+                  <div class="mx-5">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">บ้านหนองผือ</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภท จุดนัดหมาย</p>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">ที่อยู่ บ้านหนองผือ ตำบลหนองผือ
+                      อำเภอชานุมาน อำนาจเจริญ 37000</p>
+                  </div>
+                </dev>
+              </div>
+            </div>
+            <div class="w-full ml-2">
+              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                คอมเมนต์
+              </h2>
+              <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เช็คความพร้อม"></o-input>
                 </div>
-              </dev>
-            </div>
-          </div>
-          <div class="w-full ml-2">
-            <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-              คอมเมนต์
-            </h2>
-            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-              <div v-if="editcomment" class="col-span-2">
-                <o-input type="text" modelValue="เช็คความพร้อม"></o-input>
+                <p v-if="!editcomment" class="col-span-2">เช็คความพร้อม</p>
+                <p class="w-full text-end">20/06/66</p>
+
+                <p class="w-full text-end">
+                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                    ? (editcomment = true)
+                    : (editcomment = false)">
+                  </Icon>
+                </p>
+
               </div>
-              <p v-if="!editcomment" class="col-span-2">เช็คความพร้อม</p>
-              <p class="w-full text-end">20/06/66</p>
-
-              <p class="w-full text-end">
-                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                  ? (editcomment = true)
-                  : (editcomment = false)">
-                </Icon>
-              </p>
-
-            </div>
-            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-            <div v-if="showComment">
-              <o-field label="เขียนคอมเมนต์">
-                <o-input type="textarea"></o-input>
-              </o-field>
-              <div class="flex">
-                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                  <o-input></o-input>
+              <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+              <div v-if="showComment">
+                <o-field label="เขียนคอมเมนต์">
+                  <o-input type="textarea"></o-input>
                 </o-field>
-                <section class="flex-1 shrink flex items-center justify-end">
-                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                  </o-button>
-                  <o-button class="mt-5">เพิ่ม</o-button>
-                </section>
+                <div class="flex">
+                  <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                    <o-input></o-input>
+                  </o-field>
+                  <section class="flex-1 shrink flex items-center justify-end">
+                    <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                    </o-button>
+                    <o-button class="mt-5">เพิ่ม</o-button>
+                  </section>
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <p class="text-lg font-semibold  dark:text-white">วันที่</p>
-            <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
-          </div>
-          <div>
-            <div class="flex gap-3">
-              <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
-              <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+            <div>
+              <p class="text-lg font-semibold  dark:text-white">วันที่</p>
+              <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
             </div>
-            <o-input type="text" modelValue="05.00 น." v-if="time == 'time'"></o-input>
-            <select v-if="time == 'duration'" id="countries"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option selected>เลือกช่วงเวลา</option>
-              <option value="US">เช้า</option>
-              <option value="CA">เที่ยง</option>
-              <option value="FR">บ่าย</option>
-              <option value="DE">เย็น</option>
-            </select>
-          </div>
-
-          <div class="col-span-2">
-            <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
-            <o-input type="text"
-              modelValue="05.00 น. อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว"></o-input>
-          </div>
-          <div class="w-full ">
-
-
-            <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบจุดแวะพัก</o-button>
-              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+            <div>
+              <div class="flex gap-3">
+                <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
+                <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+              </div>
+              <o-input type="text" modelValue="05.00 น." v-if="time == 'time'"></o-input>
+              <select v-if="time == 'duration'" id="countries"
+                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>เลือกช่วงเวลา</option>
+                <option value="US">เช้า</option>
+                <option value="CA">เที่ยง</option>
+                <option value="FR">บ่าย</option>
+                <option value="DE">เย็น</option>
+              </select>
             </div>
-          </div>
-        </UiCard>
-      </o-modal>
+
+            <div class="col-span-2">
+              <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
+              <o-input type="text"
+                modelValue="05.00 น. อ.ชานุมาน อำนาจเจริญ ออกเดินทางไปยังด่าน ตม.มุกดาหารเพื่อเดินทางต่อไปยังด่านลาวบาว"></o-input>
+            </div>
+            <div class="w-full ">
+
+
+              <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบจุดแวะพัก</o-button>
+                <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+              </div>
+            </div>
+          </UiCard>
+        </o-modal>
 
         <!-- ร้านอาหาร -->
         <UiCard v-if="showItems == 'restaurant'">
@@ -583,9 +584,11 @@
               </div>
               <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-                <h3 class="mt-1 flex justify-between text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white"><a
-                  href="#">ร้านเลียจาน</a><a href="#" @click="isItemModalHotelData6 = true"
-                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
+              <h3
+                class="mt-1 flex justify-between text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">
+                <a href="#">ร้านเลียจาน</a><a href="#" @click="isItemModalHotelData6 = true"
+                  class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
+              </h3>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">12.00 น. ทานอาหารเทียง ร้านเลียจาน</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">
@@ -666,12 +669,12 @@
         </UiCard>
 
         <o-modal v-model:active="isItemModalHotelData6">
-        <UiCard>
-          <div class="col-span-2">
-            <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-              แก้ไขร้านอาหาร
-            </h2>
-            <div class="flex items-center mb-4 p-4 border shadow-md">
+          <UiCard>
+            <div class="col-span-2">
+              <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                แก้ไขร้านอาหาร
+              </h2>
+              <div class="flex items-center mb-4 p-4 border shadow-md">
                 <dev class="w-full relative inline-flex items-center">
                   <div class="mx-9">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">โครตอร่อย!</h3>
@@ -682,81 +685,80 @@
                   </div>
                 </dev>
               </div>
-          </div>
-          <div class="w-full ml-2">
-            <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-              คอมเมนต์
-            </h2>
-            <div class="px-2 mb-2 grid grid-cols-4 gap-0">
-              <div v-if="editcomment" class="col-span-2">
-                <o-input type="text" modelValue="เป็นอาหารที่ดีที่สุดที่เคยทานมา
+            </div>
+            <div class="w-full ml-2">
+              <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+                คอมเมนต์
+              </h2>
+              <div class="px-2 mb-2 grid grid-cols-4 gap-0">
+                <div v-if="editcomment" class="col-span-2">
+                  <o-input type="text" modelValue="เป็นอาหารที่ดีที่สุดที่เคยทานมา
 
 "></o-input>
+                </div>
+                <p v-if="!editcomment" class="col-span-2">เป็นอาหารที่ดีที่สุดที่เคยทานมา
+
+                </p>
+                <p class="w-full text-end">20/06/66</p>
+
+                <p class="w-full text-end">
+                  <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
+                    ? (editcomment = true)
+                    : (editcomment = false)">
+                  </Icon>
+                </p>
+
               </div>
-              <p v-if="!editcomment" class="col-span-2">เป็นอาหารที่ดีที่สุดที่เคยทานมา
-
-</p>
-              <p class="w-full text-end">20/06/66</p>
-
-              <p class="w-full text-end">
-                <Icon class="w-6 h-6" name="ic:round-edit" @click="editcomment != true
-                  ? (editcomment = true)
-                  : (editcomment = false)">
-                </Icon>
-              </p>
-
-            </div>
-            <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
-            <div v-if="showComment">
-              <o-field label="เขียนคอมเมนต์">
-                <o-input type="textarea"></o-input>
-              </o-field>
-              <div class="flex">
-                <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
-                  <o-input></o-input>
+              <o-button v-if="!showComment" @click="showComment = true" class="mb-5">เขียนคอมเมนต์</o-button>
+              <div v-if="showComment">
+                <o-field label="เขียนคอมเมนต์">
+                  <o-input type="textarea"></o-input>
                 </o-field>
-                <section class="flex-1 shrink flex items-center justify-end">
-                  <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
-                  </o-button>
-                  <o-button class="mt-5">เพิ่ม</o-button>
-                </section>
+                <div class="flex">
+                  <o-field class="flex-1" label="วันที่(ถ้าไม่ลงจะเลือกวันที่ล่าสุด)">
+                    <o-input></o-input>
+                  </o-field>
+                  <section class="flex-1 shrink flex items-center justify-end">
+                    <o-button @click="showComment = false" class="ml-4 mt-5">ปิด
+                    </o-button>
+                    <o-button class="mt-5">เพิ่ม</o-button>
+                  </section>
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <p class="text-lg font-semibold  dark:text-white">วันที่</p>
-            <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
-          </div>
-          <div>
-            <div class="flex gap-3">
-              <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
-              <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+            <div>
+              <p class="text-lg font-semibold  dark:text-white">วันที่</p>
+              <o-input type="text" modelValue="21 เมษายน 2566"></o-input>
             </div>
-            <o-input type="text" modelValue="12.00 น." v-if="time == 'time'"></o-input>
-            <select v-if="time == 'duration'" id="countries"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-              <option selected>เลือกช่วงเวลา</option>
-              <option value="US">เช้า</option>
-              <option value="CA">เที่ยง</option>
-              <option value="FR">บ่าย</option>
-              <option value="DE">เย็น</option>
-            </select>
-          </div>
-
-          <div class="col-span-2">
-            <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
-            <o-input type="text"
-              modelValue="ทานอาหารเทียง ร้านเลียจาน"></o-input>
-          </div>
-          <div class="w-full ">
-
-
-            <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบจุดแวะพัก</o-button>
-              <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+            <div>
+              <div class="flex gap-3">
+                <o-radio v-model="time" name="time" native-value="time">เวลา</o-radio>
+                <o-radio v-model="time" name="time" native-value="duration">ช่วงเวลา</o-radio>
+              </div>
+              <o-input type="text" modelValue="12.00 น." v-if="time == 'time'"></o-input>
+              <select v-if="time == 'duration'" id="countries"
+                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>เลือกช่วงเวลา</option>
+                <option value="US">เช้า</option>
+                <option value="CA">เที่ยง</option>
+                <option value="FR">บ่าย</option>
+                <option value="DE">เย็น</option>
+              </select>
             </div>
-          </div>
-        </UiCard>
-      </o-modal>
+
+            <div class="col-span-2">
+              <p class="text-lg font-semibold  dark:text-white">หมายเหตุ</p>
+              <o-input type="text" modelValue="ทานอาหารเทียง ร้านเลียจาน"></o-input>
+            </div>
+            <div class="w-full ">
+
+
+              <div class="mt-5 flex justify-between"><o-button variant="danger" class="ml-2">ลบจุดแวะพัก</o-button>
+                <o-button size="medium" variant="primary" @click="isItemModalHotelData3 = false"> บันทึก </o-button>
+              </div>
+            </div>
+          </UiCard>
+        </o-modal>
 
 
         <!-- แก้ไขโรงแรม -->
@@ -1049,7 +1051,7 @@
                 <span class="text-sm text-gray-500 dark:text-gray-400"> {{ item.region }}</span>
                 <!-- แจ้งเตือนลูกทัวร์ -->
                 <div class="flex justify-center">
-                  <div>
+                  <div class="mr-1">
                     <Icon class="w-6 h-6 rounded-full text-xl font-medium text-gray-500 dark:text-white"
                       name="mingcute:cake-fill">
                     </Icon>
@@ -1067,7 +1069,7 @@
                 </div>
                 <div>
                   <span class="px-10 text-sm text-gray-500 dark:text-gray-400 truncate">
-                    <Icon class="w-4 h-4" name="majesticons:comment-text"></Icon>แพ้กุ้ง
+                    <Icon class="w-4 h-4 mr-1" name="majesticons:comment-text"></Icon>{{ item.comment }}
                   </span>
                 </div>
               </div>
@@ -1209,11 +1211,14 @@
                   </NuxtLink>
                 </div>
               </div>
-              <o-table :data="memberdata">
+              <o-table :data="memberdata" checkable>
                 <o-table-column v-for="column in columns" v-bind="column" :key="column" #default="{ row }">
-                  {{ row[column.field] || '' }} {{ row[column.field2] || '' }} 
+                  {{ row[column.field] || '' }} {{ row[column.field2] || '' }}
                 </o-table-column>
               </o-table>
+              <div @click="isItemModalAddUser = false"  class="flex justify-end my-2">
+                <o-button>บันทึก</o-button>
+              </div>
             </UiCard>
           </o-modal>
         </div>
@@ -1227,7 +1232,7 @@ import { initFlowbite } from "flowbite";
 import * as XLSX from "xlsx";
 
 const add = ref(false);
-
+const time = ref('');
 const showItems = ref("");
 const showComment = ref(false);
 
@@ -1254,23 +1259,24 @@ const columns = ref([
   {
     field: "birthday",
     label: "วันเกิด",
+    position: 'centered',
   },
   {
     field: "date_exp",
     label: "วันหมดอายุพาสปอต",
+    position: 'centered',
   },
   {
     field: "phone",
     label: "เบอร์ติดต่อ",
-    position: "centered",
   },
   {
     field: "comment",
     label: "คอมเมนต์",
-    position: "centered",
+    position: 'centered',
   },
   {
-    field: "manage",
+    field: "management",
     label: "จัดการ",
     position: "centered",
   },
@@ -1296,6 +1302,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "แพ้กุ้ง",
+    management: '...',
   },
   {
     name_thai: "สมศรี ",
@@ -1317,6 +1325,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "กนกนันทร์ ",
@@ -1338,6 +1348,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "จาริยา ",
@@ -1359,6 +1371,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "จารุนันท์ ",
@@ -1380,6 +1394,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "จิตราพร ",
@@ -1401,6 +1417,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "เฉลิมเดช ",
@@ -1422,6 +1440,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "ณภัทร ",
@@ -1443,6 +1463,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "ณัฏฐา ",
@@ -1464,6 +1486,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "ณัฐดา ",
@@ -1485,6 +1509,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "ณัฐพงษ์",
@@ -1506,6 +1532,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "ทวีภรณ์",
@@ -1527,6 +1555,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   }, {
     name_thai: "สมหมาย ",
     lastname_thai: "ใจดี",
@@ -1547,6 +1577,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "สมศรี ",
@@ -1568,6 +1600,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "กนกนันทร์ ",
@@ -1589,6 +1623,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "จาริยา ",
@@ -1610,6 +1646,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "จารุนันท์ ",
@@ -1631,6 +1669,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "จิตราพร ",
@@ -1652,6 +1692,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "เฉลิมเดช ",
@@ -1673,6 +1715,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "ณภัทร ",
@@ -1694,6 +1738,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "ณัฏฐา ",
@@ -1715,6 +1761,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "ณัฐดา ",
@@ -1736,6 +1784,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
   {
     name_thai: "ณัฐพงษ์",
@@ -1757,6 +1807,8 @@ const memberdata = ref([
     date_issue: "20 Aug 2022",
     date_exp: "20 Aug 2026",
     bed: "คู่",
+    comment: "ไม่มี",
+    management: '...',
   },
 
 ]);

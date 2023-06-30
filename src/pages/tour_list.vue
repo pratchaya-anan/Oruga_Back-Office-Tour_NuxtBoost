@@ -23,7 +23,7 @@
           <div
             class="text-lg font-nolmal tracking-tight text-gray-900 dark:text-white"
           >
-            ชื่อทริปทัวร์: ทัวร์อุบล
+          ทัวร์ เว้ดานัง
           </div>
           <div class="flex justify-end">
             <Icon

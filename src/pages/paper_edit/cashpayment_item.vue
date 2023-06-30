@@ -74,7 +74,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  นายสวยสด งดงาม
                 </div>
               </div>
               <div
@@ -84,7 +84,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  การเงิน
                 </div>
               </div>
               <div
@@ -94,7 +94,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  นายภาคภูมิ ภูเขียว
                 </div>
               </div>
               <div
@@ -104,7 +104,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  0105556128421
                 </div>
               </div>
               <div
@@ -114,7 +114,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  0625584785
                 </div>
               </div>
               <div
@@ -124,7 +124,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  156 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
                 </div>
               </div>
               <div
@@ -134,7 +134,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  เช็ดธนาคาร
                 </div>
               </div>
               <div
@@ -144,7 +144,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  5962154
                 </div>
               </div>
               <div
@@ -154,7 +154,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  30/03/2566
                 </div>
               </div>
               <div
@@ -164,7 +164,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  ค่าใช้จ่ายของมัคคุเทศ
                 </div>
               </div>
               <div
@@ -174,7 +174,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  16/07/2566
                 </div>
               </div>
               <div
@@ -184,7 +184,7 @@
                 <div
                   class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  -------
+                  17/07/2566
                 </div>
               </div>
             </div>
@@ -224,6 +224,7 @@
           <tbody>
             <tr
               v-for="(i, idx) in datapaper"
+              :key="idx"
               class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
             >
               <th
@@ -233,19 +234,19 @@
                 {{ idx + 1 }}
               </th>
               <td class="px-6 py-4">
-                {{ i.datereceipt }}
+                {{ i.datepayment }}
               </td>
               <td class="py-4 px-1">
-                {{ i.detail }}
+                {{ i.list }}
               </td>
               <td class="py-4 px-1">
-                {{ i.type }}
-              </td>
-              <td class="px-6 py-4">
-                {{ i.receiptnumber }}
-              </td>
-              <td class="px-6 py-4">
                 {{ i.price }}
+              </td>
+              <td class="px-6 py-4">
+                {{ i.taxpayment }}
+              </td>
+              <td class="px-6 py-4">
+                {{ i.total }}
               </td>
               <td class="px-6 py-4 text-right">
                 <button
@@ -404,28 +405,18 @@ const tableData = [
 
 const datapaper = ref([
   {
-    datereceipt: "05/07/2566",
-    detail: "ค่าน้ำมันคันที่ 1 และ 2",
-    type: "ค่าน้ำมัน",
-    receiptnumber: "008327530",
-    taxnumber: "0237854852147",
-    price: 13300,
+    datepayment: "05/07/2566",
+    list: "ค่ามัคคุเทศ",
+    price: "10,000",
+    taxpayment: "7",
+    total: "9,300",
   },
   {
-    datereceipt: "08/07/2566",
-    detail: "ค่าไกด์ทั้งสองคน",
-    type: "ค่าน้ำมัน",
-    receiptnumber: "007167530",
-    taxnumber: "0435698165428",
-    price: 4000,
-  },
-  {
-    datereceipt: "06/07/2566",
-    detail: "ค่าเช่าเหมายานพาหนะท้องถิ่น 3 คัน",
-    type: "ค่าเช่าเหมายานพาหนะท้องถิ่น",
-    receiptnumber: "003481630",
-    taxnumber: "0529863568452",
-    price: 32000,
+    datepayment: "08/07/2566",
+    list: "เบี้ยเลี้ยง",
+    price: "5,000",
+    taxpayment: "7",
+    total: "4,650",
   },
 ]);
 
