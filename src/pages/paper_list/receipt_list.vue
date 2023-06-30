@@ -69,7 +69,7 @@
           <div
             class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
           >
-          <ul class="mt-2 space-y-1">
+            <ul class="mt-2 space-y-1">
               <li class="text-xl font-semibold text-gray-900 dark:text-white">
                 ใบเสร็จรับเงิน
               </li>
@@ -100,95 +100,59 @@
             </button>
           </div>
           <!-- Modal body -->
-          <div>
-            <div>
-              <div>
-                <div
-                  class="p-6 font-normal text-gray-700 dark:text-gray-400 mb-3"
-                >
-                  <diV>
-                    <div>รายละเอียดใบเสร็จ</div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      หน่วยงาน/ลูกค้า
-                    </div>
-                    <div class="flex justify-between">
-                      <div>เทศบาลขอนแก่น</div>
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      สาขา
-                    </div>
-                    <div>
-                      สำนักงานใหญ่
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      ที่อยู่
-                    </div>
-                    <div>
-                      175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      รวมทั้งสิ้น
-                    </div>
-                    <div>
-                      12,840 บาท
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      รวมทั้งสิ้น ตัวอักษร
-                    </div>
-                    <div>
-                      หนึ่งหมื่นสองพันแปดร้อยสี่สิบบาทถ้วน
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      ชำระผ่าน
-                    </div>
-                    <div>
-                      เช็คธนาคาร
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      หักภาษี ณ ที่จ่าย
-                    </div>
-                    <div>
-                      898.80 บาท
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      เลขที่เช็ค
-                    </div>
-                    <div>
-                      7842744
-                    </div>
-                    <div class="font-semibold text-gray-900 dark:text-white">
-                      วันที่เช็ค
-                    </div>
-                    <div>
-                      24/03/2566
-                    </div>
-                    
-                  </diV>
-                  <div class="mt-5 flex justify-center">
-                    <a href="/paper_edit/receipt_item">
-                      <o-button
-                        class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        <Icon
-                          class="mr-3 -ml-1 w-5 h-5"
-                          name="mdi:paper-edit"
-                        ></Icon>
-                        แก้ไข
-                      </o-button>
-                    </a>
-                    <a href="/paper/receipt_paper">
-                      <o-button
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      >
-                        <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
-                        </Icon>
-                        พิมพ์
-                      </o-button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div></div>
+          <div class="p-4 font-normal text-gray-700 dark:text-gray-400">
+            <div>รายละเอียดใบเสร็จ</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              หน่วยงาน/ลูกค้า
+            </div>
+            <div class="flex justify-between">
+              <div>เทศบาลขอนแก่น</div>
+            </div>
+            <div class="font-semibold text-gray-900 dark:text-white">สาขา</div>
+            <div>สำนักงานใหญ่</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ที่อยู่
+            </div>
+            <div>175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              รวมทั้งสิ้น
+            </div>
+            <div>12,840 บาท</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              รวมทั้งสิ้น ตัวอักษร
+            </div>
+            <div>หนึ่งหมื่นสองพันแปดร้อยสี่สิบบาทถ้วน</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ชำระผ่าน
+            </div>
+            <div>เช็คธนาคาร</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              หักภาษี ณ ที่จ่าย
+            </div>
+            <div>898.80 บาท</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              เลขที่เช็ค
+            </div>
+            <div>7842744</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              วันที่เช็ค
+            </div>
+            <div>24/03/2566</div>
+            <hr class="my-2" />
+            <div class="mt-5 flex justify-center">
+              <a href="/paper_edit/receipt_item">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
+                  แก้ไข
+                </o-button>
+              </a>
+              <a href="/paper/receipt_paper">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
+                  </Icon>
+                  พิมพ์
+                </o-button>
+              </a>
             </div>
           </div>
         </div>

@@ -103,70 +103,60 @@
             </button>
           </div>
           <!-- Modal body -->
-          <div>
-            <div class="p-6 font-normal text-gray-700 dark:text-gray-400 mb-3">
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ชื่อผู้ขอเบิก
-              </div>
-              <div>นายสรณ์สิริ สายบุตร</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                แผนก
-              </div>
-              <div>บริการลูกค้า</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                วัตถุประสงค์การยืมเงินทดลองจ่าย
-              </div>
-              <div>ค่าใช้จ่ายในทัวร์</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                วันที่เคลียร์
-              </div>
-              <div>05/07/2566</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                โครงการ
-              </div>
-              <div>องค์การบริหารส่วนตำบลโพนงาม</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                รายละเอียดโครงการ/กิจกรรม
-              </div>
-              <div>นำสมาชิกเข้าร่วมการอบรมณ์</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ยอดเงินประมาณการ
-              </div>
-              <div>82,800</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ยอดสุทธิ
-              </div>
-              <div>49,300</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ยอดเงินเบิกเพิ่ม
-              </div>
-              <div>0</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ยอดเงินส่งคืน
-              </div>
-              <div>33,500</div>
-              <div class="mt-5 flex justify-center">
-                <a href="/paper_edit/cashcertificate_item">
-                  <o-button
-                    class="mr-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    <Icon
-                      class="mr-3 -ml-1 w-5 h-5"
-                      name="mdi:paper-edit"
-                    ></Icon>
-                    แก้ไข
-                  </o-button>
-                </a>
-                <a href="/paper/cashcertificate_paper">
-                  <o-button
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  >
-                    <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
-                    </Icon>
-                    พิมพ์
-                  </o-button>
-                </a>
-              </div>
+          <div class="p-4 font-normal text-gray-700 dark:text-gray-400">
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ชื่อผู้ขอเบิก
+            </div>
+            <div>นายสรณ์สิริ สายบุตร</div>
+            <div class="font-semibold text-gray-900 dark:text-white">แผนก</div>
+            <div>บริการลูกค้า</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              วัตถุประสงค์การยืมเงินทดลองจ่าย
+            </div>
+            <div>ค่าใช้จ่ายในทัวร์</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              วันที่เคลียร์
+            </div>
+            <div>05/07/2566</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              โครงการ
+            </div>
+            <div>องค์การบริหารส่วนตำบลโพนงาม</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              รายละเอียดโครงการ/กิจกรรม
+            </div>
+            <div>นำสมาชิกเข้าร่วมการอบรมณ์</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ยอดเงินประมาณการ
+            </div>
+            <div>82,800</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ยอดสุทธิ
+            </div>
+            <div>49,300</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ยอดเงินเบิกเพิ่ม
+            </div>
+            <div>0</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ยอดเงินส่งคืน
+            </div>
+            <div>33,500</div>
+            <hr class="my-2" />
+            <div class="mt-5 flex justify-center">
+              <a href="/paper_edit/cashcertificate_item">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="mdi:paper-edit"></Icon>
+                  แก้ไข
+                </o-button>
+              </a>
+              <a href="/paper/cashcertificate_paper">
+                <o-button>
+                  <Icon class="mr-3 -ml-1 w-5 h-5" name="ic:round-print">
+                  </Icon>
+                  พิมพ์
+                </o-button>
+              </a>
             </div>
           </div>
         </div>

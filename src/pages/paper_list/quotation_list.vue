@@ -103,56 +103,52 @@
           </div>
           <!-- Modal body -->
           <div class="p-4 font-normal text-gray-700 dark:text-gray-400">
-            <div>
-              <span>รายละเอียดลูกค้า</span>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                หน่วยงาน/ลูกค้า
-              </div>
-              <div>เทศบาลขอนแก่น</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                รหัสลูกค้า
-              </div>
-              <div>1552555214</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ชื่อผู้ติดต่อ
-              </div>
-              <div>นายภาคภูมิ ภูเขียว</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                เบอร์ติดต่อ
-              </div>
-              <div>0625584785</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                เลขประจำตัวผู้เสียภาษี
-              </div>
-              <div>1522236</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                Email
-              </div>
-              <div>somchai@gmail.com</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ที่อยู่
-              </div>
-              <div>175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น</div>
-              <hr class="my-2" />
-              <span>รายละเอียดผู้ติดต่อ</span>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ผู้เสนอขาย
-              </div>
-              <div>นายกอไก่ ขอไข่</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ฝ่าย/แผนก
-              </div>
-              <div>การเงิน</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                ยืนยันราคาภายในวันที่
-              </div>
-              <div>30/3/2566</div>
-              <div class="font-semibold text-gray-900 dark:text-white">
-                วันส่งของ
-              </div>
-              <div>05/04/2566</div>
-              <hr class="my-2" />
+            <span>รายละเอียดลูกค้า</span>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              หน่วยงาน/ลูกค้า
             </div>
+            <div>เทศบาลขอนแก่น</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              รหัสลูกค้า
+            </div>
+            <div>1552555214</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ชื่อผู้ติดต่อ
+            </div>
+            <div>นายภาคภูมิ ภูเขียว</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              เบอร์ติดต่อ
+            </div>
+            <div>0625584785</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              เลขประจำตัวผู้เสียภาษี
+            </div>
+            <div>1522236</div>
+            <div class="font-semibold text-gray-900 dark:text-white">Email</div>
+            <div>somchai@gmail.com</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ที่อยู่
+            </div>
+            <div>175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น</div>
+            <hr class="my-2" />
+            <span>รายละเอียดผู้ติดต่อ</span>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ผู้เสนอขาย
+            </div>
+            <div>นายกอไก่ ขอไข่</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ฝ่าย/แผนก
+            </div>
+            <div>การเงิน</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              ยืนยันราคาภายในวันที่
+            </div>
+            <div>30/3/2566</div>
+            <div class="font-semibold text-gray-900 dark:text-white">
+              วันส่งของ
+            </div>
+            <div>05/04/2566</div>
+            <hr class="my-2" />
             <div class="mt-5 flex justify-center">
               <a href="/paper_edit/quotation_item">
                 <o-button>

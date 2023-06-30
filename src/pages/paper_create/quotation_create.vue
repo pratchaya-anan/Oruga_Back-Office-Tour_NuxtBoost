@@ -96,12 +96,12 @@
             </h2>
             <div class="grid grid-cols-2 gap-4 mt-3">
               <div>
-                <o-field label="รหัสลูกค้า">
+                <o-field label="หน่วยงาน / ลูกค้า">
                   <o-input></o-input>
                 </o-field>
               </div>
               <div>
-                <o-field label="หน่วยงาน / ลูกค้า">
+                <o-field label="รหัสลูกค้า">
                   <o-input></o-input>
                 </o-field>
               </div>
@@ -116,12 +116,7 @@
                 </o-field>
               </div>
               <div>
-                <o-field label="โทร">
-                  <o-input></o-input>
-                </o-field>
-              </div>
-              <div>
-                <o-field label="ที่อยู่">
+                <o-field label="เบอร์ติดต่อ">
                   <o-input></o-input>
                 </o-field>
               </div>
@@ -130,14 +125,15 @@
                   <o-input></o-input>
                 </o-field>
               </div>
+              <div>
+                <o-field label="ที่อยู่">
+                  <o-input></o-input>
+                </o-field>
+              </div>
             </div>
             <div class="flex justify-end">
-              <div>
-                <o-button @click="showAddAgency = false">ยกเลิก</o-button>
-              </div>
-              <div>
-                <o-button @click="stepnext = 5">ตกลง</o-button>
-              </div>
+              <o-button @click="showAddAgency = false">ยกเลิก</o-button>
+              <o-button @click="stepnext = 5">ตกลง</o-button>
             </div>
           </div>
         </UiCard>
@@ -184,6 +180,7 @@
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                     v-for="i in tableDatatour"
                     @click="stepnext = 3"
+                    :key="i"
                   >
                     <th
                       scope="row"
@@ -223,15 +220,9 @@
           <UiCard class="mb-4">
             <section>
               <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-                <div>
-                  <div class="grid grid-cols-6">
-                    <div class="col-span-5">
-                      <h2 class="text-xl font-bold dark:text-white">
-                        ข้อมูลหน่วยงาน/ลูกค้า
-                      </h2>
-                    </div>
-                  </div>
-                </div>
+                <h2 class="text-xl font-bold dark:text-white">
+                  ข้อมูลหน่วยงาน/ลูกค้า
+                </h2>
               </div>
             </section>
             <section class="border-t border-gray-200 dark:border-gray-700">
@@ -306,15 +297,7 @@
           <UiCard class="mb-4">
             <section>
               <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-                <div>
-                  <div class="grid grid-cols-6">
-                    <div class="col-span-5">
-                      <h2 class="text-xl font-bold dark:text-white">
-                        ข้อมูลทัวร์
-                      </h2>
-                    </div>
-                  </div>
-                </div>
+                <h2 class="text-xl font-bold dark:text-white">ข้อมูลทัวร์</h2>
               </div>
             </section>
             <section class="border-t border-gray-200 dark:border-gray-700">
