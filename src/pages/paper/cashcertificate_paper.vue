@@ -17,7 +17,7 @@
               ใบรับรองแทนใบเสร็จรับเงิน
             </div>
             <div class="font-bold">เลขที่:</div>
-            <div class="col-span-2 text-right">3462584695127</div>
+            <div class="col-span-2 text-right">CC230430-0001</div>
             <div class="font-bold">วันที่:</div>
             <div class="col-span-2 text-right">9/07/2566</div>
           </div>
@@ -64,9 +64,7 @@
       </div>
 
       <!-- รายละเอียดข้อตกลง(ด้านซ้าย) -->
-      <div
-        class="grid grid-cols-3 content-center gap-5 py-2 text-xs border-b border-black"
-      >
+      <div class="grid grid-cols-3 content-center gap-5 py-2 text-xs border-b border-black">
         <div class="col-span-2 flex">
           <div class="mr-[15px]">รวมทั้งสิ้น(ตัวอักษร):</div>
           <div class="text-right">สี่หมื่นเก้าพันสามร้อยบาทถ้วน</div>

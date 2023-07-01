@@ -47,7 +47,7 @@
         >
         <MenuDropItem
           ><NuxtLink to="/paper_list/disbursement_list">
-            ใบขอเบิก
+            ใบเบิกเงินสดย่อย
           </NuxtLink></MenuDropItem
         >
         <MenuDropItem

@@ -15,12 +15,12 @@
 
     <UiSectionTabs></UiSectionTabs>
 
-    <section class="flex flex-wrap gap-4">
+    <section class="grid xl:grid-cols-5 grid-cols-3 gap-4">
       <UiCard
         v-for="(it, idx) in sec23"
         :key="idx"
         @click="openmodal = true"
-        class="flex-1 hover:bg-gray-100 dark:hover:bg-gray-700"
+        class="flex-auto hover:bg-gray-100 dark:hover:bg-gray-700"
       >
         <a href="#">
           <p
