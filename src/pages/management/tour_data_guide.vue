@@ -116,25 +116,36 @@
               </o-button>
             </NuxtLink>
           </div>
-          <h2 class="mb-2 text-xl font-bold dark:text-white">
-            ไกด์
-          </h2>
-          <div class="items-center my-2 p-4 border shadow-md">
-            <dev class="w-full relative inline-flex items-center">
-              <img class="w-10 h-10 rounded-full"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Jese Leos" />
-              <div class="ml-5 w-full">
-                <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์ ศรีสุระ <a
-                    href="#" @click="isItemModalHotelData3 = true"
-                    class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a></h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภทไกด์ ต่างประเทศ</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                  <Icon class="w-6 h-6" name="octicon:comment-16"></Icon> บริการดีมาก
-                </p>
+          <h2 class="mb-2 text-xl font-bold dark:text-white">ไกด์</h2>
+          <ol class="relative border-l border-gray-200 dark:border-gray-700">
+            <li class="mb-10 ml-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-            </dev>
-          </div>
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน 2566 - 22
+                เมษายน 2566</time>
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 hover:text-gray-500 dark:text-white">
+                วุฒินันท์ ศรีสุระ
+                <a href="#" @click="isItemModalHotelData3 = true"
+                  class="text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
+              </h3>
+
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                ประเภทไกด์ ต่างประเทศ
+              </p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                เบอร์ติดต่อ 0428976765
+              </p>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                <Icon class="w-6 h-6" name="octicon:comment-16" @click="
+                  showComment != true
+                    ? (showComment = true)
+                    : (showComment = false)
+                  "></Icon>
+               ให้บริการดีมาก
+              </p>
+            </li>
+          </ol>
         </UiCard>
       </div>
 
@@ -461,7 +472,7 @@
         </o-modal>
         <o-modal v-model:active="add">
           <UiCard>
-            <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">แก้ไขไกด์</h3>
+            <h3 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">เพิ่มไกด์</h3>
             <div class="flex justify-end">
             </div>
             <div class="flex w-full items-center mb-4 p-4 border shadow-md">
@@ -471,8 +482,8 @@
                 <div class="ml-5 w-full">
                   <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">วุฒินันท์
                     ศรีสุระ </h3>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ต่างประเทศ</p>
-                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">T. 0428976765</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">ประเภทไกด์ ต่างประเทศ</p>
+                  <p class="text-base font-normal text-gray-500 dark:text-gray-400">เบอร์ติดต่อ 0428976765</p>
                   <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
                 </div>
               </dev>

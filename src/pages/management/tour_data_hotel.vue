@@ -116,11 +116,9 @@
               </o-button>
             </NuxtLink>
           </div>
-          <h2 class="mb-2 text-xl font-bold dark:text-white">
-            โรงแรม
-          </h2>
+          <h2 class="mb-2 text-xl font-bold dark:text-white">โรงแรม</h2>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
-            <li v-if="!delete1" class="mb-10 ml-4">
+            <li class="mb-10 ml-4">
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
@@ -553,7 +551,7 @@
           <UiCard>
           
               <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-               เพิ่มไขโรงแรม
+               เพิ่มโรงแรม
               </h2>
               <div class="flex items-center mb-2 p-4 border shadow-md">
                 <dev class="w-full relative inline-flex items-center">

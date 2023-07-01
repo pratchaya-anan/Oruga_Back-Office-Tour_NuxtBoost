@@ -2,8 +2,8 @@
   <section class="h-m-screen">
     <LayoutPageTitle> Tour Management / จัดทัวร์ / จัดการจุดแวะพัก </LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
-      <div class="col-span-full xl:col-auto">
-        <UiCard>
+      <div class="col-span-full xl:col-auto mb-4">
+        <UiCard class="mb-4">
           <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
             <div class="w-full relative">
               <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
@@ -124,9 +124,9 @@
               <div
                 class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
               </div>
-              <time class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
+              <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">21 เมษายน
                 2566</time>
-              <h3 class="mt-1 flex justify-between text-lg font-semibold text-gray-900 dark:text-white">
+              <h3 class="flex justify-between text-lg font-semibold text-gray-900 dark:text-white">
                 <a>บ้านหนองผือ</a><a href="#" @click="isItemModalHotelData3 = true"
                   class=" text-base font-normal text-gray-500 dark:text-gray-400">แก้ไข</a>
               </h3>
