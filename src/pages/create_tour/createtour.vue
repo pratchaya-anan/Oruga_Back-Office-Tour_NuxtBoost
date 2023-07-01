@@ -820,7 +820,9 @@
             </div>
           </div>
           <div class="flex justify-end">
-            <NuxtLink href="/tour_data"> บันทึก </NuxtLink>
+            <NuxtLink href="/tour_data">
+              <o-button> บันทึก </o-button>
+            </NuxtLink>
           </div>
         </section>
       </o-step-item>
