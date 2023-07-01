@@ -17,7 +17,7 @@
 
     <UiSectionTabs></UiSectionTabs>
 
-    <section class="grid grid-cols-5 gap-4">
+    <section class="grid xl:grid-cols-5 grid-cols-3 gap-4">
       <UiCard
         v-for="(it, idx) in tableDatatour"
         :key="idx"
@@ -230,35 +230,35 @@ console.log(sec23);
 
 const tableDatatour = [
   {
-    idpaper: "CR230705-0001",
+    idpaper: "CC230705-0001",
     name: "นายสรณ์สิริ สายบุตร",
     type: "ฝ่ายบริการลูกค้า",
     objective: "ค่าใช้จ่ายในทัวร์",
     date: "03/07/2566",
   },
   {
-    idpaper: "CR230705-0002",
+    idpaper: "CC230705-0002",
     name: "นางสาวรินดา จุตตะโน",
     type: "การเงิน",
     objective: "ใช้จ่ายทั่วไปในบริษัทย์",
     date: "30/06/2566",
   },
   {
-    idpaper: "CR230705-0003",
+    idpaper: "CC230705-0003",
     name: "นางสาวรินดา จุตตะโน",
     type: "การเงิน",
     objective: "ใช้จ่ายทั่วไปในบริษัทย์",
     date: "30/06/2566",
   },
   {
-    idpaper: "CR230705-0004",
+    idpaper: "CC230705-0004",
     name: "นางสาวรินดา จุตตะโน",
     type: "การเงิน",
     objective: "ใช้จ่ายทั่วไปในบริษัทย์",
     date: "30/06/2566",
   },
   {
-    idpaper: "CR230705-0005",
+    idpaper: "CC230705-0005",
     name: "นางสาวรินดา จุตตะโน",
     type: "การเงิน",
     objective: "ใช้จ่ายทั่วไปในบริษัทย์",
