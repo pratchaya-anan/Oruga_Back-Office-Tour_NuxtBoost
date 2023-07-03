@@ -1,27 +1,70 @@
 <template>
   <ul class="space-y-2">
     <li>
-      <NuxtLink href="/">
-        <MenuItem icon-name="mdi:home">Home</MenuItem>
+      <NuxtLink href="/tour_list">
+        <MenuItem icon-name="line-md:home-twotone">Home</MenuItem>
       </NuxtLink>
     </li>
     <li>
-      <MenuDropDown label="Report" icon-name="mdi:file-document">
+      <MenuDropDown label="รายงาน" icon-name="mdi:file-document">
         <MenuDropItem>
-          <NuxtLink to="/reportday">
-            รายวัน
-          </NuxtLink>
+          <NuxtLink to="/reportday"> รายวัน </NuxtLink>
         </MenuDropItem>
         <MenuDropItem>
-          <NuxtLink to="/reportmouth">
-            รายเดือน
-          </NuxtLink>
+          <NuxtLink to="/reportmouth"> รายเดือน </NuxtLink>
         </MenuDropItem>
         <MenuDropItem>
-          <NuxtLink to="/reportyear">
-            รายปี
-          </NuxtLink>
+          <NuxtLink to="/reportyear"> รายปี </NuxtLink>
         </MenuDropItem>
+      </MenuDropDown>
+    </li>
+    <li>
+      <MenuDropDown label="เอกสาร" icon-name="fluent:receipt-money-24-filled">
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/quotation_list">
+            ใบเสนอราคา
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/billing_list">
+            ใบวางบิล/ใบแจ้งหนี้
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/taxinvoice_list">
+            ใบกำกับภาษี
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/receipt_list">
+            ใบเสร็จรับเงิน
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/cashreceipt_list">
+            ใบสำคัญรับเงิน
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/disbursement_list">
+            ใบขอเบิก
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/estimate_list">
+            ใบเคลียร์เงินสดย่อย
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/cashcertificate_list">
+            ใบรับรองแทนใบเสร็จ
+          </NuxtLink></MenuDropItem
+        >
+        <MenuDropItem
+          ><NuxtLink to="/paper_list/cashpayment_list">
+            ใบสำคัญจ่าย
+          </NuxtLink></MenuDropItem
+        >
       </MenuDropDown>
     </li>
     <li>
