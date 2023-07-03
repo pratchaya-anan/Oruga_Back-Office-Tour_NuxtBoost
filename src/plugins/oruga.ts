@@ -39,10 +39,13 @@ export default defineNuxtPlugin((nuxtApp) => {
         inputClass: 'border border-gray-300 block w-full p-2.5 text-sm rounded-lg',
       },
       table: {
-        rootClass: 'relative overflow-x-auto border shadow-md',
-        tableClass: 'w-full text-sm text-left text-gray-500 dark:text-gray-400',
-        thClass: 'px-6 py-4 text-xs text-gray-700 border-b uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400',
-        tdClass: 'px-6 py-4 font-medium text-gray-900 dark:text-white border-b bg-white dark:bg-gray-800 dark:border-gray-700 whitespace-nowrap'
+        rootClass: 'relative overflow-x-auto shadow-md',
+        // tableClass: 'w-full text-sm text-left text-gray-500 dark:text-gray-400',
+        // thClass: 'px-6 py-4 bg-white border-b dark:bg-gray-800 dark:border-gray-700 uppercase ',
+        // tdClass: 'px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white border-b',
+        tableClass: 'w-full text-sm text-left text-gray-500 dark:text-gray-400 border border-gray-200',
+        thClass: 'px-6 py-4 text-xs text-gray-700 border-b uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400',
+        tdClass: 'px-6 py-4 font-medium text-gray-900 dark:text-white border-b bg-white border-b dark:bg-gray-800 dark:border-gray-700 whitespace-nowrap'
       },
       select: {
         selectClass: 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500',
@@ -62,6 +65,13 @@ export default defineNuxtPlugin((nuxtApp) => {
         itemHeaderPreviousClass: " w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 ",
         stepContentClass: "mt-5 mb-5 ",
         stepNavigationClass: "flex justify-between",
+        animatedClass: " items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
+        stepsClass: "flex justify-between items-center w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
+        itemHeaderClass: " w-full items-center dark:text-blue-500",
+        itemHeaderActiveClass: " w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800",
+        itemHeaderPreviousClass: " w-full items-center text-blue-600 dark:text-blue-500  after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800",
+        stepNavigationClass: "flex justify-between",
+        stepDividerClass : "flex justify-between",
       },
       radio: {
         rootClass: 'flex text-sm font-medium text-center items-center mb-1',
