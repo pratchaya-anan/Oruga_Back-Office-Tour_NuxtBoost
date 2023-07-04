@@ -99,7 +99,7 @@
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                       ข้าราชการ
                     </div>
-                    <div class="mt-2">รหัสมาชิก</div>
+                    <div class="mt-2">รหัสสมาชิก</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                       1552555214
                     </div>
@@ -182,7 +182,7 @@
                       class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                       <option selected>ประเภทสินทรัพย์</option>
                       <option value="US">อสังหาริมทรัพย์</option>
-                      <option value="CA">พาหนะ</option>
+                      <option value="CA">ยานพาหนะ</option>
                       <option value="FR">ปศุสัตว์</option>
                     </select>
                   </o-field>
@@ -194,9 +194,87 @@
                   <p class="text-sm text-red-500 font-normal">* ประมาณราคาสินทรัพย์</p>
                   <o-input type="number" class="text-right" placeholder="บาท"></o-input>
                 </div>
+                <div class="col-span-3 border shadow sm:rounded-lg">
+                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                      <tr>
+                        <th class="px-6 py-3 text-center">
+                          ลำดับ
+                        </th>
+                        <th class="px-6 py-3">
+                          ประเภทสินทรัพย์
+                        </th>
+                        <th class="px-6 py-3">
+                          สินทรัพย์
+                        </th>
+                        <th class="px-6 py-3 text-center">
+                          จำนวน
+                        </th>
+                        <th class="px-6 py-3 text-right">
+                          ประมาณราคาสินทรัพย์
+                        </th>
+                        <th class="px-6 py-3 text-center">
+                     
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="px-6 py-3 text-center">
+                          1
+                        </td>
+                        <td class="px-6 py-3">
+                          อสังหาทรัพย์
+                        </td>
+                        <th class="px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                          บ้าน
+                        </th>
+                        <td class="px-6 py-3 text-center">
+                          1
+                        </td>
+                        <td class="px-6 py-3 text-right">
+                          1,500,000
+                        </td>
+
+                        <td class="px-6 py-3 text-center">
+                          <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                            <Icon class="text-xl font-medium text-pink-600 dark:text-white"
+                              name="material-symbols:delete-outline"></Icon>
+                          </a>
+                        </td>
+                      </tr>
+
+                      <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <td class="px-6 py-3 text-center">
+                          2
+                        </td>
+                        <td class="px-6 py-3">
+                          ยานพาหนะ
+                        </td>
+                        <td class="px-6 py-4 ">
+                          รถ
+                        </td>
+                        <td class="px-6 py-3 text-center">
+                          1
+                        </td>
+                        <td class="px-6 py-3 text-right">
+                          500,000
+                        </td>
+                        <td class="px-6 py-3 text-center">
+                          <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                            <Icon class="text-xl font-medium text-pink-600 dark:text-white"
+                              name="material-symbols:delete-outline"></Icon>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
-              <h2 class="mb-2 text-lg font-normal dark:text-white">หุ้นประกัน</h2>
+              <h2 class="mb-2 mt-5 text-lg font-normal dark:text-white">หุ้นประกัน</h2>
               <div class="w-full mb-3">
                 <div class="flex w-full items-center">
                   <o-radio v-model="showInput2" name="z" native-value="F">ไม่มี</o-radio>
@@ -236,7 +314,7 @@
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                       ข้าราชการ
                     </div>
-                    <div class="mt-2">รหัสมาชิก</div>
+                    <div class="mt-2">รหัสสมาชิก</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                       1552555214
                     </div>
@@ -325,7 +403,7 @@
               </li>
             </ul>
             <div class="flex justify-end mt-4">
-              <a href="#">
+              <a href="/coop/loan">
                 <o-button> ข้อกู้ </o-button>
               </a>
             </div>

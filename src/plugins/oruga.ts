@@ -66,6 +66,16 @@ export default defineNuxtPlugin((nuxtApp) => {
         stepNavigationClass: "flex justify-between",
         stepDividerClass : "flex justify-between",
       },
+      // steps: {
+      //   rootClass: "w-full text-sm ",
+      //   animatedClass: " items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
+      //   stepsClass: "flex justify-between items-center w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
+      //   itemHeaderClass: " w-full items-center dark:text-blue-500",
+      //   itemHeaderActiveClass: " w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800",
+      //   itemHeaderPreviousClass: " w-full items-center text-blue-600 dark:text-blue-500  after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800",
+      //   stepNavigationClass: "flex justify-between",
+      //   stepDividerClass : "flex justify-between",
+      // },
       radio: {
         rootClass: 'flex text-sm font-medium text-center items-center mb-1',
         checkClass: 'w-4 h-4 mr-2',
