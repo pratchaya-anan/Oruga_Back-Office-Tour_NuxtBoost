@@ -58,13 +58,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
       steps: {
         rootClass: "w-full text-sm ",
-        stepsClass: "flex w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
-        animatedClass: "items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
-        itemHeaderClass: "flex w-full items-center dark:text-blue-500",
-        itemHeaderActiveClass: " fw-full items-center text-blue-600 dark:text-blue-500 ",
-        itemHeaderPreviousClass: " w-full items-center text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800 ",
-        stepContentClass: "mt-5 mb-5 ",
-        stepNavigationClass: "flex justify-between",
         animatedClass: " items-center justify-around w-full text-sm font-medium text-center text-gray-500 dark:text-gray-400 sm:text-base",
         stepsClass: "flex justify-between items-center w-full text-sm font-medium text-gray-500 dark:text-gray-400 sm:text-base",
         itemHeaderClass: " w-full items-center dark:text-blue-500",
