@@ -1,4 +1,4 @@
-<template>
+
 <template>
     <section>
         <o-steps v-model="steps" variant="success">

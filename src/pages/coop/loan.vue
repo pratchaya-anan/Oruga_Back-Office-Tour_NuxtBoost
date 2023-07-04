@@ -1,5 +1,5 @@
 <template>
-  <LayoutPageTitle></LayoutPageTitle>
+  <LayoutPageTitle>ขอกู้</LayoutPageTitle>
   <o-steps v-model="steps" variant="success">
     <o-step-item step="1" label="ข้อมูลขอ" :clickable="true" icon="user-lock">
       <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
@@ -18,21 +18,21 @@
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                     <div class="mt-4">ชื่อ-สกุล</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      นพรุจ ชูธรรมสิทธิกุล
+                      นาย นพรุจ ชูธรรมสิทธิกุล
                     </div>
                   </div>
                   <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                     <div class="mt-2">ตำแหน่ง</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      ลูกจ้างประจำ
+                      ข้าราชการ
                     </div>
                     <div class="mt-2">รหัสสมาชิก</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      014141
+                      1552555214
                     </div>
                     <div class="mt-2">เป็นสมาชิกตั้งแต่</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                      02/07/2566
+                      16/04/2551
                     </div>
                   </div>
                 </div>
@@ -195,25 +195,25 @@
         <div class="col-span-2">
           <UiCard>
             <div>
-              <label class="text-2xl font-medium">ผู้ค้ำประกัน</label>
+              <label class="text-2xl  tracking-tight font-extrabold">ผู้ค้ำประกัน</label>
             </div>
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                   <th scope="col" class="px-6 py-3">
+                    ลำดับ
+                  </th>
+                  <th scope="col" class="px-6 py-3">
                     รหัสสมาชิก
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    ชื่อ
-                  </th>
-                  <th scope="col" class="px-6 py-3">
-                    สกุล
+                    ชื่อ-สกุล
                   </th>
                   <th scope="col" class="px-6 py-3">
                     ตำแหน่ง
                   </th>
                   <th scope="col" class="px-6 py-3">
-                    เงินเดือน
+                    เป็นสมาชิกตั้งแต่
                   </th>
                   <th scope="col" class="px-6 py-3">
                     เอกสาร
@@ -227,19 +227,19 @@
                 <tr
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    018414
+                   1
                   </th>
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    นายประสบ
+                    1552555234
+                  </th>
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    นายกิตติพิชญ์ เสนานุช
                   </th>
                   <td class="px-6 py-4">
-                    อุบัติเหตุ
+                    พนักงานประจำ
                   </td>
                   <td class="px-6 py-4">
-                    ราชการ
-                  </td>
-                  <td class="px-6 py-4">
-                    30,000
+                    05/06/2562
                   </td>
                   <td class="px-6 py-4">
                     <a href="#" @click="isItemModalHotelData = true" class="text-blue-500 hover:text-blue-700">
@@ -298,19 +298,19 @@
                 <tr
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    014347
+                  2
                   </th>
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    นายบารมี
+                    1552555987
+                  </th>
+                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    นางสาวรินดา จุตโน
                   </th>
                   <td class="px-6 py-4">
-                    คุ้มค่า
+                    ข้าราชการ
                   </td>
                   <td class="px-6 py-4">
-                    ราชการ
-                  </td>
-                  <td class="px-6 py-4">
-                    30,000
+                    24/06/2561
                   </td>
                   <td class="px-6 py-4">
                     <a href="#" @click="isItemModalHotelData2 = true" class="text-blue-500 hover:text-blue-700">
@@ -386,13 +386,10 @@
                 </select>
 
               </o-field>
-              <o-field label="ชื่อ">
+              <o-field label="ชื่อ-สกุล">
                 <o-input></o-input>
               </o-field>
-              <o-field label="สกุล">
-                <o-input></o-input>
-              </o-field>
-              <o-field label="รายได้ต่อเดือน">
+              <o-field label="เป็นสมาชิกตั้งแต่">
                 <o-input></o-input>
               </o-field>
             </div>
@@ -440,7 +437,7 @@
           </UiCard>
           <UiCard class="mt-3">
             <div>
-              <label class="text-2xl font-medium">สินทรัพย์ค้ำประกัน</label>
+              <label class="text-2xl tracking-tight font-extrabold">สินทรัพย์ค้ำประกัน</label>
             </div>
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -454,11 +451,14 @@
                   <th scope="col" class="px-6 py-3">
                     สินทรัพย์
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-3 text-center">
                     จำนวน
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-3 text-right">
                     ประมาณราคาสินทรัพย์
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-center">
+                    เอกสาร
                   </th>
                   <th scope="col" class="px-6 py-3">
                     <span class="sr-only">แก้ไข</span>
@@ -468,7 +468,7 @@
               <tbody>
                 <tr
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  <th scope="row" class="px-6 py-4  font-medium text-gray-900 whitespace-nowrap dark:text-white ">
                     1
                   </th>
                   <td class="px-6 py-4">
@@ -477,14 +477,62 @@
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     บ้าน
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-4 text-center">
                     1
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-4 text-right">
                     1,500,000
                   </td>
+                  <td class="px-6 py-4 text-center">
+                    <a href="#" @click="isItemModalHotelData2 = true" class="text-blue-500 hover:text-blue-700">
+                      <Icon class=" w-6 h-6" name="material-symbols:upload"></Icon>
+                    </a>
+                    <o-modal v-model:active="isItemModalHotelData2">
+                      <UiCard>
+                        <label class="text-2xl font-medium ">เอกสารที่แนบ</label>
+                        <div class="grid grid-cols-2 gap-2">
+                          <div class="mb-5 field">
 
-                  <td class="px-6 py-4 text-right">
+                            <o-checkbox :value="true" checkClass="w-4 h-4"
+                              labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> สำเนาบัตรประชาชน
+                            </o-checkbox>
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                              for="file_input"></label>
+                            <input
+                              class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                              id="file_input" type="file">
+                          </div>
+
+                          <div class="mb-5 field">
+                            <o-checkbox :value="true" variant="danger" checkClass="w-4 h-4"
+                              labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> สำเนาทะเบียนบ้าน
+                            </o-checkbox>
+
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                              for="file_input"></label>
+                            <input
+                              class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                              id="file_input" type="file">
+
+                          </div>
+                          <div class="field">
+                            <o-checkbox :value="true" variant="danger" checkClass="w-4 h-4"
+                              labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                              สลิปเงินเดือน
+                            </o-checkbox>
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                              for="file_input"></label>
+                            <input
+                              class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                              id="file_input" type="file">
+                          </div>
+                        </div>
+                        <o-button class="mt-5" size="medium" variant="primary" @click="isItemModalHotelData2 = false">
+                          บันทึก </o-button>
+                      </UiCard>
+                    </o-modal>
+                  </td>
+                  <td class="px-6 py-4 ">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">แก้ไข</a>
                   </td>
                 </tr>
@@ -499,14 +547,62 @@
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     รถ
                   </th>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-4 text-center">
                     1
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-4 text-right">
                     500,000
                   </td>
+                  <td class="px-6 py-4 text-center">
+                    <a href="#" @click="isItemModalHotelData2 = true" class="text-blue-500 hover:text-blue-700">
+                      <Icon class=" w-6 h-6" name="material-symbols:upload"></Icon>
+                    </a>
+                    <o-modal v-model:active="isItemModalHotelData2">
+                      <UiCard>
+                        <label class="text-2xl font-medium ">เอกสารที่แนบ</label>
+                        <div class="grid grid-cols-2 gap-2">
+                          <div class="mb-5 field">
 
-                  <td class="px-6 py-4 text-right">
+                            <o-checkbox :value="true" checkClass="w-4 h-4"
+                              labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> สำเนาบัตรประชาชน
+                            </o-checkbox>
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                              for="file_input"></label>
+                            <input
+                              class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                              id="file_input" type="file">
+                          </div>
+
+                          <div class="mb-5 field">
+                            <o-checkbox :value="true" variant="danger" checkClass="w-4 h-4"
+                              labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> สำเนาทะเบียนบ้าน
+                            </o-checkbox>
+
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                              for="file_input"></label>
+                            <input
+                              class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                              id="file_input" type="file">
+
+                          </div>
+                          <div class="field">
+                            <o-checkbox :value="true" variant="danger" checkClass="w-4 h-4"
+                              labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                              สลิปเงินเดือน
+                            </o-checkbox>
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                              for="file_input"></label>
+                            <input
+                              class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                              id="file_input" type="file">
+                          </div>
+                        </div>
+                        <o-button class="mt-5" size="medium" variant="primary" @click="isItemModalHotelData2 = false">
+                          บันทึก </o-button>
+                      </UiCard>
+                    </o-modal>
+                  </td>
+                  <td class="px-6 py-4">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">แก้ไข</a>
                   </td>
                 </tr>
@@ -604,8 +700,8 @@
                 </h3>
 
                 <p class="text-gray-500 dark:text-gray-400">รายการสินทรัพย์</p>
-                <p class="text-gray-500 dark:text-gray-400">1. อสังหาทรัพย์ (บ้าน)</p>
-                <p class="text-gray-500 dark:text-gray-400">2. ยานพาหนะ (รถยนต์)</p>
+                <p class="text-gray-500 dark:text-gray-400">1. อสังหาทรัพย์ (บ้าน) ราคา 1,500,000</p>
+                <p class="text-gray-500 dark:text-gray-400">2. ยานพาหนะ (รถยนต์) ราคา 500,000</p>
               </div>
               <div class="mb-3">
                 <h3 class="flex items-center  text-lg font-medium text-gray-900 dark:text-white">
@@ -822,13 +918,13 @@
                   <th scope="col" class="px-6 py-3">
                     สินทรัพย์
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-3 text-center">
                     จำนวน
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-3 text-center">
                     ประมาณราคาสินทรัพย์
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-3 ">
                     เอกสาร
                   </th>
                 </tr>
@@ -845,16 +941,14 @@
                   <td class="px-6 py-4">
                     บ้าน
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-4 text-center">
                     1
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-4 text-center">
                     1,500,000
                   </td>
-                  <td class="px-6 py-4 text-right">
-                    <div class=" field">
-
-                      <li class="flex items-center">
+                  <td class="px-6 py-4 ">
+                        <li class="flex items-center">
                         <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor"
                           viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd"
@@ -863,8 +957,6 @@
                         </svg>
                         สำเนาโฉนดที่ดิน
                       </li>
-
-                    </div>
                   </td>
                 </tr>
                 <tr
@@ -878,14 +970,13 @@
                   <td class="px-6 py-4">
                     รถ
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-4 text-center">
                     1
                   </td>
-                  <td class="px-6 py-4">
+                  <td class="px-6 py-4 text-center">
                     500,000
                   </td>
                   <td class="px-6 py-4 text-right">
-                    <div class=" field">
 
                       <li class="flex items-center">
                         <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor"
@@ -897,7 +988,6 @@
                         สำเนาเล่มทะเบียนรถ
                       </li>
 
-                    </div>
                   </td>
                 </tr>
               </tbody>
