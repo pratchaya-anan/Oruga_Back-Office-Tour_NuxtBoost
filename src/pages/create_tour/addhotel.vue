@@ -21,7 +21,7 @@
         <div class="grid grid-cols-10 gap-8 p-6">
           <div class="col-span-7">
             <o-field label="ค้นหาโรงแรม">
-              <o-autocomplete v-model="name" rounded expanded placeholder="ค้นหา ชื่อโรงแรม" icon="search">
+              <o-autocomplete rounded expanded placeholder="ค้นหา ชื่อโรงแรม" icon="search">
               </o-autocomplete>
             </o-field>
           </div>
@@ -30,14 +30,39 @@
           </div>
         </div>
         <div>
-          <o-table :data="data">
-            <o-table-column v-for="column in columns1" v-bind="column" #default="{ row }">
+          <o-table :data="data" @click="adddate =true">
+            <o-table-column v-for="column in columns1" v-bind="column" #default="{ row }" >
               {{ row[column.field] }}
             </o-table-column>
           </o-table>
         </div>
       </o-modal>
 
+      <o-modal v-model:active="adddate">
+        <div class="grid grid-cols-2 gap-4 p-6">
+          <div class="col-span-2">
+            <label>เลือกวันเข้าพัก</label>
+          </div>
+          <div>
+            <o-field label="วันเข้าพัก">
+              <o-input></o-input>
+            </o-field>
+          </div>
+          <div>
+            <o-field label="วันสิ้นสุด">
+              <o-input></o-input>
+            </o-field>
+          </div>
+          <div class="col-span-2">
+            <o-field  label="จำนวนห้องพัก">
+              <o-input></o-input>
+            </o-field>
+          </div>
+          <div>
+            <o-button size="medium" variant="primary" @click="adddate = false" > บันทึก </o-button>
+          </div>
+        </div>
+      </o-modal>
       <o-modal v-model:active="isCardModalActive2">
         <div class="grid grid-cols-2 gap-4 p-6">
           <div class="col-span-2">
@@ -76,6 +101,7 @@ export default defineComponent({
   setup() {
     const isCardModalActive2 = ref(false);
     const isCardModalActive = ref(false);
+    const adddate = ref(false);
     const data = ref([
       {
         id: 1,
@@ -155,6 +181,7 @@ export default defineComponent({
       columns1,
       isCardModalActive2,
       isCardModalActive,
+      adddate
     };
   },
 });

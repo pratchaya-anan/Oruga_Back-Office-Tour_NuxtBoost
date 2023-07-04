@@ -1,8 +1,6 @@
 <template>
   <section>
-    <div
-      class="w-[210mm] h-[297mm] p-[2vmin] my-1 mx-auto border-1 solid rounded bg-white drop-shadow"
-    >
+    <div class="w-[210mm] h-[297mm] p-[5mm] mx-auto border rounded bg-white">
       <div class="grid grid-rows-2 m-5">
         <img
           class="w-[12vmin]"
@@ -69,6 +67,7 @@
             v-for="column in columns"
             v-bind="column"
             #default="{ row }"
+            :key="column"
           >
             {{ row[column.field] }}
           </o-table-column>
@@ -131,7 +130,7 @@
         </div>
       </div>
     </div>
-  
+
     <div class="w-full mt-5 flex justify-center">
       <o-button @click="print">สั่งพิมพ์ หรือ บันทึกเป็น PDF</o-button>
     </div>
@@ -139,7 +138,6 @@
 </template>
 
 <script setup lang="ts">
-
 function print() {
   window.print();
 }
@@ -147,12 +145,16 @@ function print() {
 
 <style>
 @media print {
-  header {
+  /* header {
     display: none;
   }
 
   footer {
     display: none;
+  } */
+
+  .navbar {
+    display: none !important;
   }
 
   #page {
@@ -164,7 +166,5 @@ function print() {
     page-break-after: always;
     print-color-adjust: exact;
   }
-
-  /* #page {padding: none; margin: none; border: none; box-shadow: none;} */
 }
 </style>
