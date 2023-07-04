@@ -75,14 +75,9 @@
                   </o-select>
                 </o-field>
               </div>
-              <div>
-                <o-field label="มีผลตั้งแต่วันที่">
-                  <o-input type="date"></o-input>
-                </o-field>
-              </div>
-              <div>
-                <o-field label="รายได้ต่อเดือน">
-                  <o-input type="number" class="text-right" placeholder="บาท"></o-input>
+              <div class="col-span-2">
+                <o-field label="เพื่อวัตถุประสงค์">
+                  <o-input></o-input>
                 </o-field>
               </div>
             </div>
