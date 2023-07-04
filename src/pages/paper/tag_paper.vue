@@ -2,11 +2,11 @@
   <section>
     <div
       id="page"
-      class="w-[210mm] h-[297mm] p-[2mm] my-1 mx-auto border-1 solid rounded bg-white drop-shadow"
+      class="w-[210mm] h-[297mm] p-[5mm] mx-auto border rounded bg-white"
     >
       <div class="flex flex-wrap justify-center">
         <div v-for="i in 10">
-          <div class="border grid grid-flow-row text-center w-[10.3cm] h-[5cm]">
+          <div class="border grid grid-flow-row text-center w-[9.8cm] h-[5cm]">
             <div class="flex flex-col justify-center item-center">
               <div class="text-2xl font-normal">นันทิกาณต์ ศรีชัยมูล</div>
               <div class="text-base text-blue-800">Nunthikan Srechaimoon</div>
