@@ -130,9 +130,11 @@
               <h2 class="text-xl font-bold dark:text-white">เอกสารสินทรัพย์</h2>
             </div>
             <!-- <p>หมายเหตุ: ขาดสำเนาทะเบียนบ้าน</p> -->
-            <o-button>
-              ตรวจสอบ
-            </o-button>
+            <NuxtLink to="/coop/loanrequest_securities">
+              <o-button>
+                ตรวจสอบ
+              </o-button>
+            </NuxtLink>
           </UiCard>
         </div>
         <div class="w-full items-center">
@@ -172,7 +174,7 @@
                 เอกสารผู้ค้ำคนที่ 3
               </li>
             </ul>
-            <NuxtLink to="/coop/loanrequest_securities">
+            <NuxtLink to="/coop/loanrequest_guarantor">
               <o-button>
                 ตรวจสอบ
               </o-button>
