@@ -159,7 +159,7 @@
                       <option value="บัญชี">บัญชี</option>
                       <option value="การเงิน">การเงิน</option>
                       <option value="ผู้บริหาร">ผู้บริหาร</option>
-                      <option value="ฝ่ายบริการ">ผู้บริหาร</option>
+                      <option value="ฝ่ายบริการ">บริการลูกค้า</option>
                     </o-select>
                   </o-field>
                 </div>
@@ -178,7 +178,7 @@
                       <option value="บัญชี">บัญชี</option>
                       <option value="การเงิน">การเงิน</option>
                       <option value="ผู้บริหาร">ผู้บริหาร</option>
-                      <option value="ฝ่ายบริการ">ผู้บริหาร</option>
+                      <option value="ฝ่ายบริการ">บริการลูกค้า</option>
                     </o-select>
                   </o-field>
                 </div>

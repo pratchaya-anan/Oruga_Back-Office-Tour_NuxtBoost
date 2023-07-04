@@ -33,7 +33,7 @@
             <div class="col-span-1 font-bold">
               อ้างอิงถึงเลขที่ใบขอเคลียร์เงินทดลองจ่าย:
             </div>
-            <div class="col-span-1">2310652498375</div>
+            <div class="col-span-1">D230627-0001</div>
             <div class="col-span-1 font-bold">โครงการ:</div>
             <div class="col-span-1">องค์การบริหารส่วนตำบลโพนงาม</div>
             <div class="col-span-1 font-bold">รายละเอียดโครงการ/กิจกรรม:</div>
@@ -162,7 +162,7 @@ const datapaper = ref([
   {
     datereceipt: "06/07/2566",
     detail: "ค่าเช่าเหมายานพาหนะท้องถิ่น 3 คัน",
-    type: "ค่าเช่าเหมายานพาหนะท้องถิ่น",
+    type: "ค่ายานพาหนะ",
     receiptnumber: "003481630",
     taxnumber: "0529863568452",
     price: 32000,

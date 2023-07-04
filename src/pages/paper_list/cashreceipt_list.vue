@@ -15,7 +15,7 @@
 
     <UiSectionTabs></UiSectionTabs>
 
-    <section class="flex flex-wrap gap-4">
+    <section class="grid xl:grid-cols-5 grid-cols-3 gap-4">
       <UiCard
         v-for="(it, idx) in sec23"
         :key="idx"

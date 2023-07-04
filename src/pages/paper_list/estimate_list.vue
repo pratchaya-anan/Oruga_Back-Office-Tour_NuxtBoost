@@ -17,7 +17,7 @@
 
     <UiSectionTabs></UiSectionTabs>
 
-    <section class="grid grid-cols-5 gap-4">
+    <section class="grid xl:grid-cols-5 grid-cols-3 gap-4">
       <UiCard
         v-for="(it, idx) in tableDatatour"
         :key="idx"
