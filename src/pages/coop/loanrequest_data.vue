@@ -172,9 +172,11 @@
                 เอกสารผู้ค้ำคนที่ 3
               </li>
             </ul>
-            <o-button>
-              ตรวจสอบ
-            </o-button>
+            <NuxtLink to="/coop/loanrequest_securities">
+              <o-button>
+                ตรวจสอบ
+              </o-button>
+            </NuxtLink>
           </UiCard>
         </div>
       </div>
