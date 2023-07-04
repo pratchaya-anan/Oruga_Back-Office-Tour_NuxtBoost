@@ -5,49 +5,90 @@
         <UiCard class="mb-4">
           <section>
             <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-              <div>
-                <div class="grid grid-cols-6">
-                  <div class="col-span-5">
-                    <h2 class="text-xl font-bold dark:text-white">
-                      ข้อมูลหน่วยงาน / ลูกค้า
-                    </h2>
-                  </div>
+              <div class="grid grid-cols-6">
+                <div class="col-span-5">
+                  <h2 class="text-xl font-bold dark:text-white">
+                    คำขอกู้เงินสามัญทั่วไป
+                  </h2>
                 </div>
               </div>
+              <ul class="mt-2 space-y-1">
+                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                  เขียนที่
+                </li>
+                <li class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                  วันที่
+                </li>
+              </ul>
             </div>
           </section>
-          <section class="border-t border-gray-200 dark:border-gray-700">
+          <section class="my-4 border-t border-gray-200 dark:border-gray-700">
+            <span>ข้อมูลผู้กู้</span>
             <div class="sm:flex xl:block xl:space-y-4">
               <div class="sm:flex-1">
                 <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-4">หน่วยงาน / ลูกค้า</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    เทศบาลขอนแก่น
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-4">ชื่อ-สกุล</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      นายภาคภูมิ ภูเขียว
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-4">เลขทะเบียนสมาชิก</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      1552555214
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-4">อายุ</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      30
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">หน้าที่</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      พนักงานราชการ
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">ตำแหน่ง</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      -----
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">สังกัด</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      -----
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">ที่อยู่</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
+                    </div>
                   </div>
                 </div>
+              </div>
+              <div class="sm:flex-1 border-t pt-2">
+                <span>ข้อมูลคู่สมรส</span>
                 <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">รหัสลูกค้า</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    1552555214
-                  </div>
-                  <div class="mt-2">ชื่อผู้ติดต่อ</div>
+                  <div class="mt-4">ชื่อ-สกุล</div>
                   <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     นายภาคภูมิ ภูเขียว
                   </div>
-                  <div class="mt-2">เบอร์ติดต่อ</div>
-                  <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">0625584785
-                  </div>
                 </div>
                 <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                  <div class="mt-2">เลขประจำตัวผู้เสียภาษี</div>
+                  <div class="mt-4">อายุ</div>
                   <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    1522236
+                    30
                   </div>
                 </div>
                 <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                   <div class="mt-2">ที่อยู่</div>
                   <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น
+                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
                   </div>
                 </div>
               </div>
@@ -69,9 +110,11 @@
               <h2 class="text-xl font-bold dark:text-white">เอกสารผู้กู้</h2>
             </div>
             <!-- <p>หมายเหตุ: ขาดสำเนาทะเบียนบ้าน</p> -->
-            <o-button>
-              ตรวจสอบ
-            </o-button>
+            <NuxtLink to="/coop/loanrequest_rightsPage">
+              <o-button>
+                ตรวจสอบ
+              </o-button>
+            </NuxtLink>
           </UiCard>
         </div>
         <div class="w-full items-center">
