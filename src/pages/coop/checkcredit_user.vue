@@ -1,5 +1,4 @@
 <template>
-<template>
     <section>
         <o-steps v-model="steps" variant="success">
             <o-step-item step="1" :clickable="true" icon="one">
