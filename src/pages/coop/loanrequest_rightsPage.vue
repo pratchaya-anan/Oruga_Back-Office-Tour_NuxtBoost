@@ -1,212 +1,254 @@
 <template>
   <section class="min-h-screen">
-    <LayoutPageTitle>ตรวจสอบเอกสารผู้กู้ | กู้สามัญ</LayoutPageTitle>
+    <LayoutPageTitle>ตรวจสอบเอกสารผู้กู้</LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto mb-4">
-        <UiCard>
-          <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-            <div>
-              <a href="#">
-                <img
-                  class="w-10 h-10 rounded-full"
-                  src="https://www.freeiconspng.com/thumbs/profile-icon-png/account-profile-user-icon--icon-search-engine-10.png"
-                  alt="Jese Leos"
-                />
-              </a>
-              <div class="flex justify-btween">
-                <h2 class="text-xl font-bold">สมหมาย ใจดี</h2>
-                <h2 class="text-xl font-bold"></h2>
+        <UiCard class="mb-4">
+          <section>
+            <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+              <div class="grid grid-cols-6">
+                <div class="col-span-5">
+                  <h2 class="text-xl font-bold dark:text-white">
+                    คำขอกู้เงินสามัญทั่วไป
+                  </h2>
+                </div>
               </div>
-              <h2 class="text-sm font-bold dark:text-white">สมหมาย ใจดี</h2>
               <ul class="mt-2 space-y-1">
                 <li
                   class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
                 >
-                  <Icon class="w-6 h-6" name="ri:treasure-map-fill"></Icon>
-                  เลขบัตรประชาชน: 1-339955-874-58-7
+                  เขียนที่
                 </li>
                 <li
                   class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
                 >
-                  <Icon
-                    class="w-6 h-6"
-                    name="line-md:moon-filled-to-sunny-filled-transition"
-                  ></Icon>
-                  เลขข้าราชการ: 1548362568
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon class="w-6 h-6" name="line-md:calendar"></Icon>
-                  วันเกิด: 16/04/2566
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon
-                    class="w-6 h-6"
-                    name="fluent:people-audience-24-filled"
-                  ></Icon>
-                  เป็นสมาชิกตั้งแต่: 16/04/2510
-                </li>
-                <li
-                  class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <Icon
-                    class="w-6 h-6"
-                    name="fluent:comment-error-16-filled"
-                  ></Icon>
-                  เป็นสมาชิกมา: 5ปี 4เดือน 15วัน
+                  วันที่
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="sm:flex xl:block xl:space-y-4">
-            <div class="sm:flex-1">
-              <address
-                class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-              >
-                <div class="mt-4">Email address</div>
-                <a
-                  class="text-sm font-medium text-gray-900 dark:text-white"
-                  href="mailto:webmaster@flowbite.com"
-                  >yourname@flowbite.com</a
-                >
-                <div class="mt-4">Home address</div>
+          </section>
+          <section class="my-4 border-t border-gray-200 dark:border-gray-700">
+            <span>ข้อมูลผู้กู้</span>
+            <div class="sm:flex xl:block xl:space-y-4">
+              <div class="sm:flex-1">
                 <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                 >
-                  92 Miles Drive, Newark, NJ 07103, California, <br />United
-                  States of America
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-4">ชื่อ-สกุล</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      นายภาคภูมิ ภูเขียว
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-4">เลขทะเบียนสมาชิก</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      1552555214
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-4">อายุ</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      30
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">หน้าที่</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      พนักงานราชการ
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ตำแหน่ง</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      -----
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">สังกัด</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      -----
+                    </div>
+                  </div>
+                  <div
+                    class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    <div class="mt-2">ที่อยู่</div>
+                    <div
+                      class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >
+                      175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
+                    </div>
+                  </div>
                 </div>
-                <div class="mt-4">Phone number</div>
+              </div>
+              <div class="sm:flex-1 border-t pt-2">
+                <span>ข้อมูลคู่สมรส</span>
                 <div
-                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
                 >
-                  +00 123 456 789 / +12 345 678
+                  <div class="mt-4">ชื่อ-สกุล</div>
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    นายภาคภูมิ ภูเขียว
+                  </div>
                 </div>
-              </address>
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <div class="mt-4">อายุ</div>
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    30
+                  </div>
+                </div>
+                <div
+                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
+                >
+                  <div class="mt-2">ที่อยู่</div>
+                  <div
+                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
         </UiCard>
       </div>
+
+      <!-- รายการเอกสาร -->
       <div class="col-span-2 gap-4">
         <div class="flex flex-wrap gap-4">
           <UiCard class="flex-1">
-            <h5
-              class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white"
-            >
-              หลักค้ำประกัน
-            </h5>
-            <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
-              Connect with one of our available wallet providers or create a new
-              one.
-            </p>
-            <div class="flex flex-col items-center">
-              <table
-                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
-              >
-                <caption
-                  class="text-lg font-semibold text-left text-gray-900 bg-white dark:text-white dark:bg-gray-800"
+            <div class="my-2">
+              <h2 class="text-xl font-bold dark:text-white">เอกสารที่แนบมา</h2>
+              <span>เอกสารผู้กู้</span>
+            </div>
+            <div class="space-y-2">
+              <UiCard class="flex justify-between"
+                ><div>สำเนาบัตรประชาชน</div>
+                <a
+                  href="#"
+                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >ตรวจสอบ</a
                 >
-                  หลักฐานผู้กู้
-                </caption>
-                <tbody>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+              </UiCard>
+              <UiCard class="flex justify-between"
+                ><div>สำเนาบัตรทะเบียนบ้าน</div>
+                <a
+                  href="#"
+                  class="font-medium text-gray-500 dark:text-blue-500 hover:underline"
+                  >ไม่มีไฟล์แนบ</a
+                ></UiCard
+              >
+              <UiCard class="flex justify-between"
+                ><div>สลิปเงินเดือน</div>
+                <a
+                  href="#"
+                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >ตรวจสอบ</a
+                ></UiCard
+              >
+              <UiCard class="flex justify-between"
+                ><div>สำเนาทะเบียนสมรส</div>
+                <a
+                  href="#"
+                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >ตรวจสอบ</a
+                ></UiCard
+              >
+              <UiCard class="flex justify-between">
+                <div>สำเนาใบเปลี่ยนชื่อ</div>
+                <a
+                  href="#"
+                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >ตรวจสอบ</a
+                ></UiCard
+              >
+            </div>
+            <div class="my-2">
+              <span>เอกสารคู่สมรส</span>
+            </div>
+            <div class="space-y-2">
+              <UiCard class="flex justify-between"
+                ><div>สำเนาบัตรประชาชน</div>
+                <a
+                  href="#"
+                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >ตรวจสอบ</a
+                >
+              </UiCard>
+              <UiCard class="flex justify-between"
+                ><div>สำเนาบัตรทะเบียนบ้าน</div>
+                <a
+                  href="#"
+                  class="font-medium text-gray-500 dark:text-blue-500 hover:underline"
+                  >ไม่มีไฟล์แนบ</a
+                ></UiCard
+              >
+              <UiCard class="flex justify-between"
+                ><div>สำเนาทะเบียนสมรส</div>
+                <a
+                  href="#"
+                  class="font-medium text-gray-500 dark:text-blue-500 hover:underline"
+                  >ไม่มีไฟล์แนบ</a
+                ></UiCard
+              >
+              <UiCard class="flex justify-between">
+                <div>สำเนาใบเปลี่ยนชื่อ</div>
+                <a
+                  href="#"
+                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >ตรวจสอบ</a
+                ></UiCard
+              >
+            </div>
+            <div class="grid grid-cols-2 w-full mt-2">
+              <o-field label="เอกสารที่มี">
+                <div class="flex space-x-5 mt-2">
+                  <o-radio native-value="เอกสารถูกต้อง" name="check"
+                    >เอกสารถูกต้อง</o-radio
                   >
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      สำเนาบัตรประชาชน
-                    </th>
-                    <td class="px-6 py-4">
-                      <div>
-                        <Icon
-                          class="w-4 h-4 m-2 text-gray-500"
-                          name="zondicons:view-show"
-                        ></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                  <o-radio native-value="เอกสารไม่ถูกต้อง" name="check"
+                    >เอกสารไม่ถูกต้อง</o-radio
                   >
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      สำเนาบัตรทะเบียนบ้าน
-                    </th>
-                    <td class="px-6 py-4">
-                      <div>
-                        <Icon
-                          class="w-4 h-4 m-2 text-gray-500"
-                          name="zondicons:view-show"
-                        ></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                  >
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      สลิปเงินเดือน
-                    </th>
-                    <td class="px-6 py-4">
-                      <div>
-                        <Icon
-                          class="w-4 h-4 m-2 text-gray-500"
-                          name="zondicons:view-show"
-                        ></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                  <tr
-                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-                  >
-                    <th
-                      scope="row"
-                      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      สินทรัพย์
-                    </th>
-                    <td class="px-6 py-4">
-                      <div>
-                        <Icon
-                          class="w-4 h-4 m-2 text-gray-500"
-                          name="zondicons:view-show"
-                        ></Icon>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 text-right">
-                      <o-checkbox class="flex justify-end"></o-checkbox>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="w-full mt-2">
-                <o-field label="คอมเมนต์">
-                  <o-input></o-input>
-                </o-field>
-              </div>
+                </div>
+              </o-field>
+              <o-field label="คอมเมนต์">
+                <o-input></o-input>
+              </o-field>
             </div>
           </UiCard>
         </div>
-        <div class="col-span-2 gap-4">
+        <!-- <div class="col-span-2 gap-4">
           <h5
             class="mt-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white"
           >
@@ -239,13 +281,18 @@
               </div>
             </UiCard>
           </div>
-        </div>
+        </div> -->
         <!-- <div class="flex justify-end">
           <o-button href="#"
             class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             บันทึก</o-button>
         </div> -->
       </div>
+    </div>
+    <div class="flex justify-end space-x-5 mt-5">
+      <a href="#">
+        <o-button> บันทึก </o-button>
+      </a>
     </div>
   </section>
 </template>
