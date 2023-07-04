@@ -1,5 +1,5 @@
 <template>
-  <LayoutPageTitle>ขอกู้</LayoutPageTitle>
+  <LayoutPageTitle>การขอกู้</LayoutPageTitle>
   <o-steps v-model="steps" variant="success">
     <o-step-item step="1" label="ข้อมูลขอกู้" :clickable="true" icon="user-lock">
       <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
@@ -39,59 +39,51 @@
               </div>
             </section>
           </UiCard>
+          <UiCard class="mb-4">
+            <section>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                <h2 class="text-xl font-bold dark:text-white">
+                  ข้อมูลการขอกู้
+                </h2>
+              </div>
+            </section>
+            <section class="border-t border-gray-200 dark:border-gray-700">
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-4">ประเภทการกู้</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      กู้สามัญ
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">ขอกู้จำนวน</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      2,000,000
+                    </div>
+                    <div class="mt-2">รายได้ต่อเดือน</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      20,000
+                    </div>
+                    <div class="mt-2">จำนวนงวด</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      240 งวด
+                    </div>
+                    <div class="mt-2">เพื่อวัตถุประสงค์</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      นำไปใช้ในการลงทุน
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </UiCard>
         </div>
         <div class="col-span-2">
-          <UiCard class="mb-3">
-            <div class="p-5">
-              <div class="mb-2">
-                <h2 class="text-xl font-bold dark:text-white">ข้อมูลการกู้</h2>
-              </div>
-              <div class="grid grid-cols-2 gap-4">
+          <UiCard>    
+              <div class="grid grid-cols-2 gap-4">                                        
                 <div>
-                  <o-field label="ขอกู้เงินเป็นจำนวน (ไม่เกิน 10,000,000)">
-                    <o-input modelValue="2,000,000"></o-input>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="จำนวนงวด">
-                    <o-select placeholder="เลือกจำนวนงวด">
-                      <option value="12">12 งวด</option>
-                      <option value="24">24 งวด</option>
-                      <option value="240">240 งวด</option>
-                    </o-select>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="รายได้ต่อเดือน">
-                    <o-input modelValue="20,000"></o-input>
-                  </o-field>
-                  <o-field class="mt-5" label="เพื่อวัตถุประสงค์">
-                    <o-input modelValue=""></o-input>
-                  </o-field>
-                </div>
-                <div>
-                  <o-field label="มีผลตั้งแต่วันที่">
-                    <div class="relative">
-                      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
-                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd"
-                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                            clip-rule="evenodd"></path>
-                        </svg>
-                      </div>
-                      <input datepicker type="text"
-                        class="border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="เลือกงวดประจำเดือน" />
-                    </div>
-                  </o-field>
-                </div>
-                <div>
-
-                </div>
-                <div></div>
-                <div>
-                  <o-field label="ประเภทการรับเงินกู้">
+                  <o-field class="text-xl font-bold dark:text-white" label="ประเภทการรับเงินกู้">
                     <div class="flex mt-2">
                       <o-radio v-model="showcheck" name="name" native-value="persen" class="mr-3">
                         โอน
@@ -101,7 +93,7 @@
                       </o-radio>
                     </div>
 
-                    <select id="countries" v-if="showcheck=='persen'"
+                    <select id="countries" v-if="showcheck == 'persen'"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                       <option selected>เลือกบัญชี</option>
                       <option value="US">บัญชีกรุงไทย</option>
@@ -112,7 +104,7 @@
                 </div>
                 <div></div>
                 <div class="mb-5 field">
-                  <label class="text-2xl font-medium">เอกสารที่แนบ</label>
+                  <label class="text-xl font-bold dark:text-white">เอกสารที่แนบ</label>
 
                   <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     for="file_input">สำเนาบัตรประชาชน</label>
@@ -139,14 +131,14 @@
 
               </div>
 
-            </div>
+            
 
           </UiCard>
         </div>
       </div>
-      
+
     </o-step-item>
-    <o-step-item step="2" label="ข้อมูลคนค้ำ" :clickable="true" icon="user-lock">
+    <o-step-item step="2" label="หลักค้ำประกัน" :clickable="true" icon="user-lock">
       <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
         <div class="col-span-full xl:col-auto mb-4">
           <UiCard class="mb-4">
@@ -184,12 +176,50 @@
               </div>
             </section>
           </UiCard>
-
+          <UiCard class="mb-4">
+            <section>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                <h2 class="text-xl font-bold dark:text-white">
+                  ข้อมูลการขอกู้
+                </h2>
+              </div>
+            </section>
+            <section class="border-t border-gray-200 dark:border-gray-700">
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-4">ประเภทการกู้</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      กู้สามัญ
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">ขอกู้จำนวน</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      2,000,000
+                    </div>
+                    <div class="mt-2">รายได้ต่อเดือน</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      20,000
+                    </div>
+                    <div class="mt-2">จำนวนงวด</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      240 งวด
+                    </div>
+                    <div class="mt-2">เพื่อวัตถุประสงค์</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      นำไปใช้ในการลงทุน
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </UiCard>
         </div>
         <div class="col-span-2">
           <UiCard>
             <div>
-              <label class="text-2xl  tracking-tight font-extrabold">คนค้ำประกัน</label>
+              <label class="text-xl font-bold dark:text-white">คนค้ำประกัน</label>
             </div>
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -451,7 +481,7 @@
           </UiCard>
           <UiCard class="mt-3">
             <div>
-              <label class="text-2xl tracking-tight font-extrabold">สินทรัพย์ประกัน</label>
+              <label class="text-xl font-bold dark:text-white">สินทรัพย์ประกัน</label>
             </div>
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -513,7 +543,7 @@
                                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">อสังหาทรัพย์</h3>
                                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">บ้าน 1,500,000
                                 </p>
-                               
+
                               </div>
                             </dev>
                           </div>
@@ -576,7 +606,7 @@
                                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">ยานพาหนะ</h3>
                                 <p class="text-base font-normal text-gray-500 dark:text-gray-400">รถ 500,000
                                 </p>
-                               
+
                               </div>
                             </dev>
                           </div>
@@ -666,24 +696,16 @@
               <o-button @click="showItemsPanel2 = false" class="ml-4">ยกเลิก</o-button>
             </section>
           </UiCard>
-
-          <UiCard class="mt-3 mb-3">
-            <div>
-              <label class="text-2xl font-medium">หุ้นค้ำประกัน</label>
-            </div>
-
-
-          </UiCard>
         </div>
 
 
       </div>
 
     </o-step-item>
-    <o-step-item step="3" label="สรุปรายงาน" :clickable="true" icon="user-plus">
+    <o-step-item step="3" label="สรุปรายงาน" :clickable="true" icon="paper">
       <UiCard class="mb-3">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <h5 class="mb-3 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">ข้อมูลการกู้</h5>
+          <h5 class="mb-3 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">ข้อมูลการกู้สามัญ</h5>
           <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
             <div>
               <div class="mb-3">
@@ -764,15 +786,13 @@
                 <p class="text-gray-500 dark:text-gray-400">นำไปใช้ในการลงทุน</p>
               </div>
               <div class="mb-3">
-                <h3 class="flex items-center  text-lg font-medium text-gray-900 dark:text-white">
-                  มีผลตั้งแต่วันที่
-                </h3>
-                <p class="text-gray-500 dark:text-gray-400">12 มกราคม เป็นต้นไป</p>
+                
+                
               </div>
             </div>
           </div>
 
-          
+
 
 
           <div>

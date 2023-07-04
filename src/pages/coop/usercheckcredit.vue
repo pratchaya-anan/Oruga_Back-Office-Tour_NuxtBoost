@@ -24,7 +24,7 @@
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                       ข้าราชการ
                     </div>
-                    <div class="mt-2">รหัสมาชิก</div>
+                    <div class="mt-2">รหัสสมาชิก</div>
                     <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                       1552555214
                     </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="col-span-2">
           <UiCard>
-            <h2 class="text-xl font-bold dark:text-white">หลักค้ำประกัน</h2>
+            <h2 class="text-xl font-bold dark:text-white">ข้อมูลการกู้</h2>
             <div class="grid grid-cols-2 gap-4 p-2">
               <div class="w-full">
                 <div>
