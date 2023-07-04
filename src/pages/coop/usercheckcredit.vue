@@ -41,35 +41,49 @@
         <div class="col-span-2">
           <UiCard>
             <h2 class="text-xl font-bold dark:text-white">หลักค้ำประกัน</h2>
-            <div class="grid grid-cols-2 gap-8 p-2">
+            <div class="grid grid-cols-2 gap-4 p-2">
               <div class="w-full">
-                <h2 class="text-lg font-normal dark:text-white mb-2">
-                  เลือกประเภทการกู้
-                </h2>
-                <select id="countries"
-                  class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option selected>ประเภทการกู้</option>
-                  <option value="US">กู้เงินฉุกเฉิน</option>
-                  <option value="CA">กู้สามัญ</option>
-                  <option value="FR">กู้พิเศษ</option>
-                  <option value="DE">กู้หุ้น</option>
-                </select>
-              </div>
-              <div class="w-full">
-                <h2 class="text-lg font-normal dark:text-white mb-2">
-                  ประสงค์ขอกู้จำนวน
-                </h2>
-                <div class="w-full">
-                  <o-input type="number" class="text-right" placeholder="บาท"></o-input>
+                <div>
+                  <o-field label="เลือกประเภทการกู้">
+                    <select id="countries"
+                      class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                      <option selected>ประเภทการกู้</option>
+                      <option value="กู้สามัญ">กู้สามัญ</option>
+                      <option value="กู้เงินฉุกเฉิน">กู้เงินฉุกเฉิน</option>
+                      <option value="กู้พิเศษ">กู้พิเศษ</option>
+                      <option value="กู้หุ้น">กู้หุ้น</option>
+                    </select>
+                  </o-field>
                 </div>
               </div>
-              <div class="w-full">
-                <h2 class="text-lg font-normal dark:text-white mb-2">
-                  รายได้ต่อเดือน
-                </h2>
-                <div class="w-full">
+              <div>
+                <o-field label="รายได้ต่อเดือน">
                   <o-input type="number" class="text-right" placeholder="บาท"></o-input>
-                </div>
+                </o-field>
+              </div>
+              <div class="w-full">
+                <o-field label="ขอกู้จำนวน">
+                  <o-input type="number" class="text-right" placeholder="บาท"></o-input>
+                </o-field>
+              </div>
+              <div>
+                <o-field label="จำนวนงวด">
+                  <o-select placeholder="เลือกจำนวนงวด">
+                    <option value="12">12 งวด</option>
+                    <option value="24">24 งวด</option>
+                    <option value="240">240 งวด</option>
+                  </o-select>
+                </o-field>
+              </div>
+              <div>
+                <o-field label="มีผลตั้งแต่วันที่">
+                  <o-input type="date"></o-input>
+                </o-field>
+              </div>
+              <div>
+                <o-field label="รายได้ต่อเดือน">
+                  <o-input type="number" class="text-right" placeholder="บาท"></o-input>
+                </o-field>
               </div>
             </div>
           </UiCard>
@@ -119,12 +133,11 @@
             <div class="w-full p-2">
               <h2 class="mb-2 text-lg font-normal dark:text-white">คนค้ำประกัน</h2>
               <div class="w-full mb-3">
-                <div class="flex relative">
+                <div class="flex relative mb-4">
                   <div class="w-full">
-                    <o-input placeholder="ค้นหาสมาชิก" class="w-full"></o-input>
-                  </div>
-                  <div class="ml-2">
-                    <o-button>ค้นหา</o-button>
+                    <o-autocomplete placeholder="ค้นหาสมาชิก" icon="search" clearable :data="data" v-model="userdata">
+                      <template #empty>No results found</template>
+                    </o-autocomplete>
                   </div>
                 </div>
                 <div class="relative overflow-x-auto border shadow sm:rounded-lg">
@@ -168,15 +181,15 @@
                   </table>
                 </div>
               </div>
-              <h2 class="mb-2 text-lg font-normal dark:text-white">สินทรัพย์ประกัน</h2>
+              <h2 class="mb-2 text-lg font-normal dark:text-white">สินทรัพย์ค้ำประกัน</h2>
               <div class="w-full mb-3">
                 <div class="flex w-full items-center">
                   <o-radio v-model="showInput" name="X" native-value="F">ไม่มี</o-radio>
                   <o-radio v-model="showInput" name="X" native-value="T" class="mx-3">มี</o-radio>
                 </div>
               </div>
-              <div v-if="showInput == 'T'" class="flex grid grid-cols-3 gap-4">
-                <div>
+              <div v-if="showInput == 'T'" class="flex relative w-full gap-2 mb-4">
+                <div class="w-full">
                   <o-field label="ประเภทสินทรัพย์">
                     <select id="countries"
                       class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -187,94 +200,103 @@
                     </select>
                   </o-field>
                 </div>
-                <o-field label="สินทรัพย์">
-                  <o-input placeholder="เช่น บ้าน, รถ, วัว"></o-input>
-                </o-field>
-                <div>
+                <div class="w-full ">
+                  <o-field label="สินทรัพย์">
+                    <o-input placeholder="เช่น บ้าน, รถ, วัว"></o-input>
+                  </o-field>
+                </div>
+                <div class="w-full ">
+                  <o-field label="จำนวน">
+                    <o-input type="number"></o-input>
+                  </o-field>
+                </div>
+                <div class="w-full">
                   <p class="text-sm text-red-500 font-normal">* ประมาณราคาสินทรัพย์</p>
                   <o-input type="number" class="text-right" placeholder="บาท"></o-input>
                 </div>
-                <div class="col-span-3 border shadow sm:rounded-lg">
-                  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                      <tr>
-                        <th class="px-6 py-3 text-center">
-                          ลำดับ
-                        </th>
-                        <th class="px-6 py-3">
-                          ประเภทสินทรัพย์
-                        </th>
-                        <th class="px-6 py-3">
-                          สินทรัพย์
-                        </th>
-                        <th class="px-6 py-3 text-center">
-                          จำนวน
-                        </th>
-                        <th class="px-6 py-3 text-right">
-                          ประมาณราคาสินทรัพย์
-                        </th>
-                        <th class="px-6 py-3 text-center">
-                     
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="px-6 py-3 text-center">
-                          1
-                        </td>
-                        <td class="px-6 py-3">
-                          อสังหาทรัพย์
-                        </td>
-                        <th class="px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          บ้าน
-                        </th>
-                        <td class="px-6 py-3 text-center">
-                          1
-                        </td>
-                        <td class="px-6 py-3 text-right">
-                          1,500,000
-                        </td>
-
-                        <td class="px-6 py-3 text-center">
-                          <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                            <Icon class="text-xl font-medium text-pink-600 dark:text-white"
-                              name="material-symbols:delete-outline"></Icon>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <td class="px-6 py-3 text-center">
-                          2
-                        </td>
-                        <td class="px-6 py-3">
-                          ยานพาหนะ
-                        </td>
-                        <td class="px-6 py-4 ">
-                          รถ
-                        </td>
-                        <td class="px-6 py-3 text-center">
-                          1
-                        </td>
-                        <td class="px-6 py-3 text-right">
-                          500,000
-                        </td>
-                        <td class="px-6 py-3 text-center">
-                          <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                            <Icon class="text-xl font-medium text-pink-600 dark:text-white"
-                              name="material-symbols:delete-outline"></Icon>
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="w-full  flex justify-end mt-5">
+                  <o-button>เพิ่ม</o-button>
                 </div>
               </div>
+              <div v-if="showInput == 'T'" class="col-span-4 border shadow sm:rounded-lg">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3">
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                      <th class="px-6 py-3 text-center">
+                        ลำดับ
+                      </th>
+                      <th class="px-6 py-3">
+                        ประเภทสินทรัพย์
+                      </th>
+                      <th class="px-6 py-3">
+                        สินทรัพย์
+                      </th>
+                      <th class="px-6 py-3 text-center">
+                        จำนวน
+                      </th>
+                      <th class="px-6 py-3 text-right">
+                        ประมาณราคาสินทรัพย์
+                      </th>
+                      <th class="px-6 py-3 text-center">
 
-              <h2 class="mb-2 mt-5 text-lg font-normal dark:text-white">หุ้นประกัน</h2>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <td class="px-6 py-3 text-center">
+                        1
+                      </td>
+                      <td class="px-6 py-3">
+                        อสังหาทรัพย์
+                      </td>
+                      <th class="px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        บ้าน
+                      </th>
+                      <td class="px-6 py-3 text-center">
+                        1
+                      </td>
+                      <td class="px-6 py-3 text-right">
+                        1,500,000
+                      </td>
+
+                      <td class="px-6 py-3 text-center">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                          <Icon class="text-xl font-medium text-pink-600 dark:text-white"
+                            name="material-symbols:delete-outline"></Icon>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr
+                      class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <td class="px-6 py-3 text-center">
+                        2
+                      </td>
+                      <td class="px-6 py-3">
+                        ยานพาหนะ
+                      </td>
+                      <td class="px-6 py-4 ">
+                        รถ
+                      </td>
+                      <td class="px-6 py-3 text-center">
+                        1
+                      </td>
+                      <td class="px-6 py-3 text-right">
+                        500,000
+                      </td>
+                      <td class="px-6 py-3 text-center">
+                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                          <Icon class="text-xl font-medium text-pink-600 dark:text-white"
+                            name="material-symbols:delete-outline"></Icon>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h2 class="mb-2 mt-5 text-lg font-normal dark:text-white">หุ้นค้ำประกัน</h2>
               <div class="w-full mb-3">
                 <div class="flex w-full items-center">
                   <o-radio v-model="showInput2" name="z" native-value="F">ไม่มี</o-radio>
@@ -284,6 +306,18 @@
                   <p v-if="showInput2 == 'T'" class="mt-3 text-sm text-red-500 font-normal">* ประมาณราคาหุ้น ไม่เกิน 90
                     เปอร์เซ็นของหุ้นที่ถืออยู่</p>
                   <o-input type="number" v-if="showInput2 == 'T'" class="text-right" placeholder="จำนวน"></o-input>
+                </div>
+              </div>
+              <h2 class="mb-2 mt-5 text-lg font-normal dark:text-white">เงินฝากค้ำประกัน</h2>
+              <div class="w-full mb-3">
+                <div class="flex w-full items-center">
+                  <o-radio v-model="showInput3" name="c" native-value="F">ไม่มี</o-radio>
+                  <o-radio v-model="showInput3" name="c" native-value="T" class="mx-3">มี</o-radio>
+                </div>
+                <div>
+                  <p v-if="showInput3 == 'T'" class="mt-3 text-sm text-red-500 font-normal">* จำนวนเงินฝากในบัญชีสหกรณ์
+                  </p>
+                  <o-input type="number" v-if="showInput3 == 'T'" class="text-right" placeholder="บาท"></o-input>
                 </div>
               </div>
             </div>
@@ -416,9 +450,11 @@
 <script setup lang="ts">
 import { initFlowbite } from "flowbite";
 
+const isItemModalUserData = ref(false);
 const stepnext = ref(1);
 const showInput = ref('F');
 const showInput2 = ref('F');
+const showInput3 = ref('F');
 
 const tableDatatour = [
   {
@@ -434,6 +470,14 @@ const tableDatatour = [
     datemember: "24/06/2561",
   },
 ];
+
+const datauser = ref('');
+
+const data = [
+  "นายกิตติพิชญ์ เสนานุช",
+  "นางสาวรินดา จุตโน",
+];
+
 
 onMounted(() => {
   initFlowbite();

@@ -35,7 +35,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         rootClass: 'text-gray-900 text-base',
       },
       input: {
-        rootClass: 'block mb-2 text-sm font-medium',
+        rootClass: 'block text-sm font-medium',
         inputClass: 'border border-gray-300 block w-full p-2.5 text-sm rounded-lg',
       },
       table: {
