@@ -45,7 +45,7 @@
               </o-table-column>
               <o-table-column field="จัดการ" label="จัดการ" position="centered" v-slot:default="props">
                 <!-- {{ props.row.หมายเหตุ }} -->
-                <NuxtLink to="/coop/loanrequest_rightsPage">
+                <NuxtLink to="/coop/loanrequest_data">
                   <o-button>ตรวจสอบ</o-button>
                 </NuxtLink>
               </o-table-column>
