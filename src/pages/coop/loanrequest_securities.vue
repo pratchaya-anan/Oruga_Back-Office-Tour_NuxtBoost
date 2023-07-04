@@ -1,6 +1,6 @@
 <template>
   <section class="min-h-screen">
-    <LayoutPageTitle>ตรวจสอบเอกสารผู้กู้</LayoutPageTitle>
+    <LayoutPageTitle>ตรวจสอบเอกสารหลักทรัพย์</LayoutPageTitle>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
       <div class="col-span-full xl:col-auto mb-4">
         <UiCard class="mb-4">
@@ -106,39 +106,6 @@
                   </div>
                 </div>
               </div>
-              <div class="sm:flex-1 border-t pt-2">
-                <span>ข้อมูลคู่สมรส</span>
-                <div
-                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <div class="mt-4">ชื่อ-สกุล</div>
-                  <div
-                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    นายภาคภูมิ ภูเขียว
-                  </div>
-                </div>
-                <div
-                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <div class="mt-4">อายุ</div>
-                  <div
-                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    30
-                  </div>
-                </div>
-                <div
-                  class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400"
-                >
-                  <div class="mt-2">ที่อยู่</div>
-                  <div
-                    class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    175 ม.12 ต.บ้านเป็ด อ.เมืองขอนแก่น จ.ขอนแก่น 40000
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
         </UiCard>
@@ -149,12 +116,13 @@
         <div class="flex flex-wrap gap-4">
           <UiCard class="flex-1">
             <div class="my-2">
-              <h2 class="text-xl font-bold dark:text-white">เอกสารที่แนบมา</h2>
-              <span>เอกสารผู้กู้</span>
+              <h2 class="text-xl font-bold dark:text-white">
+                หลักทรัพย์ที่แนบมา
+              </h2>
             </div>
             <div class="space-y-2">
               <UiCard class="flex justify-between"
-                ><div>สำเนาบัตรประชาชน</div>
+                ><div>บ้าน</div>
                 <a
                   href="#"
                   class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
@@ -162,15 +130,7 @@
                 >
               </UiCard>
               <UiCard class="flex justify-between"
-                ><div>สำเนาบัตรทะเบียนบ้าน</div>
-                <a
-                  href="#"
-                  class="font-medium text-gray-500 dark:text-blue-500 hover:underline"
-                  >ไม่มีไฟล์แนบ</a
-                ></UiCard
-              >
-              <UiCard class="flex justify-between"
-                ><div>สลิปเงินเดือน</div>
+                ><div>รถยนต์</div>
                 <a
                   href="#"
                   class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
@@ -178,7 +138,7 @@
                 ></UiCard
               >
               <UiCard class="flex justify-between"
-                ><div>สำเนาทะเบียนสมรส</div>
+                ><div>วัว 1 ตัว</div>
                 <a
                   href="#"
                   class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
@@ -186,44 +146,7 @@
                 ></UiCard
               >
               <UiCard class="flex justify-between">
-                <div>สำเนาใบเปลี่ยนชื่อ</div>
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >ตรวจสอบ</a
-                ></UiCard
-              >
-            </div>
-            <div class="my-2">
-              <span>เอกสารคู่สมรส</span>
-            </div>
-            <div class="space-y-2">
-              <UiCard class="flex justify-between"
-                ><div>สำเนาบัตรประชาชน</div>
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >ตรวจสอบ</a
-                >
-              </UiCard>
-              <UiCard class="flex justify-between"
-                ><div>สำเนาบัตรทะเบียนบ้าน</div>
-                <a
-                  href="#"
-                  class="font-medium text-gray-500 dark:text-blue-500 hover:underline"
-                  >ไม่มีไฟล์แนบ</a
-                ></UiCard
-              >
-              <UiCard class="flex justify-between"
-                ><div>สำเนาทะเบียนสมรส</div>
-                <a
-                  href="#"
-                  class="font-medium text-gray-500 dark:text-blue-500 hover:underline"
-                  >ไม่มีไฟล์แนบ</a
-                ></UiCard
-              >
-              <UiCard class="flex justify-between">
-                <div>สำเนาใบเปลี่ยนชื่อ</div>
+                <div>ที่ดิน</div>
                 <a
                   href="#"
                   class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
