@@ -43,6 +43,9 @@
               <o-table-column field="objective" label="วัตถุประสงค์" v-slot:default="props">
                 {{ props.row.objective }}
               </o-table-column>
+              <o-table-column field="สถานะ" label="สถานะ" v-slot:default="props">
+                ???
+              </o-table-column>
               <o-table-column field="จัดการ" label="จัดการ" position="centered" v-slot:default="props">
                 <!-- {{ props.row.หมายเหตุ }} -->
                 <NuxtLink to="/coop/loanrequest_data">
