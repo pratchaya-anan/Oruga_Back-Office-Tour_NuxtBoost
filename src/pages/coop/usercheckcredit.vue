@@ -85,7 +85,7 @@
         </div>
       </div>
     </o-step-item>
-    <o-step-item step="2" label="หลักค้ำประกัน" :clickable="true" icon="add">
+    <o-step-item step="2" label="คนค้ำประกัน" :clickable="true" icon="add">
       <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
         <div class="col-span-full xl:col-auto mb-4">
           <UiCard class="mb-4">
@@ -124,13 +124,12 @@
         </div>
         <div class="col-span-2">
           <UiCard>
-            <h2 class="text-xl font-bold dark:text-white">หลักค้ำประกัน</h2>
+            <h2 class="text-xl font-bold dark:text-white">คนค้ำประกัน</h2>
             <div class="w-full p-2">
-              <h2 class="mb-2 text-lg font-normal dark:text-white">คนค้ำประกัน</h2>
               <div class="w-full mb-3">
                 <div class="flex relative mb-4">
                   <div class="w-full">
-                    <o-autocomplete placeholder="ค้นหาสมาชิก" icon="search" clearable :data="data" v-model="userdata">
+                    <o-autocomplete placeholder="ค้นหาสมาชิก" icon="search" clearable :data="data" v-model="datauser">
                       <template #empty>No results found</template>
                     </o-autocomplete>
                   </div>
@@ -176,7 +175,52 @@
                   </table>
                 </div>
               </div>
-              <h2 class="mb-2 text-lg font-normal dark:text-white">สินทรัพย์ค้ำประกัน</h2>
+            </div>
+          </UiCard>
+        </div>
+      </div>
+    </o-step-item>
+    <o-step-item step="3" label="สินทรัพย์ประกัน" :clickable="true" icon="file">
+      <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
+        <div class="col-span-full xl:col-auto mb-4">
+          <UiCard class="mb-4">
+            <section>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                <h2 class="text-xl font-bold dark:text-white">
+                  ข้อมูลสมาชิก
+                </h2>
+              </div>
+            </section>
+            <section class="border-t border-gray-200 dark:border-gray-700">
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-4">ชื่อ-สกุล</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      นาย นพรุจ ชูธรรมสิทธิกุล
+                    </div>
+                    <div class="mt-2">ตำแหน่ง</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      ข้าราชการ
+                    </div>
+                    <div class="mt-2">รหัสสมาชิก</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      1552555214
+                    </div>
+                    <div class="mt-2">เป็นสมาชิกตั้งแต่</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      16/04/2551
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </UiCard>
+        </div>
+        <div class="col-span-2">
+          <UiCard>
+            <h2 class="text-xl font-bold dark:text-white">สินทรัพย์ค้ำประกัน</h2>
+            <div class="w-full p-2 mb-4">
               <div class="w-full mb-3">
                 <div class="flex w-full items-center">
                   <o-radio v-model="showInput" name="X" native-value="F">ไม่มี</o-radio>
@@ -291,7 +335,9 @@
                   </tbody>
                 </table>
               </div>
-              <h2 class="mb-2 mt-5 text-lg font-normal dark:text-white">หุ้นค้ำประกัน</h2>
+            </div>
+            <h2 class="text-xl font-bold dark:text-white">หุ้นค้ำประกัน</h2>
+            <div class="w-full p-2 mb-4">
               <div class="w-full mb-3">
                 <div class="flex w-full items-center">
                   <o-radio v-model="showInput2" name="z" native-value="F">ไม่มี</o-radio>
@@ -303,7 +349,9 @@
                   <o-input type="number" v-if="showInput2 == 'T'" class="text-right" placeholder="จำนวน"></o-input>
                 </div>
               </div>
-              <h2 class="mb-2 mt-5 text-lg font-normal dark:text-white">เงินฝากค้ำประกัน</h2>
+            </div>
+              <h2 class="text-xl font-bold dark:text-white">เงินฝากค้ำประกัน</h2>
+              <div class="w-full p-2 mb-4">
               <div class="w-full mb-3">
                 <div class="flex w-full items-center">
                   <o-radio v-model="showInput3" name="c" native-value="F">ไม่มี</o-radio>
@@ -320,7 +368,7 @@
         </div>
       </div>
     </o-step-item>
-    <o-step-item step="3" label="ข้อมูล" :clickable="true" icon="success">
+    <o-step-item step="4" label="ข้อมูล" :clickable="true" icon="success">
       <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
         <div class="col-span-full xl:col-auto mb-4">
           <UiCard class="mb-4">
