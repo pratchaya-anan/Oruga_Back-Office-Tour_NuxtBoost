@@ -138,7 +138,7 @@
       </div>
 
     </o-step-item>
-    <o-step-item step="2" label="หลักค้ำประกัน" :clickable="true" icon="user-lock">
+    <o-step-item step="2" label="คนค้ำประกัน" :clickable="true" icon="user-lock">
       <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
         <div class="col-span-full xl:col-auto mb-4">
           <UiCard class="mb-4">
@@ -326,7 +326,7 @@
                   </td>
 
                   <td class="px-6 py-4 ">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">แก้ไข</a>
+                    
                   </td>
                 </tr>
                 <tr
@@ -406,7 +406,7 @@
                     </o-modal>
                   </td>
                   <td class="px-6 py-4 ">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">แก้ไข</a>
+                    
                   </td>
                 </tr>
               </tbody>
@@ -417,69 +417,101 @@
 
           </section>
           <UiCard class="mt-3 mb-3" v-if="showItemsPanel">
-            <div class="grid grid-cols-2 gap-4">
-              <o-field label="เลขทะเบียนสมาชิก">
-                <o-input></o-input>
-              </o-field>
-              <o-field label="ตำแหน่ง">
-                <select id="countries"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option selected>เลือกตำแหน่ง</option>
-                  <option value="US">ราชการ</option>
-                  <option value="CA">ลูกจ้างประจำ</option>
-                </select>
-
-              </o-field>
-              <o-field label="ชื่อ-สกุล">
-                <o-input></o-input>
-              </o-field>
-              <o-field label="เป็นสมาชิกตั้งแต่">
-                <o-input></o-input>
-              </o-field>
-            </div>
-
-            <label class="text-2xl font-medium ">เอกสารที่แนบ</label>
-            <div class="grid grid-cols-2 gap-2">
-              <div class="mb-5 field">
-
-                <o-checkbox :value="true" checkClass="w-4 h-4"
-                  labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> สำเนาบัตรประชาชน
-                </o-checkbox>
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input"></label>
-                <input
-                  class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                  id="file_input" type="file">
-              </div>
-
-              <div class="mb-5 field">
-                <o-checkbox :value="true" variant="danger" checkClass="w-4 h-4"
-                  labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> สำเนาทะเบียนบ้าน
-                </o-checkbox>
-
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input"></label>
-                <input
-                  class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                  id="file_input" type="file">
-
-              </div>
-              <div class="field">
-                <o-checkbox :value="true" variant="danger" checkClass="w-4 h-4"
-                  labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                  สลิปเงินเดือน
-                </o-checkbox>
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input"></label>
-                <input
-                  class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                  id="file_input" type="file">
-
-              </div>
-            </div>
+            <o-autocomplete placeholder="ค้นหาสมาชิก" icon="search" clearable :data="data" v-model="userdata">
+                      <template #empty>No results found</template>
+                    </o-autocomplete>
+            
+           
             <section>
               <o-button @click="showItemsPanel = false" class="mt-4">เพิ่ม</o-button>
-              <o-button @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
+              <o-button variant="danger" @click="showItemsPanel = false" class="ml-4">ยกเลิก</o-button>
             </section>
           </UiCard>
-          <UiCard class="mt-3">
+          
+        </div>
+      </div>
+    </o-step-item>
+
+    <o-step-item step="3" label="ข้อมูลหลักค้ำประกัน" :clickable="true" icon="add">
+      <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
+        <div class="col-span-full xl:col-auto mb-4">
+          <UiCard class="mb-4">
+            <section>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                <h2 class="text-xl font-bold dark:text-white">
+                  ข้อมูลสมาชิก
+                </h2>
+              </div>
+            </section>
+            <section class="border-t border-gray-200 dark:border-gray-700">
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-4">ชื่อ-สกุล</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      นาย นพรุจ ชูธรรมสิทธิกุล
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">ตำแหน่ง</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      ข้าราชการ
+                    </div>
+                    <div class="mt-2">รหัสสมาชิก</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      1552555214
+                    </div>
+                    <div class="mt-2">เป็นสมาชิกตั้งแต่</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      16/04/2551
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </UiCard>
+          <UiCard class="mb-4">
+            <section>
+              <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                <h2 class="text-xl font-bold dark:text-white">
+                  ข้อมูลการขอกู้
+                </h2>
+              </div>
+            </section>
+            <section class="border-t border-gray-200 dark:border-gray-700">
+              <div class="sm:flex xl:block xl:space-y-4">
+                <div class="sm:flex-1">
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-4">ประเภทการกู้</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      กู้สามัญ
+                    </div>
+                  </div>
+                  <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
+                    <div class="mt-2">ขอกู้จำนวน</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      2,000,000
+                    </div>
+                    <div class="mt-2">รายได้ต่อเดือน</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      20,000
+                    </div>
+                    <div class="mt-2">จำนวนงวด</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      240 งวด
+                    </div>
+                    <div class="mt-2">เพื่อวัตถุประสงค์</div>
+                    <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                      นำไปใช้ในการลงทุน
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </UiCard>
+        </div>
+        <div class="col-span-2">
+          <UiCard>
             <div>
               <label class="text-xl font-bold dark:text-white">สินทรัพย์ประกัน</label>
             </div>
@@ -570,7 +602,7 @@
                     </o-modal>
                   </td>
                   <td class="px-6 py-4 ">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">แก้ไข</a>
+                    
                   </td>
                 </tr>
                 <tr
@@ -633,17 +665,13 @@
                     </o-modal>
                   </td>
                   <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">แก้ไข</a>
+                    
                   </td>
                 </tr>
               </tbody>
             </table>
             <o-button class="mt-3" @click="showItemsPanel2 = true">เพิ่มสินทรัพย์</o-button>
-          </UiCard>
-          <section v-if="!showItemsPanel">
-
-          </section>
-          <UiCard class="mt-3 mb-3" v-if="showItemsPanel2">
+            <div class="mt-3 mb-3" v-if="showItemsPanel2">
             <div class="grid grid-cols-2 gap-4">
               <o-field label="ประเภทสินทรัพย์">
                 <select id="countries"
@@ -668,41 +696,45 @@
 
             </div>
 
-            <label class="text-2xl font-medium ">เอกสารที่แนบ</label>
-            <div class="grid grid-cols-2 gap-2">
-              <div class="mb-5 field">
-
-                <o-checkbox :value="true" checkClass="w-4 h-4"
-                  labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> สำเนาโฉนดที่ดิน
-                </o-checkbox>
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input"></label>
-                <input
-                  class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                  id="file_input" type="file">
-              </div>
-              <div class="mb-5 field">
-                <o-checkbox :value="true" variant="danger" checkClass="w-4 h-4"
-                  labelClass="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"> สำเนาอื่นๆ
-                </o-checkbox>
-
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input"></label>
-                <input
-                  class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                  id="file_input" type="file">
-              </div>
-            </div>
+           
             <section>
               <o-button @click="showItemsPanel2 = false" class="mt-4">เพิ่ม</o-button>
-              <o-button @click="showItemsPanel2 = false" class="ml-4">ยกเลิก</o-button>
+              <o-button variant="danger" @click="showItemsPanel2 = false" class="ml-4">ยกเลิก</o-button>
             </section>
+          </div>
+          <h2 class="mb-2 mt-5 text-xl font-bold dark:text-white">หุ้นค้ำประกัน</h2>
+              <div class="w-full mb-3">
+                <div class="flex w-full items-center">
+                  <o-radio v-model="showInput2" name="z" native-value="F">ไม่มี</o-radio>
+                  <o-radio v-model="showInput2" name="z" native-value="T" class="mx-3">มี</o-radio>
+                </div>
+                <div>
+                  <p v-if="showInput2 = 'T'" class="mt-3 text-sm text-red-500 font-normal"></p>
+                  <o-input type="text" v-if="showInput2 == 'T'" class="text-right" placeholder="จำนวน" modelValue="2,000"></o-input>
+                </div>
+              </div>
+              <h2 class="mb-2 mt-5 text-xl font-bold dark:text-white">เงินฝากค้ำประกัน</h2>
+              <div class="w-full mb-3">
+                <div class="flex w-full items-center">
+                  <o-radio v-model="showInput3" name="c" native-value="F">ไม่มี</o-radio>
+                  <o-radio v-model="showInput3" name="c" native-value="T" class="mx-3">มี</o-radio>
+                </div>
+                <div>
+                  <p v-if="showInput3 == 'T'" class="mt-3 text-sm text-red-500 font-normal">
+                  </p>
+                  <o-input  v-if="showInput3 == 'T'" class="text-right" placeholder="บาท" modelValue="25,000"></o-input>
+                </div>
+              </div>
           </UiCard>
-        </div>
-
-
+          <section v-if="!showItemsPanel">
+          </section>       
+        </div>     
       </div>
-
     </o-step-item>
-    <o-step-item step="3" label="สรุปรายงาน" :clickable="true" icon="paper">
+
+
+
+    <o-step-item step="4" label="สรุปรายงาน" :clickable="true" icon="paper">
       <UiCard class="mb-3">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <h5 class="mb-3 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">ข้อมูลการกู้สามัญ</h5>
@@ -796,7 +828,7 @@
 
 
           <div>
-            <h5 class="mb-3 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">ผู้ค้ำประกัน</h5>
+            <h5 class="mb-3 text-lg font-extrabold text-gray-900 dark:text-white">ผู้ค้ำประกัน</h5>
             <div class="border-t border-gray-200 md:gap-16 dark:border-gray-700"></div>
             <table class="mt-5 w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -928,7 +960,7 @@
               </tbody>
             </table>
 
-            <h5 class="mt-5 mb-5 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">สินทรัพย์ค้ำประกัน
+            <h5 class="mt-5 mb-5 text-lg font-extrabold text-gray-900 dark:text-white">สินทรัพย์ค้ำประกัน
             </h5>
             <div class="border-t border-gray-200 md:gap-16 dark:border-gray-700"></div>
             <table class="mt-5 w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-3">
@@ -1018,6 +1050,8 @@
               </tbody>
             </table>
           </div>
+          <h5 class="mt-5 mb-5 text-lg font-extrabold text-gray-900 dark:text-white">หุ้นค้ำประกัน
+            </h5>
           <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
             <div>
               <div class="mb-3">
@@ -1047,7 +1081,14 @@ const isItemModalHotelData = ref(false);
 const isItemModalHotelData2 = ref(false);
 const isItemModalHotelData3 = ref(false);
 const isItemModalHotelData4 = ref(false);
+const showInput2 = ref(false);
+const showInput3 = ref(false);
 const showcheck = ref('');
 const steps = ref(1);
+
+const data = [
+  "นายกิตติพิชญ์ เสนานุช",
+  "นางสาวรินดา จุตโน",
+];
 
 </script>
