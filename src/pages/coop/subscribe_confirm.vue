@@ -1,7 +1,138 @@
 <template>
     <LayoutPageTitle> ตรวจสอบขอกู้</LayoutPageTitle>
     <o-steps v-model="stepnext">
-        <o-step-item step="1" label="ค้นหา" :clickable="true" icon="search">
+        <o-step-item step="1" :clickable="true">
+            <UiCard>
+                <h2 class="text-xl font-bold dark:text-white">
+                    ข้อมูลส่วนตัว
+                </h2>
+                <div class="mb-2">
+                    <div class="grid grid-cols-6 gap-2">
+                        <div class="w-full">
+                            <o-field label="คำนำหน้า">
+                                <select id="countries"
+                                    class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option selected>เลือกคำนำหน้า</option>
+                                    <option value="US">นาย</option>
+                                    <option value="CA">นาง</option>
+                                    <option value="FR">นางสาว</option>
+                                </select>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="ชื่อ">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="สกุล">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="w-full">
+                            <o-field label="วัน เดือน ปีเกิด">
+                                <o-input type="date"></o-input>
+                            </o-field>
+                        </div>
+                        <div class="w-full">
+                            <o-field label="บ้านเลขที่">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="w-full">
+                            <o-field label="หมู่ที่">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="ถนน">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="ตำบล">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="อำเภอ">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="จังหวัด">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="รหัสไปรษณีย์">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="เบอร์โทร">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="เลขประจำตัวประชาชน">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="เลขที่บัญชีธนาคารกรุงไทย">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="text-xl font-bold dark:text-white">
+                    ข้อมูลสังกัด
+                </h2>
+                <div class="mb-2">
+                    <div class="grid grid-cols-6 gap-2">
+                        <div class="col-span-2">
+                            <o-field label="ตำแหน่ง">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="แผนก">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-2">
+                            <o-field label="เงินเดือน">
+                                <o-input></o-input>
+                            </o-field>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="text-xl font-bold dark:text-white">
+                    ข้อมูลหุ้น
+                </h2>
+                <div class="mb-2">
+                    <div class="grid grid-cols-6 gap-2">
+                        <div class="col-span-2">
+                            <o-field label="ประสงค์ส่งเงินค่าหุ้นต่อเดือน จำนวน">
+                                <o-input type="number" placeholder="มูลค่าหุ้นละ 10 บาท"></o-input>
+                            </o-field>
+                        </div>
+                        <div class="col-span-4">
+                            <div class="flex text-center">
+                                <h2 class="text-base font-normal dark:text-white">หมายเหตุ :</h2>
+                                <p class="ml-1 text-base font-normal text-red-500 text-right">
+                                    หากประสงค์ส่งเงินค่าหุ้นมากกว่าที่กำหนดไว้</p>
+                            </div>
+                            <div class="w-full">
+                                <o-input></o-input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </UiCard>
+        </o-step-item>
+        <o-step-item step="2" :clickable="true">
             <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
                 <div class="col-span-full xl:col-auto mb-4">
                     <UiCard class="mb-4">
@@ -18,7 +149,7 @@
                                     <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
                                         <div class="mt-4">ชื่อ-สกุล</div>
                                         <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            นาย นพรุจ ชูธรรมสิทธิกุล
+                                            นายนพรุจ ชูธรรมสิทธิกุล
                                         </div>
                                         <div class="mt-2">วันเกิด</div>
                                         <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -32,17 +163,26 @@
                                         <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                             0895658722
                                         </div>
+                                        <div class="mt-2">เลขประจำตัวประชาชน</div>
+                                        <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                            1423987647
+                                        </div>
+                                        <div class="mt-2">เลขที่บัญชีธนาคารกรุงไทย
+                                        </div>
+                                        <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                            0098766577
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <section>
-                            <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-                                <h2 class="text-xl font-bold dark:text-white">
-                                    ข้อมูลสังกัด
-                                </h2>
-                            </div>
-                        </section>
+                    </UiCard>
+                    <UiCard class="mb-4">
+                        <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                            <h2 class="text-xl font-bold dark:text-white">
+                                ข้อมูลสังกัด
+                            </h2>
+                        </div>
                         <section class="border-t border-gray-200 dark:border-gray-700">
                             <div class="sm:flex xl:block xl:space-y-4">
                                 <div class="sm:flex-1">
@@ -53,7 +193,7 @@
                                         </div>
                                         <div class="mt-2">แผนก</div>
                                         <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            หมอ
+                                            คนไข้
                                         </div>
                                         <div class="mt-2">เงินเดือน</div>
                                         <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -64,60 +204,23 @@
                             </div>
                         </section>
                     </UiCard>
-                </div>
-                <div class="col-span-2">
-                    <UiCard>
-                        <h2 class="text-xl font-bold dark:text-white">หุ้น</h2>
-                        <div class="grid grid-cols-3 gap-8 p-2">
-                            <div class="w-full">
-                                <h2 class="text-base font-normal dark:text-white mb-2">ประสงค์ส่งเงินค่าหุ้นรายเดือน</h2>
-                                <o-input type="number" class="text-right"></o-input>
-                                <p class="text-red-500 text-right">* มูลค่าหุ้นละ 10 บาท</p>
-                            </div>
-                            <div class="col-span-2">
-                                <div class="flex text-center">
-                                    <h2 class="text-base font-normal dark:text-white mb-2">หมายเหตุ :</h2>
-                                    <p class="ml-1 text-base font-normal text-red-500 text-right">หากประสงค์ส่งเงินค่าหุ้นมากกว่าที่กำหนดไว้</p>
-                                </div>
-                                <div class="w-full">
-                                    <o-input></o-input>
-                                </div>
-                            </div>
-                        </div>
-                    </UiCard>
-                </div>
-            </div>
-        </o-step-item>
-        <o-step-item step="2" label="หลักค้ำประกัน" :clickable="true" icon="add">
-            <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
-                <div class="col-span-full xl:col-auto mb-4">
                     <UiCard class="mb-4">
-                        <section>
-                            <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-                                <h2 class="text-xl font-bold dark:text-white">
-                                    ข้อมูลสมาชิก
-                                </h2>
-                            </div>
-                        </section>
+                        <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
+                            <h2 class="text-xl font-bold dark:text-white">
+                                ข้อมูลหุ้น
+                            </h2>
+                        </div>
                         <section class="border-t border-gray-200 dark:border-gray-700">
                             <div class="sm:flex xl:block xl:space-y-4">
                                 <div class="sm:flex-1">
                                     <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                                        <div class="mt-4">ชื่อ-สกุล</div>
+                                        <div class="mt-4">ประสงค์ส่งเงินต่อเดือน</div>
                                         <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            นาย นพรุจ ชูธรรมสิทธิกุล
+                                            100
                                         </div>
-                                        <div class="mt-2">ตำแหน่ง</div>
+                                        <div class="mt-2">หมายเหตุ</div>
                                         <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            ข้าราชการ
-                                        </div>
-                                        <div class="mt-2">รหัสมาชิก</div>
-                                        <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            1552555214
-                                        </div>
-                                        <div class="mt-2">เป็นสมาชิกตั้งแต่</div>
-                                        <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            16/04/2551
+                                            -
                                         </div>
                                     </div>
                                 </div>
@@ -127,232 +230,167 @@
                 </div>
                 <div class="col-span-2">
                     <UiCard>
-                        <h2 class="text-xl font-bold dark:text-white">หลักค้ำประกัน</h2>
-                        <div class="w-full p-2">
-                            <h2 class="mb-2 text-lg font-normal dark:text-white">คนค้ำประกัน</h2>
-                            <div class="w-full mb-3">
-                                <div class="flex relative">
-                                    <div class="w-full">
-                                        <o-input placeholder="ค้นหาสมาชิก" class="w-full"></o-input>
-                                    </div>
-                                    <div class="ml-2">
-                                        <o-button>ค้นหา</o-button>
-                                    </div>
-                                </div>
-                                <div class="relative overflow-x-auto border shadow sm:rounded-lg">
-                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                        <thead
-                                            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                            <tr>
-                                                <th scope="col" class="px-3 py-3 text-center">ลำดับ</th>
-                                                <th scope="col" class="px-3 py-3">รหัสสมาชิก</th>
-                                                <th scope="col" class="px-3 py-3">ชื่อ-สกุล</th>
-                                                <th scope="col" class="px-3 py-3 text-center">ตำแหน่ง</th>
-                                                <th scope="col" class="px-3 py-3 text-center">เป็นสมาชิกตั้งแต่</th>
-                                                <th scope="col" class="px-3 py-3 text-center"></th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                                                v-for="(i, index) in tableDatatour">
-                                                <td class="px-3 py-4 text-center">
-                                                    {{ index + 1 }}
-                                                </td>
-                                                <td class="px-3 py-4">
-                                                    {{ i.id }}
-                                                </td>
-                                                <td class="px-3 py-4">
-                                                    {{ i.name }}
-                                                </td>
-                                                <td class="px-3 py-4 text-center">
-                                                    {{ i.rank }}
-                                                </td>
-                                                <td class="px-3 py-4 text-center">
-                                                    {{ i.datemember }}
-                                                </td>
-                                                <td class="px-3 py-4 text-center">
-                                                    <Icon class="text-xl font-medium text-pink-600 dark:text-white"
-                                                        name="material-symbols:delete-outline"></Icon>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                        <h2 class="text-xl font-bold dark:text-white">
+                            เอกสารประกอบ
+                        </h2>
+                        <div class="grid grid-cols-2 gap-4 pt-2">
+                            <div class="mb-5 field">
+                                <p Class="text-sm font-medium text-gray-900 dark:text-gray-300"> สำเนาบัตรประชาชน
+                                </p>
+                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                    for="file_input"></label>
+                                <input
+                                    class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    id="file_input" type="file">
                             </div>
-                            <h2 class="mb-2 text-lg font-normal dark:text-white">สินทรัพย์ประกัน</h2>
-                            <div class="w-full mb-3">
-                                <div class="flex w-full items-center">
-                                    <o-radio v-model="showInput" name="X" native-value="F">ไม่มี</o-radio>
-                                    <o-radio v-model="showInput" name="X" native-value="T" class="mx-3">มี</o-radio>
-                                </div>
-                            </div>
-                            <div v-if="showInput == 'T'" class="flex grid grid-cols-3 gap-4">
-                                <div>
-                                    <o-field label="ประเภทสินทรัพย์">
-                                        <select id="countries"
-                                            class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option selected>ประเภทสินทรัพย์</option>
-                                            <option value="US">อสังหาริมทรัพย์</option>
-                                            <option value="CA">พาหนะ</option>
-                                            <option value="FR">ปศุสัตว์</option>
-                                        </select>
-                                    </o-field>
-                                </div>
-                                <o-field label="สินทรัพย์">
-                                    <o-input placeholder="เช่น บ้าน, รถ, วัว"></o-input>
-                                </o-field>
-                                <div>
-                                    <p class="text-sm text-red-500 font-normal">* ประมาณราคาสินทรัพย์</p>
-                                    <o-input type="number" class="text-right" placeholder="บาท"></o-input>
-                                </div>
-                            </div>
+                            <div class="mb-5 field">
+                                <p Class="text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    สำเนาหน้าบัญชีธนาคารกรุงไทย
+                                </p>
 
-                            <h2 class="mb-2 text-lg font-normal dark:text-white">หุ้นประกัน</h2>
-                            <div class="w-full mb-3">
-                                <div class="flex w-full items-center">
-                                    <o-radio v-model="showInput2" name="z" native-value="F">ไม่มี</o-radio>
-                                    <o-radio v-model="showInput2" name="z" native-value="T" class="mx-3">มี</o-radio>
-                                </div>
-                                <div>
-                                    <p v-if="showInput2 == 'T'" class="mt-3 text-sm text-red-500 font-normal">*
-                                        ประมาณราคาหุ้น ไม่เกิน 90
-                                        เปอร์เซ็นของหุ้นที่ถืออยู่</p>
-                                    <o-input type="number" v-if="showInput2 == 'T'" class="text-right"
-                                        placeholder="จำนวน"></o-input>
-                                </div>
+                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                    for="file_input"></label>
+                                <input
+                                    class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    id="file_input" type="file">
+
+                            </div>
+                            <div class="mb-5 field">
+                                <p Class="text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    สลิปเงินเดือน
+                                </p>
+                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                    for="file_input"></label>
+                                <input
+                                    class="block w-50 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    id="file_input" type="file">
                             </div>
                         </div>
                     </UiCard>
                 </div>
             </div>
         </o-step-item>
-        <o-step-item step="3" label="ข้อมูล" :clickable="true" icon="success">
-            <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-4">
-                <div class="col-span-full xl:col-auto mb-4">
-                    <UiCard class="mb-4">
-                        <section>
-                            <div class="sm:flex xl:block sm:space-x-4 xl:space-x-0">
-                                <h2 class="text-xl font-bold dark:text-white">
-                                    ข้อมูลสมาชิก
-                                </h2>
+        <o-step-item step="3" :clickable="true">
+            <UiCard class="mb-3">
+                <div class="mx-auto max-w-screen-xl lg:px-6">
+                    <h5 class="mb-3 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                        ข้อมูลการสมัครสมาชิก</h5>
+                    <div class="grid pt-2 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+                        <div class="p-2">
+                            <div class="mb-3">
+                                <h3 class="flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                                    ชื่อ-สกุล
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">นายนพรุจ ชูธรรมสิทธิกุล</p>
                             </div>
-                        </section>
-                        <section class="border-t border-gray-200 dark:border-gray-700">
-                            <div class="sm:flex xl:block xl:space-y-4">
-                                <div class="sm:flex-1">
-                                    <div class="text-sm not-italic font-normal text-gray-500 dark:text-gray-400">
-                                        <div class="mt-4">ชื่อ-สกุล</div>
-                                        <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            นาย นพรุจ ชูธรรมสิทธิกุล
-                                        </div>
-                                        <div class="mt-2">ตำแหน่ง</div>
-                                        <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            ข้าราชการ
-                                        </div>
-                                        <div class="mt-2">รหัสมาชิก</div>
-                                        <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            1552555214
-                                        </div>
-                                        <div class="mt-2">เป็นสมาชิกตั้งแต่</div>
-                                        <div class="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                                            16/04/2551
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="mb-3">
+                                <h3 class="flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                                    วันเกิด
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">16/04/2542</p>
                             </div>
-                        </section>
-                    </UiCard>
-                </div>
-                <div class="col-span-2">
-                    <UiCard>
-                        <h2 class="text-xl font-bold dark:text-white">เงื่อนไข</h2>
-                        <ul class="max-w-md space-y-2 text-gray-500 list-inside dark:text-gray-400">
-                            <li class="flex items-center">
-                                <svg aria-hidden="true"
-                                    class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                ไม่ติดสัญญากู้
-                            </li>
-                            <li class="flex items-center">
-                                <svg aria-hidden="true"
-                                    class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                วงเงินขอกู้
-                            </li>
-                            <li class="flex items-center">
-                                <svg aria-hidden="true"
-                                    class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                เงินเดือนอยู่ในเกณฑ์
-                            </li>
-                            <li class="flex items-center">
-                                <svg aria-hidden="true"
-                                    class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                อายุสมาชิกมากกว่า 3 ปี
-                            </li>
-                            <li class="flex items-center">
-                                <svg aria-hidden="true"
-                                    class="w-5 h-5 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                คนค่ำประกัน
-                            </li>
-                            <li class="flex items-center">
-                                <div role="status">
-                                    <svg aria-hidden="true"
-                                        class="w-5 h-5 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
-                                        viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                                            fill="currentColor" />
-                                        <path
-                                            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                                            fill="currentFill" />
-                                    </svg>
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-                                สินทรัพย์ประกัน
-                            </li>
-                            <li class="flex items-center">
-                                <svg aria-hidden="true"
-                                    class="w-5 h-5 mr-1.5 text-gray-500 dark:text-green-400 flex-shrink-0"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                หุ้นประกัน
-                            </li>
-                        </ul>
-                        <div class="flex justify-end mt-4">
-                            <a href="#">
-                                <o-button> ข้อกู้ </o-button>
-                            </a>
+                            <div class="mb-3">
+                                <h3 class="flex items-center  text-lg font-medium text-gray-900 dark:text-white">
+                                    ที่อยู่
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">152/1 บ้านกอกน้อย-โคกฟันโปง ตำบลบ้านเป็ด
+                                    อำเภอเมืองขอนแก่น ขอนแก่น 40000</p>
+                            </div>
+                            <div class="mb-3">
+                                <h3 class="flex items-center  text-lg font-medium text-gray-900 dark:text-white">
+                                    เบอร์โทรศัพท์
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">0895658722</p>
+                            </div>
+                            <div class="mb-3">
+                                <h3 class="flex items-center  text-lg font-medium text-gray-900 dark:text-white">
+                                    เลขประจำตัวประชาชน
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">1423987647</p>
+                            </div>
+                            <div class="mb-3">
+                                <h3 class="flex items-center  text-lg font-medium text-gray-900 dark:text-white">
+                                    เลขที่บัญชีธนาคารกรุงไทย
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">0098766577</p>
+                            </div>
                         </div>
-                    </UiCard>
+                        <div  class="p-2">
+                            <div class="mb-3">
+                                <h3 class="flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                                    ตำแหน่ง
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">ข้าราชการ</p>
+                            </div>
+                            <div class="mb-3">
+                                <h3 class="flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                                    แผนก
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">คนไข้</p>
+                            </div>
+                            <div class="mb-3">
+                                <h3 class="flex items-center text-lg font-medium text-gray-900 dark:text-white">
+                                    เงินเดือน
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">50,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid pt-2 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+                        <div  class="p-2">
+                            <div class="mb-3">
+                                <h3 class="flex items-center  text-lg font-medium text-gray-900 dark:text-white">
+                                    ประสงค์ส่งเงินต่อเดือน
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">100</p>
+                            </div>
+                            <div class="mb-3">
+                                <h3 class="flex items-center  text-lg font-medium text-gray-900 dark:text-white">
+                                    หมายเหตุ
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">-</p>
+                            </div>
+                        </div>
+                        <div  class="p-2">
+                            <div class="mb-3">
+                                <h3 class="flex items-center  text-lg font-medium text-gray-900 dark:text-white">
+                                    เอกสารแนบการสมัคร
+                                </h3>
+                                <p class="text-gray-500 dark:text-gray-400">
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        สำเนาบัตรประชาชน
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        สำเนาทะเบียนบ้าน
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        สลิปเงินเดือน
+                                    </li>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-end"><o-button>ยืนสมัคร</o-button></div>
                 </div>
-            </div>
+            </UiCard>
         </o-step-item>
     </o-steps>
 </template>
